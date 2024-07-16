@@ -7,12 +7,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex shrink-0 css-5lky4z"
+            class="flex shrink-0 css-gfxyas"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -35,7 +35,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="-ml-3 space-x-4 css-1d4ra48"
+            class="-ml-3 space-x-4 css-o5w6qc"
           >
             <span
               aria-busy="true"
@@ -67,12 +67,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           />
         </td>
         <td>
           <div
-            class="justify-end css-1d4ra48"
+            class="justify-end css-o5w6qc"
           >
             <span
               aria-busy="true"
@@ -91,7 +91,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end css-1d4ra48"
+            class="justify-end css-o5w6qc"
           >
             <span
               aria-busy="true"
@@ -110,10 +110,10 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-vs626"
+            class="justify-end text-theme-secondary-text css-31g0sb"
           >
             <button
-              class="ml-3 my-auto css-1yqe28v"
+              class="ml-3 my-auto css-qrwjsp"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -129,7 +129,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="w-11 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1yqe28v"
+                class="w-11 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-qrwjsp"
                 disabled=""
                 type="button"
               >
@@ -192,12 +192,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       data-testid="WalletListSkeleton"
     >
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex shrink-0 css-7ewq14"
+            class="flex shrink-0 css-f2t2np"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -220,7 +220,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="-ml-3 space-x-3 css-1rods8x"
+            class="-ml-3 space-x-3 css-12appi5"
           >
             <span
               aria-busy="true"
@@ -252,12 +252,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-center css-1rods8x"
+            class="justify-center css-12appi5"
           />
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <span
               aria-busy="true"
@@ -276,7 +276,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end css-1rods8x"
+            class="justify-end css-12appi5"
           >
             <span
               aria-busy="true"
@@ -295,10 +295,10 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-16k0yyn"
+            class="justify-end text-theme-secondary-text css-opqlbz"
           >
             <button
-              class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-127bt7l"
+              class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
               data-testid="WalletHeader__send-button"
               disabled=""
               type="button"
@@ -314,7 +314,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
               data-testid="WalletHeader__more-button"
             >
               <button
-                class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-127bt7l"
+                class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-5e9bdv"
                 disabled=""
                 type="button"
               >

@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionNetwork > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionNetwork"
   >
     <div
@@ -23,7 +23,7 @@ exports[`TransactionNetwork > should render in lg 1`] = `
     </div>
     <div
       aria-label="ARK Devnet"
-      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
       data-testid="NetworkIcon-ARK-ark.devnet"
     >
       <div
@@ -54,7 +54,7 @@ exports[`TransactionNetwork > should render in lg 1`] = `
 exports[`TransactionNetwork > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionNetwork"
   >
     <div
@@ -74,7 +74,7 @@ exports[`TransactionNetwork > should render in md 1`] = `
     </div>
     <div
       aria-label="ARK Devnet"
-      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
       data-testid="NetworkIcon-ARK-ark.devnet"
     >
       <div
@@ -105,7 +105,7 @@ exports[`TransactionNetwork > should render in md 1`] = `
 exports[`TransactionNetwork > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionNetwork"
   >
     <div
@@ -160,7 +160,7 @@ exports[`TransactionNetwork > should render in sm 1`] = `
 exports[`TransactionNetwork > should render in xl 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionNetwork"
   >
     <div
@@ -180,7 +180,7 @@ exports[`TransactionNetwork > should render in xl 1`] = `
     </div>
     <div
       aria-label="ARK Devnet"
-      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+      class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
       data-testid="NetworkIcon-ARK-ark.devnet"
     >
       <div
@@ -211,7 +211,7 @@ exports[`TransactionNetwork > should render in xl 1`] = `
 exports[`TransactionNetwork > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionNetwork"
   >
     <div

@@ -6,7 +6,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,11 +54,11 @@ exports[`Network Settings > should check the main network by default 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,11 +91,11 @@ exports[`Network Settings > should check the main network by default 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -132,7 +132,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -141,7 +141,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -302,10 +302,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -355,10 +355,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -414,10 +414,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -462,10 +462,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -541,7 +541,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -549,7 +549,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -618,7 +618,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -954,7 +954,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                   id="Networks--form"
                 >
                   <ul
-                    class="css-14npy8n"
+                    class="css-1hglnxc"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -1039,7 +1039,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                               >
                                 <input
                                   checked=""
-                                  class="css-7i915u"
+                                  class="css-kf7z38"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
                                   id="NetworksListNetwork-ark.mainnet"
@@ -1089,7 +1089,7 @@ exports[`Network Settings > should check the main network by default 1`] = `
                                 class="flex items-center"
                               >
                                 <input
-                                  class="css-7i915u"
+                                  class="css-kf7z38"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
                                   id="NetworksListNetwork-ark.devnet"
@@ -1133,10 +1133,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -1153,10 +1153,10 @@ exports[`Network Settings > should check the main network by default 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="Networks--submit-button"
                       disabled=""
                       type="submit"
@@ -1185,7 +1185,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1196,7 +1196,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -1233,11 +1233,11 @@ exports[`Network Settings > should render networks settings section 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1270,11 +1270,11 @@ exports[`Network Settings > should render networks settings section 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -1311,7 +1311,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1320,7 +1320,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1481,10 +1481,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1534,10 +1534,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1593,10 +1593,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1641,10 +1641,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1720,7 +1720,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1728,7 +1728,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -1797,7 +1797,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
               </div>
             </div>
             <div
-              class="css-1h1epd8"
+              class="css-cb19tw"
             >
               <ul>
                 <li
@@ -2133,7 +2133,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                   id="Networks--form"
                 >
                   <ul
-                    class="css-14npy8n"
+                    class="css-1hglnxc"
                     data-testid="list-divided__items"
                   >
                     <li
@@ -2218,7 +2218,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                               >
                                 <input
                                   checked=""
-                                  class="css-7i915u"
+                                  class="css-kf7z38"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
                                   id="NetworksListNetwork-ark.mainnet"
@@ -2268,7 +2268,7 @@ exports[`Network Settings > should render networks settings section 1`] = `
                                 class="flex items-center"
                               >
                                 <input
-                                  class="css-7i915u"
+                                  class="css-kf7z38"
                                   color="success"
                                   data-testid="NetworksListNetwork-checkbox"
                                   id="NetworksListNetwork-ark.devnet"
@@ -2312,10 +2312,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                                   type="checkbox"
                                 />
                                 <div
-                                  class="css-7lwhds toggle-handle"
+                                  class="css-d8rk4r toggle-handle"
                                 >
                                   <span
-                                    class="css-1fmiyrr"
+                                    class="css-st84t0"
                                   />
                                 </div>
                               </label>
@@ -2332,10 +2332,10 @@ exports[`Network Settings > should render networks settings section 1`] = `
                     </li>
                   </ul>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <button
-                      class="css-1yqe28v"
+                      class="css-qrwjsp"
                       data-testid="Networks--submit-button"
                       disabled=""
                       type="submit"

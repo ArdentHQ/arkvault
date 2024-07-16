@@ -73,6 +73,8 @@ export const translations = {
 		PROGRESS: {
 			DESCRIPTION: "{{count}} transactions have been retrieved so far, please wait.",
 			DESCRIPTION_START: "The data is being prepared. This might take a while, please wait.",
+			FETCHED_PARTIALLY:
+				"We've successfully retrieved some transactions, but encountered an issue along the way. You can download the partial file or retry.",
 		},
 		SUCCESS: {
 			DESCRIPTION: "{{count}} transactions have been retrieved and are ready to be exported.",
@@ -171,6 +173,12 @@ export const translations = {
 			TITLE: "Transaction Sent",
 		},
 		WAITING_FOR_SIGNATURES: "Waiting for Signatures",
+	},
+	MODAL_OVERWRITE_VALUES: {
+		CLEAR_PREFILLED_LABEL: "Remove prefilled data not included in QR",
+		TITLE: "Overwrite Data",
+		WARNING:
+			"The data scanned via QR conflicts with pre-filled input fields. Please confirm if you wish to overwrite the following data.",
 	},
 	MODAL_QR_CODE: {
 		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
@@ -282,7 +290,7 @@ export const translations = {
 			},
 			TITLE: "Your Second Signature",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. ARK Vault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 	},
 	PAGE_TRANSACTION_SEND: {
@@ -378,7 +386,7 @@ export const translations = {
 		UNLOCK_TOKEN: "Unlock Balance",
 		UNVOTE: "Unvote",
 		VOTE: "Vote",
-		VOTE_COMBINATION: "Switch Vote",
+		VOTE_COMBINATION: "Vote Swap",
 	},
 
 	TYPE: "Type",

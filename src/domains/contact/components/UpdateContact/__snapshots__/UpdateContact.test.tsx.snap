@@ -7,7 +7,7 @@ exports[`UpdateContact > should render responsive 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`UpdateContact > should render responsive 1`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -83,14 +83,14 @@ exports[`UpdateContact > should render responsive 1`] = `
                     Name
                   </label>
                   <div
-                    class=" css-1psxlcd"
+                    class=" css-n1b0kl"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1nupw50"
+                        class="no-ligatures w-full border-none css-1vs1awz"
                         data-testid="contact-form__name-input"
                         name="name"
                         type="text"
@@ -100,7 +100,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="css-pwc11e"
+                  class="css-1t71j9b"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -117,14 +117,14 @@ exports[`UpdateContact > should render responsive 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1psxlcd"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -149,7 +149,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                               id="downshift-0-label"
                             />
                             <div
-                              class="css-1psxlcd"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -159,7 +159,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                                   aria-controls="downshift-0-menu"
                                   aria-labelledby="downshift-0-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                  class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                   data-testid="SelectDropdown__input"
                                   id="downshift-0-input"
                                   name="network"
@@ -231,14 +231,14 @@ exports[`UpdateContact > should render responsive 1`] = `
                       Address
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"
@@ -251,7 +251,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                     class="mt-4"
                   >
                     <button
-                      class="w-full css-1yqe28v"
+                      class="w-full css-qrwjsp"
                       data-testid="contact-form__add-address-btn"
                       disabled=""
                       type="button"
@@ -312,7 +312,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                             </div>
                           </div>
                           <div
-                            class="shrink-0 css-1vy2z2u"
+                            class="shrink-0 css-1yk316i"
                             data-testid="Avatar"
                           >
                             <div
@@ -320,7 +320,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -342,7 +342,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                         </div>
                       </span>
                       <button
-                        class="flex items-center text-theme-danger-400 css-12xyeiw"
+                        class="flex items-center text-theme-danger-400 css-1hei9vx"
                         data-testid="contact-form__remove-address-btn"
                         type="button"
                       >
@@ -384,10 +384,10 @@ exports[`UpdateContact > should render responsive 1`] = `
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-between"
                 >
                   <div
-                    class="css-1tkbsa1"
+                    class="css-p1y4tm"
                   >
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -398,7 +398,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >
@@ -427,7 +427,7 @@ exports[`UpdateContact > should render responsive 2`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -438,7 +438,7 @@ exports[`UpdateContact > should render responsive 2`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -503,14 +503,14 @@ exports[`UpdateContact > should render responsive 2`] = `
                     Name
                   </label>
                   <div
-                    class=" css-1psxlcd"
+                    class=" css-n1b0kl"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1nupw50"
+                        class="no-ligatures w-full border-none css-1vs1awz"
                         data-testid="contact-form__name-input"
                         name="name"
                         type="text"
@@ -520,7 +520,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="css-pwc11e"
+                  class="css-1t71j9b"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -537,14 +537,14 @@ exports[`UpdateContact > should render responsive 2`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1psxlcd"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -569,7 +569,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                               id="downshift-2-label"
                             />
                             <div
-                              class="css-1psxlcd"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -579,7 +579,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                                   aria-controls="downshift-2-menu"
                                   aria-labelledby="downshift-2-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                  class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                   data-testid="SelectDropdown__input"
                                   id="downshift-2-input"
                                   name="network"
@@ -651,14 +651,14 @@ exports[`UpdateContact > should render responsive 2`] = `
                       Address
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"
@@ -671,7 +671,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                     class="mt-4"
                   >
                     <button
-                      class="w-full css-1yqe28v"
+                      class="w-full css-qrwjsp"
                       data-testid="contact-form__add-address-btn"
                       disabled=""
                       type="button"
@@ -707,7 +707,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                         >
                           <div
                             aria-label="ARK Devnet"
-                            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                             data-testid="NetworkIcon-ARK-ark.devnet"
                           >
                             <div
@@ -732,7 +732,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                             </div>
                           </div>
                           <div
-                            class="shrink-0 css-8d0u1i"
+                            class="shrink-0 css-1n9jllj"
                             data-testid="Avatar"
                           >
                             <div
@@ -740,7 +740,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -762,7 +762,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                         </div>
                       </span>
                       <button
-                        class="flex items-center flex items-center css-1km99ls"
+                        class="flex items-center flex items-center css-qemr9e"
                         data-testid="contact-form__remove-address-btn"
                         type="button"
                       >
@@ -804,7 +804,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-between"
                 >
                   <button
-                    class="mt-0 h-min sm:mt-8 css-1cp5yjb"
+                    class="mt-0 h-min sm:mt-8 css-15yk9k4"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >
@@ -843,10 +843,10 @@ exports[`UpdateContact > should render responsive 2`] = `
                     </div>
                   </button>
                   <div
-                    class="css-1tkbsa1"
+                    class="css-p1y4tm"
                   >
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -857,7 +857,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >
@@ -886,7 +886,7 @@ exports[`UpdateContact > should render responsive 3`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-amqh1w"
+      class="css-1jzz0qm"
       tabindex="-1"
     >
       <div
@@ -897,7 +897,7 @@ exports[`UpdateContact > should render responsive 3`] = `
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -967,14 +967,14 @@ exports[`UpdateContact > should render responsive 3`] = `
                     Name
                   </label>
                   <div
-                    class=" css-1psxlcd"
+                    class=" css-n1b0kl"
                   >
                     <div
                       class="relative flex h-full flex-1"
                     >
                       <input
                         autocomplete="off"
-                        class="no-ligatures w-full border-none css-1nupw50"
+                        class="no-ligatures w-full border-none css-1vs1awz"
                         data-testid="contact-form__name-input"
                         name="name"
                         type="text"
@@ -984,7 +984,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="css-pwc11e"
+                  class="css-1t71j9b"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -1001,14 +1001,14 @@ exports[`UpdateContact > should render responsive 3`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1psxlcd"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
                         >
                           <input
                             autocomplete="off"
-                            class="no-ligatures w-full border-none css-1nupw50"
+                            class="no-ligatures w-full border-none css-1vs1awz"
                             data-testid="select-list__input"
                             name="network"
                             readonly=""
@@ -1033,7 +1033,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                               id="downshift-4-label"
                             />
                             <div
-                              class="css-1psxlcd"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -1043,7 +1043,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                                   aria-controls="downshift-4-menu"
                                   aria-labelledby="downshift-4-label"
                                   autocomplete="off"
-                                  class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                                  class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                                   data-testid="SelectDropdown__input"
                                   id="downshift-4-input"
                                   name="network"
@@ -1115,14 +1115,14 @@ exports[`UpdateContact > should render responsive 3`] = `
                       Address
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="contact-form__address-input"
                           name="address"
                           type="text"
@@ -1135,7 +1135,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                     class="mt-4"
                   >
                     <button
-                      class="w-full css-1yqe28v"
+                      class="w-full css-qrwjsp"
                       data-testid="contact-form__add-address-btn"
                       disabled=""
                       type="button"
@@ -1171,7 +1171,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                         >
                           <div
                             aria-label="ARK Devnet"
-                            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                             data-testid="NetworkIcon-ARK-ark.devnet"
                           >
                             <div
@@ -1196,7 +1196,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                             </div>
                           </div>
                           <div
-                            class="shrink-0 css-8d0u1i"
+                            class="shrink-0 css-1n9jllj"
                             data-testid="Avatar"
                           >
                             <div
@@ -1204,7 +1204,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -1226,7 +1226,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                         </div>
                       </span>
                       <button
-                        class="flex items-center flex items-center css-1km99ls"
+                        class="flex items-center flex items-center css-qemr9e"
                         data-testid="contact-form__remove-address-btn"
                         type="button"
                       >
@@ -1268,7 +1268,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                   class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-between"
                 >
                   <button
-                    class="mt-0 h-min sm:mt-8 css-1cp5yjb"
+                    class="mt-0 h-min sm:mt-8 css-15yk9k4"
                     data-testid="contact-form__delete-btn"
                     type="button"
                   >
@@ -1307,10 +1307,10 @@ exports[`UpdateContact > should render responsive 3`] = `
                     </div>
                   </button>
                   <div
-                    class="css-1tkbsa1"
+                    class="css-p1y4tm"
                   >
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="contact-form__cancel-btn"
                       type="button"
                     >
@@ -1321,7 +1321,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="contact-form__save-btn"
                       type="submit"
                     >

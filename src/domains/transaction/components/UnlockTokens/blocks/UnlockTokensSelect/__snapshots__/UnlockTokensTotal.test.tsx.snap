@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`UnlockTokensTotal > should render 1`] = `
 <DocumentFragment>
@@ -15,7 +15,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
         Total Amount
       </p>
       <div
-        class="css-1vb1527"
+        class="css-1v19423"
         color="success"
       >
         <div
@@ -40,7 +40,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
         Transaction Fee
       </p>
       <div
-        class="css-fbeerz"
+        class="css-148b4hi"
         color="danger"
       >
         <div
@@ -129,7 +129,7 @@ exports[`UnlockTokensTotal > should render loading fee 1`] = `
         Total Amount
       </p>
       <div
-        class="css-1vb1527"
+        class="css-1v19423"
         color="success"
       >
         <div

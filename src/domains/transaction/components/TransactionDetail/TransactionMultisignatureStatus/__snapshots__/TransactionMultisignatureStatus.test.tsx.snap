@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -39,7 +39,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
                 data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures css-u3jrna"
+                  class="no-ligatures css-9nx3be"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -80,7 +80,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -95,7 +95,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -128,7 +128,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
           </div>
         </div>
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -136,7 +136,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -150,7 +150,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
 exports[`TransactionMultisignatureStatus > should render in lg 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -175,7 +175,7 @@ exports[`TransactionMultisignatureStatus > should render in lg 1`] = `
 exports[`TransactionMultisignatureStatus > should render in lg awaiting final signature 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -211,7 +211,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures css-u3jrna"
+                  class="no-ligatures css-9nx3be"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -252,7 +252,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -267,7 +267,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
           </div>
         </div>
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -275,7 +275,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -289,7 +289,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
 exports[`TransactionMultisignatureStatus > should render in md 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -314,7 +314,7 @@ exports[`TransactionMultisignatureStatus > should render in md 1`] = `
 exports[`TransactionMultisignatureStatus > should render in md awaiting final signature 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -350,7 +350,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures css-u3jrna"
+                  class="no-ligatures css-9nx3be"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -391,7 +391,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -406,7 +406,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
           </div>
         </div>
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -414,7 +414,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -428,7 +428,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
 exports[`TransactionMultisignatureStatus > should render in sm 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -457,7 +457,7 @@ exports[`TransactionMultisignatureStatus > should render in sm 1`] = `
 exports[`TransactionMultisignatureStatus > should render in sm awaiting final signature 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -496,7 +496,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -536,7 +536,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -551,7 +551,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
               </div>
             </div>
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -559,7 +559,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -575,7 +575,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
 exports[`TransactionMultisignatureStatus > should render in xl 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -600,7 +600,7 @@ exports[`TransactionMultisignatureStatus > should render in xl 1`] = `
 exports[`TransactionMultisignatureStatus > should render in xl awaiting final signature 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -636,7 +636,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
                 data-testid="Address__alias"
               >
                 <span
-                  class="no-ligatures css-u3jrna"
+                  class="no-ligatures css-9nx3be"
                   data-testid="TruncateEnd"
                 >
                   ARK Wallet 1
@@ -677,7 +677,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 ARK Wallet 1
@@ -692,7 +692,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
           </div>
         </div>
         <div
-          class="shrink-0 css-8d0u1i"
+          class="shrink-0 css-1n9jllj"
           data-testid="Avatar"
         >
           <div
@@ -700,7 +700,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -714,7 +714,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
 exports[`TransactionMultisignatureStatus > should render in xs 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -743,7 +743,7 @@ exports[`TransactionMultisignatureStatus > should render in xs 1`] = `
 exports[`TransactionMultisignatureStatus > should render in xs awaiting final signature 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -782,7 +782,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -822,7 +822,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
                   data-testid="Address__alias"
                 >
                   <span
-                    class="no-ligatures css-u3jrna"
+                    class="no-ligatures css-9nx3be"
                     data-testid="TruncateEnd"
                   >
                     ARK Wallet 1
@@ -837,7 +837,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
               </div>
             </div>
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -845,7 +845,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -861,7 +861,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
 exports[`TransactionMultisignatureStatus > should render with address 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div
@@ -886,7 +886,7 @@ exports[`TransactionMultisignatureStatus > should render with address 1`] = `
 exports[`TransactionMultisignatureStatus > should render with alias 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionMultisignatureStatus"
   >
     <div

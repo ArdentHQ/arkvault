@@ -1,6 +1,6 @@
 export const translations = {
 	CONNECT_LEDGER: {
-		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.",
+		DESCRIPTION: "Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.",
 		HEADER: "Connect and Authorize Ledger Device",
 		TITLE: "Connect Ledger Device",
 		WAITING_DEVICE: "Waiting for confirmation  ...",
@@ -24,7 +24,7 @@ export const translations = {
 	// @TODO: Remove this once the new wallet ledger create flow is complete
 	MODAL_LEDGER_WALLET: {
 		COMPATIBILITY_ERROR:
-			"ARKVault requires the use of a chromium based browser when using a Ledger device. Please use another browser like Chrome.",
+			"ARK Vault requires the use of a chromium based browser when using a Ledger device. Please use another browser like Chrome.",
 		CONNECT_DEVICE: "Connect your Ledger and confirm input.",
 		CONNECT_DEVICE_MODEL: "Connect your {{model}} and confirm input.",
 		CONNECT_SUCCESS: "Successfully connected",
@@ -101,7 +101,7 @@ export const translations = {
 			},
 			TITLE: "Your Passphrase",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. ARK Vault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 
 		PROCESS_COMPLETED_STEP: {
@@ -157,7 +157,7 @@ export const translations = {
 				GUIDELINES_3: "Verify that all words are spelled correctly.",
 				GUIDELINES_4:
 					"If copying and pasting, ensure no extra whitespace is added at the end of the copied text.",
-				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARKVault:",
+				GUIDELINES_TITLE: "Please follow these guidelines when inputting your mnemonic into ARK Vault:",
 				TITLE: "Need help with importing?",
 			},
 			SUBTITLE: "Select the import method by which you want to import the address to your Profile.",

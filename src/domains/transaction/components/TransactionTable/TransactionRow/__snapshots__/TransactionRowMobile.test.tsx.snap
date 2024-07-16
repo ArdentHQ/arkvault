@@ -1,11 +1,11 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionRowMobile > should omit the currency for transactions from test networks 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -21,14 +21,14 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -83,7 +83,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -91,7 +91,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -114,7 +114,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -122,7 +122,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -157,7 +157,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div
@@ -204,7 +204,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -220,14 +220,14 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -282,7 +282,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -290,7 +290,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -313,7 +313,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -321,7 +321,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -356,7 +356,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div
@@ -403,7 +403,7 @@ exports[`TransactionRowMobile > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -419,14 +419,14 @@ exports[`TransactionRowMobile > should render 1`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -477,7 +477,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -492,7 +492,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -500,7 +500,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -523,7 +523,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -531,7 +531,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -547,7 +547,7 @@ exports[`TransactionRowMobile > should render 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -573,7 +573,7 @@ exports[`TransactionRowMobile > should render 1`] = `
               Amount
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -619,7 +619,7 @@ exports[`TransactionRowMobile > should render 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -635,14 +635,14 @@ exports[`TransactionRowMobile > should render 2`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -693,7 +693,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -708,7 +708,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -716,7 +716,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -739,7 +739,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -747,7 +747,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -763,7 +763,7 @@ exports[`TransactionRowMobile > should render 2`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -789,7 +789,7 @@ exports[`TransactionRowMobile > should render 2`] = `
               Amount
             </div>
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -835,7 +835,7 @@ exports[`TransactionRowMobile > should render compact skeleton 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1050,7 +1050,7 @@ exports[`TransactionRowMobile > should render compact skeleton 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1265,7 +1265,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1480,7 +1480,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1695,7 +1695,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1711,14 +1711,14 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -1773,7 +1773,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1781,7 +1781,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1804,7 +1804,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1812,7 +1812,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1847,7 +1847,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div
@@ -1899,7 +1899,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1915,14 +1915,14 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               ID
             </div>
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -1977,7 +1977,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   </div>
                 </div>
                 <div
-                  class="shrink-0 css-jxpwdn"
+                  class="shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1985,7 +1985,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -2008,7 +2008,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                 class="flex w-0 flex-1 items-center justify-end overflow-hidden flex-row-reverse gap-2"
               >
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2016,7 +2016,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -2051,7 +2051,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div

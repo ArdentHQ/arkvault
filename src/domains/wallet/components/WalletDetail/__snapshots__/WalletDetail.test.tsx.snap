@@ -3,7 +3,7 @@
 exports[`WalletDetail > should render 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -44,7 +44,7 @@ exports[`WalletDetail > should render 1`] = `
 exports[`WalletDetail > should render with bottom border 1`] = `
 <div>
   <div
-    class="no-ligatures css-s5w13h"
+    class="no-ligatures css-1slril7"
     data-testid="TransactionDetail"
   >
     <div
@@ -85,7 +85,7 @@ exports[`WalletDetail > should render with bottom border 1`] = `
 exports[`WalletDetail > should render with extra children 1`] = `
 <div>
   <div
-    class="no-ligatures css-tnqofj"
+    class="no-ligatures css-1funbz6"
     data-testid="TransactionDetail"
   >
     <div
@@ -129,7 +129,7 @@ exports[`WalletDetail > should render with extra children 1`] = `
 exports[`WalletDetail > should render with top border 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -211,7 +211,7 @@ exports[`WalletDetail > should render without border 1`] = `
 exports[`WalletDetail > should render without padding 1`] = `
 <div>
   <div
-    class="no-ligatures css-tnqofj"
+    class="no-ligatures css-1funbz6"
     data-testid="TransactionDetail"
   >
     <div

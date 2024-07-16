@@ -10,14 +10,14 @@ exports[`Registration > should show error step and go back 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,11 +54,11 @@ exports[`Registration > should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,11 +91,11 @@ exports[`Registration > should show error step and go back 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -132,7 +132,7 @@ exports[`Registration > should show error step and go back 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -141,7 +141,7 @@ exports[`Registration > should show error step and go back 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -302,10 +302,10 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -355,10 +355,10 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -414,10 +414,10 @@ exports[`Registration > should show error step and go back 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -462,10 +462,10 @@ exports[`Registration > should show error step and go back 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -541,7 +541,7 @@ exports[`Registration > should show error step and go back 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -549,7 +549,7 @@ exports[`Registration > should show error step and go back 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -594,7 +594,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="flex flex-col"
                       >
                         <span
-                          class="css-3qwsx5"
+                          class="css-tgbw37"
                         >
                           Transaction Error
                         </span>
@@ -602,16 +602,16 @@ exports[`Registration > should show error step and go back 1`] = `
                           class="css-xa5o6q"
                         >
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                           <li
-                            class="css-47028"
+                            class="css-11vjikd"
                           />
                         </ul>
                       </div>
@@ -646,21 +646,21 @@ exports[`Registration > should show error step and go back 1`] = `
                         transform="translate(-404 -340)"
                       >
                         <g
-                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
-                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
+                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                         >
                           <path
                             d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(453 472)"
@@ -679,9 +679,9 @@ exports[`Registration > should show error step and go back 1`] = `
                             />
                           </g>
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(425 392)"
@@ -701,37 +701,37 @@ exports[`Registration > should show error step and go back 1`] = `
                           </g>
                           <path
                             d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
+                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
                             fill="none"
-                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007"
+                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <path
                             d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
+                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
                             fill="none"
-                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008"
+                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                         </g>
                         <g
-                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
-                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
+                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
                         >
                           <path
                             d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-2"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050-2"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(895 367)"
@@ -750,9 +750,9 @@ exports[`Registration > should show error step and go back 1`] = `
                             />
                           </g>
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(868 392)"
@@ -772,45 +772,45 @@ exports[`Registration > should show error step and go back 1`] = `
                           </g>
                           <path
                             d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
+                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
                             fill="none"
-                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007-2"
+                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <path
                             d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-                            data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
+                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
                             fill="none"
-                            id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008-2"
+                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                         </g>
                         <g
-                          data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4"
-                          id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4"
+                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
+                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
                         >
                           <path
                             d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <path
                             d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 6"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_6"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
                             stroke="#dbdee5"
                             stroke-width="2"
                           />
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(726 406)"
@@ -829,9 +829,9 @@ exports[`Registration > should show error step and go back 1`] = `
                             />
                           </g>
                           <g
-                            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                             fill="none"
-                            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                             stroke="#dbdee5"
                             stroke-width="2"
                             transform="translate(625 434)"
@@ -850,14 +850,14 @@ exports[`Registration > should show error step and go back 1`] = `
                             />
                           </g>
                           <g
-                            data-name="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C 715"
-                            id="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C_715"
+                            data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
+                            id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
                             transform="translate(-56 -698.5)"
                           >
                             <g
-                              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                               fill="none"
-                              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                               stroke="#de5846"
                               stroke-width="2"
                               transform="translate(704 1090)"
@@ -877,16 +877,16 @@ exports[`Registration > should show error step and go back 1`] = `
                             </g>
                             <path
                               d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B2086 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
                               fill="#ffe0da"
-                              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B2086_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
                               stroke="#de5846"
                               stroke-width="2"
                             />
                             <g
-                              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                               fill="none"
-                              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-2"
+                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
                               stroke="#de5846"
                               stroke-width="2"
                               transform="translate(708 1094)"
@@ -908,9 +908,9 @@ exports[`Registration > should show error step and go back 1`] = `
                         </g>
                         <path
                           d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-                          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 21"
+                          data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
                           fill="#dbdee5"
-                          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_21"
+                          id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
                         />
                       </g>
                     </svg>
@@ -926,7 +926,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
                       >
                         <div
-                          class="css-uae86w"
+                          class="css-6pjap5"
                         >
                           <div
                             class="css-v0ob3f"
@@ -965,7 +965,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           </span>
                         </div>
                         <div
-                          class="css-6o9bco"
+                          class="css-1y2ht9o"
                         >
                           An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
                         </div>
@@ -974,10 +974,10 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="relative"
                       >
                         <div
-                          class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+                          class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
                         />
                         <div
-                          class="py-4 css-qner8f"
+                          class="py-4 css-1prn1rr"
                           disabled=""
                         >
                           <div
@@ -985,7 +985,7 @@ exports[`Registration > should show error step and go back 1`] = `
                           >
                             <textarea
                               autocomplete="off"
-                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                              class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                               data-testid="ErrorStep__errorMessage"
                               disabled=""
                               style="height: 4px;"
@@ -999,7 +999,7 @@ exports[`Registration > should show error step and go back 1`] = `
                     </div>
                   </div>
                   <div
-                    class="css-2wyvkd"
+                    class="css-gu3ikl"
                   >
                     <div
                       class="mr-auto"
@@ -1008,7 +1008,7 @@ exports[`Registration > should show error step and go back 1`] = `
                         class="relative"
                       >
                         <button
-                          class="css-1jhy6v9"
+                          class="css-6419sw"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
@@ -1054,7 +1054,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </div>
                     <button
-                      class="css-1jhy6v9"
+                      class="css-6419sw"
                       data-testid="ErrorStep__close-button"
                       type="button"
                     >
@@ -1069,7 +1069,7 @@ exports[`Registration > should show error step and go back 1`] = `
                       </div>
                     </button>
                     <button
-                      class="css-1bx0hyc"
+                      class="css-fl4fi0"
                       data-testid="ErrorStep__back-button"
                       type="button"
                     >
@@ -1103,7 +1103,7 @@ exports[`Registration > should show mnemonic error 1`] = `
   >
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1112,7 +1112,7 @@ exports[`Registration > should show mnemonic error 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1273,10 +1273,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1326,10 +1326,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1385,10 +1385,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1433,10 +1433,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-127bt7l"
+                    class="css-5e9bdv"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1512,7 +1512,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1520,7 +1520,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -1564,7 +1564,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Authenticate
                       </span>
@@ -1572,16 +1572,16 @@ exports[`Registration > should show mnemonic error 1`] = `
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-3ldhk3"
+                          class="css-1ckw8yn"
                         />
                       </ul>
                     </div>
@@ -1621,14 +1621,14 @@ exports[`Registration > should show mnemonic error 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-1psxlcd"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
                       >
                         <input
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__mnemonic"
                           name="mnemonic"
                           type="password"
@@ -1693,7 +1693,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-px3dod"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1701,7 +1701,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                         <input
                           aria-invalid="true"
                           autocomplete="off"
-                          class="no-ligatures w-full border-none css-1nupw50"
+                          class="no-ligatures w-full border-none css-1vs1awz"
                           data-testid="AuthenticationStep__second-mnemonic"
                           name="secondMnemonic"
                           type="password"
@@ -1800,10 +1800,10 @@ exports[`Registration > should show mnemonic error 1`] = `
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -1814,7 +1814,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"

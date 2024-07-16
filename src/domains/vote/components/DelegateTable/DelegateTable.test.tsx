@@ -610,8 +610,8 @@ describe("DelegateTable", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should navigate to the next and previous pages", () => {
-		const delegatesList = Array.from({ length: 51 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+	it("should navigate to the next and previous pages according", () => {
+		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<DelegateTable
@@ -626,13 +626,46 @@ describe("DelegateTable", () => {
 
 		expect(firstDelegateVoteButton()).toBeInTheDocument();
 
+		expect(screen.queryByTestId("DelegateRow__toggle-51")).not.toBeInTheDocument();
+
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-50")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__toggle-51")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		expect(firstDelegateVoteButton()).toBeInTheDocument();
+	});
+
+	it("should change pagination size from network delegate count", () => {
+		const delegateCountSpy = vi.spyOn(wallet.network(), "delegateCount").mockReturnValue(10);
+
+		const delegatesList = Array.from({ length: 12 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+
+		render(
+			<DelegateTable
+				delegates={delegatesList}
+				votes={votes}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+		);
+
+		expect(firstDelegateVoteButton()).toBeInTheDocument();
+
+		expect(screen.queryByTestId("DelegateRow__toggle-11")).not.toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Pagination__next"));
+
+		expect(screen.getByTestId("DelegateRow__toggle-11")).toBeInTheDocument();
+
+		userEvent.click(screen.getByTestId("Pagination__previous"));
+
+		expect(firstDelegateVoteButton()).toBeInTheDocument();
+
+		delegateCountSpy.mockRestore();
 	});
 
 	it("should not show pagination", () => {

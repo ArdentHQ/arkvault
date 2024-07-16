@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`FeeField > should render 1`] = `
 <DocumentFragment>
@@ -13,7 +13,7 @@ exports[`FeeField > should render 1`] = `
         class="flex items-center"
       >
         <span
-          class="css-w6ofpw"
+          class="css-1588dqn"
           role="button"
         >
           Simple
@@ -26,15 +26,15 @@ exports[`FeeField > should render 1`] = `
             type="checkbox"
           />
           <div
-            class="css-1f5xwvv toggle-handle"
+            class="css-10kxbe9 toggle-handle"
           >
             <span
-              class="css-19qsmxy"
+              class="css-14ojvms"
             />
           </div>
         </label>
         <span
-          class="css-iwfou6"
+          class="css-noruk0"
           role="button"
         >
           Advanced
@@ -49,7 +49,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.00357"
-        class="css-17i051m"
+        class="css-1sbhrf0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -71,7 +71,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="true"
         aria-label="0.07320598"
-        class="css-17i051m"
+        class="css-1sbhrf0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"
@@ -93,7 +93,7 @@ exports[`FeeField > should render 1`] = `
       <button
         aria-checked="false"
         aria-label="0.1"
-        class="css-17i051m"
+        class="css-1sbhrf0"
         data-testid="ButtonGroupOption"
         role="radio"
         type="button"

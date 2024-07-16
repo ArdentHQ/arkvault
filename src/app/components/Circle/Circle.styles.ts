@@ -25,7 +25,7 @@ const getAvatarCss = (avatarId?: string) => {
 		return;
 	}
 
-	return tw`border-0 background[#bad6f0]`;
+	return tw`border-0 [background:#bad6f0]`;
 };
 
 export const getStyles = ({ size, avatarId, noShadow }: { size?: Size; avatarId?: string; noShadow?: boolean }) => [

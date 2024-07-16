@@ -16,17 +16,19 @@ exports[`Notifications > should render notification item 1`] = `
         </td>
         <td>
           <div>
-            <span
-              class="text-md font-bold text-theme-secondary-600"
-            >
-              ARKVault
-            </span>
-            <span
-              class="text-md text-theme-secondary-600"
-            >
-               
-              - update v2.5.6
-            </span>
+            <div>
+              <span
+                class="text-md font-bold text-theme-secondary-600"
+              >
+                ARK Vault
+              </span>
+              <span
+                class="text-md text-theme-secondary-600"
+              >
+                 
+                - update v2.5.6
+              </span>
+            </div>
           </div>
         </td>
         <td>
@@ -59,17 +61,19 @@ exports[`Notifications > should render with custom action name 1`] = `
         </td>
         <td>
           <div>
-            <span
-              class="text-md font-bold text-theme-secondary-600"
-            >
-              ARKVault
-            </span>
-            <span
-              class="text-md text-theme-secondary-600"
-            >
-               
-              - update v2.5.6
-            </span>
+            <div>
+              <span
+                class="text-md font-bold text-theme-secondary-600"
+              >
+                ARK Vault
+              </span>
+              <span
+                class="text-md text-theme-secondary-600"
+              >
+                 
+                - update v2.5.6
+              </span>
+            </div>
           </div>
         </td>
         <td>

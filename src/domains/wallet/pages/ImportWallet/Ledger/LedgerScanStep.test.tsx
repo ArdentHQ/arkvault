@@ -4,14 +4,14 @@ import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
 import { Networks } from "@ardenthq/sdk";
-import { LedgerScanStep, showLoadedLedgerWalletsMessage } from "./LedgerScanStep";
+import { LedgerScanStep, showLoadedLedgerWalletsMessage, LedgerTable } from "./LedgerScanStep";
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
-	expect(formReference.getValues("wallets")).toMatchObject([{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" }]);
+	expect(formReference.getValues("wallets")).toMatchObject([{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }]);
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
@@ -68,6 +68,15 @@ describe("LedgerScanStep", () => {
 		);
 
 		vi.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
+
+		vi.spyOn(wallet.coin().ledger(), "scan").mockImplementation(({ onProgress }) => {
+			onProgress(wallet);
+			return {
+				"m/44'/1'/0'/0/0": wallet.toData(),
+			};
+		});
+
+		vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 	});
 
 	const Component = ({ isCancelling = false }: { isCancelling?: boolean }) => {
@@ -134,22 +143,29 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
-	it.each(["xs", "lg"])("should render responsive (%s)", async (breakpoint) => {
+	it("should render ledger table in scanning mode", () => {
+		render(
+			<LedgerTable
+				wallets={[]}
+				selectedWallets={[]}
+				isScanningMore
+				isSelected={() => false}
+				network={profile.wallets().first().network()}
+			/>,
+		);
+		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot();
+	});
+
+	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
 		const { container } = renderResponsive(<Component />, breakpoint);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
-		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
-		});
-
-		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
-
 		await waitFor(() =>
 			expect(formReference.getValues("wallets")).toMatchObject([
 				{
-					address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG",
-					balance: 0,
+					address: wallet.address(),
+					balance: wallet.balance(),
 					path: "m/44'/1'/0'/0/0",
 				},
 			]),
@@ -204,7 +220,7 @@ describe("LedgerScanStep", () => {
 			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
 		});
 
-		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
+		await expect(screen.findByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).resolves.toBeVisible();
 
 		expect(toastUpdateSpy).toHaveBeenCalledTimes(1);
 

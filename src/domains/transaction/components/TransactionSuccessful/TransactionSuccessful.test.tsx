@@ -3,11 +3,10 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import { TransactionSuccessful } from "./TransactionSuccessful";
-import * as useConfirmedTransactionMock from "./hooks/useConfirmedTransaction";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-console.log(useConfirmedTransactionMock);
+import { server, requestMock } from "@/tests/mocks/server";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 describe("TransactionSuccessful", () => {
 	let profile: Contracts.IProfile;
@@ -20,7 +19,12 @@ describe("TransactionSuccessful", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b",
+				transactionsFixture,
+			),
+		);
 	});
 
 	const transactionMockImplementation = (attribute, transaction) => {
@@ -58,7 +62,7 @@ describe("TransactionSuccessful", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("PageSkeleton")).not.toBeInTheDocument());
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		vi.restoreAllMocks();
 	});
@@ -75,8 +79,6 @@ describe("TransactionSuccessful", () => {
 
 		vi.spyOn(transaction, "isMultiSignatureRegistration").mockReturnValue(false);
 		vi.spyOn(transaction, "usesMultiSignature").mockReturnValue(false);
-
-		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(false);
 
 		render(
 			<Route path="/profiles/:profileId">
@@ -119,7 +121,7 @@ describe("TransactionSuccessful", () => {
 			},
 		);
 
-		expect(screen.getByTestId("TransactionSuccessful")).toBeInTheDocument();
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		await expect(screen.findByText("Title")).resolves.toBeInTheDocument();
 		await expect(screen.findAllByText("Description")).resolves.toHaveLength(2);

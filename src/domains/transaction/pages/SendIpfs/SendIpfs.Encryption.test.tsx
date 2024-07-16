@@ -15,12 +15,12 @@ import {
 	syncFees,
 	waitFor,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();
@@ -70,6 +70,11 @@ describe("SendIpfs", () => {
 	let resetProfileNetworksMock: () => void;
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(fixtureProfileId);
 
 		await env.profiles().restore(profile);
@@ -100,6 +105,10 @@ describe("SendIpfs", () => {
 		resetProfileNetworksMock();
 	});
 
+	afterAll(() => {
+		vi.useRealTimers();
+	});
+
 	it("should send an IPFS transaction using encryption password", async () => {
 		const bip39ValidateMock = vi.spyOn(BIP39, "validate").mockReturnValue(true);
 		const encryptedWallet = profile.wallets().first();
@@ -111,10 +120,6 @@ describe("SendIpfs", () => {
 		const fromMnemonicMock = vi
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
-
-		const confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
 
 		const wifGetMock = vi.spyOn(encryptedWallet.signingKey(), "get").mockReturnValue(passphrase);
 
@@ -188,7 +193,11 @@ describe("SendIpfs", () => {
 
 		userEvent.click(sendButton());
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+
+		await act(() => vi.runOnlyPendingTimers());
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		expect(asFragment()).toMatchSnapshot();
 
 		signMock.mockRestore();
@@ -199,6 +208,5 @@ describe("SendIpfs", () => {
 		wifGetMock.mockRestore();
 		bip39ValidateMock.mockRestore();
 		fromMnemonicMock.mockRestore();
-		confirmedTransactionMock.mockRestore();
 	});
 });

@@ -405,13 +405,13 @@ export const SendVote = () => {
 										amount: unvote.amount,
 										id: unvote.wallet?.governanceIdentifier(),
 									})),
-							  }
+								}
 							: {
 									votes: votes.map((vote) => ({
 										amount: vote.amount,
 										id: vote.wallet?.governanceIdentifier(),
 									})),
-							  },
+								},
 					},
 					senderWallet,
 					{ abortSignal },

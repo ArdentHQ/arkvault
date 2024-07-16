@@ -37,6 +37,8 @@ export interface TransactionExportErrorProperties {
 	file: ReadableFile;
 	onBack: () => void;
 	onRetry?: () => void;
+	count: number;
+	onDownload?: (filename: string) => void;
 }
 
 export enum TransactionType {

@@ -25,7 +25,7 @@ exports[`CopyOrDownload > should render 1`] = `
         type="button"
       >
         <div
-          class="flex items-center space-x-2 font-semibold link "
+          class="flex items-center space-x-2 font-semibold link"
         >
           <div
             class="css-v0ob3f"
@@ -62,7 +62,7 @@ exports[`CopyOrDownload > should render 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
         type="vertical"
       />
       <button

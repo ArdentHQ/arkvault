@@ -1,5 +1,5 @@
 name: Refactor Request
-description: Create a refactor request for ARKVault
+description: Create a refactor request for ARK Vault
 labels: ["web", "refactor"]
 body:
     - type: markdown

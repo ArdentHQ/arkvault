@@ -125,7 +125,7 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -164,7 +164,7 @@ exports[`MultiSignatureSuccessful > should handle empty wallet and transation pr
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -301,7 +301,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -340,7 +340,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -369,14 +369,14 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -456,7 +456,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -475,7 +475,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -505,7 +505,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -525,7 +525,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -551,7 +551,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -664,7 +664,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           class="flex items-center"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -672,7 +672,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -680,7 +680,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -715,7 +715,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           class="flex items-center -space-x-1"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -723,7 +723,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -731,7 +731,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -826,7 +826,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -834,7 +834,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -858,7 +858,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -866,7 +866,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -887,7 +887,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -895,7 +895,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -919,7 +919,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -927,7 +927,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -945,7 +945,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -977,7 +977,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -993,7 +993,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1010,7 +1010,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -1168,7 +1168,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -1207,7 +1207,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -1236,14 +1236,14 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -1323,7 +1323,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -1342,7 +1342,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -1372,7 +1372,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -1392,7 +1392,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -1418,7 +1418,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -1531,7 +1531,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           class="flex items-center"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -1539,7 +1539,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -1547,7 +1547,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -1582,7 +1582,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           class="flex items-center -space-x-1"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -1590,7 +1590,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -1598,7 +1598,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -1693,7 +1693,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1701,7 +1701,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -1725,7 +1725,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -1733,7 +1733,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -1754,7 +1754,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -1762,7 +1762,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -1786,7 +1786,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -1794,7 +1794,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -1812,7 +1812,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -1844,7 +1844,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -1860,7 +1860,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -1877,7 +1877,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -2035,7 +2035,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -2074,7 +2074,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -2106,14 +2106,14 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                   class="overflow-hidden w-full"
                 >
                   <a
-                    class="ring-focus group inline-block flex items-center justify-end css-1jnqd87"
+                    class="ring-focus group inline-block flex items-center justify-end css-1flyqpm"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-1lmkmoz"
+                      class="css-1cv5b0m"
                     >
                       <span
                         class="no-ligatures css-0"
@@ -2194,7 +2194,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -2247,7 +2247,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -2297,7 +2297,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -2412,7 +2412,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               class="flex items-center"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -2420,7 +2420,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                     title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
                   />
                 </div>
@@ -2430,7 +2430,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -2467,7 +2467,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -2475,7 +2475,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                     title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
                   />
                 </div>
@@ -2494,7 +2494,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-s5w13h"
+        class="no-ligatures css-1slril7"
         data-testid="TransactionRecipient"
       >
         <div
@@ -2540,7 +2540,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="shrink-0 css-jxpwdn"
+                      class="shrink-0 css-1i0wxh3"
                       data-testid="Avatar"
                     >
                       <div
@@ -2548,7 +2548,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -2561,7 +2561,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-s5w13h"
+        class="no-ligatures css-1slril7"
         data-testid="TransactionRecipient"
       >
         <div
@@ -2607,7 +2607,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       </div>
                     </div>
                     <div
-                      class="shrink-0 css-jxpwdn"
+                      class="shrink-0 css-1i0wxh3"
                       data-testid="Avatar"
                     >
                       <div
@@ -2615,7 +2615,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                           title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                         />
                       </div>
@@ -2628,7 +2628,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -2664,7 +2664,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -2683,7 +2683,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div
@@ -2832,7 +2832,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -2871,7 +2871,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -2900,14 +2900,14 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -2987,7 +2987,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -3006,7 +3006,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -3036,7 +3036,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -3056,7 +3056,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -3082,7 +3082,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -3195,7 +3195,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           class="flex items-center"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -3203,7 +3203,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -3211,7 +3211,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -3246,7 +3246,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           class="flex items-center -space-x-1"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -3254,7 +3254,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -3262,7 +3262,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -3357,7 +3357,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3365,7 +3365,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -3389,7 +3389,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -3397,7 +3397,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -3418,7 +3418,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -3426,7 +3426,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -3450,7 +3450,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -3458,7 +3458,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -3476,7 +3476,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -3508,7 +3508,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -3524,7 +3524,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -3541,7 +3541,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -3699,7 +3699,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -3738,7 +3738,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -3770,14 +3770,14 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                   class="overflow-hidden w-full"
                 >
                   <a
-                    class="ring-focus group inline-block flex items-center justify-end css-1jnqd87"
+                    class="ring-focus group inline-block flex items-center justify-end css-1flyqpm"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                     rel="noopener noreferrer"
                   >
                     <span
-                      class="css-1lmkmoz"
+                      class="css-1cv5b0m"
                     >
                       <span
                         class="no-ligatures css-0"
@@ -3858,7 +3858,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -3911,7 +3911,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -3961,7 +3961,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -4076,7 +4076,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               class="flex items-center"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -4084,7 +4084,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                     title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
                   />
                 </div>
@@ -4094,7 +4094,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -4131,7 +4131,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               class="flex items-center space-x-2"
             >
               <div
-                class="shrink-0 css-1vy2z2u"
+                class="shrink-0 css-1yk316i"
                 data-testid="Avatar"
               >
                 <div
@@ -4139,7 +4139,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                     title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
                   />
                 </div>
@@ -4158,7 +4158,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-s5w13h"
+        class="no-ligatures css-1slril7"
         data-testid="TransactionRecipient"
       >
         <div
@@ -4204,7 +4204,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       </div>
                     </div>
                     <div
-                      class="shrink-0 css-jxpwdn"
+                      class="shrink-0 css-1i0wxh3"
                       data-testid="Avatar"
                     >
                       <div
@@ -4212,7 +4212,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -4225,7 +4225,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-s5w13h"
+        class="no-ligatures css-1slril7"
         data-testid="TransactionRecipient"
       >
         <div
@@ -4271,7 +4271,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       </div>
                     </div>
                     <div
-                      class="shrink-0 css-jxpwdn"
+                      class="shrink-0 css-1i0wxh3"
                       data-testid="Avatar"
                     >
                       <div
@@ -4279,7 +4279,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                           title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                         />
                       </div>
@@ -4292,7 +4292,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -4328,7 +4328,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -4347,7 +4347,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="css-fbeerz"
+                class="css-148b4hi"
                 color="danger"
               >
                 <div
@@ -4496,7 +4496,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -4535,7 +4535,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -4564,14 +4564,14 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -4651,7 +4651,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -4670,7 +4670,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -4700,7 +4700,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -4720,7 +4720,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -4746,7 +4746,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSuccessful__musig-address"
       >
         <div
@@ -4859,7 +4859,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           class="flex items-center"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -4867,7 +4867,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -4875,7 +4875,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionSender"
       >
         <div
@@ -4910,7 +4910,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           class="flex items-center -space-x-1"
         >
           <div
-            class="shrink-0 css-8d0u1i"
+            class="shrink-0 css-1n9jllj"
             data-testid="Avatar"
           >
             <div
@@ -4918,7 +4918,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 152, 0)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                 title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
               />
             </div>
@@ -4926,7 +4926,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -5021,7 +5021,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5029,7 +5029,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -5053,7 +5053,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -5061,7 +5061,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -5082,7 +5082,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5090,7 +5090,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -5114,7 +5114,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -5122,7 +5122,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -5140,7 +5140,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -5172,7 +5172,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -5188,7 +5188,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -5205,7 +5205,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -5363,7 +5363,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -5402,7 +5402,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -5431,14 +5431,14 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -5518,7 +5518,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -5537,7 +5537,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -5567,7 +5567,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -5587,7 +5587,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -5613,7 +5613,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -5708,7 +5708,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5716,7 +5716,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -5740,7 +5740,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -5748,7 +5748,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -5769,7 +5769,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -5777,7 +5777,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -5801,7 +5801,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -5809,7 +5809,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -5827,7 +5827,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -5859,7 +5859,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -5875,7 +5875,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -5892,7 +5892,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -6050,7 +6050,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
       class="flex flex-col overflow-hidden rounded-xl md:hidden"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -6089,7 +6089,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Your transaction has been created successfully. Participants can now sign the transaction to broadcast it to the network. The following is relevant information for your transaction:
       </div>
@@ -6118,14 +6118,14 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                 class="overflow-hidden"
               >
                 <a
-                  class="ring-focus group inline-block flex items-center css-1jnqd87"
+                  class="ring-focus group inline-block flex items-center css-1flyqpm"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1lmkmoz"
+                    class="css-1cv5b0m"
                   >
                     <span
                       class="no-ligatures css-0"
@@ -6205,7 +6205,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionType"
       >
         <div
@@ -6224,7 +6224,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
           </div>
         </div>
         <div
-          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"
@@ -6254,7 +6254,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionNetwork"
       >
         <div
@@ -6274,7 +6274,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
         <div
           aria-label="ARK Devnet"
-          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+          class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -6300,7 +6300,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionRecipients"
       >
         <div
@@ -6395,7 +6395,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -6403,7 +6403,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -6427,7 +6427,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -6435,7 +6435,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -6456,7 +6456,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="hidden md:table-cell"
                       >
                         <div
-                          class="shrink-0 css-y5oe37"
+                          class="shrink-0 css-h8w6w0"
                           data-testid="Avatar"
                         >
                           <div
@@ -6464,7 +6464,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -6488,7 +6488,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         class="ml-2 table-cell md:hidden"
                       >
                         <div
-                          class="shrink-0 css-1vy2z2u"
+                          class="shrink-0 css-1yk316i"
                           data-testid="Avatar"
                         >
                           <div
@@ -6496,7 +6496,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                               title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                             />
                           </div>
@@ -6514,7 +6514,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionDetail"
       >
         <div
@@ -6546,7 +6546,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
         </div>
       </div>
       <div
-        class="no-ligatures css-19rivvh"
+        class="no-ligatures css-qu17s6"
         data-testid="TransactionAmount"
       >
         <div
@@ -6562,7 +6562,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="css-fbeerz"
+              class="css-148b4hi"
               color="danger"
             >
               <div
@@ -6579,7 +6579,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
           </div>
         </div>
         <div
-          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-14jhlj1"
+          class="border-theme-danger-100 text-theme-danger-500 dark:border-theme-danger-400 dark:text-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
         >
           <div
             class="css-1i4b0eq"

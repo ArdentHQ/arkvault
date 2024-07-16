@@ -5,15 +5,15 @@ exports[`ContactListItem > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -21,7 +21,7 @@ exports[`ContactListItem > should render 1`] = `
               >
                 <img
                   alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
                   title="Brian"
                 />
                 <span
@@ -36,7 +36,7 @@ exports[`ContactListItem > should render 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -48,11 +48,11 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -83,10 +83,10 @@ exports[`ContactListItem > should render 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -94,7 +94,7 @@ exports[`ContactListItem > should render 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -126,7 +126,7 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -174,7 +174,7 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -183,7 +183,7 @@ exports[`ContactListItem > should render 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -204,7 +204,7 @@ exports[`ContactListItem > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -267,15 +267,15 @@ exports[`ContactListItem > should render as delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -298,7 +298,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 Caio
@@ -310,11 +310,11 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -345,10 +345,10 @@ exports[`ContactListItem > should render as delegate 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -356,7 +356,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               >
                 <img
                   alt="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(139, 195, 74)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"55\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(139, 195, 74)" width="100" height="100"/><circle r="40" cx="0" cy="70" fill="rgb(76, 175, 80)"/><circle r="45" cx="30" cy="40" fill="rgb(255, 152, 0)"/><circle r="55" cx="20" cy="50" fill="rgb(33, 150, 243)"/></svg>"
                   title="id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                 />
               </div>
@@ -388,7 +388,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -436,7 +436,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -445,7 +445,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -466,7 +466,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -529,15 +529,15 @@ exports[`ContactListItem > should render options 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-f3v5yv"
+        class=" css-epvetr"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -545,7 +545,7 @@ exports[`ContactListItem > should render options 1`] = `
               >
                 <img
                   alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
                   title="Brian"
                 />
                 <span
@@ -560,7 +560,7 @@ exports[`ContactListItem > should render options 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -572,11 +572,11 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -607,10 +607,10 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -618,7 +618,7 @@ exports[`ContactListItem > should render options 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -650,7 +650,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -698,7 +698,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -707,7 +707,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -728,7 +728,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -782,23 +782,23 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-f3v5yv"
+        class=" css-epvetr"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           />
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -829,10 +829,10 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -840,7 +840,7 @@ exports[`ContactListItem > should render options 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -872,7 +872,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -920,7 +920,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -929,7 +929,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -950,7 +950,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -1004,23 +1004,23 @@ exports[`ContactListItem > should render options 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           />
         </td>
         <td
           class=""
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1051,10 +1051,10 @@ exports[`ContactListItem > should render options 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1062,7 +1062,7 @@ exports[`ContactListItem > should render options 1`] = `
               >
                 <img
                   alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"50\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
                   title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
                 />
               </div>
@@ -1094,7 +1094,7 @@ exports[`ContactListItem > should render options 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1142,7 +1142,7 @@ exports[`ContactListItem > should render options 1`] = `
           class=""
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -1151,7 +1151,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1172,7 +1172,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -1235,15 +1235,15 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-f3v5yv"
+        class=" css-epvetr"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1251,7 +1251,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               >
                 <img
                   alt="Brian"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="60" cx="0" cy="50" fill="rgb(139, 195, 74)"/><circle r="45" cx="30" cy="70" fill="rgb(255, 193, 7)"/><circle r="40" cx="60" cy="30" fill="rgb(233, 30, 99)"/></svg>"
                   title="Brian"
                 />
                 <span
@@ -1266,7 +1266,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               data-testid="ContactListItem__name"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 Brian
@@ -1278,11 +1278,11 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1313,10 +1313,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1324,7 +1324,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -1356,7 +1356,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1404,7 +1404,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -1413,7 +1413,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1434,7 +1434,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -1488,23 +1488,23 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-f3v5yv"
+        class=" css-epvetr"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           />
         </td>
         <td
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1535,10 +1535,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1546,7 +1546,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -1578,7 +1578,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1626,7 +1626,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -1635,7 +1635,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1656,7 +1656,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div
@@ -1710,23 +1710,23 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-14huxtf"
+            class="space-x-4 whitespace-nowrap css-bgc8eo"
           />
         </td>
         <td
           class=""
         >
           <div
-            class="justify-center css-1d4ra48"
+            class="justify-center css-o5w6qc"
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-aozgpb"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-qrfosa"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1757,10 +1757,10 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           data-testid="ContactListItem__address"
         >
           <div
-            class="space-x-4 css-1d4ra48"
+            class="space-x-4 css-o5w6qc"
           >
             <div
-              class="shrink-0 css-tthe5h"
+              class="shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1768,7 +1768,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               >
                 <img
                   alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"50\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
                   title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
                 />
               </div>
@@ -1800,7 +1800,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="space-x-4 justify-center css-1d4ra48"
+            class="space-x-4 justify-center css-o5w6qc"
           >
             <button
               class="ring-focus relative focus:outline-none"
@@ -1848,7 +1848,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="justify-end css-1hhowo0"
+            class="justify-end css-10gefem"
           >
             <div
               class="flex items-center space-x-2"
@@ -1857,7 +1857,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1878,7 +1878,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-wlb9q7"
+                      class="flex-1 css-1vly8o8"
                       type="button"
                     >
                       <div

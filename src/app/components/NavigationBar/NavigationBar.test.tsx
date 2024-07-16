@@ -105,7 +105,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should render with title if variant is logo-only", () => {
-		const title = "ARKVAULT";
+		const title = "ARK VAULT";
 
 		const { container, asFragment } = render(<NavigationBar variant="logo-only" title={title} />);
 
@@ -115,7 +115,7 @@ describe("NavigationBar", () => {
 	});
 
 	it("should not render with title if variant is full", () => {
-		const title = "ARKVAULT";
+		const title = "ARK VAULT";
 
 		const { container, asFragment } = render(<NavigationBar variant="full" title={title} />);
 
@@ -156,7 +156,7 @@ describe("NavigationBar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should handle logo click", () => {
+	it("should handle logo click", async () => {
 		const { history } = render(<NavigationBar />);
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -168,7 +168,7 @@ describe("NavigationBar", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should redirect to home by default on logo click", () => {
+	it("should redirect to home by default on logo click", async () => {
 		const { history } = render(<NavigationBar variant="logo-only" />);
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -180,7 +180,7 @@ describe("NavigationBar", () => {
 		historySpy.mockRestore();
 	});
 
-	it("should handle menu click", () => {
+	it("should handle menu click", async () => {
 		const { history } = render(<NavigationBar />);
 
 		userEvent.click(screen.getByText("test"));
@@ -203,7 +203,7 @@ describe("NavigationBar", () => {
 		expect(history.location.pathname).toBe("/test");
 	});
 
-	it("should open user actions dropdown on click", () => {
+	it("should open user actions dropdown on click", async () => {
 		const getUserMenuActionsMock = vi.spyOn(navigation, "getUserMenuActions").mockReturnValue([
 			{ label: "Option 1", mountPath: () => "/test", title: "test", value: "/test" },
 			{ label: "Option 2", mountPath: () => "/test2", title: "test2", value: "/test2" },
@@ -265,7 +265,7 @@ describe("NavigationBar", () => {
 		widgetMock.mockRestore();
 	});
 
-	it("should handle click to send button", () => {
+	it("should handle click to send button", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
 		const { history } = render(<NavigationBar />);
 
@@ -276,7 +276,7 @@ describe("NavigationBar", () => {
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
 
-	it("should handle click to send button from mobile menu", () => {
+	it("should handle click to send button from mobile menu", async () => {
 		const mockProfile = environmentHooks.useActiveProfile();
 		const { history } = renderResponsiveWithRoute(<NavigationBar />, "xs");
 
@@ -393,7 +393,7 @@ describe("NavigationBar", () => {
 		await waitFor(() => expect(screen.queryByTestId("NavigationBarMobile")).not.toBeInTheDocument());
 	});
 
-	it("should handle mobile menu home button", () => {
+	it("should handle mobile menu home button", async () => {
 		const { history: renderHistory } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/send-transfer">
 				<NavigationBar />
@@ -455,7 +455,7 @@ describe("NavigationBar", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should hide the mobile menu if an input is focused", async () => {
+	it("should hide the mobile menu if an input is focused", () => {
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<div>
@@ -472,6 +472,6 @@ describe("NavigationBar", () => {
 
 		userEvent.type(screen.getByTestId("input"), "text");
 
-		await expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
+		expect(screen.findByTestId("NavigationBarMobile")).rejects.toThrow(/Unable to find/);
 	});
 });

@@ -42,7 +42,7 @@ describe("usePlatform", () => {
 	});
 
 	it("should determine if is using webapp on chrome", () => {
-		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: true } as any));
+		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: true }) as any);
 
 		const { result } = renderHook(() => usePlatform());
 
@@ -52,7 +52,7 @@ describe("usePlatform", () => {
 	});
 
 	it("should determine if is not using webapp", () => {
-		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: false } as any));
+		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: false }) as any);
 		const windowSpy2 = vi.spyOn(window, "navigator", "get").mockReturnValue({} as any);
 
 		const { result } = renderHook(() => usePlatform());

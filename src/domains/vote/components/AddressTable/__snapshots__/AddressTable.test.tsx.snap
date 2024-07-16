@@ -16,7 +16,7 @@ exports[`AddressTable > should render 1`] = `
         >
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -276,17 +276,17 @@ exports[`AddressTable > should render 1`] = `
               role="rowgroup"
             >
               <tr
-                class=" css-1li86da"
+                class=" css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
                   >
                     <div
-                      class="shrink-0 shrink-0 css-tthe5h"
+                      class="shrink-0 shrink-0 css-1px82g5"
                       data-testid="Avatar"
                     >
                       <div
@@ -294,7 +294,7 @@ exports[`AddressTable > should render 1`] = `
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -310,7 +310,7 @@ exports[`AddressTable > should render 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -330,14 +330,14 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1d4ra48"
+                    class="justify-center space-x-2 css-o5w6qc"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -349,13 +349,13 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1d4ra48"
+                    class="font-bold space-x-4 css-o5w6qc"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="shrink-0 css-tthe5h"
+                        class="shrink-0 css-1px82g5"
                         data-testid="Avatar"
                       >
                         <div
@@ -363,20 +363,20 @@ exports[`AddressTable > should render 1`] = `
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                           />
                         </div>
                       </div>
                       <a
-                        class="ring-focus group inline-block block w-24 truncate md:w-auto css-15tcy38"
+                        class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           arkx
                         </span>
@@ -412,7 +412,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
+                    class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -423,7 +423,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1d4ra48"
+                    class="justify-center css-o5w6qc"
                   >
                     <span>
                       <div
@@ -464,11 +464,11 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1hhowo0"
+                    class="justify-end css-10gefem"
                   >
                     <div>
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -495,7 +495,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-8cvvgy"
+      class="css-fvpuky"
     >
       <div
         class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
@@ -543,10 +543,10 @@ exports[`AddressTable > should render in xs screen 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -606,7 +606,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                         class="flex items-center justify-start space-x-3 overflow-hidden"
                       >
                         <div
-                          class="shrink-0 shrink-0 css-jxpwdn"
+                          class="shrink-0 shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -614,7 +614,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -630,7 +630,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -661,7 +661,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                           class="flex flex-grow items-center space-x-2 overflow-hidden"
                         >
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -669,7 +669,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -681,14 +681,14 @@ exports[`AddressTable > should render in xs screen 1`] = `
                               class="flex flex-1 justify-end overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                                class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <div
                                     class="flex w-full items-center"
@@ -729,7 +729,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                             </div>
                           </div>
                           <div
-                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <span>
@@ -770,7 +770,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                         </div>
                       </div>
                       <button
-                        class="p-6 rounded-none css-112fhi5"
+                        class="p-6 rounded-none css-6vay55"
                         data-testid="AddressRowMobile__select-0"
                         type="button"
                       >
@@ -797,7 +797,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
 <DocumentFragment>
   <div>
     <div
-      class="css-8cvvgy"
+      class="css-fvpuky"
     >
       <div
         class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
@@ -845,10 +845,10 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -908,7 +908,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                         class="flex items-center justify-start space-x-3 overflow-hidden"
                       >
                         <div
-                          class="shrink-0 shrink-0 css-jxpwdn"
+                          class="shrink-0 shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -916,7 +916,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -932,7 +932,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -963,7 +963,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                           class="flex flex-grow items-center space-x-2 overflow-hidden"
                         >
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -971,7 +971,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -983,14 +983,14 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                               class="flex flex-1 justify-end overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                                class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <div
                                     class="flex w-full items-center"
@@ -1031,7 +1031,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                             </div>
                           </div>
                           <div
-                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <span>
@@ -1072,7 +1072,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                         </div>
                       </div>
                       <button
-                        class="p-6 rounded-none css-112fhi5"
+                        class="p-6 rounded-none css-6vay55"
                         data-testid="AddressRowMobile__select-0"
                         type="button"
                       >
@@ -1099,7 +1099,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
 <DocumentFragment>
   <div>
     <div
-      class="css-8cvvgy"
+      class="css-fvpuky"
     >
       <div
         class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
@@ -1147,10 +1147,10 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
         >
           <div
-            class="css-16yt50s"
+            class="css-1j7gziz"
             data-testid="Accordion__toggle"
           >
             <div
@@ -1210,7 +1210,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                         class="flex items-center justify-start space-x-3 overflow-hidden"
                       >
                         <div
-                          class="shrink-0 shrink-0 css-jxpwdn"
+                          class="shrink-0 shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1218,7 +1218,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -1234,7 +1234,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                               data-testid="Address__alias"
                             >
                               <span
-                                class="no-ligatures css-u3jrna"
+                                class="no-ligatures css-9nx3be"
                                 data-testid="TruncateEnd"
                               >
                                 ARK Wallet 1
@@ -1265,7 +1265,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                           class="flex flex-grow items-center space-x-2 overflow-hidden"
                         >
                           <div
-                            class="shrink-0 css-jxpwdn"
+                            class="shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1273,7 +1273,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -1285,14 +1285,14 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                               class="flex flex-1 justify-end overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                                class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <div
                                     class="flex w-full items-center"
@@ -1333,7 +1333,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                             </div>
                           </div>
                           <div
-                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                             type="vertical"
                           />
                           <span>
@@ -1374,7 +1374,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                         </div>
                       </div>
                       <button
-                        class="p-6 rounded-none css-112fhi5"
+                        class="p-6 rounded-none css-6vay55"
                         data-testid="AddressRowMobile__select-0"
                         type="button"
                       >
@@ -1413,7 +1413,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
         >
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -1657,17 +1657,17 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               role="rowgroup"
             >
               <tr
-                class=" css-1li86da"
+                class=" css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
                   >
                     <div
-                      class="shrink-0 shrink-0 css-tthe5h"
+                      class="shrink-0 shrink-0 css-1px82g5"
                       data-testid="Avatar"
                     >
                       <div
@@ -1675,7 +1675,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -1691,7 +1691,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -1711,14 +1711,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1d4ra48"
+                    class="justify-center space-x-2 css-o5w6qc"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1730,23 +1730,23 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1d4ra48"
+                    class="font-bold space-x-4 css-o5w6qc"
                   >
                     <div
                       class="flex items-center -space-x-2"
                     >
                       <a
-                        class="ring-focus group inline-block flex css-15tcy38"
+                        class="ring-focus group inline-block flex css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
-                            class="shrink-0 css-8d0u1i"
+                            class="shrink-0 css-1n9jllj"
                             data-testid="Avatar"
                           >
                             <div
@@ -1754,7 +1754,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                               />
                             </div>
@@ -1790,7 +1790,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1d4ra48"
+                    class="justify-center css-o5w6qc"
                   >
                     <div
                       class="font-bold text-theme-secondary-400"
@@ -1808,11 +1808,11 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1hhowo0"
+                    class="justify-end css-10gefem"
                   >
                     <div>
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -1851,7 +1851,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
         >
           <div
             aria-label="ARK Devnet"
-            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+            class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
             data-testid="NetworkIcon-ARK-ark.devnet"
           >
             <div
@@ -2111,17 +2111,17 @@ exports[`AddressTable > should render with voting delegates and handle exception
               role="rowgroup"
             >
               <tr
-                class=" css-1li86da"
+                class=" css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-14huxtf"
+                    class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
                   >
                     <div
-                      class="shrink-0 shrink-0 css-tthe5h"
+                      class="shrink-0 shrink-0 css-1px82g5"
                       data-testid="Avatar"
                     >
                       <div
@@ -2129,7 +2129,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                           title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                         />
                       </div>
@@ -2145,7 +2145,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Wallet 1
@@ -2165,14 +2165,14 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden md:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-1d4ra48"
+                    class="justify-center space-x-2 css-o5w6qc"
                   />
                 </td>
                 <td
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-1d4ra48"
+                    class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -2184,10 +2184,10 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 </td>
                 <td>
                   <div
-                    class="font-bold space-x-4 css-1d4ra48"
+                    class="font-bold space-x-4 css-o5w6qc"
                   >
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-aozgpb"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-qrfosa"
                     />
                     <span
                       class="text-theme-secondary-400"
@@ -2200,21 +2200,21 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-bold text-theme-secondary-text css-1d4ra48"
+                    class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-center css-1d4ra48"
+                    class="justify-center css-o5w6qc"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-end css-1hhowo0"
+                    class="justify-end css-10gefem"
                   >
                     <div>
                       <button
-                        class="css-1jhy6v9"
+                        class="css-6419sw"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >

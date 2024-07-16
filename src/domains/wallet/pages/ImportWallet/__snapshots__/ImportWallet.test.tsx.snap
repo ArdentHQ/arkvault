@@ -43,14 +43,14 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -81,7 +81,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -91,7 +91,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -172,14 +172,14 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           Private Key
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__privatekey-input"
               name="value"
               type="password"
@@ -234,7 +234,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -260,10 +260,10 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-st84t0"
                 />
               </div>
             </label>
@@ -323,14 +323,14 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -361,7 +361,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -371,7 +371,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -452,14 +452,14 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           Private Key
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__privatekey-input"
               name="value"
               type="password"
@@ -514,7 +514,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -540,10 +540,10 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-st84t0"
                 />
               </div>
             </label>
@@ -603,14 +603,14 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -641,7 +641,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -651,7 +651,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -732,14 +732,14 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -794,7 +794,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -820,10 +820,10 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-st84t0"
                 />
               </div>
             </label>
@@ -883,14 +883,14 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -921,7 +921,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -931,7 +931,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -1012,14 +1012,14 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__wif-input"
               name="value"
               type="password"
@@ -1074,7 +1074,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -1100,10 +1100,10 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-st84t0"
                 />
               </div>
             </label>
@@ -1163,14 +1163,14 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -1201,7 +1201,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1211,7 +1211,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -1295,14 +1295,14 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           class="relative"
         >
           <div
-            class="css-1psxlcd"
+            class="css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="ImportWallet__encryptedWif-input"
                 name="encryptedWif"
                 type="text"
@@ -1323,14 +1323,14 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           Password
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__encryptedWif__password-input"
               name="value"
               type="password"
@@ -1385,7 +1385,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -1413,10 +1413,10 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-2v9y9y"
+                  class="css-1nye29f"
                   disabled=""
                 />
               </div>
@@ -1440,7 +1440,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -1451,7 +1451,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1487,11 +1487,11 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1524,11 +1524,11 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1564,7 +1564,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -1573,7 +1573,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -1734,10 +1734,10 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1787,10 +1787,10 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1846,10 +1846,10 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1893,10 +1893,10 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1971,7 +1971,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -1979,7 +1979,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -2014,25 +2014,25 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 class="flex flex-col"
               >
                 <span
-                  class="css-3qwsx5"
+                  class="css-tgbw37"
                 />
                 <ul
                   class="css-xa5o6q"
                 >
                   <li
-                    class="css-47028"
+                    class="css-11vjikd"
                   />
                   <li
-                    class="css-3ldhk3"
+                    class="css-1ckw8yn"
                   />
                   <li
-                    class="css-3ldhk3"
+                    class="css-1ckw8yn"
                   />
                   <li
-                    class="css-3ldhk3"
+                    class="css-1ckw8yn"
                   />
                   <li
-                    class="css-3ldhk3"
+                    class="css-1ckw8yn"
                   />
                 </ul>
               </div>
@@ -2198,13 +2198,13 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                     <p
                       class="text-theme-secondary-text"
                     >
-                      Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.
+                      Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
                     </p>
                     <div
                       class="inline-flex w-full items-center justify-center space-x-3"
                     >
                       <div
-                        class="css-1b3vlxq"
+                        class="css-1ppx3l2"
                         color="info"
                       />
                       <span
@@ -2218,10 +2218,10 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 </div>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="Paginator__back-button"
                   type="button"
                 >
@@ -2232,7 +2232,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="Paginator__continue-button"
                   type="button"
                 >
@@ -2295,14 +2295,14 @@ exports[`ImportWallet > should render method step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name=""
                 readonly=""
@@ -2333,7 +2333,7 @@ exports[`ImportWallet > should render method step 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2343,7 +2343,7 @@ exports[`ImportWallet > should render method step 1`] = `
                       aria-controls="ImportWallet__select-menu"
                       aria-labelledby="ImportWallet__select-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none css-1nupw50"
+                      class="no-ligatures w-full border-none css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="ImportWallet__select-input"
                       name=""
@@ -2424,14 +2424,14 @@ exports[`ImportWallet > should render method step 1`] = `
           Mnemonic
         </label>
         <div
-          class="css-1psxlcd"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
           >
             <input
               autocomplete="off"
-              class="no-ligatures w-full border-none css-1nupw50"
+              class="no-ligatures w-full border-none css-1vs1awz"
               data-testid="ImportWallet__mnemonic-input"
               name="value"
               type="password"
@@ -2489,7 +2489,7 @@ exports[`ImportWallet > should render method step 1`] = `
         class="flex flex-col overflow-hidden rounded-xl"
       >
         <div
-          class="css-1ps5yfy"
+          class="css-gca23p"
         >
           <div
             class="css-v0ob3f"
@@ -2532,7 +2532,7 @@ exports[`ImportWallet > should render method step 1`] = `
             Need help with importing?
           </span>
           <span
-            class="css-iuqies"
+            class="css-1pocoed"
             data-testid="Alert__chevron"
           >
             <div
@@ -2562,7 +2562,7 @@ exports[`ImportWallet > should render method step 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-13w0p49"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
         type="horizontal"
       />
       <div
@@ -2590,10 +2590,10 @@ exports[`ImportWallet > should render method step 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-2v9y9y"
+                  class="css-1nye29f"
                   disabled=""
                 />
               </div>
@@ -2654,14 +2654,14 @@ exports[`ImportWallet > should render network step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -2686,7 +2686,7 @@ exports[`ImportWallet > should render network step 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1psxlcd"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2696,7 +2696,7 @@ exports[`ImportWallet > should render network step 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none cursor-default css-1nupw50"
+                      class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       id="downshift-0-input"
                       name="network"
@@ -2824,7 +2824,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -2883,7 +2883,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -2937,7 +2937,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="flex items-center sm:hidden"
           >
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -2945,7 +2945,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -2955,7 +2955,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="hidden sm:flex sm:items-center"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -2963,7 +2963,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -2973,7 +2973,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -3019,7 +3019,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-wr7004"
+      class="no-ligatures css-1uo4ck9"
       data-testid="TransactionDetail"
     >
       <div
@@ -3052,7 +3052,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             </div>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="ImportWallet__edit-alias"
             type="button"
           >
@@ -3154,7 +3154,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -3213,7 +3213,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -3267,7 +3267,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="flex items-center sm:hidden"
           >
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -3275,7 +3275,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -3285,7 +3285,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="hidden sm:flex sm:items-center"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -3293,7 +3293,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                   title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                 />
               </div>
@@ -3303,7 +3303,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -3349,7 +3349,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -3382,7 +3382,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             </div>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="ImportWallet__edit-alias"
             type="button"
           >

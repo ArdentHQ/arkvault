@@ -1,7 +1,8 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable max-lines */
-/* eslint-disable import/no-relative-parent-imports */
 /* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable import-alias/import-alias */
+
 import fs from "fs";
 import { ClientFunction, RequestMock, t, Selector } from "testcafe";
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
@@ -53,7 +54,12 @@ const pingServerUrls = new Set([
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 ]);
 
-const pingMusigServerUrls = new Set(["https://ark-live-musig.arkvault.io", "https://ark-test-musig.arkvault.io"]);
+const pingMusigServerUrls = new Set([
+	"https://ark-live-musig.arkvault.io",
+	"https://ark-test-musig.arkvault.io",
+	"https://ark-live-musig.arkvault.io/",
+	"https://ark-test-musig.arkvault.io/",
+]);
 
 const knownWallets: any[] = [];
 
@@ -208,7 +214,7 @@ export const mockRequest = (url: string | object | Function, fixture: string | o
 						return require(`../tests/fixtures/${PING_RESPONSE_PATH}.json`);
 					}
 
-					if (pingMusigServerUrls.has(request.url)) {
+					if (pingMusigServerUrls.has(request.url) && request.method === "GET") {
 						return require(`../tests/fixtures/${PING_MUSIG_RESPONSE_PATH}.json`);
 					}
 

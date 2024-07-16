@@ -18,6 +18,7 @@ import {
 	waitFor,
 	within,
 	mockProfileWithPublicAndTestNetworks,
+	act,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -25,7 +26,6 @@ import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/t
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
 import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transaction-fees.json";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
@@ -50,7 +50,6 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let resetProfileNetworksMock: () => void;
-let confirmedTransactionMock: SpyInstance;
 
 const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const selectRecipient = () =>
@@ -74,6 +73,11 @@ vi.mock("@/utils/delay", () => ({
 
 describe("SendTransfer Fee Handling", () => {
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 
@@ -92,14 +96,6 @@ describe("SendTransfer Fee Handling", () => {
 			requestMock("https://ark-live.arkvault.io/api/transactions/fees", transactionFeesFixture),
 		);
 		await syncFees(profile);
-
-		confirmedTransactionMock = vi
-			.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction")
-			.mockReturnValue(true);
-	});
-
-	afterAll(() => {
-		confirmedTransactionMock.mockRestore();
 	});
 
 	beforeEach(() => {
@@ -130,6 +126,10 @@ describe("SendTransfer Fee Handling", () => {
 
 	afterEach(() => {
 		resetProfileNetworksMock();
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should update available amount after sender address changed", async () => {
@@ -768,6 +768,10 @@ describe("SendTransfer Fee Handling", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 		userEvent.click(sendButton());
+
+		await waitFor(() => expect(screen.getByTestId("TransactionPending")));
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		await waitFor(() => expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("8f913b6b71"));
 

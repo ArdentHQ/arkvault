@@ -2,6 +2,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { useMemo, useState } from "react";
 import { kebabCase, upperFirst } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
+import { useTranslation } from "react-i18next";
 import {
 	DateRange,
 	ExportProgressStatus,
@@ -60,6 +61,8 @@ export const useTransactionExport = ({
 		name: wallet.address(),
 	});
 
+	const { t } = useTranslation();
+
 	const exporter = useMemo(() => TransactionExporter({ profile, wallet }), [profile, wallet]);
 
 	return {
@@ -95,8 +98,19 @@ export const useTransactionExport = ({
 
 				file.content = exporter.transactions().toCsv(settings);
 			} catch (error) {
-				setError(error.message);
+				const transactionCount = exporter.transactions().count();
+
+				if (transactionCount > 0) {
+					setError(t("TRANSACTION.EXPORT.PROGRESS.FETCHED_PARTIALLY"));
+					setFinalCount(exporter.transactions().count());
+
+					file.content = exporter.transactions().toCsv(settings);
+				} else {
+					setError(error.message);
+				}
+
 				setStatus(ExportProgressStatus.Error);
+
 				return;
 			}
 		},

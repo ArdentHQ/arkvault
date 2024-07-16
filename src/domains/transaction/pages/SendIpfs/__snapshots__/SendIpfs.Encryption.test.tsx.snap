@@ -6,7 +6,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
     class="css-w3nefz"
   >
     <div
-      class="css-tbczne"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
       <div
@@ -17,7 +17,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,11 +53,11 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,11 +90,11 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -130,7 +130,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -139,7 +139,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-1v0i3m7"
+            class="css-1i1c5eg"
           >
             <div
               class="mx-auto css-15txs7d"
@@ -300,10 +300,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -353,10 +353,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -412,10 +412,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -459,10 +459,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -537,7 +537,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -545,7 +545,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -588,7 +588,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       class="flex flex-col"
                     >
                       <span
-                        class="css-3qwsx5"
+                        class="css-tgbw37"
                       >
                         Transaction Sent
                       </span>
@@ -596,16 +596,16 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         class="css-xa5o6q"
                       >
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                         <li
-                          class="css-47028"
+                          class="css-11vjikd"
                         />
                       </ul>
                     </div>
@@ -640,21 +640,21 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       transform="translate(-404 -340)"
                     >
                       <g
-                        data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
-                        id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                        data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
+                        id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                       >
                         <path
                           d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(453 472)"
@@ -673,9 +673,9 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                           />
                         </g>
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(425 392)"
@@ -695,37 +695,37 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         </g>
                         <path
                           d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-                          data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
+                          data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
                           fill="none"
-                          id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007"
+                          id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <path
                           d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-                          data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
+                          data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
                           fill="none"
-                          id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008"
+                          id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                       </g>
                       <g
-                        data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
-                        id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4"
+                        data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
+                        id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
                       >
                         <path
                           d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 4"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_4-2"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050-2"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(895 367)"
@@ -744,9 +744,9 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                           />
                         </g>
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F-2"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(868 392)"
@@ -766,45 +766,45 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         </g>
                         <path
                           d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-                          data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1007"
+                          data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
                           fill="none"
-                          id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1007-2"
+                          id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <path
                           d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-                          data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1008"
+                          data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
                           fill="none"
-                          id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1008-2"
+                          id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                       </g>
                       <g
-                        data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 4"
-                        id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_4"
+                        data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
+                        id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
                       >
                         <path
                           d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <path
                           d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 6"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_6"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
                           stroke="#dbdee5"
                           stroke-width="2"
                         />
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(726 406)"
@@ -823,9 +823,9 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                           />
                         </g>
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                           stroke="#dbdee5"
                           stroke-width="2"
                           transform="translate(625 434)"
@@ -844,9 +844,9 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                           />
                         </g>
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                           stroke="#289548"
                           stroke-width="2"
                           transform="translate(649.168 392.5)"
@@ -866,18 +866,18 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         </g>
                         <path
                           d="M746.937,732l-12.187,12-5.687-5.6-4.063,4,9.75,9.6L751,736Z"
-                          data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 6"
+                          data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 6"
                           fill="#edf7f0"
-                          id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_6"
+                          id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
                           stroke="#289548"
                           stroke-linejoin="round"
                           stroke-width="2"
                           transform="translate(-54.832 -315.5)"
                         />
                         <g
-                          data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2047 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                          data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                           fill="none"
-                          id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2047_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3-2"
+                          id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
                           stroke="#289548"
                           stroke-width="2"
                           transform="translate(653.168 396.5)"
@@ -898,9 +898,9 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </g>
                       <path
                         d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-                        data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 21"
+                        data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
                         fill="#dbdee5"
-                        id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_21"
+                        id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
                       />
                     </g>
                   </svg>
@@ -913,7 +913,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                     class="flex flex-col overflow-hidden rounded-xl md:hidden"
                   >
                     <div
-                      class="css-1qh812f"
+                      class="css-1o2lvkz"
                     >
                       <div
                         class="css-v0ob3f"
@@ -952,7 +952,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </span>
                     </div>
                     <div
-                      class="css-k5jr4t"
+                      class="css-1n20uf5"
                     >
                       Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:
                     </div>
@@ -981,14 +981,14 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                               class="overflow-hidden"
                             >
                               <a
-                                class="ring-focus group inline-block flex items-center css-15tcy38"
+                                class="ring-focus group inline-block flex items-center css-7nwwrh"
                                 data-ring-focus-margin="-m-1"
                                 data-testid="Link"
                                 href="https://test.arkscan.io/transaction/1e9b975eff66a731095876c3b6cbff14fd4dec3bb37a4127c46db3d69131067e"
                                 rel="noopener noreferrer"
                               >
                                 <span
-                                  class="css-1y2194z"
+                                  class="css-170792"
                                 >
                                   <span
                                     class="no-ligatures css-0"
@@ -1068,7 +1068,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionType"
                     >
                       <div
@@ -1087,7 +1087,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         </div>
                       </div>
                       <div
-                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-14jhlj1"
+                        class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <div
                           class="css-1i4b0eq"
@@ -1126,7 +1126,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionNetwork"
                     >
                       <div
@@ -1146,7 +1146,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                       <div
                         aria-label="ARK Devnet"
-                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+                        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
                         data-testid="NetworkIcon-ARK-ark.devnet"
                       >
                         <div
@@ -1172,7 +1172,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-19rivvh"
+                      class="no-ligatures css-qu17s6"
                       data-testid="TransactionSender"
                     >
                       <div
@@ -1198,7 +1198,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                 data-testid="Address__alias"
                               >
                                 <span
-                                  class="no-ligatures css-u3jrna"
+                                  class="no-ligatures css-9nx3be"
                                   data-testid="TruncateEnd"
                                 >
                                   ARK Wallet 1
@@ -1218,7 +1218,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                         class="flex items-center -space-x-1"
                       >
                         <div
-                          class="shrink-0 css-8d0u1i"
+                          class="shrink-0 css-1n9jllj"
                           data-testid="Avatar"
                         >
                           <div
@@ -1226,7 +1226,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                             />
                           </div>
@@ -1234,7 +1234,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                       </div>
                     </div>
                     <div
-                      class="no-ligatures css-fezbvb"
+                      class="no-ligatures css-1snru0x"
                       data-testid="TransactionDetail"
                     >
                       <div
@@ -1261,10 +1261,10 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                 </section>
               </div>
               <div
-                class="css-2wyvkd"
+                class="css-gu3ikl"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

@@ -63,7 +63,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -125,7 +125,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
       <ul>
         <li>
           <div
-            class="no-ligatures py-4 pt-6 css-zetqes"
+            class="no-ligatures py-4 pt-6 css-47538l"
             data-testid="TransactionDetail"
           >
             <div
@@ -141,7 +141,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                   >
                     <div
-                      class="shrink-0 css-8d0u1i"
+                      class="shrink-0 css-1n9jllj"
                       data-testid="Avatar"
                     >
                       <div
@@ -149,7 +149,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       >
                         <img
                           alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                           title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
                         />
                       </div>
@@ -165,7 +165,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #3
@@ -205,7 +205,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -213,7 +213,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         >
                           <img
                             alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                             title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
                           />
                         </div>
@@ -229,7 +229,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-u3jrna"
+                              class="no-ligatures css-9nx3be"
                               data-testid="TruncateEnd"
                             >
                               ARK Devnet #3
@@ -257,7 +257,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                   </div>
                 </div>
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
@@ -295,7 +295,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         </li>
         <li>
           <div
-            class="no-ligatures py-4 pb-6 css-zetqes"
+            class="no-ligatures py-4 pb-6 css-47538l"
             data-testid="TransactionDetail"
           >
             <div
@@ -311,7 +311,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                     class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                   >
                     <div
-                      class="shrink-0 css-8d0u1i"
+                      class="shrink-0 css-1n9jllj"
                       data-testid="Avatar"
                     >
                       <div
@@ -319,7 +319,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       >
                         <img
                           alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                           title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                         />
                       </div>
@@ -335,7 +335,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #4
@@ -375,7 +375,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -383,7 +383,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           />
                         </div>
@@ -399,7 +399,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-u3jrna"
+                              class="no-ligatures css-9nx3be"
                               data-testid="TruncateEnd"
                             >
                               ARK Devnet #4
@@ -427,7 +427,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                   </div>
                 </div>
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
@@ -532,7 +532,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -594,7 +594,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
       <ul>
         <li>
           <div
-            class="no-ligatures py-4 pt-6 css-zetqes"
+            class="no-ligatures py-4 pt-6 css-47538l"
             data-testid="TransactionDetail"
           >
             <div
@@ -610,7 +610,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                   >
                     <div
-                      class="shrink-0 css-8d0u1i"
+                      class="shrink-0 css-1n9jllj"
                       data-testid="Avatar"
                     >
                       <div
@@ -618,7 +618,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       >
                         <img
                           alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                           title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
                         />
                       </div>
@@ -634,7 +634,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #3
@@ -674,7 +674,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -682,7 +682,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         >
                           <img
                             alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(103, 58, 183)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"60\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                             title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
                           />
                         </div>
@@ -698,7 +698,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-u3jrna"
+                              class="no-ligatures css-9nx3be"
                               data-testid="TruncateEnd"
                             >
                               ARK Devnet #3
@@ -726,7 +726,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </div>
                 </div>
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
@@ -764,7 +764,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         </li>
         <li>
           <div
-            class="no-ligatures py-4 pb-6 css-1pvthjy"
+            class="no-ligatures py-4 pb-6 css-8zhymy"
             data-testid="TransactionDetail"
           >
             <div
@@ -780,7 +780,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                     class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                   >
                     <div
-                      class="shrink-0 css-8d0u1i"
+                      class="shrink-0 css-1n9jllj"
                       data-testid="Avatar"
                     >
                       <div
@@ -788,7 +788,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       >
                         <img
                           alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                           title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                         />
                       </div>
@@ -804,7 +804,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                           data-testid="Address__alias"
                         >
                           <span
-                            class="no-ligatures css-u3jrna"
+                            class="no-ligatures css-9nx3be"
                             data-testid="TruncateEnd"
                           >
                             ARK Devnet #4
@@ -844,7 +844,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="shrink-0 css-8d0u1i"
+                        class="shrink-0 css-1n9jllj"
                         data-testid="Avatar"
                       >
                         <div
@@ -852,7 +852,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           />
                         </div>
@@ -868,7 +868,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                             data-testid="Address__alias"
                           >
                             <span
-                              class="no-ligatures css-u3jrna"
+                              class="no-ligatures css-9nx3be"
                               data-testid="TruncateEnd"
                             >
                               ARK Devnet #4
@@ -896,7 +896,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </div>
                 </div>
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="LedgerImportStep__edit-alias"
                   type="button"
                 >
@@ -1001,7 +1001,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1060,7 +1060,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -1114,7 +1114,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             class="flex items-center sm:hidden"
           >
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -1122,7 +1122,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1132,7 +1132,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             class="hidden sm:flex sm:items-center"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -1140,7 +1140,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1150,7 +1150,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -1196,7 +1196,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-wr7004"
+      class="no-ligatures css-1uo4ck9"
       data-testid="TransactionDetail"
     >
       <div
@@ -1229,7 +1229,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
             </div>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="LedgerImportStep__edit-alias"
             type="button"
           >
@@ -1331,7 +1331,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
           >
             <div
               aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-14jhlj1"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1390,7 +1390,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -1444,7 +1444,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             class="flex items-center sm:hidden"
           >
             <div
-              class="shrink-0 css-1vy2z2u"
+              class="shrink-0 css-1yk316i"
               data-testid="Avatar"
             >
               <div
@@ -1452,7 +1452,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1462,7 +1462,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             class="hidden sm:flex sm:items-center"
           >
             <div
-              class="shrink-0 css-8d0u1i"
+              class="shrink-0 css-1n9jllj"
               data-testid="Avatar"
             >
               <div
@@ -1470,7 +1470,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1480,7 +1480,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -1526,7 +1526,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-19rivvh"
+      class="no-ligatures css-qu17s6"
       data-testid="TransactionDetail"
     >
       <div
@@ -1559,7 +1559,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
             </div>
           </div>
           <button
-            class="css-1jhy6v9"
+            class="css-6419sw"
             data-testid="LedgerImportStep__edit-alias"
             type="button"
           >

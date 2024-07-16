@@ -1,9 +1,9 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TransactionExplorerLink > should render a transaction link 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -25,14 +25,14 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
             class="overflow-hidden"
           >
             <a
-              class="ring-focus group inline-block flex items-center css-15tcy38"
+              class="ring-focus group inline-block flex items-center css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="transaction-link"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"
@@ -117,7 +117,7 @@ exports[`TransactionExplorerLink > should render a transaction link 1`] = `
 exports[`TransactionExplorerLink > should render a transaction link responsive after the width has calculated 1`] = `
 <div>
   <div
-    class="no-ligatures css-19rivvh"
+    class="no-ligatures css-qu17s6"
     data-testid="TransactionDetail"
   >
     <div
@@ -139,14 +139,14 @@ exports[`TransactionExplorerLink > should render a transaction link responsive a
             class="overflow-hidden"
           >
             <a
-              class="ring-focus group inline-block flex items-center css-15tcy38"
+              class="ring-focus group inline-block flex items-center css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href="transaction-link"
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <span
                   class="no-ligatures css-0"

@@ -94,7 +94,7 @@ export const CsvFormatter = (transaction: DTO.ExtendedConfirmedTransactionData, 
 			: truncate(
 					BigNumber.make(transaction.convertedTotal()).divide(transaction.total()).toNumber(),
 					exchangeCurrency,
-			  );
+				);
 
 	return {
 		amount: () => truncate(amount, currency),

@@ -81,7 +81,7 @@ export const InputWrapperStyled = styled.div<{
 		}
 
 		if (isCompact) {
-			return tw`height[34px] overflow-hidden`;
+			return tw`[height:34px] overflow-hidden`;
 		}
 
 		return tw`h-14 overflow-hidden`;

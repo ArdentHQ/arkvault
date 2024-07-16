@@ -3,7 +3,7 @@
 exports[`ButtonSpinner > should render 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`ButtonSpinner > should render 1`] = `
 exports[`ButtonSpinner > should render a danger variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="danger"
   />
 </div>
@@ -20,7 +20,7 @@ exports[`ButtonSpinner > should render a danger variant 1`] = `
 exports[`ButtonSpinner > should render a info variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="info"
   />
 </div>
@@ -29,7 +29,7 @@ exports[`ButtonSpinner > should render a info variant 1`] = `
 exports[`ButtonSpinner > should render a primary variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="primary"
   />
 </div>
@@ -38,7 +38,7 @@ exports[`ButtonSpinner > should render a primary variant 1`] = `
 exports[`ButtonSpinner > should render a reverse variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="reverse"
   />
 </div>
@@ -47,7 +47,7 @@ exports[`ButtonSpinner > should render a reverse variant 1`] = `
 exports[`ButtonSpinner > should render a secondary variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="secondary"
   />
 </div>
@@ -56,7 +56,7 @@ exports[`ButtonSpinner > should render a secondary variant 1`] = `
 exports[`ButtonSpinner > should render a transparent variant 1`] = `
 <div>
   <div
-    class="css-13oo6ja"
+    class="css-1nn240v"
     color="transparent"
   />
 </div>

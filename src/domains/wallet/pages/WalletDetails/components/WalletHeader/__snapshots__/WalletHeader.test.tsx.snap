@@ -14,7 +14,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -39,7 +39,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -47,7 +47,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -232,7 +232,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -258,7 +258,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -289,7 +289,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -301,7 +301,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
         </button>
       </div>
       <button
-        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -347,7 +347,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -415,7 +415,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -440,7 +440,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -448,7 +448,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -658,7 +658,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -684,7 +684,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -715,7 +715,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -727,7 +727,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
         </button>
       </div>
       <button
-        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -773,7 +773,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -841,7 +841,7 @@ exports[`WalletHeader > should render 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -866,7 +866,7 @@ exports[`WalletHeader > should render 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -874,7 +874,7 @@ exports[`WalletHeader > should render 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -1013,7 +1013,7 @@ exports[`WalletHeader > should render 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1039,7 +1039,7 @@ exports[`WalletHeader > should render 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1070,7 +1070,7 @@ exports[`WalletHeader > should render 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1092,7 +1092,7 @@ exports[`WalletHeader > should render 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -1160,7 +1160,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -1185,7 +1185,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -1193,7 +1193,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -1338,7 +1338,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1364,7 +1364,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1395,7 +1395,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1417,7 +1417,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -1485,7 +1485,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -1510,7 +1510,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -1518,7 +1518,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -1682,7 +1682,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1708,7 +1708,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1739,7 +1739,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-33lske"
+          class="bg-theme-dark-500 my-auto ml-3 css-1rfc421"
           data-testid="WalletHeader__send-button"
           disabled=""
           type="button"
@@ -1762,7 +1762,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -1830,7 +1830,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -1855,7 +1855,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -1863,7 +1863,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -2034,7 +2034,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2060,7 +2060,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2091,7 +2091,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2113,7 +2113,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -2181,7 +2181,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -2206,7 +2206,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -2214,7 +2214,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -2385,7 +2385,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2411,7 +2411,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2442,7 +2442,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2464,7 +2464,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -2532,7 +2532,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -2557,7 +2557,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -2565,7 +2565,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -2765,7 +2765,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2791,7 +2791,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2822,7 +2822,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2844,7 +2844,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div
@@ -2912,7 +2912,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       >
         <div
           aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-aozgpb"
+          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
           data-testid="NetworkIcon-ARK-ark.devnet"
         >
           <div
@@ -2937,7 +2937,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           </div>
         </div>
         <div
-          class="ring-theme-secondary-900 shrink-0 css-1qcfibg"
+          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
           data-testid="Avatar"
         >
           <div
@@ -2945,7 +2945,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
               title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
             />
           </div>
@@ -3054,7 +3054,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       >
         <button
           aria-busy="false"
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -3080,7 +3080,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           </div>
         </button>
         <button
-          class="css-t49sba"
+          class="css-5zyt1"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -3111,7 +3111,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1bx0hyc"
+          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -3133,7 +3133,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-12xyeiw"
+              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
               type="button"
             >
               <div

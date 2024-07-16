@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`UnlockTokensReview > should render 1`] = `
 <DocumentFragment>
@@ -43,7 +43,7 @@ exports[`UnlockTokensReview > should render 1`] = `
               data-testid="Address__alias"
             >
               <span
-                class="no-ligatures css-u3jrna"
+                class="no-ligatures css-9nx3be"
                 data-testid="TruncateEnd"
               >
                 LSK Wallet 1
@@ -63,7 +63,7 @@ exports[`UnlockTokensReview > should render 1`] = `
       class="flex items-center -space-x-1"
     >
       <div
-        class="shrink-0 css-8d0u1i"
+        class="shrink-0 css-1n9jllj"
         data-testid="Avatar"
       >
         <div
@@ -71,7 +71,7 @@ exports[`UnlockTokensReview > should render 1`] = `
         >
           <img
             alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
             title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
           />
         </div>
@@ -79,7 +79,7 @@ exports[`UnlockTokensReview > should render 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-fezbvb"
+    class="no-ligatures css-1snru0x"
     data-testid="TransactionAmount"
   >
     <div
@@ -95,7 +95,7 @@ exports[`UnlockTokensReview > should render 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1vb1527"
+          class="css-1v19423"
           color="success"
         >
           <div
@@ -112,7 +112,7 @@ exports[`UnlockTokensReview > should render 1`] = `
       </div>
     </div>
     <div
-      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-14jhlj1"
+      class="border-theme-success-300 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
     >
       <div
         class="css-1i4b0eq"
@@ -143,7 +143,7 @@ exports[`UnlockTokensReview > should render 1`] = `
     </div>
   </div>
   <div
-    class="no-ligatures css-fezbvb"
+    class="no-ligatures css-1snru0x"
     data-testid="TransactionFee"
   >
     <div
@@ -171,7 +171,7 @@ exports[`UnlockTokensReview > should render 1`] = `
     class="flex justify-end space-x-3"
   >
     <button
-      class="css-1jhy6v9"
+      class="css-6419sw"
       type="button"
     >
       <div
@@ -181,7 +181,7 @@ exports[`UnlockTokensReview > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-1bx0hyc"
+      class="css-fl4fi0"
       type="button"
     >
       <div

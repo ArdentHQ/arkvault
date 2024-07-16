@@ -24,7 +24,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -32,7 +32,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -48,7 +48,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -79,7 +79,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -87,7 +87,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -99,14 +99,14 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -147,7 +147,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -188,7 +188,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -227,7 +227,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -235,7 +235,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -251,7 +251,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -282,7 +282,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -290,7 +290,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -302,14 +302,14 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -350,7 +350,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -391,7 +391,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -431,7 +431,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -439,7 +439,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -455,7 +455,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -486,7 +486,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -494,7 +494,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -506,14 +506,14 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -554,7 +554,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -595,7 +595,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -635,7 +635,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -643,7 +643,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -659,7 +659,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -696,7 +696,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -704,7 +704,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                           />
                         </div>
@@ -714,7 +714,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -722,7 +722,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         >
                           <img
                             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           />
                         </div>
@@ -732,7 +732,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -740,7 +740,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           />
                         </div>
@@ -750,7 +750,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -758,7 +758,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         >
                           <img
                             alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"50\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"55\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
                             title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
                           />
                         </div>
@@ -766,7 +766,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     </span>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -807,7 +807,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -846,7 +846,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -854,7 +854,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -870,7 +870,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -907,7 +907,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -915,7 +915,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                             title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                           />
                         </div>
@@ -925,7 +925,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -933,7 +933,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         >
                           <img
                             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                             title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                           />
                         </div>
@@ -943,7 +943,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                       class="flex"
                     >
                       <div
-                        class="ring-2 ring-theme-background shrink-0 css-jxpwdn"
+                        class="ring-2 ring-theme-background shrink-0 css-1i0wxh3"
                         data-testid="Avatar"
                       >
                         <div
@@ -951,7 +951,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                             title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                           />
                         </div>
@@ -968,7 +968,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1009,7 +1009,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1048,7 +1048,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1056,7 +1056,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1072,7 +1072,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1103,7 +1103,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1111,7 +1111,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -1123,14 +1123,14 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1171,7 +1171,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1212,7 +1212,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1242,7 +1242,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1250,7 +1250,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   >
                     <img
                       alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"40\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="55" cx="40" cy="30" fill="rgb(3, 169, 244)"/><circle r="35" cx="90" cy="70" fill="rgb(0, 188, 212)"/><circle r="60" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
                       title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
                     />
                   </div>
@@ -1266,7 +1266,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         testwallet2
@@ -1297,7 +1297,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1305,16 +1305,16 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-1"
                 type="button"
               >
@@ -1353,7 +1353,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1361,7 +1361,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1377,7 +1377,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1408,7 +1408,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1416,7 +1416,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -1428,14 +1428,14 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1476,7 +1476,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1517,7 +1517,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1547,7 +1547,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1555,7 +1555,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   >
                     <img
                       alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(205, 220, 57)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"20\\" cy=\\"40\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"35\\" cx=\\"30\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(205, 220, 57)" width="100" height="100"/><circle r="60" cx="100" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="20" cy="40" fill="rgb(3, 169, 244)"/><circle r="35" cx="30" cy="60" fill="rgb(33, 150, 243)"/></svg>"
                       title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
                     />
                   </div>
@@ -1591,7 +1591,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                   <span
                     class="text-theme-secondary-400"
@@ -1599,16 +1599,16 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     N/A
                   </span>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-pgi2s"
+                class="p-6 rounded-none css-1772sn1"
                 data-testid="AddressRowMobile__select-1"
                 disabled=""
                 type="button"
@@ -1648,7 +1648,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1656,7 +1656,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1672,7 +1672,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1703,20 +1703,20 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                     data-testid="AddressRowMobile--nowallet"
                   />
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <div
-                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-jf987z"
+                    class="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1755,7 +1755,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1763,7 +1763,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1779,7 +1779,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -1810,7 +1810,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -1818,7 +1818,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -1830,14 +1830,14 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -1878,7 +1878,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -1919,7 +1919,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1958,7 +1958,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -1966,7 +1966,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -1982,7 +1982,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2013,7 +2013,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -2021,7 +2021,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -2033,14 +2033,14 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2081,7 +2081,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -2122,7 +2122,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -2161,7 +2161,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-jxpwdn"
+                  class="shrink-0 shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -2169,7 +2169,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
                       title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
                     />
                   </div>
@@ -2185,7 +2185,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       data-testid="Address__alias"
                     >
                       <span
-                        class="no-ligatures css-u3jrna"
+                        class="no-ligatures css-9nx3be"
                         data-testid="TruncateEnd"
                       >
                         ARK Wallet 1
@@ -2216,7 +2216,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
                   <div
-                    class="shrink-0 css-jxpwdn"
+                    class="shrink-0 css-1i0wxh3"
                     data-testid="Avatar"
                   >
                     <div
@@ -2224,7 +2224,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                         title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                       />
                     </div>
@@ -2236,14 +2236,14 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                       class="flex flex-1 justify-end overflow-hidden"
                     >
                       <a
-                        class="ring-focus group inline-block flex w-full items-center css-15tcy38"
+                        class="ring-focus group inline-block flex w-full items-center css-7nwwrh"
                         data-ring-focus-margin="-m-1"
                         data-testid="Link"
                         href=""
                         rel="noopener noreferrer"
                       >
                         <span
-                          class="css-1y2194z"
+                          class="css-170792"
                         >
                           <div
                             class="flex w-full items-center"
@@ -2284,7 +2284,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
                     type="vertical"
                   />
                   <span>
@@ -2326,7 +2326,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 </div>
               </div>
               <button
-                class="p-6 rounded-none css-112fhi5"
+                class="p-6 rounded-none css-6vay55"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >

@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Notifications } from "./Notifications";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
@@ -11,6 +11,19 @@ import NotificationTransactionsFixtures from "@/tests/fixtures/coins/ark/devnet/
 import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 let profile: Contracts.IProfile;
+
+vi.mock("react-visibility-sensor", () => ({
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
+		useEffect(() => {
+			if (onChange) {
+				onChange(false);
+			}
+		}, [onChange]);
+
+		return <div>{children}</div>;
+	},
+}));
 
 describe("Notifications", () => {
 	beforeEach(async () => {

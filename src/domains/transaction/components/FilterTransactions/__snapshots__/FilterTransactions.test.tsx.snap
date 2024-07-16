@@ -33,7 +33,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
             </span>
           </span>
           <span
-            class="css-1jxrcg5"
+            class="css-13hf1vs"
           >
             <div
               class="p-1 css-15txs7d"
@@ -62,7 +62,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         </button>
       </span>
       <div
-        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-yq8tnb"
+        class="opacity-0 mt-3 py-3 absolute z-10 bg-theme-background rounded-xl shadow-xl md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0 css-jowtd0"
         data-testid="dropdown__content"
         style="opacity: 1; height: -30px; overflow-y: scroll;"
       >
@@ -77,7 +77,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                 data-testid="dropdown__options"
               >
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--all-0"
                   tabindex="0"
                 >
@@ -95,7 +95,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
               class="-my-2 mx-8"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-t0fqin"
                 type="horizontal"
               />
             </div>
@@ -109,7 +109,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                 data-testid="dropdown__options"
               >
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-0"
                   tabindex="0"
                 >
@@ -118,7 +118,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-1"
                   tabindex="0"
                 >
@@ -127,7 +127,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-2"
                   tabindex="0"
                 >
@@ -136,7 +136,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-3"
                   tabindex="0"
                 >
@@ -145,7 +145,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-4"
                   tabindex="0"
                 >
@@ -154,7 +154,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-5"
                   tabindex="0"
                 >
@@ -163,7 +163,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-6"
                   tabindex="0"
                 >
@@ -172,7 +172,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                   </span>
                 </li>
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--core-7"
                   tabindex="0"
                 >
@@ -190,7 +190,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
               class="-my-2 mx-8"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-12qg4ub"
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-t0fqin"
                 type="horizontal"
               />
             </div>
@@ -199,7 +199,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
                 data-testid="dropdown__options"
               >
                 <li
-                  class="css-x2cq94"
+                  class="css-8ahleb"
                   data-testid="dropdown__option--magistrate-0"
                   tabindex="0"
                 >
@@ -250,7 +250,7 @@ exports[`FilterTransactions > should render 1`] = `
             </span>
           </span>
           <span
-            class="css-e3wx3i"
+            class="css-1uvxu7z"
           >
             <div
               class="p-1 css-15txs7d"
@@ -316,7 +316,7 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
             </span>
           </span>
           <span
-            class="css-e3wx3i"
+            class="css-1uvxu7z"
           >
             <div
               class="p-1 css-15txs7d"

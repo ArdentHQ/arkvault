@@ -3,7 +3,7 @@
 exports[`AmountLabel > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-1vb1527"
+    class="css-1v19423"
     color="success"
   >
     <div
@@ -23,7 +23,7 @@ exports[`AmountLabel > should render 1`] = `
 exports[`AmountLabel > should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mirnqf"
+    class="css-1q2kz5x"
     color="success"
   >
     <div
@@ -43,7 +43,7 @@ exports[`AmountLabel > should render compact 1`] = `
 exports[`AmountLabel > should render compact with hint 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mirnqf"
+    class="css-1q2kz5x"
     color="success"
   >
     <div
@@ -97,7 +97,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
 exports[`AmountLabel > should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="css-fbeerz"
+    class="css-148b4hi"
     color="danger"
   >
     <div
@@ -117,7 +117,7 @@ exports[`AmountLabel > should render negative 1`] = `
 exports[`AmountLabel > should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="css-1vb1527"
+    class="css-1v19423"
     color="success"
   >
     <div
@@ -171,7 +171,7 @@ exports[`AmountLabel > should render with hint 1`] = `
 exports[`AmountLabel > should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="css-hp3hbt"
+    class="css-6qumvg"
     color="neutral"
   >
     <div

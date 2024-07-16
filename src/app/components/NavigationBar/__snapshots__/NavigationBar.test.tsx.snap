@@ -3,14 +3,14 @@
 exports[`NavigationBar > should not render with title if variant is full 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -46,11 +46,11 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -83,11 +83,11 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -123,7 +123,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -132,7 +132,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -269,10 +269,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -322,10 +322,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -381,10 +381,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -428,10 +428,10 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -506,7 +506,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -514,7 +514,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -536,7 +536,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="css-97i12m"
+    class="css-1pyu5ft"
   >
     <div
       class="relative flex h-21"
@@ -582,14 +582,14 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
 exports[`NavigationBar > should render full variant when profile restored is false 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+        class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
         data-testid="NavigationBar__buttons__mobile--receive"
         disabled=""
         type="button"
@@ -626,11 +626,11 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -663,11 +663,11 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="cursor-not-allowed text-theme-secondary-500 css-127bt7l"
+        class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
         data-testid="NavigationBar__buttons__mobile--send"
         disabled=""
         type="button"
@@ -704,7 +704,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -713,7 +713,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -850,10 +850,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -903,10 +903,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -962,10 +962,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-127bt7l"
+                  class="css-5e9bdv"
                   data-testid="NavigationBar__buttons--receive"
                   disabled=""
                   type="button"
@@ -1010,10 +1010,10 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-127bt7l"
+                  class="css-5e9bdv"
                   data-testid="NavigationBar__buttons--send"
                   disabled=""
                   type="button"
@@ -1095,7 +1095,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1103,7 +1103,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -1122,14 +1122,14 @@ exports[`NavigationBar > should render full variant when profile restored is fal
 exports[`NavigationBar > should render full variant when profile restored is true 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -1165,11 +1165,11 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -1202,11 +1202,11 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -1242,7 +1242,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -1251,7 +1251,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -1388,10 +1388,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -1441,10 +1441,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -1500,10 +1500,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -1547,10 +1547,10 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -1625,7 +1625,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -1633,7 +1633,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -1654,14 +1654,14 @@ exports[`NavigationBar > should render full variant when profile restored is tru
 exports[`NavigationBar > should render in lg 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -1697,11 +1697,11 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -1734,11 +1734,11 @@ exports[`NavigationBar > should render in lg 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -1774,7 +1774,7 @@ exports[`NavigationBar > should render in lg 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -1783,7 +1783,7 @@ exports[`NavigationBar > should render in lg 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -1920,10 +1920,10 @@ exports[`NavigationBar > should render in lg 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -1973,10 +1973,10 @@ exports[`NavigationBar > should render in lg 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -2032,10 +2032,10 @@ exports[`NavigationBar > should render in lg 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -2079,10 +2079,10 @@ exports[`NavigationBar > should render in lg 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -2157,7 +2157,7 @@ exports[`NavigationBar > should render in lg 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -2165,7 +2165,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -2186,14 +2186,14 @@ exports[`NavigationBar > should render in lg 1`] = `
 exports[`NavigationBar > should render in md 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2229,11 +2229,11 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2266,11 +2266,11 @@ exports[`NavigationBar > should render in md 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2306,7 +2306,7 @@ exports[`NavigationBar > should render in md 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -2315,7 +2315,7 @@ exports[`NavigationBar > should render in md 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -2452,10 +2452,10 @@ exports[`NavigationBar > should render in md 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -2505,10 +2505,10 @@ exports[`NavigationBar > should render in md 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -2564,10 +2564,10 @@ exports[`NavigationBar > should render in md 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -2611,10 +2611,10 @@ exports[`NavigationBar > should render in md 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -2689,7 +2689,7 @@ exports[`NavigationBar > should render in md 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -2697,7 +2697,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -2718,14 +2718,14 @@ exports[`NavigationBar > should render in md 1`] = `
 exports[`NavigationBar > should render in sm 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -2761,11 +2761,11 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -2798,11 +2798,11 @@ exports[`NavigationBar > should render in sm 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -2838,7 +2838,7 @@ exports[`NavigationBar > should render in sm 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -2847,7 +2847,7 @@ exports[`NavigationBar > should render in sm 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -2984,10 +2984,10 @@ exports[`NavigationBar > should render in sm 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -3037,10 +3037,10 @@ exports[`NavigationBar > should render in sm 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -3096,10 +3096,10 @@ exports[`NavigationBar > should render in sm 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3143,10 +3143,10 @@ exports[`NavigationBar > should render in sm 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3221,7 +3221,7 @@ exports[`NavigationBar > should render in sm 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -3229,7 +3229,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -3250,14 +3250,14 @@ exports[`NavigationBar > should render in sm 1`] = `
 exports[`NavigationBar > should render in small screen variant 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -3293,11 +3293,11 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -3330,11 +3330,11 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -3370,7 +3370,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -3379,7 +3379,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -3516,10 +3516,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -3569,10 +3569,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -3628,10 +3628,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -3675,10 +3675,10 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -3753,7 +3753,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -3761,7 +3761,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -3782,14 +3782,14 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
 exports[`NavigationBar > should render in xs 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -3825,11 +3825,11 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -3862,11 +3862,11 @@ exports[`NavigationBar > should render in xs 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -3902,7 +3902,7 @@ exports[`NavigationBar > should render in xs 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -3911,7 +3911,7 @@ exports[`NavigationBar > should render in xs 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -4048,10 +4048,10 @@ exports[`NavigationBar > should render in xs 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -4101,10 +4101,10 @@ exports[`NavigationBar > should render in xs 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -4160,10 +4160,10 @@ exports[`NavigationBar > should render in xs 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -4207,10 +4207,10 @@ exports[`NavigationBar > should render in xs 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -4285,7 +4285,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -4293,7 +4293,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -4314,14 +4314,14 @@ exports[`NavigationBar > should render in xs 1`] = `
 exports[`NavigationBar > should render with custom menu 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4357,11 +4357,11 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4394,11 +4394,11 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4434,7 +4434,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-1ovuwx0"
+    class="css-1jzy9qi"
   >
     <div
       class="relative flex h-21"
@@ -4443,7 +4443,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -4580,10 +4580,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -4633,10 +4633,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -4692,10 +4692,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -4739,10 +4739,10 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -4817,7 +4817,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -4825,7 +4825,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -4846,14 +4846,14 @@ exports[`NavigationBar > should render with custom menu 1`] = `
 exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
 <DocumentFragment>
   <div
-    class="css-1mnbipv"
+    class="css-wwznix"
     data-testid="NavigationBarMobile"
   >
     <div
       class="flex h-14 items-center justify-center space-x-4"
     >
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--receive"
         type="button"
       >
@@ -4889,11 +4889,11 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--home"
         type="button"
       >
@@ -4926,11 +4926,11 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </div>
       </button>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
         type="vertical"
       />
       <button
-        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+        class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
         data-testid="NavigationBar__buttons__mobile--send"
         type="button"
       >
@@ -4966,7 +4966,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
   </div>
   <nav
     aria-labelledby="main menu"
-    class="css-mx81jt"
+    class="css-19etq0o"
   >
     <div
       class="relative flex h-21"
@@ -4975,7 +4975,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         class="hidden w-12 sm:flex"
       >
         <button
-          class="css-1v0i3m7"
+          class="css-1i1c5eg"
         >
           <div
             class="mx-auto css-15txs7d"
@@ -5112,10 +5112,10 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--server-status"
                     type="button"
                   >
@@ -5165,10 +5165,10 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 data-testid="dropdown__toggle"
               >
                 <div
-                  class="group css-1ietn6u"
+                  class="group css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--notifications"
                     type="button"
                   >
@@ -5224,10 +5224,10 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--receive"
                   type="button"
                 >
@@ -5271,10 +5271,10 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               class="flex items-center"
             >
               <div
-                class="css-1ietn6u"
+                class="css-c93wvv"
               >
                 <button
-                  class="css-12xyeiw"
+                  class="css-1hei9vx"
                   data-testid="NavigationBar__buttons--send"
                   type="button"
                 >
@@ -5349,7 +5349,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-8d0u1i"
+                class="shrink-0 css-1n9jllj"
                 data-testid="Avatar"
               >
                 <div
@@ -5357,7 +5357,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 >
                   <img
                     alt="Profile Avatar"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                   />
                   <span
                     class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -5379,7 +5379,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
 <DocumentFragment>
   <nav
     aria-labelledby="main menu"
-    class="css-97i12m"
+    class="css-1pyu5ft"
   >
     <div
       class="relative flex h-21"
@@ -5418,7 +5418,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
           <span
             class="text-lg uppercase"
           >
-            ARKVAULT
+            ARK VAULT
           </span>
         </div>
       </div>

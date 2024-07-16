@@ -37,14 +37,14 @@ exports[`AuthenticationStep (message) > should request WIF if wallet was importe
         WIF
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__wif"
             name="wif"
             type="password"
@@ -139,14 +139,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -241,14 +241,14 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -343,14 +343,14 @@ exports[`AuthenticationStep (message) > should request private key if wallet was
         Private Key
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__private-key"
             name="privateKey"
             type="password"
@@ -445,14 +445,14 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
         Secret
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -553,32 +553,32 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         >
           <path
             d="M836 622v-7h-38v7h-2v-7h-38v7h-2v-7h-38v7h-2v-7h-22v-2h22v-13h2v13h38v-23h2v23h38v-38h-14v-2h14v-7h2v7h38v-27h2v27h38v-38h-10v-2h10v-38h-20v-2h20v-38h-29v-2h29v-7h2v7h14v2h-14v38h38v-24h2v24h13v2h-13v38h13v2h-13v10h-2v-10h-38v38h19v2h-19v7h-2v-7h-38v38h11v2h-11v7zm0-9v-38h-38v38zm80-80v-38h-38v38zm-480 88v-6h-4v-2h4v-38h-21v-2h21v-38h-38v16h-2v-16h-5v-2h5v-38h-15v-2h15v-8h2v8h38v-38h-15v-2h15v-8h2v8h8v2h-8v38h18v2h-18v38h18v2h-18v38h38v-13h2v13h12v2h-12v7h-2v-7h-38v38h12v2h-12v6zm0-88v-38h-38v38zm242 86v-4h-4v-2h4v-4h2v4h4v2h-4v4zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-480-22v-4h-4v-2h4v-4h2v4h4v2h-4v4zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-280-95v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <path
             d="M516 467v-12h-38v12h-2v-12h-6v-2h6v-4h2v4h38v-21h2v21h38v-1h2v1h38v-11h2v11h38v-15h2v15h8v2h-8v8h-2v-8h-38v8h-2v-8h-38v8h-2v-8h-38v12z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 12"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 12"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_12"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_12"
           />
           <g
             id="ledger"
           >
             <path
               d="M781.851 483H797a10 10 0 0 1 10 10v44a10 10 0 0 1-10 10h-16.6M510 547a10 10 0 0 1-10-10v-44a10 10 0 0 1 10-10h228.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(520 498)"
@@ -598,16 +598,16 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
             </g>
             <path
               d="M716.839 493.96l36.872-9.858a31.935 31.935 0 1 1 16.564 61.685l-246.311 65.855a10 10 0 0 1-12.247-7.056l-11.388-42.408a9.976 9.976 0 0 1 7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(737 492)"
@@ -626,9 +626,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(743 498)"
@@ -653,9 +653,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -677,13 +677,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               />
             </g>
             <g
-              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 1"
-              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_1"
+              data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 1"
+              id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_1"
             >
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -705,9 +705,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -725,9 +725,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -743,9 +743,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -764,9 +764,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
               </g>
               <path
                 d="M651.6 520.85l-.706-.7a.481.481 0 0 1 0-.7l2.019-2a.269.269 0 0 0-.2-.45h-14.197a.474.474 0 0 1-.5-.5v-1a.474.474 0 0 1 .5-.5h14.245a.276.276 0 0 0 .2-.45l-2.019-2a.48.48 0 0 1 0-.7l.706-.7A.46.46 0 0 1 652 511a.438.438 0 0 1 .3.15l4.541 4.5a.54.54 0 0 1 .159.35.452.452 0 0 1-.151.35l-4.541 4.5a.492.492 0 0 1-.707 0zm-48.611-.84v-2h2v2zm3-2L608 518a1.847 1.847 0 0 1-2 2l-.01.007zm-4 1.993H602l-.011.007zM600 518l1.989.007V520a1.846 1.846 0 0 1-1.989-2zm-.01-.99v-2h2v2zm3 0v-5L606 512a1.933 1.933 0 0 1 2 2l-.01 3.008zM676 516v-2h2v2zm-76-2a1.846 1.846 0 0 1 2-2l-.011.008v2zm80-2v-2h2v2zm-4 0v-2h2v2z"
-                data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="#212225"
-                id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
               />
             </g>
           </g>
@@ -776,7 +776,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -833,32 +833,32 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         >
           <path
             d="M836 622v-7h-38v7h-2v-7h-38v7h-2v-7h-38v7h-2v-7h-22v-2h22v-13h2v13h38v-23h2v23h38v-38h-14v-2h14v-7h2v7h38v-27h2v27h38v-38h-10v-2h10v-38h-20v-2h20v-38h-29v-2h29v-7h2v7h14v2h-14v38h38v-24h2v24h13v2h-13v38h13v2h-13v10h-2v-10h-38v38h19v2h-19v7h-2v-7h-38v38h11v2h-11v7zm0-9v-38h-38v38zm80-80v-38h-38v38zm-480 88v-6h-4v-2h4v-38h-21v-2h21v-38h-38v16h-2v-16h-5v-2h5v-38h-15v-2h15v-8h2v8h38v-38h-15v-2h15v-8h2v8h8v2h-8v38h18v2h-18v38h18v2h-18v38h38v-13h2v13h12v2h-12v7h-2v-7h-38v38h12v2h-12v6zm0-88v-38h-38v38zm242 86v-4h-4v-2h4v-4h2v4h4v2h-4v4zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-480-22v-4h-4v-2h4v-4h2v4h4v2h-4v4zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-280-95v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <path
             d="M516 467v-12h-38v12h-2v-12h-6v-2h6v-4h2v4h38v-21h2v21h38v-1h2v1h38v-11h2v11h38v-15h2v15h8v2h-8v8h-2v-8h-38v8h-2v-8h-38v8h-2v-8h-38v12z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 12"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 12"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_12"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_12"
           />
           <g
             id="ledger"
           >
             <path
               d="M781.851 483H797a10 10 0 0 1 10 10v44a10 10 0 0 1-10 10h-16.6M510 547a10 10 0 0 1-10-10v-44a10 10 0 0 1 10-10h228.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(520 498)"
@@ -878,16 +878,16 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M716.839 493.96l36.872-9.858a31.935 31.935 0 1 1 16.564 61.685l-246.311 65.855a10 10 0 0 1-12.247-7.056l-11.388-42.408a9.976 9.976 0 0 1 7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(737 492)"
@@ -906,9 +906,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(743 498)"
@@ -933,9 +933,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -957,13 +957,13 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               />
             </g>
             <g
-              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 1"
-              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_1"
+              data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 1"
+              id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_1"
             >
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -985,9 +985,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -1005,9 +1005,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -1023,9 +1023,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -1044,9 +1044,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               </g>
               <path
                 d="M651.6 520.85l-.706-.7a.481.481 0 0 1 0-.7l2.019-2a.269.269 0 0 0-.2-.45h-14.197a.474.474 0 0 1-.5-.5v-1a.474.474 0 0 1 .5-.5h14.245a.276.276 0 0 0 .2-.45l-2.019-2a.48.48 0 0 1 0-.7l.706-.7A.46.46 0 0 1 652 511a.438.438 0 0 1 .3.15l4.541 4.5a.54.54 0 0 1 .159.35.452.452 0 0 1-.151.35l-4.541 4.5a.492.492 0 0 1-.707 0zm-48.611-.84v-2h2v2zm3-2L608 518a1.847 1.847 0 0 1-2 2l-.01.007zm-4 1.993H602l-.011.007zM600 518l1.989.007V520a1.846 1.846 0 0 1-1.989-2zm-.01-.99v-2h2v2zm3 0v-5L606 512a1.933 1.933 0 0 1 2 2l-.01 3.008zM676 516v-2h2v2zm-76-2a1.846 1.846 0 0 1 2-2l-.011.008v2zm80-2v-2h2v2zm-4 0v-2h2v2z"
-                data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="#212225"
-                id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
               />
             </g>
           </g>
@@ -1056,7 +1056,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -1107,26 +1107,26 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -1146,16 +1146,16 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -1174,9 +1174,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -1201,9 +1201,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -1226,14 +1226,14 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -1253,15 +1253,15 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -1276,7 +1276,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -1327,26 +1327,26 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -1366,16 +1366,16 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -1394,9 +1394,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -1421,9 +1421,9 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -1446,14 +1446,14 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -1473,15 +1473,15 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -1496,7 +1496,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -1547,26 +1547,26 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -1586,16 +1586,16 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -1614,9 +1614,9 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -1641,9 +1641,9 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -1666,14 +1666,14 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -1693,15 +1693,15 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -1716,7 +1716,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -1888,13 +1888,13 @@ exports[`AuthenticationStep (message) > should specify ledger supported model 1`
     <p
       class="text-theme-secondary-text"
     >
-      Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.
+      Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span
@@ -1945,14 +1945,14 @@ exports[`AuthenticationStep (transaction) > should request WIF if wallet was imp
         WIF
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__wif"
             name="wif"
             type="password"
@@ -2047,14 +2047,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -2119,14 +2119,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
         2nd Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__second-mnemonic"
             name="secondMnemonic"
             type="password"
@@ -2221,14 +2221,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -2323,14 +2323,14 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         Mnemonic
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__mnemonic"
             name="mnemonic"
             type="password"
@@ -2425,14 +2425,14 @@ exports[`AuthenticationStep (transaction) > should request private key if wallet
         Private Key
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__private-key"
             name="privateKey"
             type="password"
@@ -2527,14 +2527,14 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
         Secret
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -2599,14 +2599,14 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
         2nd Secret
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__second-secret"
             name="secondSecret"
             type="password"
@@ -2701,14 +2701,14 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
         Secret
       </label>
       <div
-        class="css-1psxlcd"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
         >
           <input
             autocomplete="off"
-            class="no-ligatures w-full border-none css-1nupw50"
+            class="no-ligatures w-full border-none css-1vs1awz"
             data-testid="AuthenticationStep__secret"
             name="secret"
             type="password"
@@ -2809,32 +2809,32 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         >
           <path
             d="M836 622v-7h-38v7h-2v-7h-38v7h-2v-7h-38v7h-2v-7h-22v-2h22v-13h2v13h38v-23h2v23h38v-38h-14v-2h14v-7h2v7h38v-27h2v27h38v-38h-10v-2h10v-38h-20v-2h20v-38h-29v-2h29v-7h2v7h14v2h-14v38h38v-24h2v24h13v2h-13v38h13v2h-13v10h-2v-10h-38v38h19v2h-19v7h-2v-7h-38v38h11v2h-11v7zm0-9v-38h-38v38zm80-80v-38h-38v38zm-480 88v-6h-4v-2h4v-38h-21v-2h21v-38h-38v16h-2v-16h-5v-2h5v-38h-15v-2h15v-8h2v8h38v-38h-15v-2h15v-8h2v8h8v2h-8v38h18v2h-18v38h18v2h-18v38h38v-13h2v13h12v2h-12v7h-2v-7h-38v38h12v2h-12v6zm0-88v-38h-38v38zm242 86v-4h-4v-2h4v-4h2v4h4v2h-4v4zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-480-22v-4h-4v-2h4v-4h2v4h4v2h-4v4zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-280-95v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <path
             d="M516 467v-12h-38v12h-2v-12h-6v-2h6v-4h2v4h38v-21h2v21h38v-1h2v1h38v-11h2v11h38v-15h2v15h8v2h-8v8h-2v-8h-38v8h-2v-8h-38v8h-2v-8h-38v12z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 12"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 12"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_12"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_12"
           />
           <g
             id="ledger"
           >
             <path
               d="M781.851 483H797a10 10 0 0 1 10 10v44a10 10 0 0 1-10 10h-16.6M510 547a10 10 0 0 1-10-10v-44a10 10 0 0 1 10-10h228.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(520 498)"
@@ -2854,16 +2854,16 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
             </g>
             <path
               d="M716.839 493.96l36.872-9.858a31.935 31.935 0 1 1 16.564 61.685l-246.311 65.855a10 10 0 0 1-12.247-7.056l-11.388-42.408a9.976 9.976 0 0 1 7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(737 492)"
@@ -2882,9 +2882,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(743 498)"
@@ -2909,9 +2909,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -2933,13 +2933,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               />
             </g>
             <g
-              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 1"
-              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_1"
+              data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 1"
+              id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_1"
             >
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -2961,9 +2961,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -2981,9 +2981,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -2999,9 +2999,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -3020,9 +3020,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
               </g>
               <path
                 d="M651.6 520.85l-.706-.7a.481.481 0 0 1 0-.7l2.019-2a.269.269 0 0 0-.2-.45h-14.197a.474.474 0 0 1-.5-.5v-1a.474.474 0 0 1 .5-.5h14.245a.276.276 0 0 0 .2-.45l-2.019-2a.48.48 0 0 1 0-.7l.706-.7A.46.46 0 0 1 652 511a.438.438 0 0 1 .3.15l4.541 4.5a.54.54 0 0 1 .159.35.452.452 0 0 1-.151.35l-4.541 4.5a.492.492 0 0 1-.707 0zm-48.611-.84v-2h2v2zm3-2L608 518a1.847 1.847 0 0 1-2 2l-.01.007zm-4 1.993H602l-.011.007zM600 518l1.989.007V520a1.846 1.846 0 0 1-1.989-2zm-.01-.99v-2h2v2zm3 0v-5L606 512a1.933 1.933 0 0 1 2 2l-.01 3.008zM676 516v-2h2v2zm-76-2a1.846 1.846 0 0 1 2-2l-.011.008v2zm80-2v-2h2v2zm-4 0v-2h2v2z"
-                data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="#212225"
-                id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
               />
             </g>
           </g>
@@ -3032,7 +3032,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -3089,32 +3089,32 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         >
           <path
             d="M836 622v-7h-38v7h-2v-7h-38v7h-2v-7h-38v7h-2v-7h-22v-2h22v-13h2v13h38v-23h2v23h38v-38h-14v-2h14v-7h2v7h38v-27h2v27h38v-38h-10v-2h10v-38h-20v-2h20v-38h-29v-2h29v-7h2v7h14v2h-14v38h38v-24h2v24h13v2h-13v38h13v2h-13v10h-2v-10h-38v38h19v2h-19v7h-2v-7h-38v38h11v2h-11v7zm0-9v-38h-38v38zm80-80v-38h-38v38zm-480 88v-6h-4v-2h4v-38h-21v-2h21v-38h-38v16h-2v-16h-5v-2h5v-38h-15v-2h15v-8h2v8h38v-38h-15v-2h15v-8h2v8h8v2h-8v38h18v2h-18v38h18v2h-18v38h38v-13h2v13h12v2h-12v7h-2v-7h-38v38h12v2h-12v6zm0-88v-38h-38v38zm242 86v-4h-4v-2h4v-4h2v4h4v2h-4v4zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-480-22v-4h-4v-2h4v-4h2v4h4v2h-4v4zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-280-95v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <path
             d="M516 467v-12h-38v12h-2v-12h-6v-2h6v-4h2v4h38v-21h2v21h38v-1h2v1h38v-11h2v11h38v-15h2v15h8v2h-8v8h-2v-8h-38v8h-2v-8h-38v8h-2v-8h-38v12z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 12"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 12"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_12"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_12"
           />
           <g
             id="ledger"
           >
             <path
               d="M781.851 483H797a10 10 0 0 1 10 10v44a10 10 0 0 1-10 10h-16.6M510 547a10 10 0 0 1-10-10v-44a10 10 0 0 1 10-10h228.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(520 498)"
@@ -3134,16 +3134,16 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M716.839 493.96l36.872-9.858a31.935 31.935 0 1 1 16.564 61.685l-246.311 65.855a10 10 0 0 1-12.247-7.056l-11.388-42.408a9.976 9.976 0 0 1 7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(737 492)"
@@ -3162,9 +3162,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(743 498)"
@@ -3189,9 +3189,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -3213,13 +3213,13 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               />
             </g>
             <g
-              data-name="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430 1"
-              id="\\\\u0413\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0430_1"
+              data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 1"
+              id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_1"
             >
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -3241,9 +3241,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -3261,9 +3261,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -3279,9 +3279,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
                 />
               </g>
               <g
-                data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 541 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 541 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="none"
-                id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_541_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_541_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
                 stroke="#212225"
                 stroke-linecap="round"
                 stroke-width="2"
@@ -3300,9 +3300,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               </g>
               <path
                 d="M651.6 520.85l-.706-.7a.481.481 0 0 1 0-.7l2.019-2a.269.269 0 0 0-.2-.45h-14.197a.474.474 0 0 1-.5-.5v-1a.474.474 0 0 1 .5-.5h14.245a.276.276 0 0 0 .2-.45l-2.019-2a.48.48 0 0 1 0-.7l.706-.7A.46.46 0 0 1 652 511a.438.438 0 0 1 .3.15l4.541 4.5a.54.54 0 0 1 .159.35.452.452 0 0 1-.151.35l-4.541 4.5a.492.492 0 0 1-.707 0zm-48.611-.84v-2h2v2zm3-2L608 518a1.847 1.847 0 0 1-2 2l-.01.007zm-4 1.993H602l-.011.007zM600 518l1.989.007V520a1.846 1.846 0 0 1-1.989-2zm-.01-.99v-2h2v2zm3 0v-5L606 512a1.933 1.933 0 0 1 2 2l-.01 3.008zM676 516v-2h2v2zm-76-2a1.846 1.846 0 0 1 2-2l-.011.008v2zm80-2v-2h2v2zm-4 0v-2h2v2z"
-                data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+                data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
                 fill="#212225"
-                id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+                id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
               />
             </g>
           </g>
@@ -3312,7 +3312,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -3363,26 +3363,26 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -3402,16 +3402,16 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -3430,9 +3430,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -3457,9 +3457,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -3482,14 +3482,14 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -3509,15 +3509,15 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -3532,7 +3532,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -3583,26 +3583,26 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -3622,16 +3622,16 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -3650,9 +3650,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -3677,9 +3677,9 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -3702,14 +3702,14 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -3729,15 +3729,15 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -3752,7 +3752,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -3803,26 +3803,26 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         >
           <path
             d="M860,499v-7H822v7h-2v-7H782v7h-2v-7H742v7h-2v-7H718v-2h22V477h2v13h38V467h2v23h38V452H806v-2h14v-7h2v7h38V423h2v27h38V412H890v-2h10V372H880v-2h20V332H871v-2h29v-7h2v7h14v2H902v38h38V346h2v24h13v2H942v38h13v2H942v10h-2V412H902v38h19v2H902v7h-2v-7H862v38h11v2H862v7Zm0-9V452H822v38Zm80-80V372H902v38ZM460,498v-6h-4v-2h4V452H439v-2h21V412H422v16h-2V412h-5v-2h5V372H405v-2h15v-8h2v8h38V332H445v-2h15v-8h2v8h8v2h-8v38h18v2H462v38h18v2H462v38h38V437h2v13h12v2H502v7h-2v-7H462v38h12v2H462v6Zm0-88V372H422v38Zm242,86v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM420,456v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4ZM636,336v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
             fill="#dbdee5"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
           />
           <g
             id="ledger"
           >
             <path
               d="M805.851,364H821a10,10,0,0,1,10,10v44a10,10,0,0,1-10,10H804.4M534,428a10,10,0,0,1-10-10V374a10,10,0,0,1,10-10H762.748"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
               stroke="#212225"
               stroke-width="2"
               transform="translate(544 379)"
@@ -3842,16 +3842,16 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
             </g>
             <path
               d="M740.839,374.96l36.872-9.858a31.935,31.935,0,1,1,16.564,61.685L547.964,492.642a10,10,0,0,1-12.247-7.056l-11.388-42.408a9.976,9.976,0,0,1,7.071-12.221l60.218-16.1"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#dbdee5"
               stroke-width="2"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(761 373)"
@@ -3870,9 +3870,9 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
               />
             </g>
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
               stroke="#212225"
               stroke-width="2"
               transform="translate(767 379)"
@@ -3897,9 +3897,9 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
               id="Ledger-2"
             />
             <g
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 974"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 974"
               fill="none"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_974"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_974"
               stroke="#212225"
               stroke-linecap="round"
               stroke-width="2"
@@ -3922,14 +3922,14 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
             </g>
             <path
               d="M620,401a1,1,0,0,1,0-2h43a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2h63a1,1,0,0,1,0,2Z"
-              data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 975 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 975 \\u043A\\u043E\\u043F\\u0438\\u044F"
               fill="#dbdee5"
-              id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_975_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_975_\\u043A\\u043E\\u043F\\u0438\\u044F"
             />
             <g
-              data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 1 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="none"
-              id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_1_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
               stroke="#dbdee5"
               stroke-width="2"
               transform="translate(701 386)"
@@ -3949,15 +3949,15 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
             </g>
             <path
               d="M714.594,393l-4.219,4.2-1.969-1.961-1.406,1.4L710.375,400,716,394.4Z"
-              data-name="check  \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 5"
+              data-name="check  \\u043A\\u043E\\u043F\\u0438\\u044F 5"
               fill="#212225"
-              id="check_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_5"
+              id="check_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
             />
             <path
               d="M785.65,353.849l-4.5-4.541a.492.492,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,791,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,786,354,.454.454,0,0,1,785.65,353.849Zm-225,0-4.5-4.541a.49.49,0,0,1,0-.706l.7-.707a.481.481,0,0,1,.7,0l2,2.019a.269.269,0,0,0,.45-.2V335.516a.475.475,0,0,1,.5-.5h1a.475.475,0,0,1,.5.5v14.245a.275.275,0,0,0,.449.2l2-2.018a.479.479,0,0,1,.7,0l.7.706A.46.46,0,0,1,566,349a.434.434,0,0,1-.15.3l-4.5,4.541A.538.538,0,0,1,561,354,.453.453,0,0,1,560.65,353.849Z"
-              data-name="Forma 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 3"
+              data-name="Forma 1 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
               fill="#212225"
-              id="Forma_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_3"
+              id="Forma_1_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
             />
           </g>
         </g>
@@ -3972,7 +3972,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         class="inline-flex w-full items-center justify-center space-x-3"
       >
         <div
-          class="css-1b3vlxq"
+          class="css-1ppx3l2"
           color="info"
         />
         <span
@@ -4144,13 +4144,13 @@ exports[`AuthenticationStep (transaction) > should specify ledger supported mode
     <p
       class="text-theme-secondary-text"
     >
-      Connect your Ledger device, open the ARK app, and authorize the connection with ARKVault.
+      Connect your Ledger device, open the ARK app, and authorize the connection with ARK Vault.
     </p>
     <div
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span

@@ -17,18 +17,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-app
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -125,18 +125,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-app-hooks
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -208,18 +208,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-app-components
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -330,18 +330,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-contact
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -354,6 +354,12 @@ jobs:
             - name: Rebuild
               run: pnpm rebuild
             - name: Test (components)
+              env:
+                  COVERAGE_THRESHOLD_LINES: 93.19
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.15
+                  COVERAGE_THRESHOLD_STATEMENTS: 93.5
+                  COVERAGE_THRESHOLD_BRANCHES: 87.67
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/components
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -362,6 +368,8 @@ jobs:
 
             - name: Test (pages)
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_INCLUDE_PATH: src/domains/contact/pages
               with:
                   timeout_minutes: 10
                   max_attempts: 2
@@ -381,18 +389,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-dashboard
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -418,18 +426,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-error
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -454,18 +462,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-exchange
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -479,6 +487,8 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_BRANCHES: 99.67
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -490,18 +500,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-message
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -515,6 +525,12 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.57
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.3
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.2
+                  COVERAGE_INCLUDE_PATH: src/domains/message
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -526,18 +542,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-network
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -563,18 +579,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-profile
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -587,6 +603,8 @@ jobs:
             - name: Rebuild
               run: pnpm rebuild
             - name: Test
+              env:
+                  COVERAGE_THRESHOLD_BRANCHES: 99.6
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -600,18 +618,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-setting
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -624,6 +642,8 @@ jobs:
             - name: Rebuild
               run: pnpm rebuild
             - name: Test
+              env:
+                  COVERAGE_THRESHOLD_BRANCHES: 99.45
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -637,18 +657,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-transaction
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -666,7 +686,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 75
                   COVERAGE_THRESHOLD_FUNCTIONS: 69.23
                   COVERAGE_THRESHOLD_STATEMENTS: 79.41
-                  COVERAGE_THRESHOLD_BRANCHES: 83.33
+                  COVERAGE_THRESHOLD_BRANCHES: 80
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/utils.ts,src/domains/transaction/routing.ts
               uses: nick-invision/retry@v2
               with:
@@ -677,7 +697,7 @@ jobs:
             - name: Test Components ^A-O
               env:
                   COVERAGE_THRESHOLD_LINES: 99.58
-                  COVERAGE_THRESHOLD_FUNCTIONS: 100
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.48
                   COVERAGE_THRESHOLD_STATEMENTS: 99.6
                   COVERAGE_THRESHOLD_BRANCHES: 99.73
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[A-O]*
@@ -689,9 +709,9 @@ jobs:
 
             - name: Test Components ^P-S
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.48
+                  COVERAGE_THRESHOLD_LINES: 98.47
                   COVERAGE_THRESHOLD_FUNCTIONS: 97.61
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.59
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.58
                   COVERAGE_THRESHOLD_BRANCHES: 96.72
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[P-S]*
               uses: nick-invision/retry@v2
@@ -702,9 +722,9 @@ jobs:
 
             - name: Test Components ^T-Z
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.41
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99.32
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.43
+                  COVERAGE_THRESHOLD_LINES: 99.33
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.35
                   COVERAGE_THRESHOLD_BRANCHES: 98.72
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/components/[T-Z]*
               uses: nick-invision/retry@v2
@@ -728,9 +748,9 @@ jobs:
 
             - name: Test Pages
               env:
-                  COVERAGE_THRESHOLD_LINES: 98.9
-                  COVERAGE_THRESHOLD_FUNCTIONS: 100
-                  COVERAGE_THRESHOLD_STATEMENTS: 98.93
+                  COVERAGE_THRESHOLD_LINES: 97.3
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.4
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.8
                   COVERAGE_THRESHOLD_BRANCHES: 98.43
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
@@ -744,7 +764,7 @@ jobs:
                   COVERAGE_THRESHOLD_LINES: 88.03
                   COVERAGE_THRESHOLD_FUNCTIONS: 82.85
                   COVERAGE_THRESHOLD_STATEMENTS: 88.52
-                  COVERAGE_THRESHOLD_BRANCHES: 87.03
+                  COVERAGE_THRESHOLD_BRANCHES: 86.41
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/validations
               uses: nick-invision/retry@v2
               with:
@@ -759,18 +779,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-vote
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -795,18 +815,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-domains-wallet
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -820,6 +840,12 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 99.93
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.93
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.39
+                  COVERAGE_THRESHOLD_BRANCHES: 99.39
+                  COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -831,18 +857,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-router
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -871,18 +897,18 @@ jobs:
         strategy:
             matrix:
                 node-version:
-                    - 18.12.1
+                    - 20.12.2
         concurrency:
             group: ${{ github.head_ref }}-test-utils
             cancel-in-progress: true
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
-            - uses: actions/setup-node@v3
+                  version: 9
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm

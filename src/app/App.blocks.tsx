@@ -2,7 +2,7 @@ import { Global, css } from "@emotion/react";
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { HashRouter, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useErrorHandler } from "react-error-boundary";
+import { useErrorBoundary } from "react-error-boundary";
 import { ToastContainer } from "react-toastify";
 import { GlobalStyles as BaseStyles } from "twin.macro";
 
@@ -97,9 +97,7 @@ const Main: React.VFC = () => {
 			history.push({
 				pathname: "/",
 				state: {
-					from:
-						history.location.pathname + history.location.search ??
-						/* istanbul ignore next -- @preserve */ "",
+					from: history.location.pathname + history.location.search,
 				},
 			}),
 		onProfileSignOut: () => {
@@ -125,7 +123,7 @@ const Main: React.VFC = () => {
 		},
 	});
 
-	const handleError = useErrorHandler();
+	const { showBoundary } = useErrorBoundary();
 
 	useLayoutEffect(() => {
 		const boot = async () => {
@@ -147,12 +145,12 @@ const Main: React.VFC = () => {
 
 				setIsEnvironmentBooted(true);
 			} catch (error) {
-				handleError(error);
+				showBoundary(error);
 			}
 		};
 
 		boot();
-	}, [env, handleError]);
+	}, [env, showBoundary]);
 
 	const Skeleton = history.location.pathname.startsWith("/profiles") ? ProfilePageSkeleton : PageSkeleton;
 

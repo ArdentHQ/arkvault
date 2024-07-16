@@ -33,7 +33,7 @@ exports[`App > should not migrate profiles 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-1pyu5ft"
         >
           <div
             class="relative flex h-21"
@@ -285,7 +285,7 @@ exports[`App > should not migrate profiles 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -296,7 +296,7 @@ exports[`App > should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -305,7 +305,7 @@ exports[`App > should not migrate profiles 1`] = `
                                 <img
                                   alt="John Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                                   title="John Doe"
                                 />
                                 <span
@@ -382,7 +382,7 @@ exports[`App > should not migrate profiles 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -393,7 +393,7 @@ exports[`App > should not migrate profiles 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -402,7 +402,7 @@ exports[`App > should not migrate profiles 1`] = `
                                 <img
                                   alt="Jane Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(233, 30, 99)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
                                   title="Jane Doe"
                                 />
                                 <span
@@ -413,7 +413,7 @@ exports[`App > should not migrate profiles 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-9adppv"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -510,7 +510,7 @@ exports[`App > should not migrate profiles 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-10zh490"
+                        class="emotion-cache-1sjfzt7"
                         data-testid="Card"
                         type="button"
                       >
@@ -519,7 +519,7 @@ exports[`App > should not migrate profiles 1`] = `
                         >
                           <div>
                             <div
-                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-1fuqtlq"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -569,13 +569,13 @@ exports[`App > should not migrate profiles 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="ring-focus group inline-block emotion-cache-15tcy38"
+                    class="ring-focus group inline-block emotion-cache-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="#/profiles/import"
                   >
                     <span
-                      class="emotion-cache-1y2194z"
+                      class="emotion-cache-170792"
                     >
                       Import it here.
                     </span>
@@ -602,7 +602,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
     >
       <nav
         aria-labelledby="main menu"
-        class="css-97i12m"
+        class="css-1pyu5ft"
       >
         <div
           class="relative flex h-21"
@@ -818,10 +818,10 @@ exports[`App > should render application error if the app fails to boot 1`] = `
                 class="relative"
               >
                 <div
-                  class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
+                  class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
                 />
                 <div
-                  class="py-4 css-qner8f"
+                  class="py-4 css-1prn1rr"
                   disabled=""
                 >
                   <div
@@ -829,7 +829,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
                   >
                     <textarea
                       autocomplete="off"
-                      class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1nupw50"
+                      class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
                       data-testid="ErrorStep__errorMessage"
                       disabled=""
                       type="text"
@@ -847,7 +847,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
                 class="relative"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="clipboard-button__wrapper"
                   type="button"
                 >
@@ -859,7 +859,7 @@ exports[`App > should render application error if the app fails to boot 1`] = `
                 </button>
               </div>
               <button
-                class="css-1bx0hyc"
+                class="css-fl4fi0"
                 data-testid="ApplicationError__button--reload"
                 type="button"
               >
@@ -895,7 +895,7 @@ exports[`App > should render mock 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-1pyu5ft"
         >
           <div
             class="relative flex h-21"
@@ -1147,7 +1147,7 @@ exports[`App > should render mock 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -1158,7 +1158,7 @@ exports[`App > should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -1167,7 +1167,7 @@ exports[`App > should render mock 1`] = `
                                 <img
                                   alt="John Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                                   title="John Doe"
                                 />
                                 <span
@@ -1244,7 +1244,7 @@ exports[`App > should render mock 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -1255,7 +1255,7 @@ exports[`App > should render mock 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -1264,7 +1264,7 @@ exports[`App > should render mock 1`] = `
                                 <img
                                   alt="Jane Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(233, 30, 99)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
                                   title="Jane Doe"
                                 />
                                 <span
@@ -1275,7 +1275,7 @@ exports[`App > should render mock 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-9adppv"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -1372,7 +1372,7 @@ exports[`App > should render mock 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-10zh490"
+                        class="emotion-cache-1sjfzt7"
                         data-testid="Card"
                         type="button"
                       >
@@ -1381,7 +1381,7 @@ exports[`App > should render mock 1`] = `
                         >
                           <div>
                             <div
-                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-1fuqtlq"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -1431,13 +1431,13 @@ exports[`App > should render mock 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="ring-focus group inline-block emotion-cache-15tcy38"
+                    class="ring-focus group inline-block emotion-cache-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="#/profiles/import"
                   >
                     <span
-                      class="emotion-cache-1y2194z"
+                      class="emotion-cache-170792"
                     >
                       Import it here.
                     </span>
@@ -1482,7 +1482,7 @@ exports[`App > should render the offline screen if there is no internet connecti
     >
       <nav
         aria-labelledby="main menu"
-        class="emotion-cache-97i12m"
+        class="emotion-cache-1pyu5ft"
       >
         <div
           class="relative flex h-21"
@@ -1849,7 +1849,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
       >
         <nav
           aria-labelledby="main menu"
-          class="emotion-cache-97i12m"
+          class="emotion-cache-1pyu5ft"
         >
           <div
             class="relative flex h-21"
@@ -2101,7 +2101,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -2112,7 +2112,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -2121,7 +2121,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                                 <img
                                   alt="John Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                                   title="John Doe"
                                 />
                                 <span
@@ -2198,7 +2198,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                       class="h-40 w-36 leading-tight sm:w-40"
                     >
                       <button
-                        class="emotion-cache-116zvw2"
+                        class="emotion-cache-31qpo4"
                         data-testid="Card"
                         type="button"
                       >
@@ -2209,7 +2209,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                             class="relative"
                           >
                             <div
-                              class="shrink-0 emotion-cache-11ohc3q"
+                              class="shrink-0 emotion-cache-iou7f8"
                               data-testid="Avatar"
                             >
                               <div
@@ -2218,7 +2218,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                                 <img
                                   alt="Jane Doe"
                                   data-testid="ProfileAvatar__svg"
-                                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(233, 30, 99)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(63, 81, 181)\\"/></svg>"
+                                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="55" cx="20" cy="60" fill="rgb(233, 30, 99)"/><circle r="60" cx="50" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="30" cy="30" fill="rgb(63, 81, 181)"/></svg>"
                                   title="Jane Doe"
                                 />
                                 <span
@@ -2229,7 +2229,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                               </div>
                             </div>
                             <span
-                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-1jfmq7q"
+                              class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background mb-2 mr-2 border-theme-background bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600 emotion-cache-9adppv"
                             >
                               <div
                                 class="emotion-cache-1i4b0eq"
@@ -2326,7 +2326,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                       class="group h-40 leading-tight sm:w-40 w-36"
                     >
                       <button
-                        class="emotion-cache-10zh490"
+                        class="emotion-cache-1sjfzt7"
                         data-testid="Card"
                         type="button"
                       >
@@ -2335,7 +2335,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                         >
                           <div>
                             <div
-                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-3q6q5z"
+                              class="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white ring-theme-background duration-200 emotion-cache-1fuqtlq"
                             >
                               <div
                                 class="emotion-cache-v0ob3f"
@@ -2385,13 +2385,13 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                     Exported a Profile before? 
                   </span>
                   <a
-                    class="ring-focus group inline-block emotion-cache-15tcy38"
+                    class="ring-focus group inline-block emotion-cache-7nwwrh"
                     data-ring-focus-margin="-m-1"
                     data-testid="Link"
                     href="#/profiles/import"
                   >
                     <span
-                      class="emotion-cache-1y2194z"
+                      class="emotion-cache-170792"
                     >
                       Import it here.
                     </span>

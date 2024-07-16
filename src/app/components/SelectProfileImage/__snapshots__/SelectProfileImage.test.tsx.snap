@@ -17,7 +17,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -63,7 +63,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -122,7 +122,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -168,7 +168,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -227,7 +227,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -273,7 +273,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -332,7 +332,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -378,7 +378,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -440,10 +440,10 @@ exports[`SelectProfileImage > should render 1`] = `
           class="h-full overflow-hidden rounded-full"
         >
           <div
-            class="css-5aibro"
+            class="css-1vxhzvl"
           >
             <button
-              class="css-1jhy6v9"
+              class="css-6419sw"
               data-testid="SelectProfileImage__upload-button"
               type="button"
             >
@@ -500,7 +500,7 @@ exports[`SelectProfileImage > should render with value svg 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -568,7 +568,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
         class="relative z-0 h-20 w-20"
       >
         <div
-          class="css-ikig5u"
+          class="css-1vo35tn"
         >
           <img
             alt="Avatar"
@@ -614,7 +614,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-1km99ls"
+            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >

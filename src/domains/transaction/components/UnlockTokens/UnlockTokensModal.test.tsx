@@ -5,14 +5,15 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
+import { vi } from "vitest";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
-import { env, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
+import { env, MNEMONICS, render, screen, waitFor, within, act } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
-import * as useConfirmedTransactionMock from "@/domains/transaction/components/TransactionSuccessful/hooks/useConfirmedTransaction";
+import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 
 const translations = buildTranslations();
 
@@ -32,6 +33,11 @@ describe("UnlockTokensModal", () => {
 	};
 
 	beforeAll(async () => {
+		vi.useFakeTimers({
+			shouldAdvanceTime: true,
+			toFake: ["setInterval", "clearInterval", "Date"],
+		});
+
 		profile = await env.profiles().create("empty");
 
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -81,6 +87,16 @@ describe("UnlockTokensModal", () => {
 
 	beforeEach(() => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }));
+		server.use(
+			requestMock(
+				"https://ark-test.arkvault.io/api/transactions/adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a",
+				transactionsFixture,
+			),
+		);
+	});
+
+	afterAll(() => {
+		vi.useRealTimers();
 	});
 
 	it("should render", async () => {
@@ -103,8 +119,6 @@ describe("UnlockTokensModal", () => {
 	});
 
 	it.each(["success", "error"])("should handle unlock token transaction with %s", async (expectedOutcome) => {
-		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
-
 		render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensModal wallet={wallet} onClose={vi.fn()} profile={profile} />
@@ -190,12 +204,12 @@ describe("UnlockTokensModal", () => {
 						accepted: [transactionFixture.data.id],
 						errors: {},
 						rejected: [],
-				  }
+					}
 				: {
 						accepted: [],
 						errors: { error: "unable to unlock token" },
 						rejected: [transactionFixture.data.id],
-				  },
+					},
 		);
 
 		await waitFor(() => {
@@ -203,6 +217,8 @@ describe("UnlockTokensModal", () => {
 		});
 
 		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
+
+		await act(() => vi.runOnlyPendingTimers());
 
 		if (expectedOutcome === "success") {
 			await waitFor(() => {

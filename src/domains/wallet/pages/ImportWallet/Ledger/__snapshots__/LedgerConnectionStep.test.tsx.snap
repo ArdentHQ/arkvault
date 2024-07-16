@@ -44,14 +44,14 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1psxlcd"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
             >
               <input
                 autocomplete="off"
-                class="no-ligatures w-full border-none css-1nupw50"
+                class="no-ligatures w-full border-none css-1vs1awz"
                 data-testid="select-list__input"
                 name="network"
                 readonly=""
@@ -82,7 +82,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n29l73"
+                  class="css-xk5t3v"
                   disabled=""
                 >
                   <div
@@ -119,7 +119,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                       aria-controls="downshift-0-menu"
                       aria-labelledby="downshift-0-label"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1nupw50"
+                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
                       id="downshift-0-input"
@@ -195,7 +195,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
       class="flex flex-col overflow-hidden rounded-xl"
     >
       <div
-        class="css-1qh812f"
+        class="css-1o2lvkz"
       >
         <div
           class="css-v0ob3f"
@@ -234,7 +234,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </span>
       </div>
       <div
-        class="css-k5jr4t"
+        class="css-1n20uf5"
       >
         Successfully connected
       </div>
@@ -262,34 +262,34 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       >
         <path
           d="M860 499v-7h-38v7h-2v-7h-38v7h-2v-7h-38v7h-2v-7h-22v-2h22v-13h2v13h38v-23h2v23h38v-38h-14v-2h14v-7h2v7h38v-27h2v27h38v-38h-10v-2h10v-38h-20v-2h20v-38h-29v-2h29v-7h2v7h14v2h-14v38h38v-24h2v24h13v2h-13v38h13v2h-13v10h-2v-10h-38v38h19v2h-19v7h-2v-7h-38v38h11v2h-11v7zm0-9v-38h-38v38zm80-80v-38h-38v38zm-480 88v-6h-4v-2h4v-38h-21v-2h21v-38h-38v16h-2v-16h-5v-2h5v-38h-15v-2h15v-8h2v8h38v-38h-15v-2h15v-8h2v8h8v2h-8v38h18v2h-18v38h18v2h-18v38h38v-13h2v13h12v2h-12v7h-2v-7h-38v38h12v2h-12v6zm0-88v-38h-38v38zm242 86v-4h-4v-2h4v-4h2v4h4v2h-4v4zm198-18v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-480-22v-4h-4v-2h4v-4h2v4h4v2h-4v4zm80-40v-4h-4v-2h4v-4h2v4h4v2h-4v4zm360-3v-4h-4v-2h4v-4h2v4h4v2h-4v4zm-224-77v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-          data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 22 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 11"
+          data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 22 \\u043A\\u043E\\u043F\\u0438\\u044F 11"
           fill="#dbdee5"
-          id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_22_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_11"
+          id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_22_\\u043A\\u043E\\u043F\\u0438\\u044F_11"
         />
         <g
           id="ledger"
         >
           <path
             d="M805.851 364H821a10 10 0 0110 10v44a10 10 0 01-10 10h-16.6"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973"
             fill="none"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973"
             stroke="#212225"
             stroke-linecap="round"
             stroke-width="2"
           />
           <path
             d="M748.302 364.024l38.171.027a31.939 31.939 0 11.025 63.877l-254.993-.178a10.001 10.001 0 01-10.003-9.988l-.017-43.916a9.977 9.977 0 019.996-9.974l62.34.044z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 973 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 973 \\u043A\\u043E\\u043F\\u0438\\u044F"
             fill="none"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_973_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_973_\\u043A\\u043E\\u043F\\u0438\\u044F"
             stroke="#dbdee5"
             stroke-width="2"
           />
           <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 2"
+            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
             fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_2"
+            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
             stroke="#dbdee5"
             stroke-width="2"
             transform="translate(761 373)"
@@ -308,9 +308,9 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
             />
           </g>
           <g
-            data-name="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441 2050 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
             fill="none"
-            id="\\\\u042D\\\\u043B\\\\u043B\\\\u0438\\\\u043F\\\\u0441_2050_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
             stroke="#de5846"
             stroke-width="2"
             transform="translate(767 379)"
@@ -337,9 +337,9 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
           />
           <path
             d="M787.823 403.268L784 399.445l-3.823 3.823a2.447 2.447 0 01-3.461-3.461l3.823-3.823-3.792-3.792a2.447 2.447 0 013.461-3.46l3.792 3.792 3.792-3.792a2.447 2.447 0 013.461 3.46l-3.792 3.792 3.823 3.823a2.448 2.448 0 11-3.461 3.461z"
-            data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B2086 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
             fill="#ffe0da"
-            id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B2086_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
             stroke="#de5846"
             stroke-width="2"
           />
@@ -350,7 +350,7 @@ exports[`LedgerConnectionStep > should render cancel screen 1`] = `
       class="inline-flex w-full items-center justify-center space-x-3"
     >
       <div
-        class="css-1b3vlxq"
+        class="css-1ppx3l2"
         color="info"
       />
       <span

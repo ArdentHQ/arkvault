@@ -79,6 +79,8 @@ const originalLocalStorageGetItem = localStorage.getItem;
 let localstorageSpy;
 
 beforeAll(async () => {
+	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
+
 	process.env.REACT_APP_IS_UNIT = "1";
 	server.listen({ onUnhandledRequest: "error" });
 
@@ -90,8 +92,6 @@ beforeAll(async () => {
 });
 
 beforeEach(() => {
-	MockDate.set(new Date("2020-07-01T00:00:00.000Z"));
-
 	localstorageSpy = vi
 		.spyOn(Storage.prototype, "getItem")
 		.mockImplementation((key) => originalLocalStorageGetItem.call(localStorage, key));
@@ -110,8 +110,6 @@ beforeEach(() => {
 afterEach(() => {
 	server.resetHandlers();
 
-	MockDate.reset();
-
 	tippyMock.mockRestore();
 
 	localstorageSpy.mockRestore();
@@ -119,6 +117,8 @@ afterEach(() => {
 
 afterAll(() => {
 	server.close();
+
+	MockDate.reset();
 
 	if (global.gc) {
 		global.gc();

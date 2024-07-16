@@ -32,6 +32,10 @@ import { toasts } from "@/app/services";
 import { useSearchParametersValidation } from "@/app/hooks/use-search-parameters-validation";
 import { isLedgerTransportSupported } from "@/app/contexts/Ledger/transport";
 import { isValidUrl } from "@/utils/url-validation";
+import {
+	TransferFormData,
+	TransferOverwriteModal,
+} from "@/domains/transaction/pages/SendTransfer/TransferOverwriteModal";
 
 const MAX_TABS = 5;
 
@@ -130,6 +134,9 @@ export const SendTransfer = () => {
 		resetForm();
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+	const [showOverwriteModal, setShowOverwriteModal] = useState(false);
+	const [overwriteData, setOverwriteData] = useState<TransferFormData>({} as TransferFormData);
+
 	const [showQRModal, setShowQRModal] = useState(false);
 	const { dismissFeeWarning, feeWarningVariant, requireFeeConfirmation, showFeeWarning, setShowFeeWarning } =
 		useFeeConfirmation(fee, fees);
@@ -226,6 +233,12 @@ export const SendTransfer = () => {
 		return !isValid;
 	}, [activeTab, getValues, isDirty, isValid]);
 
+	const currentFormData: TransferFormData = {
+		amount: form.getValues("amount"),
+		memo: form.getValues("memo"),
+		recipientAddress: form.getValues("recipientAddress"),
+	};
+
 	const handleQRCodeRead = async (url: string) => {
 		setShowQRModal(false);
 
@@ -269,16 +282,31 @@ export const SendTransfer = () => {
 			return;
 		}
 
-		if (qrData.get("amount")) {
-			form.setValue("amount", qrData.get("amount"), { shouldDirty: true, shouldValidate: true });
+		const formHasValues = Object.values(currentFormData).some(Boolean);
+
+		let newValues = {};
+
+		for (const [qrKey, formKey] of Object.entries({
+			amount: "amount",
+			memo: "memo",
+			recipient: "recipientAddress",
+		})) {
+			const value = qrData.get(qrKey);
+
+			if (!value) {
+				continue;
+			}
+
+			if (formHasValues) {
+				newValues = { ...newValues, [formKey]: value };
+			} else {
+				form.setValue(formKey, value, { shouldDirty: true, shouldValidate: true });
+			}
 		}
 
-		if (qrData.get("memo")) {
-			form.setValue("memo", qrData.get("memo"), { shouldDirty: true, shouldValidate: true });
-		}
-
-		if (qrData.get("recipient")) {
-			form.setValue("recipientAddress", qrData.get("recipient"), { shouldDirty: true, shouldValidate: true });
+		if (Object.keys(newValues).length > 0) {
+			setOverwriteData(newValues);
+			setShowOverwriteModal(true);
 		}
 
 		toasts.success(t("TRANSACTION.QR_CODE_SUCCESS"));
@@ -371,6 +399,26 @@ export const SendTransfer = () => {
 						isOpen={showQRModal}
 						onCancel={() => setShowQRModal(false)}
 						onRead={(text: string) => handleQRCodeRead(text)}
+					/>
+
+					<TransferOverwriteModal
+						isOpen={showOverwriteModal}
+						onCancel={() => setShowOverwriteModal(false)}
+						onConfirm={(clearPrefilled: boolean) => {
+							if (clearPrefilled) {
+								for (const key of ["recipientAddress", "amount", "memo"]) {
+									form.setValue(key, undefined, { shouldDirty: true, shouldValidate: true });
+								}
+							}
+
+							for (const [key, value] of Object.entries(overwriteData)) {
+								form.setValue(key, value, { shouldDirty: true, shouldValidate: true });
+							}
+
+							setShowOverwriteModal(false);
+						}}
+						currentData={currentFormData}
+						newData={overwriteData}
 					/>
 
 					<FeeWarning

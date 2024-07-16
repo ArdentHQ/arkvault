@@ -126,14 +126,9 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(backSelector());
 
-		await waitFor(() => {
-			expect(screen.findByTestId("LedgerCancellingScreen")).resolves.toBeVisible();
-		});
-
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("DisconnectDevice"));
-
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 

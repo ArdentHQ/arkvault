@@ -15,22 +15,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-build-and-upload
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -50,7 +50,7 @@ jobs:
               run: pnpm build:e2e
 
             - name: Upload Build Artifacts
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -62,22 +62,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-vote
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -100,7 +100,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -116,7 +116,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -128,22 +128,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-transaction
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -166,7 +166,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -182,7 +182,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -194,22 +194,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-contact
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -232,7 +232,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -248,7 +248,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -260,22 +260,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-dashboard
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -298,7 +298,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -314,7 +314,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -326,22 +326,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-profile
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -364,7 +364,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -380,7 +380,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -392,22 +392,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-message
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -430,7 +430,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -446,7 +446,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -458,22 +458,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-wallet
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -496,7 +496,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -512,7 +512,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*
@@ -524,22 +524,22 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [18.12.1]
+                node-version: [20.12.2]
 
         concurrency:
             group: ${{ github.head_ref }}-e2e-settings
             cancel-in-progress: true
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                   ref: ${{ github.head_ref }}
 
-            - uses: pnpm/action-setup@v2
+            - uses: pnpm/action-setup@v4
               with:
-                  version: 8
+                  version: 9
 
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: pnpm
@@ -562,7 +562,7 @@ jobs:
                   sudo apt install microsoft-edge-beta
 
             - name: Download Build Artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: ${{ github.workspace }}/dist
@@ -578,7 +578,7 @@ jobs:
 
             - name: Upload Screenshots
               if: ${{ failure() }}
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: ${{ github.job }}-screenshots
                   path: ${{ github.workspace }}/screenshots/**/*

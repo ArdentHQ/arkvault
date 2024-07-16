@@ -1,26 +1,26 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DelegateRow > should emit action on select button 1`] = `
 <DocumentFragment>
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -28,7 +28,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -45,14 +45,14 @@ exports[`DelegateRow > should emit action on select button 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -90,7 +90,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div>
               <div
@@ -128,17 +128,17 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -171,13 +171,13 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1jhy6v9"
+                class="css-6419sw"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -201,22 +201,22 @@ exports[`DelegateRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -224,7 +224,7 @@ exports[`DelegateRow > should render 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -241,14 +241,14 @@ exports[`DelegateRow > should render 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -286,7 +286,7 @@ exports[`DelegateRow > should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div>
               <div
@@ -324,17 +324,17 @@ exports[`DelegateRow > should render 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -367,13 +367,13 @@ exports[`DelegateRow > should render 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1jhy6v9"
+                class="css-6419sw"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -397,22 +397,22 @@ exports[`DelegateRow > should render changed style when network requires vote am
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -420,7 +420,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -437,14 +437,14 @@ exports[`DelegateRow > should render changed style when network requires vote am
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -482,7 +482,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-o5w6qc"
           >
             <div>
               <div
@@ -520,17 +520,17 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -564,7 +564,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-o5w6qc"
           >
             <div
               class="relative flex-1 px-3"
@@ -573,7 +573,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
                 class="relative"
               >
                 <div
-                  class="css-a6wl22"
+                  class="css-1kkerl1"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -581,7 +581,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1nupw50"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -608,13 +608,13 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-i0u9bq"
+                class="css-sbyv6u"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -638,22 +638,22 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -661,7 +661,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -678,14 +678,14 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -723,7 +723,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-o5w6qc"
           >
             <div>
               <div
@@ -761,17 +761,17 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -804,13 +804,13 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-nxm84j"
+                class="css-1j9j5h6"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -834,22 +834,22 @@ exports[`DelegateRow > should render the selected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-mx19qq"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-hhd44j"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1rods8x"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-12appi5"
           >
             <div
-              class="-ml-0.5 shrink-0 css-jxpwdn"
+              class="-ml-0.5 shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -857,7 +857,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -874,14 +874,14 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -919,7 +919,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-12appi5"
           >
             <div>
               <div
@@ -957,17 +957,17 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-12appi5"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1000,13 +1000,13 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-br23tb"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-yf8cy4"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -1021,22 +1021,22 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-hhd44j"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-1rods8x"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-12appi5"
           >
             <div
-              class="-ml-0.5 shrink-0 css-jxpwdn"
+              class="-ml-0.5 shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -1044,7 +1044,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               >
                 <img
                   alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                   title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                 />
               </div>
@@ -1061,14 +1061,14 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                   genesis_42
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -1106,7 +1106,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-12appi5"
           >
             <div>
               <div
@@ -1144,17 +1144,17 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-12appi5"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1187,13 +1187,13 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-br23tb"
+            class="justify-end border-2 border-l-0 border-transparent css-yf8cy4"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-12xyeiw"
+                class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
@@ -1208,22 +1208,22 @@ exports[`DelegateRow > should render the selected vote 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-mx19qq"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-hhd44j"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-1rods8x"
+            class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 css-12appi5"
           >
             <div
-              class="-ml-0.5 shrink-0 css-jxpwdn"
+              class="-ml-0.5 shrink-0 css-1i0wxh3"
               data-testid="Avatar"
             >
               <div
@@ -1231,7 +1231,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1248,14 +1248,14 @@ exports[`DelegateRow > should render the selected vote 1`] = `
                   genesis_17
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -1293,7 +1293,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-12appi5"
           >
             <div>
               <div
@@ -1331,17 +1331,17 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent h-12 css-12appi5"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1374,14 +1374,14 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-br23tb"
+            class="justify-end border-2 border-l-0 border-transparent css-yf8cy4"
           >
             <div
               class="-mr-0.5"
             >
               <span>
                 <button
-                  class="-mr-3 relative text-black css-127bt7l"
+                  class="-mr-3 relative text-black css-5e9bdv"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
@@ -1407,22 +1407,22 @@ exports[`DelegateRow > should render the selected vote 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1430,7 +1430,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -1447,14 +1447,14 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -1492,7 +1492,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-o5w6qc"
           >
             <div>
               <div
@@ -1530,17 +1530,17 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1573,13 +1573,13 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1bx0hyc"
+                class="css-fl4fi0"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -1594,22 +1594,22 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1617,7 +1617,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               >
                 <img
                   alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"20\\" cy=\\"30\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 188, 212)" width="100" height="100"/><circle r="50" cx="20" cy="30" fill="rgb(3, 169, 244)"/><circle r="60" cx="0" cy="70" fill="rgb(156, 39, 176)"/><circle r="45" cx="80" cy="60" fill="rgb(255, 152, 0)"/></svg>"
                   title="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
                 />
               </div>
@@ -1634,14 +1634,14 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                   genesis_42
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -1679,7 +1679,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div>
               <div
@@ -1717,17 +1717,17 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1760,13 +1760,13 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1jhy6v9"
+                class="css-6419sw"
                 data-testid="DelegateRow__toggle-1"
                 type="button"
               >
@@ -1781,22 +1781,22 @@ exports[`DelegateRow > should render the selected vote 2`] = `
         </td>
       </tr>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -1804,7 +1804,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"55\\" cx=\\"60\\" cy=\\"60\\" fill=\\"rgb(205, 220, 57)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
                   title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
                 />
               </div>
@@ -1821,14 +1821,14 @@ exports[`DelegateRow > should render the selected vote 2`] = `
                   genesis_17
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -1866,7 +1866,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div>
               <div
@@ -1904,17 +1904,17 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -1947,14 +1947,14 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <span>
                 <button
-                  class="css-1yqe28v"
+                  class="css-qrwjsp"
                   data-testid="DelegateRow__toggle-2"
                   disabled=""
                   type="button"
@@ -1980,22 +1980,22 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -2003,7 +2003,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -2020,14 +2020,14 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -2065,7 +2065,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-o5w6qc"
           >
             <div>
               <div
@@ -2103,17 +2103,17 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -2146,13 +2146,13 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1cp5yjb"
+                class="css-15yk9k4"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >
@@ -2176,22 +2176,22 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-1li86da"
+        class=" css-16ynu5g"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-14huxtf"
+            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
           >
             <span />
           </div>
         </td>
         <td>
           <div
-            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-1d4ra48"
+            class="font-bold border-t-2 border-b-2 border-transparent space-x-4 css-o5w6qc"
           >
             <div
-              class="-ml-0.5 shrink-0 css-tthe5h"
+              class="-ml-0.5 shrink-0 css-1px82g5"
               data-testid="Avatar"
             >
               <div
@@ -2199,7 +2199,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                   title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                 />
               </div>
@@ -2216,14 +2216,14 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                   arkx
                 </div>
                 <a
-                  class="ring-focus group inline-block ml-2 block sm:hidden css-15tcy38"
+                  class="ring-focus group inline-block ml-2 block sm:hidden css-7nwwrh"
                   data-ring-focus-margin="-m-1"
                   data-testid="Link"
                   href=""
                   rel="noopener noreferrer"
                 >
                   <span
-                    class="css-1y2194z"
+                    class="css-170792"
                   >
                     <div
                       class="css-v0ob3f"
@@ -2261,7 +2261,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div>
               <div
@@ -2299,17 +2299,17 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="hidden sm:table-cell"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <a
-              class="ring-focus group inline-block css-15tcy38"
+              class="ring-focus group inline-block css-7nwwrh"
               data-ring-focus-margin="-m-1"
               data-testid="Link"
               href=""
               rel="noopener noreferrer"
             >
               <span
-                class="css-1y2194z"
+                class="css-170792"
               >
                 <div
                   class="css-v0ob3f"
@@ -2343,7 +2343,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div
               class="relative flex-1 px-3"
@@ -2352,7 +2352,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-1ut8ui"
+                  class="css-1x0atc1"
                   disabled=""
                 >
                   <div
@@ -2361,7 +2361,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 text-theme-secondary-text css-1nupw50"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 text-theme-secondary-text css-1vs1awz"
                       data-testid="InputCurrency"
                       disabled=""
                       name="amount"
@@ -2389,13 +2389,13 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-1hhowo0"
+            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
           >
             <div
               class="-mr-0.5"
             >
               <button
-                class="css-1jhy6v9"
+                class="css-6419sw"
                 data-testid="DelegateRow__toggle-0"
                 type="button"
               >

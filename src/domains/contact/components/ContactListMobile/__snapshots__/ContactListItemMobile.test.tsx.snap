@@ -3,7 +3,7 @@
 exports[`ContactListItemMobile > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-8cvvgy"
+    class="css-fvpuky"
   >
     <div
       class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
@@ -75,17 +75,17 @@ exports[`ContactListItemMobile > should render 1`] = `
               </span>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
               type="vertical"
             />
           </div>
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
       >
         <div
-          class="css-16yt50s"
+          class="css-1j7gziz"
           data-testid="Accordion__toggle"
         >
           <div
@@ -121,7 +121,7 @@ exports[`ContactListItemMobile > should render 1`] = `
 exports[`ContactListItemMobile > should render addresses 1`] = `
 <DocumentFragment>
   <div
-    class="css-8cvvgy"
+    class="css-fvpuky"
   >
     <div
       class="select-none cursor-pointer md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 md:border-b"
@@ -193,17 +193,17 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
               </span>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
               type="vertical"
             />
           </div>
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch css-1stpt4m-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
       >
         <div
-          class="css-16yt50s"
+          class="css-1j7gziz"
           data-testid="Accordion__toggle"
         >
           <div
@@ -255,7 +255,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
               class="flex items-center space-x-3 overflow-hidden"
             >
               <div
-                class="shrink-0 css-jxpwdn"
+                class="shrink-0 css-1i0wxh3"
                 data-testid="Avatar"
               >
                 <div
@@ -263,7 +263,7 @@ exports[`ContactListItemMobile > should render addresses 1`] = `
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
                     title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
                   />
                 </div>

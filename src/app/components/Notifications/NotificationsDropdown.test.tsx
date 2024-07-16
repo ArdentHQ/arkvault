@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
-import React from "react";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
 import { NotificationsDropdown } from "./NotificationsDropdown";
@@ -14,6 +14,19 @@ import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.
 
 const history = createHashHistory();
 let profile: Contracts.IProfile;
+
+vi.mock("react-visibility-sensor", () => ({
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
+		useEffect(() => {
+			if (onChange) {
+				onChange(false);
+			}
+		}, [onChange]);
+
+		return <div>{children}</div>;
+	},
+}));
 
 describe("Notifications", () => {
 	beforeEach(async () => {

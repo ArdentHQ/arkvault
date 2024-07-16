@@ -26,7 +26,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
         class="flex flex-col overflow-hidden rounded-xl mt-6"
       >
         <div
-          class="css-1ecv4eg"
+          class="css-rzhg83"
         >
           <div
             class="css-v0ob3f"
@@ -70,9 +70,9 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </span>
         </div>
         <div
-          class="css-1pvpof3"
+          class="css-trjt6n"
         >
-          You are responsible for storing and protecting this mnemonic passphrase offline. ARKVault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
+          You are responsible for storing and protecting this mnemonic passphrase offline. ARK Vault cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.
         </div>
       </div>
       <ul
@@ -582,7 +582,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
             type="button"
           >
             <div
-              class="flex items-center space-x-2 font-semibold link "
+              class="flex items-center space-x-2 font-semibold link"
             >
               <div
                 class="css-v0ob3f"
@@ -619,7 +619,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
             </div>
           </button>
           <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-fbr6jx"
+            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
             type="vertical"
           />
           <button
@@ -679,10 +679,10 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
                 type="checkbox"
               />
               <div
-                class="css-7lwhds toggle-handle"
+                class="css-d8rk4r toggle-handle"
               >
                 <span
-                  class="css-1fmiyrr"
+                  class="css-st84t0"
                 />
               </div>
             </label>

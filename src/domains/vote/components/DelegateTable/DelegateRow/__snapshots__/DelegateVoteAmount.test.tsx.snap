@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
 <DocumentFragment>
@@ -10,7 +10,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1d4ra48"
+            class="justify-center border-t-2 border-b-2 border-transparent css-o5w6qc"
           >
             <div
               class="relative flex-1 px-3"
@@ -19,7 +19,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-a6wl22"
+                  class="css-1kkerl1"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -27,7 +27,7 @@ exports[`DelegateVoteAmount > should render when isCompact = false 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1nupw50"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"
@@ -66,7 +66,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
           data-testid="DelegateVoteAmount"
         >
           <div
-            class="justify-center border-t-2 border-b-2 border-transparent css-1rods8x"
+            class="justify-center border-t-2 border-b-2 border-transparent css-12appi5"
           >
             <div
               class="relative flex-1 px-3"
@@ -75,7 +75,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-xvbcvx"
+                  class="css-yc1qjo"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -83,7 +83,7 @@ exports[`DelegateVoteAmount > should render when isCompact = true 1`] = `
                     <input
                       aria-invalid="false"
                       autocomplete="off"
-                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1nupw50"
+                      class="no-ligatures w-full border-none text-right focus:text-left pr-8 css-1vs1awz"
                       data-testid="InputCurrency"
                       name="amount"
                       placeholder="0"

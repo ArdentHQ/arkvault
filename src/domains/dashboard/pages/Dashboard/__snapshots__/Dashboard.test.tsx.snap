@@ -6,14 +6,14 @@ exports[`Dashboard > should render 1`] = `
     class="css-kmmje1"
   >
     <div
-      class="css-1mnbipv"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -49,11 +49,11 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -86,11 +86,11 @@ exports[`Dashboard > should render 1`] = `
           </div>
         </button>
         <div
-          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-12xyeiw"
+          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -126,7 +126,7 @@ exports[`Dashboard > should render 1`] = `
     </div>
     <nav
       aria-labelledby="main menu"
-      class="css-1ovuwx0"
+      class="css-1jzy9qi"
     >
       <div
         class="relative flex h-21"
@@ -135,7 +135,7 @@ exports[`Dashboard > should render 1`] = `
           class="hidden w-12 sm:flex"
         >
           <button
-            class="css-11quel4"
+            class="css-1g24tay"
             disabled=""
           >
             <div
@@ -298,10 +298,10 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -351,10 +351,10 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <div
-                    class="group css-1ietn6u"
+                    class="group css-c93wvv"
                   >
                     <button
-                      class="css-12xyeiw"
+                      class="css-1hei9vx"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -410,10 +410,10 @@ exports[`Dashboard > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -457,10 +457,10 @@ exports[`Dashboard > should render 1`] = `
                 class="flex items-center"
               >
                 <div
-                  class="css-1ietn6u"
+                  class="css-c93wvv"
                 >
                   <button
-                    class="css-12xyeiw"
+                    class="css-1hei9vx"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -535,7 +535,7 @@ exports[`Dashboard > should render 1`] = `
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-8d0u1i"
+                  class="shrink-0 css-1n9jllj"
                   data-testid="Avatar"
                 >
                   <div
@@ -543,7 +543,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <img
                       alt="Profile Avatar"
-                      src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="45" cx="80" cy="30" fill="rgb(76, 175, 80)"/><circle r="55" cx="0" cy="60" fill="rgb(255, 152, 0)"/><circle r="40" cx="50" cy="50" fill="rgb(3, 169, 244)"/></svg>"
                     />
                     <span
                       class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
@@ -597,7 +597,7 @@ exports[`Dashboard > should render 1`] = `
                           class="group"
                         >
                           <button
-                            class="ring-focus css-1wz6bm9"
+                            class="ring-focus css-14zm422"
                           >
                             <div
                               class="flex h-5 w-5 items-center justify-center"
@@ -639,7 +639,7 @@ exports[`Dashboard > should render 1`] = `
                   class="flex sm:hidden"
                 >
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-llgfp0"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
                     type="vertical"
                   />
                 </div>
@@ -648,7 +648,7 @@ exports[`Dashboard > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="css-1oyl9hh"
+                      class="css-wqh5n3"
                       data-testid="WalletControls__import-ledger"
                       type="button"
                     >
@@ -687,7 +687,7 @@ exports[`Dashboard > should render 1`] = `
                     </button>
                   </div>
                   <button
-                    class="css-1jhy6v9"
+                    class="css-6419sw"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -733,7 +733,7 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-1bx0hyc"
+                    class="css-fl4fi0"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >
@@ -919,7 +919,7 @@ exports[`Dashboard > should render 1`] = `
           data-testid="NetworkWalletsGroupList"
         >
           <div
-            class="css-1xhm62p"
+            class="css-13o3tsw"
             data-testid="WalletsGroup"
           >
             <div
@@ -930,7 +930,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex flex-grow flex-row items-center"
               >
                 <div
-                  class="css-xfxopm"
+                  class="css-18ateh5"
                 >
                   <div
                     aria-label="ARK"
@@ -997,7 +997,7 @@ exports[`Dashboard > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+                  class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
                 >
                   <span
                     class="hidden"
@@ -1057,10 +1057,10 @@ exports[`Dashboard > should render 1`] = `
                 </div>
               </div>
               <div
-                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
               >
                 <div
-                  class="css-16yt50s"
+                  class="css-1j7gziz"
                   data-testid="Accordion__toggle"
                 >
                   <div
@@ -1091,7 +1091,7 @@ exports[`Dashboard > should render 1`] = `
             </div>
           </div>
           <div
-            class="css-1xhm62p"
+            class="css-13o3tsw"
             data-testid="WalletsGroup"
           >
             <div
@@ -1102,7 +1102,7 @@ exports[`Dashboard > should render 1`] = `
                 class="flex flex-grow flex-row items-center"
               >
                 <div
-                  class="css-xfxopm"
+                  class="css-18ateh5"
                 >
                   <div
                     aria-label="ARK Devnet"
@@ -1232,7 +1232,7 @@ exports[`Dashboard > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-flrgx2-GroupNetworkTotal"
+                  class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
                 >
                   <span
                     class="hidden"
@@ -1291,10 +1291,10 @@ exports[`Dashboard > should render 1`] = `
                 </div>
               </div>
               <div
-                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-1stpt4m-AccordionHeader"
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
               >
                 <div
-                  class="css-16yt50s"
+                  class="css-1j7gziz"
                   data-testid="Accordion__toggle"
                 >
                   <div
@@ -1516,22 +1516,22 @@ exports[`Dashboard > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-mx19qq"
+                        class="css-hhd44j"
                       >
                         <a
-                          class="ring-focus group inline-block css-15tcy38"
+                          class="ring-focus group inline-block css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-1y2194z"
+                            class="css-170792"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1584,7 +1584,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-1rods8x"
+                        class="text-theme-secondary-text css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1596,7 +1596,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1633,7 +1633,7 @@ exports[`Dashboard > should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1641,7 +1641,7 @@ exports[`Dashboard > should render 1`] = `
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="70" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="30" cy="40" fill="rgb(0, 150, 136)"/><circle r="40" cx="20" cy="60" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
@@ -1665,10 +1665,10 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1676,7 +1676,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="40" cx="80" cy="30" fill="rgb(255, 87, 34)"/><circle r="60" cx="70" cy="50" fill="rgb(156, 39, 176)"/><circle r="55" cx="100" cy="70" fill="rgb(0, 150, 136)"/></svg>"
                               title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
                             />
                           </div>
@@ -1699,14 +1699,14 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-1rods8x"
+                        class="justify-end css-12appi5"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1mirnqf"
+                            class="css-1q2kz5x"
                             color="success"
                           >
                             <div
@@ -1727,7 +1727,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1739,22 +1739,22 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-mx19qq"
+                        class="css-hhd44j"
                       >
                         <a
-                          class="ring-focus group inline-block css-15tcy38"
+                          class="ring-focus group inline-block css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/transactions/8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-1y2194z"
+                            class="css-170792"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1807,7 +1807,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-1rods8x"
+                        class="text-theme-secondary-text css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1819,7 +1819,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1856,7 +1856,7 @@ exports[`Dashboard > should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -1864,7 +1864,7 @@ exports[`Dashboard > should render 1`] = `
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="70" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="30" cy="40" fill="rgb(0, 150, 136)"/><circle r="40" cx="20" cy="60" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
@@ -1888,10 +1888,10 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -1899,7 +1899,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(33, 150, 243)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"60\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"55\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(33, 150, 243)" width="100" height="100"/><circle r="40" cx="80" cy="30" fill="rgb(255, 87, 34)"/><circle r="60" cx="70" cy="50" fill="rgb(156, 39, 176)"/><circle r="55" cx="100" cy="70" fill="rgb(0, 150, 136)"/></svg>"
                               title="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
                             />
                           </div>
@@ -1922,14 +1922,14 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-1rods8x"
+                        class="justify-end css-12appi5"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1mirnqf"
+                            class="css-1q2kz5x"
                             color="success"
                           >
                             <div
@@ -1950,7 +1950,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1962,22 +1962,22 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-mx19qq"
+                        class="css-hhd44j"
                       >
                         <a
-                          class="ring-focus group inline-block css-15tcy38"
+                          class="ring-focus group inline-block css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-1y2194z"
+                            class="css-170792"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2030,7 +2030,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-1rods8x"
+                        class="text-theme-secondary-text css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -2042,7 +2042,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -2079,7 +2079,7 @@ exports[`Dashboard > should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -2087,7 +2087,7 @@ exports[`Dashboard > should render 1`] = `
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="70" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="30" cy="40" fill="rgb(0, 150, 136)"/><circle r="40" cx="20" cy="60" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
@@ -2111,10 +2111,10 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -2122,7 +2122,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <img
                               alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="45" cx="70" cy="60" fill="rgb(0, 188, 212)"/><circle r="35" cx="60" cy="40" fill="rgb(76, 175, 80)"/><circle r="60" cx="40" cy="70" fill="rgb(0, 150, 136)"/></svg>"
                               title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
                             />
                           </div>
@@ -2145,14 +2145,14 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-1rods8x"
+                        class="justify-end css-12appi5"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1mirnqf"
+                            class="css-1q2kz5x"
                             color="success"
                           >
                             <div
@@ -2173,7 +2173,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -2185,22 +2185,22 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-1gk67vk"
+                    class="group css-155s9if"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-mx19qq"
+                        class="css-hhd44j"
                       >
                         <a
-                          class="ring-focus group inline-block css-15tcy38"
+                          class="ring-focus group inline-block css-7nwwrh"
                           data-ring-focus-margin="-m-1"
                           data-testid="Link"
                           href="https://test.arkscan.io/transactions/0d8d12d7980bf0183ef015e5938e56c44c3db4d3695cefd16ccec4a7bfd8a2cf"
                           rel="noopener noreferrer"
                         >
                           <span
-                            class="css-1y2194z"
+                            class="css-170792"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2253,7 +2253,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-1rods8x"
+                        class="text-theme-secondary-text css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -2265,7 +2265,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -2302,7 +2302,7 @@ exports[`Dashboard > should render 1`] = `
                             </div>
                           </span>
                           <div
-                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                            class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                             data-testid="Avatar"
                           >
                             <div
@@ -2310,7 +2310,7 @@ exports[`Dashboard > should render 1`] = `
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
-                                src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"35\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="35" cx="70" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="30" cy="40" fill="rgb(0, 150, 136)"/><circle r="40" cx="20" cy="60" fill="rgb(255, 193, 7)"/></svg>"
                                 title="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
                               />
                             </div>
@@ -2334,10 +2334,10 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-1rods8x"
+                        class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-jxpwdn"
+                          class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                           data-testid="Avatar"
                         >
                           <div
@@ -2345,7 +2345,7 @@ exports[`Dashboard > should render 1`] = `
                           >
                             <img
                               alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"60\\" cx=\\"40\\" cy=\\"70\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="45" cx="70" cy="60" fill="rgb(0, 188, 212)"/><circle r="35" cx="60" cy="40" fill="rgb(76, 175, 80)"/><circle r="60" cx="40" cy="70" fill="rgb(0, 150, 136)"/></svg>"
                               title="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
                             />
                           </div>
@@ -2368,14 +2368,14 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-1rods8x"
+                        class="justify-end css-12appi5"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1mirnqf"
+                            class="css-1q2kz5x"
                             color="success"
                           >
                             <div
@@ -2396,7 +2396,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-br23tb"
+                        class="justify-end css-yf8cy4"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"

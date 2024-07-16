@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 import { httpClient } from "@/app/services";
@@ -14,6 +14,19 @@ import TransactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.
 
 let profile: Contracts.IProfile;
 let notificationTransaction: DTO.ExtendedConfirmedTransactionData;
+
+vi.mock("react-visibility-sensor", () => ({
+	/* eslint-disable react-hooks/rules-of-hooks */
+	default: ({ children, onChange }) => {
+		useEffect(() => {
+			if (onChange) {
+				onChange(false);
+			}
+		}, [onChange]);
+
+		return <div>{children}</div>;
+	},
+}));
 
 describe("Notifications", () => {
 	beforeEach(async () => {

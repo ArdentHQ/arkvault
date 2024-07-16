@@ -213,7 +213,9 @@ export const Welcome = () => {
 		}, 1);
 
 		return () => {
-			clearTimeout(navigateTimeout);
+			if (navigateTimeout) {
+				clearTimeout(navigateTimeout);
+			}
 		};
 	}, []);
 

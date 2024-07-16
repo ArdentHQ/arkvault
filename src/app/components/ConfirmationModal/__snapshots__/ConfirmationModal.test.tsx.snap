@@ -7,7 +7,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-1uui4dw"
       tabindex="-1"
     >
       <div
@@ -18,7 +18,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -73,79 +73,79 @@ exports[`Confirmation Modal > should render with custom title and description 1`
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                data-name="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C 1"
-                id="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C_1"
+                data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 1"
+                id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_1"
                 transform="translate(-511.782 -201.695)"
               >
                 <path
                   d="M634 257l52.451-51.376a10 10 0 0 1 14.142 0l60.148 60.148a10 10 0 0 1 0 14.142l-60.148 60.149a10 10 0 0 1-14.142 0L651 305c-3.905-3.905 1.095-8.905 5-5l30.319 29.35a10 10 0 0 0 14.142 0l49.569-49.569a10 10 0 0 0 0-14.142l-49.569-49.569a10 10 0 0 0-14.142 0l-50.569 49.569z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 2 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 2 \\u043A\\u043E\\u043F\\u0438\\u044F"
                   fill="none"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_2_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_2_\\u043A\\u043E\\u043F\\u0438\\u044F"
                   stroke="#df5e4c"
                   stroke-width="2"
                 />
                 <path
                   d="M584.055 326H580a6 6 0 0 0-6 6v5a6 6 0 0 0 6 6h78a6 6 0 0 0 6-6v-5a6 6 0 0 0-6-6h-63.974c-4.95 0-5.656-2.919-4.626-7.229S604.7 261.815 607 252c3.659-15.584 23.048-14.65 26 1s16 67 16 67"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 1"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 1"
                   fill="none"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_1"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_1"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <path
                   d="M638 309h-38a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.909 2.909 0 0 1 3-2h33c1.318 0 1.856 1.547 2 2 .255.8 1.664 5.386 2 7s-.214 3-2 3z"
-                  data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1"
+                  data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1"
                   fill="none"
-                  id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1"
+                  id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1"
                   stroke="#dde0e6"
                   stroke-width="2"
                 />
                 <path
                   d="M631 281h-23a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.909 2.909 0 0 1 3-2h18c1.318 0 1.856 1.547 2 2a67.389 67.389 0 0 1 2 7c.189 1.591-.214 3-2 3z"
-                  data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1 \\u043A\\u043E\\u043F\\u0438\\u044F"
                   fill="none"
-                  id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1_\\u043A\\u043E\\u043F\\u0438\\u044F"
                   stroke="#dde0e6"
                   stroke-width="2"
                 />
                 <path
                   d="M814 465v-19h-38v19h-2v-19h-28v-2h28v-16h2v16h38v-39h-4v-2h4v-38h-4v-2h4v-23h2v23h6v2h-6v38h26v2h-26v39h26v2h-26v19zm-19-56v-4h-4v-2h4v-4h2v4h4v2h-4v4zm19-79v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 13"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 1 \\u043A\\u043E\\u043F\\u0438\\u044F 13"
                   fill="#dbdee5"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_13"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F_13"
                   transform="translate(-28 -101.612)"
                 />
                 <path
                   d="M94 145v-19H56v19h-2v-19H37v-2h17V85h2v39h38V85h-4v-2h4V45h-4v-2h4V20h2v23h6v2h-6v38h26v2H96v39h26v2H96v19zM75 89v-4h-4v-2h4v-4h2v4h4v2h-4v4zm19-79V6h-4V4h4V0h2v4h4v2h-4v4z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 13"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 1 \\u043A\\u043E\\u043F\\u0438\\u044F 13"
                   fill="#dbdee5"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_13-2"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F_13-2"
                   transform="rotate(180 316.89 181.694)"
                 />
                 <path
                   d="M627.883 343h48.266"
-                  data-name="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440 643"
+                  data-name="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440 643"
                   fill="none"
-                  id="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440_643"
+                  id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_643"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <path
                   d="M552.883 343h48.266"
-                  data-name="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440 644"
+                  data-name="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440 644"
                   fill="none"
-                  id="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440_644"
+                  id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_644"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <g
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 332"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 332"
                   fill="#ffe7e2"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_332"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_332"
                   stroke="#df5e4c"
                   stroke-width="2"
                   transform="translate(685 240.819)"
@@ -166,9 +166,9 @@ exports[`Confirmation Modal > should render with custom title and description 1`
                   />
                 </g>
                 <g
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 333"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 333"
                   fill="#ffe7e2"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_333"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_333"
                   stroke="#df5e4c"
                   stroke-width="2"
                   transform="translate(685 284.819)"
@@ -199,10 +199,10 @@ exports[`Confirmation Modal > should render with custom title and description 1`
               data-testid="ConfirmationModal"
             >
               <div
-                class="css-1tkbsa1"
+                class="css-p1y4tm"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ConfirmationModal__no-button"
                   type="button"
                 >
@@ -213,7 +213,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="ConfirmationModal__yes-button"
                   type="button"
                 >
@@ -242,7 +242,7 @@ exports[`Confirmation Modal > should render with default title and description 1
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1nnbd55"
+      class="css-1uui4dw"
       tabindex="-1"
     >
       <div
@@ -253,7 +253,7 @@ exports[`Confirmation Modal > should render with default title and description 1
           class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
         >
           <button
-            class="h-11 w-11 css-12xyeiw"
+            class="h-11 w-11 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -308,79 +308,79 @@ exports[`Confirmation Modal > should render with default title and description 1
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                data-name="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C 1"
-                id="\\\\u0421\\\\u0433\\\\u0440\\\\u0443\\\\u043F\\\\u043F\\\\u0438\\\\u0440\\\\u043E\\\\u0432\\\\u0430\\\\u0442\\\\u044C_1"
+                data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 1"
+                id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_1"
                 transform="translate(-511.782 -201.695)"
               >
                 <path
                   d="M634 257l52.451-51.376a10 10 0 0 1 14.142 0l60.148 60.148a10 10 0 0 1 0 14.142l-60.148 60.149a10 10 0 0 1-14.142 0L651 305c-3.905-3.905 1.095-8.905 5-5l30.319 29.35a10 10 0 0 0 14.142 0l49.569-49.569a10 10 0 0 0 0-14.142l-49.569-49.569a10 10 0 0 0-14.142 0l-50.569 49.569z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 2 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 2 \\u043A\\u043E\\u043F\\u0438\\u044F"
                   fill="none"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_2_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_2_\\u043A\\u043E\\u043F\\u0438\\u044F"
                   stroke="#df5e4c"
                   stroke-width="2"
                 />
                 <path
                   d="M584.055 326H580a6 6 0 0 0-6 6v5a6 6 0 0 0 6 6h78a6 6 0 0 0 6-6v-5a6 6 0 0 0-6-6h-63.974c-4.95 0-5.656-2.919-4.626-7.229S604.7 261.815 607 252c3.659-15.584 23.048-14.65 26 1s16 67 16 67"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A, \\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B. \\\\u0443\\\\u0433\\\\u043B\\\\u044B 1"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B 1"
                   fill="none"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_\\\\u0441\\\\u043A\\\\u0440\\\\u0443\\\\u0433\\\\u043B._\\\\u0443\\\\u0433\\\\u043B\\\\u044B_1"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B_1"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <path
                   d="M638 309h-38a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.909 2.909 0 0 1 3-2h33c1.318 0 1.856 1.547 2 2 .255.8 1.664 5.386 2 7s-.214 3-2 3z"
-                  data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1"
+                  data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1"
                   fill="none"
-                  id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1"
+                  id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1"
                   stroke="#dde0e6"
                   stroke-width="2"
                 />
                 <path
                   d="M631 281h-23a2.18 2.18 0 0 1-2-3c.559-1.861 1.784-6.09 2-7a2.909 2.909 0 0 1 3-2h18c1.318 0 1.856 1.547 2 2a67.389 67.389 0 0 1 2 7c.189 1.591-.214 3-2 3z"
-                  data-name="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1 \\u043A\\u043E\\u043F\\u0438\\u044F"
                   fill="none"
-                  id="\\\\u0424\\\\u0438\\\\u0433\\\\u0443\\\\u0440\\\\u0430_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F"
+                  id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1_\\u043A\\u043E\\u043F\\u0438\\u044F"
                   stroke="#dde0e6"
                   stroke-width="2"
                 />
                 <path
                   d="M814 465v-19h-38v19h-2v-19h-28v-2h28v-16h2v16h38v-39h-4v-2h4v-38h-4v-2h4v-23h2v23h6v2h-6v38h26v2h-26v39h26v2h-26v19zm-19-56v-4h-4v-2h4v-4h2v4h4v2h-4v4zm19-79v-4h-4v-2h4v-4h2v4h4v2h-4v4z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 13"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 1 \\u043A\\u043E\\u043F\\u0438\\u044F 13"
                   fill="#dbdee5"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_13"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F_13"
                   transform="translate(-28 -101.612)"
                 />
                 <path
                   d="M94 145v-19H56v19h-2v-19H37v-2h17V85h2v39h38V85h-4v-2h4V45h-4v-2h4V20h2v23h6v2h-6v38h26v2H96v39h26v2H96v19zM75 89v-4h-4v-2h4v-4h2v4h4v2h-4v4zm19-79V6h-4V4h4V0h2v4h4v2h-4v4z"
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 1 \\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F 13"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 1 \\u043A\\u043E\\u043F\\u0438\\u044F 13"
                   fill="#dbdee5"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_1_\\\\u043A\\\\u043E\\\\u043F\\\\u0438\\\\u044F_13-2"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_1_\\u043A\\u043E\\u043F\\u0438\\u044F_13-2"
                   transform="rotate(180 316.89 181.694)"
                 />
                 <path
                   d="M627.883 343h48.266"
-                  data-name="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440 643"
+                  data-name="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440 643"
                   fill="none"
-                  id="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440_643"
+                  id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_643"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <path
                   d="M552.883 343h48.266"
-                  data-name="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440 644"
+                  data-name="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440 644"
                   fill="none"
-                  id="\\\\u041A\\\\u043E\\\\u043D\\\\u0442\\\\u0443\\\\u0440_644"
+                  id="\\u041A\\u043E\\u043D\\u0442\\u0443\\u0440_644"
                   stroke="#212225"
                   stroke-linecap="round"
                   stroke-width="2"
                 />
                 <g
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 332"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 332"
                   fill="#ffe7e2"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_332"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_332"
                   stroke="#df5e4c"
                   stroke-width="2"
                   transform="translate(685 240.819)"
@@ -401,9 +401,9 @@ exports[`Confirmation Modal > should render with default title and description 1
                   />
                 </g>
                 <g
-                  data-name="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A 333"
+                  data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 333"
                   fill="#ffe7e2"
-                  id="\\\\u041F\\\\u0440\\\\u044F\\\\u043C\\\\u043E\\\\u0443\\\\u0433\\\\u043E\\\\u043B\\\\u044C\\\\u043D\\\\u0438\\\\u043A_333"
+                  id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_333"
                   stroke="#df5e4c"
                   stroke-width="2"
                   transform="translate(685 284.819)"
@@ -434,10 +434,10 @@ exports[`Confirmation Modal > should render with default title and description 1
               data-testid="ConfirmationModal"
             >
               <div
-                class="css-1tkbsa1"
+                class="css-p1y4tm"
               >
                 <button
-                  class="css-1jhy6v9"
+                  class="css-6419sw"
                   data-testid="ConfirmationModal__no-button"
                   type="button"
                 >
@@ -448,7 +448,7 @@ exports[`Confirmation Modal > should render with default title and description 1
                   </div>
                 </button>
                 <button
-                  class="css-1bx0hyc"
+                  class="css-fl4fi0"
                   data-testid="ConfirmationModal__yes-button"
                   type="button"
                 >

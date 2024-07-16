@@ -15,7 +15,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Amount
           </span>
@@ -30,7 +30,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Fee
           </span>
@@ -81,7 +81,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="css-1j6ndo3"
+        class="css-1orx95h"
       >
         Total Amount
       </span>
@@ -111,7 +111,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Amount
           </span>
@@ -126,7 +126,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Fee
           </span>
@@ -177,7 +177,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="css-1j6ndo3"
+        class="css-1orx95h"
       >
         Total Amount
       </span>
@@ -207,7 +207,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Amount
           </span>
@@ -222,7 +222,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Fee
           </span>
@@ -273,7 +273,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="css-1j6ndo3"
+        class="css-1orx95h"
       >
         Total Amount
       </span>
@@ -303,7 +303,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Amount
           </span>
@@ -318,7 +318,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
         >
           <span
-            class="css-1j6ndo3"
+            class="css-1orx95h"
           >
             Transaction Fee
           </span>
@@ -369,7 +369,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
       class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
     >
       <span
-        class="css-1j6ndo3"
+        class="css-1orx95h"
       >
         Total Amount
       </span>

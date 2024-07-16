@@ -1,19 +1,21 @@
-import { ReactComponent as DelegateRegistration } from "./delegate-registration.svg";
-import { ReactComponent as DelegateResignation } from "./delegate-resignation.svg";
-import { ReactComponent as Ipfs } from "./ipfs.svg";
-import { ReactComponent as Magistrate } from "./magistrate.svg";
-import { ReactComponent as Multipayment } from "./multipayment.svg";
-import { ReactComponent as Multisignature } from "./multisignature.svg";
-import { ReactComponent as Received } from "./received.svg";
-import { ReactComponent as Return } from "./return.svg";
-import { ReactComponent as SecondSignature } from "./second-signature.svg";
-import { ReactComponent as Sent } from "./sent.svg";
-import { ReactComponent as Timelock } from "./timelock.svg";
-import { ReactComponent as Transfer } from "./transfer.svg";
-import { ReactComponent as UnlockToken } from "./unlock-token.svg";
-import { ReactComponent as Unvote } from "./unvote.svg";
-import { ReactComponent as Vote } from "./vote.svg";
-import { ReactComponent as VoteCombination } from "./vote-combination.svg";
+/// <reference types="vite-plugin-svgr/client" />
+
+import DelegateRegistration from "./delegate-registration.svg?react";
+import DelegateResignation from "./delegate-resignation.svg?react";
+import Ipfs from "./ipfs.svg?react";
+import Magistrate from "./magistrate.svg?react";
+import Multipayment from "./multipayment.svg?react";
+import Multisignature from "./multisignature.svg?react";
+import Received from "./received.svg?react";
+import Return from "./return.svg?react";
+import SecondSignature from "./second-signature.svg?react";
+import Sent from "./sent.svg?react";
+import Timelock from "./timelock.svg?react";
+import Transfer from "./transfer.svg?react";
+import UnlockToken from "./unlock-token.svg?react";
+import Unvote from "./unvote.svg?react";
+import Vote from "./vote.svg?react";
+import VoteCombination from "./vote-combination.svg?react";
 
 export const TransactionIcons: any = {
 	DelegateRegistration,

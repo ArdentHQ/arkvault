@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
 <DocumentFragment>
@@ -23,12 +23,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
             role="rowgroup"
           >
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -81,7 +81,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -117,12 +117,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -175,7 +175,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -211,12 +211,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -269,7 +269,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -305,12 +305,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -363,7 +363,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -399,12 +399,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -457,7 +457,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -493,12 +493,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -551,7 +551,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -587,12 +587,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -645,7 +645,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -681,12 +681,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -739,7 +739,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -775,12 +775,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -833,7 +833,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -869,12 +869,12 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="space-x-4 css-14huxtf"
+                  class="space-x-4 css-bgc8eo"
                 >
                   <div
                     class="flex items-center -space-x-1"
@@ -927,7 +927,7 @@ exports[`NotificationsTransactionTable > should render compact skeleton 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-1hhowo0"
+                  class="justify-end css-10gefem"
                 >
                   <span
                     class="flex h-7 items-center space-x-1 rounded border border-theme-secondary-300 px-2 dark:border-theme-secondary-800"
@@ -993,7 +993,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
             role="rowgroup"
           >
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1094,7 +1094,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1195,7 +1195,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1296,7 +1296,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1397,7 +1397,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1498,7 +1498,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1599,7 +1599,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1700,7 +1700,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1801,7 +1801,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
@@ -1902,7 +1902,7 @@ exports[`NotificationsTransactionTable > should render skeleton for small screen
               </td>
             </tr>
             <tr
-              class=" css-1li86da"
+              class=" css-16ynu5g"
               data-testid="TableRow"
             >
               <td
