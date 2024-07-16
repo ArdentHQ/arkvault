@@ -11,6 +11,7 @@ export const TransactionReviewLabelText = ({
 	minWidth?: LabelMinWidth;
 }) => (
 	<div
+		data-testid="TransactionReviewLabelText"
 		className={cn("no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500", {
 			"min-w-16": minWidth === "sm",
 			"min-w-36": minWidth === "md",
@@ -22,6 +23,7 @@ export const TransactionReviewLabelText = ({
 
 export const TransactionReviewDetailLabel = ({ children }: { children: ReactNode }) => (
 	<div
+		data-testid="TransactionReviewDetailLabel"
 		className={cn(
 			"border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent",
 		)}

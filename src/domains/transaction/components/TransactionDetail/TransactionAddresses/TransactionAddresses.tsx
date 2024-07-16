@@ -27,7 +27,7 @@ export const TransactionAddresses = ({ senderWallet, recipients, profile }: Prop
 	});
 
 	return (
-		<TransactionReviewDetail label={t("TRANSACTION.ADDRESSING")} data-testid="TransactionAddresses">
+		<TransactionReviewDetail label={t("TRANSACTION.ADDRESSING")}>
 			<div className="flex w-full">
 				<TransactionReviewLabelText minWidth="sm">{t("COMMON.FROM")}</TransactionReviewLabelText>
 				<Address
