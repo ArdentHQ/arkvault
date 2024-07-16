@@ -11788,9 +11788,11 @@ exports[`SendTransfer > should render review step 1`] = `
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Addressing
           </div>
@@ -11803,6 +11805,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               From
             </div>
@@ -11877,6 +11880,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               To
             </div>
@@ -11945,9 +11949,11 @@ exports[`SendTransfer > should render review step 1`] = `
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -11965,9 +11971,11 @@ exports[`SendTransfer > should render review step 1`] = `
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Transaction Summary
           </div>
@@ -12208,9 +12216,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Addressing
           </div>
@@ -12223,6 +12233,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               From
             </div>
@@ -12297,6 +12308,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               To
             </div>
@@ -12352,6 +12364,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               To
             </div>
@@ -12409,9 +12422,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -12429,9 +12444,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Transaction Summary
           </div>
@@ -12672,9 +12689,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Addressing
           </div>
@@ -12687,6 +12706,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               From
             </div>
@@ -12761,6 +12781,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               To
             </div>
@@ -12816,6 +12837,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
               To
             </div>
@@ -12873,9 +12895,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
             Transaction Summary
           </div>
