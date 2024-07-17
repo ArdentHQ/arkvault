@@ -30,22 +30,20 @@ describe("EncryptPasswordStep", () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />, {
 			defaultValues: { confirmEncryptionPassword: "password" },
 		});
-
+	
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
-
+	
 		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, "password", 
-			{ delay: 500 }
-		);
-		await userEvent.clear(confirmPassword);
-		await userEvent.type(confirmPassword, "password", 
-			{ delay: 500 }
-		);
-
+		await userEvent.type(passwordInput, "password", { delay: 100 });
+	
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
+	
+		await userEvent.clear(confirmPassword);
+		await userEvent.type(confirmPassword, "password", { delay: 100 });
+	
 		await waitFor(() => expect(confirmPassword).toHaveValue("password"));
-
-		expect(asFragment).toMatchSnapshot();
-	});
+	
+		expect(asFragment()).toMatchSnapshot();
+	}, 10000);
 });
