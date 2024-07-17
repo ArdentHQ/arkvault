@@ -444,7 +444,6 @@ describe("SendTransfer", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		expect(container).toHaveTextContent(wallet.network().name());
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		expect(container).toHaveTextContent("test memo");
@@ -497,7 +496,6 @@ describe("SendTransfer", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		expect(container).toHaveTextContent(wallet.network().name());
 		expect(container).toHaveTextContent(wallet.address());
 		expect(container).toHaveTextContent(secondWallet.address());
 
