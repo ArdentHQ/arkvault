@@ -36,11 +36,11 @@ describe("EncryptPasswordStep", () => {
 
 		await userEvent.clear(passwordInput);
 		await userEvent.type(passwordInput, "password", 
-			{ delay: 50 }
+			{ delay: 500 }
 		);
 		await userEvent.clear(confirmPassword);
 		await userEvent.type(confirmPassword, "password", 
-			{ delay: 50 }
+			{ delay: 500 }
 		);
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
