@@ -184,6 +184,7 @@ describe("WalletsGroup", () => {
 		});
 
 		inputElement.select();
+		await userEvent.clear(inputElement);
 		await userEvent.type(inputElement, name);
 
 		await waitFor(() => expect(inputElement).toHaveValue(name));

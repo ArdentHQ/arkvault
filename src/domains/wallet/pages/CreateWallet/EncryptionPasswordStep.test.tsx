@@ -70,7 +70,7 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -189,7 +189,7 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
