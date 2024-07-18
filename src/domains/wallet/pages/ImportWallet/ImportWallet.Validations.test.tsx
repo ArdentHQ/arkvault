@@ -98,7 +98,7 @@ describe("ImportWallet Validations", () => {
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
 	});
 
-	// @TODO: Fix this test
+	// @TODO: Fix this test - Last assertion in line 169 is always failing
 	/* it("should show an error message for invalid second secret", async () => {
 		const walletId = profile
 			.wallets()
@@ -125,18 +125,18 @@ describe("ImportWallet Validations", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -153,7 +153,7 @@ describe("ImportWallet Validations", () => {
 
 		enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();

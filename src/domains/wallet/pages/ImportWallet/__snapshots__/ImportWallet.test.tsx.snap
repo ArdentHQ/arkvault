@@ -2760,3 +2760,663 @@ exports[`ImportWallet > should render network step 1`] = `
   </section>
 </DocumentFragment>
 `;
+
+exports[`ImportWallet > should render success step (lg) 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="ImportWallet__success-step"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background hidden sm:block"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Completed
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Wallet import is complete. Now you can use it.
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures mt-2 css-1iw2tte"
+      data-testid="WalletDetailNetwork"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Cryptoasset
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Devnet
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            class="hidden sm:block"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-qu17s6"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Address
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              class="shrink-0 css-1yk316i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden sm:flex sm:items-center"
+          >
+            <div
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-qu17s6"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Balance
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                33.75089801 DARK
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-1uo4ck9"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallet Name
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Wallet 1
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Wallet 1
+            </div>
+          </div>
+          <button
+            class="css-6419sw"
+            data-testid="ImportWallet__edit-alias"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="pencil"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ImportWallet > should render success step (xs) 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="ImportWallet__success-step"
+  >
+    <div
+      class="flex items-end justify-between bg-theme-background hidden sm:block"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Completed
+        </h1>
+        <div
+          class="flex items-center text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Wallet import is complete. Now you can use it.
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures mt-2 css-1iw2tte"
+      data-testid="WalletDetailNetwork"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Cryptoasset
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Devnet
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Devnet
+            </div>
+          </div>
+          <div
+            class="hidden sm:block"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              aria-label="ARK Devnet"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              data-testid="NetworkIcon-ARK-ark.devnet"
+            >
+              <div
+                class="css-1i4b0eq"
+                data-testid="NetworkIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ark"
+                  viewBox="0 0 36.3 30.6"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-qu17s6"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Address
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center sm:hidden"
+          >
+            <div
+              class="shrink-0 css-1yk316i"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden sm:flex sm:items-center"
+          >
+            <div
+              class="shrink-0 css-1n9jllj"
+              data-testid="Avatar"
+            >
+              <div
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-qu17s6"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Balance
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              <span
+                class="whitespace-nowrap"
+                data-testid="Amount"
+              >
+                33.75089801 DARK
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="no-ligatures css-qu17s6"
+      data-testid="TransactionDetail"
+    >
+      <div
+        class="flex w-full items-center justify-between space-x-4"
+      >
+        <div
+          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+        >
+          <div
+            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Wallet Name
+          </div>
+          <div
+            class="hidden items-center font-semibold sm:flex"
+          >
+            ARK Wallet 1
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+        >
+          <div
+            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+          >
+            <div
+              class="w-full truncate"
+            >
+              ARK Wallet 1
+            </div>
+          </div>
+          <button
+            class="css-6419sw"
+            data-testid="ImportWallet__edit-alias"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="css-v0ob3f"
+                height="16"
+                width="16"
+              >
+                <svg
+                  id="pencil"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

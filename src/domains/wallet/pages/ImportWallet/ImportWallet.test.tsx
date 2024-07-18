@@ -215,8 +215,7 @@ describe("ImportWallet", () => {
 		await expect(addressInput()).resolves.toBeVisible();
 	});
 	
-	// @TODO: Fix the following tests
-	/* it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
+	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = vi.fn();
 		const importedWallet = profile.wallets().first();
@@ -243,12 +242,12 @@ describe("ImportWallet", () => {
 		expect(screen.getAllByText(ARKDevnet)[0]).toBeInTheDocument();
 		expect(screen.getAllByText(importedWallet.address())[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-	}); */
+	});
 
-	/* it("should go back to portfolio", async () => {
+	it("should go back to portfolio", async () => {
 		const history = createHashHistory();
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -266,14 +265,14 @@ describe("ImportWallet", () => {
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
-	/* it("should skip network step if only one network", async () => {
+	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
 	
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
@@ -293,21 +292,13 @@ describe("ImportWallet", () => {
 		);
 	
 		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
-	
 		await waitFor(() => expect(backButton()).toBeEnabled());
-	
-		// Log to confirm button click is attempted
-		console.log("Clicking back button");
-	
-		userEvent.click(backButton());
-	
-		// Log the function calls to see if history.push was called
-		console.log("history.push calls:", historySpy.mock.calls);
+		await userEvent.click(backButton());
 	
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 	
 		historySpy.mockRestore();
-	}); */
+	});
 	
 
 	it("should go to previous step", async () => {

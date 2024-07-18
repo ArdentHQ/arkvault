@@ -161,7 +161,7 @@ describe("LedgerTabs", () => {
 		);
 	};
 
-	// @TODO: Fix test
+	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 179
 	/* it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
@@ -203,7 +203,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	}); */
 
-	// @TODO: Fix test
+	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 219
 	/* it("should render scan step", async () => {
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -367,7 +367,7 @@ describe("LedgerTabs", () => {
 	});
 	
 
-	// @TODO: Fix test
+	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 387
 	/* it("should render scan step with failing fetch", async () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
 

@@ -87,13 +87,12 @@ describe("LedgerImportStep", () => {
 		};
 	};
 
-	it.each(["xs", "lg"])("should render with single import (%s)", (breakpoint) => {
+	it.each(["xs", "lg"])("should render with single import (%s)", async (breakpoint) => {
 		const { container, onClickEditWalletName } = renderComponent(breakpoint, ledgerWallets.slice(1));
 
-		userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
+		await userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
 
-		//@TODO: Fix this test
-		/* expect(onClickEditWalletName).toHaveBeenCalledTimes(1); */
+		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();
 	});
 
@@ -102,10 +101,8 @@ describe("LedgerImportStep", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")).toHaveLength(2));
 
-		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
-
-		//@TODO: Fix this test
-		/* expect(onClickEditWalletName).toHaveBeenCalledTimes(1); */
+		await userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
 		expect(container).toMatchSnapshot();
 	});
 });

@@ -344,7 +344,7 @@ describe("ImportWallet Methods", () => {
 	});
 	
 	// @TODO: Fix these tests
-	/* it("should import by secret with second signature and use password to encrypt both", async () => {
+	it("should import by secret with second signature and use password to encrypt both", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
@@ -356,18 +356,18 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -375,13 +375,14 @@ describe("ImportWallet Methods", () => {
 
 		expect(passphraseInput).toBeInTheDocument();
 
-		userEvent.type(passphraseInput, "abc");
+		await userEvent.clear(passphraseInput);
+		await userEvent.type(passphraseInput, "abc");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -390,25 +391,25 @@ describe("ImportWallet Methods", () => {
 		await userEvent.clear(screen.getByTestId("EncryptPassword__second-secret"));
 		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "abc");
 
-		userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 
 		await expect(screen.findByTestId("EncryptPassword__second-secret")).resolves.toHaveValue("abc");
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
 			password,
 		);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
-	}); */
+	});
 
 	/* it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(

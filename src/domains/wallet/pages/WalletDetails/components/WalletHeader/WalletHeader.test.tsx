@@ -20,9 +20,9 @@ let wallet: Contracts.IReadWriteWallet;
 
 let walletUrl: string;
 
-const clickItem = (label: string) => {
-	userEvent.click(screen.getByTestId("dropdown__toggle"));
-	userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
+const clickItem = async (label: string) => {
+	await userEvent.click(screen.getByTestId("dropdown__toggle"));
+	await userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
 };
 
 const closeModal = () => userEvent.click(screen.getByTestId("Modal__close-button"));
@@ -77,8 +77,7 @@ describe("WalletHeader", () => {
 		mockTestNetwork.mockRestore();
 	});
 
-	// @TODO: Fix tests
-	/* it("should hide second signature option", async () => {
+	it("should hide second signature option", async () => {
 		const mockIsSecondSignature = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 		const mockAllowsSecondSignature = vi.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
@@ -86,7 +85,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		await userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		const dropdownContent = screen.getByTestId("dropdown__content");
 
@@ -98,9 +97,9 @@ describe("WalletHeader", () => {
 
 		mockIsSecondSignature.mockRestore();
 		mockAllowsSecondSignature.mockRestore();
-	}); */
+	});
 
-	/* it("should trigger onSend callback if provided", async () => {
+	it("should trigger onSend callback if provided", async () => {
 		const handleSend = vi.fn();
 		const useWalletActionsSpy = vi.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue({
 			handleSend,
@@ -112,12 +111,12 @@ describe("WalletHeader", () => {
 
 		expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		expect(handleSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 
 		useWalletActionsSpy.mockRestore();
-	}); */
+	});
 
 	it("send button should be disabled if wallet has no balance", async () => {
 		const balanceSpy = vi.spyOn(wallet, "balance").mockReturnValue(0);
@@ -173,10 +172,11 @@ describe("WalletHeader", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	// @TODO: Fix these tests - Final assertion with Modal__inner always fails for one case but works for the other
 	/* it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
@@ -185,7 +185,7 @@ describe("WalletHeader", () => {
 		if (action === "close") {
 			closeModal();
 		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
+			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -194,7 +194,7 @@ describe("WalletHeader", () => {
 	it.each(["cancel", "close"])("should open & %s wallet name modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE),
@@ -203,7 +203,7 @@ describe("WalletHeader", () => {
 		if (action === "close") {
 			closeModal();
 		} else {
-			userEvent.click(screen.getByText(commonTranslations.CANCEL));
+			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -225,17 +225,20 @@ describe("WalletHeader", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	}); */
 
+	// @TODO: Fix this test - Aria-busy returns false, probably assertion logic needs to be refactored
 	/* it("should manually sync wallet data", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+
+		await expect(screen.findByTestId("WalletHeader__refresh")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	}); */
 
-	/* it("should handle message signing", () => {
+	it("should handle message signing", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -251,14 +254,14 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/sign-message`);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
-	/* it("should handle message verification", () => {
+	it("should handle message verification", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -274,14 +277,14 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/verify-message`);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
-	/* it("should handle multisignature registration", () => {
+	it("should handle multisignature registration", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		history.push(walletUrl);
 
@@ -297,16 +300,16 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.MULTISIGNATURE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`,
 		);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
-	/* it("should handle second signature registration", () => {
+	it("should handle second signature registration", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -321,16 +324,16 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`,
 		);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
-	/* it("should handle delegate registration", () => {
+	it("should handle delegate registration", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -345,7 +348,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.REGISTER_DELEGATE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/delegateRegistration`,
@@ -353,8 +356,8 @@ describe("WalletHeader", () => {
 
 		historySpy.mockRestore();
 	});
- */
-	/* it("should handle delegate resignation", () => {
+
+	it("should handle delegate resignation", async () => {
 		history.push(walletUrl);
 
 		const walletSpy = vi.spyOn(wallet, "isDelegate").mockReturnValue(true);
@@ -370,7 +373,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RESIGN_DELEGATE);
 
 		expect(historySpy).toHaveBeenCalledWith(
 			`/profiles/${profile.id()}/wallets/${wallet.id()}/send-delegate-resignation`,
@@ -378,9 +381,9 @@ describe("WalletHeader", () => {
 
 		historySpy.mockRestore();
 		walletSpy.mockRestore();
-	}); */
+	});
 
-	/* it("should handle store hash option", () => {
+	it("should handle store hash option", async () => {
 		history.push(walletUrl);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -395,12 +398,12 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.STORE_HASH);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-ipfs`);
 
 		historySpy.mockRestore();
-	}); */
+	});
 
 	it("should handle isMultiSignature exception", async () => {
 		await wallet.synchroniser().identity();
@@ -418,7 +421,7 @@ describe("WalletHeader", () => {
 		multisigSpy.mockRestore();
 	});
 
-	/* it("should handle locked balance", async () => {
+	it("should handle locked balance", async () => {
 		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
 		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
 		const unlockableBalances = vi
@@ -433,7 +436,7 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
@@ -445,9 +448,9 @@ describe("WalletHeader", () => {
 		balance.mockRestore();
 		unlockableBalances.mockRestore();
 		allowsLockedBalance.mockRestore();
-	}); */
+	});
 
-	/* it("should handle locked balance when is ledger", async () => {
+	it("should handle locked balance when is ledger", async () => {
 		const ledgerSpy = vi.spyOn(wallet, "isLedger").mockReturnValue(true);
 		const usesLockedBalance = vi.spyOn(wallet.network(), "usesLockedBalance").mockReturnValue(true);
 		const balance = vi.spyOn(wallet, "balance").mockReturnValue(10);
@@ -463,7 +466,7 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
+		await userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
@@ -476,7 +479,7 @@ describe("WalletHeader", () => {
 		unlockableBalances.mockRestore();
 		allowsLockedBalance.mockRestore();
 		ledgerSpy.mockRestore();
-	}); */
+	});
 
 	it("should render with incompatible ledger wallet", async () => {
 		process.env.REACT_APP_IS_UNIT = undefined;

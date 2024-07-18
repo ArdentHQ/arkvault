@@ -90,7 +90,6 @@ describe("WalletsList", () => {
 		const { asFragment } = renderResponsive(<WalletsList wallets={wallets} />, "lg");
 	
 		// Initial state checks
-		console.log('Initial state - starred button:', starredButton().innerHTML);
 		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 	
 		// Check initial wallet order
@@ -100,17 +99,12 @@ describe("WalletsList", () => {
 		userEvent.click(starredButton());
 	
 		// Add more debug after clicking
-		console.log('After clicking starred button:', starredButton().innerHTML);
-	
 		await waitFor(() => expect(starredButton().querySelector("svg#star")).toBeInTheDocument());
 	
 		expect(screen.getAllByTestId("TableCell_Wallet")[0]).toHaveTextContent(wallets[0].displayName());
 		expect(screen.getAllByTestId("TableCell_Wallet")[1]).toHaveTextContent(wallets[1].displayName());
 	
 		userEvent.click(starredButton());
-	
-		// Add more debug after second click
-		console.log('After clicking starred button again:', starredButton().innerHTML);
 	
 		await waitFor(() => expect(starredButton().querySelector("svg#star-filled")).toBeInTheDocument());
 	

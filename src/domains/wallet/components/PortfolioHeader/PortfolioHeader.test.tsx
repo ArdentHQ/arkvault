@@ -121,7 +121,6 @@ describe("Portfolio grouped networks", () => {
 		resetProfileNetworksMock();
 	});
 
-	// @TODO: Fix test
 	it("should handle wallet creation", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 		render(

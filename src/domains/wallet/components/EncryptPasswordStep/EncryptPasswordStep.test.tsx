@@ -13,7 +13,7 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	// @TODO: Flaky test 
+	// @TODO: Flaky test - Snapshot match failing randomly on gh actions
 	/* it("should change password", async () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />);
 
