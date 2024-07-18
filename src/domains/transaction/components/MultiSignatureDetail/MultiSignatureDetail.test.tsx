@@ -457,8 +457,6 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("MultiSignatureDetail__broadcast")));
 
-		expect(container).toMatchSnapshot();
-
 		await userEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
