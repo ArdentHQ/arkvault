@@ -253,8 +253,7 @@ describe("Portfolio grouped networks", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// @TODO: Fix test - Assertion in line 274 always failing. Errors in spy.
-	/* it("should apply ledger import", () => {
+	it("should apply ledger import", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		const transportMock = mockNanoXTransport();
@@ -269,7 +268,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__import-ledger"));
+		await userEvent.click(screen.getByTestId("WalletControls__import-ledger"));
 
 		expect(useWalletActionReturn.handleImportLedger).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -279,7 +278,7 @@ describe("Portfolio grouped networks", () => {
 
 		useWalletActionSpy.mockRestore();
 		transportMock.mockRestore();
-	}); */
+	});
 
 	it("should show proper message when no wallets match the filters", () => {
 		const useDisplayWalletsReturn = {
