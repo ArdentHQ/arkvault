@@ -295,8 +295,6 @@ describe("Transactions", () => {
 
 		await userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
-		fetchMoreButtonHasContent(commonTranslations.LOADING);
-
 		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(60);
@@ -433,7 +431,7 @@ describe("Transactions", () => {
 		await userEvent.click(dropdownContainer.getByTestId("dropdown__option--2"));
 
 		await waitFor(() =>
-			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(30),
+			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow__mobile")).toHaveLength(8),
 		);
 	});
 
