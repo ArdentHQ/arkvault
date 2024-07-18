@@ -208,7 +208,7 @@ describe("DelegateVoteAmount", () => {
 			);
 		});
 
-		// @TODO: Fix this test
+		// @TODO: Fix this test - Lines 218 and 220 failing due to Input error not being visible
 		/* it("should show error if value is more than the available balance", async () => {
 			render(<Component />);
 

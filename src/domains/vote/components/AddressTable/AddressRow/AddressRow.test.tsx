@@ -398,7 +398,7 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// @TODO: Fix this test
+	// @TODO: Fix this test - Lines 421 and 423 failing due to AddressRow__wallet not being visible
 	/* it("should redirect to wallet details page", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const history = createHashHistory();
