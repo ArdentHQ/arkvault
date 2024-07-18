@@ -62,7 +62,7 @@ export const SignedTransactionRowMobile = ({
 				<RowWrapper>
 					<RowLabel>{t("COMMON.TIMESTAMP")}</RowLabel>
 					<div data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
-						{transaction.timestamp()!.format(timeFormat)}
+						{transaction.timestamp().format(timeFormat)}
 					</div>
 				</RowWrapper>
 

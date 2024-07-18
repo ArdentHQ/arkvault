@@ -1,7 +1,8 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 /* eslint-disable max-lines */
-/* eslint-disable import/no-relative-parent-imports */
 /* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable import-alias/import-alias */
+
 import fs from "fs";
 import { ClientFunction, RequestMock, t, Selector } from "testcafe";
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";

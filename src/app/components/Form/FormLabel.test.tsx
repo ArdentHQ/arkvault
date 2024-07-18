@@ -1,5 +1,3 @@
-import "@testing-library/jest-dom/extend-expect";
-
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
@@ -40,10 +38,10 @@ describe("FormLabel", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render & hover if optional", () => {
+	it("should render & hover if optional", async () => {
 		const { asFragment, baseElement } = render(<FormLabel label="Test" optional />);
 
-		userEvent.hover(screen.getByTestId("FormLabel__optional"));
+		await userEvent.hover(screen.getByTestId("FormLabel__optional"));
 
 		expect(baseElement).toHaveTextContent("This field is optional");
 		expect(asFragment()).toMatchSnapshot();
