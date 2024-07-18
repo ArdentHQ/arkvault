@@ -27,7 +27,7 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment).toMatchSnapshot();
 	}); */
 
-	// @TODO: Flaky test 
+	// @TODO: Flaky test - Lines 40 and 45 missing letters randomly. See a similar case fixed in: https://github.com/ArdentHQ/arkvault/blob/787855c6993213f45d425015694b3a039987e402/src/domains/profile/pages/Welcome/Welcome.test.tsx#L451
 	/* it("should trigger password confirmation validation when password is entered", async () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />, {
 			defaultValues: { confirmEncryptionPassword: "password" },

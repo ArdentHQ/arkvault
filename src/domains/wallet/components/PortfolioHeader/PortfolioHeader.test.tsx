@@ -122,7 +122,7 @@ describe("Portfolio grouped networks", () => {
 	});
 
 	// @TODO: Fix test
-	/* it("should handle wallet creation", () => {
+	it("should handle wallet creation", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -135,7 +135,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
 		expect(useWalletActionReturn.handleCreate).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -144,7 +144,7 @@ describe("Portfolio grouped networks", () => {
 		useWalletActionSpy.mockRestore();
 	});
 
-	it("should handle wallet import", () => {
+	it("should handle wallet import", async () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
 		render(
@@ -158,7 +158,7 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
+		await userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
 		expect(useWalletActionReturn.handleImport).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
@@ -179,21 +179,21 @@ describe("Portfolio grouped networks", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		userEvent.click(screen.getByTestId("dropdown__option--1"));
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
 		);
 
-		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL),
 		);
-	}); */
+	});
 
 	it.skip("should render network selection with sorted network filters", async () => {
 		const profile = await env.profiles().create("test");
@@ -253,7 +253,7 @@ describe("Portfolio grouped networks", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// @TODO: Fix test
+	// @TODO: Fix test - Assertion in line 274 always failing. Errors in spy.
 	/* it("should apply ledger import", () => {
 		const useWalletActionSpy = vi.spyOn(useWalletAction, "useWalletActions").mockReturnValue(useWalletActionReturn);
 
