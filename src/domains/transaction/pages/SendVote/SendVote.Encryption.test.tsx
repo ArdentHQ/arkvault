@@ -188,7 +188,8 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		await userEvent.paste(passwordInput, "password");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 

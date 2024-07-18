@@ -152,7 +152,8 @@ describe("SendDelegateResignation", () => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.type(secondMnemonic(), MNEMONICS[2]);
+			await userEvent.clear(secondMnemonic());
+			await userEvent.type(secondMnemonic(), MNEMONICS[2]);
 			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
 
 			await waitFor(() => {
