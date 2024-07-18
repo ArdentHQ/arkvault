@@ -203,6 +203,7 @@ describe("Registration", () => {
 		// Step 1
 		await expect(formStep()).resolves.toBeVisible();
 
+		await userEvent.clear(screen.getByTestId("Input__username"));
 		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
 

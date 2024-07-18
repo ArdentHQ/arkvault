@@ -1,7 +1,7 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { act, renderHook } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
 import React from "react";
 
 import { POLLING_INTERVAL } from "./UnlockTokens.contracts";
@@ -21,7 +21,7 @@ describe("useUnlockableBalances", () => {
 
 	it("should fetch unlockable balances every 60 seconds", async () => {
 		vi.useRealTimers();
-		vi.useFakeTimers("legacy");
+		vi.useFakeTimers({shouldAdvanceTime: true});
 
 		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
@@ -39,7 +39,7 @@ describe("useUnlockableBalances", () => {
 
 		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
-		await waitForNextUpdate();
+	
 
 		await waitFor(() => {	
 			expect(unlockableBalances).toHaveBeenCalledTimes(1);
@@ -51,10 +51,10 @@ describe("useUnlockableBalances", () => {
 			vi.advanceTimersByTime(POLLING_INTERVAL + 500);
 		});
 
-		await waitForNextUpdate();
-
-		expect(unlockableBalances).toHaveBeenCalledTimes(2);
-		expect(result.current.isFirstLoad).toBe(false);
+		await waitFor(() => {
+			expect(unlockableBalances).toHaveBeenCalledTimes(2);
+			expect(result.current.isFirstLoad).toBe(false);
+		});
 
 		unlockableBalances.mockRestore();
 	});
