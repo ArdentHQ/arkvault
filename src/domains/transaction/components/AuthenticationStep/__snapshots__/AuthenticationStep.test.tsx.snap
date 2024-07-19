@@ -1134,6 +1134,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
@@ -1190,6 +1191,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
@@ -1246,6 +1248,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
@@ -2938,6 +2941,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
@@ -2994,6 +2998,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
@@ -3050,6 +3055,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
       </div>
       <div
         class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+        data-testid="LedgerConfirmation-loading_message"
       >
         <div
           class="css-1m8vfsi"
