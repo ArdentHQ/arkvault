@@ -1133,7 +1133,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -1145,7 +1145,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
@@ -1189,7 +1189,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -1201,7 +1201,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
@@ -1245,7 +1245,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -1257,7 +1257,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
@@ -2937,7 +2937,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -2949,7 +2949,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
@@ -2993,7 +2993,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -3005,7 +3005,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
@@ -3049,7 +3049,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
         Please review and verify the information on your Ledger device. Choose Accept to complete your transaction.
       </div>
       <div
-        class="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center "
+        class="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
       >
         <div
           class="css-1m8vfsi"
@@ -3061,7 +3061,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
           type="vertical"
         />
         <p
-          class="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold"
+          class="font-semibold text-theme-secondary-700 dark:text-theme-warning-600"
         >
           This transaction is pending confirmation
         </p>
