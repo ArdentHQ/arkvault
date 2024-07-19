@@ -3211,7 +3211,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                           class="css-19wsyy"
                         >
                           <div
-                            class="space-y-5"
+                            class="space-y-4"
                           >
                             <fieldset
                               class="flex min-w-0 flex-col css-1bcidjh"
@@ -4539,7 +4539,7 @@ exports[`SendTransfer > should render form and use location state with network p
                           class="css-19wsyy"
                         >
                           <div
-                            class="space-y-5"
+                            class="space-y-4"
                           >
                             <fieldset
                               class="flex min-w-0 flex-col css-1bcidjh"
@@ -5867,7 +5867,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                           class="css-19wsyy"
                         >
                           <div
-                            class="space-y-5"
+                            class="space-y-4"
                           >
                             <fieldset
                               class="flex min-w-0 flex-col css-1bcidjh"
@@ -6602,7 +6602,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -7308,7 +7308,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -8019,7 +8019,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -8739,7 +8739,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -9441,7 +9441,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -10085,7 +10085,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
