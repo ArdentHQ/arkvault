@@ -13,11 +13,11 @@ import { TransactionReviewDetail } from "@/domains/transaction/components/Transa
 export const TransferLedgerReview = ({
 	wallet,
 	estimatedExpiration,
-	profile
+	profile,
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	estimatedExpiration?: number;
-	profile: Contracts.IProfile
+	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
