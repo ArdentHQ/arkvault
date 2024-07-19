@@ -14,7 +14,7 @@ describe("TransferLedgerReview", () => {
 	});
 
 	it("should render", () => {
-		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
+		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} profile={profile} />, {
 			defaultValues: {
 				fee: "0",
 				recipients: [],
@@ -30,7 +30,7 @@ describe("TransferLedgerReview", () => {
 	});
 
 	it("should render with memo", () => {
-		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123} />, {
+		const { asFragment } = renderWithForm(<TransferLedgerReview wallet={wallet} estimatedExpiration={123}  profile={profile} />, {
 			defaultValues: {
 				fee: "0",
 				memo: "test",
@@ -50,7 +50,7 @@ describe("TransferLedgerReview", () => {
 
 	it("should render skeleton while loading expiration", () => {
 		const { asFragment } = renderWithForm(
-			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined} />,
+			<TransferLedgerReview wallet={wallet} estimatedExpiration={undefined}  profile={profile} />,
 			{
 				defaultValues: {
 					fee: "0",

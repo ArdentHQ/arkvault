@@ -14,13 +14,14 @@ import { useActiveProfile } from "@/app/hooks";
 export const TransferLedgerReview = ({
 	wallet,
 	estimatedExpiration,
+	profile
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	estimatedExpiration?: number;
+	profile: Contracts.IProfile
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
-	const profile = useActiveProfile();
 
 	const { fee, recipients, memo } = getValues();
 
@@ -54,7 +55,7 @@ export const TransferLedgerReview = ({
 
 			{memo && (
 				<TransactionReviewDetail label={t("COMMON.MEMO_SMARTBRIDGE")}>
-					<p>{memo}</p>
+					<p data-testid="TransactionMemo">{memo}</p>
 				</TransactionReviewDetail>
 			)}
 
