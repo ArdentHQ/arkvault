@@ -9,7 +9,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionReviewDetail } from "@/domains/transaction/components/TransactionReviewDetail";
-import { useActiveProfile } from "@/app/hooks";
 
 export const TransferLedgerReview = ({
 	wallet,
