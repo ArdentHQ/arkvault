@@ -3,7 +3,7 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="border-b border-dashed border-theme-secondary-300 last:border-none last:pb-0 dark:border-theme-secondary-800 py-3"
+    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
     data-testid="AddRecipientItem"
   >
     <div
@@ -134,7 +134,7 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="border-b border-dashed border-theme-secondary-300 last:border-none last:pb-0 dark:border-theme-secondary-800 py-3"
+    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
     data-testid="AddRecipientItem"
   >
     <div
