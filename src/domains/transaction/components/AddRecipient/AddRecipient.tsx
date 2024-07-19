@@ -295,17 +295,17 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const amountAddons =
 		!errors.amount && !errors.fee && isSenderFilled && !wallet?.network().isTest()
 			? {
-				end: {
-					content: (
-						<Amount
-							value={convert(amount || 0)}
-							ticker={exchangeTicker}
-							data-testid="AddRecipient__currency-balance"
-							className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-						/>
-					),
-				},
-			}
+					end: {
+						content: (
+							<Amount
+								value={convert(amount || 0)}
+								ticker={exchangeTicker}
+								data-testid="AddRecipient__currency-balance"
+								className="whitespace-no-break text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+							/>
+						),
+					},
+				}
 			: undefined;
 
 	return (
@@ -419,25 +419,21 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						</Button>
 					)}
 
-					{!isSingle &&
-						addedRecipients.length > 0 && (
-							<div>
-								{addedRecipients.map((recipient, index) => (
-									<AddRecipientItem
-										index={index}
-										key={`${index}-${recipient.address}`}
-										recipient={recipient}
-										onDelete={handleRemoveRecipient}
-										ticker={ticker}
-										exchangeTicker={exchangeTicker}
-										showExchangeAmount={network.isLive()}
-									/>
-								))}
-
-							</div>
-						)
-					}
-
+					{!isSingle && addedRecipients.length > 0 && (
+						<div>
+							{addedRecipients.map((recipient, index) => (
+								<AddRecipientItem
+									index={index}
+									key={`${index}-${recipient.address}`}
+									recipient={recipient}
+									onDelete={handleRemoveRecipient}
+									ticker={ticker}
+									exchangeTicker={exchangeTicker}
+									showExchangeAmount={network.isLive()}
+								/>
+							))}
+						</div>
+					)}
 				</div>
 			</SubForm>
 		</AddRecipientWrapper>
