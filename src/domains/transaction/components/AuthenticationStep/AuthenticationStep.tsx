@@ -1,4 +1,4 @@
-/* eslint-disable sonarjs/cognitive-complexity */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -17,6 +17,7 @@ import {
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Image } from "@/app/components/Image";
+import { Icon } from "@/app/components/Icon";
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;
 	ledgerIsAwaitingApp?: boolean;
@@ -111,7 +112,7 @@ const LedgerAuthentication = ({
 	}
 
 	return (
-		<div data-testid="AuthenticationStep" className="space-y-8">
+		<div data-testid="AuthenticationStep" className="space-y-6">
 			<LedgerStateWrapper
 				ledgerIsAwaitingApp={ledgerIsAwaitingApp}
 				ledgerIsAwaitingDevice={ledgerIsAwaitingDevice}
@@ -123,6 +124,12 @@ const LedgerAuthentication = ({
 				<>
 					{!noHeading && (
 						<StepHeader
+							titleIcon={<Icon
+								dimensions={[24, 24]}
+								name="ConfirmTransaction"
+								data-testid="icon-confirm"
+								className="text-theme-primary-600"
+							/>}
 							title={
 								subject === "transaction"
 									? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
@@ -132,7 +139,7 @@ const LedgerAuthentication = ({
 					)}
 
 					{requireLedgerConfirmation && (
-						<LedgerConfirmation noHeading={subject === "message"}>{ledgerDetails}</LedgerConfirmation>
+						<LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>
 					)}
 
 					{!requireLedgerConfirmation && (

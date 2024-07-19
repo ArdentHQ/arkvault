@@ -8,10 +8,13 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
+	TransactionAddresses,
 	TransactionDetail,
 	TransactionMemo,
 	TransactionRecipients,
 } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionReviewDetail } from "../../components/TransactionReviewDetail";
+import { useActiveProfile } from "@/app/hooks";
 
 export const TransferLedgerReview = ({
 	wallet,
@@ -22,6 +25,7 @@ export const TransferLedgerReview = ({
 }) => {
 	const { t } = useTranslation();
 	const { getValues } = useFormContext();
+	const profile = useActiveProfile();
 
 	const { fee, recipients, memo } = getValues();
 
@@ -50,12 +54,16 @@ export const TransferLedgerReview = ({
 	};
 
 	return (
-		<>
-			<TransactionRecipients currency={wallet.currency()} recipients={recipients} border={false} />
+		<div className="space-y-3 sm:space-y-4">
+			<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
 
-			{memo && <TransactionMemo memo={memo} />}
+			{memo && (
+				<TransactionReviewDetail label={t("COMMON.MEMO_SMARTBRIDGE")}>
+					<p>{memo}</p>
+				</TransactionReviewDetail>
+			)}
 
-			<TransactionDetail
+			<TransactionReviewDetail
 				label={
 					<div data-testid="LedgerReview__expiration" className="flex items-center space-x-2">
 						<span>{t("COMMON.EXPIRATION")}</span>
@@ -69,11 +77,11 @@ export const TransferLedgerReview = ({
 				}
 			>
 				{renderExpiration()}
-			</TransactionDetail>
+			</TransactionReviewDetail>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
 			</div>
-		</>
+		</div>
 	);
 };

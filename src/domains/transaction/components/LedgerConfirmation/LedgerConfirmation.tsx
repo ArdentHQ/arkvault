@@ -1,9 +1,9 @@
+import { Alert } from "@/app/components/Alert";
+import { Divider } from "@/app/components/Divider";
+import { Spinner } from "@/app/components/Spinner";
+import { Toast } from "@/app/components/Toast";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { Divider } from "@/app/components/Divider";
-import { Image } from "@/app/components/Image";
-import { Spinner } from "@/app/components/Spinner";
 
 interface LedgerConfirmationProperties {
 	children?: React.ReactNode;
@@ -16,28 +16,23 @@ export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: Ledg
 
 	return (
 		<>
-			<div className="space-y-8">
-				<Image name="ConfirmTransactionLedgerBanner" domain="transaction" className="max-w-full" />
-
+			<div className="space-y-5">
 				<div className="text-theme-secondary-text" data-testid="LedgerConfirmation-description">
 					{t("TRANSACTION.LEDGER_CONFIRMATION.DESCRIPTION")}
 				</div>
 
-				<div className="inline-flex w-full items-center justify-center space-x-3">
-					<Spinner />
-					<span
-						className="font-semibold text-theme-secondary-900 dark:text-theme-secondary-600"
-						data-testid="LedgerConfirmation-loading_message"
-					>
-						{t("TRANSACTION.LEDGER_CONFIRMATION.LOADING_MESSAGE")}
-					</span>
+				<div className="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center ">
+					<Spinner color="warning-alt" size="sm" width={3} />
+					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+					<p className="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold">
+						{t("TRANSACTION.PENDING.STATUS_TEXT")}
+					</p>
 				</div>
+
 			</div>
 
 			{children && (
 				<>
-					<Divider />
-
 					<section data-testid="LedgerReview__details">
 						{!noHeading && (
 							<h2 className="mb-0 text-2xl font-bold">
