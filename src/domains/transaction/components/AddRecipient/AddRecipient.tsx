@@ -326,7 +326,7 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			</div>
 
 			<SubForm data-testid="AddRecipient__form-wrapper" noBackground={isSingle} noPadding={isSingle}>
-				<div className="space-y-5">
+				<div className="space-y-4">
 					<FormField name="recipientAddress">
 						{!isSingle && (
 							<FormLabel label={t("COMMON.RECIPIENT_#", { count: addedRecipients.length + 1 })} />
@@ -419,19 +419,21 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 						</Button>
 					)}
 
-					{!isSingle &&
-						addedRecipients.length > 0 &&
-						addedRecipients.map((recipient, index) => (
-							<AddRecipientItem
-								index={index}
-								key={`${index}-${recipient.address}`}
-								recipient={recipient}
-								onDelete={handleRemoveRecipient}
-								ticker={ticker}
-								exchangeTicker={exchangeTicker}
-								showExchangeAmount={network.isLive()}
-							/>
-						))}
+					{!isSingle && addedRecipients.length > 0 && (
+						<div>
+							{addedRecipients.map((recipient, index) => (
+								<AddRecipientItem
+									index={index}
+									key={`${index}-${recipient.address}`}
+									recipient={recipient}
+									onDelete={handleRemoveRecipient}
+									ticker={ticker}
+									exchangeTicker={exchangeTicker}
+									showExchangeAmount={network.isLive()}
+								/>
+							))}
+						</div>
+					)}
 				</div>
 			</SubForm>
 		</AddRecipientWrapper>
