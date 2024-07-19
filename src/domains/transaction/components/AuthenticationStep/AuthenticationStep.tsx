@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
@@ -124,12 +123,14 @@ const LedgerAuthentication = ({
 				<>
 					{!noHeading && (
 						<StepHeader
-							titleIcon={<Icon
-								dimensions={[24, 24]}
-								name="ConfirmTransaction"
-								data-testid="icon-confirm"
-								className="text-theme-primary-600"
-							/>}
+							titleIcon={
+								<Icon
+									dimensions={[24, 24]}
+									name="ConfirmTransaction"
+									data-testid="icon-confirm"
+									className="text-theme-primary-600"
+								/>
+							}
 							title={
 								subject === "transaction"
 									? t("TRANSACTION.LEDGER_CONFIRMATION.TITLE")
@@ -138,9 +139,7 @@ const LedgerAuthentication = ({
 						/>
 					)}
 
-					{requireLedgerConfirmation && (
-						<LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>
-					)}
+					{requireLedgerConfirmation && <LedgerConfirmation noHeading>{ledgerDetails}</LedgerConfirmation>}
 
 					{!requireLedgerConfirmation && (
 						<div className="space-y-8">

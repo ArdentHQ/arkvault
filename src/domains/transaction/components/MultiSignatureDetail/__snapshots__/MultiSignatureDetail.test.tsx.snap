@@ -5570,7 +5570,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                   data-testid="tab-pabel__active-panel"
                 >
                   <div
-                    class="space-y-8"
+                    class="space-y-6"
                     data-testid="AuthenticationStep"
                   >
                     <div

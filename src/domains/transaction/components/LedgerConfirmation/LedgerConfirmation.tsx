@@ -1,7 +1,5 @@
-import { Alert } from "@/app/components/Alert";
 import { Divider } from "@/app/components/Divider";
 import { Spinner } from "@/app/components/Spinner";
-import { Toast } from "@/app/components/Toast";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -21,14 +19,13 @@ export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: Ledg
 					{t("TRANSACTION.LEDGER_CONFIRMATION.DESCRIPTION")}
 				</div>
 
-				<div className="rounded-xl bg-theme-warning-50 dark:bg-transparent border border-theme-warning-200 dark:border-theme-warning-600 px-6 py-5 flex space-x-3 items-center ">
+				<div className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent">
 					<Spinner color="warning-alt" size="sm" width={3} />
 					<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
-					<p className="text-theme-secondary-700 dark:text-theme-warning-600 font-semibold">
+					<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
 						{t("TRANSACTION.PENDING.STATUS_TEXT")}
 					</p>
 				</div>
-
 			</div>
 
 			{children && (

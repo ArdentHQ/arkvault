@@ -39,5 +39,5 @@ export const TransactionIcons: any = {
 	UnlockToken,
 	Unvote,
 	Vote,
-	VoteCombination
+	VoteCombination,
 };

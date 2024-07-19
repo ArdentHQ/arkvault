@@ -32,7 +32,13 @@ export const TransactionReviewDetailLabel = ({ children }: { children: ReactNode
 	</div>
 );
 
-export const TransactionReviewDetail = ({ children, label }: { children: ReactNode; label?: string | React.ReactNode }): ReactElement => (
+export const TransactionReviewDetail = ({
+	children,
+	label,
+}: {
+	children: ReactNode;
+	label?: string | React.ReactNode;
+}): ReactElement => (
 	<div data-testid="TransactionReviewDetail">
 		{label && <TransactionReviewDetailLabel>{label}</TransactionReviewDetailLabel>}
 		<div

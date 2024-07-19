@@ -7,13 +7,8 @@ import { Icon } from "@/app/components/Icon";
 import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import {
-	TransactionAddresses,
-	TransactionDetail,
-	TransactionMemo,
-	TransactionRecipients,
-} from "@/domains/transaction/components/TransactionDetail";
-import { TransactionReviewDetail } from "../../components/TransactionReviewDetail";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionReviewDetail } from "@/domains/transaction/components/TransactionReviewDetail";
 import { useActiveProfile } from "@/app/hooks";
 
 export const TransferLedgerReview = ({
