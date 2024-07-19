@@ -337,7 +337,11 @@ export const SendTransfer = () => {
 				<AuthenticationStep
 					wallet={wallet!}
 					ledgerDetails={
-						<TransferLedgerReview wallet={wallet!} estimatedExpiration={lastEstimatedExpiration} profile={profile}/>
+						<TransferLedgerReview
+							wallet={wallet!}
+							estimatedExpiration={lastEstimatedExpiration}
+							profile={profile}
+						/>
 					}
 					ledgerIsAwaitingDevice={!hasDeviceAvailable}
 					ledgerIsAwaitingApp={!isConnected}
