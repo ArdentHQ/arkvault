@@ -18,8 +18,10 @@ import Vote from "./vote.svg?react";
 import VoteCombination from "./vote-combination.svg?react";
 import SendTransactionLight from "./send-transaction-light.svg?react";
 import SendTransactionDark from "./send-transaction-dark.svg?react";
+import ConfirmTransaction from "./confirm-transaction.svg?react";
 
 export const TransactionIcons: any = {
+	ConfirmTransaction,
 	DelegateRegistration,
 	DelegateResignation,
 	Ipfs,
@@ -37,5 +39,5 @@ export const TransactionIcons: any = {
 	UnlockToken,
 	Unvote,
 	Vote,
-	VoteCombination,
+	VoteCombination
 };
