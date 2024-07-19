@@ -85,7 +85,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -385,7 +385,7 @@ exports[`AddRecipient > should render 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -670,7 +670,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -955,7 +955,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -1240,7 +1240,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -1458,7 +1458,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -1743,7 +1743,7 @@ exports[`AddRecipient > should set available amount 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -2028,7 +2028,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
@@ -2328,7 +2328,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
       class="css-19wsyy"
     >
       <div
-        class="space-y-5"
+        class="space-y-4"
       >
         <fieldset
           class="flex min-w-0 flex-col css-1bcidjh"
