@@ -59,7 +59,11 @@ export const Alert = ({
 				<span>{title || t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
 
 				{collapsible && (
-					<AlertChevron collapsed={collapsible ? false : collapsed} variant={variant} data-testid="Alert__chevron">
+					<AlertChevron
+						collapsed={collapsible ? false : collapsed}
+						variant={variant}
+						data-testid="Alert__chevron"
+					>
 						<Icon name="ChevronDownSmall" size="sm" />
 					</AlertChevron>
 				)}

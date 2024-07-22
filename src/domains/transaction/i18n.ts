@@ -186,7 +186,8 @@ export const translations = {
 		ERROR: "Something went wrong.",
 		INVALID_QR_CODE: "The uploaded QR code is invalid.",
 		PERMISSION_ERROR: {
-			DESCRIPTION: "You have blocked ARK Vault from accessing your camera. In order to scan a QR code, please allow access to your camera from your browser settings.",
+			DESCRIPTION:
+				"You have blocked ARK Vault from accessing your camera. In order to scan a QR code, please allow access to your camera from your browser settings.",
 			TITLE: "Camera Permission Denied",
 		},
 		TITLE: "Scan QR-Code",

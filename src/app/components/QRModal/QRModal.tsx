@@ -139,13 +139,16 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 
 				<div className="flex h-full flex-col items-center justify-center py-8">
 					<ViewFinder error={error} isLoading={!ready} />
-					{
-						error && (
-							<Alert title={error.title} variant="danger" className="mt-6 max-w-[531px] w-full z-10" collapsible={!isSmAndAbove}>
-								{error.message}
-							</Alert>
-						)
-					}
+					{error && (
+						<Alert
+							title={error.title}
+							variant="danger"
+							className="z-10 mt-6 w-full max-w-[531px]"
+							collapsible={!isSmAndAbove}
+						>
+							{error.message}
+						</Alert>
+					)}
 
 					<div className="z-10">
 						<FormButtons>
