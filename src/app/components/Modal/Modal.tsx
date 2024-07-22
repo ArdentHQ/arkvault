@@ -19,6 +19,7 @@ interface ModalProperties extends JSX.IntrinsicAttributes {
 	isOpen: boolean;
 	onClose?: any;
 	onClick?: any;
+	contentClassName?: string;
 }
 
 const Modal = ({
@@ -33,6 +34,7 @@ const Modal = ({
 	size,
 	children,
 	onClose,
+	contentClassName,
 	...attributes
 }: ModalProperties) => {
 	const referenceShouldClose = useRef<boolean>();
@@ -103,6 +105,7 @@ const Modal = ({
 					onClose={onClose}
 					hideCloseButton={hideCloseButton}
 					noButtons={noButtons}
+					className={contentClassName}
 				>
 					{children}
 				</ModalContent>
