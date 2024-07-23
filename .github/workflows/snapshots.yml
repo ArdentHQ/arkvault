@@ -1,4 +1,4 @@
-name: Dependencies
+name: Snapshots
 
 on:
     workflow_dispatch:
@@ -43,6 +43,7 @@ jobs:
               run: pnpm rebuild
 
             - name: Update Snapshots
+              continue-on-error: true # Continue on error to allow the commit action to run
               run: pnpm test
 
             - uses: stefanzweifel/git-auto-commit-action@v4
