@@ -779,7 +779,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
         class="whitespace-nowrap"
         data-testid="Amount"
       >
-        50,205.64217699 DARK
+        50.205,64217699 DARK
       </span>
     </span>
     <span
@@ -827,7 +827,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          50,205.64217699 DARK
+          50.205,64217699 DARK
         </span>
       </span>
     </div>
@@ -860,7 +860,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
         class="whitespace-nowrap"
         data-testid="Amount"
       >
-        50,205.64217699 ARK
+        50.205,64217699 ARK
       </span>
     </span>
     <span
@@ -909,7 +909,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          50,205.64217699 ARK
+          50.205,64217699 ARK
         </span>
       </span>
     </div>
@@ -2746,7 +2746,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                50,114.21127898 ARK
+                50.114,21127898 ARK
               </span>
             </span>
             <span
@@ -2806,7 +2806,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  50,114.21127898 ARK
+                  50.114,21127898 ARK
                 </span>
               </span>
             </div>
@@ -3244,7 +3244,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        50,114.21127898 ARK
+                        50.114,21127898 ARK
                       </span>
                     </div>
                   </td>
@@ -3484,7 +3484,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                50,519.2220551 DARK
+                50.519,2220551 DARK
               </span>
             </span>
             <span
@@ -3532,7 +3532,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  50,519.2220551 DARK
+                  50.519,2220551 DARK
                 </span>
               </span>
             </div>

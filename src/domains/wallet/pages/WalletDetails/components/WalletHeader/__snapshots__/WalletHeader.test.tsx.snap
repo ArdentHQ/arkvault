@@ -1004,7 +1004,7 @@ exports[`WalletHeader > should render 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -1329,7 +1329,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -1673,7 +1673,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -2025,7 +2025,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -2376,7 +2376,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -2756,7 +2756,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>
@@ -3045,7 +3045,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             class="whitespace-nowrap text-lg font-semibold text-white"
             data-testid="Amount"
           >
-            33.75089801 DARK
+            33,75089801 DARK
           </span>
         </div>
       </div>

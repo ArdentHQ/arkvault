@@ -3625,7 +3625,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0.1 DARK
+                      + 0,1 DARK
                     </span>
                   </div>
                 </div>
@@ -4044,7 +4044,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0.1 DARK
+                      + 0,1 DARK
                     </span>
                   </div>
                 </div>
@@ -4254,7 +4254,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0.1 DARK
+                      + 0,1 DARK
                     </span>
                   </div>
                 </div>
@@ -4676,7 +4676,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0.1 DARK
+                      + 0,1 DARK
                     </span>
                   </div>
                 </div>
@@ -5750,7 +5750,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 1.1 DARK
+                      + 1,1 DARK
                     </span>
                   </div>
                 </div>
@@ -6156,7 +6156,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 1.1 DARK
+                      + 1,1 DARK
                     </span>
                   </div>
                 </div>
@@ -6559,7 +6559,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 1.1 DARK
+                      + 1,1 DARK
                     </span>
                   </div>
                 </div>
@@ -8012,7 +8012,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 1.1 DARK
+                      + 1,1 DARK
                     </span>
                   </div>
                 </div>
@@ -8206,7 +8206,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 1.1 DARK
+                      + 1,1 DARK
                     </span>
                   </div>
                 </div>

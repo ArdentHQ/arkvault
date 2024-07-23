@@ -226,7 +226,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              - 1.28629325 DARK
+                              - 1,28629325 DARK
                             </span>
                           </div>
                         </div>
@@ -446,7 +446,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              + 0.0000001 DARK
+                              + 0,0000001 DARK
                             </span>
                           </div>
                         </div>
@@ -778,7 +778,7 @@ exports[`Notifications > should render with plugins 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              - 1.28629325 DARK
+                              - 1,28629325 DARK
                             </span>
                           </div>
                         </div>
@@ -998,7 +998,7 @@ exports[`Notifications > should render with plugins 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              + 0.0000001 DARK
+                              + 0,0000001 DARK
                             </span>
                           </div>
                         </div>
@@ -1242,7 +1242,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              - 1.28629325 DARK
+                              - 1,28629325 DARK
                             </span>
                           </div>
                         </div>
@@ -1462,7 +1462,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                               class="whitespace-nowrap"
                               data-testid="Amount"
                             >
-                              + 0.0000001 DARK
+                              + 0,0000001 DARK
                             </span>
                           </div>
                         </div>

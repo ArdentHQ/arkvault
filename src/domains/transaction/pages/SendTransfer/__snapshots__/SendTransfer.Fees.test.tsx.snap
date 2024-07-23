@@ -1306,7 +1306,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                - 400,000 DARK
+                                - 400.000 DARK
                               </span>
                             </div>
                           </div>
@@ -1360,7 +1360,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0.1 DARK
+                            0,1 DARK
                           </span>
                         </div>
                       </div>
@@ -2698,7 +2698,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                - 400,000 DARK
+                                - 400.000 DARK
                               </span>
                             </div>
                           </div>
@@ -2752,7 +2752,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0.1 DARK
+                            0,1 DARK
                           </span>
                         </div>
                       </div>

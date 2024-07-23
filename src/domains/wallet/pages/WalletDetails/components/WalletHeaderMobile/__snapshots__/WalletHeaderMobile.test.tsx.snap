@@ -191,7 +191,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
       class="whitespace-nowrap mt-4 text-xl font-semibold leading-6 text-white"
       data-testid="Amount"
     >
-      33.75089801 DARK
+      33,75089801 DARK
     </span>
   </div>
   <div

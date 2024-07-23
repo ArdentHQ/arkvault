@@ -789,7 +789,7 @@ exports[`SecondSignatureRegistrationForm > should render transaction details 1`]
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          0.1 DARK
+          0,1 DARK
         </span>
       </div>
     </div>

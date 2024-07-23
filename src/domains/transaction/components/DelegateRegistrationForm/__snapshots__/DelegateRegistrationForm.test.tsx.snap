@@ -366,7 +366,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      1.354 DARK
+                      1,354 DARK
                     </span>
                   </div>
                 </button>
@@ -1746,7 +1746,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      1.354 DARK
+                      1,354 DARK
                     </span>
                   </div>
                 </button>
@@ -2148,7 +2148,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
                       class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
-                      1.354 DARK
+                      1,354 DARK
                     </span>
                   </div>
                 </button>

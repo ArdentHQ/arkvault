@@ -1179,7 +1179,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -1403,7 +1403,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -1627,7 +1627,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -1851,7 +1851,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -2075,7 +2075,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -2299,7 +2299,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -2523,7 +2523,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -2747,7 +2747,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -2971,7 +2971,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -3195,7 +3195,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -3419,7 +3419,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -3643,7 +3643,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -3867,7 +3867,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -4091,7 +4091,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -4315,7 +4315,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33.75089801 DARK
+                            33,75089801 DARK
                           </span>
                         </div>
                       </td>

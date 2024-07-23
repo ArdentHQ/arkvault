@@ -516,7 +516,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        33,75089801 DARK
                       </span>
                     </div>
                   </div>
@@ -1032,7 +1032,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        33,75089801 DARK
                       </span>
                     </div>
                   </div>
@@ -1488,7 +1488,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        33.75089801 DARK
+                        33,75089801 DARK
                       </span>
                     </div>
                   </div>
