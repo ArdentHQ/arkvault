@@ -378,7 +378,7 @@ exports[`CreateProfile > should render 1`] = `
                                 readonly=""
                                 tabindex="-1"
                                 type="text"
-                                value="EUR"
+                                value="GBP"
                               />
                             </div>
                           </div>
@@ -399,7 +399,7 @@ exports[`CreateProfile > should render 1`] = `
                                 <div
                                   class="invisible fixed w-auto whitespace-nowrap"
                                 >
-                                  EUR (€)…
+                                  GBP (£)…
                                 </div>
                                 <div
                                   class="css-n1b0kl"
@@ -418,7 +418,7 @@ exports[`CreateProfile > should render 1`] = `
                                       name="currency"
                                       placeholder="Select Currency"
                                       type="text"
-                                      value="EUR (€)"
+                                      value="GBP (£)"
                                     />
                                     <span
                                       class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
@@ -427,7 +427,7 @@ exports[`CreateProfile > should render 1`] = `
                                       <span
                                         class="truncate"
                                       >
-                                        EUR (€)
+                                        GBP (£)
                                       </span>
                                     </span>
                                   </div>

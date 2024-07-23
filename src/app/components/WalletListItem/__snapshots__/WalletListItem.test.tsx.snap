@@ -671,7 +671,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -1045,7 +1045,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -1402,7 +1402,7 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
           class="whitespace-nowrap text-sm text-white"
           data-testid="Amount"
         >
-          33,75089801 DARK
+          33.75089801 DARK
         </span>
         <span
           class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1784,7 +1784,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -2580,7 +2580,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -2954,7 +2954,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>

@@ -343,7 +343,7 @@ exports[`AddressTable > should render 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      33,75089801 DARK
+                      33.75089801 DARK
                     </span>
                   </div>
                 </td>
@@ -543,7 +543,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -845,7 +845,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -1147,7 +1147,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -1724,7 +1724,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      33,75089801 DARK
+                      33.75089801 DARK
                     </span>
                   </div>
                 </td>
@@ -2178,7 +2178,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      33,75089801 DARK
+                      33.75089801 DARK
                     </span>
                   </div>
                 </td>

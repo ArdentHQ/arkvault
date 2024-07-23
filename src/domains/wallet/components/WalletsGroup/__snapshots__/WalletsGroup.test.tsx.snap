@@ -360,7 +360,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -458,7 +458,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -644,7 +644,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -730,7 +730,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -779,7 +779,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
         class="whitespace-nowrap"
         data-testid="Amount"
       >
-        50.205,64217699 DARK
+        50,205.64217699 DARK
       </span>
     </span>
     <span
@@ -793,7 +793,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
   >
     <span
       class="hidden"
@@ -827,7 +827,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          50.205,64217699 DARK
+          50,205.64217699 DARK
         </span>
       </span>
     </div>
@@ -860,7 +860,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
         class="whitespace-nowrap"
         data-testid="Amount"
       >
-        50.205,64217699 ARK
+        50,205.64217699 ARK
       </span>
     </span>
     <span
@@ -875,7 +875,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
     </span>
   </div>
   <div
-    class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+    class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
   >
     <span
       class="hidden"
@@ -909,7 +909,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
           class="whitespace-nowrap"
           data-testid="Amount"
         >
-          50.205,64217699 ARK
+          50,205.64217699 ARK
         </span>
       </span>
     </div>
@@ -1039,7 +1039,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1137,7 +1137,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
           class="css-1j7gziz"
@@ -1276,7 +1276,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1374,7 +1374,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
           class="css-1j7gziz"
@@ -1513,7 +1513,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
           </span>
         </div>
         <div
-          class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+          class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
         >
           <span
             class="hidden"
@@ -1613,7 +1613,7 @@ exports[`WalletsGroup > should render group with different widths 3`] = `
         </div>
       </div>
       <div
-        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+        class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
       >
         <div
           class="css-1j7gziz"
@@ -1755,7 +1755,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -1853,7 +1853,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -2039,7 +2039,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2125,7 +2125,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -2268,7 +2268,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2366,7 +2366,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -2552,7 +2552,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2638,7 +2638,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -2746,7 +2746,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                50.114,21127898 ARK
+                50,114.21127898 ARK
               </span>
             </span>
             <span
@@ -2772,7 +2772,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -2806,7 +2806,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  50.114,21127898 ARK
+                  50,114.21127898 ARK
                 </span>
               </span>
             </div>
@@ -2843,7 +2843,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch css-o6tyc"
         >
           <div
             class="css-1j7gziz"
@@ -3244,7 +3244,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        50.114,21127898 ARK
+                        50,114.21127898 ARK
                       </span>
                     </div>
                   </td>
@@ -3484,7 +3484,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                50.519,2220551 DARK
+                50,519.2220551 DARK
               </span>
             </span>
             <span
@@ -3498,7 +3498,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
             </span>
           </div>
           <div
-            class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+            class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
           >
             <span
               class="hidden"
@@ -3532,7 +3532,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  50.519,2220551 DARK
+                  50,519.2220551 DARK
                 </span>
               </span>
             </div>
@@ -3557,7 +3557,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           </div>
         </div>
         <div
-          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+          class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
         >
           <div
             class="css-1j7gziz"

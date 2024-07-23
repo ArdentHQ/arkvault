@@ -3030,7 +3030,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </div>
@@ -3047,7 +3047,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801 DARK
+                33.75089801 DARK
               </span>
             </div>
           </div>
@@ -3364,7 +3364,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </div>
@@ -3381,7 +3381,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801 DARK
+                33.75089801 DARK
               </span>
             </div>
           </div>

@@ -6763,7 +6763,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0,1 DARK
+                            0.1 DARK
                           </span>
                         </div>
                       </div>
@@ -8074,7 +8074,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0,1 DARK
+                            0.1 DARK
                           </span>
                         </div>
                       </div>
@@ -9260,7 +9260,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0,1 DARK
+                            0.1 DARK
                           </span>
                         </div>
                       </div>

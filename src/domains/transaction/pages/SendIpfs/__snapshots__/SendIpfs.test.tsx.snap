@@ -1243,7 +1243,7 @@ exports[`SendIpfs > should render review step 1`] = `
                 class="whitespace-nowrap text-md mt-1 font-semibold"
                 data-testid="Amount"
               >
-                0,1 DARK
+                0.1 DARK
               </span>
             </div>
           </div>
@@ -1294,7 +1294,7 @@ exports[`SendIpfs > should render review step 1`] = `
             class="whitespace-nowrap text-md font-bold sm:text-lg"
             data-testid="Amount"
           >
-            0,1 DARK
+            0.1 DARK
           </span>
         </div>
       </div>

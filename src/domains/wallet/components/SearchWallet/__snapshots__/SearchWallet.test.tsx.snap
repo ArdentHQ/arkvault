@@ -339,7 +339,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -455,7 +455,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -809,7 +809,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -904,7 +904,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -1258,7 +1258,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -1351,7 +1351,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -1726,7 +1726,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -1842,7 +1842,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -2148,7 +2148,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -2253,7 +2253,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -2542,7 +2542,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -2647,7 +2647,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -2936,7 +2936,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -3041,7 +3041,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -3764,7 +3764,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -3878,7 +3878,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -4253,7 +4253,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -4369,7 +4369,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -4791,7 +4791,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -4922,7 +4922,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -5336,7 +5336,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -5445,7 +5445,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -5859,7 +5859,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -5966,7 +5966,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -6401,7 +6401,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -6531,7 +6531,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -6851,7 +6851,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -6956,7 +6956,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -7245,7 +7245,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -7350,7 +7350,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -7639,7 +7639,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                33,75089801 DARK
+                                33.75089801 DARK
                               </span>
                             </div>
                           </div>
@@ -7744,7 +7744,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 class="whitespace-nowrap text-sm text-white"
                                 data-testid="Amount"
                               >
-                                57,68 DARK
+                                57.68 DARK
                               </span>
                             </div>
                           </div>
@@ -8574,7 +8574,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -8702,7 +8702,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>
@@ -9137,7 +9137,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            33,75089801 DARK
+                            33.75089801 DARK
                           </span>
                         </div>
                       </td>
@@ -9267,7 +9267,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            57,68 DARK
+                            57.68 DARK
                           </span>
                         </div>
                       </td>

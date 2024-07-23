@@ -125,7 +125,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -430,7 +430,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -699,7 +699,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -969,7 +969,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -1238,7 +1238,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -1507,7 +1507,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -1714,7 +1714,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              57,68 DARK
+              57.68 DARK
             </span>
           </div>
         </td>
@@ -1894,7 +1894,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -2271,7 +2271,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -2538,7 +2538,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -2724,7 +2724,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -3106,7 +3106,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -3447,7 +3447,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -3633,7 +3633,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -4015,7 +4015,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -4356,7 +4356,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>
@@ -4625,7 +4625,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              33,75089801 DARK
+              33.75089801 DARK
             </span>
           </div>
         </td>

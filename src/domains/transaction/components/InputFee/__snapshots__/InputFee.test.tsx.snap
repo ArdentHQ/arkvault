@@ -596,7 +596,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -618,7 +618,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -640,7 +640,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -1063,7 +1063,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -1091,7 +1091,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -1119,7 +1119,7 @@ exports[`InputFee > simple view type > should display converted values when on l
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -1403,7 +1403,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -1425,7 +1425,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -1447,7 +1447,7 @@ exports[`InputFee > simple view type > should render simple view in lg 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -1520,7 +1520,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -1542,7 +1542,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -1564,7 +1564,7 @@ exports[`InputFee > simple view type > should render simple view in md 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -1637,7 +1637,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -1659,7 +1659,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -1681,7 +1681,7 @@ exports[`InputFee > simple view type > should render simple view in sm 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -1754,7 +1754,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -1776,7 +1776,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -1798,7 +1798,7 @@ exports[`InputFee > simple view type > should render simple view in xl 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -2041,7 +2041,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2069,7 +2069,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2097,7 +2097,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2176,7 +2176,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2204,7 +2204,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2232,7 +2232,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2311,7 +2311,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2339,7 +2339,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2367,7 +2367,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2446,7 +2446,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2474,7 +2474,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2502,7 +2502,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
           <span
             class="whitespace-nowrap text-sm text-theme-secondary-500"
@@ -2761,7 +2761,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -2783,7 +2783,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -2805,7 +2805,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -2878,7 +2878,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -2900,7 +2900,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -2922,7 +2922,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>
@@ -2995,7 +2995,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,006 DARK
+            0.006 DARK
           </span>
         </div>
       </button>
@@ -3017,7 +3017,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,456 DARK
+            0.456 DARK
           </span>
         </div>
       </button>
@@ -3039,7 +3039,7 @@ exports[`InputFee > simple view type > should update value when clicking button 
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,5 DARK
+            0.5 DARK
           </span>
         </div>
       </button>

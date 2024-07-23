@@ -519,7 +519,7 @@ exports[`Dashboard > should render 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  50,11421128 BTC
+                  50.11421128 BTC
                 </span>
               </div>
             </div>
@@ -840,7 +840,7 @@ exports[`Dashboard > should render 1`] = `
                   class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
                   data-testid="Amount"
                 >
-                  50,11421128 BTC
+                  50.11421128 BTC
                 </span>
               </div>
               <div
@@ -982,7 +982,7 @@ exports[`Dashboard > should render 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      50.114,21127898 ARK
+                      50,114.21127898 ARK
                     </span>
                   </span>
                   <span
@@ -992,12 +992,12 @@ exports[`Dashboard > should render 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      50,11421128 BTC
+                      50.11421128 BTC
                     </span>
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+                  class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
                 >
                   <span
                     class="hidden"
@@ -1031,7 +1031,7 @@ exports[`Dashboard > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        50.114,21127898 ARK
+                        50,114.21127898 ARK
                       </span>
                     </span>
                   </div>
@@ -1050,14 +1050,14 @@ exports[`Dashboard > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        50,11421128 BTC
+                        50.11421128 BTC
                       </span>
                     </span>
                   </div>
                 </div>
               </div>
               <div
-                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
               >
                 <div
                   class="css-1j7gziz"
@@ -1218,7 +1218,7 @@ exports[`Dashboard > should render 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      91,43089801 DARK
+                      91.43089801 DARK
                     </span>
                   </span>
                   <span
@@ -1232,7 +1232,7 @@ exports[`Dashboard > should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
+                  class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
                 >
                   <span
                     class="hidden"
@@ -1266,7 +1266,7 @@ exports[`Dashboard > should render 1`] = `
                         class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        91,43089801 DARK
+                        91.43089801 DARK
                       </span>
                     </span>
                   </div>
@@ -1291,7 +1291,7 @@ exports[`Dashboard > should render 1`] = `
                 </div>
               </div>
               <div
-                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-qr226j-AccordionHeader"
+                class="ml-4 flex flex-shrink-0 items-center self-stretch transition-all duration-100 css-o6tyc"
               >
                 <div
                   class="css-1j7gziz"
@@ -1716,7 +1716,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                + 400.000 DARK
+                                + 400,000 DARK
                               </span>
                             </div>
                           </div>
@@ -1939,7 +1939,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                + 400.000 DARK
+                                + 400,000 DARK
                               </span>
                             </div>
                           </div>
@@ -2162,7 +2162,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                + 50.000 DARK
+                                + 50,000 DARK
                               </span>
                             </div>
                           </div>
@@ -2385,7 +2385,7 @@ exports[`Dashboard > should render 1`] = `
                                 class="whitespace-nowrap"
                                 data-testid="Amount"
                               >
-                                + 50.000 DARK
+                                + 50,000 DARK
                               </span>
                             </div>
                           </div>

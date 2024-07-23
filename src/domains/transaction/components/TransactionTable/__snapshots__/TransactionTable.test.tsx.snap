@@ -4187,7 +4187,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -4416,7 +4416,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -4645,7 +4645,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -4874,7 +4874,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -5103,7 +5103,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -5332,7 +5332,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -5561,7 +5561,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -5790,7 +5790,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -6016,7 +6016,7 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>
@@ -6427,7 +6427,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -6623,7 +6623,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -6819,7 +6819,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7015,7 +7015,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7211,7 +7211,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7407,7 +7407,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7603,7 +7603,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7799,7 +7799,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -7995,7 +7995,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>
@@ -8411,7 +8411,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -8607,7 +8607,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -8803,7 +8803,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -8999,7 +8999,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -9195,7 +9195,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -9391,7 +9391,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -9587,7 +9587,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -9783,7 +9783,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -9979,7 +9979,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>
@@ -10610,7 +10610,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -10839,7 +10839,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -11068,7 +11068,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -11297,7 +11297,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -11526,7 +11526,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -11755,7 +11755,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -11984,7 +11984,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -12213,7 +12213,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -12439,7 +12439,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>
@@ -13065,7 +13065,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -13294,7 +13294,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -13523,7 +13523,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -13752,7 +13752,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -13981,7 +13981,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -14210,7 +14210,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -14439,7 +14439,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -14668,7 +14668,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -14894,7 +14894,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>
@@ -15520,7 +15520,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 20,03499657 DARK
+                      - 20.03499657 DARK
                     </span>
                   </div>
                 </div>
@@ -15749,7 +15749,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -15978,7 +15978,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -16207,7 +16207,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -16436,7 +16436,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -16665,7 +16665,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -16894,7 +16894,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -17123,7 +17123,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      + 0,0000001 DARK
+                      + 0.0000001 DARK
                     </span>
                   </div>
                 </div>
@@ -17349,7 +17349,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      - 0,100001 DARK
+                      - 0.100001 DARK
                     </span>
                   </div>
                 </div>

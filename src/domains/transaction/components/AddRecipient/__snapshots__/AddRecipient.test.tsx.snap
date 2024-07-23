@@ -533,7 +533,7 @@ exports[`AddRecipient > should render 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>
@@ -818,7 +818,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>
@@ -1103,7 +1103,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>
@@ -1388,7 +1388,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>
@@ -1606,7 +1606,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>
@@ -1891,7 +1891,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="whitespace-nowrap"
                 data-testid="Amount"
               >
-                33,75089801
+                33.75089801
               </span>
               )
             </span>

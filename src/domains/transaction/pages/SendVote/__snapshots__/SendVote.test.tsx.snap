@@ -1382,7 +1382,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             class="whitespace-nowrap"
                             data-testid="Amount"
                           >
-                            0,20716584 DARK
+                            0.20716584 DARK
                           </span>
                         </div>
                       </div>

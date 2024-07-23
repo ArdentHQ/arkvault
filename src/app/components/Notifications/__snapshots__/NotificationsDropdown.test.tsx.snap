@@ -283,7 +283,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -503,7 +503,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -790,7 +790,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                       class="whitespace-nowrap"
                       data-testid="Amount"
                     >
-                      0,28629325 DARK
+                      0.28629325 DARK
                     </span>
                   </div>
                 </div>
@@ -1328,7 +1328,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -1548,7 +1548,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -1854,7 +1854,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -2074,7 +2074,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -2354,7 +2354,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -2506,7 +2506,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -2812,7 +2812,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -3032,7 +3032,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -3319,7 +3319,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        - 1,28629325 DARK
+                                        - 1.28629325 DARK
                                       </span>
                                     </div>
                                   </div>
@@ -3471,7 +3471,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                         class="whitespace-nowrap"
                                         data-testid="Amount"
                                       >
-                                        + 0,0000001 DARK
+                                        + 0.0000001 DARK
                                       </span>
                                     </div>
                                   </div>

@@ -64,7 +64,7 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,00357 DARK
+            0.00357 DARK
           </span>
         </div>
       </button>
@@ -86,7 +86,7 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,07320598 DARK
+            0.07320598 DARK
           </span>
         </div>
       </button>
@@ -108,7 +108,7 @@ exports[`FeeField > should render 1`] = `
             class="whitespace-nowrap text-sm"
             data-testid="Amount"
           >
-            0,1 DARK
+            0.1 DARK
           </span>
         </div>
       </button>
