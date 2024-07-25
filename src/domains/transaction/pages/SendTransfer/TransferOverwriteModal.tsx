@@ -19,7 +19,7 @@ interface TransferOverwriteModalProperties {
 }
 
 const DetailLabel = ({ label }: { label: string }) => (
-	<div className="mb-2 text-sm font-semibold text-theme-secondary-text">{label}</div>
+	<div className="mb-2 text-sm font-semibold text-theme-secondary-500">{label}</div>
 );
 
 const OverwriteDetail = ({ currentNode, newNode }: { currentNode: ReactNode; newNode: ReactNode }) => (
@@ -79,9 +79,9 @@ export const TransferOverwriteModal = ({
 			onClose={onCancel}
 			data-testid="TransferOverwriteModal"
 		>
-			<Alert>{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
+			<Alert className="mt-2.5">{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
 
-			<div className="space-y-6 pt-6">
+			<div className="space-y-4 pt-4">
 				{(currentRecipient || newRecipient) && (
 					<div data-testid="OverwriteModal__Recipient">
 						<DetailLabel label={t("COMMON.RECIPIENT")} />
