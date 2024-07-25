@@ -182,12 +182,13 @@ export const translations = {
 			"The data scanned via QR conflicts with pre-filled input fields. Please confirm if you wish to overwrite the following data.",
 	},
 	MODAL_QR_CODE: {
-		DESCRIPTION: "Hold a compatible QR Code in front of your device's camera",
+		DESCRIPTION: "Hold a compatible QR code in front of your device's camera to scan the information",
 		ERROR: "Something went wrong.",
 		INVALID_QR_CODE: "The uploaded QR code is invalid.",
 		PERMISSION_ERROR: {
-			DESCRIPTION: "Please allow access to the camera in the browser settings.",
-			TITLE: "Permission Denied",
+			DESCRIPTION:
+				"You have blocked ARK Vault from accessing your camera. In order to scan a QR code, please allow access to your camera from your browser settings.",
+			TITLE: "Camera Permission Denied",
 		},
 		TITLE: "Scan QR-Code",
 		UPLOAD: "Upload Image",

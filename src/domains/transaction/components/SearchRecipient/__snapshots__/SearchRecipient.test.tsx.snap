@@ -17,10 +17,10 @@ exports[`SearchRecipient > should render a modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -57,10 +57,10 @@ exports[`SearchRecipient > should render a modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -68,7 +68,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>
@@ -440,10 +440,10 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -480,10 +480,10 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Modal title
           </h2>
@@ -491,7 +491,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Modal description
             </div>
@@ -863,10 +863,10 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -903,10 +903,10 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -914,7 +914,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>
@@ -1117,10 +1117,10 @@ exports[`SearchRecipient > should render with selected address 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1157,10 +1157,10 @@ exports[`SearchRecipient > should render with selected address 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -1168,7 +1168,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>
@@ -1540,10 +1540,10 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1580,10 +1580,10 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -1591,7 +1591,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>
@@ -1963,10 +1963,10 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2003,10 +2003,10 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -2014,7 +2014,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>
@@ -2287,10 +2287,10 @@ exports[`SearchRecipient > should render with selected address when no compact 1
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2327,10 +2327,10 @@ exports[`SearchRecipient > should render with selected address when no compact 1
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Recipient
           </h2>
@@ -2338,7 +2338,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Find and select a recipient from your contacts and wallets
             </div>

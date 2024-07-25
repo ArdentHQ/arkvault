@@ -16,6 +16,7 @@ interface ModalContentProperties {
 	onClose?: any;
 	hideCloseButton?: boolean;
 	noButtons?: boolean;
+	className?: string;
 }
 
 const ModalContainer = styled.div<{ size?: Size }>`
@@ -48,6 +49,7 @@ const ModalContent = ({
 	image,
 	description,
 	children,
+	className,
 }: ModalContentProperties) => (
 	<div
 		className={cn(
@@ -56,24 +58,25 @@ const ModalContent = ({
 				"p-10": noButtons,
 				"px-10 pb-24 pt-10 sm:pb-10": !noButtons,
 			},
+			className,
 		)}
 		data-testid="Modal__inner"
 	>
 		{!hideCloseButton && (
-			<div className="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400">
+			<div className="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8">
 				<Button
 					data-testid="Modal__close-button"
 					variant="transparent"
 					size="icon"
 					onClick={onClose}
-					className="h-11 w-11"
+					className="h-8 w-8"
 				>
 					<Icon name="Cross" />
 				</Button>
 			</div>
 		)}
 
-		<div className="relative flex flex-1 flex-col space-y-4">
+		<div className="relative flex flex-1 flex-col space-y-1.5">
 			{banner && (
 				<div className="relative -mx-10 -mt-10 mb-10 h-56">
 					{banner}
@@ -86,12 +89,16 @@ const ModalContent = ({
 				</div>
 			)}
 
-			{!banner && title && <h2 className={cn("mb-0 text-2xl font-bold", titleClass)}>{title}</h2>}
+			{!banner && title && <h2 className={cn("mb-0 text-lg font-bold md:text-2xl", titleClass)}>{title}</h2>}
 
 			<div className="flex flex-1 flex-col">
 				{image}
 
-				{description && <div className="whitespace-pre-line text-theme-secondary-text">{description}</div>}
+				{description && (
+					<div className="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base">
+						{description}
+					</div>
+				)}
 
 				{children}
 			</div>

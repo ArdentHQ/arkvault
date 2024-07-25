@@ -52,14 +52,18 @@ export const Alert = ({
 		<div className={cn("flex flex-col overflow-hidden rounded-xl", className)} {...attributes}>
 			<AlertHeader
 				variant={variant}
-				onClick={() => setCollapsed((current) => !current)}
+				onClick={() => collapsible && setCollapsed((current) => !current)}
 				collapsible={collapsible}
 			>
 				<TypeIcon variant={variant} />
 				<span>{title || t(`COMMON.ALERT.${variant.toUpperCase()}`)}</span>
 
 				{collapsible && (
-					<AlertChevron collapsed={collapsed} variant={variant} data-testid="Alert__chevron">
+					<AlertChevron
+						collapsed={collapsible ? false : collapsed}
+						variant={variant}
+						data-testid="Alert__chevron"
+					>
 						<Icon name="ChevronDownSmall" size="sm" />
 					</AlertChevron>
 				)}
