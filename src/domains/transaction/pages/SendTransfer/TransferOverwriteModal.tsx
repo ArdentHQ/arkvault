@@ -79,7 +79,7 @@ export const TransferOverwriteModal = ({
 			onClose={onCancel}
 			data-testid="TransferOverwriteModal"
 		>
-			<Alert className='mt-2.5'>{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
+			<Alert className="mt-2.5">{t("TRANSACTION.MODAL_OVERWRITE_VALUES.WARNING")}</Alert>
 
 			<div className="space-y-4 pt-4">
 				{(currentRecipient || newRecipient) && (
