@@ -141,7 +141,12 @@ export const Address = ({
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme={isDarkMode}>
+						<Clipboard
+							variant="icon"
+							data={address}
+							tooltip={t("COMMON.COPY_ADDRESS")}
+							tooltipDarkTheme={isDarkMode}
+						>
 							<Icon
 								name="Copy"
 								className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"

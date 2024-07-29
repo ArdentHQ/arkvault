@@ -4,14 +4,11 @@ import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { Modal } from "@/app/components/Modal";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { ReceiveFundsForm, useQRCode } from "@/domains/wallet/components/ReceiveFunds";
 import { toasts } from "@/app/services";
 import { useFiles } from "@/app/hooks/use-files";
@@ -60,8 +57,14 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 			isOpen
 			onClose={onClose}
 		>
-			<div className="border py-4 px-6 border-theme-secondary-300 dark:border-theme-secondary-800 rounded-xl">
-				<Address address={address} walletName={name} addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 leading-5" walletNameClass="leading-5" showCopyButton/>
+			<div className="rounded-xl border border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
+				<Address
+					address={address}
+					walletName={name}
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 leading-5"
+					walletNameClass="leading-5"
+					showCopyButton
+				/>
 			</div>
 
 			<div>
@@ -119,7 +122,7 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 							className="absolute flex max-w-full overflow-auto rounded-lg border border-theme-secondary-300 font-medium dark:border-theme-secondary-800"
 							data-testid="ReceiveFundsForm__uri"
 						>
-							<div className="bg-theme-secondary-200 py-4.5 px-4 dark:bg-theme-secondary-800 leading-5">
+							<div className="bg-theme-secondary-200 px-4 py-4.5 leading-5 dark:bg-theme-secondary-800">
 								<span className="text-theme-secondary-text">{t("COMMON.QR_SHORT")}</span>
 							</div>
 
