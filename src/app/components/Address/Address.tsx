@@ -8,6 +8,7 @@ import { Size } from "@/types";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTranslation } from "react-i18next";
 import { Icon } from "@/app/components/Icon";
+import { useTheme } from "@/app/hooks";
 
 interface Properties {
 	walletName?: string;
@@ -76,6 +77,8 @@ export const Address = ({
 	const aliasReference = useRef<HTMLSpanElement>(null);
 	const { t } = useTranslation();
 
+	const { isDarkMode } = useTheme();
+
 	const { ref, width } = useResizeDetector<HTMLDivElement>({ handleHeight: false });
 
 	const availableWidth = useMemo(() => {
@@ -138,7 +141,7 @@ export const Address = ({
 						/>
 					</AddressWrapper>
 					{showCopyButton && (
-						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme>
+						<Clipboard variant="icon" data={address} tooltip={t("COMMON.COPY_ADDRESS")} tooltipDarkTheme={isDarkMode}>
 							<Icon
 								name="Copy"
 								className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
