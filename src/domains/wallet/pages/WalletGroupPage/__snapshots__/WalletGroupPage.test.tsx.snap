@@ -723,7 +723,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                   </span>
                 </div>
                 <div
-                  class="hidden flex-initial space-x-4 sm:flex css-1imdohp"
+                  class="hidden flex-initial space-x-4 sm:flex css-rqn1nb-GroupNetworkTotal"
                 >
                   <span
                     class="hidden"
