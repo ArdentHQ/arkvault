@@ -10871,13 +10871,13 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-14-menu"
+              aria-owns="downshift-13-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-14-input"
-                  id="downshift-14-label"
+                  for="downshift-13-input"
+                  id="downshift-13-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -10919,13 +10919,13 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-14-menu"
-                      aria-labelledby="downshift-14-label"
+                      aria-controls="downshift-13-menu"
+                      aria-labelledby="downshift-13-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-14-input"
+                      id="downshift-13-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -10985,8 +10985,8 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-14-label"
-                id="downshift-14-menu"
+                aria-labelledby="downshift-13-label"
+                id="downshift-13-menu"
                 role="listbox"
               />
             </div>
