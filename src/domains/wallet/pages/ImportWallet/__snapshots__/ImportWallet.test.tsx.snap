@@ -14,6 +14,69 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -30,7 +93,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -298,6 +361,69 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -314,7 +440,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -582,6 +708,69 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -598,7 +787,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -866,6 +1055,69 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -882,7 +1134,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -1150,6 +1402,69 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -1166,7 +1481,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -2290,6 +2605,69 @@ exports[`ImportWallet > should render method step 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-ImportWalletLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M18.5648 5.99235L16.6582 2.1791C16.5126 1.88766 16.2571 1.66604 15.948 1.56302C15.639 1.45999 15.3016 1.48401 15.0103 1.62979L6.28516 5.99235"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M21.0216 15.8159V17.0439C21.0216 18.4003 19.9221 19.4998 18.5657 19.4998H12.4258M21.0216 9.67609V8.44812C21.0216 7.09175 19.9221 5.99219 18.5657 5.99219H6.28601C4.92964 5.99219 3.83008 7.09175 3.83008 8.44812V10.746"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M21.0226 15.8166C21.7008 15.8166 22.2506 15.2668 22.2506 14.5886V10.9047C22.2506 10.2265 21.7008 9.67676 21.0226 9.67676H17.9527C16.2573 9.67676 14.8828 11.0512 14.8828 12.7467C14.8828 14.4421 16.2573 15.8166 17.9527 15.8166H21.0226Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.9515 12.4395C18.1211 12.4395 18.2585 12.5769 18.2585 12.7464C18.2585 12.916 18.1211 13.0534 17.9515 13.0534C17.782 13.0534 17.6445 12.916 17.6445 12.7464C17.6445 12.5769 17.782 12.4395 17.9515 12.4395"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1 20L4 23L7 20"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4 23L4 20C4 16.7345 6.08702 13.9564 9 12.9268"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -2306,7 +2684,7 @@ exports[`ImportWallet > should render method step 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-6"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
