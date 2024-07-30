@@ -14533,8 +14533,9 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
@@ -17971,8 +17972,9 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
