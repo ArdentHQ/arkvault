@@ -375,9 +375,9 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(walletNetworkSpy).toHaveBeenCalledWith();
+		await expect(walletNetworkSpy).toHaveBeenCalledWith();
 
-		expect(asFragment()).toMatchSnapshot();
+		await expect(asFragment()).toMatchSnapshot();
 
 		profileCoinsSpy.mockRestore();
 		walletNetworkSpy.mockRestore();
