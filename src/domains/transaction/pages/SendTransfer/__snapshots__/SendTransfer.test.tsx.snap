@@ -2985,13 +2985,13 @@ exports[`SendTransfer > should render form and use location state with nethash p
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-39-menu"
+                            aria-owns="downshift-37-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-39-input"
-                                id="downshift-39-label"
+                                for="downshift-37-input"
+                                id="downshift-37-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -3033,13 +3033,13 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-39-menu"
-                                    aria-labelledby="downshift-39-label"
+                                    aria-controls="downshift-37-menu"
+                                    aria-labelledby="downshift-37-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-39-input"
+                                    id="downshift-37-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -5912,13 +5912,13 @@ exports[`SendTransfer > should render form and use location state without memo 1
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-45-menu"
+                            aria-owns="downshift-43-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-45-input"
-                                id="downshift-45-label"
+                                for="downshift-43-input"
+                                id="downshift-43-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -5960,13 +5960,13 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-45-menu"
-                                    aria-labelledby="downshift-45-label"
+                                    aria-controls="downshift-43-menu"
+                                    aria-labelledby="downshift-43-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-45-input"
+                                    id="downshift-43-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -6026,8 +6026,8 @@ exports[`SendTransfer > should render form and use location state without memo 1
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-45-label"
-                              id="downshift-45-menu"
+                              aria-labelledby="downshift-43-label"
+                              id="downshift-43-menu"
                               role="listbox"
                             />
                           </div>
