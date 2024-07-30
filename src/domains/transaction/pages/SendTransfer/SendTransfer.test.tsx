@@ -653,7 +653,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
+		await expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form and use location state without memo", async () => {
@@ -672,7 +672,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
+		await expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
