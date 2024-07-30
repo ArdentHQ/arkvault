@@ -952,7 +952,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                   >
                     <td>
                       <div
-                        class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12 css-hhd44j"
+                        class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-hhd44j"
                       >
                         <span>
                           2
@@ -961,7 +961,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                     </td>
                     <td>
                       <div
-                        class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-12appi5"
+                        class="font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-12appi5"
                       >
                         <div
                           class="-ml-0.5 shrink-0 css-1i0wxh3"
@@ -1034,7 +1034,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12 css-12appi5"
+                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-12appi5"
                       >
                         <div>
                           <div
@@ -1076,7 +1076,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12 css-12appi5"
+                        class="justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-12appi5"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1119,20 +1119,20 @@ exports[`Votes > should emit action on continue button 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-yf8cy4"
+                        class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-yf8cy4"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
+                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Unselected
+                              Current
                             </div>
                           </button>
                         </div>
@@ -1738,14 +1738,15 @@ exports[`Votes > should emit action on continue button 1`] = `
                             Unvotes
                           </div>
                           <div
-                            class="css-7rfz36"
+                            class="css-auqdnt"
                             data-testid="DelegateTable__footer--unvote"
+                            disabled=""
                           >
                             <div
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                1
+                                0
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -1784,7 +1785,8 @@ exports[`Votes > should emit action on continue button 1`] = `
                           class="hidden lg:block"
                         >
                           <div
-                            class="ring-theme-background duration-100 css-gdymhi"
+                            class="ring-theme-background duration-100 css-15k66tv"
+                            disabled=""
                           >
                             <div
                               class="css-1i4b0eq"
@@ -1834,7 +1836,7 @@ exports[`Votes > should emit action on continue button 1`] = `
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                1/1
+                                0/1
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -24110,8 +24112,9 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
