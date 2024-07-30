@@ -2,6 +2,8 @@
 
 exports[`WalletActionsModals > should render \`delete-wallet\` modal 1`] = `[Function]`;
 
+exports[`WalletActionsModals > should render \`receive-funds\` modal 1`] = `[Function]`;
+
 exports[`WalletActionsModals > should render \`second-signature\` modal 1`] = `[Function]`;
 
 exports[`WalletActionsModals > should render \`second-signature\` modal with mnemonic encryption wallet 1`] = `[Function]`;

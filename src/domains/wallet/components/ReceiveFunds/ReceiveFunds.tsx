@@ -57,7 +57,10 @@ export const ReceiveFunds = ({ address, name, network, onClose }: ReceiveFundsPr
 			isOpen
 			onClose={onClose}
 		>
-			<div className="rounded-xl border border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
+			<div
+				className="rounded-xl border border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+				data-testid="ReceiveFunds__Name_Address"
+			>
 				<Address
 					address={address}
 					walletName={name}
