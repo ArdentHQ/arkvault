@@ -245,14 +245,14 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
+		await userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
 		);
 
 		const toggle = within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle");
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await expect(screen.findByTestId("filter-wallets__wallets")).resolves.toBeVisible();
 
@@ -291,13 +291,13 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
+		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).toBeInTheDocument(),
 		);
 
-		userEvent.click(screen.getByTestId("VotesFilter__option--current"));
+		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
 		await waitFor(() => expect(screen.getAllByTestId(firstVoteButtonID)).toHaveLength(1));
 
@@ -365,11 +365,11 @@ describe("Votes", () => {
 
 		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
-		userEvent.click(selectDelegateButton);
+		await userEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -384,7 +384,7 @@ describe("Votes", () => {
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
-		userEvent.click(selectAddressButton);
+		await userEvent.click(selectAddressButton);
 
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
 	});
@@ -458,13 +458,13 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
+		await userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).not.toBeDisabled(),
 		);
 
-		userEvent.click(screen.getByTestId("VotesFilter__option--current"));
+		await userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
 		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 	});
