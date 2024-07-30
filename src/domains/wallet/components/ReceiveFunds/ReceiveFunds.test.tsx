@@ -41,8 +41,7 @@ describe("ReceiveFunds", () => {
 	it("should render with a wallet name", async () => {
 		const { asFragment } = render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
 		expect(asFragment()).toMatchSnapshot();
@@ -53,8 +52,7 @@ describe("ReceiveFunds", () => {
 
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} onClose={onClose} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("Modal__close-button"));
@@ -65,8 +63,7 @@ describe("ReceiveFunds", () => {
 	it("should open qr code form", async () => {
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("ReceiveFunds__toggle"));
