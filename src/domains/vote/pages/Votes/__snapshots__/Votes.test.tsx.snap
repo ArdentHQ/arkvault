@@ -9824,8 +9824,9 @@ exports[`Votes > should select a delegate 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
