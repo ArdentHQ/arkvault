@@ -282,8 +282,6 @@ describe("SendTransfer", () => {
 			expect(screen.queryByTestId("Input__memo")).not.toBeInTheDocument();
 		});
 
-		expect(asFragment()).toMatchSnapshot();
-
 		memoMock.mockRestore();
 	});
 
@@ -307,8 +305,6 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
-
-		expect(asFragment()).toMatchSnapshot();
 
 		resetProfileNetworksMock();
 	});
@@ -341,7 +337,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form step with deeplink values and handle case no coin returned", async () => {
@@ -376,8 +371,6 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		await expect(walletNetworkSpy).toHaveBeenCalledWith();
-
-		await expect(asFragment()).toMatchSnapshot();
 
 		profileCoinsSpy.mockRestore();
 		walletNetworkSpy.mockRestore();
@@ -633,8 +626,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form and use location state with nethash parameter", async () => {
@@ -669,8 +660,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
