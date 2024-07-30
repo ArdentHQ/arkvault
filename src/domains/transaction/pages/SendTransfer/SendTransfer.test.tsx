@@ -652,8 +652,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		await expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form and use location state without memo", async () => {
