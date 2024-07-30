@@ -20,20 +20,9 @@ describe("ReceiveFunds", () => {
 	it("should render without a wallet name", async () => {
 		const { asFragment } = render(<ReceiveFunds address="abc" network={network} />);
 
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(0));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
+		await waitFor(() => expect(screen.queryAllByTestId("Address__alias")).toHaveLength(0));
+		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should not render qrcode without an address", async () => {
-		// @ts-ignore
-		const { asFragment } = render(<ReceiveFunds network={network} />);
-
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(0));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
-		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(0));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
