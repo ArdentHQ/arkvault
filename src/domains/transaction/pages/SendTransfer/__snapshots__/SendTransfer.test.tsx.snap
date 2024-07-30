@@ -8160,7 +8160,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8880,7 +8880,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
