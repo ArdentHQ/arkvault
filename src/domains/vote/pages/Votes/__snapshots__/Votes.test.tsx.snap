@@ -1525,6 +1525,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       <button
                         class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
@@ -3462,9 +3463,8 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -9824,9 +9824,8 @@ exports[`Votes > should select a delegate 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -14534,9 +14533,8 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
@@ -17973,9 +17971,8 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
