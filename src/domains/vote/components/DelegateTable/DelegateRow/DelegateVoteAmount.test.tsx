@@ -208,12 +208,12 @@ describe("DelegateVoteAmount", () => {
 			);
 		});
 
-		// @TODO: Fix this test - Lines 218 and 220 failing due to Input error not being visible
-		/* it("should show error if value is more than the available balance", async () => {
+		it("should show error if value is more than the available balance", async () => {
+			console.log({ walletBalance: wallet.balance().toString() })
 			render(<Component />);
 
 			await userEvent.clear(screen.getByTestId("InputCurrency"));
-			await userEvent.type(screen.getByTestId("InputCurrency"), "100");
+			await userEvent.type(screen.getByTestId("InputCurrency"), "10000");
 
 			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -221,7 +221,7 @@ describe("DelegateVoteAmount", () => {
 				"data-errortext",
 				transactionTranslations.VALIDATION.LOW_BALANCE,
 			);
-		}); */
+		});
 
 		it("should show error if value isn't number", async () => {
 			const {
@@ -571,7 +571,7 @@ describe("DelegateVoteAmount", () => {
 		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
 		rerender(<VoteAmount />);
-		
+
 		amountField.select();
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "50");
