@@ -10107,13 +10107,13 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-10-menu"
+              aria-owns="downshift-9-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-10-input"
-                  id="downshift-10-label"
+                  for="downshift-9-input"
+                  id="downshift-9-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -10155,13 +10155,13 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-10-menu"
-                      aria-labelledby="downshift-10-label"
+                      aria-controls="downshift-9-menu"
+                      aria-labelledby="downshift-9-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-10-input"
+                      id="downshift-9-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -10221,8 +10221,8 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-10-label"
-                id="downshift-10-menu"
+                aria-labelledby="downshift-9-label"
+                id="downshift-9-menu"
                 role="listbox"
               />
             </div>
