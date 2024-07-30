@@ -4455,13 +4455,13 @@ exports[`SendTransfer > should render form and use location state with network p
                           <div
                             aria-expanded="false"
                             aria-haspopup="listbox"
-                            aria-owns="downshift-34-menu"
+                            aria-owns="downshift-32-menu"
                             role="combobox"
                           >
                             <div>
                               <label
-                                for="downshift-34-input"
-                                id="downshift-34-label"
+                                for="downshift-32-input"
+                                id="downshift-32-label"
                               />
                               <div
                                 class="invisible fixed w-auto whitespace-nowrap"
@@ -4503,13 +4503,13 @@ exports[`SendTransfer > should render form and use location state with network p
                                 >
                                   <input
                                     aria-autocomplete="list"
-                                    aria-controls="downshift-34-menu"
-                                    aria-labelledby="downshift-34-label"
+                                    aria-controls="downshift-32-menu"
+                                    aria-labelledby="downshift-32-label"
                                     autocomplete="off"
                                     class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                                     data-testid="SelectDropdown__input"
                                     disabled=""
-                                    id="downshift-34-input"
+                                    id="downshift-32-input"
                                     name="network"
                                     placeholder="Select option"
                                     type="text"
@@ -4569,8 +4569,8 @@ exports[`SendTransfer > should render form and use location state with network p
                               </div>
                             </div>
                             <div
-                              aria-labelledby="downshift-34-label"
-                              id="downshift-34-menu"
+                              aria-labelledby="downshift-32-label"
+                              id="downshift-32-menu"
                               role="listbox"
                             />
                           </div>
