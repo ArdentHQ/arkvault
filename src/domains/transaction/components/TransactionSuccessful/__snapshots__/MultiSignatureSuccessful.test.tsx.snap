@@ -575,7 +575,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -972,7 +972,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -1446,7 +1446,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -1843,7 +1843,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -2329,7 +2329,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -2666,7 +2666,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 class="whitespace-nowrap"
               >
                 <span>
-                  2
+                  2 
                 </span>
                 <span
                   class="whitespace text-theme-secondary-700"
@@ -3118,7 +3118,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -3515,7 +3515,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -4001,7 +4001,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -4338,7 +4338,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 class="whitespace-nowrap"
               >
                 <span>
-                  2
+                  2 
                 </span>
                 <span
                   class="whitespace text-theme-secondary-700"
@@ -4790,7 +4790,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -5187,7 +5187,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -5878,7 +5878,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -6569,7 +6569,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
