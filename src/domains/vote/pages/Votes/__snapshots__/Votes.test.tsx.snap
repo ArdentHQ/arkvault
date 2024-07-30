@@ -24110,9 +24110,8 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
