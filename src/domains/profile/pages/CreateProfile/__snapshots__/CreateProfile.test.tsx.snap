@@ -77,7 +77,7 @@ exports[`CreateProfile > should render 1`] = `
                   class="flex items-center gap-3"
                 >
                   <h1
-                    class="mb-0 text-2xl"
+                    class="mb-0 text-2xl leading-[29px]"
                     data-testid="header__title"
                   >
                     Create Profile
@@ -616,7 +616,7 @@ exports[`CreateProfile > should render 1`] = `
                         <span
                           class="whitespace-pre-line text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
                         >
-                          I accept the 
+                          I accept the
                           <a
                             class="ring-focus group inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"
@@ -654,7 +654,7 @@ exports[`CreateProfile > should render 1`] = `
                               </svg>
                             </div>
                           </a>
-                           and 
+                           and
                           <a
                             class="ring-focus group inline-block css-7nwwrh"
                             data-ring-focus-margin="-m-1"

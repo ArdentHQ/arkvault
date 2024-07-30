@@ -79,7 +79,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -312,7 +312,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -663,7 +663,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -896,7 +896,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -1247,7 +1247,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -1480,7 +1480,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -1805,7 +1805,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -2038,7 +2038,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -2351,7 +2351,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             IPFS
@@ -2528,7 +2528,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -2841,7 +2841,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Multipayment
@@ -3276,7 +3276,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -3589,7 +3589,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Multisignature
@@ -3721,7 +3721,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -4034,7 +4034,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -4267,7 +4267,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -4580,7 +4580,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Unvote
@@ -4767,7 +4767,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -5080,7 +5080,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Vote
@@ -5267,7 +5267,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -5587,7 +5587,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Ledger Wallet
@@ -5743,11 +5743,11 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         <div
                           class="css-1y2ht9o"
                         >
-                          A 
+                          A
                           <strong>
                             Ledger Nano S
                           </strong>
-                           is connected, but his operation requires a 
+                           is connected, but his operation requires a
                           <strong>
                             Ledger Nano X
                           </strong>
@@ -5902,7 +5902,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -6135,7 +6135,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -6474,7 +6474,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transfer
@@ -6707,7 +6707,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           2
-                           / 
+                           /
                           2
                         </div>
                       </div>
@@ -7058,7 +7058,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transaction Signed
@@ -7398,7 +7398,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Connect and Authorize Ledger Device
@@ -7650,7 +7650,7 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Transaction Signed

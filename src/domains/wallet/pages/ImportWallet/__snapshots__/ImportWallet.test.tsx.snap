@@ -15,7 +15,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -299,7 +299,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -583,7 +583,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -867,7 +867,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -1151,7 +1151,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -2077,7 +2077,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Connect and Authorize Ledger Device
@@ -2291,7 +2291,7 @@ exports[`ImportWallet > should render method step 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Wallet
@@ -2654,7 +2654,7 @@ exports[`ImportWallet > should render network step 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             title
@@ -2808,7 +2808,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Completed
@@ -3142,7 +3142,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Completed

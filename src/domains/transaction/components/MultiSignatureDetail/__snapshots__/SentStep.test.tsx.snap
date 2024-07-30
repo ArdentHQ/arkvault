@@ -16,7 +16,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Transaction Sent
@@ -575,7 +575,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
               <span>
                 Multisignature Address
               </span>
-               
+
               <div
                 class="css-v0ob3f"
                 height="16"
