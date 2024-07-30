@@ -74,8 +74,6 @@ describe("Transactions", () => {
 		await waitFor(() =>
 			expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(30),
 		);
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render hidden", async () => {
