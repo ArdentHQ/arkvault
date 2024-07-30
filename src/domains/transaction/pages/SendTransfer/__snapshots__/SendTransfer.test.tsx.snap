@@ -9258,13 +9258,13 @@ exports[`SendTransfer > should render form step with deeplink values and use the
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-19-menu"
+              aria-owns="downshift-18-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-19-input"
-                  id="downshift-19-label"
+                  for="downshift-18-input"
+                  id="downshift-18-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -9306,13 +9306,13 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-19-menu"
-                      aria-labelledby="downshift-19-label"
+                      aria-controls="downshift-18-menu"
+                      aria-labelledby="downshift-18-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-19-input"
+                      id="downshift-18-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -9372,8 +9372,8 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-19-label"
-                id="downshift-19-menu"
+                aria-labelledby="downshift-18-label"
+                id="downshift-18-menu"
                 role="listbox"
               />
             </div>
