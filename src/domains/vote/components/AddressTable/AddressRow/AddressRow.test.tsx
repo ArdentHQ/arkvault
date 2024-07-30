@@ -398,14 +398,14 @@ describe("AddressRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// @TODO: Fix this test - Lines 421 and 423 failing due to AddressRow__wallet not being visible
-	/* it("should redirect to wallet details page", async () => {
+	it("should redirect to wallet details page", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		const history = createHashHistory();
 
 		const historySpy = vi.spyOn(history, "push");
+		history.push(route);
 
-		const { container } = render(
+		render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -414,16 +414,12 @@ describe("AddressRow", () => {
 				route,
 			},
 		);
-		history.push(route);
-
-		expect(container).toBeInTheDocument();
 
 		await expect(screen.findByTestId("AddressRow__wallet")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("AddressRow__wallet"));
-
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
-	}); */
+	});
 
 	it("should render wallet avatar", async () => {
 		render(
