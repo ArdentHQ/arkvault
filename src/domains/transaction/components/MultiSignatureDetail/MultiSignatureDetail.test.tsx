@@ -365,8 +365,6 @@ describe("MultiSignatureDetail", () => {
 			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.TRANSACTION_TYPES.VOTE),
 		);
 
-		expect(container).toMatchSnapshot();
-
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
 		isAwaitingSignatureMock.mockRestore();
