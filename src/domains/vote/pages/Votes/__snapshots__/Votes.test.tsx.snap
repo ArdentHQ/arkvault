@@ -1525,7 +1525,6 @@ exports[`Votes > should filter current delegates 1`] = `
                       <button
                         class="css-qrwjsp"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
