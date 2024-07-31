@@ -328,7 +328,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 	
-		await waitFor(() => expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument());
+		await screen.findByTestId("SearchWalletListItem__selected-0");
 	
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 	
@@ -383,7 +383,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 	
-		await waitFor(() => expect(screen.getByTestId("SearchWalletListItem__selected-0")).toBeInTheDocument());
+		await screen.findByTestId("SearchWalletListItem__selected-0");
 	
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 	
@@ -464,7 +464,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 	
-		await waitFor(() => expect(screen.getByTestId("Modal__close-button")).toBeInTheDocument());
+		await screen.findByTestId("Modal__close-button");
 	
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 

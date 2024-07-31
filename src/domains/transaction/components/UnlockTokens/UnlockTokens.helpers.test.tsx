@@ -72,7 +72,7 @@ describe("useUnlockableBalances", () => {
 
 		const toastWarning = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
+		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
 		await waitFor(() => {
 			expect(result.current.items).toHaveLength(0);
