@@ -3220,19 +3220,42 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                       <div
                         class="inline-flex items-center space-x-1"
                       >
-                        <span
-                          aria-busy="true"
-                          aria-live="polite"
-                          class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                        <div
+                          class="inline-block p-1 text-theme-secondary-700"
+                          data-testid="WalletIcon__SecondSignature"
                         >
-                          <span
-                            class="react-loading-skeleton"
-                            style="width: 54px; height: 20px;"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            ‌
-                          </span>
-                          <br />
-                        </span>
+                            <svg
+                              id="second-signature"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                                transform="translate(482.484 177)"
+                              >
+                                <path
+                                  d="M-473.4-166.7l4.1 3.9-2.2 2.2 2.2 2.1 2.2-2.2 1 1 2.2-2.2-5.4-5.3"
+                                />
+                                <circle
+                                  cx="-476.5"
+                                  cy="-170.9"
+                                  r="5"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </td>

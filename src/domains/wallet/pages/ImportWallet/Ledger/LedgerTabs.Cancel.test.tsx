@@ -146,17 +146,17 @@ describe("LedgerTabs", () => {
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
+	
 		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
-
+	
 		userEvent.click(backSelector());
-
-		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
-
+		await waitFor(() => expect(screen.getByTestId("SelectNetwork")).toBeVisible());
+	
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();
 		vi.restoreAllMocks();
 	});
+	
 
 	it("should render with listen ledger step as default active step", async () => {
 		const ledgerTransportMock = mockNanoXTransport();

@@ -187,13 +187,13 @@ exports[`LedgerScanStep > should render compact table 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-42-menu"
+              aria-owns="downshift-62-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-42-input"
-                  id="downshift-42-label"
+                  for="downshift-62-input"
+                  id="downshift-62-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -236,13 +236,13 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-42-menu"
-                      aria-labelledby="downshift-42-label"
+                      aria-controls="downshift-62-menu"
+                      aria-labelledby="downshift-62-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-42-input"
+                      id="downshift-62-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -302,8 +302,8 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-42-label"
-                id="downshift-42-menu"
+                aria-labelledby="downshift-62-label"
+                id="downshift-62-menu"
                 role="listbox"
               />
             </div>
@@ -699,13 +699,13 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-27-menu"
+              aria-owns="downshift-38-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-27-input"
-                  id="downshift-27-label"
+                  for="downshift-38-input"
+                  id="downshift-38-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -748,13 +748,13 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-27-menu"
-                      aria-labelledby="downshift-27-label"
+                      aria-controls="downshift-38-menu"
+                      aria-labelledby="downshift-38-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-27-input"
+                      id="downshift-38-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -814,8 +814,8 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-27-label"
-                id="downshift-27-menu"
+                aria-labelledby="downshift-38-label"
+                id="downshift-38-menu"
                 role="listbox"
               />
             </div>
@@ -1151,13 +1151,13 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-12-menu"
+              aria-owns="downshift-14-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-12-input"
-                  id="downshift-12-label"
+                  for="downshift-14-input"
+                  id="downshift-14-label"
                 />
                 <div
                   class="invisible fixed w-auto whitespace-nowrap"
@@ -1200,13 +1200,13 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-12-menu"
-                      aria-labelledby="downshift-12-label"
+                      aria-controls="downshift-14-menu"
+                      aria-labelledby="downshift-14-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
                       data-testid="SelectDropdown__input"
                       disabled=""
-                      id="downshift-12-input"
+                      id="downshift-14-input"
                       name="network"
                       placeholder="Select option"
                       type="text"
@@ -1266,8 +1266,8 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-12-label"
-                id="downshift-12-menu"
+                aria-labelledby="downshift-14-label"
+                id="downshift-14-menu"
                 role="listbox"
               />
             </div>

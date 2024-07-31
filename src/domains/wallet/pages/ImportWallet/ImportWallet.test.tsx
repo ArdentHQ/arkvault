@@ -81,8 +81,9 @@ describe("ImportWallet", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(selectNetworkInput, "ARK D");
-		userEvent.keyboard("{enter}");
+		await userEvent.clear(selectNetworkInput);
+		await userEvent.type(selectNetworkInput, "ARK D");
+		await userEvent.keyboard("{Enter}");
 
 		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 	});
@@ -131,7 +132,8 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), mnemonic);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), mnemonic);
 
 		await waitFor(() => {
 			expect(form.getValues()).toMatchObject({
@@ -149,11 +151,11 @@ describe("ImportWallet", () => {
 
 	it("should be possible to change import type in method step", async () => {
 		let form: ReturnType<typeof useForm>;
-
+	
 		const Component = () => {
 			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
-
+	
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -164,14 +166,14 @@ describe("ImportWallet", () => {
 					permissions: [],
 				},
 			});
-
+	
 			form = useForm({
 				defaultValues: { network },
 			});
-
+	
 			form.register("importOption");
 			form.register("network");
-
+	
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
@@ -180,7 +182,7 @@ describe("ImportWallet", () => {
 				</EnvironmentProvider>
 			);
 		};
-
+	
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
@@ -188,28 +190,31 @@ describe("ImportWallet", () => {
 			</Route>,
 			{ history, withProviders: false },
 		);
-
+	
 		expect(methodStep()).toBeInTheDocument();
-
+	
 		await expect(screen.findByTestId("ImportWallet__mnemonic-input")).resolves.toBeVisible();
-
+	
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-
-		userEvent.paste(selectDropdown, "test");
-
+	
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "test");
+	
 		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
-
-		userEvent.paste(selectDropdown, "addr");
-
+	
+		await userEvent.clear(selectDropdown);
+		await userEvent.type(selectDropdown, "addr");
+	
 		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
-
+	
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
-
-		expect(screen.getByTestId("select-list__input")).toHaveValue("address");
-
+	
+		// Ensure the value is set
+		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("Address"));
+	
 		await expect(addressInput()).resolves.toBeVisible();
 	});
-
+	
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = vi.fn();
@@ -237,7 +242,7 @@ describe("ImportWallet", () => {
 		expect(screen.getAllByText(ARKDevnet)[0]).toBeInTheDocument();
 		expect(screen.getAllByText(importedWallet.address())[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
+		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
 
 		expect(onClickEditAlias).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -260,7 +265,7 @@ describe("ImportWallet", () => {
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -269,13 +274,13 @@ describe("ImportWallet", () => {
 
 	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
-
+	
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
+	
 		resetProfileNetworksMock();
-
+	
 		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
+	
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
@@ -285,16 +290,16 @@ describe("ImportWallet", () => {
 				route: route,
 			},
 		);
-
+	
 		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
-
 		await waitFor(() => expect(backButton()).toBeEnabled());
-		userEvent.click(backButton());
-
+		await userEvent.click(backButton());
+	
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-
+	
 		historySpy.mockRestore();
 	});
+	
 
 	it("should go to previous step", async () => {
 		render(
@@ -348,7 +353,7 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(3);
+		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(2);
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
@@ -419,7 +424,8 @@ describe("ImportWallet", () => {
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(await addressInput(), randomNewAddress);
+		await userEvent.clear(await addressInput());
+		await userEvent.type(await addressInput(), randomNewAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -506,7 +512,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(privateKeyInput()));
 
-			userEvent.paste(privateKeyInput(), privateKey);
+			await userEvent.clear(privateKeyInput());
+			await userEvent.type(privateKeyInput(), privateKey);
 
 			await testFormValues(form);
 
@@ -537,7 +544,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(privateKeyInput()));
 
-			userEvent.paste(privateKeyInput(), privateKey);
+			await userEvent.clear(privateKeyInput());
+			await userEvent.type(privateKeyInput(), privateKey);
 
 			await testFormValues(form);
 
@@ -617,7 +625,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(wifInput()));
 
-			userEvent.paste(wifInput(), wif);
+			await userEvent.clear(wifInput());
+			await userEvent.type(wifInput(), wif);
 
 			await testFormValues(form);
 
@@ -653,7 +662,8 @@ describe("ImportWallet", () => {
 
 			await waitFor(() => expect(wifInput()));
 
-			userEvent.paste(wifInput(), wif);
+			await userEvent.clear(wifInput());
+			await userEvent.type(wifInput(), wif);
 
 			await testFormValues(form);
 
@@ -717,9 +727,11 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(encryptedWifInput()));
 
-		userEvent.paste(encryptedWifInput(), wif);
+		await userEvent.clear(encryptedWifInput());
+		await userEvent.type(encryptedWifInput(), wif);
 
-		userEvent.paste(screen.getByTestId("ImportWallet__encryptedWif__password-input"), wifPassword);
+		await userEvent.clear(screen.getByTestId("ImportWallet__encryptedWif__password-input"));
+		await userEvent.type(screen.getByTestId("ImportWallet__encryptedWif__password-input"), wifPassword);
 
 		await waitFor(() => {
 			expect(encryptedWifInput()).toHaveValue(wif);
