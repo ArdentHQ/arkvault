@@ -327,8 +327,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-	
-		await screen.findByTestId("SearchWalletListItem__selected-0");
+		
+		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
 	
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 	
@@ -382,8 +382,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-	
-		await screen.findByTestId("SearchWalletListItem__selected-0");
+
+		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
 	
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
 	
@@ -463,8 +463,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-	
-		await screen.findByTestId("Modal__close-button");
+		
+		await expect(screen.findByTestId("Modal__close-button")).resolves.toBeInTheDocument();
 	
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
