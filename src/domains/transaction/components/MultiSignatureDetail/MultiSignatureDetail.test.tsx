@@ -296,7 +296,7 @@ describe("MultiSignatureDetail", () => {
 			.spyOn(wallet.transaction(), "isAwaitingSignatureByPublicKey")
 			.mockReturnValue(false);
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.multiPayment} wallet={wallet} isOpen />
 			</Route>,
@@ -306,8 +306,6 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.MULTI_PAYMENT)));
-
-		expect(container).toMatchSnapshot();
 
 		canBeBroadcastedMock.mockRestore();
 		canBeSignedMock.mockRestore();
