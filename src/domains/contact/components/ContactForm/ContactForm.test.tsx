@@ -62,7 +62,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should render with errors", async () => {
-		const { asFragment } = render(
+		render(
 			<ContactForm
 				profile={profile}
 				onCancel={onCancel}
