@@ -3352,7 +3352,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -4680,7 +4680,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -6008,7 +6008,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
