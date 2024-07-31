@@ -5,7 +5,7 @@ import { useRandomNumber } from "./use-random-number";
 describe("useRandomNumber", () => {
   it("should throw if minimum is not an integer", () => {
 	try {
-		const { result } = renderHook(() => useRandomNumber("no integer", 42));
+		renderHook(() => useRandomNumber("no integer", 42));
 	} catch (error) {
 		expect(error).toBeDefined();
 		expect(error).toBeInstanceOf(TypeError);

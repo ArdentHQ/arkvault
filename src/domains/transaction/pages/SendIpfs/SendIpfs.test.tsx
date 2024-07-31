@@ -17,7 +17,6 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	MNEMONICS,
 	render,
 	renderWithForm,
 	screen,

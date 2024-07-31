@@ -28,7 +28,6 @@ const randomAddress = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
 
 const route = `/profiles/${fixtureProfileId}/wallets/import`;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");

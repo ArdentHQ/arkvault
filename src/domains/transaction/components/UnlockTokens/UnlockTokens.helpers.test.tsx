@@ -43,7 +43,11 @@ describe("useUnlockableBalances", () => {
 
 		await waitFor(() => {	
 			expect(unlockableBalances).toHaveBeenCalledTimes(1);
+		});
+		await waitFor(() => {
 			expect(result.current.items).toHaveLength(1);
+		});
+		await waitFor(() => {
 			expect(result.current.isFirstLoad).toBe(true);
 		});
 
@@ -53,6 +57,8 @@ describe("useUnlockableBalances", () => {
 
 		await waitFor(() => {
 			expect(unlockableBalances).toHaveBeenCalledTimes(2);
+		});
+		await waitFor(() => {
 			expect(result.current.isFirstLoad).toBe(false);
 		});
 
@@ -70,7 +76,11 @@ describe("useUnlockableBalances", () => {
 
 		await waitFor(() => {
 			expect(result.current.items).toHaveLength(0);
+		});
+		await waitFor(() => {
 			expect(unlockableBalances).toHaveBeenCalledWith(wallet.address());
+		});
+		await waitFor(() => {
 			expect(toastWarning).toHaveBeenCalledWith(<UnlockTokensFetchError onRetry={expect.any(Function)} />);
 		});
 
@@ -111,9 +121,17 @@ describe("useUnlockableBalances", () => {
 
 		await waitFor(() => {
 			expect(unlockableBalances).toHaveBeenCalledTimes(1);
+		});
+		await waitFor(() => {
 			expect(result.current.items).toHaveLength(3);
+		});
+		await waitFor(() => {
 			expect(result.current.items[0].timestamp.format("MM")).toBe("03");
+		});
+		await waitFor(() => {
 			expect(result.current.items[1].timestamp.format("MM")).toBe("02");
+		});
+		await waitFor(() => {
 			expect(result.current.items[2].timestamp.format("MM")).toBe("01");
 		});
 

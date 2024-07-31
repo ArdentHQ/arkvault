@@ -10,7 +10,7 @@ const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 
 describe("PasswordValidation", () => {
 	it("should render", () => {
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<PasswordValidation
 				confirmPasswordField="confirmPassword"
 				confirmPasswordFieldLabel="confirmPassword"
@@ -81,7 +81,7 @@ describe("PasswordValidation", () => {
 			);
 		};
 
-		const { asFragment } = renderWithForm(<Component />, {
+		renderWithForm(<Component />, {
 			registerCallback: ({ register }) => {
 				register("currentPassword");
 				register("password");

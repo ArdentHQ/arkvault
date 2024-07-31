@@ -352,7 +352,7 @@ describe("MultiSignatureDetail", () => {
 
 		vi.spyOn(fixtures.vote, "type").mockReturnValueOnce("vote");
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.vote} wallet={wallet} isOpen />
 			</Route>,
@@ -444,7 +444,7 @@ describe("MultiSignatureDetail", () => {
 			rejected: [],
 		});
 
-		const { container } = render(
+		render(
 			<Route path="/profiles/:profileId">
 				<MultiSignatureDetail profile={profile} transaction={fixtures.transfer} wallet={wallet} isOpen />
 			</Route>,

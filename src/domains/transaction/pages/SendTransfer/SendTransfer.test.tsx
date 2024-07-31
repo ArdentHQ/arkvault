@@ -285,7 +285,7 @@ describe("SendTransfer", () => {
 	it("should render form step without memo input", async () => {
 		const memoMock = vi.spyOn(wallet.network(), "usesMemo").mockReturnValue(false);
 
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
 				<FormStep deeplinkProps={{}} profile={profile} />
 			</StepsProvider>,
@@ -310,7 +310,7 @@ describe("SendTransfer", () => {
 	it("should render form step without test networks", async () => {
 		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
-		const { asFragment } = renderWithForm(
+		renderWithForm(
 			<StepsProvider activeStep={1} steps={4}>
 				<FormStep deeplinkProps={{}} profile={profile} />,
 			</StepsProvider>,
@@ -344,7 +344,7 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<StepsProvider activeStep={1} steps={4}>
 					<Component deeplinkProperties={deeplinkProperties} />
@@ -377,7 +377,7 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/send-transfer">
 				<StepsProvider activeStep={1} steps={4}>
 					<Component deeplinkProperties={deeplinkProperties} />
@@ -635,7 +635,7 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&network=ark.devnet&amount=0`;
 		history.push(transferURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -652,7 +652,7 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&memo=ARK&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&amount=0`;
 		history.push(transferURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,
@@ -669,7 +669,7 @@ describe("SendTransfer", () => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${fixtureWalletId}/send-transfer?coin=ark&network=ark.devnet`;
 		history.push(transferURL);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/wallets/:walletId/send-transfer">
 				<SendTransfer />
 			</Route>,

@@ -60,7 +60,7 @@ describe("useLatestTransactions", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should render loading state when profile is syncing", async () => {
+	it("should render loading state when profile is syncing", () => {
 		vi.useFakeTimers();
 
 		const mockTransactionsAggregate = vi

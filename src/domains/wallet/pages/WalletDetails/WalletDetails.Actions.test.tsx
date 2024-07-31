@@ -165,6 +165,7 @@ describe("WalletDetails", () => {
 		await renderPage();
 	
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
+		// eslint-disable-next-line testing-library/prefer-explicit
 		await waitFor(() => expect(screen.getByTestId("dropdown__option--primary-0")).toBeInTheDocument());
 	
 		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
@@ -208,6 +209,7 @@ describe("WalletDetails", () => {
 		expect(dropdown).toBeInTheDocument();
 	
 		userEvent.click(dropdown);
+		// eslint-disable-next-line testing-library/prefer-explicit
 		await waitFor(() => expect(screen.getByTestId("dropdown__option--secondary-0")).toBeInTheDocument());
 	
 		const openWalletOption = screen.getByTestId("dropdown__option--secondary-0");
@@ -239,6 +241,7 @@ describe("WalletDetails", () => {
 		expect(dropdown).toBeInTheDocument();
 
 		userEvent.click(dropdown);
+		// eslint-disable-next-line testing-library/prefer-explicit
 		await waitFor(() => screen.getByTestId("dropdown__option--secondary-1"));
 
 		const deleteWalletOption = screen.getByTestId("dropdown__option--secondary-1");

@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import { WalletHeader } from "./WalletHeader";
 import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 import * as envHooks from "@/app/hooks/env";
-import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";

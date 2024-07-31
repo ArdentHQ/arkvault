@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
-import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
+import { renderWithForm, screen } from "@/utils/testing-library";
 
 describe("EncryptPasswordStep", () => {
 	it("should render", () => {

@@ -116,7 +116,7 @@ describe("App", () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		const { asFragment } = render(<App />, {
+		render(<App />, {
 			history,
 			withProviders: false,
 		});
@@ -148,7 +148,7 @@ describe("App", () => {
 	it("should close page skeleton if not e2e", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		const { container, asFragment } = render(<App />, { history, withProviders: false });
+		const { container } = render(<App />, { history, withProviders: false });
 
 		expect(screen.getByTestId("PageSkeleton")).toBeVisible();
 
@@ -160,7 +160,7 @@ describe("App", () => {
 	it("should render welcome screen after page skeleton", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
-		const { asFragment } = render(<App />, { history, withProviders: false });
+		render(<App />, { history, withProviders: false });
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
@@ -172,7 +172,7 @@ describe("App", () => {
 
 		vi.spyOn(window.navigator, "onLine", "get").mockReturnValueOnce(false);
 
-		const { asFragment } = render(<App />, { history, withProviders: false });
+		render(<App />, { history, withProviders: false });
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Offline__text")).toHaveTextContent(errorTranslations.OFFLINE.TITLE);
@@ -190,7 +190,7 @@ describe("App", () => {
 
 		process.env.REACT_APP_IS_UNIT = "1";
 
-		const { asFragment } = render(<App />, { history });
+		render(<App />, { history });
 
 		await waitFor(() => expect(environmentSpy).toHaveBeenCalledWith());
 
@@ -209,7 +209,7 @@ describe("App", () => {
 	it("should render mock", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
 
-		const { asFragment } = render(<App />, { history, withProviders: false });
+		render(<App />, { history, withProviders: false });
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 
@@ -220,7 +220,7 @@ describe("App", () => {
 	it("should not migrate profiles", async () => {
 		process.env.REACT_APP_IS_E2E = undefined;
 
-		const { asFragment } = render(<App />, { history, withProviders: false });
+		render(<App />, { history, withProviders: false });
 
 		expect(screen.getByTestId("PageSkeleton")).toBeInTheDocument();
 

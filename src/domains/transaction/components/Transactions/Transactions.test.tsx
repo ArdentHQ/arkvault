@@ -61,7 +61,7 @@ describe("Transactions", () => {
 	});
 
 	it("should render with custom title", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} title={<span>Test</span>} />
 			</Route>,

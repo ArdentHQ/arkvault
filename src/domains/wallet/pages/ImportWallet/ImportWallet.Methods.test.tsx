@@ -27,7 +27,6 @@ const route = `/profiles/${fixtureProfileId}/wallets/import`;
 
 const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
-const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
@@ -339,7 +338,7 @@ describe("ImportWallet Methods", () => {
 			() => {
 				expect(successStep()).toBeInTheDocument();
 			},
-			{ timeout: 15000 },
+			{ timeout: 15_000 },
 		);
 	});
 	

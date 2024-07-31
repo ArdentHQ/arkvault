@@ -462,7 +462,6 @@ describe("Exchange", () => {
 	});
 
 	it("should update exchange transaction status", async () => {
-		const updateSpy = vi.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().values()[0];
 
 		server.use(
