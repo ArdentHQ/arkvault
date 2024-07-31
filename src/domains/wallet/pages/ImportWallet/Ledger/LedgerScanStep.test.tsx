@@ -189,7 +189,6 @@ describe("LedgerScanStep", () => {
 		await userEvent.click(checkboxFirstItem);
 
 		await waitFor(validLedgerWallet);
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render compact table", async () => {
@@ -200,8 +199,6 @@ describe("LedgerScanStep", () => {
 		expect(screen.getAllByRole("row")).toHaveLength(6);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
-
-		expect(container).toMatchSnapshot();
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});

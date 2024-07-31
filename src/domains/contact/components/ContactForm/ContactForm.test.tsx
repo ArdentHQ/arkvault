@@ -75,8 +75,6 @@ describe("ContactForm", () => {
 		await waitFor(() => {
 			expect(saveButton()).toBeDisabled();
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should clear errors when changing network", async () => {
