@@ -21,7 +21,7 @@ describe("useUnlockableBalances", () => {
 
 	it("should fetch unlockable balances every 60 seconds", async () => {
 		vi.useRealTimers();
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
@@ -39,9 +39,7 @@ describe("useUnlockableBalances", () => {
 
 		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
-	
-
-		await waitFor(() => {	
+		await waitFor(() => {
 			expect(unlockableBalances).toHaveBeenCalledTimes(1);
 		});
 		await waitFor(() => {

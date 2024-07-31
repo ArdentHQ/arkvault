@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from '@testing-library/react'
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
@@ -438,7 +438,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const externalInput = within(screen.getByTestId("ExchangeForm__external-id")).getByRole("textbox");
-		await userEvent.clear(externalInput)
+		await userEvent.clear(externalInput);
 		await userEvent.type(externalInput, "external-id");
 
 		await waitFor(() => {
@@ -1439,7 +1439,6 @@ describe("ReviewStep", () => {
 	afterEach(() => {
 		profile.exchangeTransactions().flush();
 	});
-
 
 	it("should render", async () => {
 		const { result: form } = renderHook(() =>

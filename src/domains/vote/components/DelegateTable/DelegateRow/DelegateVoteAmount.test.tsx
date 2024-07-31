@@ -209,7 +209,7 @@ describe("DelegateVoteAmount", () => {
 		});
 
 		it("should show error if value is more than the available balance", async () => {
-			console.log({ walletBalance: wallet.balance().toString() })
+			console.log({ walletBalance: wallet.balance().toString() });
 			render(<Component />);
 
 			await userEvent.clear(screen.getByTestId("InputCurrency"));
@@ -563,7 +563,6 @@ describe("DelegateVoteAmount", () => {
 		amountField.select();
 		await userEvent.clear(amountField);
 		await userEvent.type(amountField, "40");
-
 
 		await waitFor(() => {
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);

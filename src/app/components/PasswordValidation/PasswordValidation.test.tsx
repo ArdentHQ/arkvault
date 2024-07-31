@@ -25,9 +25,7 @@ describe("PasswordValidation", () => {
 			},
 		);
 
-
-		expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument()
-
+		expect(screen.getByTestId("PasswordValidation__password")).toBeInTheDocument();
 	});
 
 	it("should render password rules", async () => {

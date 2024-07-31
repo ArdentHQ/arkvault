@@ -22,16 +22,19 @@ describe("useInputFocus", () => {
 		);
 	};
 
-	it.each(["xs", "sm", "md", "lg", "xl"])("should handle input focus and unfocus in %s", async (breakpoint: string) => {
-		renderResponsive(<Component />, breakpoint);
+	it.each(["xs", "sm", "md", "lg", "xl"])(
+		"should handle input focus and unfocus in %s",
+		async (breakpoint: string) => {
+			renderResponsive(<Component />, breakpoint);
 
-		await userEvent.type(screen.getByTestId("input"), "text");
-		await userEvent.type(screen.getByTestId("textarea"), "text");
-		await userEvent.type(screen.getByTestId("password"), "password");
-		await userEvent.click(screen.getByTestId("button"));
+			await userEvent.type(screen.getByTestId("input"), "text");
+			await userEvent.type(screen.getByTestId("textarea"), "text");
+			await userEvent.type(screen.getByTestId("password"), "password");
+			await userEvent.click(screen.getByTestId("button"));
 
-		expect(screen.getByTestId("input")).toHaveValue("text");
-		expect(screen.getByTestId("textarea")).toHaveValue("text");
-		expect(screen.getByTestId("password")).toHaveValue("password");
-	});
+			expect(screen.getByTestId("input")).toHaveValue("text");
+			expect(screen.getByTestId("textarea")).toHaveValue("text");
+			expect(screen.getByTestId("password")).toHaveValue("password");
+		},
+	);
 });

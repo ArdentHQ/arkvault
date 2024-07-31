@@ -121,7 +121,7 @@ describe("PortfolioBreakdownDetails", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show tooltip when hovering graph elements", async() => {
+	it("should show tooltip when hovering graph elements", async () => {
 		render(
 			<PortfolioBreakdownDetails
 				assets={[

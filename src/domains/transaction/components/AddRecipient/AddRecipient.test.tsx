@@ -42,7 +42,8 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	);
 };
 
-const selectFirstRecipient = async () => await userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+const selectFirstRecipient = async () =>
+	await userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const recipientList = () => screen.getAllByTestId("AddRecipientItem");
 const addRecipientButton = () => screen.getByTestId("AddRecipient__add-button");
 

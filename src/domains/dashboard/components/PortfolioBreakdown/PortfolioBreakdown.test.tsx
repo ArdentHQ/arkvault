@@ -311,39 +311,42 @@ describe("PortfolioBreakdown", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
 
-	it.each([true, false])("should show tooltip when hovering graph elements when dark mode is = %s", async (isDarkMode) => {
-		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+	it.each([true, false])(
+		"should show tooltip when hovering graph elements when dark mode is = %s",
+		async (isDarkMode) => {
+			const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
-		render(
-			<PortfolioBreakdown
-				profile={profile}
-				profileIsSyncingExchangeRates={false}
-				selectedNetworkIds={liveNetworkIds}
-				liveNetworkIds={liveNetworkIds}
-			/>,
-		);
+			render(
+				<PortfolioBreakdown
+					profile={profile}
+					profileIsSyncingExchangeRates={false}
+					selectedNetworkIds={liveNetworkIds}
+					liveNetworkIds={liveNetworkIds}
+				/>,
+			);
 
-		expect(screen.getByTestId("LineGraph__svg")).toBeInTheDocument();
-		expect(screen.getAllByTestId("LineGraph__item")).toHaveLength(2);
+			expect(screen.getByTestId("LineGraph__svg")).toBeInTheDocument();
+			expect(screen.getAllByTestId("LineGraph__item")).toHaveLength(2);
 
-		expect(screen.queryByTestId("PortfolioBreakdown__tooltip")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("PortfolioBreakdown__tooltip")).not.toBeInTheDocument();
 
-		await userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
+			await userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
 
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toBeInTheDocument();
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/ARK/);
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$85.00/);
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/85%/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toBeInTheDocument();
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/ARK/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$85.00/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/85%/);
 
-		await userEvent.unhover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
-		await userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[1]);
+			await userEvent.unhover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
+			await userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[1]);
 
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/ARK/);
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$15.00/);
-		expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/15%/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/ARK/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/\$15.00/);
+			expect(screen.getByTestId("PortfolioBreakdown__tooltip")).toHaveTextContent(/15%/);
 
-		useThemeMock.mockRestore();
-	});
+			useThemeMock.mockRestore();
+		},
+	);
 
 	it("should filter by selected networks", () => {
 		const { rerender } = render(

@@ -30,7 +30,7 @@ describe("Synchronizer Hook", () => {
 	];
 
 	beforeEach(() => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		onCall = vi.fn();
 	});
 
@@ -149,7 +149,9 @@ describe("Synchronizer Hook", () => {
 			result.current.runAll();
 		});
 
-		await waitFor(() => expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }));
+		await waitFor(() =>
+			expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }),
+		);
 
 		hookAct(() => {
 			result.current.clearError();

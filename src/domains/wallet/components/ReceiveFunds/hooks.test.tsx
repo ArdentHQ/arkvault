@@ -76,7 +76,7 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate without amount and memo", async () => {
-		const { result,  } = renderHook(() =>
+		const { result } = renderHook(() =>
 			useQRCode({
 				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 				coin: "ARK",

@@ -151,11 +151,11 @@ describe("ImportWallet", () => {
 
 	it("should be possible to change import type in method step", async () => {
 		let form: ReturnType<typeof useForm>;
-	
+
 		const Component = () => {
 			const network = profile.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
-	
+
 			network.importMethods = () => ({
 				address: {
 					default: false,
@@ -166,14 +166,14 @@ describe("ImportWallet", () => {
 					permissions: [],
 				},
 			});
-	
+
 			form = useForm({
 				defaultValues: { network },
 			});
-	
+
 			form.register("importOption");
 			form.register("network");
-	
+
 			return (
 				<EnvironmentProvider env={env}>
 					<FormProvider {...form}>
@@ -182,7 +182,7 @@ describe("ImportWallet", () => {
 				</EnvironmentProvider>
 			);
 		};
-	
+
 		history.push(`/profiles/${profile.id()}`);
 		render(
 			<Route path="/profiles/:profileId">
@@ -190,31 +190,31 @@ describe("ImportWallet", () => {
 			</Route>,
 			{ history, withProviders: false },
 		);
-	
+
 		expect(methodStep()).toBeInTheDocument();
-	
+
 		await expect(screen.findByTestId("ImportWallet__mnemonic-input")).resolves.toBeVisible();
-	
+
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-	
+
 		await userEvent.clear(selectDropdown);
 		await userEvent.type(selectDropdown, "test");
-	
+
 		await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
-	
+
 		await userEvent.clear(selectDropdown);
 		await userEvent.type(selectDropdown, "addr");
-	
+
 		await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
-	
+
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
-	
+
 		// Ensure the value is set
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("Address"));
-	
+
 		await expect(addressInput()).resolves.toBeVisible();
 	});
-	
+
 	it.each(["xs", "lg"])("should render success step (%s)", async (breakpoint) => {
 		let form: ReturnType<typeof useForm>;
 		const onClickEditAlias = vi.fn();
@@ -274,13 +274,13 @@ describe("ImportWallet", () => {
 
 	it("should skip network step if only one network", async () => {
 		const history = createHashHistory();
-	
+
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-	
+
 		resetProfileNetworksMock();
-	
+
 		resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-	
+
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
@@ -290,16 +290,15 @@ describe("ImportWallet", () => {
 				route: route,
 			},
 		);
-	
+
 		await expect(screen.findByTestId("ImportWallet__method-step")).resolves.toBeVisible();
 		await waitFor(() => expect(backButton()).toBeEnabled());
 		await userEvent.click(backButton());
-	
+
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
-	
+
 		historySpy.mockRestore();
 	});
-	
 
 	it("should go to previous step", async () => {
 		render(

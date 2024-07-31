@@ -240,7 +240,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it.each(["xs", "sm"])("should handle wallet selection on responsive items", async (breakpoint) => {
 		const onSelectWalletMock = vi.fn();
-	
+
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -259,15 +259,15 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-	
+
 		const walletItems = screen.getAllByTestId("WalletListItemMobile");
-	
+
 		userEvent.click(walletItems[0]);
 
 		await waitFor(() => {
 			expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
 		});
-	
+
 		onSelectWalletMock.mockReset();
 	});
 
@@ -308,7 +308,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it("should render with selected address", async () => {
 		const onSelectWallet = vi.fn();
-	
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -327,11 +327,11 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-		
+
 		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
-	
+
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
-	
+
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				1,
@@ -342,9 +342,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				}),
 			);
 		});
-	
+
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
-	
+
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				2,
@@ -355,14 +355,13 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				}),
 			);
 		});
-	
+
 		expect(asFragment()).toMatchSnapshot();
 	});
-	
 
 	it("should render compact with selected address", async () => {
 		const onSelectWallet = vi.fn();
-	
+
 		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -384,9 +383,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		await expect(screen.findByTestId("SearchWalletListItem__selected-0")).resolves.toBeInTheDocument();
-	
+
 		userEvent.click(screen.getByTestId("SearchWalletListItem__selected-0"));
-	
+
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				1,
@@ -397,9 +396,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				}),
 			);
 		});
-	
+
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-1"));
-	
+
 		await waitFor(() => {
 			expect(onSelectWallet).toHaveBeenNthCalledWith(
 				2,
@@ -410,10 +409,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				}),
 			);
 		});
-	
+
 		expect(asFragment()).toMatchSnapshot();
 	});
-	
 
 	it("should render responsive with selected address", async () => {
 		const onSelectWallet = vi.fn();
@@ -445,7 +443,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 	it("should handle close", async () => {
 		const onClose = vi.fn();
-	
+
 		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
@@ -463,9 +461,9 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				route: dashboardURL,
 			},
 		);
-		
+
 		await expect(screen.findByTestId("Modal__close-button")).resolves.toBeInTheDocument();
-	
+
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await waitFor(() => {
@@ -474,7 +472,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should filter wallets by address", async () => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -522,7 +520,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should filter wallets by alias", async () => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -571,7 +569,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should reset wallet search", async () => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -627,7 +625,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	});
 
 	it("should not find search wallet and show empty results screen", async () => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		render(
 			<Route path="/profiles/:profileId/dashboard">

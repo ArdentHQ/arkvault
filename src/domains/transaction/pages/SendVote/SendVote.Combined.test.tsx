@@ -104,7 +104,7 @@ describe("SendVote Combined", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 

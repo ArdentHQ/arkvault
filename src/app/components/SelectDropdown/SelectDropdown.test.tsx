@@ -336,21 +336,24 @@ describe("SelectDropdown", () => {
 		},
 	);
 
-	it.each([OptionType.base, OptionType.group])("should select new option with enter in option %s", async (optType) => {
-		render(<Select options={getOptions(optType)} />);
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
+	it.each([OptionType.base, OptionType.group])(
+		"should select new option with enter in option %s",
+		async (optType) => {
+			render(<Select options={getOptions(optType)} />);
+			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		await userEvent.clear(selectDropdown);
-		await userEvent.type(selectDropdown, "Opt");
-		await userEvent.keyboard("{enter}");
+			await userEvent.clear(selectDropdown);
+			await userEvent.type(selectDropdown, "Opt");
+			await userEvent.keyboard("{enter}");
 
-		expect(selectDropdown).toHaveValue("Option 1");
+			expect(selectDropdown).toHaveValue("Option 1");
 
-		await keyboardArrowDown();
-		await userEvent.keyboard("{enter}");
+			await keyboardArrowDown();
+			await userEvent.keyboard("{enter}");
 
-		expect(selectDropdown).toHaveValue("Option 2");
-	});
+			expect(selectDropdown).toHaveValue("Option 2");
+		},
+	);
 
 	it.each([OptionType.base, OptionType.group])(
 		"should not select non-matching option after key input and tab in option %s",

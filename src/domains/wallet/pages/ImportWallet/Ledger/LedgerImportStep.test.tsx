@@ -42,7 +42,7 @@ describe("LedgerImportStep", () => {
 			);
 		}
 
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 	});
 
 	afterEach(() => {

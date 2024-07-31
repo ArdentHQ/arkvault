@@ -40,7 +40,7 @@ describe("Clipboard", () => {
 		["string", "test string"],
 		["object", { hello: "world" }],
 	])("should work with data with type '%s'", async (dataType, data) => {
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const onError = vi.fn();
 

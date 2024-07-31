@@ -303,8 +303,7 @@ describe("App", () => {
 		vi.spyOn(env.profiles().last(), "usesPassword").mockReturnValue(true);
 		vi.spyOn(env.profiles().last().password(), "get").mockImplementation(() => {
 			throw new Error("Failed to restore");
-		})
-
+		});
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
 
@@ -333,6 +332,6 @@ describe("App", () => {
 		await waitFor(() => expect(history.location.pathname).toBe("/"), { timeout: 4000 });
 
 		toastSpy.mockRestore();
-		vi.restoreAllMocks()
+		vi.restoreAllMocks();
 	});
 });

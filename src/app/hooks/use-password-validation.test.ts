@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { pwned } from "@faustbrian/node-haveibeenpwned";
-import { renderHook , act } from "@testing-library/react";
+import { renderHook, act } from "@testing-library/react";
 import { usePasswordValidation, defaultState } from "./use-password-validation";
 import { ValidationRule } from ".";
 
@@ -51,111 +51,111 @@ describe("usePasswordValidation", () => {
 
 	describe("#validatePassword", () => {
 		it("should validate lowercase rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.LowerCase)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.LowerCase)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("a");
-            });
+			await act(async () => {
+				await result.current.validatePassword("a");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.LowerCase)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.LowerCase)).toBe(true);
+		});
 
-        it("should validate uppercase rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+		it("should validate uppercase rule", async () => {
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.UpperCase)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.UpperCase)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("A");
-            });
+			await act(async () => {
+				await result.current.validatePassword("A");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.UpperCase)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.UpperCase)).toBe(true);
+		});
 
-        it("should validate number rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+		it("should validate number rule", async () => {
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.Number)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.Number)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("1");
-            });
+			await act(async () => {
+				await result.current.validatePassword("1");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Number)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.Number)).toBe(true);
+		});
 
 		it("should validate symbol rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.Symbol)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.Symbol)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("!");
-            });
+			await act(async () => {
+				await result.current.validatePassword("!");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Symbol)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.Symbol)).toBe(true);
+		});
 
 		it("should validate length rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.Length)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.Length)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("password");
-            });
+			await act(async () => {
+				await result.current.validatePassword("password");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Length)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.Length)).toBe(true);
+		});
 
 		it("should validate uncompromised rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation());
+			const { result } = renderHook(() => usePasswordValidation());
 
-            expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword(validPassword);
-            });
+			await act(async () => {
+				await result.current.validatePassword(validPassword);
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
+			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
 
-            pwned.mockResolvedValue(1);
+			pwned.mockResolvedValue(1);
 
-            await act(async () => {
-                await result.current.validatePassword(validPassword);
-            });
+			await act(async () => {
+				await result.current.validatePassword(validPassword);
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(false);
 
-            pwned.mockImplementation(() => {
-                throw new Error("Error");
-            });
+			pwned.mockImplementation(() => {
+				throw new Error("Error");
+			});
 
-            await act(async () => {
-                await result.current.validatePassword(validPassword);
-            });
+			await act(async () => {
+				await result.current.validatePassword(validPassword);
+			});
 
-            expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
-        });
+			expect(result.current.validationState.get(ValidationRule.Uncompromised)).toBe(true);
+		});
 
 		it("should validate new rule", async () => {
-            const { result } = renderHook(() => usePasswordValidation(true));
+			const { result } = renderHook(() => usePasswordValidation(true));
 
-            expect(result.current.validationState.get(ValidationRule.New)).toBe(false);
+			expect(result.current.validationState.get(ValidationRule.New)).toBe(false);
 
-            await act(async () => {
-                await result.current.validatePassword("new-password", "old-password");
-            });
+			await act(async () => {
+				await result.current.validatePassword("new-password", "old-password");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.New)).toBe(true);
+			expect(result.current.validationState.get(ValidationRule.New)).toBe(true);
 
-            await act(async () => {
-                await result.current.validatePassword("new-password", "new-password");
-            });
+			await act(async () => {
+				await result.current.validatePassword("new-password", "new-password");
+			});
 
-            expect(result.current.validationState.get(ValidationRule.New)).toBe(false);
-        });
+			expect(result.current.validationState.get(ValidationRule.New)).toBe(false);
+		});
 	});
 });

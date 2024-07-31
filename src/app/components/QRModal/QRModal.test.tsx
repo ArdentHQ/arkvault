@@ -82,15 +82,13 @@ describe("QRModal", () => {
 	});
 
 	it("should render permission denied error", () => {
-		QrReader.mockImplementation(
-			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
-				if (onResult) {
-					onResult(undefined, new Error("Permission denied"));
-				}
+		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
+			if (onResult) {
+				onResult(undefined, new Error("Permission denied"));
+			}
 
-				return null;
-			},
-		);
+			return null;
+		});
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
@@ -106,15 +104,13 @@ describe("QRModal", () => {
 	it("should render other error", async () => {
 		const toastSpy = vi.spyOn(toasts, "error");
 
-		QrReader.mockImplementation(
-			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
-				if (onResult) {
-					onResult(undefined, new Error("other error"));
-				}
+		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
+			if (onResult) {
+				onResult(undefined, new Error("other error"));
+			}
 
-				return null;
-			},
-		);
+			return null;
+		});
 
 		const { rerender } = render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 

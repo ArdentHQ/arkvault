@@ -79,7 +79,7 @@ describe("WalletHeaderMobile", () => {
 	it("should call the onUpdate method when wallet name is updated", async () => {
 		const onUpdateSpy = vi.fn();
 		const networkSpy = vi.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-	
+
 		renderResponsiveWithRoute(
 			<WalletHeaderMobile profile={profile} wallet={wallet} onUpdate={onUpdateSpy} />,
 			"xs",
@@ -88,32 +88,32 @@ describe("WalletHeaderMobile", () => {
 				route: walletUrl,
 			},
 		);
-	
+
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
-	
+
 		expect(screen.getByTestId("WalletHeaderMobile__more-button")).toBeVisible();
-	
+
 		userEvent.click(within(screen.getByTestId("WalletHeaderMobile__more-button")).getByTestId("dropdown__toggle"));
-	
+
 		await expect(screen.findByText("Wallet Name")).resolves.toBeVisible();
-	
+
 		userEvent.click(screen.getByText("Wallet Name"));
-	
+
 		await expect(screen.findByTestId("UpdateWalletName__input")).resolves.toBeVisible();
-	
+
 		const input = screen.getByTestId("UpdateWalletName__input");
 		const submitButton = screen.getByTestId("UpdateWalletName__submit");
-	
+
 		await userEvent.clear(input);
 		await userEvent.type(input, "New name");
-	
+
 		expect(input).toHaveValue("New name");
-	
+
 		await waitFor(() => expect(submitButton).toBeEnabled());
 		userEvent.click(submitButton);
-	
+
 		await waitFor(() => expect(onUpdateSpy).toHaveBeenCalledWith(true));
-	
+
 		networkSpy.mockRestore();
 	});
 });

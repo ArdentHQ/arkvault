@@ -294,7 +294,7 @@ describe("Wallet Transactions Hook", () => {
 	it("should run periodically", async () => {
 		server.use(requestMock("https://ark-test-musig.arkvault.io", undefined, { method: "post" }));
 
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		const spySync = vi.spyOn(wallet.transaction(), "sync");
 
 		const Component = () => {

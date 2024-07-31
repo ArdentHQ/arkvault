@@ -110,7 +110,7 @@ describe("MultiSignature Registration Form", () => {
 		await userEvent.type(inputElement, "3");
 
 		// @TODO: Fix this test - This line returning other value than expected
-		/* await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg))); */ 
+		/* await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg))); */
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));

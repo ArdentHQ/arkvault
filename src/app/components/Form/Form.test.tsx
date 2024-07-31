@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import { renderHook, waitFor } from '@testing-library/react'
+import { renderHook, waitFor } from "@testing-library/react";
 import { Form } from "./Form";
 import { fireEvent, render, screen } from "@/utils/testing-library";
 
