@@ -48,6 +48,7 @@ describe("PasswordValidation", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("Rules")).not.toBeInTheDocument());
 
+		await userEvent.clear(passwordInput());
 		await userEvent.type(passwordInput(), "password");
 
 		await expect(passwordInput()).toHaveValue("password");
