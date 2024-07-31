@@ -299,9 +299,7 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		await userEvent.clear(
-			screen.getByTestId("EncryptPassword__second-mnemonic")
-		);
+		await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
 		await userEvent.type(
 			screen.getByTestId("EncryptPassword__second-mnemonic"),
 			"invalid second mnemonic fjdkfjdkjfkdjf",

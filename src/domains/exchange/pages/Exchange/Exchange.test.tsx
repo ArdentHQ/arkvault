@@ -489,7 +489,7 @@ describe("Exchange", () => {
 		});
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
-/* 
+		/* 
 		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();

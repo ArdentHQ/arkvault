@@ -38,7 +38,9 @@ describe("InputAddress", () => {
 
 		await userEvent.type(screen.getByTestId("InputAddress__input"), "Abc");
 
-		await waitFor(() => expect(errors.address?.message).toBe(commonTranslations.INPUT_ADDRESS.VALIDATION.NOT_VALID))
+		await waitFor(() =>
+			expect(errors.address?.message).toBe(commonTranslations.INPUT_ADDRESS.VALIDATION.NOT_VALID),
+		);
 	});
 
 	it("should validate a valid address and emit event", async () => {

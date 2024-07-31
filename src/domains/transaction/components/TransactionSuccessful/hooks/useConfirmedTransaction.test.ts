@@ -37,8 +37,11 @@ describe("useConfirmedTransaction", () => {
 			}),
 		);
 
-		await waitFor(() => {
-			expect(result.current).toBe(true);
-		}, { timeout: 5000 });
+		await waitFor(
+			() => {
+				expect(result.current).toBe(true);
+			},
+			{ timeout: 5000 },
+		);
 	});
 });

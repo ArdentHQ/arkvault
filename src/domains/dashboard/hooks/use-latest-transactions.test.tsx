@@ -48,10 +48,7 @@ describe("useLatestTransactions", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
-		const { result } = renderHook(
-			() => useLatestTransactions({ profile, profileIsSyncing: false }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: false }), { wrapper });
 
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBeFalsy());
 
@@ -67,14 +64,11 @@ describe("useLatestTransactions", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
-		const { result } = renderHook(
-			() => useLatestTransactions({ profile, profileIsSyncing: true }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: true }), { wrapper });
 
 		vi.runOnlyPendingTimers();
 
-		expect(result.current.isLoadingTransactions).toBeTruthy()
+		expect(result.current.isLoadingTransactions).toBeTruthy();
 
 		mockTransactionsAggregate.mockRestore();
 

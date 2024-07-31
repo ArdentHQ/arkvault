@@ -22,7 +22,7 @@ describe("useAutoSignOut", () => {
 
 	it("should redirect to home when idle", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 		history.push(dashboardURL);
@@ -62,7 +62,7 @@ describe("useAutoSignOut", () => {
 
 	it("should not redirect if already in home", async () => {
 		process.env.IDLE_TIME_THRESHOLD = "0";
-		vi.useFakeTimers({shouldAdvanceTime: true});
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 

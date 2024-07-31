@@ -279,39 +279,39 @@ describe("ImportWallet Methods", () => {
 				route: route,
 			},
 		);
-	
+
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
-	
+
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
-	
+
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
-	
+
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
-	
+
 		expect(methodStep()).toBeInTheDocument();
-	
+
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-	
+
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
-	
+
 		userEvent.click(screen.getByText(commonTranslations.SECRET));
-	
+
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
-	
+
 		await userEvent.clear(screen.getByTestId(secretInputID));
 		await userEvent.type(screen.getByTestId(secretInputID), "secret.222");
-	
+
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-	
+
 		enableEncryptionToggle();
-	
+
 		await waitFor(() => {
 			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
 		});
-	
+
 		userEvent.click(continueButton());
-	
+
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
@@ -321,19 +321,19 @@ describe("ImportWallet Methods", () => {
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveValue(password);
 		});
-	
+
 		userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
 		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
-	
+
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__confirmEncryptionPassword")).toHaveValue(password);
 		});
-	
+
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
 		});
 		userEvent.click(continueButton());
-	
+
 		await waitFor(
 			() => {
 				expect(successStep()).toBeInTheDocument();
@@ -341,7 +341,7 @@ describe("ImportWallet Methods", () => {
 			{ timeout: 15_000 },
 		);
 	});
-	
+
 	// @TODO: Fix these tests
 	it("should import by secret with second signature and use password to encrypt both", async () => {
 		render(

@@ -80,42 +80,41 @@ describe("WalletDetails", () => {
 
 	it("should navigate to send transfer", async () => {
 		await renderPage({ waitForTopSection: true });
-	
+
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-	
+
 		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled());
-	
+
 		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
-	
+
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
 		});
-	
+
 		historySpy.mockRestore();
 	});
 
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
 		await profile.sync();
-	
+
 		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([]);
 		const historySpy = vi.spyOn(history, "push");
-	
+
 		await renderPage();
-	
+
 		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
 		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).toBeEnabled());
-	
+
 		userEvent.click(screen.getByTestId("WalletVote__button"));
-	
+
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
 		});
-	
+
 		walletSpy.mockRestore();
 		historySpy.mockRestore();
 	});
-	
 
 	it('should navigate to votes with "current" filter param when clicking on Multivote', async () => {
 		const walletSpy = vi.spyOn(wallet.voting(), "current").mockReturnValue([
@@ -142,48 +141,48 @@ describe("WalletDetails", () => {
 		]);
 		const maxVotesSpy = vi.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101);
 		const historySpy = vi.spyOn(history, "push");
-	
+
 		await renderPage();
-		await waitFor(() => expect(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeEnabled());
-	
+		await waitFor(() =>
+			expect(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeEnabled(),
+		);
+
 		userEvent.click(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
-	
+
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith({
 				pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
 				search: "?filter=current",
 			});
 		});
-	
+
 		walletSpy.mockRestore();
 		maxVotesSpy.mockRestore();
 		historySpy.mockRestore();
 	});
-	
 
 	it("should update wallet name", async () => {
 		await renderPage();
-	
+
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
 		// eslint-disable-next-line testing-library/prefer-explicit-assert
 		await screen.findByTestId("dropdown__option--primary-0");
-	
+
 		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
-	
+
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
-	
+
 		const name = "Sample label name";
-	
+
 		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
 		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
-	
+
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
-	
+
 		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
-	
+
 		await waitFor(() => expect(wallet.settings().get(Contracts.WalletSetting.Alias)).toBe(name));
 	});
-	
 
 	it("should star and unstar a wallet", async () => {
 		await renderPage();
@@ -201,29 +200,28 @@ describe("WalletDetails", () => {
 
 	it("should open wallet in explorer", async () => {
 		const windowSpy = vi.spyOn(window, "open").mockImplementation(vi.fn());
-	
+
 		await renderPage();
-	
+
 		const dropdown = screen.getAllByTestId("dropdown__toggle")[4];
-	
+
 		expect(dropdown).toBeInTheDocument();
-	
+
 		userEvent.click(dropdown);
 		// eslint-disable-next-line testing-library/prefer-explicit-assert
 		await screen.findByTestId("dropdown__option--secondary-0");
-	
+
 		const openWalletOption = screen.getByTestId("dropdown__option--secondary-0");
-	
+
 		expect(openWalletOption).toBeInTheDocument();
-	
+
 		userEvent.click(openWalletOption);
 		await waitFor(() => {
 			expect(windowSpy).toHaveBeenCalledWith(wallet.explorerLink(), "_blank");
 		});
-	
+
 		windowSpy.mockRestore();
 	});
-	
 
 	it("should manually sync wallet data", async () => {
 		await renderPage();

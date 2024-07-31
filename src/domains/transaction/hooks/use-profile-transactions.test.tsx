@@ -39,10 +39,9 @@ describe("useProfileTransactions", () => {
 			items: () => items,
 		} as any);
 
-		const { result } = renderHook(
-			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
@@ -170,12 +169,9 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { result } = renderHook(
-			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-			{
-				wrapper,
-			},
-		);
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
 
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "sent" });

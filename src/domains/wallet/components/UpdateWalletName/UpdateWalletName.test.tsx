@@ -105,9 +105,7 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		await userEvent.clear(
-			screen.getByTestId("UpdateWalletName__input")
-		);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
 		await userEvent.type(
 			screen.getByTestId("UpdateWalletName__input"),
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio",

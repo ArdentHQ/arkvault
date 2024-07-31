@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react'
+import { renderHook, act } from "@testing-library/react";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 

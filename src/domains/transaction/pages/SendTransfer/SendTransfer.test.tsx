@@ -358,7 +358,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
 	});
 
 	it("should render form step with deeplink values and handle case no coin returned", async () => {

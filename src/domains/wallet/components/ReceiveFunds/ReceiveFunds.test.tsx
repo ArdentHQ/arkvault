@@ -50,19 +50,18 @@ describe("ReceiveFunds", () => {
 
 	it("should handle close", async () => {
 		const onClose = vi.fn();
-	
+
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} onClose={onClose} />);
-	
+
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__name")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
-	
+
 		userEvent.click(screen.getByTestId("Modal__close-button"));
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		});
 	});
-	
 
 	it("should open qr code form", async () => {
 		render(<ReceiveFunds address="abc" name="My Wallet" network={network} />);
