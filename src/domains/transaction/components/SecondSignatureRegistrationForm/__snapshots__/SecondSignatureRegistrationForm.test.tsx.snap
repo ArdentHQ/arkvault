@@ -13,14 +13,18 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Your Second Signature
-            </h1>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Your Second Signature
+              </h1>
+            </div>
           </div>
         </div>
         <div
@@ -241,16 +245,20 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Second Signature
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Second Signature
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               You can additionaly secure your address with a second mnemonic passphrase.
@@ -379,7 +387,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >
@@ -505,16 +513,20 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
           class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Register Second Signature
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Register Second Signature
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               You can additionaly secure your address with a second mnemonic passphrase.
@@ -643,7 +655,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
             class="flex min-w-0 flex-col css-1bcidjh"
           >
             <label
-              class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+              class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
               data-testid="FormLabel"
               for="fee"
             >

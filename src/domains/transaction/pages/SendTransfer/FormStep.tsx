@@ -8,8 +8,7 @@ import tw, { styled } from "twin.macro";
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { useBreakpoint } from "@/app/hooks";
-import { SelectNetworkDropdown } from "@/app/components/SelectNetworkDropdown";
+import { useBreakpoint, useTheme } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -124,10 +123,15 @@ export const FormStep = ({
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
 
+	const { isDarkMode } = useTheme();
+
+	const icon = isDarkMode ? "SendTransactionDark" : "SendTransactionLight";
+
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
+				titleIcon={<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">
@@ -135,9 +139,9 @@ export const FormStep = ({
 							<Icon
 								size="lg"
 								name="QRCode"
-								className="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600"
+								className="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600"
 							/>
-							<span className="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200">
+							<span className="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200">
 								{isXs
 									? t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN_FULL")
 									: t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.SCAN")}
@@ -147,22 +151,13 @@ export const FormStep = ({
 				}
 			/>
 
-			<div className="space-y-6 pt-6">
-				<FormField name="network">
-					<FormLabel label={t("COMMON.CRYPTOASSET")} />
-					<SelectNetworkDropdown
-						profile={profile}
-						networks={[network]}
-						selectedNetwork={network}
-						isDisabled
-					/>
-				</FormField>
-
+			<div className="space-y-4 pt-4">
 				<FormField name="senderAddress">
 					<FormLabel label={t("TRANSACTION.SENDER")} />
 
 					<div data-testid="sender-address">
 						<SelectAddress
+							showWalletAvatar={false}
 							wallet={
 								senderWallet
 									? {

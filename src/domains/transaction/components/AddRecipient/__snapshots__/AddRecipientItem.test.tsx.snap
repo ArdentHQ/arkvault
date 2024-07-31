@@ -3,30 +3,12 @@
 exports[`Add Recipient item > should render with exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mt-3 border-b border-dashed border-theme-secondary-300 pb-4 dark:border-theme-secondary-800"
+    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
     >
-      <div
-        class="hidden sm:block"
-      >
-        <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
       <div
         class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
       >
@@ -58,24 +40,6 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
-          </div>
-        </div>
-        <div
-          class="sm:hidden"
-        >
-          <div
-            class="shrink-0 css-1yk316i"
-            data-testid="Avatar"
-          >
-            <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-            >
-              <img
-                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -170,30 +134,12 @@ exports[`Add Recipient item > should render with exchange amount 1`] = `
 exports[`Add Recipient item > should render without exchange amount 1`] = `
 <DocumentFragment>
   <div
-    class="mt-3 border-b border-dashed border-theme-secondary-300 pb-4 dark:border-theme-secondary-800"
+    class="border-b border-dashed border-theme-secondary-300 py-3 last:border-none last:pb-0 dark:border-theme-secondary-800"
     data-testid="AddRecipientItem"
   >
     <div
       class="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
     >
-      <div
-        class="hidden sm:block"
-      >
-        <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
       <div
         class="flex w-full flex-1 flex-row items-center space-x-4 overflow-auto sm:flex-col sm:items-start sm:space-x-0 sm:space-y-1"
       >
@@ -225,24 +171,6 @@ exports[`Add Recipient item > should render without exchange amount 1`] = `
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
             </span>
-          </div>
-        </div>
-        <div
-          class="sm:hidden"
-        >
-          <div
-            class="shrink-0 css-1yk316i"
-            data-testid="Avatar"
-          >
-            <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-            >
-              <img
-                alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              />
-            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 
@@ -34,37 +34,28 @@ const wallets = [
 ];
 
 export const devnetHandlers = [
-	...endpoints.map((endpoint) =>
-		rest.get(`https://ark-test.arkvault.io/api${endpoint.path}`, (_, response, context) => {
-			return response(context.status(200), context.json(endpoint.data));
-		}),
-	),
-	rest.get("https://ark-test.arkvault.io/", (_, response, context) => {
-		return response(context.status(200), context.json({ data: "Hello World!" }));
+	...endpoints.map((endpoint) => {
+		return http.get(`https://ark-test.arkvault.io/api${endpoint.path}`, () => {
+			return HttpResponse.json(endpoint.data);
+		});
 	}),
-	rest.get(
-		"https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json",
-		(_, response, context) => {
-			return response(context.status(200), context.json([]));
-		},
-	),
-	rest.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
+	http.get("https://ark-test.arkvault.io/", () => {
+		return HttpResponse.json({ data: "Hello World!" });
+	}),
+	http.get("https://raw.githubusercontent.com/ArkEcosystem/common/master/devnet/known-wallets-extended.json", () => {
+		return HttpResponse.json([]);
+	}),
+	http.get("https://ark-test.arkvault.io/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
 
 		if (wallets.includes(identifier)) {
-			return response(
-				context.status(200),
-				context.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`)),
-			);
+			return HttpResponse.json(require(`../../fixtures/coins/ark/devnet/wallets/${identifier}.json`));
 		}
 
 		if (identifier === "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192") {
-			return response(context.status(200), context.json(delegate));
+			return HttpResponse.json(delegate);
 		}
 
-		return response(
-			context.status(200),
-			context.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json")),
-		);
+		return HttpResponse.json(require("../../fixtures/coins/ark/devnet/wallets/not-found.json"));
 	}),
 ];

@@ -10,16 +10,20 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name export is being imported.
@@ -173,7 +177,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
           </div>
         </div>
         <div
-          class="css-gu3ikl"
+          class="css-145pihz"
         >
           <button
             class="css-6419sw"
@@ -217,16 +221,20 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name test.wwe is being imported.
@@ -380,7 +388,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
           </div>
         </div>
         <div
-          class="css-p1y4tm"
+          class="css-j6ajdm"
         >
           <button
             class="css-6419sw"
@@ -424,16 +432,20 @@ exports[`Import Profile - Processing import > should not run import process if f
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name  is being imported.
@@ -460,16 +472,20 @@ exports[`Import Profile - Processing import > should require password for passwo
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name export is being imported.
@@ -558,16 +574,20 @@ exports[`Import Profile - Processing import > should show error if json import h
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name export is being imported.
@@ -712,7 +732,7 @@ exports[`Import Profile - Processing import > should show error if json import h
           </div>
         </div>
         <div
-          class="css-p1y4tm"
+          class="css-j6ajdm"
         >
           <button
             class="css-6419sw"
@@ -756,16 +776,20 @@ exports[`Import Profile - Processing import > should successfully import json pr
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name export is being imported.
@@ -845,16 +869,20 @@ exports[`Import Profile - Processing import > should successfully import wwe pro
       class="flex items-end justify-between bg-theme-background"
     >
       <div
-        class="space-y-4"
+        class="space-y-2"
       >
-        <h1
-          class="mb-0 text-2xl"
-          data-testid="header__title"
-        >
-          Import Profile
-        </h1>
         <div
-          class="flex items-center text-theme-secondary-text"
+          class="flex items-center gap-3"
+        >
+          <h1
+            class="mb-0 text-2xl"
+            data-testid="header__title"
+          >
+            Import Profile
+          </h1>
+        </div>
+        <div
+          class="flex items-center leading-5 text-theme-secondary-text"
           data-testid="header__subtitle"
         >
           The file with name profile.wwe is being imported.

@@ -15,10 +15,10 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -55,7 +55,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -73,14 +73,18 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -595,10 +599,10 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -635,7 +639,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -653,14 +657,18 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1175,10 +1183,10 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1215,7 +1223,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -1233,14 +1241,18 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -1729,10 +1741,10 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1769,7 +1781,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -1787,14 +1799,18 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2283,10 +2299,10 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2323,7 +2339,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -2341,14 +2357,18 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          IPFS
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            IPFS
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -2781,10 +2801,10 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2821,7 +2841,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -2839,14 +2859,18 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Multipayment
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Multipayment
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3537,10 +3561,10 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3577,7 +3601,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -3595,14 +3619,18 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Multisignature
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Multisignature
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -3990,10 +4018,10 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4030,7 +4058,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -4048,14 +4076,18 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -4544,10 +4576,10 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4584,7 +4616,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -4602,14 +4634,18 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Unvote
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Unvote
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -5037,514 +5073,6 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
 </div>
 `;
 
-exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
-<div>
-  <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
-    data-testid="Modal__overlay"
-  >
-    <div
-      class="css-1jzz0qm"
-      tabindex="-1"
-    >
-      <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
-        data-testid="Modal__inner"
-      >
-        <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
-        >
-          <button
-            class="h-11 w-11 css-1hei9vx"
-            data-testid="Modal__close-button"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div
-          class="relative flex flex-1 flex-col space-y-4"
-        >
-          <div
-            class="flex flex-1 flex-col"
-          >
-            <form
-              class="space-y-5"
-              data-testid="Form"
-            >
-              <div>
-                <div
-                  data-testid="tab-pabel__active-panel"
-                >
-                  <section>
-                    <div
-                      class="flex items-end justify-between bg-theme-background"
-                    >
-                      <div
-                        class="space-y-4"
-                      >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
-                        >
-                          Vote
-                        </h1>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-1iw2tte"
-                      data-testid="TransactionSender"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Sender
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          <div
-                            class="w-0 flex-1 overflow-auto text-right md:text-left"
-                          >
-                            <div
-                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                            >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
-                              >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="flex items-center -space-x-1"
-                      >
-                        <div
-                          class="shrink-0 css-1n9jllj"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                          >
-                            <img
-                              alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
-                              title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionVotes"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Vote
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          <div
-                            class="css-nxxg2"
-                          >
-                            <div
-                              class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                            >
-                              <div
-                                class="shrink-0 css-h8w6w0"
-                                data-testid="Avatar"
-                              >
-                                <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                                >
-                                  <img
-                                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                class="ml-4 w-28 flex-1"
-                              >
-                                <div
-                                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                                >
-                                  <span
-                                    class="font-semibold text-base text-theme-text"
-                                    data-testid="Address__alias"
-                                  >
-                                    <span
-                                      class="no-ligatures css-9nx3be"
-                                      data-testid="TruncateEnd"
-                                    >
-                                      arkx
-                                    </span>
-                                  </span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionFee"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Transaction Fee
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          <span
-                            class="whitespace-nowrap"
-                            data-testid="Amount"
-                          >
-                            1 DARK
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionTimestamp"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Timestamp
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          01.07.2020 12:00 AM
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionDetail"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Minimum Required Signatures
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          2
-                           / 
-                          2
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionMultisignatureStatus"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          Status
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          Awaiting 2 other signatures
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="no-ligatures css-qu17s6"
-                      data-testid="TransactionDetail"
-                    >
-                      <div
-                        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                        data-testid="TransactionDetail--desktop"
-                      >
-                        <div
-                          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                        >
-                          ID
-                        </div>
-                        <div
-                          class="flex items-center font-semibold"
-                        >
-                          <div
-                            class="flex flex-1 items-center space-x-3"
-                          >
-                            <span
-                              class="w-20 flex-1 overflow-hidden"
-                            >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden"
-                              >
-                                ef2f81b906eda4a158c3abca1da7897ab408c0a952076616484efce03c15c787
-                              </span>
-                            </span>
-                            <span
-                              class="flex text-theme-primary-300 dark:text-theme-secondary-600"
-                            >
-                              <button
-                                class="ring-focus relative focus:outline-none"
-                                data-ring-focus-margin="-m-1"
-                                data-testid="clipboard-icon__wrapper"
-                                type="button"
-                              >
-                                <div
-                                  class="css-v0ob3f"
-                                  height="16"
-                                  width="16"
-                                >
-                                  <svg
-                                    id="copy"
-                                    viewBox="0 0 20 20"
-                                    x="0"
-                                    xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    y="0"
-                                  >
-                                    <g
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                    >
-                                      <path
-                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                      />
-                                      <path
-                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                      />
-                                    </g>
-                                  </svg>
-                                </div>
-                              </button>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="-mx-10 mt-4 border-t border-theme-secondary-300 px-10 pt-6 dark:border-theme-secondary-800"
-                    >
-                      <div
-                        data-testid="Signatures"
-                      >
-                        <h3>
-                          Signatures
-                        </h3>
-                        <div
-                          class="flex"
-                        >
-                          <div>
-                            <div
-                              class="mb-2 text-sm font-semibold text-theme-secondary-500"
-                            >
-                              You
-                            </div>
-                            <div
-                              class="mr-2 border-r border-theme-secondary-300 pr-6 dark:border-theme-secondary-800"
-                            >
-                              <div
-                                class="relative"
-                                data-testid="Signatures__participant-status"
-                              >
-                                <div>
-                                  <div
-                                    class="shrink-0 css-1n9jllj"
-                                    data-testid="Avatar"
-                                  >
-                                    <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                                    >
-                                      <img
-                                        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                                        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
-                                  data-testid="Signatures__signed-badge"
-                                >
-                                  <div
-                                    class="css-15txs7d"
-                                    height="10"
-                                    width="10"
-                                  >
-                                    <svg
-                                      id="check-mark-small"
-                                      viewBox="0 0 10 10"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <path
-                                        d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </svg>
-                                  </div>
-                                  <span />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div
-                              class="mb-2 ml-2 text-sm font-semibold text-theme-secondary-500"
-                            >
-                              Other
-                            </div>
-                            <div
-                              class="ml-2 flex space-x-4"
-                            >
-                              <div
-                                class="relative"
-                                data-testid="Signatures__participant-status"
-                              >
-                                <div>
-                                  <div
-                                    class="shrink-0 css-1n9jllj"
-                                    data-testid="Avatar"
-                                  >
-                                    <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                                    >
-                                      <img
-                                        alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                                        title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent bg-theme-success-200 text-theme-success-500 dark:bg-theme-success-600 dark:text-white css-1jo8u8k"
-                                  data-testid="Signatures__signed-badge"
-                                >
-                                  <div
-                                    class="css-15txs7d"
-                                    height="10"
-                                    width="10"
-                                  >
-                                    <svg
-                                      id="check-mark-small"
-                                      viewBox="0 0 10 10"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
-                                    >
-                                      <path
-                                        d="M9 1L3.444 8.658c-.222.337-.666.45-1 .225l-.11-.113L1 7.194"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                      />
-                                    </svg>
-                                  </div>
-                                  <span />
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 1`] = `
 <div>
   <div
@@ -5560,10 +5088,10 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5600,7 +5128,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -5614,7 +5142,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                   data-testid="tab-pabel__active-panel"
                 >
                   <div
-                    class="space-y-8"
+                    class="space-y-6"
                     data-testid="AuthenticationStep"
                   >
                     <div
@@ -5625,16 +5153,20 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
                         class="flex items-end justify-between bg-theme-background"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Ledger Wallet
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Ledger Wallet
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Connect your Ledger Nano X and confirm input.
@@ -5878,10 +5410,10 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5918,7 +5450,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -5936,14 +5468,18 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transfer
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transfer
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <div
@@ -6458,10 +5994,10 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6498,7 +6034,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -6516,14 +6052,18 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transaction Signed
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Signed
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg
@@ -6791,10 +6331,10 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6831,7 +6371,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -6849,14 +6389,18 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transaction Signed
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Signed
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg
@@ -7124,10 +6668,10 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7164,7 +6708,7 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <div
             class="flex flex-1 flex-col"
@@ -7182,14 +6726,18 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
                       class="flex items-end justify-between bg-theme-background"
                     >
                       <div
-                        class="space-y-4"
+                        class="space-y-2"
                       >
-                        <h1
-                          class="mb-0 text-2xl"
-                          data-testid="header__title"
+                        <div
+                          class="flex items-center gap-3"
                         >
-                          Transaction Signed
-                        </h1>
+                          <h1
+                            class="mb-0 text-2xl"
+                            data-testid="header__title"
+                          >
+                            Transaction Signed
+                          </h1>
+                        </div>
                       </div>
                     </div>
                     <svg

@@ -8,7 +8,7 @@ import { goToTransferPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
-const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(1);
+const recipientInput = Selector("[data-testid=SelectDropdown__input]").nth(0);
 const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
 const preSteps = {
@@ -30,7 +30,7 @@ cucumber(
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
 			await t.typeText(amountInput, "10", { replace: true });
 			await t.typeText(
-				Selector("[data-testid=SelectDropdown__input]").nth(1),
+				Selector("[data-testid=SelectDropdown__input]").nth(0),
 				"D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP",
 				{
 					paste: true,

@@ -34,19 +34,23 @@ exports[`StepHeader > should render 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
       >
         <div
-          class="space-y-4"
+          class="space-y-2"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            title
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
+            class="flex items-center gap-3"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              title
+            </h1>
+          </div>
+          <div
+            class="flex items-center leading-5 text-theme-secondary-text"
             data-testid="header__subtitle"
           >
             subtitle
@@ -64,16 +68,20 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
     class="flex items-end justify-between bg-theme-background"
   >
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
-      <h1
-        class="mb-0 text-2xl"
-        data-testid="header__title"
-      >
-        title
-      </h1>
       <div
-        class="flex items-center text-theme-secondary-text"
+        class="flex items-center gap-3"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          title
+        </h1>
+      </div>
+      <div
+        class="flex items-center leading-5 text-theme-secondary-text"
         data-testid="header__subtitle"
       >
         subtitle
@@ -117,19 +125,23 @@ exports[`StepHeader > should render with extra 1`] = `
       class="flex flex-col justify-between sm:flex-row"
     >
       <div
-        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
       >
         <div
-          class="space-y-4"
+          class="space-y-2"
         >
-          <h1
-            class="mb-0 text-2xl"
-            data-testid="header__title"
-          >
-            title
-          </h1>
           <div
-            class="flex items-center text-theme-secondary-text"
+            class="flex items-center gap-3"
+          >
+            <h1
+              class="mb-0 text-2xl"
+              data-testid="header__title"
+            >
+              title
+            </h1>
+          </div>
+          <div
+            class="flex items-center leading-5 text-theme-secondary-text"
             data-testid="header__subtitle"
           >
             subtitle
@@ -137,7 +149,7 @@ exports[`StepHeader > should render with extra 1`] = `
         </div>
       </div>
       <div
-        class="mt-6 sm:mt-0"
+        class="mt-8 sm:mt-0"
       >
         extra
       </div>

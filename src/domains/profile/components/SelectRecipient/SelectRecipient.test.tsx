@@ -33,6 +33,12 @@ describe("SelectRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render without a wallet avatar", () => {
+		render(<SelectRecipient profile={profile} showWalletAvatar={false} />);
+
+		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
+	});
+
 	it("should update internal state when prop changes", () => {
 		const { container, rerender } = render(<SelectRecipient profile={profile} />);
 

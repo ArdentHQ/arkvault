@@ -19,6 +19,7 @@ import { translations as transactionTranslations } from "@/domains/transaction/i
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import nodeFeesFixture from "@/tests/fixtures/coins/ark/mainnet/node-fees.json";
+import * as useThemeHook from "@/app/hooks/use-theme";
 
 import {
 	env,
@@ -205,6 +206,27 @@ describe("SendTransfer", () => {
 		).toHaveLength(2);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it.each([
+		[true, "SendTransactionDark"],
+		[false, "SendTransactionLight"],
+	])("should render right header icon when dark mode is %s", async (isDarkMode, testId) => {
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+
+		renderWithForm(
+			<StepsProvider activeStep={1} steps={4}>
+				<FormStep deeplinkProps={{}} profile={profile} />
+			</StepsProvider>,
+			{
+				registerCallback: defaultRegisterCallback,
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
+
+		useThemeMock.mockRestore();
 	});
 
 	it("should render network step with dropdown", () => {
@@ -415,7 +437,6 @@ describe("SendTransfer", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		expect(container).toHaveTextContent(wallet.network().name());
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		expect(container).toHaveTextContent("test memo");
@@ -468,7 +489,6 @@ describe("SendTransfer", () => {
 		);
 
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
-		expect(container).toHaveTextContent(wallet.network().name());
 		expect(container).toHaveTextContent(wallet.address());
 		expect(container).toHaveTextContent(secondWallet.address());
 
@@ -697,7 +717,7 @@ describe("SendTransfer", () => {
 
 		await selectFirstRecipient();
 
-		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -816,7 +836,7 @@ describe("SendTransfer", () => {
 
 		await selectFirstRecipient();
 
-		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -923,7 +943,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -1024,7 +1044,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await expect(screen.findByTestId(sendAllID)).resolves.toBeVisible();
@@ -1119,7 +1139,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await userEvent.click(screen.getByTestId(sendAllID));
@@ -1195,7 +1215,7 @@ describe("SendTransfer", () => {
 
 		await selectFirstRecipient();
 
-		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		await userEvent.click(screen.getByTestId(sendAllID));
@@ -1281,7 +1301,7 @@ describe("SendTransfer", () => {
 
 		await selectFirstRecipient();
 
-		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
 
 		// Amount
 		await userEvent.click(screen.getByTestId(sendAllID));
@@ -1368,7 +1388,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -1449,7 +1469,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// Amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -1587,7 +1607,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await selectFirstRecipient();
-		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress));
 
 		// enter amount
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -1675,10 +1695,10 @@ describe("SendTransfer", () => {
 
 		await selectFirstRecipient();
 
-		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress),
-			// Amount
-			await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
-			await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
+		// Amount
+		expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(firstWalletAddress);
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
 		// Memo

@@ -15,10 +15,10 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -55,10 +55,10 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -66,7 +66,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -506,10 +506,10 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -546,10 +546,10 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -557,7 +557,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -955,10 +955,10 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -995,10 +995,10 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -1006,7 +1006,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -1402,10 +1402,10 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1442,10 +1442,10 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -1453,7 +1453,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -1893,10 +1893,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1933,10 +1933,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -1944,7 +1944,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -2287,10 +2287,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2327,10 +2327,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -2338,7 +2338,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -2681,10 +2681,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2721,10 +2721,10 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -2732,7 +2732,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -3075,10 +3075,10 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3115,10 +3115,10 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -3126,7 +3126,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -3440,10 +3440,10 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3480,10 +3480,10 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -3491,7 +3491,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -3929,10 +3929,10 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3969,10 +3969,10 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -3980,7 +3980,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -4420,10 +4420,10 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4460,10 +4460,10 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -4471,7 +4471,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -4987,10 +4987,10 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5027,10 +5027,10 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -5038,7 +5038,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -5510,10 +5510,10 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5550,10 +5550,10 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -5561,7 +5561,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -6031,10 +6031,10 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6071,10 +6071,10 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -6082,7 +6082,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -6596,10 +6596,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6636,10 +6636,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -6647,7 +6647,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -6990,10 +6990,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7030,10 +7030,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -7041,7 +7041,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -7384,10 +7384,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7424,10 +7424,10 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -7435,7 +7435,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -7778,10 +7778,10 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7818,10 +7818,10 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -7829,7 +7829,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -8204,10 +8204,10 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -8244,10 +8244,10 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -8255,7 +8255,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>
@@ -8767,10 +8767,10 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -8807,10 +8807,10 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Select Account
           </h2>
@@ -8818,7 +8818,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
             class="flex flex-1 flex-col"
           >
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Locate and select the address for receiving funds.
             </div>

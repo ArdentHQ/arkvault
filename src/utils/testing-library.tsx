@@ -69,9 +69,9 @@ export function renderWithForm(
 	let responsiveRenderFunction: any;
 
 	if (options?.breakpoint) {
-		responsiveRenderFunction = options?.withProviders ?? true ? renderResponsiveWithRoute : renderResponsive;
+		responsiveRenderFunction = (options?.withProviders ?? true) ? renderResponsiveWithRoute : renderResponsive;
 	} else {
-		renderFunction = options?.withProviders ?? true ? renderWithRouter : render;
+		renderFunction = (options?.withProviders ?? true) ? renderWithRouter : render;
 	}
 
 	const defaultValues = options?.defaultValues ?? {};

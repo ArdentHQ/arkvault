@@ -41,6 +41,12 @@ describe("SelectAddress", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render without a wallet avatar", () => {
+		render(<SelectAddress showWalletAvatar={false} wallets={wallets} profile={profile} />);
+
+		expect(screen.queryByTestId("Avatar")).not.toBeInTheDocument();
+	});
+
 	it("should render with wallet name by default", () => {
 		render(
 			<SelectAddress

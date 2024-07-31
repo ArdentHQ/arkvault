@@ -613,19 +613,23 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Sign Message
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Sign Message
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Provide a message below and sign with your mnemonic passphrase.
@@ -638,7 +642,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="signatory-address"
                     >
@@ -651,7 +655,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       type="button"
                     >
                       <span
-                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -703,7 +707,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="message"
                     >
@@ -744,7 +748,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -1392,19 +1396,23 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Sign Message
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Sign Message
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Provide a message below and sign with your mnemonic passphrase.
@@ -1417,7 +1425,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="signatory-address"
                     >
@@ -1430,7 +1438,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       type="button"
                     >
                       <span
-                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1482,7 +1490,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="message"
                     >
@@ -1523,7 +1531,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -2171,19 +2179,23 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Sign Message
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Sign Message
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Provide a message below and sign with your ledger.
@@ -2196,7 +2208,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="signatory-address"
                     >
@@ -2209,7 +2221,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       type="button"
                     >
                       <span
-                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4"
+                        class="absolute inset-y-0 left-14 flex items-center border border-transparent right-4 left-14"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2261,7 +2273,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                     class="flex min-w-0 flex-col css-1bcidjh"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="message"
                     >
@@ -2302,7 +2314,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"

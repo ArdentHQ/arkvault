@@ -337,7 +337,11 @@ export const SendTransfer = () => {
 				<AuthenticationStep
 					wallet={wallet!}
 					ledgerDetails={
-						<TransferLedgerReview wallet={wallet!} estimatedExpiration={lastEstimatedExpiration} />
+						<TransferLedgerReview
+							wallet={wallet!}
+							estimatedExpiration={lastEstimatedExpiration}
+							profile={activeProfile}
+						/>
 					}
 					ledgerIsAwaitingDevice={!hasDeviceAvailable}
 					ledgerIsAwaitingApp={!isConnected}
@@ -392,7 +396,7 @@ export const SendTransfer = () => {
 	return (
 		<Page pageTitle={t("TRANSACTION.TRANSACTION_TYPES.TRANSFER")}>
 			<Section className="flex-1">
-				<Form className="mx-auto max-w-xl" context={form} onSubmit={() => submit()}>
+				<Form className="mx-auto max-w-34" context={form} onSubmit={() => submit()}>
 					<Tabs activeId={activeTab}>{renderTabs()}</Tabs>
 
 					<QRModal

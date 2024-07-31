@@ -447,7 +447,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -490,17 +490,21 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1242,7 +1246,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 </section>
               </div>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -1270,10 +1274,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   data-testid="Modal__inner"
                 >
                   <div
-                    class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+                    class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
                   >
                     <button
-                      class="h-11 w-11 css-1hei9vx"
+                      class="h-8 w-8 css-1hei9vx"
                       data-testid="Modal__close-button"
                       type="button"
                     >
@@ -1310,10 +1314,10 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     </button>
                   </div>
                   <div
-                    class="relative flex flex-1 flex-col space-y-4"
+                    class="relative flex flex-1 flex-col space-y-1.5"
                   >
                     <h2
-                      class="mb-0 text-2xl font-bold"
+                      class="mb-0 text-lg font-bold md:text-2xl"
                     >
                       Confirm Transaction
                     </h2>
@@ -1542,7 +1546,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         </div>
                       </div>
                       <div
-                        class="css-p1y4tm"
+                        class="css-j6ajdm"
                       >
                         <button
                           class="css-6419sw"
@@ -2027,7 +2031,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -2070,19 +2074,23 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Authenticate
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Authenticate
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Enter your mnemonic passphrase to authenticate the transaction.
@@ -2095,7 +2103,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     class="flex min-w-0 flex-col css-5kz4tk"
                   >
                     <label
-                      class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                      class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                       data-testid="FormLabel"
                       for="mnemonic"
                     >
@@ -2209,7 +2217,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 </div>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -2306,19 +2314,82 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Send DARK
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <div
+                class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
+                height="24"
+                width="24"
+              >
+                <svg
+                  fill="none"
+                  viewBox="0 0 24 25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13879_104416)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      fill="#E6EFF9"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                      fill="#E6EFF9"
+                      fill-rule="evenodd"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13879_104416"
+                    >
+                      <rect
+                        fill="white"
+                        height="24"
+                        transform="translate(24 24.5) rotate(-180)"
+                        width="24"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Send DARK
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Enter details below to send your transaction.
@@ -2326,7 +2397,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           </div>
         </div>
         <div
-          class="mt-6 sm:mt-0"
+          class="mt-8 sm:mt-0"
         >
           <div
             class="flex h-full align-bottom"
@@ -2337,7 +2408,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
+                class="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -2360,7 +2431,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                class="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan
               </span>
@@ -2370,173 +2441,13 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
       </div>
     </div>
     <div
-      class="space-y-6 pt-6"
+      class="space-y-4 pt-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="network"
-        >
-          Cryptoasset
-        </label>
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-n1b0kl"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-5-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-5-input"
-                  id="downshift-5-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet…
-                </div>
-                <div
-                  class="css-xk5t3v"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-5-menu"
-                      aria-labelledby="downshift-5-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-5-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-5-label"
-                id="downshift-5-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
-      >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="senderAddress"
         >
@@ -2551,7 +2462,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-4"
             >
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2560,9 +2471,6 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             <div
               class="css-n1b0kl"
             >
-              <div
-                class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-              />
               <div
                 class="relative flex h-full flex-1 invisible"
               >
@@ -2710,7 +2618,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -2761,13 +2669,6 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                               class="css-xk5t3v"
                               disabled=""
                             >
-                              <div
-                                class="flex items-center"
-                              >
-                                <div
-                                  class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                                />
-                              </div>
                               <div
                                 class="relative flex h-full flex-1"
                               >
@@ -2849,7 +2750,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -2891,7 +2792,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-1ye8a3b"
+                      class=" css-1v4a3it"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -2909,7 +2810,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="relative css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="memo"
         >
@@ -2958,7 +2859,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="fee"
         >
@@ -3119,19 +3020,82 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Send DARK
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <div
+                class="css-h1kfx5"
+                data-testid="icon-SendTransactionLight"
+                height="24"
+                width="24"
+              >
+                <svg
+                  fill="none"
+                  viewBox="0 0 24 25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13879_104416)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      fill="#E6EFF9"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.02802 17.1926C8.71518 17.1043 8.49639 16.8225 8.4885 16.4975C8.48061 16.1725 8.68545 15.8804 8.99364 15.7771L18.994 12.5155C19.1276 12.472 19.2743 12.5069 19.3739 12.606C19.4735 12.7051 19.5092 12.8516 19.4664 12.9854L16.2073 22.9907C16.1044 23.2995 15.812 23.5049 15.4867 23.4968C15.1613 23.4888 14.8793 23.2693 14.7918 22.9559L13.6727 18.3067L9.02802 17.1926Z"
+                      fill="#E6EFF9"
+                      fill-rule="evenodd"
+                      stroke="#235B95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13879_104416"
+                    >
+                      <rect
+                        fill="white"
+                        height="24"
+                        transform="translate(24 24.5) rotate(-180)"
+                        width="24"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Send DARK
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Enter details below to send your transaction.
@@ -3139,7 +3103,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           </div>
         </div>
         <div
-          class="mt-6 sm:mt-0"
+          class="mt-8 sm:mt-0"
         >
           <div
             class="flex h-full align-bottom"
@@ -3150,7 +3114,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
+                class="text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-600 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -3173,7 +3137,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </svg>
               </div>
               <span
-                class="font-semibold text-theme-secondary-700 transition-colors group-hover:text-white dark:text-theme-secondary-200"
+                class="font-semibold leading-5 text-theme-navy-600 transition-colors group-hover:text-white dark:text-theme-secondary-200"
               >
                 Scan QR-Code
               </span>
@@ -3183,173 +3147,13 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
       </div>
     </div>
     <div
-      class="space-y-6 pt-6"
+      class="space-y-4 pt-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
-          data-testid="FormLabel"
-          for="network"
-        >
-          Cryptoasset
-        </label>
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-n1b0kl"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-2-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-2-input"
-                  id="downshift-2-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet…
-                </div>
-                <div
-                  class="css-xk5t3v"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-2-menu"
-                      aria-labelledby="downshift-2-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-2-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-2-label"
-                id="downshift-2-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset
-        class="flex min-w-0 flex-col css-1bcidjh"
-      >
-        <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="senderAddress"
         >
@@ -3364,7 +3168,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             type="button"
           >
             <span
-              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13"
+              class="absolute inset-y-0 left-14 flex items-center border border-transparent right-13 left-4"
             >
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3373,9 +3177,6 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             <div
               class="css-n1b0kl"
             >
-              <div
-                class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-              />
               <div
                 class="relative flex h-full flex-1 invisible"
               >
@@ -3523,7 +3324,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
             class="css-19wsyy"
           >
             <div
-              class="space-y-5"
+              class="space-y-4"
             >
               <fieldset
                 class="flex min-w-0 flex-col css-1bcidjh"
@@ -3574,13 +3375,6 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                               class="css-xk5t3v"
                               disabled=""
                             >
-                              <div
-                                class="flex items-center"
-                              >
-                                <div
-                                  class="border-theme-secondary-200 bg-theme-secondary-200 dark:border-theme-secondary-700 dark:bg-theme-secondary-700 ring-theme-background duration-100 css-cm9d5u"
-                                />
-                              </div>
                               <div
                                 class="relative flex h-full flex-1"
                               >
@@ -3662,7 +3456,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 class="flex min-w-0 flex-col css-1bcidjh"
               >
                 <label
-                  class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+                  class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
                   data-testid="FormLabel"
                   for="amount"
                 >
@@ -3704,7 +3498,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                     class="inline-flex"
                   >
                     <button
-                      class=" css-1ye8a3b"
+                      class=" css-1v4a3it"
                       data-testid="AddRecipient__send-all"
                       disabled=""
                       type="button"
@@ -3722,7 +3516,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="relative css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="memo"
         >
@@ -3771,7 +3565,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
         class="flex min-w-0 flex-col css-1bcidjh"
       >
         <label
-          class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+          class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
           data-testid="FormLabel"
           for="fee"
         >
@@ -4452,7 +4246,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -4497,19 +4291,23 @@ exports[`SendTransfer > should render network selection without selected wallet 
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
-                          >
-                            Select a Cryptoasset
-                          </h1>
                           <div
-                            class="flex items-center text-theme-secondary-text"
+                            class="flex items-center gap-3"
+                          >
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Select a Cryptoasset
+                            </h1>
+                          </div>
+                          <div
+                            class="flex items-center leading-5 text-theme-secondary-text"
                             data-testid="header__subtitle"
                           >
                             Select a cryptoasset to send funds from.
@@ -4655,7 +4453,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -4727,19 +4525,23 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Select a Cryptoasset
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Select a Cryptoasset
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Select a cryptoasset to send funds from.
@@ -4752,7 +4554,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
       class="mt-8 css-1bcidjh"
     >
       <label
-        class="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
         data-testid="FormLabel"
         for="network"
       >
@@ -4910,19 +4712,23 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Select a Cryptoasset
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Select a Cryptoasset
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Select a cryptoasset to send funds from.
@@ -5106,19 +4912,91 @@ exports[`SendTransfer > should render review step 1`] = `
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Transaction Review
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <div
+                class="text-theme-primary-600 css-h1kfx5"
+                data-testid="icon-DocumentView"
+                height="24"
+                width="24"
+              >
+                <svg
+                  fill="none"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13880_105917)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372V12.8113"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M8.35938 19.3003C8.35938 19.3003 10.9372 15.4336 14.8039 15.4336C18.6707 15.4336 21.2485 19.3003 21.2485 19.3003C21.2485 19.3003 18.6707 23.1671 14.8039 23.1671C10.9372 23.1671 8.35938 19.3003 8.35938 19.3003Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M13.8984 20.6287C14.633 21.1309 15.6355 20.9426 16.1378 20.2081C16.64 19.4736 16.4517 18.471 15.7172 17.9688"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13880_105917"
+                    >
+                      <rect
+                        fill="white"
+                        height="24"
+                        transform="translate(24 24.5) rotate(-180)"
+                        width="24"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -5128,70 +5006,34 @@ exports[`SendTransfer > should render review step 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures css-1iw2tte"
-      data-testid="TransactionNetwork"
+      class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
+        data-testid="TransactionReviewDetail"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Cryptoasset
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
-          ARK Devnet
-        </div>
-      </div>
-      <div
-        aria-label="ARK Devnet"
-        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-        data-testid="NetworkIcon-ARK-ark.devnet"
-      >
-        <div
-          class="css-1i4b0eq"
-          data-testid="NetworkIcon__icon"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="ark"
-            viewBox="0 0 36.3 30.6"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <path
-              d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionSender"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Sender
-        </div>
-        <div
-          class="flex items-center font-semibold"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="w-0 flex-1 overflow-auto text-right md:text-left"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
+            Addressing
+          </div>
+        </div>
+        <div
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        >
+          <div
+            class="flex w-full"
+          >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
+            >
+              From
+            </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
@@ -5212,53 +5054,66 @@ exports[`SendTransfer > should render review step 1`] = `
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="flex items-center -space-x-1"
-      >
-        <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
-        >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="hidden h-8 w-full items-center sm:flex"
           >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            <div
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              type="horizontal"
             />
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionRecipients"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Recipient
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
           <div
-            class="w-0 flex-1 text-right md:text-left"
+            class="mt-3 flex w-full sm:mt-0"
           >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
+            >
+              To
+            </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
               <span
-                class="font-semibold text-base flex-1 md:flex-none text-theme-text"
+                class="font-semibold text-base text-theme-text"
                 data-testid="Address__alias"
               >
                 <span
@@ -5274,172 +5129,173 @@ exports[`SendTransfer > should render review step 1`] = `
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="flex items-center -space-x-1"
+        data-testid="TransactionReviewDetail"
       >
         <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
+            Memo (SmartBridge)
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionMemo"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
-          Memo
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
-          <p
-            class="whitespace-pre-line break-all"
-          >
+          <p>
             test memo
           </p>
         </div>
       </div>
       <div
-        class="flex justify-center text-theme-secondary-900 dark:text-theme-secondary-600 md:px-3"
+        class="space-y-3 sm:space-y-2"
       >
         <div
-          class="css-1i4b0eq"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="file-lines"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <path
-                d="M7 14h3.5M7 11h6M7 8h6M3 17.4c0 .9.667 1.6 1.429 1.6h-.096 11.143c.857 0 1.524-.8 1.524-1.6V2.6c0-.9-.762-1.6-1.524-1.6h0-7.905c-.38 0-.761.1-1.142.4L3.38 4.6C3 5 3 5.4 3 5.8v11.6z"
-              />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative p-4"
-      >
-        <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              1 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
-          >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              1 DARK
-            </span>
+            Transaction Summary
           </div>
         </div>
         <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="relative px-6 py-4 sm:py-5"
           >
             <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <span
+                  class="css-1rmjubp"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  Transaction Amount
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+              <div
+                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+              >
+                <span
+                  class="css-1rmjubp"
+                >
+                  Transaction Fee
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+            >
+              <div
+                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="plus"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
+          <div
+            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
+          >
+            <span
+              class="css-1rmjubp"
+            >
+              Total Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md font-bold sm:text-lg"
+              data-testid="Amount"
+            >
+              2 DARK
+            </span>
+          </div>
         </div>
-      </div>
-      <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
-      >
-        <span
-          class="css-1orx95h"
-        >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
-          data-testid="Amount"
-        >
-          2 DARK
-        </span>
       </div>
     </div>
   </section>
@@ -5484,19 +5340,91 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Transaction Review
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <div
+                class="text-theme-primary-600 css-h1kfx5"
+                data-testid="icon-DocumentView"
+                height="24"
+                width="24"
+              >
+                <svg
+                  fill="none"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13880_105917)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372V12.8113"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M8.35938 19.3003C8.35938 19.3003 10.9372 15.4336 14.8039 15.4336C18.6707 15.4336 21.2485 19.3003 21.2485 19.3003C21.2485 19.3003 18.6707 23.1671 14.8039 23.1671C10.9372 23.1671 8.35938 19.3003 8.35938 19.3003Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M13.8984 20.6287C14.633 21.1309 15.6355 20.9426 16.1378 20.2081C16.64 19.4736 16.4517 18.471 15.7172 17.9688"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13880_105917"
+                    >
+                      <rect
+                        fill="white"
+                        height="24"
+                        transform="translate(24 24.5) rotate(-180)"
+                        width="24"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -5506,70 +5434,34 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       </div>
     </div>
     <div
-      class="no-ligatures css-1iw2tte"
-      data-testid="TransactionNetwork"
+      class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
+        data-testid="TransactionReviewDetail"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Cryptoasset
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
-          ARK Devnet
-        </div>
-      </div>
-      <div
-        aria-label="ARK Devnet"
-        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-        data-testid="NetworkIcon-ARK-ark.devnet"
-      >
-        <div
-          class="css-1i4b0eq"
-          data-testid="NetworkIcon__icon"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="ark"
-            viewBox="0 0 36.3 30.6"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <path
-              d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionSender"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Sender
-        </div>
-        <div
-          class="flex items-center font-semibold"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="w-0 flex-1 overflow-auto text-right md:text-left"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
+            Addressing
+          </div>
+        </div>
+        <div
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        >
+          <div
+            class="flex w-full"
+          >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
+            >
+              From
+            </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
@@ -5590,426 +5482,293 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="flex items-center -space-x-1"
-      >
-        <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
-        >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionRecipients"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Recipients (2)
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
-          <div
-            class="css-1sfei0c"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="-mt-3 css-1m6rt2i"
-              role="table"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              type="horizontal"
+            />
+          </div>
+          <div
+            class="mt-3 flex w-full sm:mt-0"
+          >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
-              <table
-                cellpadding="0"
-                class="table-auto"
+              To
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <thead>
-                  <tr
-                    class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
-                    role="row"
-                  >
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--0"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Avatar
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--1"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Address
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--2"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Amount
-                        </div>
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody
-                  role="rowgroup"
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  <tr
-                    class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                    data-testid="recipient-list__recipient-list-item"
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <td
-                      class="mr-3 table-cell md:hidden"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="shrink-0 css-h8w6w0"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="w-28 flex-1 justify-end md:ml-4"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="ml-2 table-cell md:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1yk316i"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
-                    >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                  </tr>
-                  <tr
-                    class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                    data-testid="recipient-list__recipient-list-item"
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="mt-3 flex w-full sm:mt-0"
+          >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
+            >
+              To
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+              </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <td
-                      class="mr-3 table-cell md:hidden"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="shrink-0 css-h8w6w0"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                            title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="w-28 flex-1 justify-end md:ml-4"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="ml-2 table-cell md:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1yk316i"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                            title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
-                    >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionMemo"
-    >
       <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
+        data-testid="TransactionReviewDetail"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
-          Memo
+          <div
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
+          >
+            Memo (SmartBridge)
+          </div>
         </div>
         <div
-          class="flex items-center font-semibold"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
-          <p
-            class="whitespace-pre-line break-all"
-          >
+          <p>
             memo
           </p>
         </div>
       </div>
       <div
-        class="flex justify-center text-theme-secondary-900 dark:text-theme-secondary-600 md:px-3"
+        class="space-y-3 sm:space-y-2"
       >
         <div
-          class="css-1i4b0eq"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="file-lines"
-            viewBox="0 0 20 20"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <path
-                d="M7 14h3.5M7 11h6M7 8h6M3 17.4c0 .9.667 1.6 1.429 1.6h-.096 11.143c.857 0 1.524-.8 1.524-1.6V2.6c0-.9-.762-1.6-1.524-1.6h0-7.905c-.38 0-.761.1-1.142.4L3.38 4.6C3 5 3 5.4 3 5.8v11.6z"
-              />
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative p-4"
-      >
-        <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              2 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
-          >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              1 DARK
-            </span>
+            Transaction Summary
           </div>
         </div>
         <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="relative px-6 py-4 sm:py-5"
           >
             <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              <div
+                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <span
+                  class="css-1rmjubp"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  Transaction Amount
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  2 DARK
+                </span>
+              </div>
+              <div
+                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+              >
+                <span
+                  class="css-1rmjubp"
+                >
+                  Transaction Fee
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+            >
+              <div
+                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="plus"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
+          <div
+            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
+          >
+            <span
+              class="css-1rmjubp"
+            >
+              Total Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md font-bold sm:text-lg"
+              data-testid="Amount"
+            >
+              3 DARK
+            </span>
+          </div>
         </div>
-      </div>
-      <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
-      >
-        <span
-          class="css-1orx95h"
-        >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
-          data-testid="Amount"
-        >
-          3 DARK
-        </span>
       </div>
     </div>
   </section>
@@ -6054,19 +5813,91 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         class="flex flex-col justify-between sm:flex-row"
       >
         <div
-          class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
         >
           <div
-            class="space-y-4"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl"
-              data-testid="header__title"
-            >
-              Transaction Review
-            </h1>
             <div
-              class="flex items-center text-theme-secondary-text"
+              class="flex items-center gap-3"
+            >
+              <div
+                class="text-theme-primary-600 css-h1kfx5"
+                data-testid="icon-DocumentView"
+                height="24"
+                width="24"
+              >
+                <svg
+                  fill="none"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    clip-path="url(#clip0_13880_105917)"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      fill="none"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M18.8821 8.94457H13.7264C13.0146 8.94457 12.4375 8.3675 12.4375 7.65565V2.5"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5.99174 21.8337H3.41391C2.70207 21.8337 2.125 21.2566 2.125 20.5448V3.78891C2.125 3.07707 2.70207 2.5 3.41391 2.5H12.5472C12.8891 2.49985 13.217 2.63554 13.4588 2.87722L18.5037 7.92289C18.7451 8.16452 18.8808 8.49212 18.8809 8.83372V12.8113"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M8.35938 19.3003C8.35938 19.3003 10.9372 15.4336 14.8039 15.4336C18.6707 15.4336 21.2485 19.3003 21.2485 19.3003C21.2485 19.3003 18.6707 23.1671 14.8039 23.1671C10.9372 23.1671 8.35938 19.3003 8.35938 19.3003Z"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M13.8984 20.6287C14.633 21.1309 15.6355 20.9426 16.1378 20.2081C16.64 19.4736 16.4517 18.471 15.7172 17.9688"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <defs>
+                    <clippath
+                      id="clip0_13880_105917"
+                    >
+                      <rect
+                        fill="white"
+                        height="24"
+                        transform="translate(24 24.5) rotate(-180)"
+                        width="24"
+                      />
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                Transaction Review
+              </h1>
+            </div>
+            <div
+              class="flex items-center leading-5 text-theme-secondary-text"
               data-testid="header__subtitle"
             >
               Review the transaction details below.
@@ -6076,70 +5907,34 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       </div>
     </div>
     <div
-      class="no-ligatures css-1iw2tte"
-      data-testid="TransactionNetwork"
+      class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
+        data-testid="TransactionReviewDetail"
       >
         <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Cryptoasset
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
-          ARK Devnet
-        </div>
-      </div>
-      <div
-        aria-label="ARK Devnet"
-        class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-        data-testid="NetworkIcon-ARK-ark.devnet"
-      >
-        <div
-          class="css-1i4b0eq"
-          data-testid="NetworkIcon__icon"
-          height="20"
-          width="20"
-        >
-          <svg
-            id="ark"
-            viewBox="0 0 36.3 30.6"
-            x="0"
-            xml:space="preserve"
-            xmlns="http://www.w3.org/2000/svg"
-            y="0"
-          >
-            <path
-              d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionSender"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Sender
-        </div>
-        <div
-          class="flex items-center font-semibold"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
           <div
-            class="w-0 flex-1 overflow-auto text-right md:text-left"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
           >
+            Addressing
+          </div>
+        </div>
+        <div
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+        >
+          <div
+            class="flex w-full"
+          >
+            <div
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
+            >
+              From
+            </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
@@ -6160,372 +5955,271 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="flex items-center -space-x-1"
-      >
-        <div
-          class="shrink-0 css-1n9jllj"
-          data-testid="Avatar"
-        >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="hidden h-8 w-full items-center sm:flex"
           >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+            <div
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              type="horizontal"
             />
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionRecipients"
-    >
-      <div
-        class="w-40 flex-1 space-y-2 whitespace-nowrap"
-        data-testid="TransactionDetail--desktop"
-      >
-        <div
-          class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-        >
-          Recipients (2)
-        </div>
-        <div
-          class="flex items-center font-semibold"
-        >
           <div
-            class="css-1sfei0c"
+            class="mt-3 flex w-full sm:mt-0"
           >
             <div
-              class="-mt-3 css-1m6rt2i"
-              role="table"
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
-              <table
-                cellpadding="0"
-                class="table-auto"
+              To
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <thead>
-                  <tr
-                    class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
-                    role="row"
-                  >
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--0"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Avatar
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--1"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Address
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
-                      colspan="1"
-                      data-testid="table__th--2"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top hidden"
-                      >
-                        <div
-                          class=""
-                        >
-                          Amount
-                        </div>
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody
-                  role="rowgroup"
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  <tr
-                    class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                    data-testid="recipient-list__recipient-list-item"
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <td
-                      class="mr-3 table-cell md:hidden"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
                     >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="shrink-0 css-h8w6w0"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="w-28 flex-1 justify-end md:ml-4"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="ml-2 table-cell md:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1yk316i"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                            title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
-                    >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                  </tr>
-                  <tr
-                    class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
-                    data-testid="recipient-list__recipient-list-item"
-                  >
-                    <td
-                      class="mr-3 table-cell md:hidden"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
-                    >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="shrink-0 css-h8w6w0"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                            title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="w-28 flex-1 justify-end md:ml-4"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="ml-2 table-cell md:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1yk316i"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                        >
-                          <img
-                            alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                            title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden md:table-cell"
-                    />
-                    <td
-                      class="flex-1 shrink-0 pl-3 text-right"
-                    >
-                      <span
-                        class="whitespace-nowrap"
-                        data-testid="Amount"
-                      >
-                        1 DARK
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
-    >
-      <div
-        class="relative p-4"
-      >
-        <div
-          class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
-        >
           <div
-            class="mb-4 flex flex-col justify-center px-4 py-2 text-center sm:mb-0 sm:w-1/2 sm:text-left"
-          >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Amount
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              2 DARK
-            </span>
-          </div>
-          <div
-            class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:pt-2 sm:text-right"
-          >
-            <span
-              class="css-1orx95h"
-            >
-              Transaction Fee
-            </span>
-            <span
-              class="whitespace-nowrap text-md mt-1 font-semibold"
-              data-testid="Amount"
-            >
-              1 DARK
-            </span>
-          </div>
-        </div>
-        <div
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-        >
-          <div
-            class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+            class="mt-3 flex w-full sm:mt-0"
           >
             <div
-              class="css-v0ob3f"
-              height="16"
-              width="16"
+              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+              data-testid="TransactionReviewLabelText"
             >
-              <svg
-                id="plus"
-                viewBox="0 0 20 20"
-                x="0"
-                xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg"
-                y="0"
+              To
+            </div>
+            <div
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            >
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+              </span>
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
+              >
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  <path
-                    d="M1 10h18M10 1v18"
-                  />
-                </g>
-              </svg>
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-6 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+        class="space-y-3 sm:space-y-2"
       >
-        <span
-          class="css-1orx95h"
+        <div
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="TransactionReviewDetailLabel"
         >
-          Total Amount
-        </span>
-        <span
-          class="whitespace-nowrap text-md font-bold sm:text-lg"
-          data-testid="Amount"
+          <div
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="TransactionReviewLabelText"
+          >
+            Transaction Summary
+          </div>
+        </div>
+        <div
+          class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
         >
-          3 DARK
-        </span>
+          <div
+            class="relative px-6 py-4 sm:py-5"
+          >
+            <div
+              class="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0"
+            >
+              <div
+                class="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left"
+              >
+                <span
+                  class="css-1rmjubp"
+                >
+                  Transaction Amount
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  2 DARK
+                </span>
+              </div>
+              <div
+                class="flex flex-col justify-center p-2 px-4 pt-6 text-center sm:w-1/2 sm:p-0 sm:text-right"
+              >
+                <span
+                  class="css-1rmjubp"
+                >
+                  Transaction Fee
+                </span>
+                <span
+                  class="whitespace-nowrap text-md mt-1 font-semibold"
+                  data-testid="Amount"
+                >
+                  1 DARK
+                </span>
+              </div>
+            </div>
+            <div
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+            >
+              <div
+                class="ml-px bg-theme-background p-2 text-theme-secondary-900 dark:text-theme-secondary-600"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="plus"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M1 10h18M10 1v18"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="justfiy-center flex flex-col items-center rounded-b-lg border-t border-theme-secondary-300 bg-theme-secondary-100 py-4 dark:border-theme-secondary-800 dark:bg-theme-secondary-800 sm:py-5"
+          >
+            <span
+              class="css-1rmjubp"
+            >
+              Total Amount
+            </span>
+            <span
+              class="whitespace-nowrap text-md font-bold sm:text-lg"
+              data-testid="Amount"
+            >
+              3 DARK
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -7103,7 +6797,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -7146,17 +6840,21 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -7898,7 +7596,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -8368,7 +8066,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -8411,17 +8109,21 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -9163,7 +8865,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 </section>
               </div>
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -9191,10 +8893,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   data-testid="Modal__inner"
                 >
                   <div
-                    class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+                    class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
                   >
                     <button
-                      class="h-11 w-11 css-1hei9vx"
+                      class="h-8 w-8 css-1hei9vx"
                       data-testid="Modal__close-button"
                       type="button"
                     >
@@ -9231,10 +8933,10 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     </button>
                   </div>
                   <div
-                    class="relative flex flex-1 flex-col space-y-4"
+                    class="relative flex flex-1 flex-col space-y-1.5"
                   >
                     <h2
-                      class="mb-0 text-2xl font-bold"
+                      class="mb-0 text-lg font-bold md:text-2xl"
                     >
                       Confirm Transaction
                     </h2>
@@ -9578,7 +9280,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         </div>
                       </div>
                       <div
-                        class="css-p1y4tm"
+                        class="css-j6ajdm"
                       >
                         <button
                           class="css-6419sw"
@@ -10186,7 +9888,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -10229,17 +9931,21 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -10981,7 +10687,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -11451,7 +11157,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -11494,17 +11200,21 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -12246,7 +11956,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"
@@ -12716,7 +12426,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
           class="mx-auto px-8 lg:container md:px-10"
         >
           <form
-            class="mx-auto max-w-xl"
+            class="mx-auto max-w-34"
             data-testid="Form"
           >
             <div>
@@ -12759,17 +12469,21 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                       class="flex flex-col justify-between sm:flex-row"
                     >
                       <div
-                        class="flex items-end justify-between bg-theme-background mt-6 hidden sm:block"
+                        class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                       >
                         <div
-                          class="space-y-4"
+                          class="space-y-2"
                         >
-                          <h1
-                            class="mb-0 text-2xl"
-                            data-testid="header__title"
+                          <div
+                            class="flex items-center gap-3"
                           >
-                            Transaction Sent
-                          </h1>
+                            <h1
+                              class="mb-0 text-2xl"
+                              data-testid="header__title"
+                            >
+                              Transaction Sent
+                            </h1>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -13511,7 +13225,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 </section>
               </div>
               <div
-                class="css-gu3ikl"
+                class="css-145pihz"
               >
                 <button
                   class="css-6419sw"

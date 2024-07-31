@@ -24,7 +24,7 @@ export function FormLabel(properties: FormLabelProperties) {
 	return (
 		<label
 			data-testid="FormLabel"
-			className="FormLabel mb-2 flex text-sm font-semibold text-theme-secondary-text transition-colors duration-100"
+			className="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
 			htmlFor={fieldContext?.name}
 			{...labelProperties}
 		>

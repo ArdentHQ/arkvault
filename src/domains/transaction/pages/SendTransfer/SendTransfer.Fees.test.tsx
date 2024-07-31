@@ -272,7 +272,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -327,7 +327,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -482,7 +482,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Set amount
@@ -554,7 +554,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
@@ -629,7 +629,7 @@ describe("SendTransfer Fee Handling", () => {
 
 			await selectFirstRecipient();
 			await waitFor(() =>
-				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(
+				expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(
 					profile.wallets().first().address(),
 				),
 			);
@@ -712,7 +712,7 @@ describe("SendTransfer Fee Handling", () => {
 
 		await selectFirstRecipient();
 		await waitFor(() =>
-			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(profile.wallets().first().address()),
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount

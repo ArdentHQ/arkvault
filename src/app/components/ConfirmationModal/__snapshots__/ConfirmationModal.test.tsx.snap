@@ -15,10 +15,10 @@ exports[`Confirmation Modal > should render with custom title and description 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -55,10 +55,10 @@ exports[`Confirmation Modal > should render with custom title and description 1`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold text-theme-text"
+            class="mb-0 text-lg font-bold md:text-2xl text-theme-text"
           >
             My Title
           </h2>
@@ -191,7 +191,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
               </g>
             </svg>
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               My Description
             </div>
@@ -199,7 +199,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
               data-testid="ConfirmationModal"
             >
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"
@@ -250,10 +250,10 @@ exports[`Confirmation Modal > should render with default title and description 1
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -290,10 +290,10 @@ exports[`Confirmation Modal > should render with default title and description 1
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold text-theme-text"
+            class="mb-0 text-lg font-bold md:text-2xl text-theme-text"
           >
             Confirmation
           </h2>
@@ -426,7 +426,7 @@ exports[`Confirmation Modal > should render with default title and description 1
               </g>
             </svg>
             <div
-              class="whitespace-pre-line text-theme-secondary-text"
+              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
             >
               Are you sure you wish to navigate away from this page without saving?
             </div>
@@ -434,7 +434,7 @@ exports[`Confirmation Modal > should render with default title and description 1
               data-testid="ConfirmationModal"
             >
               <div
-                class="css-p1y4tm"
+                class="css-j6ajdm"
               >
                 <button
                   class="css-6419sw"

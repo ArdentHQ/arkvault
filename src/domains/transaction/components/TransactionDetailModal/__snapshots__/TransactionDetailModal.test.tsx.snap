@@ -17,10 +17,10 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -57,10 +57,10 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Delegate Registration
           </h2>
@@ -418,10 +418,10 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -458,10 +458,10 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Delegate Resignation
           </h2>
@@ -822,10 +822,10 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -862,10 +862,10 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Transaction IPFS Hash
           </h2>
@@ -1246,10 +1246,10 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1286,10 +1286,10 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Magistrate
           </h2>
@@ -1594,10 +1594,10 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1634,10 +1634,10 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Transfer
           </h2>
@@ -2196,10 +2196,10 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2236,10 +2236,10 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Multisignature
           </h2>
@@ -2809,10 +2809,10 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2849,10 +2849,10 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Second Signature
           </h2>
@@ -3157,10 +3157,10 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3197,10 +3197,10 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Transfer
           </h2>
@@ -3671,10 +3671,10 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3711,10 +3711,10 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Delegate Vote
           </h2>
@@ -4151,10 +4151,10 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4191,10 +4191,10 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Delegate Vote
           </h2>
@@ -4631,10 +4631,10 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4671,10 +4671,10 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Delegate Vote
           </h2>
@@ -5111,10 +5111,10 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
         data-testid="Modal__inner"
       >
         <div
-          class="absolute right-0 top-0 z-10 mr-5 mt-5 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400"
+          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-11 w-11 css-1hei9vx"
+            class="h-8 w-8 css-1hei9vx"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5151,10 +5151,10 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
           </button>
         </div>
         <div
-          class="relative flex flex-1 flex-col space-y-4"
+          class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-2xl font-bold"
+            class="mb-0 text-lg font-bold md:text-2xl"
           >
             Unlock Balance
           </h2>
