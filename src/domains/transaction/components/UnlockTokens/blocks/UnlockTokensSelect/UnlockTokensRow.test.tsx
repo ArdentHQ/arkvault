@@ -32,7 +32,7 @@ describe("UnlockTokensRow", () => {
 		expect(screen.queryByTestId("Amount")).toBeNull();
 	});
 
-	it.each([true, false])("should render with isReady = %s", (isReady) => {
+	it.each([true, false])("should render with isReady = %s", async (isReady) => {
 		const onToggle = vi.fn();
 
 		const { asFragment } = render(
@@ -59,7 +59,7 @@ describe("UnlockTokensRow", () => {
 
 		expect(screen.getAllByRole("checkbox")).toHaveLength(1);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onToggle).toHaveBeenCalledTimes(isReady ? 1 : 0);
 	});

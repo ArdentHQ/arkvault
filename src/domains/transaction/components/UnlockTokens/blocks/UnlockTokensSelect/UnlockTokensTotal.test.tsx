@@ -43,14 +43,14 @@ describe("UnlockTokensTotal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show hint when balance is less than the fee", () => {
+	it("should show hint when balance is less than the fee", async () => {
 		vi.spyOn(wallet, "balance").mockReturnValueOnce(5);
 
 		render(<UnlockTokensTotal isLoading={false} isLoadingFee={false} amount={10} fee={8} wallet={wallet} />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		const hintText = translations.TRANSACTION.UNLOCK_TOKENS.INSUFFICIENT_BALANCE_HINT.replace(
 			"{{currency}}",

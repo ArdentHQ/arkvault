@@ -104,7 +104,7 @@ describe("SendVote Combined", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({shouldAdvanceTime: true});
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -164,12 +164,12 @@ describe("SendVote Combined", () => {
 		});
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -195,14 +195,15 @@ describe("SendVote Combined", () => {
 		const transactionVoteMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, passphrase);
 
 		expect(passwordInput).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -222,7 +223,7 @@ describe("SendVote Combined", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		// Go back to wallet
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

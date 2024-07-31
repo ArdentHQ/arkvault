@@ -610,6 +610,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     >
                       Vote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -860,6 +865,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Vote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -1627,6 +1637,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     >
                       Unvote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -1874,6 +1889,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Unvote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -15055,6 +15075,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     >
                       Vote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -15305,6 +15330,11 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Vote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -15557,6 +15587,11 @@ exports[`Transactions > should hide view more button when there are no next page
                     >
                       Unvote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -15804,6 +15839,11 @@ exports[`Transactions > should hide view more button when there are no next page
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Unvote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -29919,6 +29959,11 @@ exports[`Transactions > should render 1`] = `
                     >
                       Vote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -30169,6 +30214,11 @@ exports[`Transactions > should render 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Vote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -30421,6 +30471,11 @@ exports[`Transactions > should render 1`] = `
                     >
                       Unvote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -30668,6 +30723,11 @@ exports[`Transactions > should render 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Unvote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -37354,6 +37414,11 @@ exports[`Transactions > should render with custom title 1`] = `
                     >
                       Vote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -37604,6 +37669,11 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Vote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>
@@ -37856,6 +37926,11 @@ exports[`Transactions > should render with custom title 1`] = `
                     >
                       Unvote
                     </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
+                    </span>
                   </span>
                 </div>
               </div>
@@ -38103,6 +38178,11 @@ exports[`Transactions > should render with custom title 1`] = `
                       data-testid="TransactionRowRecipientLabel"
                     >
                       Unvote
+                    </span>
+                    <span
+                      class="ml-2 truncate border-l border-theme-secondary-300 pl-2 font-semibold text-theme-secondary-500 dark:border-theme-secondary-800 dark:text-theme-secondary-700"
+                    >
+                      arkx
                     </span>
                   </span>
                 </div>

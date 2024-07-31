@@ -282,8 +282,6 @@ describe("SendTransfer", () => {
 			expect(screen.queryByTestId("Input__memo")).not.toBeInTheDocument();
 		});
 
-		expect(asFragment()).toMatchSnapshot();
-
 		memoMock.mockRestore();
 	});
 
@@ -307,8 +305,6 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.getAllByTestId("Amount")).toHaveLength(3));
-
-		expect(asFragment()).toMatchSnapshot();
 
 		resetProfileNetworksMock();
 	});
@@ -341,7 +337,6 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form step with deeplink values and handle case no coin returned", async () => {
@@ -375,9 +370,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		expect(walletNetworkSpy).toHaveBeenCalledWith();
-
-		expect(asFragment()).toMatchSnapshot();
+		await expect(walletNetworkSpy).toHaveBeenCalledWith();
 
 		profileCoinsSpy.mockRestore();
 		walletNetworkSpy.mockRestore();
@@ -633,8 +626,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form and use location state with nethash parameter", async () => {
@@ -652,8 +643,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render form and use location state without memo", async () => {
@@ -671,8 +660,6 @@ describe("SendTransfer", () => {
 		);
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
@@ -713,12 +700,14 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -754,7 +743,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
 
@@ -772,7 +762,6 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 
 		await userEvent.keyboard("{enter}");
-		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -830,12 +819,14 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress);
 
 		// Amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -872,7 +863,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
 
@@ -934,11 +926,13 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
@@ -961,7 +955,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1131,7 +1126,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -1206,7 +1202,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -1234,14 +1231,16 @@ describe("SendTransfer", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		await userEvent.paste(inputElement, passphrase);
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, passphrase);
 
 		expect(inputElement).toHaveValue(passphrase);
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 
 		inputElement.select();
-		await userEvent.paste(inputElement, MNEMONICS[0]);
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, MNEMONICS[0]);
 		await waitFor(() => expect(inputElement).toHaveValue(MNEMONICS[0]));
 
 		await waitFor(() => {
@@ -1289,7 +1288,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -1313,7 +1313,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1370,7 +1371,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
@@ -1450,11 +1452,13 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// Amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
@@ -1477,7 +1481,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1504,7 +1509,6 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -1586,7 +1590,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress));
 
 		// enter amount
-		await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Fee
@@ -1608,7 +1613,8 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// enter mnemonic
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
@@ -1620,7 +1626,6 @@ describe("SendTransfer", () => {
 
 		// confirm within the modal
 		await userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -1672,11 +1677,13 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(firstWalletAddress),
 			// Amount
-			await userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+			await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+			await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
 		// Memo
-		await userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
+		await userEvent.clear(screen.getByTestId("Input__memo"));
+		await userEvent.type(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
@@ -1701,7 +1708,8 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		await userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__encryption-password"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 
 		expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password");
 

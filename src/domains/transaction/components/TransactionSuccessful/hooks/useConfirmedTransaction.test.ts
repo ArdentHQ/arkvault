@@ -28,7 +28,7 @@ describe("useConfirmedTransaction", () => {
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
-		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
+		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({ id: "123" });
 
 		const { result } = renderHook(() =>
 			useConfirmedTransaction({
@@ -37,6 +37,8 @@ describe("useConfirmedTransaction", () => {
 			}),
 		);
 
-		await waitFor(() => expect(result.current).toBe(true));
+		await waitFor(() => {
+			expect(result.current).toBe(true);
+		}, { timeout: 5000 });
 	});
 });

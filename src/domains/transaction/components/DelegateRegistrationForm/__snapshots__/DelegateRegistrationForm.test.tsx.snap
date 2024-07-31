@@ -630,101 +630,114 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
             </label>
             <div
               class="relative"
+              data-testid="InputFee"
             >
               <div
-                class="css-xk5t3v"
-                disabled=""
+                class="absolute right-0 -mt-7"
               >
                 <div
-                  class="relative flex h-full flex-1"
+                  class="flex items-center"
                 >
-                  <input
-                    autocomplete="off"
-                    class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                    data-testid="InputCurrency"
-                    disabled=""
-                    name="fee"
-                    type="text"
-                    value="2"
-                  />
+                  <span
+                    class="css-1588dqn"
+                    role="button"
+                  >
+                    Simple
+                  </span>
+                  <label
+                    class="css-1uxo3sa"
+                  >
+                    <input
+                      class="css-1r71f0z toggle-input"
+                      type="checkbox"
+                    />
+                    <div
+                      class="css-10kxbe9 toggle-handle"
+                    >
+                      <span
+                        class="css-14ojvms"
+                      />
+                    </div>
+                  </label>
+                  <span
+                    class="css-noruk0"
+                    role="button"
+                  >
+                    Advanced
+                  </span>
                 </div>
-                <div
-                  class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
-                  data-testid="Input__addon-end"
+              </div>
+              <div
+                class="inline-flex w-full items-center space-x-3"
+                data-testid="ButtonGroup"
+                role="radiogroup"
+              >
+                <button
+                  aria-checked="false"
+                  aria-label="0"
+                  class="css-1sbhrf0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
                 >
                   <div
-                    class=""
+                    class="flex flex-col space-y-2"
                   >
-                    <div
-                      class="flex items-center"
-                    >
-                      <div
-                        class="-mr-4 flex h-14 w-22 flex-row justify-between border-l text-theme-secondary-700 dark:border-theme-secondary-700 sm:w-10 sm:flex-col border-theme-secondary-300"
-                      >
-                        <button
-                          class="border-r sm:border-r-0 css-jmpn15"
-                          data-testid="InputFeeAdvanced__up"
-                          disabled=""
-                          type="button"
-                        >
-                          <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-up-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M1 6.975l3.8-3.8c.1-.1.3-.1.4 0l3.8 3.8"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                        <button
-                          class="css-1ddtsjs"
-                          data-testid="InputFeeAdvanced__down"
-                          disabled=""
-                          type="button"
-                        >
-                          <div
-                            class="css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </button>
-                      </div>
+                    <div>
+                      Slow
                     </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      0 DARK
+                    </span>
                   </div>
-                </div>
+                </button>
+                <button
+                  aria-checked="true"
+                  aria-label="1.354"
+                  class="css-1sbhrf0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Average
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      1.354 DARK
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-checked="false"
+                  aria-label="10"
+                  class="css-1sbhrf0"
+                  data-testid="ButtonGroupOption"
+                  role="radio"
+                  type="button"
+                >
+                  <div
+                    class="flex flex-col space-y-2"
+                  >
+                    <div>
+                      Fast
+                    </div>
+                    <span
+                      class="whitespace-nowrap text-sm"
+                      data-testid="Amount"
+                    >
+                      10 DARK
+                    </span>
+                  </div>
+                </button>
               </div>
             </div>
           </fieldset>

@@ -140,6 +140,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
               class="flex items-center justify-center space-x-3 sm:justify-start"
             >
               <button
+                aria-describedby="tippy-7"
                 class="ring-focus relative focus:outline-none"
                 data-ring-focus-margin="-m-1"
                 data-testid="clipboard-icon__wrapper"
