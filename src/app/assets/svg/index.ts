@@ -78,6 +78,7 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import SelectNetworkLight from "./select-network-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -142,6 +143,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Plus,
 	QRCode,
 	QuestionMarkSmall,
+	SelectNetworkLight,
 	Server,
 	ServerMultisign,
 	ServerPeer,
