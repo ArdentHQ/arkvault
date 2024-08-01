@@ -9,8 +9,7 @@ import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
-import {DetailWrapper} from "@/app/components/DetailWrapper";
-import { useTheme } from "@/app/hooks";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SuccessStep = ({
 	importedWallet,
@@ -25,14 +24,18 @@ export const SuccessStep = ({
 
 	const network = importedWallet.network();
 
-	const { isDarkMode } = useTheme();
-	const icon = isDarkMode ? "CompletedDark" : "CompletedLight";
-
 	return (
 		<section data-testid="ImportWallet__success-step">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.TITLE")}
-				titleIcon={<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />}
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name="Completed"
+						data-testid="icon-Completed"
+					/>
+				}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.SUCCESS_STEP.SUBTITLE")}
 				className="hidden sm:block"
 			/>
