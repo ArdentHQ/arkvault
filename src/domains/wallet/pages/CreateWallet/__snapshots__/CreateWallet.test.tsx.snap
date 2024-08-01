@@ -629,78 +629,78 @@ exports[`CreateWallet > should create a wallet 1`] = `
                           >
                             <svg
                               fill="none"
-                              viewBox="0 0 24 25"
+                              viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
                                 fill="#E6EFF9"
                               />
                               <path
-                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M5 11.0078H23"
+                                d="M5 10.5078H23"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M12.4961 15.707H21.6777"
+                                d="M12.5 15.2031H21.6816"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M6.45312 6.10742H21.5539"
+                                d="M6.45312 5.60938H21.5539"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M9.25 16.7188H1.75"
+                                d="M9.25 16.2188H1.75"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M8.75 20.6797L16.25 20.6797"
+                                d="M8.75 20.1797L16.25 20.1797"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -2439,78 +2439,78 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                           >
                             <svg
                               fill="none"
-                              viewBox="0 0 24 25"
+                              viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
                                 fill="#E6EFF9"
                               />
                               <path
-                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M5 11.0078H23"
+                                d="M5 10.5078H23"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M12.4961 15.707H21.6777"
+                                d="M12.5 15.2031H21.6816"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M6.45312 6.10742H21.5539"
+                                d="M6.45312 5.60938H21.5539"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M9.25 16.7188H1.75"
+                                d="M9.25 16.2188H1.75"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M8.75 20.6797L16.25 20.6797"
+                                d="M8.75 20.1797L16.25 20.1797"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -3337,78 +3337,78 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                           >
                             <svg
                               fill="none"
-                              viewBox="0 0 24 25"
+                              viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
                                 fill="#E6EFF9"
                               />
                               <path
-                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M5 11.0078H23"
+                                d="M5 10.5078H23"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M12.4961 15.707H21.6777"
+                                d="M12.5 15.2031H21.6816"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M6.45312 6.10742H21.5539"
+                                d="M6.45312 5.60938H21.5539"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M9.25 16.7188H1.75"
+                                d="M9.25 16.2188H1.75"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M8.75 20.6797L16.25 20.6797"
+                                d="M8.75 20.1797L16.25 20.1797"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -4231,78 +4231,78 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                           >
                             <svg
                               fill="none"
-                              viewBox="0 0 24 25"
+                              viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
                                 fill="#E6EFF9"
                               />
                               <path
-                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M5 11.0078H23"
+                                d="M5 10.5078H23"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M12.4961 15.707H21.6777"
+                                d="M12.5 15.2031H21.6816"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M6.45312 6.10742H21.5539"
+                                d="M6.45312 5.60938H21.5539"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M9.25 16.7188H1.75"
+                                d="M9.25 16.2188H1.75"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M8.75 20.6797L16.25 20.6797"
+                                d="M8.75 20.1797L16.25 20.1797"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -5127,78 +5127,78 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           >
                             <svg
                               fill="none"
-                              viewBox="0 0 24 25"
+                              viewBox="0 0 24 24"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
                                 fill="#E6EFF9"
                               />
                               <path
-                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M5 11.0078H23"
+                                d="M5 10.5078H23"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M12.4961 15.707H21.6777"
+                                d="M12.5 15.2031H21.6816"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M6.45312 6.10742H21.5539"
+                                d="M6.45312 5.60938H21.5539"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M9.25 16.7188H1.75"
+                                d="M9.25 16.2188H1.75"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M8.75 20.6797L16.25 20.6797"
+                                d="M8.75 20.1797L16.25 20.1797"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                               />
                               <path
-                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
                                 stroke="#235B95"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
