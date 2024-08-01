@@ -11,10 +11,9 @@ import {
 	render,
 	screen,
 	mockProfileWithOnlyPublicNetworks,
-	mockProfileWithPublicAndTestNetworks, renderWithForm,
+	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import * as useThemeHook from "../../../../app/hooks/use-theme";
-import {EncryptPasswordStep} from "../EncryptPasswordStep";
+import * as useThemeHook from "@/app/hooks/use-theme";
 
 let profile: Contracts.IProfile;
 
