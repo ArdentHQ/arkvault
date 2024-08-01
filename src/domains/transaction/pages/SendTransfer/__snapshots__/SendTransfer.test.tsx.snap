@@ -3352,7 +3352,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -4680,7 +4680,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -6008,7 +6008,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -8160,7 +8160,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8880,7 +8880,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -11222,7 +11222,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </fieldset>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                 </section>
@@ -11643,7 +11643,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </fieldset>
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
       type="horizontal"
     />
   </section>
@@ -11871,7 +11871,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12299,7 +12299,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12772,7 +12772,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
