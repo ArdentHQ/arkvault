@@ -43,7 +43,7 @@ exports[`StepHeader > should render 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               title
@@ -74,7 +74,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
         class="flex items-center gap-3"
       >
         <h1
-          class="mb-0 text-2xl"
+          class="mb-0 text-2xl leading-[29px]"
           data-testid="header__title"
         >
           title
@@ -134,7 +134,7 @@ exports[`StepHeader > should render with extra 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               title

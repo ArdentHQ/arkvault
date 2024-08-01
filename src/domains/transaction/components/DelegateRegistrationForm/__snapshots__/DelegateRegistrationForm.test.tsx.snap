@@ -19,7 +19,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Delegate
@@ -421,7 +421,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Delegate
@@ -762,7 +762,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Review
@@ -1022,7 +1022,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Delegate
@@ -1399,7 +1399,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Delegate
@@ -1801,7 +1801,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Delegate

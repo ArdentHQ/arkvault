@@ -622,7 +622,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Select a Cryptoasset
@@ -1427,7 +1427,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Completed
@@ -2345,7 +2345,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Select a Cryptoasset
@@ -3156,7 +3156,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Select a Cryptoasset
@@ -3963,7 +3963,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Select a Cryptoasset
@@ -4772,7 +4772,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                           class="flex items-center gap-3"
                         >
                           <h1
-                            class="mb-0 text-2xl"
+                            class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
                           >
                             Select a Cryptoasset
