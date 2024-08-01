@@ -1,16 +1,15 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
+import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { Header } from "@/app/components/Header";
 import { Icon } from "@/app/components/Icon";
-import { WalletDetail } from "@/domains/wallet/components/WalletDetail";
-import { WalletDetailAddress } from "@/domains/wallet/components/WalletDetailAddress";
-import { WalletDetailNetwork } from "@/domains/wallet/components/WalletDetailNetwork";
 import { assertWallet } from "@/utils/assertions";
-import { useBreakpoint } from "@/app/hooks";
+import { Address } from "@/app/components/Address";
+import { Divider } from "@/app/components/Divider";
+import {DetailWrapper} from "@/app/components/DetailWrapper";
 
 export const SuccessStep = ({
 	importedWallet,
@@ -22,7 +21,6 @@ export const SuccessStep = ({
 	assertWallet(importedWallet);
 
 	const { t } = useTranslation();
-	const { isXs } = useBreakpoint();
 
 	const network = importedWallet.network();
 
@@ -34,31 +32,64 @@ export const SuccessStep = ({
 				className="hidden sm:block"
 			/>
 
-			<WalletDetailNetwork network={network} className="mt-2" border={false} />
+			<div className="mt-4 space-y-4">
+				<DetailWrapper label={t("COMMON.IMPORTED")}>
+					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
+						<DetailTitle title="Address" />
+						<Address
+							address={importedWallet.address()}
+							addressClass="leading-[17px] sm:leading-5"
+							wrapperClass="!w-max sm:!w-full"
+							showCopyButton
+						/>
+					</div>
 
-			<WalletDetailAddress address={importedWallet.address()} />
+					<div className="hidden h-8 w-full items-center sm:flex">
+						<Divider dashed />
+					</div>
 
-			<WalletDetail label={t("COMMON.BALANCE")}>
-				<Amount value={importedWallet.balance()} ticker={network.ticker()} />
-			</WalletDetail>
+					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
+						<DetailTitle title="Balance " />
+						<div className="font-semibold">
+							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
+						</div>
+					</div>
+				</DetailWrapper>
 
-			<WalletDetail
-				label={t("WALLETS.WALLET_NAME")}
-				borderPosition={isXs ? "top" : "both"}
-				extra={
-					<Button
-						size="xs"
-						data-testid="ImportWallet__edit-alias"
-						type="button"
-						variant="secondary"
-						onClick={onClickEditAlias}
-					>
-						<Icon name="Pencil" />
-					</Button>
-				}
-			>
-				{importedWallet.alias()}
-			</WalletDetail>
+				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
+					<div className="flex w-full items-center justify-between sm:justify-start">
+						<DetailTitle title="Name" />
+						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
+							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
+								{" "}
+								{importedWallet.alias()}{" "}
+							</div>
+
+							<div className="flex h-5 items-center sm:hidden">
+								<Divider type="vertical" size="md" />
+							</div>
+
+							<Button
+								size="xs"
+								data-testid="ImportWallet__edit-alias"
+								type="button"
+								variant="transparent"
+								sizeClassName="py-0"
+								onClick={onClickEditAlias}
+							>
+								<Icon name="Pencil" />
+								<span className="leading-[17px] sm:leading-5">{t("COMMON.EDIT")}</span>
+							</Button>
+						</div>
+					</div>
+				</DetailWrapper>
+			</div>
 		</section>
 	);
 };
+
+const DetailTitle = ({ title }: { title: string }): ReactNode => (
+	<div className="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5">
+		{title}
+	</div>
+);
