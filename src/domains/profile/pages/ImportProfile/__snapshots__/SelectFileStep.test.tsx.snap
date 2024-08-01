@@ -15,7 +15,7 @@ exports[`Import Profile Select File Step > should change back from json to wwe 1
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -185,7 +185,7 @@ exports[`Import Profile Select File Step > should handle back event 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -324,7 +324,7 @@ exports[`Import Profile Select File Step > should render file selection for wwe 
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -463,7 +463,7 @@ exports[`Import Profile Select File Step > should render with json fileFormat se
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -633,7 +633,7 @@ exports[`Import Profile Select File Step > should render with wwe fileFormat sel
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile

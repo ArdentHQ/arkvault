@@ -934,7 +934,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -2264,7 +2264,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -4419,7 +4419,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -6574,7 +6574,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -8320,7 +8320,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -10613,7 +10613,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -12497,7 +12497,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -14634,7 +14634,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -16912,7 +16912,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers
@@ -18781,7 +18781,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Peers & Multisig Servers

@@ -12,7 +12,7 @@ exports[`Header > should render an header 1`] = `
         class="flex items-center gap-3"
       >
         <h1
-          class="mb-0 text-2xl"
+          class="mb-0 text-2xl leading-[29px]"
           data-testid="header__title"
         >
           Header test
@@ -35,7 +35,7 @@ exports[`Header > should render an header with a subtitle 1`] = `
         class="flex items-center gap-3"
       >
         <h1
-          class="mb-0 text-2xl"
+          class="mb-0 text-2xl leading-[29px]"
           data-testid="header__title"
         >
           Header test
@@ -64,7 +64,7 @@ exports[`Header > should render an header with extra 1`] = `
         class="flex items-center gap-3"
       >
         <h1
-          class="mb-0 text-2xl"
+          class="mb-0 text-2xl leading-[29px]"
           data-testid="header__title"
         >
           Header test
@@ -121,7 +121,7 @@ exports[`Header > should render with title suffix 1`] = `
         class="flex items-center gap-3"
       >
         <h1
-          class="mb-0 text-2xl"
+          class="mb-0 text-2xl leading-[29px]"
           data-testid="header__title"
         >
           Header test
@@ -159,7 +159,7 @@ exports[`PageHeader > should render responsive (md) 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Header test
