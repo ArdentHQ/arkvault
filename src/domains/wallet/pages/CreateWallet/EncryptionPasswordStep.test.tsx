@@ -14,9 +14,12 @@ import {
 	render,
 	screen,
 	waitFor,
-	mockProfileWithPublicAndTestNetworks,
+	mockProfileWithPublicAndTestNetworks, renderWithForm,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
+import * as useThemeHook from "@/app/hooks/use-theme";
+import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
+
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 
@@ -158,6 +161,24 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(walletSpy).toHaveBeenCalledWith());
 		walletSpy.mockRestore();
+	});
+
+	it.each([
+		[true, "WalletEncryptionDark"],
+		[false, "WalletEncryptionLight"],
+	])("should render right header icon when dark mode is %s", async (isDarkMode, testId) => {
+		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+
+		renderWithForm(
+			<EncryptPasswordStep importedWallet={profile.wallets().first()} />,
+			{
+				withProviders: true,
+			},
+		);
+
+		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
+
+		useThemeMock.mockRestore();
 	});
 
 	it("should create a wallet and use encryption password", async () => {
