@@ -16,7 +16,7 @@ exports[`Import Profile - Processing import > should enter password again 1`] = 
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -227,7 +227,7 @@ exports[`Import Profile - Processing import > should handle import error 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -438,7 +438,7 @@ exports[`Import Profile - Processing import > should not run import process if f
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -478,7 +478,7 @@ exports[`Import Profile - Processing import > should require password for passwo
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -580,7 +580,7 @@ exports[`Import Profile - Processing import > should show error if json import h
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -782,7 +782,7 @@ exports[`Import Profile - Processing import > should successfully import json pr
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -875,7 +875,7 @@ exports[`Import Profile - Processing import > should successfully import wwe pro
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile

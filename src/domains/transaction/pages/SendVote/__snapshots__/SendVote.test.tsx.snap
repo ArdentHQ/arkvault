@@ -626,7 +626,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -1913,7 +1913,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Authenticate
@@ -2731,7 +2731,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                               class="flex items-center gap-3"
                             >
                               <h1
-                                class="mb-0 text-2xl"
+                                class="mb-0 text-2xl leading-[29px]"
                                 data-testid="header__title"
                               >
                                 Transaction Error

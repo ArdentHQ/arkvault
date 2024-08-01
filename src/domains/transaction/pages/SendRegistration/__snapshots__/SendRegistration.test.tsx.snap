@@ -632,7 +632,7 @@ exports[`Registration > should show error step and go back 1`] = `
                               class="flex items-center gap-3"
                             >
                               <h1
-                                class="mb-0 text-2xl"
+                                class="mb-0 text-2xl leading-[29px]"
                                 data-testid="header__title"
                               >
                                 Transaction Error
@@ -1606,7 +1606,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Authenticate

@@ -16,7 +16,7 @@ exports[`AuthenticationStep (message) > should request WIF if wallet was importe
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -122,7 +122,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -271,7 +271,7 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -420,7 +420,7 @@ exports[`AuthenticationStep (message) > should request private key if wallet was
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -526,7 +526,7 @@ exports[`AuthenticationStep (message) > should request secret if wallet was impo
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -636,7 +636,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting app screen 1`
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
@@ -920,7 +920,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
@@ -1201,7 +1201,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -1258,7 +1258,7 @@ exports[`AuthenticationStep (message) > should show ledger waiting device screen
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -1315,7 +1315,7 @@ exports[`AuthenticationStep (message) > should show only ledger confirmation 1`]
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Signature
@@ -1578,7 +1578,7 @@ exports[`AuthenticationStep (transaction) > should request WIF if wallet was imp
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -1684,7 +1684,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -1905,7 +1905,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -2054,7 +2054,7 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -2203,7 +2203,7 @@ exports[`AuthenticationStep (transaction) > should request private key if wallet
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -2309,7 +2309,7 @@ exports[`AuthenticationStep (transaction) > should request secret and second sec
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -2487,7 +2487,7 @@ exports[`AuthenticationStep (transaction) > should request secret if wallet was 
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate
@@ -2597,7 +2597,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting app scree
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
@@ -2881,7 +2881,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Ledger Wallet
@@ -3162,7 +3162,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction
@@ -3219,7 +3219,7 @@ exports[`AuthenticationStep (transaction) > should show ledger waiting device sc
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction
@@ -3276,7 +3276,7 @@ exports[`AuthenticationStep (transaction) > should show only ledger confirmation
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Confirm Your Transaction

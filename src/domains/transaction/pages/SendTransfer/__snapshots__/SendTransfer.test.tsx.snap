@@ -499,7 +499,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -2083,7 +2083,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Authenticate
@@ -2382,7 +2382,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                 </svg>
               </div>
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Send DARK
@@ -3088,7 +3088,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                 </svg>
               </div>
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Send DARK
@@ -4300,7 +4300,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Select a Cryptoasset
@@ -4534,7 +4534,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Select a Cryptoasset
@@ -4721,7 +4721,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Select a Cryptoasset
@@ -4989,7 +4989,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 </svg>
               </div>
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Review
@@ -5417,7 +5417,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 </svg>
               </div>
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Review
@@ -5890,7 +5890,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 </svg>
               </div>
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Transaction Review
@@ -6849,7 +6849,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -8118,7 +8118,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -9940,7 +9940,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -11209,7 +11209,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent
@@ -12478,7 +12478,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             class="flex items-center gap-3"
                           >
                             <h1
-                              class="mb-0 text-2xl"
+                              class="mb-0 text-2xl leading-[29px]"
                               data-testid="header__title"
                             >
                               Transaction Sent

@@ -16,7 +16,7 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Authenticate

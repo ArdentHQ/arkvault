@@ -15,7 +15,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -953,7 +953,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -1633,7 +1633,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -2313,7 +2313,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -3033,7 +3033,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile
@@ -3719,7 +3719,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
           class="flex items-center gap-3"
         >
           <h1
-            class="mb-0 text-2xl"
+            class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
             Import Profile

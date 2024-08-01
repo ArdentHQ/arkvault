@@ -19,7 +19,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Your Second Signature
@@ -251,7 +251,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Second Signature
@@ -519,7 +519,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
               class="flex items-center gap-3"
             >
               <h1
-                class="mb-0 text-2xl"
+                class="mb-0 text-2xl leading-[29px]"
                 data-testid="header__title"
               >
                 Register Second Signature
