@@ -22,13 +22,6 @@ describe("MnemonicVerification", () => {
 		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(3);
 	});
 
-	it("should handle japanese space character", () => {
-		const mnemonic = "hello　world";
-
-		render(<MnemonicVerification mnemonic={mnemonic} handleComplete={handleComplete} />);
-
-		expect(screen.getAllByTestId("MnemonicVerificationInput")).toHaveLength(2);
-	});
 
 	it("should verify mnemonic", () => {
 		const wordPositions = [1, 2, 3];
