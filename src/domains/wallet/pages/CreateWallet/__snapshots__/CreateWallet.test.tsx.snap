@@ -621,6 +621,93 @@ exports[`CreateWallet > should create a wallet 1`] = `
                         <div
                           class="flex items-center gap-3"
                         >
+                          <div
+                            class="css-h1kfx5"
+                            data-testid="icon-SelectNetworkLight"
+                            height="24"
+                            width="24"
+                          >
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 25"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                fill="#E6EFF9"
+                              />
+                              <path
+                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M5 11.0078H23"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M12.4961 15.707H21.6777"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M6.45312 6.10742H21.5539"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9.25 16.7188H1.75"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8.75 20.6797L16.25 20.6797"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                           <h1
                             class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
@@ -637,7 +724,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 my-8 css-1bcidjh"
+                      class="mt-4 my-4 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -767,7 +854,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                       </div>
                     </fieldset>
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                       type="horizontal"
                     />
                   </section>
@@ -2344,6 +2431,93 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                         <div
                           class="flex items-center gap-3"
                         >
+                          <div
+                            class="css-h1kfx5"
+                            data-testid="icon-SelectNetworkLight"
+                            height="24"
+                            width="24"
+                          >
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 25"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                fill="#E6EFF9"
+                              />
+                              <path
+                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M5 11.0078H23"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M12.4961 15.707H21.6777"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M6.45312 6.10742H21.5539"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9.25 16.7188H1.75"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8.75 20.6797L16.25 20.6797"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                           <h1
                             class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
@@ -2360,7 +2534,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 my-8 css-1bcidjh"
+                      class="mt-4 my-4 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -2490,7 +2664,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                       </div>
                     </fieldset>
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                       type="horizontal"
                     />
                   </section>
@@ -3155,6 +3329,93 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                         <div
                           class="flex items-center gap-3"
                         >
+                          <div
+                            class="css-h1kfx5"
+                            data-testid="icon-SelectNetworkLight"
+                            height="24"
+                            width="24"
+                          >
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 25"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                fill="#E6EFF9"
+                              />
+                              <path
+                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M5 11.0078H23"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M12.4961 15.707H21.6777"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M6.45312 6.10742H21.5539"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9.25 16.7188H1.75"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8.75 20.6797L16.25 20.6797"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                           <h1
                             class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
@@ -3171,7 +3432,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 my-8 css-1bcidjh"
+                      class="mt-4 my-4 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -3301,7 +3562,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                       </div>
                     </fieldset>
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                       type="horizontal"
                     />
                   </section>
@@ -3962,6 +4223,93 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                         <div
                           class="flex items-center gap-3"
                         >
+                          <div
+                            class="css-h1kfx5"
+                            data-testid="icon-SelectNetworkLight"
+                            height="24"
+                            width="24"
+                          >
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 25"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                fill="#E6EFF9"
+                              />
+                              <path
+                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M5 11.0078H23"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M12.4961 15.707H21.6777"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M6.45312 6.10742H21.5539"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9.25 16.7188H1.75"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8.75 20.6797L16.25 20.6797"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                           <h1
                             class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
@@ -3978,7 +4326,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 my-8 css-1bcidjh"
+                      class="mt-4 my-4 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -4108,7 +4456,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                       </div>
                     </fieldset>
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                       type="horizontal"
                     />
                   </section>
@@ -4771,6 +5119,93 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                         <div
                           class="flex items-center gap-3"
                         >
+                          <div
+                            class="css-h1kfx5"
+                            data-testid="icon-SelectNetworkLight"
+                            height="24"
+                            width="24"
+                          >
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 25"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14 2.00781C9.02944 2.00781 5 6.03725 5 11.0078L9.5 11C9.5 11.3333 9.6 12.3 10 13.5C10.5 15 11 15.7538 13 15.7538H21.6484C22.5052 14.376 23 12.7497 23 11.0078C23 6.03725 18.9706 2.00781 14 2.00781Z"
+                                fill="#E6EFF9"
+                              />
+                              <path
+                                d="M5 11.0078C5 6.03725 9.02944 2.00781 14 2.00781C18.9706 2.00781 23 6.03725 23 11.0078C23 14.1332 21.4069 16.8865 18.9884 18.5"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M11.7969 2.27734C10.5969 4.07734 9.79688 7.40048 9.79688 11.0005C9.79688 11.7604 9.83252 12.5086 9.90006 13.233"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M5 11.0078H23"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M12.4961 15.707H21.6777"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M6.45312 6.10742H21.5539"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16.2031 2.27734C17.4031 4.07734 18.1031 7.3065 18.1031 11.0065C18.1031 13.4738 17.7919 15.7317 17.2286 17.4961"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M9.25 16.7188H1.75"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M4.16667 19.1146L1.75 16.6979L4.16667 14.2812"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M8.75 20.6797L16.25 20.6797"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M13.8333 18.2839L16.25 20.7005L13.8333 23.1172"
+                                stroke="#235B95"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
                           <h1
                             class="mb-0 text-2xl leading-[29px]"
                             data-testid="header__title"
@@ -4839,7 +5274,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </div>
                     <fieldset
-                      class="mt-8 my-8 css-1bcidjh"
+                      class="mt-4 my-4 css-1bcidjh"
                     >
                       <div
                         data-testid="SelectNetwork"
@@ -4969,7 +5404,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                       </div>
                     </fieldset>
                     <div
-                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                       type="horizontal"
                     />
                   </section>
