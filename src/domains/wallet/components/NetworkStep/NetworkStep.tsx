@@ -10,7 +10,7 @@ import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { Divider } from "@/app/components/Divider";
-import { useNetworks } from "@/app/hooks";
+import { useNetworks, useTheme } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 
 interface NetworkStepProperties {
@@ -35,19 +35,16 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 		setValue("network", network, { shouldDirty: true, shouldValidate: true });
 	};
 
+	const { isDarkMode } = useTheme();
+
+	const icon = isDarkMode ? "SelectNetworkDark" : "SelectNetworkLight";
+
 	return (
 		<section data-testid="NetworkStep">
 			<Header
 				title={title}
 				subtitle={subtitle}
-				titleIcon={
-					<Icon
-						className="text-theme-success-100 dark:text-theme-success-900"
-						dimensions={[24, 24]}
-						name="SelectNetwork"
-						data-testid="icon-SelectNetwork"
-					/>
-				}
+				titleIcon={<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />}
 				className="hidden sm:block"
 			/>
 

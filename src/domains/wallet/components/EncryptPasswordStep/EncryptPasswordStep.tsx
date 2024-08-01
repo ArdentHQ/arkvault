@@ -9,6 +9,8 @@ import { Header } from "@/app/components/Header";
 import { InputPassword } from "@/app/components/Input";
 import { assertWallet } from "@/utils/assertions";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
+import { Icon } from "@/app/components/Icon";
+import { useTheme } from "@/app/hooks";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;
@@ -77,15 +79,30 @@ export const EncryptPasswordStep = ({ importedWallet }: EncryptPasswordStepPrope
 		}
 	};
 
+	const { isDarkMode } = useTheme();
+
+	const icon = isDarkMode ? "WalletEncryptionDark" : "WalletEncryptionLight";
+
 	return (
 		<section data-testid="EncryptPassword">
-			<Header title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")} className="hidden sm:block" />
+			<Header
+				title={t("WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.TITLE")}
+				className="hidden sm:block"
+				titleIcon={
+					<Icon
+						className="text-theme-success-100 dark:text-theme-success-900"
+						dimensions={[24, 24]}
+						name={icon}
+						data-testid={`icon-${icon}`}
+					/>
+				}
+			/>
 
-			<Alert className="mt-6" variant="warning">
+			<Alert className="mt-4" variant="warning">
 				<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.ENCRYPT_PASSWORD_STEP.WARNING" />
 			</Alert>
 
-			<div className="space-y-6 pt-6">
+			<div className="space-y-4 pt-4">
 				{renderSecondInputField()}
 
 				<PasswordValidation
