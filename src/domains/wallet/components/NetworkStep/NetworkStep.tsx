@@ -37,7 +37,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 
 	const { isDarkMode } = useTheme();
 
-	const icon = isDarkMode ? "SelectNetworkLight" : "SelectNetworkLight";
+	const icon = isDarkMode ? "SelectNetworkDark" : "SelectNetworkLight";
 
 	return (
 		<section data-testid="NetworkStep">
