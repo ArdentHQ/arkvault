@@ -18,7 +18,7 @@ exports[`ErrorStep > should display error details 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Transaction Error
@@ -468,7 +468,7 @@ exports[`ErrorStep > should emit onBack 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Custom error title
@@ -933,7 +933,7 @@ exports[`ErrorStep > should emit onClose 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Custom error title
@@ -1398,7 +1398,7 @@ exports[`ErrorStep > should render with custom title 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Custom error title
@@ -1848,7 +1848,7 @@ exports[`ErrorStep > should render with default texts 1`] = `
             class="flex items-center gap-3"
           >
             <h1
-              class="mb-0 text-2xl"
+              class="mb-0 text-2xl leading-[29px]"
               data-testid="header__title"
             >
               Transaction Error

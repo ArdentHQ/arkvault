@@ -942,7 +942,7 @@ exports[`General Settings > should disable submit button when profile is not res
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -2940,7 +2940,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -5021,7 +5021,7 @@ exports[`General Settings > should render 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -7019,7 +7019,7 @@ exports[`General Settings > should show identicon when removing image if name is
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -9013,7 +9013,7 @@ exports[`General Settings > should update profile 1`] = `
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -11011,7 +11011,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
@@ -13009,7 +13009,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                       class="flex items-center gap-3"
                     >
                       <h1
-                        class="mb-0 text-2xl"
+                        class="mb-0 text-2xl leading-[29px]"
                         data-testid="header__title"
                       >
                         Profile Settings
