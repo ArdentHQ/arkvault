@@ -9,7 +9,7 @@ import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
-import {DetailWrapper} from "@/app/components/DetailWrapper";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SuccessStep = ({
 	importedWallet,

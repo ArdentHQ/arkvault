@@ -5,7 +5,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import {DetailLabelText, DetailWrapper} from "@/app/components/DetailWrapper";
+import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
