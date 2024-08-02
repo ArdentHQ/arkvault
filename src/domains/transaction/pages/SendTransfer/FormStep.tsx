@@ -16,7 +16,7 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
-import { ThemeIcon } from "@/app/components/Icon";
+import { ThemeIcon, Icon } from "@/app/components/Icon";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
