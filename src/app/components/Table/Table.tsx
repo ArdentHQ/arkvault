@@ -52,11 +52,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	};
 
 	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => (
-		<tr
-			{...headerGroup.getHeaderGroupProps()}
-		>
-			{headerGroup.headers.map(renderColumn)}
-		</tr>
+		<tr {...headerGroup.getHeaderGroupProps()}>{headerGroup.headers.map(renderColumn)}</tr>
 	);
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
@@ -105,7 +101,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 
 	return (
 		<TableWrapper {...getTableProps({ className })}>
-			<table cellPadding={0} className="table-auto w-full">
+			<table cellPadding={0} className="w-full table-auto">
 				{!hideHeader && renderHeader}
 
 				<tbody {...getTableBodyProps()}>
