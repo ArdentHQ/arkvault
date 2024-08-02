@@ -379,12 +379,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
 
-		renderWithForm(
-			<AuthenticationStep subject={subject} wallet={wallet} requireLedgerConfirmation={false} />,
-			{
-				withProviders: true,
-			},
-		);
+		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} requireLedgerConfirmation={false} />, {
+			withProviders: true,
+		});
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
