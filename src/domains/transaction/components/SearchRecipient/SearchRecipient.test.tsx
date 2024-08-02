@@ -151,7 +151,7 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("Contact")).toBeInTheDocument();
+		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(Contact)")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
