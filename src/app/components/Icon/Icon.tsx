@@ -4,6 +4,7 @@ import { styled } from "twin.macro";
 
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
+import { useTheme } from "@/app/hooks";
 
 type IconProperties = {
 	name: string;
