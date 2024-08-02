@@ -87,7 +87,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -119,7 +119,7 @@ exports[`SelectNetworkStep > should render with test networks 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"

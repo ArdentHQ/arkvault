@@ -58,7 +58,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Delete Wallet
           </h2>

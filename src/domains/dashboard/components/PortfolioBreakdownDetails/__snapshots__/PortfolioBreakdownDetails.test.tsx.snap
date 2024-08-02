@@ -11,7 +11,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pt-4 pb-6 px-6 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -58,7 +58,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -319,7 +319,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
               >
                 <table
                   cellpadding="0"
-                  class="table-auto w-full"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
@@ -645,7 +645,7 @@ exports[`PortfolioBreakdownDetails > should render responsive 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pt-4 pb-6 px-6 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -692,7 +692,7 @@ exports[`PortfolioBreakdownDetails > should render responsive 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -1217,7 +1217,7 @@ exports[`PortfolioBreakdownDetails > should render responsive with other group 1
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pt-4 pb-6 px-6 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1264,7 +1264,7 @@ exports[`PortfolioBreakdownDetails > should render responsive with other group 1
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -1997,7 +1997,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl pt-4 pb-6 px-6 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2044,7 +2044,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -2399,7 +2399,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
               >
                 <table
                   cellpadding="0"
-                  class="table-auto w-full"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr

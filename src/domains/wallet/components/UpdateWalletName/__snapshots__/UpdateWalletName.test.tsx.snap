@@ -58,7 +58,7 @@ exports[`UpdateWalletName > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -88,7 +88,7 @@ exports[`UpdateWalletName > should render 1`] = `
                   class="relative"
                 >
                   <div
-                    class="css-n1b0kl"
+                    class="css-1q57rjh"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -200,7 +200,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -230,7 +230,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -389,7 +389,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -419,7 +419,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -578,7 +578,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -608,7 +608,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -767,7 +767,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -797,7 +797,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -956,7 +956,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -986,7 +986,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -1145,7 +1145,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Wallet Name
           </h2>
@@ -1175,7 +1175,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   class="relative"
                 >
                   <div
-                    class="css-12mz4i6"
+                    class="css-1hr3i2s"
                   >
                     <div
                       class="relative flex h-full flex-1"

@@ -58,7 +58,7 @@ exports[`ReceiveFunds > should not render qrcode without an address 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Receive Funds
           </h2>
@@ -271,7 +271,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Receive Funds
           </h2>
@@ -567,7 +567,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Receive Funds
           </h2>

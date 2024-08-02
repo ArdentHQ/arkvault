@@ -32,7 +32,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-14zm422"
+                    class="ring-focus css-1r0gl86"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -799,7 +799,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
                   class="group"
                 >
                   <button
-                    class="ring-focus css-14zm422"
+                    class="ring-focus css-1r0gl86"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
@@ -1566,7 +1566,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
                   class="group"
                 >
                   <button
-                    class="ring-focus css-14zm422"
+                    class="ring-focus css-1r0gl86"
                   >
                     <div
                       class="flex h-5 w-5 items-center justify-center"
