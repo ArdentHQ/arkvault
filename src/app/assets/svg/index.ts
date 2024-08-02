@@ -47,6 +47,7 @@ import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
 import MagnifyingGlass from "./magnifying-glass.svg?react";
+import MagnifyingGlassAlt from "./magnifying-glass-alt.svg?react";
 import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
@@ -133,6 +134,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Lock,
 	LockOpen: TransactionIcons.UnlockToken,
 	MagnifyingGlass,
+	MagnifyingGlassAlt,
 	MagnifyingGlassId,
 	Menu,
 	MenuOpen,
