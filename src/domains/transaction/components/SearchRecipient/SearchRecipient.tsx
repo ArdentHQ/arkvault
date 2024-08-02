@@ -1,5 +1,5 @@
 import cn from "classnames";
-import { FC, useCallback, useMemo } from "react";
+import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 

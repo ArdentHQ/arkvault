@@ -393,11 +393,6 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 	address,
 	name
 }) => {
-	const handleStopPropagation = useCallback((event: React.MouseEvent) => {
-		event.preventDefault();
-		event.stopPropagation();
-	}, []);
-
 	return (
 		<div
 			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
