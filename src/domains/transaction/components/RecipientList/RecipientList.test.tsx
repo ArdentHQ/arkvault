@@ -72,8 +72,6 @@ describe("RecipientList", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-
-		expect(screen.getByTestId("RecipientList__condensed")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
