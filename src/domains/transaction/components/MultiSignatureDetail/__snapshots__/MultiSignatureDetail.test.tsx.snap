@@ -2988,7 +2988,6 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                     >
                                       <td
                                         class="flex-1 shrink-0 pl-3 text-right"
-                                        data-testid="RecipientList__condensed"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -3053,7 +3052,6 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                     >
                                       <td
                                         class="flex-1 shrink-0 pl-3 text-right"
-                                        data-testid="RecipientList__condensed"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -3073,7 +3071,6 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                     >
                                       <td
                                         class="flex-1 shrink-0 pl-3 text-right"
-                                        data-testid="RecipientList__condensed"
                                       >
                                         <span
                                           class="whitespace-nowrap"
@@ -3138,7 +3135,6 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
                                     >
                                       <td
                                         class="flex-1 shrink-0 pl-3 text-right"
-                                        data-testid="RecipientList__condensed"
                                       >
                                         <span
                                           class="whitespace-nowrap"
