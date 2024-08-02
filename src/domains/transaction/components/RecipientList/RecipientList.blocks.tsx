@@ -35,7 +35,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 		if (variant === "condensed") {
 			return (
-				<td className="flex-1 shrink-0 pl-3 text-right" data-testid="RecipientList__condensed">
+				<td className="flex-1 shrink-0 pl-3 text-right">
 					<Amount ticker={ticker} value={amount} />
 				</td>
 			);
