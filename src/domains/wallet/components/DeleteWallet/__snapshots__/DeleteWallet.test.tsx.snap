@@ -58,7 +58,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
           >
             Delete Wallet
           </h2>
@@ -196,7 +196,7 @@ exports[`DeleteWallet > should render a modal 1`] = `
                   </div>
                 </span>
                 <div
-                  class="css-xk5t3v"
+                  class="css-13c7w0w"
                   disabled=""
                 >
                   <div
