@@ -78,6 +78,8 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import YourPassphraseLight from "./your-passphrase-light.svg?react";
+import YourPassphraseDark from "./your-passphrase-dark.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -158,4 +160,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	YourPassphraseDark,
+	YourPassphraseLight,
 };
