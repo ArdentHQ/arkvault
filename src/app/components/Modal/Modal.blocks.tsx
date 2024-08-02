@@ -55,8 +55,8 @@ const ModalContent = ({
 		className={cn(
 			"relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl",
 			{
-				"px-6 pb-6 pt-4 md:p-8": noButtons,
 				"px-10 pb-24 pt-10 sm:pb-10": !noButtons,
+				"px-6 pb-6 pt-4 md:p-8": noButtons,
 			},
 			className,
 		)}
