@@ -8,8 +8,8 @@ import { render, screen } from "@/utils/testing-library";
 import { FormField } from "@/app/components/Form";
 
 const defaultValues: { startDate: string | number; endDate: string | number } = {
-	endDate: Date.now(),
-	startDate: Date.now(),
+	endDate: "2023-01-01T00:00:00.000Z",
+	startDate: "2023-01-01T00:00:00.000Z",
 };
 
 describe("InputDate", () => {
