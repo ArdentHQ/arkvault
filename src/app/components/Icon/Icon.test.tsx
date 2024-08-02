@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Icon, ThemeIcon} from "./Icon";
+import { Icon, ThemeIcon } from "./Icon";
 import { render, screen } from "@/utils/testing-library";
 import * as useThemeHook from "@/app/hooks/use-theme";
 
@@ -40,11 +40,10 @@ describe("ThemeIcon", () => {
 	])("should render right icon for theme - isDark: %s", async (isDarkMode, testId) => {
 		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
-		render(<ThemeIcon darkIcon="DarkIcon" lightIcon="LightIcon"/>);
+		render(<ThemeIcon darkIcon="DarkIcon" lightIcon="LightIcon" />);
 
 		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
 
 		useThemeMock.mockRestore();
 	});
-
 });

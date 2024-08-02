@@ -12,17 +12,19 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 	mnemonicWords = /\u3000/.test(mnemonic) ? mnemonic.split("\u3000") : mnemonic.split(" ");
 
 	return (
-		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:gap-y-4 sm:pt-1.5 sm:grid-cols-4">
+		<ul className="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5">
 			{mnemonicWords.map((word, index) => (
 				<li
 					data-testid="MnemonicList__item"
 					key={index}
 					className="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
 				>
-					<span className="absolute left-0 top-0 hidden -translate-y-2.5 font-semibold translate-x-2 bg-theme-background px-1 text-sm text-theme-secondary-700 sm:block">
+					<span className="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block">
 						{index + 1}
 					</span>
-					<div className="p-2 text-sm text-center rounded-l w-12 mr-4 block font-semibold bg-theme-secondary-200 dark:bg-theme-secondary-200 text-theme-secondary-700 dark:text-theme-secondary-200 sm:hidden">{index + 1}</div>
+					<div className="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden">
+						{index + 1}
+					</div>
 					<div className="sm:text-md text-sm">{word}</div>
 				</li>
 			))}
