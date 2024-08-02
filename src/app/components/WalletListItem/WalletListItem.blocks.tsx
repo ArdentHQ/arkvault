@@ -19,6 +19,7 @@ import {
 	WalletCellProperties,
 	StarredProperties,
 	InfoProperties,
+	RecipientItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
@@ -383,6 +384,51 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 		</div>
 	);
 };
+
+
+export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
+	onClick,
+	selected = false,
+	type,
+	address,
+	name
+}) => {
+	const handleStopPropagation = useCallback((event: React.MouseEvent) => {
+		event.preventDefault();
+		event.stopPropagation();
+	}, []);
+
+	return (
+		<div
+			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+			className={cn("w-full rounded-xl bg-theme-primary-100 flex flex-row h-18 cursor-pointer ring-2 dark:bg-theme-background overflow-hidden", {
+				'ring-theme-primary-600 dark:ring-theme-primary-600': selected,
+				'ring-theme-primary-100 dark:ring-theme-secondary-800': !selected,
+			})}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
+		>
+			<div className="w-full h-full flex p-4 flex-col gap-1.5 items-start justify-center">
+				<div className="flex flex-row gap-1.5">
+					<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">{name}</span>
+					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">({type})</span>
+				</div>
+
+				{address}
+			</div>
+			<div className={cn("w-11 h-full flex items-center justify-center", {
+				'bg-theme-primary-600 dark:bg-theme-primary-600': selected,
+				'bg-theme-primary-100 dark:bg-theme-background': !selected,
+			})}>
+				<Icon
+					className={cn({"text-theme-primary-50": selected, "text-theme-primary-200 dark:text-theme-secondary-800": !selected})}
+					name="CircleCheckMark"
+					size="lg"
+				/>
+			</div>
+		</div>
+	);
+}
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
