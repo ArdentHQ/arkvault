@@ -50,7 +50,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 	}, [resetFields, handleQueryReset]);
 
 	return (
-		<div data-testid="HeaderSearchBar" className=" -my-2" {...properties}>
+		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
 			<ControlButton
 				isChanged={!!query}
 				noBorder={noToggleBorder}
