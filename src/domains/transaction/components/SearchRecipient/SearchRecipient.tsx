@@ -38,7 +38,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size={isCompact ? "icon" : undefined}
 					variant={isCompact ? "transparent" : "reverse"}
 					onClick={() => onAction(recipient.address)}
-					className={cn("text-theme-primary-reverse-600 text-sm font-semibold", { "-mr-3": isCompact })}
+					className={cn("text-sm font-semibold text-theme-primary-reverse-600", { "-mr-3": isCompact })}
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -51,7 +51,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				size={isCompact ? "icon" : undefined}
 				variant={isCompact ? "transparent" : "secondary"}
 				onClick={() => onAction(recipient.address)}
-				className={cn("text-theme-primary-600  text-sm font-semibold", { "-mr-3": isCompact })}
+				className={cn("text-sm font-semibold text-theme-primary-600", { "-mr-3": isCompact })}
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -61,11 +61,20 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	return (
 		<TableRow key={recipient.id} border>
 			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-4">
-				<Address walletName={recipient.alias} address={recipient.address} truncateOnTable walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200" addressClass="text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500" />
+				<Address
+					walletName={recipient.alias}
+					address={recipient.address}
+					truncateOnTable
+					walletNameClass="text-sm text-theme-secondary-900 dark:text-theme-secondary-200"
+					addressClass="text-sm text-theme-secondary-700 mt-0.5 dark:text-theme-secondary-500"
+				/>
 			</TableCell>
 
 			<TableCell isCompact={isCompact}>
-				<span data-testid="RecipientListItem__type" className="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+				<span
+					data-testid="RecipientListItem__type"
+					className="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+				>
 					{recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
 				</span>
 			</TableCell>
@@ -147,8 +156,8 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 			{
 				Header: t("COMMON.TYPE"),
 				accessor: "type",
-				minimumWidth: true,
 				headerClassName: "no-border",
+				minimumWidth: true,
 			},
 			{
 				Header: (
@@ -216,8 +225,12 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					/>
 				)}
 
-				<div className="border-transparent border md:border-theme-secondary-300 rounded-xl border-b-[5px] dark:md:border-theme-secondary-800">
-					<Table columns={columns} data={filteredRecipients as RecipientProperties[]} hideHeader={useResponsive}>
+				<div className="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+					<Table
+						columns={columns}
+						data={filteredRecipients as RecipientProperties[]}
+						hideHeader={useResponsive}
+					>
 						{renderTableRow}
 					</Table>
 

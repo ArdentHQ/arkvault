@@ -385,45 +385,54 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 	);
 };
 
-
 export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 	onClick,
 	selected = false,
 	type,
 	address,
-	name
-}) => {
-	return (
-		<div
-			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
-			className={cn("w-full rounded-xl bg-theme-primary-100 flex flex-row h-18 cursor-pointer ring-2 dark:bg-theme-background overflow-hidden", {
-				'ring-theme-primary-600 dark:ring-theme-primary-600': selected,
-				'ring-theme-primary-100 dark:ring-theme-secondary-800': !selected,
-			})}
-			tabIndex={onClick ? 0 : -1}
-			onClick={onClick}
-		>
-			<div className="w-full h-full flex p-4 flex-col gap-1.5 items-start justify-center">
-				<div className="flex flex-row gap-1.5">
-					<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">{name}</span>
-					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">({type})</span>
-				</div>
+	name,
+}) => (
+	<div
+		data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+		className={cn(
+			"flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background",
+			{
+				"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+				"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+			},
+		)}
+		tabIndex={onClick ? 0 : -1}
+		onClick={onClick}
+	>
+		<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
+			<div className="flex flex-row gap-1.5">
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{name}
+				</span>
+				<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+					({type})
+				</span>
+			</div>
 
-				{address}
-			</div>
-			<div className={cn("w-11 h-full flex items-center justify-center", {
-				'bg-theme-primary-600 dark:bg-theme-primary-600': selected,
-				'bg-theme-primary-100 dark:bg-theme-background': !selected,
-			})}>
-				<Icon
-					className={cn({"text-theme-primary-50": selected, "text-theme-primary-200 dark:text-theme-secondary-800": !selected})}
-					name="CircleCheckMark"
-					size="lg"
-				/>
-			</div>
+			{address}
 		</div>
-	);
-}
+		<div
+			className={cn("flex h-full w-11 items-center justify-center", {
+				"bg-theme-primary-100 dark:bg-theme-background": !selected,
+				"bg-theme-primary-600 dark:bg-theme-primary-600": selected,
+			})}
+		>
+			<Icon
+				className={cn({
+					"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
+					"text-theme-primary-50": selected,
+				})}
+				name="CircleCheckMark"
+				size="lg"
+			/>
+		</div>
+	</div>
+);
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();

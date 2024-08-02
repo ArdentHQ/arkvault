@@ -67,7 +67,7 @@ export interface RecipientItemMobileProperties {
 	onButtonClick?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
 	buttonLabel?: React.ReactNode;
 	selected?: boolean;
-	type: string,
-	address: React.ReactNode,
+	type: string;
+	address: React.ReactNode;
 	name: string;
 }
