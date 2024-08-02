@@ -52,3 +52,16 @@ export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensio
 		</Wrapper>
 	);
 };
+
+type ThemeIconProperties = {
+	darkIcon: string;
+	lightIcon: string;
+} & Omit<IconProperties, "name">;
+
+export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
+	const { isDarkMode } = useTheme();
+
+	const icon = isDarkMode ? darkIcon : lightIcon;
+
+	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
+};

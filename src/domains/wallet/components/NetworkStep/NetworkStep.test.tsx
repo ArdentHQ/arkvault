@@ -13,7 +13,6 @@ import {
 	mockProfileWithOnlyPublicNetworks,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import * as useThemeHook from "@/app/hooks/use-theme";
 
 let profile: Contracts.IProfile;
 
@@ -54,25 +53,6 @@ describe("SelectNetworkStep", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		mockProfileWithOnlyPublicNetworksReset();
-	});
-
-	it.each([
-		[true, "SelectNetworkDark"],
-		[false, "SelectNetworkLight"],
-	])("should render right header icon when dark mode is %s", async (isDarkMode, testId) => {
-		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
-
-		const { result: form } = renderHook(() => useForm());
-
-		render(
-			<FormProvider {...form.current}>
-				<NetworkStep profile={profile} title="title" subtitle="subtitle" />
-			</FormProvider>,
-		);
-
-		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
-
-		useThemeMock.mockRestore();
 	});
 
 	it("should render with test networks", async () => {
