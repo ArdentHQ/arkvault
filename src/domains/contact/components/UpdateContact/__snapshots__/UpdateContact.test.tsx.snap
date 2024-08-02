@@ -58,7 +58,7 @@ exports[`UpdateContact > should render responsive 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Edit Contact
           </h2>
@@ -478,7 +478,7 @@ exports[`UpdateContact > should render responsive 2`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Edit Contact
           </h2>
@@ -937,7 +937,7 @@ exports[`UpdateContact > should render responsive 3`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl mt-1 md:pt-0"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Edit Contact
           </h2>

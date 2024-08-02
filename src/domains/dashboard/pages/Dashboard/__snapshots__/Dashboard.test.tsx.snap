@@ -1347,7 +1347,7 @@ exports[`Dashboard > should render 1`] = `
             >
               <table
                 cellpadding="0"
-                class="table-auto w-full"
+                class="w-full table-auto"
               >
                 <thead>
                   <tr
