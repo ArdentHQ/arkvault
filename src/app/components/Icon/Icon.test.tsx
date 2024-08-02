@@ -37,7 +37,7 @@ describe("ThemeIcon", () => {
 	it.each([
 		[true, "DarkIcon"],
 		[false, "LightIcon"],
-	])("should render right icon for theme - isDark: %s", async (isDarkMode, testId) => {
+	])("should render right icon for theme - isDark: %s", (isDarkMode, testId) => {
 		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
 
 		render(<ThemeIcon darkIcon="DarkIcon" lightIcon="LightIcon" />);
