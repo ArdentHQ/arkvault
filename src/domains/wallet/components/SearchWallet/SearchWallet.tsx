@@ -25,9 +25,11 @@ import {
 	Balance,
 	WalletListItemMobile,
 	WalletItemDetails,
+	ReceiverItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 const SearchWalletListItem = ({
 	index,
@@ -36,11 +38,9 @@ const SearchWalletListItem = ({
 	wallet,
 	exchangeCurrency,
 	showConvertedValue,
-	showNetwork,
 	onAction,
 	selectedAddress,
 	isCompact,
-	profile,
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -80,9 +80,6 @@ const SearchWalletListItem = ({
 	return (
 		<TableRow>
 			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4" className="w-full">
-				<SearchWalletAvatar wallet={wallet} isCompact={isCompact} showNetwork={showNetwork} profile={profile} />
-
-				{/* avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900" */}
 				<Address walletName={alias} address={wallet.address()} truncateOnTable />
 			</TableCell>
 
@@ -159,6 +156,51 @@ const SearchWalletAvatar = ({
 		</div>
 	);
 };
+
+const SearchSenderWalletItemResponsive = ({
+	alias,
+	wallet,
+	onAction,
+	selectedAddress,
+}) => {
+	const { isSmAndAbove } = useBreakpoint();
+	const handleButtonClick = useCallback(
+		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
+		[alias, wallet],
+	);
+
+	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
+
+	const isSynced = isFullySynced(wallet);
+
+	return (
+		<tr data-testid="SenderWalletItemResponsive--item">
+			<td className="pt-3">
+				<ReceiverItemMobile 
+					balance={
+						<Balance
+							className="text-sm text-white"
+							wallet={wallet}
+							isCompact={false}
+							isSynced={isSynced}
+							isLargeScreen={false}
+						/>
+					}
+					selected={isSelected}
+					onClick={handleButtonClick}
+					address={
+						<TruncateMiddleDynamic
+							data-testid="SenderWalletItemResponsive__address"
+							value={wallet.address()}
+							availableWidth={isSmAndAbove ? undefined : 100}
+						/>
+					}
+					name={alias}
+				/>
+			</td>
+		</tr>
+	)
+}
 
 const SearchWalletListItemResponsive = ({
 	alias,
@@ -240,13 +282,15 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
 			{
-				Header: t("COMMON.WALLET_ADDRESS"),
+				Header: t("COMMON.ADDRESS"),
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias(),
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance().toFixed(0),
 				className: "justify-end",
+				headerClassName: "no-border",
 			},
 		];
 
@@ -293,6 +337,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				),
 				accessor: "search",
 				className: "justify-end",
+				headerClassName: "no-border",
 				disableSortBy: true,
 			},
 		] as Column<Contracts.IReadWriteWallet>[];
@@ -319,13 +364,11 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 			if (useResponsive) {
 				return (
-					<SearchWalletListItemResponsive
+					<SearchSenderWalletItemResponsive
 						wallet={wallet}
 						alias={alias}
-						showNetwork={showNetwork}
 						onAction={onSelectWallet}
 						selectedAddress={selectedAddress}
-						profile={profile}
 					/>
 				);
 			}
@@ -363,7 +406,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	return (
 		<Modal title={title} description={description} isOpen={isOpen} size={size} onClose={onClose} noButtons>
-			<div className="mt-8">
+			<div className="mt-4">
 				{useResponsive && (
 					<HeaderSearchInput
 						placeholder={searchPlaceholder}
@@ -373,21 +416,23 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					/>
 				)}
 
-				<Table
-					columns={columns}
-					data={filteredWallets as Contracts.IReadWriteWallet[]}
-					hideHeader={useResponsive}
-				>
-					{renderTableRow}
-				</Table>
+				<div className="rounded-xl border border-b-[5px] 	border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+					<Table
+						columns={columns}
+						data={filteredWallets as Contracts.IReadWriteWallet[]}
+						hideHeader={useResponsive}
+						>
+						{renderTableRow}
+					</Table>
 
-				{isEmptyResults && (
-					<EmptyResults
+					{isEmptyResults && (
+						<EmptyResults
 						className="mt-10"
 						title={t("COMMON.EMPTY_RESULTS.TITLE")}
 						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-					/>
-				)}
+						/>
+					)}
+				</div>
 			</div>
 		</Modal>
 	);
