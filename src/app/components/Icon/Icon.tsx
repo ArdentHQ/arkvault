@@ -63,7 +63,7 @@ type ThemeIconProperties = {
 export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
 	const theme: ViewingModeType = shouldUseDarkColors() ? "dark" : "light";
 
-	const icon =  theme === "dark" ? darkIcon : lightIcon;
+	const icon = theme === "dark" ? darkIcon : lightIcon;
 
 	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };
