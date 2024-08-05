@@ -82,6 +82,7 @@ export const SuccessStep = ({
 								data-testid="ImportWallet__edit-alias"
 								type="button"
 								variant="transparent"
+								className="text-theme-navy-600"
 								sizeClassName="py-0"
 								onClick={onClickEditAlias}
 							>
