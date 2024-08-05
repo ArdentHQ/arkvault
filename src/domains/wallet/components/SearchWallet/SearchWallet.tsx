@@ -22,8 +22,6 @@ import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import {
 	Balance,
-	WalletListItemMobile,
-	WalletItemDetails,
 	ReceiverItemMobile,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -103,58 +101,6 @@ const SearchWalletListItem = ({
 	);
 };
 
-const SearchWalletAvatar = ({
-	wallet,
-	isCompact,
-	showNetwork,
-	avatarShadowClassName,
-	networkIconShadowClassName,
-	networkIconClassName,
-	profile,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
-	showNetwork?: boolean;
-	avatarShadowClassName?: string;
-	networkIconShadowClassName?: string;
-	networkIconClassName?: string;
-	profile: Contracts.IProfile;
-}) => {
-	const network = useMemo(
-		() => profile.availableNetworks().find((network) => network.id() === wallet?.networkId()),
-		[wallet, profile],
-	);
-
-	if (isCompact) {
-		return (
-			<div data-testid="SearchWalletAvatar--compact" className="flex shrink-0 space-x-3">
-				{showNetwork && (
-					<NetworkIcon
-						size="xs"
-						network={network}
-						className="border-transparent dark:border-transparent"
-						shadowClassName={networkIconShadowClassName}
-					/>
-				)}
-				<Avatar shadowClassName={avatarShadowClassName} size="xs" address={wallet.address()} />
-			</div>
-		);
-	}
-
-	return (
-		<div className="flex shrink-0 -space-x-1">
-			{showNetwork && (
-				<NetworkIcon
-					size="lg"
-					network={wallet.network()}
-					shadowClassName={networkIconShadowClassName}
-					className={networkIconClassName}
-				/>
-			)}
-			<Avatar shadowClassName={avatarShadowClassName} size="lg" address={wallet.address()} />
-		</div>
-	);
-};
 
 const SearchSenderWalletItemResponsive = ({
 	alias,
