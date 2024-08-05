@@ -440,18 +440,19 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	selected = false,
 	balance,
 	address,
-	name
+	name,
 }) => {
 	const { t } = useTranslation();
-	
+
 	return (
 		<div
 			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
-			className={cn("flex h-[117px] w-full cursor-pointer flex-col gap-3 p-2 bg-theme-primary-100 ring-2 dark:bg-theme-background rounded-xl",
+			className={cn(
+				"flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background",
 				{
 					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
 					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
-				}
+				},
 			)}
 			tabIndex={onClick ? 0 : -1}
 			onClick={onClick}
@@ -465,15 +466,15 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 				</span>
 			</div>
 
-			<div className="flex flex-row rounded-lg overflow-hidden bg-theme-primary-500 text-white justify-between items-center text-sm font-semibold">
+			<div className="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white">
 				<div className="pl-2">{balance}</div>
-				<button className="h-full flex justify-center items-center py-3 px-5 bg-theme-primary-600">
+				<button className="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3">
 					{t("COMMON.SELECT")}
 				</button>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
