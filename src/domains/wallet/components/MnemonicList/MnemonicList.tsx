@@ -22,7 +22,7 @@ export const MnemonicList: React.VFC<MnemonicListProperties> = ({ mnemonic }) =>
 					<span className="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block">
 						{index + 1}
 					</span>
-					<div className="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden">
+					<div className="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden">
 						{index + 1}
 					</div>
 					<div className="sm:text-md text-sm">{word}</div>
