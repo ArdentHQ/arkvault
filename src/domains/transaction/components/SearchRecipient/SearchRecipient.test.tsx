@@ -134,6 +134,18 @@ describe("SearchRecipient", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
+	it("should call onAction when no address is selected", () => {
+		const onAction = vi.fn();
+
+		render(
+			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={onAction} />,
+		);
+
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+
+		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
+	});
+
 	it("should render with contact on mobile", () => {
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
