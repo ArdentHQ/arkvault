@@ -407,7 +407,10 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 	>
 		<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
 			<div className="flex flex-row gap-1.5">
-				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+				<span
+					className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+					data-testid="RecipientItemMobile--name"
+				>
 					{name}
 				</span>
 				<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">

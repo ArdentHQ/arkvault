@@ -105,13 +105,13 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 					address={
 						<TruncateMiddleDynamic
 							data-testid="Address__address_condensed"
-							value={recipient.address || ""}
+							value={recipient.address}
 							availableWidth={isSmAndAbove ? undefined : 100}
 							className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
 						/>
 					}
 					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
-					name={recipient.alias || ""}
+					name={recipient.alias}
 					selected={isSelected}
 					onClick={handleClick}
 				/>

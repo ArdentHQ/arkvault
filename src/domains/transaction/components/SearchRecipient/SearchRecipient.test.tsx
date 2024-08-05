@@ -134,6 +134,42 @@ describe("SearchRecipient", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
+	it("should render with no alias if the recipient address is undefined", () => {
+		const onAction = vi.fn();
+
+		const { asFragment } = render(
+			<SearchRecipient
+				profile={profile}
+				isOpen={true}
+				recipients={[
+					{
+						...recipients[0],
+						alias: undefined,
+					},
+				]}
+				onAction={onAction}
+			/>,
+		);
+
+		expect(screen.getByTestId("RecipientListItem__select-button-0")).toBeInTheDocument();
+		expect(screen.queryByTestId("RecipientListItem__alias-0")).not.toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should call onAction when no address is selected", () => {
+		const onAction = vi.fn();
+
+		const { asFragment } = render(
+			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={onAction} />,
+		);
+
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render with contact on mobile", () => {
 		const { asFragment } = renderResponsive(
 			<SearchRecipient
@@ -152,6 +188,74 @@ describe("SearchRecipient", () => {
 		);
 
 		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(Contact)")).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with my wallet on mobile", () => {
+		const { asFragment } = renderResponsive(
+			<SearchRecipient
+				profile={profile}
+				isOpen={true}
+				recipients={[
+					{
+						...recipients[0],
+						type: "wallet",
+					},
+				]}
+				selectedAddress={recipients[0].address}
+				onAction={vi.fn()}
+			/>,
+			"xs",
+		);
+
+		expect(
+			within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(My Wallet)"),
+		).toBeInTheDocument();
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with my wallet on desktop", () => {
+		const { asFragment } = renderResponsive(
+			<SearchRecipient
+				profile={profile}
+				isOpen={true}
+				recipients={[
+					{
+						...recipients[0],
+						type: "wallet",
+					},
+				]}
+				selectedAddress={recipients[0].address}
+				onAction={vi.fn()}
+			/>,
+			"md",
+		);
+
+		expect(screen.getByTestId("RecipientListItem__type")).toHaveTextContent("My Wallet");
+
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render with contact on desktop", () => {
+		const { asFragment } = renderResponsive(
+			<SearchRecipient
+				profile={profile}
+				isOpen={true}
+				recipients={[
+					{
+						...recipients[0],
+						type: "contact",
+					},
+				]}
+				selectedAddress={recipients[0].address}
+				onAction={vi.fn()}
+			/>,
+			"md",
+		);
+
+		expect(screen.getByTestId("RecipientListItem__type")).toHaveTextContent("Contact");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
