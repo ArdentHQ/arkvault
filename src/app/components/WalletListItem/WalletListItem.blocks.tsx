@@ -20,6 +20,7 @@ import {
 	StarredProperties,
 	InfoProperties,
 	RecipientItemMobileProperties,
+	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
@@ -433,6 +434,46 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		</div>
 	</div>
 );
+
+export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
+	onClick,
+	selected = false,
+	balance,
+	address,
+	name
+}) => {
+	const { t } = useTranslation();
+	
+	return (
+		<div
+			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
+			className={cn("flex h-[117px] w-full cursor-pointer flex-col gap-3 p-2 bg-theme-primary-100 ring-2 dark:bg-theme-background rounded-xl",
+				{
+					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+				}
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
+		>
+			<div className="flex flex-col gap-2 pl-2 pt-2">
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{name}
+				</span>
+				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+					{address}
+				</span>
+			</div>
+
+			<div className="flex flex-row rounded-lg overflow-hidden bg-theme-primary-500 text-white justify-between items-center text-sm font-semibold">
+				<div className="pl-2">{balance}</div>
+				<button className="h-full flex justify-center items-center py-3 px-5 bg-theme-primary-600">
+					{t("COMMON.SELECT")}
+				</button>
+			</div>
+		</div>
+	)
+}
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
