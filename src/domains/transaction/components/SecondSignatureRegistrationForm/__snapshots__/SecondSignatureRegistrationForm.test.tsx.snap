@@ -96,7 +96,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
                 1
               </span>
               <div
-                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
+                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
               >
                 1
               </div>
@@ -116,7 +116,7 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
                 2
               </span>
               <div
-                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
+                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
               >
                 2
               </div>
