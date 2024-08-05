@@ -3,10 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import {
-	SearchWalletListItemProperties,
-	SearchWalletProperties,
-} from "./SearchWallet.contracts";
+import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
@@ -18,10 +15,7 @@ import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
-import {
-	Balance,
-	ReceiverItemMobile,
-} from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { Balance, ReceiverItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
@@ -99,12 +93,7 @@ const SearchWalletListItem = ({
 	);
 };
 
-const SearchSenderWalletItemResponsive = ({
-	alias,
-	wallet,
-	onAction,
-	selectedAddress,
-}) => {
+const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAddress }) => {
 	const { isSmAndAbove } = useBreakpoint();
 	const handleButtonClick = useCallback(
 		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
@@ -118,7 +107,7 @@ const SearchSenderWalletItemResponsive = ({
 	return (
 		<tr data-testid="SenderWalletItemResponsive--item">
 			<td className="pt-3">
-				<ReceiverItemMobile 
+				<ReceiverItemMobile
 					balance={
 						<Balance
 							className="text-sm text-white"
@@ -141,8 +130,8 @@ const SearchSenderWalletItemResponsive = ({
 				/>
 			</td>
 		</tr>
-	)
-}
+	);
+};
 
 export const SearchWallet: FC<SearchWalletProperties> = ({
 	isOpen,
@@ -229,8 +218,8 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				),
 				accessor: "search",
 				className: "justify-end",
-				headerClassName: "no-border",
 				disableSortBy: true,
+				headerClassName: "no-border",
 			},
 		] as Column<Contracts.IReadWriteWallet>[];
 	}, [searchPlaceholder, setSearchKeyword, showConvertedValue, t]);
@@ -308,20 +297,20 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					/>
 				)}
 
-				<div className="rounded-xl border border-b-[5px] 	border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+				<div className="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 					<Table
 						columns={columns}
 						data={filteredWallets as Contracts.IReadWriteWallet[]}
 						hideHeader={useResponsive}
-						>
+					>
 						{renderTableRow}
 					</Table>
 
 					{isEmptyResults && (
 						<EmptyResults
-						className="mt-10"
-						title={t("COMMON.EMPTY_RESULTS.TITLE")}
-						subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
+							className="mt-10"
+							title={t("COMMON.EMPTY_RESULTS.TITLE")}
+							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						/>
 					)}
 				</div>
