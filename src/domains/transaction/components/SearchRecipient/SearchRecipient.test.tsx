@@ -137,9 +137,7 @@ describe("SearchRecipient", () => {
 	it("should call onAction when no address is selected", () => {
 		const onAction = vi.fn();
 
-		render(
-			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={onAction} />,
-		);
+		render(<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={onAction} />);
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
