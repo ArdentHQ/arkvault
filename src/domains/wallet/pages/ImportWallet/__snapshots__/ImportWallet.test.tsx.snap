@@ -3476,7 +3476,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 />
               </div>
               <button
-                class="py-0 css-1vadyxw"
+                class="text-theme-navy-600 py-0 css-1vadyxw"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >
@@ -3740,7 +3740,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 />
               </div>
               <button
-                class="py-0 css-1vadyxw"
+                class="text-theme-navy-600 py-0 css-1vadyxw"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >
