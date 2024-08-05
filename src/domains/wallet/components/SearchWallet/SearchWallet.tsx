@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 import {
 	SearchWalletListItemProperties,
-	SearchWalletListItemResponsiveProperties,
 	SearchWalletProperties,
 } from "./SearchWallet.contracts";
 import { Address } from "@/app/components/Address";
@@ -201,56 +200,6 @@ const SearchSenderWalletItemResponsive = ({
 		</tr>
 	)
 }
-
-const SearchWalletListItemResponsive = ({
-	alias,
-	wallet,
-	onAction,
-	selectedAddress,
-	showNetwork,
-	profile,
-}: SearchWalletListItemResponsiveProperties) => {
-	const handleButtonClick = useCallback(
-		() => onAction({ address: wallet.address(), name: alias, network: wallet.network() }),
-		[alias, wallet],
-	);
-
-	const isSelected = useMemo(() => selectedAddress === wallet.address(), [selectedAddress, wallet]);
-
-	const isSynced = isFullySynced(wallet);
-
-	return (
-		<tr data-testid="SearchWalletListItemResponsive--item">
-			<td className="pt-3">
-				<WalletListItemMobile
-					avatar={
-						<SearchWalletAvatar
-							wallet={wallet}
-							isCompact={false}
-							showNetwork={showNetwork}
-							avatarShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
-							networkIconClassName="text-theme-primary-300 dark:text-theme-secondary-800"
-							networkIconShadowClassName="ring-theme-success-100 dark:ring-theme-secondary-900"
-							profile={profile}
-						/>
-					}
-					details={<WalletItemDetails wallet={wallet} />}
-					balance={
-						<Balance
-							className="text-sm text-white"
-							wallet={wallet}
-							isCompact={false}
-							isSynced={isSynced}
-							isLargeScreen={false}
-						/>
-					}
-					selected={isSelected}
-					onClick={handleButtonClick}
-				/>
-			</td>
-		</tr>
-	);
-};
 
 export const SearchWallet: FC<SearchWalletProperties> = ({
 	isOpen,
