@@ -155,7 +155,7 @@ describe("SearchRecipient", () => {
 		expect(screen.queryByTestId("RecipientListItem__alias-0")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
-	})
+	});
 
 	it("should call onAction when no address is selected", () => {
 		const onAction = vi.fn();
@@ -209,7 +209,9 @@ describe("SearchRecipient", () => {
 			"xs",
 		);
 
-		expect(within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(My Wallet)")).toBeInTheDocument();
+		expect(
+			within(screen.getByTestId("WalletListItemMobile--selected")).getByText("(My Wallet)"),
+		).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
