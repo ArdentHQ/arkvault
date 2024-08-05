@@ -2,7 +2,7 @@ import React from "react";
 
 import { Icon, ThemeIcon } from "./Icon";
 import { render, screen } from "@/utils/testing-library";
-import * as useThemeHook from "@/app/hooks/use-theme";
+import * as themeFns from "@/utils/theme";
 
 describe("Icon", () => {
 	it("should render", () => {
@@ -38,12 +38,12 @@ describe("ThemeIcon", () => {
 		[true, "DarkIcon"],
 		[false, "LightIcon"],
 	])("should render right icon for theme - isDark: %s", (isDarkMode, testId) => {
-		const useThemeMock = vi.spyOn(useThemeHook, "useTheme").mockReturnValue({ isDarkMode } as never);
+		const shouldUseDarkColorsMock = vi.spyOn(themeFns, "shouldUseDarkColors").mockReturnValue(isDarkMode);
 
 		render(<ThemeIcon darkIcon="DarkIcon" lightIcon="LightIcon" />);
 
 		expect(screen.getByTestId(`icon-${testId}`)).toBeInTheDocument();
 
-		useThemeMock.mockRestore();
+		shouldUseDarkColorsMock.mockRestore();
 	});
 });
