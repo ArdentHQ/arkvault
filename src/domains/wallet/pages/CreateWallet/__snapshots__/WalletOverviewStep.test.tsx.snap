@@ -14,6 +14,64 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-YourPassphraseLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3.93333 23.5005C5.55337 23.5005 6.86667 22.1872 6.86667 20.5671C6.86667 18.9471 5.55337 17.6338 3.93333 17.6338C2.3133 17.6338 1 18.9471 1 20.5671C1 22.1872 2.3133 23.5005 3.93333 23.5005Z"
+                fill="#E6EFF9"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M6.86719 20.5664H14.2005V22.7664"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M11.2676 20.5664V22.0331"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M6.86719 15.4331V11.7665C6.86719 10.9565 7.52384 10.2998 8.33385 10.2998H21.5339C22.3439 10.2998 23.0005 10.9565 23.0005 11.7665V22.0331C23.0005 22.8432 22.3439 23.4998 21.5339 23.4998H17.1339"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M9.80078 10.3V6.63333C9.80078 3.79827 12.0991 1.5 14.9341 1.5C17.7692 1.5 20.0674 3.79827 20.0674 6.63333V10.3"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M12.8934 17.7245C12.4757 16.6923 12.8952 15.5107 13.8703 14.973C14.8454 14.4352 16.0686 14.7108 16.7188 15.6148C17.369 16.5188 17.2412 17.7661 16.4212 18.5195"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -24,7 +82,7 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
       </div>
     </div>
     <div
-      class="mt-8 space-y-8"
+      class="mt-4 space-y-4"
     >
       <div
         class="flex flex-col overflow-hidden rounded-xl mt-6"
@@ -80,19 +138,19 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
         </div>
       </div>
       <ul
-        class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"
+        class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5"
       >
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             1
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             1
           </div>
@@ -103,16 +161,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             2
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             2
           </div>
@@ -123,16 +181,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             3
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             3
           </div>
@@ -143,16 +201,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             4
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             4
           </div>
@@ -163,16 +221,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             5
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             5
           </div>
@@ -183,16 +241,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             6
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             6
           </div>
@@ -203,16 +261,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             7
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             7
           </div>
@@ -223,16 +281,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             8
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             8
           </div>
@@ -243,16 +301,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             9
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             9
           </div>
@@ -263,16 +321,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             10
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             10
           </div>
@@ -283,16 +341,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             11
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             11
           </div>
@@ -303,16 +361,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             12
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             12
           </div>
@@ -323,16 +381,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             13
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             13
           </div>
@@ -343,16 +401,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             14
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             14
           </div>
@@ -363,16 +421,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             15
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             15
           </div>
@@ -383,16 +441,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             16
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             16
           </div>
@@ -403,16 +461,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             17
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             17
           </div>
@@ -423,16 +481,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             18
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             18
           </div>
@@ -443,16 +501,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             19
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             19
           </div>
@@ -463,16 +521,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             20
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             20
           </div>
@@ -483,16 +541,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             21
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             21
           </div>
@@ -503,16 +561,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             22
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             22
           </div>
@@ -523,16 +581,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             23
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             23
           </div>
@@ -543,16 +601,16 @@ exports[`WalletOverviewStep > Render step > should render 1`] = `
           </div>
         </li>
         <li
-          class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+          class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
           data-testid="MnemonicList__item"
         >
           <span
-            class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+            class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
           >
             24
           </span>
           <div
-            class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+            class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-200 sm:hidden"
           >
             24
           </div>
