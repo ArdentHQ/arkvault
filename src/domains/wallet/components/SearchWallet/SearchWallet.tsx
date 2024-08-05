@@ -9,7 +9,6 @@ import {
 } from "./SearchWallet.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
@@ -17,7 +16,6 @@ import { Modal } from "@/app/components/Modal";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import {
@@ -100,7 +98,6 @@ const SearchWalletListItem = ({
 		</TableRow>
 	);
 };
-
 
 const SearchSenderWalletItemResponsive = ({
 	alias,
