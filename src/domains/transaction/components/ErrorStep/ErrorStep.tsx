@@ -35,7 +35,7 @@ export const ErrorStep = ({
 			<div className="space-y-8">
 				<StepHeader title={title || t("TRANSACTION.ERROR.TITLE")} />
 
-				<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
+				
 
 				<div className="space-y-6">
 					<p className="hidden text-theme-secondary-text md:block">
@@ -46,7 +46,7 @@ export const ErrorStep = ({
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</Alert>
 
-					{errorMessage && (
+					{errorMessage ? (
 						<TextArea
 							data-testid="ErrorStep__errorMessage"
 							className="py-4"
@@ -55,6 +55,8 @@ export const ErrorStep = ({
 							ref={errorMessageReference}
 							disabled
 						/>
+					) : (
+						<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
 					)}
 				</div>
 			</div>
