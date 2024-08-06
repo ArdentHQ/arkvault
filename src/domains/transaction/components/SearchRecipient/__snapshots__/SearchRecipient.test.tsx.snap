@@ -11,7 +11,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -853,7 +853,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1625,7 +1625,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2888,7 +2888,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3308,7 +3308,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3728,7 +3728,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -4088,7 +4088,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
         data-testid="Modal__inner"
       >
         <div

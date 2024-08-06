@@ -1270,7 +1270,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 tabindex="-1"
               >
                 <div
-                  class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+                  class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
                   data-testid="Modal__inner"
                 >
                   <div
@@ -11221,7 +11221,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </fieldset>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                 </section>
@@ -11642,7 +11642,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </fieldset>
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
       type="horizontal"
     />
   </section>
@@ -11783,15 +11783,15 @@ exports[`SendTransfer > should render review step 1`] = `
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -11804,7 +11804,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -11870,7 +11870,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -11879,7 +11879,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -11944,15 +11944,15 @@ exports[`SendTransfer > should render review step 1`] = `
         </div>
       </div>
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -11970,11 +11970,11 @@ exports[`SendTransfer > should render review step 1`] = `
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -12211,15 +12211,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -12232,7 +12232,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -12298,7 +12298,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12307,7 +12307,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12363,7 +12363,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12417,15 +12417,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         </div>
       </div>
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -12443,11 +12443,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -12684,15 +12684,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -12705,7 +12705,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -12771,7 +12771,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12780,7 +12780,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12836,7 +12836,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12894,11 +12894,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -15663,7 +15663,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 tabindex="-1"
               >
                 <div
-                  class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+                  class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
                   data-testid="Modal__inner"
                 >
                   <div
