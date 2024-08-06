@@ -78,6 +78,11 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import SelectNetworkLight from "./select-network-light.svg?react";
+import SelectNetworkDark from "./select-network-dark.svg?react";
+import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
+import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
+import Completed from "./completed.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -101,6 +106,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ClockSmall,
 	Cloud,
 	Code,
+	Completed,
 	Copy,
 	CopyKey,
 	Cross,
@@ -142,6 +148,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Plus,
 	QRCode,
 	QuestionMarkSmall,
+	SelectNetworkDark,
+	SelectNetworkLight,
 	Server,
 	ServerMultisign,
 	ServerPeer,
@@ -158,4 +166,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	WalletEncryptionDark,
+	WalletEncryptionLight,
 };
