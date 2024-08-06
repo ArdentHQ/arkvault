@@ -11,7 +11,7 @@ exports[`Modal > should closed by the Esc key 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -85,7 +85,7 @@ exports[`Modal > should render a 3x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -157,7 +157,7 @@ exports[`Modal > should render a 4x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -229,7 +229,7 @@ exports[`Modal > should render a 5x large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -301,7 +301,7 @@ exports[`Modal > should render a large one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -373,7 +373,7 @@ exports[`Modal > should render a medium one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -445,7 +445,7 @@ exports[`Modal > should render a modal with banner 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -527,7 +527,7 @@ exports[`Modal > should render a modal with content 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -601,7 +601,7 @@ exports[`Modal > should render a modal with description 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -679,7 +679,7 @@ exports[`Modal > should render a modal with overlay 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -753,7 +753,7 @@ exports[`Modal > should render a modal with overlay 2`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -827,7 +827,7 @@ exports[`Modal > should render a small one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -899,7 +899,7 @@ exports[`Modal > should render a xlarge one 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -971,7 +971,7 @@ exports[`Modal > should render with scrollbar if it exceeds window height 1`] = 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1045,7 +1045,7 @@ exports[`Modal > should render without close button 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1079,7 +1079,7 @@ exports[`Modal > should render without offset for buttons 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
