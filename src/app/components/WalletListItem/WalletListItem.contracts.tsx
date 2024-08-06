@@ -69,5 +69,5 @@ export interface RecipientItemMobileProperties {
 	selected?: boolean;
 	type: string;
 	address: React.ReactNode;
-	name?: string;
+	name: string;
 }
