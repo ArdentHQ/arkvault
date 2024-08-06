@@ -111,7 +111,7 @@ const SearchRecipientListItemResponsive: FC<SearchRecipientListItemResponsivePro
 						/>
 					}
 					type={recipient.type === "wallet" ? t("COMMON.MY_WALLET") : t("COMMON.CONTACT")}
-					name={recipient.alias}
+					name={recipient.alias || ""}
 					selected={isSelected}
 					onClick={handleClick}
 				/>
