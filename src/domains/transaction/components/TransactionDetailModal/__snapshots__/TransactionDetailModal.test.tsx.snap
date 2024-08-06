@@ -13,7 +13,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -414,7 +414,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -818,7 +818,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1242,7 +1242,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1590,7 +1590,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2192,7 +2192,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2634,7 +2634,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2982,7 +2982,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3496,7 +3496,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3976,7 +3976,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -4456,7 +4456,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -4936,7 +4936,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
