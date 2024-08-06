@@ -301,7 +301,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -648,7 +648,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -995,7 +995,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -1342,7 +1342,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -1720,7 +1720,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -2968,7 +2968,7 @@ exports[`ImportWallet > should render method step 1`] = `
         </div>
       </div>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -3031,6 +3031,93 @@ exports[`ImportWallet > should render network step 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="css-h1kfx5"
+            data-testid="icon-SelectNetworkLight"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 1.50781C9.02944 1.50781 5 5.53725 5 10.5078L9.5 10.5C9.5 10.8333 9.6 11.8 10 13C10.5 14.5 11 15.2538 13 15.2538H21.6484C22.5052 13.876 23 12.2497 23 10.5078C23 5.53725 18.9706 1.50781 14 1.50781Z"
+                fill="#E6EFF9"
+              />
+              <path
+                d="M5 10.5078C5 5.53725 9.02944 1.50781 14 1.50781C18.9706 1.50781 23 5.53725 23 10.5078C23 13.6332 21.4069 16.3865 18.9884 18"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M11.7969 1.78125C10.5969 3.58125 9.79688 6.90439 9.79688 10.5044C9.79688 11.2643 9.83252 12.0125 9.90006 12.7369"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5 10.5078H23"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M12.5 15.2031H21.6816"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M6.45312 5.60938H21.5539"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M16.2031 1.78125C17.4031 3.58125 18.1031 6.81041 18.1031 10.5104C18.1031 12.9777 17.7919 15.2356 17.2286 17"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M9.25 16.2188H1.75"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M4.16667 18.6146L1.75 16.1979L4.16667 13.7812"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M8.75 20.1797L16.25 20.1797"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M13.8333 17.7839L16.25 20.2005L13.8333 22.6172"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -3047,7 +3134,7 @@ exports[`ImportWallet > should render network step 1`] = `
       </div>
     </div>
     <fieldset
-      class="mt-8 css-1bcidjh"
+      class="mt-4 css-1bcidjh"
     >
       <label
         class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
@@ -3185,6 +3272,49 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-h1kfx5"
+            data-testid="icon-Completed"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.26562L11.0312 12.7456"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -3201,225 +3331,98 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
+      class="mt-4 space-y-4"
     >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        data-testid="DetailWrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="DetailLabelText"
           >
-            Cryptoasset
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
+            Imported
           </div>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="w-full truncate"
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              ARK Devnet
+              Address
             </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
             <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Address
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
             >
               <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
           <div
-            class="flex items-center sm:hidden"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="shrink-0 css-1yk316i"
-              data-testid="Avatar"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+              type="horizontal"
+            />
+          </div>
+          <div
+            class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
+          >
+            <div
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
+              Balance 
             </div>
-          </div>
-          <div
-            class="hidden sm:flex sm:items-center"
-          >
             <div
-              class="shrink-0 css-1n9jllj"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Balance
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
+              class="font-semibold"
             >
               <span
                 class="whitespace-nowrap"
@@ -3431,73 +3434,87 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="no-ligatures css-1uo4ck9"
-      data-testid="TransactionDetail"
-    >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        data-testid="DetailWrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="DetailLabelText"
           >
             Wallet Name
           </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Wallet 1
-          </div>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="w-full truncate"
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              ARK Wallet 1
+              Name
             </div>
-          </div>
-          <button
-            class="css-6419sw"
-            data-testid="ImportWallet__edit-alias"
-            type="button"
-          >
             <div
-              class="flex items-center space-x-2"
+              class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
               >
-                <svg
-                  id="pencil"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                 ARK Wallet 1 
               </div>
+              <div
+                class="flex h-5 items-center sm:hidden"
+              >
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+                  type="vertical"
+                />
+              </div>
+              <button
+                class="text-theme-navy-600 py-0 css-1vadyxw"
+                data-testid="ImportWallet__edit-alias"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="leading-[17px] sm:leading-5"
+                  >
+                    Edit
+                  </span>
+                </div>
+              </button>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -3519,6 +3536,49 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-h1kfx5"
+            data-testid="icon-Completed"
+            height="24"
+            width="24"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.26562L12.3234 16.4256C12.1634 16.5856 12.0034 16.7456 11.7634 16.7456C11.5234 16.7456 11.2834 16.6656 11.1234 16.5056L9.52344 14.9056"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 14.9766L7.19375 16.5766C7.35375 16.7366 7.51375 16.8166 7.75375 16.8166C7.83375 16.8166 7.99375 16.8166 8.07375 16.7366"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.26562L11.0312 12.7456"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -3535,225 +3595,98 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
+      class="mt-4 space-y-4"
     >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        data-testid="DetailWrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="DetailLabelText"
           >
-            Cryptoasset
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
+            Imported
           </div>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="w-full truncate"
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              ARK Devnet
+              Address
             </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
             <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Address
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
             >
               <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                class="no-ligatures min-w-0 overflow-hidden leading-[17px] sm:leading-5 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
               </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              <button
+                class="ring-focus relative focus:outline-none"
+                data-ring-focus-margin="-m-1"
+                data-testid="clipboard-icon__wrapper"
+                type="button"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                  <svg
+                    id="copy"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                      />
+                      <path
+                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
           <div
-            class="flex items-center sm:hidden"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="shrink-0 css-1yk316i"
-              data-testid="Avatar"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
+              type="horizontal"
+            />
+          </div>
+          <div
+            class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
+          >
+            <div
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
+              Balance 
             </div>
-          </div>
-          <div
-            class="hidden sm:flex sm:items-center"
-          >
             <div
-              class="shrink-0 css-1n9jllj"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Balance
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
+              class="font-semibold"
             >
               <span
                 class="whitespace-nowrap"
@@ -3765,73 +3698,87 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        data-testid="DetailWrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
+          data-testid="DetailLabel"
         >
           <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            data-testid="DetailLabelText"
           >
             Wallet Name
           </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Wallet 1
-          </div>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="w-full truncate"
+              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              ARK Wallet 1
+              Name
             </div>
-          </div>
-          <button
-            class="css-6419sw"
-            data-testid="ImportWallet__edit-alias"
-            type="button"
-          >
             <div
-              class="flex items-center space-x-2"
+              class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
               >
-                <svg
-                  id="pencil"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                 ARK Wallet 1 
               </div>
+              <div
+                class="flex h-5 items-center sm:hidden"
+              >
+                <div
+                  class="border-theme-secondary-300 dark:border-theme-secondary-800 css-3y8nng"
+                  type="vertical"
+                />
+              </div>
+              <button
+                class="text-theme-navy-600 py-0 css-1vadyxw"
+                data-testid="ImportWallet__edit-alias"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="pencil"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <path
+                        d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="leading-[17px] sm:leading-5"
+                  >
+                    Edit
+                  </span>
+                </div>
+              </button>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
