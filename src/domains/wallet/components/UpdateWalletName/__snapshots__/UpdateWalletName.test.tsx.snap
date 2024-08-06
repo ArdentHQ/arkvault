@@ -11,7 +11,7 @@ exports[`UpdateWalletName > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -153,7 +153,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -342,7 +342,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -531,7 +531,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -720,7 +720,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -909,7 +909,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
@@ -1098,7 +1098,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
         data-testid="Modal__inner"
       >
         <div
