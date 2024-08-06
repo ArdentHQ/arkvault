@@ -11,7 +11,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -595,7 +595,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1179,7 +1179,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1737,7 +1737,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2283,7 +2283,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2773,7 +2773,7 @@ exports[`MultiSignatureDetail > should render summary step for multi payment 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3521,7 +3521,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3966,7 +3966,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -4512,7 +4512,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -5012,7 +5012,7 @@ exports[`MultiSignatureDetail > should render summary step for vote 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -5512,7 +5512,7 @@ exports[`MultiSignatureDetail > should show error screen for unsupported Nano S 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -5834,7 +5834,7 @@ exports[`MultiSignatureDetail > should show send button when able to add final s
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -6406,7 +6406,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -6990,7 +6990,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -7327,7 +7327,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
@@ -7582,7 +7582,7 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
         data-testid="Modal__inner"
       >
         <div
