@@ -411,18 +411,14 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 		>
 			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
 				<div className="flex flex-row gap-1.5">
-					<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200 truncate">
-						<TruncateEnd
-							text={name}
-							maxChars={maxCharacters}
-							showTooltip={name.length > maxCharacters}
-						/>
+					<span className="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
 					</span>
 					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 						({type})
 					</span>
 				</div>
-				
+
 				{address}
 			</div>
 			<div
@@ -441,7 +437,7 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 				/>
 			</div>
 		</div>
-	)
+	);
 };
 
 export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
