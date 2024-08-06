@@ -301,7 +301,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -648,7 +648,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div

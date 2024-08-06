@@ -1829,10 +1829,14 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                                 class="flex flex-row gap-1.5"
                               >
                                 <span
-                                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                  data-testid="RecipientItemMobile--name"
+                                  class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
-                                  ARK Wallet 1
+                                  <span
+                                    class="no-ligatures css-9nx3be"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet…
+                                  </span>
                                 </span>
                                 <span
                                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -2466,10 +2470,14 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                                 class="flex flex-row gap-1.5"
                               >
                                 <span
-                                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                  data-testid="RecipientItemMobile--name"
+                                  class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
-                                  ARK Wallet 1
+                                  <span
+                                    class="no-ligatures css-9nx3be"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet…
+                                  </span>
                                 </span>
                                 <span
                                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3932,10 +3940,14 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                 class="flex flex-row gap-1.5"
                               >
                                 <span
-                                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                  data-testid="RecipientItemMobile--name"
+                                  class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
-                                  ARK Wallet 1
+                                  <span
+                                    class="no-ligatures css-9nx3be"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet…
+                                  </span>
                                 </span>
                                 <span
                                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -4007,10 +4019,14 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                                 class="flex flex-row gap-1.5"
                               >
                                 <span
-                                  class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
-                                  data-testid="RecipientItemMobile--name"
+                                  class="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                                 >
-                                  ARK Wallet 2
+                                  <span
+                                    class="no-ligatures css-9nx3be"
+                                    data-testid="TruncateEnd"
+                                  >
+                                    ARK Wallet…
+                                  </span>
                                 </span>
                                 <span
                                   class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"

@@ -23,12 +23,13 @@ import {
 	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -392,51 +393,53 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 	type,
 	address,
 	name,
-}) => (
-	<div
-		data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
-		className={cn(
-			"flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background",
-			{
-				"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
-				"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
-			},
-		)}
-		tabIndex={onClick ? 0 : -1}
-		onClick={onClick}
-	>
-		<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
-			<div className="flex flex-row gap-1.5">
-				<span
-					className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
-					data-testid="RecipientItemMobile--name"
-				>
-					{name}
-				</span>
-				<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
-					({type})
-				</span>
-			</div>
+}) => {
+	const { isSmAndAbove } = useBreakpoint();
+	const maxCharacters = isSmAndAbove ? 20 : 10;
 
-			{address}
-		</div>
+	return (
 		<div
-			className={cn("flex h-full w-11 items-center justify-center", {
-				"bg-theme-primary-100 dark:bg-theme-background": !selected,
-				"bg-theme-primary-600 dark:bg-theme-primary-600": selected,
-			})}
+			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+			className={cn(
+				"flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background",
+				{
+					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+				},
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
 		>
-			<Icon
-				className={cn({
-					"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
-					"text-theme-primary-50": selected,
+			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
+				<div className="flex flex-row gap-1.5">
+					<span className="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
+					</span>
+					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+						({type})
+					</span>
+				</div>
+
+				{address}
+			</div>
+			<div
+				className={cn("flex h-full w-11 items-center justify-center", {
+					"bg-theme-primary-100 dark:bg-theme-background": !selected,
+					"bg-theme-primary-600 dark:bg-theme-primary-600": selected,
 				})}
-				name="CircleCheckMark"
-				size="lg"
-			/>
+			>
+				<Icon
+					className={cn({
+						"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
+						"text-theme-primary-50": selected,
+					})}
+					name="CircleCheckMark"
+					size="lg"
+				/>
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	onClick,

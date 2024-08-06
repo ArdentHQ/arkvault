@@ -49,10 +49,8 @@ describe("WalletActionsModals", () => {
 			},
 		);
 
-		expect(screen.getByTestId("ReceiveFunds__address")).toBeInTheDocument();
 		await expect(screen.findByTestId("ReceiveFunds__toggle")).resolves.toBeInTheDocument();
-		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeInTheDocument();
-		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId("ReceiveFunds__Name_Address")).resolves.toBeInTheDocument();
 
 		expect(asFragment).toMatchSnapshot();
 	});
