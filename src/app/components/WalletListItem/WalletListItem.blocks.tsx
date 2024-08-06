@@ -28,7 +28,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
-import { TruncateEnd } from "../TruncateEnd";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
