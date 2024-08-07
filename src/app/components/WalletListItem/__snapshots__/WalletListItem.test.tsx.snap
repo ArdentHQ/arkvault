@@ -244,7 +244,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -291,7 +291,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -321,7 +321,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -780,7 +780,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -827,7 +827,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -857,7 +857,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -1154,7 +1154,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -1201,7 +1201,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -1231,7 +1231,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -1893,7 +1893,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -1940,7 +1940,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -1970,7 +1970,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2315,7 +2315,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -2362,7 +2362,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -2392,7 +2392,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2689,7 +2689,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -2736,7 +2736,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -2766,7 +2766,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -3063,7 +3063,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               tabindex="-1"
             >
               <div
-                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-8 pb-24 pt-8 sm:pb-8"
+                class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
                 data-testid="Modal__inner"
               >
                 <div
@@ -3110,7 +3110,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   class="relative flex flex-1 flex-col space-y-1.5"
                 >
                   <h2
-                    class="mb-0 text-lg font-bold md:text-2xl"
+                    class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                   >
                     Wallet Name
                   </h2>
@@ -3140,7 +3140,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"

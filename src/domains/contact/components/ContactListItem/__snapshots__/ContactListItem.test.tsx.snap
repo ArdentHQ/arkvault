@@ -10,7 +10,7 @@ exports[`ContactListItem > should render 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           >
             <div
               class="shrink-0 css-1px82g5"
@@ -174,7 +174,7 @@ exports[`ContactListItem > should render 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -272,7 +272,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           >
             <div
               class="shrink-0 css-1px82g5"
@@ -436,7 +436,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -534,7 +534,7 @@ exports[`ContactListItem > should render options 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           >
             <div
               class="shrink-0 css-1px82g5"
@@ -698,7 +698,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -787,7 +787,7 @@ exports[`ContactListItem > should render options 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           />
         </td>
         <td
@@ -920,7 +920,7 @@ exports[`ContactListItem > should render options 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -1009,7 +1009,7 @@ exports[`ContactListItem > should render options 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           />
         </td>
         <td
@@ -1142,7 +1142,7 @@ exports[`ContactListItem > should render options 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -1240,7 +1240,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           >
             <div
               class="shrink-0 css-1px82g5"
@@ -1404,7 +1404,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -1493,7 +1493,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           />
         </td>
         <td
@@ -1626,7 +1626,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"
@@ -1715,7 +1715,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
       >
         <td>
           <div
-            class="space-x-4 whitespace-nowrap css-bgc8eo"
+            class="space-x-4 whitespace-nowrap css-rjc6e4"
           />
         </td>
         <td
@@ -1848,7 +1848,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
           class=""
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div
               class="flex items-center space-x-2"

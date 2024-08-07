@@ -67,7 +67,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                       Profile Name
                     </label>
                     <div
-                      class=" css-n1b0kl"
+                      class=" css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -156,7 +156,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                   Password
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -229,7 +229,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                   Confirm Password
                 </label>
                 <div
-                  class="css-12mz4i6"
+                  class="css-1hr3i2s"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -351,7 +351,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -388,7 +388,7 @@ exports[`Import Profile - Profile Form Step > should fail password confirmation 
                             AUD (A$)…
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -784,7 +784,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                       Profile Name
                     </label>
                     <div
-                      class=" css-n1b0kl"
+                      class=" css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -872,7 +872,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -951,7 +951,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1030,7 +1030,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1068,7 +1068,7 @@ exports[`Import Profile - Profile Form Step > should render profile form 1`] = `
                             …
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -1464,7 +1464,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                       Profile Name
                     </label>
                     <div
-                      class=" css-n1b0kl"
+                      class=" css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1552,7 +1552,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1631,7 +1631,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1710,7 +1710,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1748,7 +1748,7 @@ exports[`Import Profile - Profile Form Step > should render profile form with em
                             …
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2144,7 +2144,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                       Profile Name
                     </label>
                     <div
-                      class=" css-n1b0kl"
+                      class=" css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2239,7 +2239,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2318,7 +2318,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2397,7 +2397,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2434,7 +2434,7 @@ exports[`Import Profile - Profile Form Step > should store profile 1`] = `
                             AUD (A$)…
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -2829,7 +2829,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       Profile Name
                     </label>
                     <div
-                      class=" css-12mz4i6"
+                      class=" css-1hr3i2s"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2972,7 +2972,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3051,7 +3051,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3130,7 +3130,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3167,7 +3167,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                             BTC (Ƀ)…
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -3563,7 +3563,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                       Profile Name
                     </label>
                     <div
-                      class=" css-12mz4i6"
+                      class=" css-1hr3i2s"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3706,7 +3706,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3785,7 +3785,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                   </span>
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3864,7 +3864,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                     data-testid="SelectDropdown"
                   >
                     <div
-                      class="sr-only css-n1b0kl"
+                      class="sr-only css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3901,7 +3901,7 @@ exports[`Import Profile - Profile Form Step > should update the avatar when remo
                             BTC (Ƀ)…
                           </div>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"

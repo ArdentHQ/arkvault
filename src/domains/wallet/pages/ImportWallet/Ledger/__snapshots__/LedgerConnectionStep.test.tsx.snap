@@ -48,7 +48,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -86,7 +86,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
                   …
                 </div>
                 <div
-                  class="css-xk5t3v"
+                  class="css-13c7w0w"
                   disabled=""
                 >
                   <div

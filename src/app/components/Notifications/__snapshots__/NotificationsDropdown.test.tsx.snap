@@ -72,12 +72,12 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -168,12 +168,12 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
@@ -187,7 +187,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -270,7 +270,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-148b4hi"
@@ -300,7 +300,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -380,7 +380,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -410,7 +410,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -490,7 +490,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -531,7 +531,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
         tabindex="-1"
       >
         <div
-          class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+          class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
           data-testid="Modal__inner"
         >
           <div
@@ -578,7 +578,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="relative flex flex-1 flex-col space-y-1.5"
           >
             <h2
-              class="mb-0 text-lg font-bold md:text-2xl"
+              class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
             >
               Transfer
             </h2>
@@ -1117,12 +1117,12 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -1213,12 +1213,12 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
@@ -1232,7 +1232,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1315,7 +1315,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-148b4hi"
@@ -1345,7 +1345,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1425,7 +1425,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -1455,7 +1455,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1535,7 +1535,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -1643,12 +1643,12 @@ exports[`Notifications > should render with transactions in md 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -1739,12 +1739,12 @@ exports[`Notifications > should render with transactions in md 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
@@ -1758,7 +1758,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1841,7 +1841,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-148b4hi"
@@ -1871,7 +1871,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1951,7 +1951,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -1981,7 +1981,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2061,7 +2061,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -2169,12 +2169,12 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -2265,12 +2265,12 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
@@ -2601,12 +2601,12 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -2697,12 +2697,12 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
@@ -2716,7 +2716,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2799,7 +2799,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-148b4hi"
@@ -2829,7 +2829,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2909,7 +2909,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -2939,7 +2939,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-hhd44j"
+                                  class="flex space-x-3 css-5gvahk"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -3019,7 +3019,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-yf8cy4"
+                                  class="justify-end css-t4jv3s"
                                 >
                                   <div
                                     class="css-1v19423"
@@ -3134,12 +3134,12 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                   Plugins
                 </div>
                 <div
-                  class=" css-1m6rt2i"
+                  class="css-1m6rt2i"
                   role="table"
                 >
                   <table
                     cellpadding="0"
-                    class="table-auto"
+                    class="w-full table-auto"
                   >
                     <tbody
                       role="rowgroup"
@@ -3230,12 +3230,12 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                   </div>
                   <div>
                     <div
-                      class=" css-1m6rt2i"
+                      class="css-1m6rt2i"
                       role="table"
                     >
                       <table
                         cellpadding="0"
-                        class="table-auto"
+                        class="w-full table-auto"
                       >
                         <tbody
                           role="rowgroup"
