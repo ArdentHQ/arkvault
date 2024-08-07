@@ -33,20 +33,19 @@ exports[`UnlockTokensSelect > should render 1`] = `
       class="relative border-b border-theme-secondary-300 dark:border-theme-secondary-800"
     >
       <div
-        class="-mt-3 css-1m6rt2i"
+        class="css-1m6rt2i"
         role="table"
       >
         <table
           cellpadding="0"
-          class="table-auto"
+          class="w-full table-auto"
         >
           <thead>
             <tr
-              class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -92,7 +91,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -138,7 +137,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -173,7 +172,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-hhd44j"
+                  class="css-5gvahk"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -197,7 +196,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-yf8cy4"
+                  class="justify-end css-t4jv3s"
                 >
                   <div
                     class="flex items-center"
@@ -257,7 +256,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-hhd44j"
+                  class="css-5gvahk"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -281,7 +280,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-yf8cy4"
+                  class="justify-end css-t4jv3s"
                 >
                   <div
                     class="flex items-center"
@@ -341,7 +340,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-hhd44j"
+                  class="css-5gvahk"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -365,7 +364,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-yf8cy4"
+                  class="justify-end css-t4jv3s"
                 >
                   <div
                     class="flex items-center"
@@ -422,7 +421,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-hhd44j"
+                  class="css-5gvahk"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -446,7 +445,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-yf8cy4"
+                  class="justify-end css-t4jv3s"
                 >
                   <div
                     class="flex items-center"

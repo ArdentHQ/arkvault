@@ -82,7 +82,7 @@ export const HeaderSearchInput: FC<HeaderSearchInputProperties> = ({
 
 				<Icon
 					className="text-theme-secondary-700 dark:text-theme-secondary-600"
-					name="MagnifyingGlass"
+					name="MagnifyingGlassAlt"
 					size="lg"
 				/>
 			</SearchBarInputWrapper>

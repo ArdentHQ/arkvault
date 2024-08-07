@@ -62,3 +62,12 @@ export interface WalletListItemMobileProperties {
 	extraDetails?: React.ReactNode;
 	selected?: boolean;
 }
+export interface RecipientItemMobileProperties {
+	onClick?: () => void;
+	onButtonClick?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
+	buttonLabel?: React.ReactNode;
+	selected?: boolean;
+	type: string;
+	address: React.ReactNode;
+	name: string;
+}

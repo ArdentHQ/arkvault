@@ -11,7 +11,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -58,7 +58,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -314,20 +314,19 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                 </div>
               </div>
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -373,7 +372,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -419,7 +418,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -465,7 +464,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -521,7 +520,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-success-600"
@@ -559,7 +558,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -575,7 +574,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-warning-600"
@@ -613,7 +612,7 @@ exports[`PortfolioBreakdownDetails > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -646,7 +645,7 @@ exports[`PortfolioBreakdownDetails > should render responsive 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -693,7 +692,7 @@ exports[`PortfolioBreakdownDetails > should render responsive 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -1218,7 +1217,7 @@ exports[`PortfolioBreakdownDetails > should render responsive with other group 1
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1265,7 +1264,7 @@ exports[`PortfolioBreakdownDetails > should render responsive with other group 1
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -1998,7 +1997,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2045,7 +2044,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Portfolio Breakdown
           </h2>
@@ -2395,20 +2394,19 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                 </div>
               </div>
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -2454,7 +2452,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -2500,7 +2498,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -2546,7 +2544,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -2602,7 +2600,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-success-600"
@@ -2640,7 +2638,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2656,7 +2654,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-warning-600"
@@ -2694,7 +2692,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2710,7 +2708,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2748,7 +2746,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2764,7 +2762,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2802,7 +2800,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2818,7 +2816,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2856,7 +2854,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2872,7 +2870,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2910,7 +2908,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"
@@ -2926,7 +2924,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                     >
                       <td>
                         <div
-                          class="space-x-3 css-hhd44j"
+                          class="space-x-3 css-5gvahk"
                         >
                           <div
                             class="h-5 w-1 rounded bg-theme-secondary-400"
@@ -2964,7 +2962,7 @@ exports[`PortfolioBreakdownDetails > should render with other group 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <span
                             class="font-semibold text-theme-secondary-text"

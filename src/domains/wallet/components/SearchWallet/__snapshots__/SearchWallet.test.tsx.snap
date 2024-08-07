@@ -11,7 +11,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -58,7 +58,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -74,20 +74,19 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -133,7 +132,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -179,7 +178,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -191,50 +190,72 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -255,7 +276,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -345,7 +366,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -371,7 +392,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -461,7 +482,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -502,7 +523,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -549,7 +570,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -565,20 +586,19 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -624,7 +644,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -670,7 +690,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -682,50 +702,72 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -746,7 +788,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -815,7 +857,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -841,7 +883,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -910,7 +952,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -951,7 +993,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -998,7 +1040,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -1014,20 +1056,19 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -1073,7 +1114,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -1119,7 +1160,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -1131,50 +1172,72 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -1195,7 +1258,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -1264,7 +1327,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-1hei9vx"
@@ -1288,7 +1351,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -1357,7 +1420,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -1398,7 +1461,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1445,7 +1508,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -1461,20 +1524,19 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -1520,7 +1582,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -1566,7 +1628,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -1578,50 +1640,72 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -1642,7 +1726,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -1732,7 +1816,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -1758,7 +1842,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -1848,7 +1932,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -1889,7 +1973,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -1936,7 +2020,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -1995,7 +2079,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2017,35 +2101,57 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -2283,7 +2389,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2330,7 +2436,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -2389,7 +2495,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2411,35 +2517,57 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -2677,7 +2805,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -2724,7 +2852,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -2783,7 +2911,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2805,35 +2933,57 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -3071,7 +3221,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3118,7 +3268,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -3134,20 +3284,19 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -3193,7 +3342,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -3239,7 +3388,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -3251,50 +3400,72 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -3315,7 +3486,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -3394,7 +3565,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -3436,7 +3607,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3483,7 +3654,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -3499,20 +3670,19 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -3558,7 +3728,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -3604,7 +3774,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -3616,50 +3786,72 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -3680,7 +3872,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -3770,7 +3962,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <button
                             class="text-theme-primary-reverse-600 css-1j9j5h6"
@@ -3794,7 +3986,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -3884,7 +4076,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -3925,7 +4117,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -3972,7 +4164,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -3988,20 +4180,19 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -4047,7 +4238,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -4093,7 +4284,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -4105,50 +4296,72 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -4169,7 +4382,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -4259,7 +4472,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -4285,7 +4498,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -4375,7 +4588,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -4416,7 +4629,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -4463,7 +4676,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -4479,20 +4692,19 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -4538,7 +4750,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -4584,7 +4796,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -4630,7 +4842,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -4642,50 +4854,72 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -4706,7 +4940,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -4811,7 +5045,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -4837,7 +5071,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -4942,7 +5176,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -4983,7 +5217,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -5030,7 +5264,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -5046,20 +5280,19 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -5105,7 +5338,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -5151,7 +5384,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5197,7 +5430,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -5209,50 +5442,72 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -5273,7 +5528,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -5356,7 +5611,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -5382,7 +5637,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -5465,7 +5720,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -5506,7 +5761,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -5553,7 +5808,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -5569,20 +5824,19 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -5628,7 +5882,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -5674,7 +5928,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5720,7 +5974,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -5732,50 +5986,72 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -5796,7 +6072,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -5879,7 +6155,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <button
                             class="text-theme-primary-reverse-600 -mr-3 css-1hei9vx"
@@ -5903,7 +6179,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -5986,7 +6262,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -6027,7 +6303,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -6074,7 +6350,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -6090,20 +6366,19 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -6149,7 +6424,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -6195,7 +6470,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -6241,7 +6516,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -6253,50 +6528,72 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -6317,7 +6614,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -6421,7 +6718,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -6447,7 +6744,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -6551,7 +6848,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -6592,7 +6889,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -6639,7 +6936,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -6698,7 +6995,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -6720,35 +7017,57 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -6986,7 +7305,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -7033,7 +7352,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -7092,7 +7411,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -7114,35 +7433,57 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -7380,7 +7721,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -7427,7 +7768,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -7486,7 +7827,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                     class="flex-1"
                   >
                     <div
-                      class="-ml-4 css-jq6j0b"
+                      class="-ml-4 css-10tuou7"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -7508,35 +7849,57 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                     width="20"
                   >
                     <svg
-                      id="magnifying-glass"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
+                      fill="none"
+                      viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
-                      y="0"
                     >
                       <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        clip-path="url(#clip0_13375_36442)"
+                        id="Vertical container"
                       >
-                        <path
-                          d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                        />
+                        <g
+                          id="Vertical container_2"
+                        >
+                          <path
+                            d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                            id="Vector"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                          <path
+                            d="M12.8281 12.7832L14.4281 14.3832"
+                            id="Vector_2"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.6"
+                          />
+                        </g>
                       </g>
+                      <defs>
+                        <clippath
+                          id="clip0_13375_36442"
+                        >
+                          <rect
+                            fill="transparent"
+                            height="16"
+                            width="16"
+                          />
+                        </clippath>
+                      </defs>
                     </svg>
                   </div>
                 </div>
               </div>
               <div
-                class=" css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <tbody
                     role="rowgroup"
@@ -7774,7 +8137,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -7821,7 +8184,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -7837,20 +8200,19 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -7896,7 +8258,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -7942,7 +8304,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -7988,7 +8350,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -8000,50 +8362,72 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -8064,7 +8448,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-hhd44j"
+                          class="space-x-4 css-5gvahk"
                         >
                           <div
                             class="flex shrink-0 space-x-3"
@@ -8158,7 +8542,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                       </td>
                       <td>
                         <div
-                          class="justify-end css-yf8cy4"
+                          class="justify-end css-t4jv3s"
                         >
                           <div>
                             <button
@@ -8200,7 +8584,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -8247,7 +8631,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -8263,20 +8647,19 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -8322,7 +8705,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -8368,7 +8751,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -8414,7 +8797,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -8426,50 +8809,72 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -8490,7 +8895,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -8594,7 +8999,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <button
                             class="text-theme-primary-reverse-600 css-1j9j5h6"
@@ -8618,7 +9023,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -8722,7 +9127,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -8763,7 +9168,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl p-8"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-6 pb-6 pt-4 md:p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -8810,7 +9215,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Select Account
           </h2>
@@ -8826,20 +9231,19 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
               class="mt-8"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -8885,7 +9289,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -8931,7 +9335,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden xl:table-cell"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -8977,7 +9381,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--3"
                         role="columnheader"
@@ -8989,50 +9393,72 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                             class=""
                           >
                             <div
-                              class="relative -my-2"
+                              class="-my-2"
                               data-testid="HeaderSearchBar"
                             >
                               <div
                                 class="group"
                               >
                                 <button
-                                  class="ring-focus css-15d5iox"
+                                  class="ring-focus css-vthdh6"
                                   type="button"
                                 >
                                   <div
-                                    class="flex h-5 items-center gap-3"
+                                    class="flex h-5 items-center gap-2"
                                   >
-                                    <span
-                                      class="hidden md:block"
-                                    >
-                                      Search
-                                    </span>
                                     <div
                                       class="css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="magnifying-glass"
-                                        viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
                                         <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
+                                          clip-path="url(#clip0_13375_36442)"
+                                          id="Vertical container"
                                         >
-                                          <path
-                                            d="M12.1 16.4c4.1-1.7 6-6.5 4.3-10.5C14.7 1.8 9.9 0 5.9 1.6s-6 6.5-4.3 10.5h0c1.8 4.1 6.4 6 10.5 4.3h0zM14.7 14.7L19 19"
-                                          />
+                                          <g
+                                            id="Vertical container_2"
+                                          >
+                                            <path
+                                              d="M10.5038 13.9035C13.7838 12.5435 15.3038 8.70355 13.9438 5.50355C12.5838 2.22355 8.74379 0.783547 5.54379 2.06355C2.34379 3.34355 0.743788 7.26355 2.10379 10.4635C3.54379 13.7435 7.22379 15.2635 10.5038 13.9035Z"
+                                              id="Vector"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                            <path
+                                              d="M12.8281 12.7832L14.4281 14.3832"
+                                              id="Vector_2"
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="1.6"
+                                            />
+                                          </g>
                                         </g>
+                                        <defs>
+                                          <clippath
+                                            id="clip0_13375_36442"
+                                          >
+                                            <rect
+                                              fill="transparent"
+                                              height="16"
+                                              width="16"
+                                            />
+                                          </clippath>
+                                        </defs>
                                       </svg>
                                     </div>
+                                    <span
+                                      class="hidden md:block"
+                                    >
+                                      Search
+                                    </span>
                                   </div>
                                 </button>
                               </div>
@@ -9053,7 +9479,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -9157,7 +9583,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button
@@ -9183,7 +9609,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         class="w-full"
                       >
                         <div
-                          class="space-x-4 css-bgc8eo"
+                          class="space-x-4 css-rjc6e4"
                         >
                           <div
                             class="flex shrink-0 -space-x-1"
@@ -9287,7 +9713,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       </td>
                       <td>
                         <div
-                          class="justify-end css-10gefem"
+                          class="justify-end css-160cp05"
                         >
                           <div>
                             <button

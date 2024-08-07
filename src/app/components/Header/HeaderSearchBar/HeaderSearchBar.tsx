@@ -50,16 +50,16 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 	}, [resetFields, handleQueryReset]);
 
 	return (
-		<div data-testid="HeaderSearchBar" className="relative -my-2" {...properties}>
+		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
 			<ControlButton
 				isChanged={!!query}
 				noBorder={noToggleBorder}
 				onClick={() => setSearchbarVisible(true)}
 				type="button"
 			>
-				<div className="flex h-5 items-center gap-3">
+				<div className="flex h-5 items-center gap-2">
+					<Icon name="MagnifyingGlassAlt" size="lg" />
 					<span className="hidden md:block">{label}</span>
-					<Icon name="MagnifyingGlass" size="lg" />
 				</div>
 			</ControlButton>
 
@@ -68,7 +68,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					data-testid="HeaderSearchBar__input"
 					ref={reference}
 					className={cn(
-						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-10 py-4 text-base shadow-xl",
+						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-10 py-2.5 text-base shadow-xl",
 						offsetClassName || "top-1/2 -translate-y-1/2",
 						{
 							"right-0": noToggleBorder,
@@ -104,6 +104,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 						<Input
 							className="-ml-4"
 							placeholder={placeholder || `${t("COMMON.SEARCH")}...`}
+							innerClassName="font-normal"
 							value={query}
 							maxLength={maxLength}
 							isFocused
