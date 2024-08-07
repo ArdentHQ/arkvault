@@ -113,8 +113,7 @@ export const useSendTransferForm = (wallet?: Contracts.IReadWriteWallet) => {
 					abortSignal,
 				},
 			);
-
-			const response = await wallet.transaction().broadcast("xd");
+			const response = await wallet.transaction().broadcast(uuid);
 
 			handleBroadcastError(response);
 
