@@ -17,6 +17,7 @@ import {
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
 import * as randomWordPositionsMock from "@/domains/wallet/components/MnemonicVerification/utils/randomWordPositions";
+
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;
 

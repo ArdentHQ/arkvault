@@ -100,7 +100,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -133,7 +133,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -248,7 +248,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -400,7 +400,7 @@ exports[`AddRecipient > should render 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -433,7 +433,7 @@ exports[`AddRecipient > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -548,7 +548,7 @@ exports[`AddRecipient > should render 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -685,7 +685,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -718,7 +718,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -833,7 +833,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -970,7 +970,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1003,7 +1003,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1118,7 +1118,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1255,7 +1255,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1288,7 +1288,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1403,7 +1403,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1473,7 +1473,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1506,7 +1506,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1621,7 +1621,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1758,7 +1758,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1791,7 +1791,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1906,7 +1906,7 @@ exports[`AddRecipient > should set available amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2043,7 +2043,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2076,7 +2076,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2191,7 +2191,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2343,7 +2343,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 data-testid="SelectDropdown"
               >
                 <div
-                  class="sr-only css-n1b0kl"
+                  class="sr-only css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2376,7 +2376,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -2491,7 +2491,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
                 class="relative"
               >
                 <div
-                  class="css-12mz4i6"
+                  class="css-1hr3i2s"
                 >
                   <div
                     class="relative flex h-full flex-1"

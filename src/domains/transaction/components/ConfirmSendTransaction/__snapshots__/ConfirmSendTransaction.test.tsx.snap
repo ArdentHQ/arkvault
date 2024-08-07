@@ -60,7 +60,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Confirm Transaction
           </h2>
@@ -77,20 +77,19 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
               data-testid="TransactionTable"
             >
               <div
-                class="-mt-3 css-1m6rt2i"
+                class="css-1m6rt2i"
                 role="table"
               >
                 <table
                   cellpadding="0"
-                  class="table-auto"
+                  class="w-full table-auto"
                 >
                   <thead>
                     <tr
-                      class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -136,7 +135,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -152,7 +151,7 @@ exports[`ConfirmSendTransaction > should render modal 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"

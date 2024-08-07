@@ -8,7 +8,7 @@ import tw, { styled } from "twin.macro";
 import { getFeeType } from "./utils";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCounter } from "@/app/components/Input";
-import { useBreakpoint, useTheme } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -16,7 +16,7 @@ import { RecipientItem } from "@/domains/transaction/components/RecipientList/Re
 import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { assertNetwork } from "@/utils/assertions";
 import { StepHeader } from "@/app/components/StepHeader";
-import { Icon } from "@/app/components/Icon";
+import { ThemeIcon, Icon } from "@/app/components/Icon";
 
 const QRCodeButton = styled.button`
 	${tw`mt-auto flex w-full items-center space-x-2 rounded py-3 px-5 transition-colors duration-300 sm:w-auto sm:py-5`}
@@ -123,15 +123,13 @@ export const FormStep = ({
 
 	const showFeeInput = useMemo(() => !network?.chargesZeroFees(), [network]);
 
-	const { isDarkMode } = useTheme();
-
-	const icon = isDarkMode ? "SendTransactionDark" : "SendTransactionLight";
-
 	return (
 		<section data-testid="SendTransfer__form-step">
 			<StepHeader
 				title={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE", { ticker: network?.ticker() })}
-				titleIcon={<Icon dimensions={[24, 24]} name={icon} data-testid={`icon-${icon}`} />}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 				subtitle={t("TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.DESCRIPTION")}
 				extra={
 					<div className="flex h-full align-bottom">

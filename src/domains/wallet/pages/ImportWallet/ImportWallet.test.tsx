@@ -239,7 +239,6 @@ describe("ImportWallet", () => {
 		expect(successStep()).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(screen.getAllByText(ARKDevnet)[0]).toBeInTheDocument();
 		expect(screen.getAllByText(importedWallet.address())[0]).toBeInTheDocument();
 
 		await userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));

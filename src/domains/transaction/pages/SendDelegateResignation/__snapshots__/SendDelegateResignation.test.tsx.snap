@@ -753,7 +753,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                           class="relative"
                         >
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1"
@@ -3424,7 +3424,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       Mnemonic
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3496,7 +3496,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-xk5t3v"
+                      class="css-13c7w0w"
                       disabled=""
                     >
                       <div
@@ -5249,7 +5249,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       Mnemonic
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -5321,7 +5321,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                       2nd Mnemonic
                     </label>
                     <div
-                      class="css-12mz4i6"
+                      class="css-1hr3i2s"
                     >
                       <div
                         class="relative flex h-full flex-1"

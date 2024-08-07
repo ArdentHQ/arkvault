@@ -58,7 +58,7 @@ exports[`TransactionExportModal > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -694,7 +694,7 @@ exports[`TransactionExportModal > should render error status 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -1330,7 +1330,7 @@ exports[`TransactionExportModal > should render progress status 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -1966,7 +1966,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -2246,7 +2246,7 @@ exports[`TransactionExportModal > should render success and stay open if downloa
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -2526,7 +2526,7 @@ exports[`TransactionExportModal > should render success status 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>
@@ -3162,7 +3162,7 @@ exports[`TransactionExportModal > should render with fiat column 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Transaction History
           </h2>

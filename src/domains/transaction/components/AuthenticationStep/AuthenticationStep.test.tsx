@@ -384,6 +384,23 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.restoreAllMocks();
 	});
 
+	it("should not show ledger confirmation", async () => {
+		mockNanoXTransport();
+		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);
+
+		renderWithForm(<AuthenticationStep subject={subject} wallet={wallet} requireLedgerConfirmation={false} />, {
+			withProviders: true,
+		});
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("LedgerConfirmation-description")).not.toBeInTheDocument();
+		});
+
+		vi.restoreAllMocks();
+	});
+
 	it("should show ledger waiting device screen for Nano X", async () => {
 		mockNanoXTransport();
 		vi.spyOn(wallet, "isLedger").mockReturnValueOnce(true);

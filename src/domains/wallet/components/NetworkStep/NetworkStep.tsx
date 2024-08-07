@@ -11,6 +11,7 @@ import { Header } from "@/app/components/Header";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { Divider } from "@/app/components/Divider";
 import { useNetworks } from "@/app/hooks";
+import { ThemeIcon } from "@/app/components/Icon";
 
 interface NetworkStepProperties {
 	profile: Contracts.IProfile;
@@ -36,7 +37,14 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 
 	return (
 		<section data-testid="NetworkStep">
-			<Header title={title} subtitle={subtitle} className="hidden sm:block" />
+			<Header
+				title={title}
+				subtitle={subtitle}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SelectNetworkLight" darkIcon="SelectNetworkDark" />
+				}
+				className="hidden sm:block"
+			/>
 
 			{!!error && (
 				<div className="-mb-2 mt-6">
@@ -44,7 +52,7 @@ export const NetworkStep = ({ title, subtitle, disabled, error, filter, profile 
 				</div>
 			)}
 
-			<FormField name="network" className={cn("mt-8", { "my-8": networks.length === 2 })}>
+			<FormField name="network" className={cn("mt-4", { "my-4": networks.length === 2 })}>
 				{networks.length > 2 && <FormLabel label={t("COMMON.CRYPTOASSET")} />}
 
 				<SelectNetwork

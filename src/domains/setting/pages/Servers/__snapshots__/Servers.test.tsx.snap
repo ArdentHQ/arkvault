@@ -2636,20 +2636,19 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="-mt-3 css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <thead>
                                 <tr
-                                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                   role="row"
                                 >
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                                     colspan="1"
                                     data-testid="table__th--0"
                                     role="columnheader"
@@ -2665,7 +2664,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden md:table-cell w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden md:table-cell w-1"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -2681,7 +2680,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -2697,7 +2696,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -2713,7 +2712,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -2739,7 +2738,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -2898,7 +2897,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2989,7 +2988,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3195,7 +3194,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3286,7 +3285,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3465,7 +3464,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4875,20 +4874,19 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="-mt-3 css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <thead>
                                 <tr
-                                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                   role="row"
                                 >
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                                     colspan="1"
                                     data-testid="table__th--0"
                                     role="columnheader"
@@ -4904,7 +4902,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden md:table-cell w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden md:table-cell w-1"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -4920,7 +4918,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -4936,7 +4934,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -4952,7 +4950,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -4978,7 +4976,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5109,7 +5107,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5200,7 +5198,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5378,7 +5376,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5469,7 +5467,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5620,7 +5618,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -7030,7 +7028,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class=" css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <div
@@ -7447,7 +7445,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                             </div>
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <tbody
                                 role="rowgroup"
@@ -8830,20 +8828,19 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="-mt-3 css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <thead>
                                 <tr
-                                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                   role="row"
                                 >
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                                     colspan="1"
                                     data-testid="table__th--0"
                                     role="columnheader"
@@ -8859,7 +8856,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden md:table-cell w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden md:table-cell w-1"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -8875,7 +8872,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -8891,7 +8888,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -8907,7 +8904,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -8933,7 +8930,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9092,7 +9089,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9183,7 +9180,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9389,7 +9386,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9480,7 +9477,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9659,7 +9656,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -11123,7 +11120,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class=" css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <div
@@ -11624,7 +11621,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                             </div>
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <tbody
                                 role="rowgroup"
@@ -13001,20 +12998,19 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class="-mt-3 css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <thead>
                                 <tr
-                                  class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                   role="row"
                                 >
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                                     colspan="1"
                                     data-testid="table__th--0"
                                     role="columnheader"
@@ -13030,7 +13026,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hidden md:table-cell w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden md:table-cell w-1"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -13046,7 +13042,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -13062,7 +13058,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -13078,7 +13074,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold no-border w-1"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -13104,7 +13100,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13260,7 +13256,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13351,7 +13347,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13554,7 +13550,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -13645,7 +13641,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-r-0 border-transparent css-bgc8eo"
+                                      class="py-3 border-2 border-r-0 border-transparent css-rjc6e4"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -13821,7 +13817,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="py-3 border-2 border-l-0 border-transparent css-10gefem"
+                                      class="py-3 border-2 border-l-0 border-transparent css-160cp05"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -15279,7 +15275,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                           data-testid="CustomPeers--list"
                         >
                           <div
-                            class=" css-1m6rt2i"
+                            class="css-1m6rt2i"
                             role="table"
                           >
                             <div
@@ -15771,7 +15767,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                             </div>
                             <table
                               cellpadding="0"
-                              class="table-auto"
+                              class="w-full table-auto"
                             >
                               <tbody
                                 role="rowgroup"

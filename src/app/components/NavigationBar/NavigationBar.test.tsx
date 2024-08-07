@@ -304,8 +304,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getAllByText("Select")[0]);
 
-		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
-		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ReceiveFunds__Name_Address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
@@ -332,8 +331,7 @@ describe("NavigationBar", () => {
 
 		await userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
 
-		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
-		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ReceiveFunds__Name_Address")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 

@@ -8,10 +8,7 @@ import { TransactionAddresses } from "@/domains/transaction/components/Transacti
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
 import { useActiveProfile } from "@/app/hooks";
-import {
-	TransactionReviewDetail,
-	TransactionReviewDetailLabel,
-} from "@/domains/transaction/components/TransactionReviewDetail";
+import { DetailLabel, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
@@ -52,13 +49,13 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 				<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
 
 				{memo && (
-					<TransactionReviewDetail label={t("COMMON.MEMO_SMARTBRIDGE")}>
+					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
 						<p>{memo}</p>
-					</TransactionReviewDetail>
+					</DetailWrapper>
 				)}
 
 				<div className="space-y-3 sm:space-y-2">
-					<TransactionReviewDetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</TransactionReviewDetailLabel>
+					<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>
 					<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />
 				</div>
 			</div>

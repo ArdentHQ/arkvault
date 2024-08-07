@@ -33,7 +33,7 @@ describe("TransactionAddresses", () => {
 			breakpoint,
 		);
 
-		expect(screen.getByTestId("TransactionReviewDetail")).toBeInTheDocument();
+		expect(screen.getByTestId("DetailWrapper")).toBeInTheDocument();
 		expect(screen.getByText(translations.FROM)).toBeInTheDocument();
 		expect(screen.getByText(translations.TO)).toBeInTheDocument();
 		expect(screen.getByText(recipients[1].address)).toBeInTheDocument();

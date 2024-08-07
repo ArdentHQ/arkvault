@@ -58,7 +58,7 @@ exports[`CreateContact > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Add Contact
           </h2>
@@ -88,7 +88,7 @@ exports[`CreateContact > should render 1`] = `
                     Name
                   </label>
                   <div
-                    class=" css-n1b0kl"
+                    class=" css-1q57rjh"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -122,7 +122,7 @@ exports[`CreateContact > should render 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -154,7 +154,7 @@ exports[`CreateContact > should render 1`] = `
                               id="downshift-0-label"
                             />
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -236,7 +236,7 @@ exports[`CreateContact > should render 1`] = `
                       Address
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"

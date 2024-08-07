@@ -52,17 +52,12 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	};
 
 	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => (
-		<tr
-			className="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
-			{...headerGroup.getHeaderGroupProps()}
-		>
-			{headerGroup.headers.map(renderColumn)}
-		</tr>
+		<tr {...headerGroup.getHeaderGroupProps()}>{headerGroup.headers.map(renderColumn)}</tr>
 	);
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
 		const thElementClassName = cn(
-			"group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold",
+			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl",
 			column.headerClassName,
 			{ "w-1": column.minimumWidth },
 			{
@@ -105,8 +100,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	const renderHeader = <thead>{headerGroups.map(renderHeaderGroup)}</thead>;
 
 	return (
-		<TableWrapper {...getTableProps({ className })} className={cn({ "-mt-3": !hideHeader })}>
-			<table cellPadding={0} className="table-auto">
+		<TableWrapper {...getTableProps({ className })}>
+			<table cellPadding={0} className="w-full table-auto">
 				{!hideHeader && renderHeader}
 
 				<tbody {...getTableBodyProps()}>

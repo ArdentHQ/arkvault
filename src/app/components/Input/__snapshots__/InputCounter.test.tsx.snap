@@ -3,7 +3,7 @@
 exports[`InputCounter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-n1b0kl"
+    class="css-1q57rjh"
   >
     <div
       class="relative flex h-full flex-1"
@@ -39,7 +39,7 @@ exports[`InputCounter > should render 1`] = `
 exports[`InputCounter > should render with invalid state 1`] = `
 <div>
   <div
-    class="css-12mz4i6"
+    class="css-1hr3i2s"
   >
     <div
       class="relative flex h-full flex-1"
