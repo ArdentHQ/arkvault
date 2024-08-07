@@ -48,7 +48,7 @@ export const ErrorStep = ({
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</Alert>
 
-					{!errorMessage ? (
+					{errorMessage ? (
 						<TextArea
 							data-testid="ErrorStep__errorMessage"
 							className="py-4"
