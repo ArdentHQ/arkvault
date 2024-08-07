@@ -194,9 +194,9 @@ export const translations = {
 		UPLOAD: "Upload Image",
 	},
 	MODAL_SEARCH_RECIPIENT: {
-		DESCRIPTION: "Find and select a recipient from your contacts and wallets",
+		DESCRIPTION: "Locate and select the recipient address.",
 		SEARCH_PLACEHOLDER: "Enter name or address",
-		TITLE: "Select Recipient",
+		TITLE: "Recipient Search",
 	},
 	MODAL_SECOND_SIGNATURE_DETAIL: {
 		TITLE: "Second Signature",

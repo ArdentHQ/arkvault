@@ -10,7 +10,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -234,7 +234,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -290,7 +290,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -505,7 +505,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -561,7 +561,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -776,7 +776,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -832,7 +832,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -1082,7 +1082,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -1138,7 +1138,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -1358,7 +1358,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -1414,7 +1414,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <button
               class="link"
@@ -1634,7 +1634,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-10gefem"
+            class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
               class="css-15yk9k4"
@@ -1690,7 +1690,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <button
               class="link"
@@ -1897,7 +1897,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-yf8cy4"
+            class="justify-end text-theme-secondary-text css-t4jv3s"
           >
             <button
               class="css-evohxk"

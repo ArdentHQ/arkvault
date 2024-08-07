@@ -183,7 +183,7 @@ exports[`Notifications > should render in xs 3`] = `
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex space-x-3 css-rjc6e4"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -263,7 +263,7 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="justify-end css-160cp05"
             >
               <div
                 class="css-1v19423"
@@ -302,7 +302,7 @@ exports[`Notifications > should render in xs 4`] = `
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex space-x-3 css-rjc6e4"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -382,7 +382,7 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="justify-end css-160cp05"
             >
               <div
                 class="css-1v19423"
@@ -421,7 +421,7 @@ exports[`Notifications > should render in xs 5`] = `
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex space-x-3 css-rjc6e4"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -501,7 +501,7 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="justify-end css-160cp05"
             >
               <div
                 class="css-1v19423"
@@ -540,7 +540,7 @@ exports[`Notifications > should render notification item 1`] = `
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-bgc8eo"
+              class="flex space-x-3 css-rjc6e4"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -620,7 +620,7 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="justify-end css-10gefem"
+              class="justify-end css-160cp05"
             >
               <div
                 class="css-1v19423"

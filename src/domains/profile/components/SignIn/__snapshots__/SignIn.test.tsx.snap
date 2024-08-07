@@ -60,7 +60,7 @@ exports[`SignIn > should render a modal 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Sign In
           </h2>
@@ -118,7 +118,7 @@ exports[`SignIn > should render a modal 1`] = `
               </div>
             </div>
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
             <form
@@ -135,7 +135,7 @@ exports[`SignIn > should render a modal 1`] = `
                   Password
                 </label>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
