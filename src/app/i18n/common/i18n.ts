@@ -146,6 +146,7 @@ export const translations = {
 	HIDE_WALLET_BUTTON_TEXT: "Hide text from wallet buttons",
 	ID: "ID",
 	IMPORT: "Import",
+	IMPORTED: "Imported",
 	INFO: "Info",
 	INITIALIZING: "Initializing...",
 	INPUT_ADDRESS: {

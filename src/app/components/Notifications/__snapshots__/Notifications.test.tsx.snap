@@ -15,12 +15,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
         Plugins
       </div>
       <div
-        class=" css-1m6rt2i"
+        class="css-1m6rt2i"
         role="table"
       >
         <table
           cellpadding="0"
-          class="table-auto"
+          class="w-full table-auto"
         >
           <tbody
             role="rowgroup"
@@ -111,12 +111,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
         </div>
         <div>
           <div
-            class=" css-1m6rt2i"
+            class="css-1m6rt2i"
             role="table"
           >
             <table
               cellpadding="0"
-              class="table-auto"
+              class="w-full table-auto"
             >
               <tbody
                 role="rowgroup"
@@ -130,7 +130,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -213,7 +213,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-148b4hi"
@@ -243,7 +243,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -323,7 +323,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"
@@ -353,7 +353,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -433,7 +433,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"
@@ -567,12 +567,12 @@ exports[`Notifications > should render with plugins 1`] = `
         Plugins
       </div>
       <div
-        class=" css-1m6rt2i"
+        class="css-1m6rt2i"
         role="table"
       >
         <table
           cellpadding="0"
-          class="table-auto"
+          class="w-full table-auto"
         >
           <tbody
             role="rowgroup"
@@ -663,12 +663,12 @@ exports[`Notifications > should render with plugins 1`] = `
         </div>
         <div>
           <div
-            class=" css-1m6rt2i"
+            class="css-1m6rt2i"
             role="table"
           >
             <table
               cellpadding="0"
-              class="table-auto"
+              class="w-full table-auto"
             >
               <tbody
                 role="rowgroup"
@@ -682,7 +682,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -765,7 +765,7 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-148b4hi"
@@ -795,7 +795,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -875,7 +875,7 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"
@@ -905,7 +905,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -985,7 +985,7 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"
@@ -1031,12 +1031,12 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
         Plugins
       </div>
       <div
-        class=" css-1m6rt2i"
+        class="css-1m6rt2i"
         role="table"
       >
         <table
           cellpadding="0"
-          class="table-auto"
+          class="w-full table-auto"
         >
           <tbody
             role="rowgroup"
@@ -1127,12 +1127,12 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
         </div>
         <div>
           <div
-            class=" css-1m6rt2i"
+            class="css-1m6rt2i"
             role="table"
           >
             <table
               cellpadding="0"
-              class="table-auto"
+              class="w-full table-auto"
             >
               <tbody
                 role="rowgroup"
@@ -1146,7 +1146,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1229,7 +1229,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-148b4hi"
@@ -1259,7 +1259,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1339,7 +1339,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"
@@ -1369,7 +1369,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-hhd44j"
+                        class="flex space-x-3 css-5gvahk"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1449,7 +1449,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-yf8cy4"
+                        class="justify-end css-t4jv3s"
                       >
                         <div
                           class="css-1v19423"

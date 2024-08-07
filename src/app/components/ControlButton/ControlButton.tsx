@@ -4,7 +4,7 @@ import tw, { css, styled } from "twin.macro";
 
 const ControlButtonStyled = styled.button<{ noBorder?: boolean; disabled?: boolean }>`
 	${tw`relative flex items-center justify-center py-2`}
-	${tw`font-semibold text-theme-primary-300 dark:text-theme-secondary-600`}
+	${tw`font-semibold text-theme-primary-600 dark:text-theme-secondary-600`}
 	${tw`border-t-2 border-b-2 border-transparent`}
 	${tw`transition-colors duration-200`}
 	${tw`cursor-pointer`}

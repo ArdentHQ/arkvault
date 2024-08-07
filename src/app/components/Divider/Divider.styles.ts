@@ -6,7 +6,7 @@ const baseStyle = tw`border-t border-solid`;
 
 const getType = (type?: DividerTypeProperties) => {
 	if (type === "horizontal") {
-		return tw`flex clear-both w-full min-w-full my-6`;
+		return tw`flex clear-both w-full min-w-full my-4`;
 	}
 
 	return tw`relative inline-block align-middle border-t-0 border-l border-solid mx-2`;
