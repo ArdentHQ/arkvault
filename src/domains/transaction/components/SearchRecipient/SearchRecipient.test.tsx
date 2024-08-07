@@ -157,14 +157,14 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should call onAction when no address is selected", () => {
+	it("should call onAction when no address is selected", async () => {
 		const onAction = vi.fn();
 
 		const { asFragment } = render(
 			<SearchRecipient profile={profile} isOpen={true} recipients={recipients} onAction={onAction} />,
 		);
 
-		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		await userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
 		expect(asFragment()).toMatchSnapshot();
