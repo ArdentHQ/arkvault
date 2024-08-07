@@ -33,10 +33,18 @@ export const ErrorStep = ({
 	return (
 		<div data-testid="ErrorStep">
 			<div className="space-y-2">
-				<div className="flex flex-row gap-3 items-center justify-start">
-					<StepHeader title={title || t("TRANSACTION.ERROR.TITLE")} titleIcon={
-						<Image name="ErrorHeaderIcon" domain="transaction" className="block h-[22px] w-[22px]" useAccentColor={false} />
-					} />
+				<div className="flex flex-row items-center justify-start gap-3">
+					<StepHeader
+						title={title || t("TRANSACTION.ERROR.TITLE")}
+						titleIcon={
+							<Image
+								name="ErrorHeaderIcon"
+								domain="transaction"
+								className="block h-[22px] w-[22px]"
+								useAccentColor={false}
+							/>
+						}
+					/>
 				</div>
 
 				<div className="space-y-4">
@@ -58,7 +66,12 @@ export const ErrorStep = ({
 							disabled
 						/>
 					) : (
-						<Image name="TransactionErrorBanner" domain="transaction" className="w-full block max-w-[400px] mt-4 mx-auto" useAccentColor={false} />
+						<Image
+							name="TransactionErrorBanner"
+							domain="transaction"
+							className="mx-auto mt-4 block w-full max-w-[400px]"
+							useAccentColor={false}
+						/>
 					)}
 				</div>
 			</div>
