@@ -55,3 +55,7 @@ main {
 		filter: grayscale(1);
 	}
 }
+
+.home-slider-dots .slick-active > button {
+	@apply bg-theme-navy-500 border-transparent
+}
