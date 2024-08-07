@@ -8,10 +8,10 @@ import ErrorTransactionLedgerBannerDarkNavy from "./error-transaction-ledger-ban
 import ErrorTransactionLedgerBannerDarkGreen from "./error-transaction-ledger-banner-dark-green.svg?react";
 import ErrorTransactionLedgerBannerLightNavy from "./error-transaction-ledger-banner-light-navy.svg?react";
 import ErrorTransactionLedgerBannerLightGreen from "./error-transaction-ledger-banner-light-green.svg?react";
-import TransactionErrorBannerDarkNavy from "./transaction-error-banner-dark-navy.svg?react";
-import TransactionErrorBannerDarkGreen from "./transaction-error-banner-dark-green.svg?react";
-import TransactionErrorBannerLightNavy from "./transaction-error-banner-light-navy.svg?react";
-import TransactionErrorBannerLightGreen from "./transaction-error-banner-light-green.svg?react";
+import ErrorHeaderIconLight from "./error-header-icon-light.svg?react";
+import ErrorHeaderIconDark from "./error-header-icon-dark.svg?react";
+import TransactionErrorBannerDark from "./transaction-error-banner-dark.svg?react";
+import TransactionErrorBannerLight from "./transaction-error-banner-light.svg?react";
 import TransactionSignedBannerDarkNavy from "./transaction-signed-banner-dark-navy.svg?react";
 import TransactionSignedBannerDarkGreen from "./transaction-signed-banner-dark-green.svg?react";
 import TransactionSignedBannerLightNavy from "./transaction-signed-banner-light-navy.svg?react";
@@ -32,10 +32,10 @@ export const transaction = {
 	ErrorTransactionLedgerBannerDarkNavy,
 	ErrorTransactionLedgerBannerLightGreen,
 	ErrorTransactionLedgerBannerLightNavy,
-	TransactionErrorBannerDarkGreen,
-	TransactionErrorBannerDarkNavy,
-	TransactionErrorBannerLightGreen,
-	TransactionErrorBannerLightNavy,
+	ErrorHeaderIconLight,
+	ErrorHeaderIconDark,
+	TransactionErrorBannerDark,
+	TransactionErrorBannerLight,
 	TransactionPendingBannerDark,
 	TransactionPendingBannerLight,
 	TransactionSignedBannerDarkGreen,
