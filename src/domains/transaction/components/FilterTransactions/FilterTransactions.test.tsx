@@ -32,7 +32,7 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("button", { name: /Type/ }));
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
@@ -46,11 +46,11 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("button", { name: /Type/ }));
+		await userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		expect(onSelect).toHaveBeenCalledWith(
 			{

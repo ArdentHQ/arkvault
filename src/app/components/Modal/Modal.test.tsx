@@ -69,7 +69,7 @@ describe("Modal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should closed by click on overlay", () => {
+	it("should closed by click on overlay", async () => {
 		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
@@ -80,12 +80,12 @@ describe("Modal", () => {
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__overlay"));
+		await userEvent.click(screen.getByTestId("Modal__overlay"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
 
-	it("should no close by click on modal content", () => {
+	it("should no close by click on modal content", async () => {
 		const onClose = vi.fn();
 		render(
 			<Modal title="ark" isOpen={true} onClose={onClose}>
@@ -96,7 +96,7 @@ describe("Modal", () => {
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Modal__inner"));
+		await userEvent.click(screen.getByTestId("Modal__inner"));
 
 		expect(onClose).not.toHaveBeenCalled();
 	});
@@ -107,11 +107,11 @@ describe("Modal", () => {
 
 		expect(screen.getByTestId("Modal__overlay")).toBeInTheDocument();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		expect(onClose).not.toHaveBeenCalled();
 
-		userEvent.keyboard("{esc}");
+		await userEvent.keyboard("{escape}");
 
 		expect(onClose).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();

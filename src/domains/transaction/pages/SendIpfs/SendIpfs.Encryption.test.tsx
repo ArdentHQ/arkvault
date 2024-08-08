@@ -142,37 +142,38 @@ describe("SendIpfs", () => {
 			expect(screen.getByTestId("TransactionSender")).toHaveTextContent(encryptedWallet.address()),
 		);
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);
@@ -191,7 +192,7 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 

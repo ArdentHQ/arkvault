@@ -101,13 +101,13 @@ describe("TransactionTable", () => {
 		});
 	});
 
-	it("should emit action on the row click", () => {
+	it("should emit action on the row click", async () => {
 		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
 		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} />);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(sortedByDateDesc[0]);
 	});
@@ -117,7 +117,7 @@ describe("TransactionTable", () => {
 
 		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} />);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(transactions[1]));
 	});

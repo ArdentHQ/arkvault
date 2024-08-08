@@ -143,18 +143,18 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
-		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 		// advanced
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		userEvent.clear(screen.getByTestId("InputCurrency"));
-		userEvent.paste(screen.getByTestId("InputCurrency"), "9");
+		await userEvent.clear(screen.getByTestId("InputCurrency"));
+		await userEvent.type(screen.getByTestId("InputCurrency"), "9");
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
 	});
@@ -181,7 +181,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			const clipboardOriginal = navigator.clipboard;
 			(navigator as any).clipboard = { writeText: writeTextMock };
 
-			userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+			await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(secondMnemonic));
 
@@ -216,7 +216,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "success");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			const filePath = useFilesOutput.showSaveDialog(secondMnemonic, { fileName: "address.txt" });
 
@@ -249,7 +249,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "success");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -284,7 +284,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			await expect(screen.findByTestId(backupStepId)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).not.toHaveBeenCalled();
@@ -322,7 +322,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = vi.spyOn(toasts, "error");
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save file/)));
 
@@ -350,9 +350,12 @@ describe("SecondSignatureRegistrationForm", () => {
 		expect(form()?.getValues("verification")).toBeUndefined();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 
 		await waitFor(() => expect(form()?.getValues("verification")).toBe(true));
 	});

@@ -24,22 +24,22 @@ describe("Confirmation Modal", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should trigger cancel", () => {
+	it("should trigger cancel", async () => {
 		const onCancel = vi.fn();
 
 		render(<ConfirmationModal onCancel={onCancel} isOpen />);
 
-		userEvent.click(screen.getByText(translations.NO));
+		await userEvent.click(screen.getByText(translations.NO));
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should trigger confirm", () => {
+	it("should trigger confirm", async () => {
 		const onConfirm = vi.fn();
 
 		render(<ConfirmationModal onConfirm={onConfirm} isOpen />);
 
-		userEvent.click(screen.getByText(translations.YES));
+		await userEvent.click(screen.getByText(translations.YES));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

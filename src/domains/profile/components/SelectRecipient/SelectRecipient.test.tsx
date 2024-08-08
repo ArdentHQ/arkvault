@@ -52,11 +52,11 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 	});
@@ -71,10 +71,10 @@ describe("SelectRecipient", () => {
 		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
 		// 1. Focus the select input which opens the drodpown
-		userEvent.click(recipientInputField);
+		await userEvent.click(recipientInputField);
 
 		// 2. Click to open the modal
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -95,7 +95,7 @@ describe("SelectRecipient", () => {
 		const focusSpy = vi.spyOn(recipientInputField, "focus");
 		const blurSpy = vi.spyOn(recipientInputField, "blur");
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -112,13 +112,13 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		const firstContactAddress = screen.getByTestId("RecipientListItem__select-button-2");
 
-		userEvent.click(firstContactAddress);
+		await userEvent.click(firstContactAddress);
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
@@ -140,7 +140,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 	});
@@ -154,7 +154,7 @@ describe("SelectRecipient", () => {
 		render(<SelectRecipient profile={profile} onChange={onChange} />);
 		const recipientInputField = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.paste(recipientInputField, address);
+		await userEvent.type(recipientInputField, address);
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(address);
 
@@ -180,7 +180,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -188,7 +188,7 @@ describe("SelectRecipient", () => {
 
 		const firstAddress = screen.getByTestId("RecipientListItem__select-button-2");
 
-		userEvent.click(firstAddress);
+		await userEvent.click(firstAddress);
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -207,7 +207,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -215,7 +215,7 @@ describe("SelectRecipient", () => {
 
 		const lastAddress = screen.getByTestId("RecipientListItem__selected-button-2");
 
-		userEvent.click(lastAddress);
+		await userEvent.click(lastAddress);
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 		expect(onChange).not.toHaveBeenCalled();
@@ -237,7 +237,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => expect(screen.queryByTestId("RecipientListItem__select-button")).not.toBeInTheDocument());
 	});
@@ -247,7 +247,7 @@ describe("SelectRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -261,7 +261,7 @@ describe("SelectRecipient", () => {
 
 		rerender(<SelectRecipient profile={profile} exceptMultiSignature />);
 
-		userEvent.click(selectRecipient());
+		await userEvent.click(selectRecipient());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();

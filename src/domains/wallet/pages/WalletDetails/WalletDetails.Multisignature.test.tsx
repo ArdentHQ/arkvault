@@ -187,7 +187,8 @@ describe("WalletDetails", () => {
 
 		expect(screen.getByTestId("DeleteResource__submit-button")).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("DeleteResource__submit-button")).toBeEnabled();

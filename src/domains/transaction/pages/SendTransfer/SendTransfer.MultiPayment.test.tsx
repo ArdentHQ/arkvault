@@ -67,13 +67,15 @@ describe("SendTransfer MultiPayment", () => {
 		});
 
 		// Select multiple type
-		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
 		await expect(screen.findByTestId(recipientAddButton)).resolves.toBeVisible();
 
 		// 1st recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().first().address());
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().first().address());
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
@@ -82,11 +84,13 @@ describe("SendTransfer MultiPayment", () => {
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(1));
 
 		// 2nd recipient.
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().last().address());
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], profile.wallets().last().address());
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(screen.getByTestId(recipientAddButton)).toBeEnabled());
-		userEvent.click(screen.getByTestId(recipientAddButton));
+		await userEvent.click(screen.getByTestId(recipientAddButton));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddRecipientItem")).toHaveLength(2));
 

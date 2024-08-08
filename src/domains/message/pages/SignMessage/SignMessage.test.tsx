@@ -107,7 +107,7 @@ describe("SignMessage", () => {
 
 			await waitFor(() => expect(continueButton()).toBeDisabled());
 
-			userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+			await userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 			await waitFor(() => {
 				expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -115,11 +115,11 @@ describe("SignMessage", () => {
 
 			const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-			userEvent.click(firstAddress);
+			await userEvent.click(firstAddress);
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
 		});
@@ -173,7 +173,7 @@ describe("SignMessage", () => {
 
 			const historySpy = vi.spyOn(history, "push");
 
-			userEvent.click(screen.getByTestId("SignMessage__back-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 			expect(historySpy).toHaveBeenCalledWith(`/`);
 		});
@@ -244,11 +244,12 @@ describe("SignMessage", () => {
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			userEvent.paste(messageInput(), signMessage);
+			await userEvent.clear(messageInput());
+			await userEvent.type(messageInput(), signMessage);
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("LedgerWaitingAppContent")).resolves.toBeVisible();
 
@@ -279,33 +280,34 @@ describe("SignMessage", () => {
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
 			).toBeInTheDocument();
 
-			userEvent.paste(messageInput(), signMessage);
+			await userEvent.type(messageInput(), signMessage);
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			await expectHeading(transactionTranslations.AUTHENTICATION_STEP.TITLE);
 
-			userEvent.click(screen.getByTestId("SignMessage__back-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.TITLE);
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
 			const mnemonicInput = screen.getByTestId("AuthenticationStep__mnemonic");
 
-			userEvent.paste(mnemonicInput, "wrong");
+			await userEvent.type(mnemonicInput, "wrong");
 
 			await waitFor(() => expect(signButton()).toBeDisabled());
 
 			mnemonicInput.select();
 
-			userEvent.paste(mnemonicInput, mnemonic);
+			await userEvent.clear(mnemonicInput);
+			await userEvent.type(mnemonicInput, mnemonic);
 
 			await waitFor(() => expect(signButton()).toBeEnabled());
 
-			userEvent.click(signButton());
+			await userEvent.click(signButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 
@@ -319,7 +321,7 @@ describe("SignMessage", () => {
 				expect(screen.getByTestId("SignMessage__copy-button")).toBeInTheDocument();
 			});
 
-			userEvent.click(screen.getByTestId("SignMessage__copy-button"));
+			await userEvent.click(screen.getByTestId("SignMessage__copy-button"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
 
@@ -356,13 +358,13 @@ describe("SignMessage", () => {
 				screen.getByText(messageTranslations.PAGE_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
 			).toBeInTheDocument();
 
-			userEvent.paste(messageInput(), signMessage);
+			await userEvent.type(messageInput(), signMessage);
 
 			await waitFor(() => expect(continueButton()).toBeEnabled());
 
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
+			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 			await waitFor(() => {
 				expect(screen.getByTestId("AuthenticationStep__secret")).toHaveValue("secret");
@@ -370,7 +372,7 @@ describe("SignMessage", () => {
 
 			await waitFor(() => expect(signButton()).toBeEnabled());
 
-			userEvent.click(signButton());
+			await userEvent.click(signButton());
 
 			await expectHeading(messageTranslations.PAGE_SIGN_MESSAGE.SUCCESS_STEP.TITLE);
 

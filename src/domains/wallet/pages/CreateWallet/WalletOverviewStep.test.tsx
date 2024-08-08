@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as browserAccess from "browser-fs-access";
 import React from "react";
@@ -56,7 +56,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+			await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -82,7 +82,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).not.toHaveBeenCalledWith(
@@ -112,7 +112,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -139,7 +139,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -160,7 +160,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+			await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));

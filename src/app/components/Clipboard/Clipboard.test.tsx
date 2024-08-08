@@ -40,7 +40,7 @@ describe("Clipboard", () => {
 		["string", "test string"],
 		["object", { hello: "world" }],
 	])("should work with data with type '%s'", async (dataType, data) => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const onError = vi.fn();
 
@@ -50,7 +50,7 @@ describe("Clipboard", () => {
 			</Clipboard>,
 		);
 
-		userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
 			vi.runOnlyPendingTimers();
@@ -71,7 +71,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).toHaveBeenCalledWith(""));
 			},
@@ -88,7 +88,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onSuccess).not.toHaveBeenCalled());
 			},
@@ -115,7 +115,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).toHaveBeenCalledWith());
 			},
@@ -132,7 +132,7 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
+				await userEvent.click(screen.getByTestId(`clipboard-${variant}__wrapper`));
 
 				await waitFor(() => expect(onError).not.toHaveBeenCalledWith());
 			},

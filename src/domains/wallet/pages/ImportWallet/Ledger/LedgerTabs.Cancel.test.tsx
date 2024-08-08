@@ -150,8 +150,7 @@ describe("LedgerTabs", () => {
 		render(<Component activeIndex={1} />, { route: `/profiles/${profile.id()}` });
 
 		userEvent.click(backSelector());
-
-		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+		await waitFor(() => expect(screen.getByTestId("SelectNetwork")).toBeVisible());
 
 		getPublicKeySpy.mockReset();
 		ledgerTransportMock.mockRestore();

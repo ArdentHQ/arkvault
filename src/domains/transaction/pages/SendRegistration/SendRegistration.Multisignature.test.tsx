@@ -174,15 +174,16 @@ describe("Multisignature Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review step
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
@@ -200,14 +201,15 @@ describe("Multisignature Registration", () => {
 		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
 		const transactionSyncMock = vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(undefined);
 
-		userEvent.type(mnemonic, passphrase);
+		await userEvent.clear(mnemonic);
+		await userEvent.type(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
 		});
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

@@ -1,14 +1,14 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HashHistory, createHashHistory } from "history";
 import React, { useEffect } from "react";
-import { FormProvider, useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
 import { vi } from "vitest";
 import { cloneDeep } from "@ardenthq/sdk-helpers";
+import { FormProvider, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
@@ -94,10 +94,10 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], from.ticker);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[0], from.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-		userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(from.ticker);
@@ -114,10 +114,10 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
-		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], to.ticker);
+		await userEvent.type(screen.getAllByTestId("SelectDropdown__input")[1], to.ticker);
 
 		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-		userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+		await userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(to.ticker);
@@ -310,7 +310,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/exchange`);
@@ -354,7 +354,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove to currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await selectCurrencies({
 			to: { name: "Ethereum", ticker: "ETH" },
@@ -392,7 +392,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
@@ -401,7 +401,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__remove-refund-address")).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId(refundAddressID)).not.toBeInTheDocument();
@@ -438,7 +438,8 @@ describe("ExchangeForm", () => {
 		});
 
 		const externalInput = within(screen.getByTestId("ExchangeForm__external-id")).getByRole("textbox");
-		userEvent.paste(externalInput, "external-id");
+		await userEvent.clear(externalInput);
+		await userEvent.type(externalInput, "external-id");
 
 		await waitFor(() => {
 			expect(externalInput).toHaveValue("external-id");
@@ -473,14 +474,14 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		userEvent.paste(refundDropdown, "payoutAddress");
+		await userEvent.type(refundDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("payoutAddress");
@@ -489,7 +490,7 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__refund-external-id")).toBeInTheDocument();
 
 		const refundExternalInput = within(screen.getByTestId("ExchangeForm__refund-external-id")).getByRole("textbox");
-		userEvent.paste(refundExternalInput, "refund-external-id");
+		await userEvent.type(refundExternalInput, "refund-external-id");
 
 		await waitFor(() => {
 			expect(refundExternalInput).toHaveValue("refund-external-id");
@@ -520,7 +521,7 @@ describe("ExchangeForm", () => {
 		expect(fromCurrencyDropdown).toHaveValue("BTC");
 		expect(toCurrencyDropdown).toHaveValue("ARK");
 
-		userEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
 
 		await waitFor(() => {
 			expect(fromCurrencyDropdown).toHaveValue("ARK");
@@ -551,7 +552,7 @@ describe("ExchangeForm", () => {
 		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -563,14 +564,13 @@ describe("ExchangeForm", () => {
 
 		// update amount output
 		payoutInput.select();
-		userEvent.paste(payoutInput, "1");
+		await userEvent.clear(payoutInput);
+		await userEvent.type(payoutInput, "1");
 
-		await waitFor(() => {
-			expect(payinInput).toHaveValue(payoutValue);
-		});
+		expect(payinInput).toHaveValue(payoutValue);
 
 		// remove from currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toHaveValue();
 		});
@@ -608,21 +608,22 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		// remove from currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 
 		await waitFor(() => {
 			expect(payinInput).not.toHaveValue();
 		});
 
 		// remove to currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await waitFor(() => {
 			expect(payoutInput).not.toHaveValue();
@@ -651,7 +652,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -662,7 +664,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove payin amount
-		userEvent.clear(payinInput);
+		await userEvent.clear(payinInput);
 
 		await waitFor(() => {
 			expect(payoutInput).not.toHaveValue();
@@ -691,7 +693,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -702,7 +705,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove payout amount
-		userEvent.clear(payoutInput);
+		await userEvent.clear(payoutInput);
 
 		await waitFor(() => {
 			expect(payinInput).not.toHaveValue();
@@ -728,7 +731,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove from currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toHaveValue();
 		});
@@ -737,7 +740,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payoutInput, "1");
+		await userEvent.clear(payoutInput);
+		await userEvent.type(payoutInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue("1");
@@ -767,7 +771,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove to currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[1]).not.toHaveValue();
 		});
@@ -776,7 +780,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -812,7 +816,7 @@ describe("ExchangeForm", () => {
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -825,7 +829,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove to currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await waitFor(() => {
 			expect(within(recipientAddress).queryByTestId("Input__error")).not.toBeInTheDocument();
@@ -858,7 +862,7 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 
 		const refundAddress = screen.getByTestId(refundAddressID);
 
@@ -866,7 +870,7 @@ describe("ExchangeForm", () => {
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		userEvent.paste(refundDropdown, "refundAddress");
+		await userEvent.type(refundDropdown, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("refundAddress");
@@ -877,7 +881,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove from currency
-		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
+		await userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 
 		await waitFor(() => {
 			expect(within(refundAddress).queryByTestId("Input__error")).not.toBeInTheDocument();
@@ -913,7 +917,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -923,7 +927,8 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.clear(payinInput);
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -938,13 +943,13 @@ describe("ExchangeForm", () => {
 		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		// back to form step
-		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -954,14 +959,14 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
@@ -970,7 +975,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.GENERIC"));
@@ -1012,7 +1017,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		const payinInput = screen.getAllByTestId("InputCurrency")[0];
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
@@ -1022,7 +1027,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1037,14 +1042,14 @@ describe("ExchangeForm", () => {
 		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
@@ -1053,7 +1058,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: "ARK" }));
@@ -1095,7 +1100,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		userEvent.paste(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1105,7 +1110,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		userEvent.paste(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1117,13 +1122,13 @@ describe("ExchangeForm", () => {
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
 
 		const refundInput = within(screen.getByTestId(refundAddressID)).getByTestId("SelectDropdown__input");
-		userEvent.paste(refundInput, "refundAddress");
+		await userEvent.type(refundInput, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundInput).toHaveValue("refundAddress");
@@ -1132,14 +1137,14 @@ describe("ExchangeForm", () => {
 		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
@@ -1148,7 +1153,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = vi.spyOn(toasts, "error").mockImplementation(vi.fn());
 
 		// submit form
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: "BTC" }));
@@ -1212,7 +1217,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		userEvent.type(recipientDropdown, "payoutAddress");
+		await userEvent.type(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1228,7 +1233,7 @@ describe("ExchangeForm", () => {
 			.mockReturnValue(exchangeTransaction);
 
 		// amount input
-		userEvent.type(payinInput, "1");
+		await userEvent.type(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1245,13 +1250,13 @@ describe("ExchangeForm", () => {
 		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		// back to form step
-		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -1261,21 +1266,21 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 		await waitFor(() => {
 			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(continueButton()).not.toBeDisabled();
 		});
 
 		// submit form
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
@@ -1310,7 +1315,7 @@ describe("ExchangeForm", () => {
 			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),
 		).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
+		await userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);
@@ -1426,7 +1431,6 @@ describe("FormStep", () => {
 		expect(container).toMatchSnapshot();
 	});
 });
-
 describe("ReviewStep", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());

@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import userEvent from "@testing-library/user-event";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { createHashHistory } from "history";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { Context as ResponsiveContext } from "react-responsive";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
@@ -106,7 +106,7 @@ describe("WalletsGroup", () => {
 		useConfigurationSpy.mockRestore();
 	});
 
-	it("should handle list wallet click", () => {
+	it("should handle list wallet click", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<PortfolioHeader />
@@ -125,7 +125,7 @@ describe("WalletsGroup", () => {
 
 		expect(screen.queryByText(wallets[2].address())).not.toBeInTheDocument();
 
-		userEvent.click(toggleArkMainnet);
+		await userEvent.click(toggleArkMainnet);
 
 		expect(screen.getAllByTestId("WalletsGroupHeader")[0].classList.contains("md:border-b")).toBeTruthy();
 		expect(screen.queryAllByTestId("WalletsGroupHeader")[1].classList.contains("border-b")).toBeFalsy();
@@ -133,11 +133,11 @@ describe("WalletsGroup", () => {
 		expect(screen.queryByText(wallets[0].alias()!)).not.toBeInTheDocument();
 		expect(screen.getByText(wallets[2].address())).toBeInTheDocument();
 
-		userEvent.click(toggleArkDevnet);
+		await userEvent.click(toggleArkDevnet);
 
 		expect(screen.getAllByText(wallets[0].alias()!)[0]).toBeInTheDocument();
 
-		userEvent.click(screen.getAllByText(wallets[0].alias()!)[0]);
+		await userEvent.click(screen.getAllByText(wallets[0].alias()!)[0]);
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
 	});
@@ -156,7 +156,7 @@ describe("WalletsGroup", () => {
 
 		const name = "New Name";
 
-		userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletTable")).toBeInTheDocument();
@@ -166,12 +166,12 @@ describe("WalletsGroup", () => {
 
 		expect(within(walletRow).queryByText(name)).not.toBeInTheDocument();
 
-		userEvent.click(within(walletRow).getByTestId("dropdown__toggle"));
+		await userEvent.click(within(walletRow).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME)).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME));
+		await userEvent.click(screen.getByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.WALLET_NAME));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
@@ -184,14 +184,15 @@ describe("WalletsGroup", () => {
 		});
 
 		inputElement.select();
-		userEvent.type(inputElement, name);
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, name);
 
 		await waitFor(() => expect(inputElement).toHaveValue(name));
 
 		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeVisible();
 		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeEnabled();
 
-		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => {
 			expect(within(walletRow).getByText(name)).toBeInTheDocument();
@@ -214,24 +215,24 @@ describe("WalletsGroup", () => {
 
 		const count = profile.wallets().count();
 
-		userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletTable")).toBeInTheDocument();
 		});
 
-		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getByTestId("dropdown__toggle"));
+		await userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByText(commonTranslations.DELETE)).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(commonTranslations.DELETE));
+		await userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE);
 
-		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		await userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(count - 1));
 
@@ -328,7 +329,7 @@ describe("WalletsGroup", () => {
 		useDisplayWalletsSpy.mockRestore();
 	});
 
-	it("should render with show all button", () => {
+	it("should render with show all button", async () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<WalletsGroupsResponsive />
@@ -339,20 +340,20 @@ describe("WalletsGroup", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[1]);
 
 		expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletsList__ShowAll")).toBeInTheDocument();
 		// expect(screen.getAllByText(wallets[0].alias()!)).toHaveLength(9);
 
-		userEvent.click(screen.getByTestId("WalletsList__ShowAll"));
+		await userEvent.click(screen.getByTestId("WalletsList__ShowAll"));
 
 		expect(asFragment()).toMatchSnapshot();
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/network/${wallets[0].networkId()}`);
 	});
 
-	it("should show skeleton when syncing exchange rates", () => {
+	it("should show skeleton when syncing exchange rates", async () => {
 		const useConfigurationSpy = vi
 			.spyOn(configurationModule, "useConfiguration")
 			.mockReturnValue({ profileIsSyncingExchangeRates: true });
@@ -372,7 +373,7 @@ describe("WalletsGroup", () => {
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("Accordion__toggle")[0]);
+		await userEvent.click(screen.getAllByTestId("Accordion__toggle")[0]);
 
 		// eslint-disable-next-line testing-library/no-node-access
 		expect(screen.getAllByTestId("CurrencyCell")[0].querySelector(".react-loading-skeleton")).toBeInTheDocument();

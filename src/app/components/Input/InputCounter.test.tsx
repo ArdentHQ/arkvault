@@ -20,10 +20,10 @@ describe("InputCounter", () => {
 		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("5/10");
 	});
 
-	it("should update the length when changing the value", () => {
+	it("should update the length when changing the value", async () => {
 		render(<InputCounter maxLength={10} maxLengthLabel="10" />);
 
-		userEvent.type(screen.getByTestId("InputCounter__input"), "Test");
+		await userEvent.type(screen.getByTestId("InputCounter__input"), "Test");
 
 		expect(screen.getByTestId("InputCounter__counter")).toHaveTextContent("4/10");
 	});

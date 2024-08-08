@@ -108,9 +108,9 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		userEvent.type(signatoryInput(), signedMessage.signatory);
-		userEvent.type(messageInput(), signedMessage.message);
-		userEvent.type(signatureInput(), signedMessage.signature);
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
@@ -132,7 +132,7 @@ describe("VerifyMessage", () => {
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
@@ -145,7 +145,7 @@ describe("VerifyMessage", () => {
 			{ timeout: 4000 },
 		);
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		await waitFor(() => {
 			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
@@ -177,9 +177,9 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		userEvent.type(signatoryInput(), signedMessage.signatory);
-		userEvent.type(messageInput(), signedMessage.message);
-		userEvent.type(signatureInput(), signedMessage.signature);
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
 		await waitFor(() => {
 			expect(signatoryInput()).toHaveValue(signedMessage.signatory);
@@ -197,9 +197,9 @@ describe("VerifyMessage", () => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
@@ -215,11 +215,11 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		userEvent.type(signatoryInput(), signedMessage.signatory);
-		userEvent.type(messageInput(), signedMessage.message);
-		userEvent.type(signatureInput(), signedMessage.signature);
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("VerifyMessage__json-jsonString")).toHaveValue(JSON.stringify(signedMessage));
@@ -229,7 +229,7 @@ describe("VerifyMessage", () => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
@@ -245,11 +245,11 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		userEvent.paste(messageInput(), "");
-		userEvent.paste(signatoryInput(), "");
-		userEvent.paste(signatureInput(), signedMessage.signature);
+		await userEvent.clear(messageInput());
+		await userEvent.clear(signatureInput());
+		await userEvent.type(signatureInput(), signedMessage.signature);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("VerifyMessage__json-jsonString")).not.toHaveValue(JSON.stringify(signedMessage));
@@ -285,7 +285,7 @@ describe("VerifyMessage", () => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.VERIFIED.TITLE);
 	});
@@ -309,7 +309,7 @@ describe("VerifyMessage", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
+		await userEvent.click(screen.getByTestId("VerifyMessage__back-button"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 	});
@@ -325,15 +325,16 @@ describe("VerifyMessage", () => {
 			},
 		);
 
-		userEvent.paste(signatoryInput(), signedMessage.signatory);
-		userEvent.paste(messageInput(), signedMessage.message);
-		userEvent.paste(signatureInput(), "fake-signature");
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.clear(signatureInput());
+		await userEvent.type(signatureInput(), "fake-signature");
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE);
 	});
@@ -351,15 +352,16 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockResolvedValue(false);
 
-		userEvent.paste(signatoryInput(), signedMessage.signatory);
-		userEvent.paste(messageInput(), signedMessage.message);
-		userEvent.paste(signatureInput(), "fake-signature");
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.clear(signatureInput());
+		await userEvent.type(signatureInput(), "fake-signature");
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.SUCCESS_STEP.NOT_VERIFIED.TITLE);
 
@@ -379,21 +381,22 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = vi.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("error"));
 
-		userEvent.paste(signatoryInput(), signedMessage.signatory);
-		userEvent.paste(messageInput(), signedMessage.message);
-		userEvent.paste(signatureInput(), "fake-signature");
+		await userEvent.type(signatoryInput(), signedMessage.signatory);
+		await userEvent.type(messageInput(), signedMessage.message);
+		await userEvent.clear(signatureInput());
+		await userEvent.type(signatureInput(), "fake-signature");
 
 		await waitFor(() => {
 			expect(verifyButton()).toBeEnabled();
 		});
 
-		userEvent.click(verifyButton());
+		await userEvent.click(verifyButton());
 
 		await expectHeading(messageTranslations.PAGE_VERIFY_MESSAGE.ERROR_STEP.TITLE);
 
 		const historySpy = vi.spyOn(history, "push");
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

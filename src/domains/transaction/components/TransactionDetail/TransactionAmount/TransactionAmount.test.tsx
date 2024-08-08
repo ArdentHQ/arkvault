@@ -42,7 +42,7 @@ describe("TransactionAmount", () => {
 		expect(queryElementForSvg(container, type.toLowerCase())).toBeInTheDocument();
 	});
 
-	it.each(["Sent", "Received"])("should render info indicator for '%s'", (type) => {
+	it.each(["Sent", "Received"])("should render info indicator for '%s'", async (type) => {
 		render(
 			<TransactionAmount amount={2} returnedAmount={1} isTotalAmount currency="DARK" isSent={type === "Sent"} />,
 		);
@@ -51,7 +51,7 @@ describe("TransactionAmount", () => {
 
 		expect(queryElementForSvg(document, "hint-small")).toBeInTheDocument();
 
-		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 1 DARK sent to itself")).toBeInTheDocument();
 	});

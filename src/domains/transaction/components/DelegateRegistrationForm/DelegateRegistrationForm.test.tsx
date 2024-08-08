@@ -114,7 +114,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
 		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
@@ -130,14 +130,15 @@ describe("DelegateRegistrationForm", () => {
 		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		inputElement.select();
-		userEvent.paste(inputElement, "11");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "11");
 
 		await waitFor(() => expect(inputElement).toHaveValue("11"));
 
@@ -149,7 +150,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
-		userEvent.paste(screen.getByTestId("Input__username"), "<invalid>");
+		await userEvent.type(screen.getByTestId("Input__username"), "<invalid>");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
@@ -162,7 +163,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
-		userEvent.paste(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
+		await userEvent.type(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
@@ -175,7 +176,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
-		userEvent.paste(screen.getByTestId("Input__username"), "arkx");
+		await userEvent.type(screen.getByTestId("Input__username"), "arkx");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 

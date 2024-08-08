@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react";
 import { useTransactionExportForm } from "./use-transaction-export-form";
 import { waitFor } from "@/utils/testing-library";
 

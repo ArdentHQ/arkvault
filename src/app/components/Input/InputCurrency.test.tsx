@@ -12,22 +12,24 @@ describe("InputCurrency", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit formatted value", () => {
+	it("should emit formatted value", async () => {
 		const onChange = vi.fn();
 		render(<InputCurrency onChange={onChange} />);
 		const input = screen.getByTestId("InputCurrency");
 
-		userEvent.paste(input, "123");
+		await userEvent.clear(input);
+		await userEvent.type(input, "123");
 
 		expect(onChange).toHaveBeenCalledWith("123");
 	});
 
-	it("should not allow letters", () => {
+	it("should not allow letters", async () => {
 		const onChange = vi.fn();
 		render(<InputCurrency onChange={onChange} />);
 		const input = screen.getByTestId("InputCurrency");
 
-		userEvent.paste(input, "abc123");
+		await userEvent.clear(input);
+		await userEvent.type(input, "abc123");
 
 		expect(onChange).toHaveBeenCalledWith("123");
 	});
@@ -63,7 +65,8 @@ describe("InputCurrency", () => {
 		expect(input).toHaveValue("0.04");
 
 		input.select();
-		userEvent.paste(input, "1.23");
+		await userEvent.clear(input);
+		await userEvent.type(input, "1.23");
 
 		await waitFor(() => expect(input).toHaveValue("1.23"));
 	});

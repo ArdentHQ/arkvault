@@ -42,7 +42,8 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	);
 };
 
-const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+const selectFirstRecipient = async () =>
+	await userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 const recipientList = () => screen.getAllByTestId("AddRecipientItem");
 const addRecipientButton = () => screen.getByTestId("AddRecipient__add-button");
 
@@ -50,13 +51,13 @@ const fillFieldsWithValidAddressAndAmount = async (address: string, amount: stri
 	const amoutInput = screen.getByTestId("AddRecipient__amount");
 	const addressInput = screen.getByTestId("SelectDropdown__input");
 
-	userEvent.paste(amoutInput, String(amount));
+	await userEvent.clear(amoutInput);
+	await userEvent.type(amoutInput, String(amount));
 
 	await waitFor(() => expect(amoutInput).toHaveValue(String(amount)));
 
-	userEvent.clear(addressInput);
-
-	userEvent.paste(addressInput, address);
+	await userEvent.clear(addressInput);
+	await userEvent.type(addressInput, address);
 
 	await waitFor(() => expect(addressInput).toHaveValue(address));
 };
@@ -188,11 +189,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument());
 
@@ -206,7 +207,7 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
-		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(`${wallet.balance()}`));
 
@@ -231,7 +232,7 @@ describe("AddRecipient", () => {
 			<AddRecipient profile={emptyProfile} wallet={emptyWallet} recipients={[]} onChange={vi.fn()} />,
 		);
 
-		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		await userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("0"));
 
@@ -282,11 +283,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument();
 
-		userEvent.click(multipleButton);
+		await userEvent.click(multipleButton);
 
 		await expect(screen.findByText(recipientLabel)).resolves.toBeVisible();
 
-		userEvent.click(singleButton);
+		await userEvent.click(singleButton);
 
 		await waitFor(() => expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument());
 	});
@@ -341,17 +342,17 @@ describe("AddRecipient", () => {
 		const amount = "1";
 		const recipientLabel = "Recipient #1";
 
-		userEvent.click(multipleButton);
+		await userEvent.click(multipleButton);
 
 		await expect(screen.findByText(recipientLabel)).resolves.toBeVisible();
 
 		await fillFieldsWithValidAddressAndAmount("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax", amount);
 		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
-		userEvent.click(addRecipientButton());
+		await userEvent.click(addRecipientButton());
 
 		await waitFor(() => expect(recipientList()).toHaveLength(3));
 
-		userEvent.click(singleButton);
+		await userEvent.click(singleButton);
 
 		await waitFor(() => expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument());
 
@@ -374,11 +375,11 @@ describe("AddRecipient", () => {
 
 		await fillFieldsWithValidAddressAndAmount(address, amount);
 
-		userEvent.click(multipleButton);
+		await userEvent.click(multipleButton);
 
 		await expect(screen.findByText(recipientLabel)).resolves.toBeVisible();
 
-		userEvent.click(singleButton);
+		await userEvent.click(singleButton);
 
 		await waitFor(() => expect(screen.queryByText(recipientLabel)).not.toBeInTheDocument());
 
@@ -438,11 +439,12 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
 		// Invalid address
-		userEvent.clear(screen.getByTestId("SelectDropdown__input"));
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
 
 		await waitFor(() => {
 			expect(+form.getValues("amount")).toBe(values.amount);
@@ -455,12 +457,12 @@ describe("AddRecipient", () => {
 		});
 
 		// Valid address
-		userEvent.clear(screen.getByTestId("SelectDropdown__input"));
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
 		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
 
-		userEvent.click(addRecipientButton());
+		await userEvent.click(addRecipientButton());
 
 		await waitFor(() => expect(recipientList()).toHaveLength(4));
 	});
@@ -506,15 +508,15 @@ describe("AddRecipient", () => {
 
 		expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue();
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -522,9 +524,10 @@ describe("AddRecipient", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"),
 		);
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
-		userEvent.click(addRecipientButton());
+		await userEvent.click(addRecipientButton());
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
@@ -537,15 +540,16 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "10000000000");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "10000000000");
 
 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 	});
@@ -557,15 +561,16 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "0.1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "0.1");
 
 		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
@@ -577,15 +582,16 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "abc");
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "abc");
 
 		await waitFor(() =>
 			expect(screen.getAllByTestId("Input__error")[0]).toHaveAttribute(
@@ -641,7 +647,8 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
 		await waitFor(() => expect(recipientList()).toHaveLength(2));
 
@@ -649,7 +656,7 @@ describe("AddRecipient", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		userEvent.click(removeButton[0]);
+		await userEvent.click(removeButton[0]);
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 	});
@@ -695,17 +702,19 @@ describe("AddRecipient", () => {
 			route: `/profiles/${profile.id()}`,
 		});
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), values.recipientAddress);
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
-		userEvent.click(addRecipientButton());
+		await userEvent.click(addRecipientButton());
 
 		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
 
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue(values.amount.toString()));
 	});
@@ -727,17 +736,18 @@ describe("AddRecipient", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
 		await expect(screen.findByTestId(selectRecipientID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(selectRecipientID));
+		await userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		selectFirstRecipient();
+		await selectFirstRecipient();
 
-		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
+		await userEvent.clear(screen.getByTestId("AddRecipient__amount"));
+		await userEvent.type(screen.getByTestId("AddRecipient__amount"), "1");
 
 		await waitFor(() => expect(addRecipientButton()).toBeDisabled());
 

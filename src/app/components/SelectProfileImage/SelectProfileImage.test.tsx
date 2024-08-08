@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as browserAccess from "browser-fs-access";
@@ -28,14 +28,14 @@ describe("SelectProfileImage", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render without value svg", () => {
+	it("should render without value svg", async () => {
 		const onSelect = vi.fn();
 
 		const { asFragment } = render(<SelectProfileImage value="test" onSelect={onSelect} />);
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(onSelect).toHaveBeenCalledWith(expect.any(String));
 	});
@@ -53,7 +53,7 @@ describe("SelectProfileImage", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		uploadButton().addEventListener("click", browserAccessMock as any);
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await expect(
 			useFilesResult.current.showOpenDialog({
@@ -79,7 +79,7 @@ describe("SelectProfileImage", () => {
 			.mockResolvedValue(new File(["123"], "not-an-image.png"));
 
 		uploadButton().addEventListener("click", browserAccessMock as any);
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(translations.ERRORS.INVALID_IMAGE));
 
@@ -89,7 +89,7 @@ describe("SelectProfileImage", () => {
 			},
 		});
 
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(translations.ERRORS.INVALID_IMAGE));
 
@@ -106,7 +106,7 @@ describe("SelectProfileImage", () => {
 
 		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(undefined);
 
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(translations.ERRORS.INVALID_IMAGE));
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
@@ -127,7 +127,7 @@ describe("SelectProfileImage", () => {
 			.spyOn(browserAccess, "fileOpen")
 			.mockRejectedValue(new Error("The user aborted a request."));
 
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
 

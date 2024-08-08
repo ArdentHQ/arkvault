@@ -138,12 +138,12 @@ describe("Registration Fee", () => {
 			expect(screen.getByTestId("InputFee")).toBeInTheDocument();
 		});
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("25"));
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),
 		);
 
@@ -158,29 +158,31 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.clear(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
 
 		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
 
 		// Fee
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
@@ -198,34 +200,36 @@ describe("Registration Fee", () => {
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
+		await userEvent.clear(screen.getByTestId("Input__username"));
+		await userEvent.type(screen.getByTestId("Input__username"), "test_delegate");
 
 		expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate");
 
 		// Fee
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 

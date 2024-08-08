@@ -85,7 +85,7 @@ describe("CreateProfile", () => {
 	it("should render", async () => {
 		const { asFragment } = await renderComponent();
 
-		userEvent.click(screen.getByText("Back"));
+		await userEvent.click(screen.getByText("Back"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -135,12 +135,12 @@ describe("CreateProfile", () => {
 	it("should show password validation rules", async () => {
 		await renderComponent();
 
-		userEvent.paste(nameInput(), "test profile 3");
-		userEvent.paste(passwordInput(), testPassword);
+		await userEvent.type(nameInput(), "test profile 3");
+		await userEvent.type(passwordInput(), testPassword);
 
 		await waitFor(() => expect(screen.getByTestId("Rules")).toBeVisible());
 
-		userEvent.clear(passwordInput());
+		await userEvent.clear(passwordInput());
 
 		expect(passwordInput()).not.toHaveValue();
 
@@ -150,14 +150,14 @@ describe("CreateProfile", () => {
 	it("should store profile with password", async () => {
 		await renderComponent();
 
-		userEvent.paste(nameInput(), "test profile 3");
-		userEvent.paste(passwordInput(), testPassword);
-		userEvent.paste(passwordConfirmationInput(), testPassword);
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "test profile 3");
+		await userEvent.type(passwordInput(), testPassword);
+		await userEvent.type(passwordConfirmationInput(), testPassword);
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().last().usesPassword()).toBe(true));
 	});
@@ -166,28 +166,28 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
-		userEvent.paste(nameInput(), "test profile 1");
+		await userEvent.type(nameInput(), "test profile 1");
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		userEvent.clear(selectDropdown);
+		await userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-		userEvent.paste(selectDropdown, "BTC");
+		await userEvent.type(selectDropdown, "BTC");
 		await waitFor(() => expect(selectDropdown).toHaveValue("BTC"));
 
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		await act(() => {
-			userEvent.click(submitButton());
+		await act(async () => {
+			await userEvent.click(submitButton());
 		});
 
 		const profile = env.profiles().last();
@@ -207,13 +207,14 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		nameInput().select();
-		userEvent.paste(nameInput(), "t");
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "t");
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		nameInput().select();
-		userEvent.paste(nameInput(), profileName);
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), profileName);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
@@ -226,13 +227,14 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		nameInput().select();
-		userEvent.paste(nameInput(), "t");
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "t");
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		nameInput().select();
-		userEvent.paste(nameInput(), "     ");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "     ");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
@@ -242,12 +244,13 @@ describe("CreateProfile", () => {
 	it("should not be able to create new profile if name is too long", async () => {
 		await renderComponent();
 
-		userEvent.paste(nameInput(), "t");
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "t");
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.paste(nameInput(), profileName.repeat(10));
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), profileName.repeat(10));
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
@@ -257,28 +260,32 @@ describe("CreateProfile", () => {
 	it("should fail password confirmation", async () => {
 		await renderComponent();
 
-		userEvent.paste(nameInput(), "asdasdas");
+		await userEvent.type(nameInput(), "asdasdas");
 
-		userEvent.paste(passwordInput(), testPassword);
-		userEvent.paste(passwordConfirmationInput(), wrongPassword);
+		await userEvent.type(passwordInput(), testPassword);
+		await userEvent.type(passwordConfirmationInput(), wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), password);
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), password);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), password);
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), password);
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), testPassword);
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), testPassword);
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), wrongPassword);
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), wrongPassword);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
@@ -292,7 +299,7 @@ describe("CreateProfile", () => {
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input");
 
-		userEvent.type(inputElement, "t");
+		await userEvent.type(inputElement, "t");
 		await waitFor(() => expect(inputElement).toHaveValue("t"));
 
 		expect(inputElement).toHaveFocus();
@@ -302,7 +309,8 @@ describe("CreateProfile", () => {
 		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
 
 		inputElement.select();
-		userEvent.paste(inputElement, profileName);
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, profileName);
 		await waitFor(() => expect(inputElement).toHaveValue(profileName));
 
 		expect(inputElement).toHaveFocus();
@@ -311,7 +319,7 @@ describe("CreateProfile", () => {
 
 		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
 
-		userEvent.clear(inputElement);
+		await userEvent.clear(inputElement);
 		await waitFor(() => expect(inputElement).not.toHaveValue());
 
 		expect(inputElement).toHaveFocus();
@@ -325,7 +333,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
@@ -333,7 +341,7 @@ describe("CreateProfile", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 
 		await waitFor(() => expect(nameInput()).not.toHaveValue());
 
@@ -348,23 +356,23 @@ describe("CreateProfile", () => {
 		const profileCount = env.profiles().count();
 
 		// Upload avatar image
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(screen.queryByTestId(imageID)).not.toBeInTheDocument();
 		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
 
-		userEvent.paste(nameInput(), "test profile 4");
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "test profile 4");
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
@@ -372,17 +380,17 @@ describe("CreateProfile", () => {
 	it("should show identicon when removing image if name is set", async () => {
 		await renderComponent();
 
-		userEvent.paste(nameInput(), "test profile 1");
+		await userEvent.type(nameInput(), "test profile 1");
 		fireEvent.blur(nameInput());
 
 		// Upload avatar image
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(screen.getByTestId(avatarID)).toBeInTheDocument();
 	});
@@ -394,16 +402,16 @@ describe("CreateProfile", () => {
 
 		browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockRejectedValue(new Error("Error"));
 
-		userEvent.click(uploadButton());
+		await userEvent.click(uploadButton());
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
-		userEvent.paste(nameInput(), "test profile 5");
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.type(nameInput(), "test profile 5");
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
@@ -441,7 +449,7 @@ describe("CreateProfile", () => {
 		expect(darkButton).toBeChecked();
 		expect(lightButton).not.toBeChecked();
 
-		userEvent.click(lightButton);
+		await userEvent.click(lightButton);
 
 		expect(document.querySelector("html")).toHaveClass("light");
 		expect(lightButton).toBeChecked();

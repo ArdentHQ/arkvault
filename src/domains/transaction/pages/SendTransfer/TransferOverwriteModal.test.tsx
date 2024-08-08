@@ -66,33 +66,33 @@ describe("TransferOverwriteModal", () => {
 		expect(within(amountContainer).getByTestId("OverwriteDetail__New")).toHaveTextContent("N/A");
 	});
 
-	it("should init the `onCancel` callback when the `Cancel` button is clicked", () => {
+	it("should init the `onCancel` callback when the `Cancel` button is clicked", async () => {
 		const cancelMock = vi.fn();
 
 		renderComponent({ onCancel: cancelMock });
 
-		userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
+		await userEvent.click(screen.getByTestId("OverwriteModal__cancel-button"));
 		expect(cancelMock).toHaveBeenCalledOnce();
 	});
 
-	it("should init the `onConfirm` callback when the `Confirm` button is clicked", () => {
+	it("should init the `onConfirm` callback when the `Confirm` button is clicked", async () => {
 		const confirmMock = vi.fn();
 
 		renderComponent({ onConfirm: confirmMock });
 
-		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+		await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 		expect(confirmMock).toHaveBeenCalledOnce();
 	});
 
-	it("should init the `onConfirm` callback with clear prefilled value", () => {
+	it("should init the `onConfirm` callback with clear prefilled value", async () => {
 		const confirmMock = vi.fn();
 
 		renderComponent({ onConfirm: confirmMock });
 
 		// click on the clear prefilled checkbox
-		userEvent.click(screen.getByTestId("OverwriteModal__clear_prefilled"));
+		await userEvent.click(screen.getByTestId("OverwriteModal__clear_prefilled"));
 
-		userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
+		await userEvent.click(screen.getByTestId("OverwriteModal__confirm-button"));
 		expect(confirmMock).toHaveBeenCalledWith(false);
 	});
 });

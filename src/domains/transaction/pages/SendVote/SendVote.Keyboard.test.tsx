@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -100,7 +100,7 @@ describe("SendVote", () => {
 			requestMock("https://ark-test-musig.arkvault.io/", { result: [] }, { method: "post" }),
 		);
 
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 	});
 
@@ -162,28 +162,28 @@ describe("SendVote", () => {
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
 		});
 
-		userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getAllByTestId("InputFee")[0]).getAllByRole("radio")[2]);
 
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
 		// remove focus from fee button
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled(), { timeout: 3000 });
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		if (inputMethod === "with keyboard") {
-			userEvent.keyboard("{enter}");
+			await userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(continueButton());
+			await userEvent.click(continueButton());
 		}
 
 		// AuthenticationStep
@@ -200,7 +200,7 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		userEvent.paste(passwordInput, passphrase);
+		await userEvent.type(passwordInput, passphrase);
 
 		await waitFor(() => {
 			expect(passwordInput).toHaveValue(passphrase);
@@ -214,9 +214,9 @@ describe("SendVote", () => {
 
 		await act(async () => {
 			if (inputMethod === "with keyboard") {
-				userEvent.keyboard("{enter}");
+				await userEvent.keyboard("{enter}");
 			} else {
-				userEvent.click(sendButton());
+				await userEvent.click(sendButton());
 			}
 		});
 

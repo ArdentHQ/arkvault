@@ -29,26 +29,26 @@ describe("AmountLabel", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with hint", () => {
+	it("should render with hint", async () => {
 		const { asFragment } = render(<AmountLabel isNegative={false} value={10} ticker="ARK" hint="I am an hint" />);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("I am an hint")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render compact with hint", () => {
+	it("should render compact with hint", async () => {
 		const { asFragment } = render(
 			<AmountLabel isCompact isNegative={false} value={10} ticker="ARK" hint="I am an hint" />,
 		);
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		userEvent.hover(screen.getByTestId("AmountLabel__hint"));
+		await userEvent.hover(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("I am an hint")).toBeInTheDocument();
 

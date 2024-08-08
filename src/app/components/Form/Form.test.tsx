@@ -1,13 +1,13 @@
-import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useForm } from "react-hook-form";
 
+import { renderHook, waitFor } from "@testing-library/react";
 import { Form } from "./Form";
 import { fireEvent, render, screen } from "@/utils/testing-library";
 
 describe("Form", () => {
 	it("should render with provider", async () => {
-		const { result: form, waitForNextUpdate } = renderHook(() => useForm());
+		const { result: form } = renderHook(() => useForm());
 		const onSubmit = vi.fn();
 
 		render(
@@ -20,9 +20,7 @@ describe("Form", () => {
 
 		fireEvent.submit(screen.getByTestId("Form"));
 
-		await waitForNextUpdate();
-
-		expect(onSubmit).toHaveBeenCalledWith({ name: "test" }, expect.anything());
+		await waitFor(() => expect(onSubmit).toHaveBeenCalledWith({ name: "test" }, expect.anything()));
 	});
 
 	it("should render without submit handler", () => {

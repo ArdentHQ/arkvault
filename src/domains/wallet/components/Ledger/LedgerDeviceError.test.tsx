@@ -6,7 +6,7 @@ import { LedgerDeviceError } from "./LedgerDeviceError";
 import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerDeviceError", () => {
-	it("should call the onClose callback if given", () => {
+	it("should call the onClose callback if given", async () => {
 		const onClose = vi.fn();
 
 		render(
@@ -18,7 +18,7 @@ describe("LedgerDeviceError", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

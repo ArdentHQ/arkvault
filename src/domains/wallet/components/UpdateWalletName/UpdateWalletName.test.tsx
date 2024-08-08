@@ -69,7 +69,8 @@ describe("UpdateWalletName", () => {
 
 		for (const name of nameVariations) {
 			userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-			userEvent.paste(screen.getByTestId("UpdateWalletName__input"), name);
+			await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+			await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
 
 			await waitFor(() => {
 				expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name);
@@ -104,7 +105,8 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={vi.fn()} onCancel={vi.fn()} />,
 		);
 
-		userEvent.paste(
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(
 			screen.getByTestId("UpdateWalletName__input"),
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio",
 		);

@@ -52,7 +52,7 @@ describe("DelegateRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit action on select button", () => {
+	it("should emit action on select button", async () => {
 		const toggleVotesSelected = vi.fn();
 		const { container, asFragment } = render(
 			<table>
@@ -72,7 +72,7 @@ describe("DelegateRow", () => {
 			</table>,
 		);
 
-		userEvent.click(firstDelegateVoteButton());
+		await userEvent.click(firstDelegateVoteButton());
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());

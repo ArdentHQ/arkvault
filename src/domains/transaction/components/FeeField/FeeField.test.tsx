@@ -105,7 +105,7 @@ describe("FeeField", () => {
 				expect(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED)).toBeEnabled();
 			});
 
-			userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+			await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("3"));
 
@@ -193,11 +193,11 @@ describe("FeeField", () => {
 
 		expect(avgButton).toHaveAttribute("aria-checked", "true");
 
-		userEvent.click(minButton);
+		await userEvent.click(minButton);
 
 		expect(minButton).toHaveAttribute("aria-checked", "true");
 
-		userEvent.click(maxButton);
+		await userEvent.click(maxButton);
 
 		expect(maxButton).toHaveAttribute("aria-checked", "true");
 	});

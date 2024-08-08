@@ -342,7 +342,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getAllByTestId("TableRow")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -363,7 +363,7 @@ describe("Signed Transaction Table", () => {
 			"xs",
 		);
 
-		userEvent.click(screen.getAllByTestId("TableRow__mobile")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow__mobile")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -633,7 +633,7 @@ describe("Signed Transaction Table", () => {
 		});
 	});
 
-	it.each([true, false])("should show the sign button with isCompact = %s", (isCompact: boolean) => {
+	it.each([true, false])("should show the sign button with isCompact = %s", async (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 		const onClick = vi.fn();
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
@@ -648,7 +648,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		userEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
+		await userEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 		expect(asFragment()).toMatchSnapshot();
@@ -664,11 +664,11 @@ describe("Signed Transaction Table", () => {
 
 		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		render(<PendingTransactions isCompact={false} wallet={wallet} pendingTransactions={pendingTransactions} />);
-		userEvent.hover(screen.getAllByRole("row")[1]);
+		await userEvent.hover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 
-		userEvent.unhover(screen.getAllByRole("row")[1]);
+		await userEvent.unhover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 		canBeSignedMock.mockRestore();
@@ -698,7 +698,7 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
@@ -706,13 +706,13 @@ describe("Signed Transaction Table", () => {
 
 		expect(submitButton()).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -744,7 +744,7 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		userEvent.click(screen.getByTestId("SignedTransactionRowMobile--remove"));
+		await userEvent.click(screen.getByTestId("SignedTransactionRowMobile--remove"));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
@@ -752,13 +752,13 @@ describe("Signed Transaction Table", () => {
 
 		expect(submitButton()).toBeDisabled();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -789,12 +789,12 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(cancelButton()).toBeInTheDocument();
 
-		userEvent.click(cancelButton());
+		await userEvent.click(cancelButton());
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -824,16 +824,16 @@ describe("Signed Transaction Table", () => {
 
 		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(cancelButton()).toBeInTheDocument();
 
-		userEvent.click(cancelButton());
+		await userEvent.click(cancelButton());
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
@@ -863,11 +863,11 @@ describe("Signed Transaction Table", () => {
 
 		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onSign).toHaveBeenCalledTimes(1);
 
@@ -900,7 +900,7 @@ describe("Signed Transaction Table", () => {
 
 		const button = screen.getByTestId("TransactionRow__sign");
 
-		userEvent.click(button);
+		await userEvent.click(button);
 
 		// 2 because its also called when the row is clicked
 		expect(onSign).toHaveBeenCalledTimes(2);

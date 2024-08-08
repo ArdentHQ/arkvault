@@ -23,10 +23,10 @@ describe("TruncateEnd", () => {
 		expect(container).toHaveTextContent("1234");
 	});
 
-	it("should show tooltip", () => {
+	it("should show tooltip", async () => {
 		const { baseElement } = render(<TruncateEnd text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />);
 
-		userEvent.hover(screen.getByTestId("TruncateEnd"));
+		await userEvent.hover(screen.getByTestId("TruncateEnd"));
 
 		expect(baseElement).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
 	});

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import React from "react";
 import { useNetworks } from "@/app/hooks";
 import DefaultManifest from "@/tests/fixtures/coins/ark/manifest/default.json";

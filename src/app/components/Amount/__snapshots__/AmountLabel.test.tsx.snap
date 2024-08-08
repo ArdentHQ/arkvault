@@ -50,6 +50,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
       class="flex space-x-1 items-center"
     >
       <div
+        aria-describedby="tippy-2"
         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
         data-testid="AmountLabel__hint"
       >
@@ -124,6 +125,7 @@ exports[`AmountLabel > should render with hint 1`] = `
       class="flex space-x-1 items-stretch"
     >
       <div
+        aria-describedby="tippy-1"
         class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
         data-testid="AmountLabel__hint"
       >

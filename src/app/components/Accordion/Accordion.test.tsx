@@ -96,7 +96,7 @@ describe("Button", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should toggle the accordion on click", () => {
+	it("should toggle the accordion on click", async () => {
 		const Accordion = () => {
 			useAccordion();
 
@@ -118,7 +118,7 @@ describe("Button", () => {
 		expect(screen.queryByTestId("AccordionContent")).not.toBeInTheDocument();
 		expect(screen.getByTestId("Accordion__toggle")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AccordionContent")).toBeInTheDocument();
 

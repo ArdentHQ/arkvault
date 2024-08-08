@@ -34,10 +34,10 @@ describe("NetworkOptions", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should trigger onClick", () => {
+	it("should trigger onClick", async () => {
 		const onClick = vi.fn();
 		render(<NetworkOptions networks={networkOptions} onClick={onClick} />);
-		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		await userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onClick).toHaveBeenCalledWith(
 			{
@@ -68,10 +68,10 @@ describe("ToggleAllOption", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should handle onClick", () => {
+	it("should handle onClick", async () => {
 		const onClick = vi.fn();
 		render(<ToggleAllOption isSelected onClick={onClick} />);
-		userEvent.click(screen.getByTestId("network__viewall"));
+		await userEvent.click(screen.getByTestId("network__viewall"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -96,13 +96,13 @@ describe("FilterNetwork", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should toggle a network option", () => {
+	it("should toggle a network option", async () => {
 		const onChange = vi.fn();
 		render(<FilterNetwork options={networkOptions} onChange={onChange} />);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(1);
 
-		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		await userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -140,20 +140,20 @@ describe("FilterNetworks", () => {
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		await userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await expect(screen.findByTestId("FilterNetwork__select-all-checkbox")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
-		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		await userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
 		await waitFor(() => expect(screen.queryByTestId("FilterNetwork__select-all-checkbox")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should select all public networks", () => {
+	it("should select all public networks", async () => {
 		const onChange = vi.fn();
 
 		render(
@@ -179,9 +179,9 @@ describe("FilterNetworks", () => {
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
+		await userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		userEvent.click(screen.getByTestId("FilterNetwork__select-all-checkbox"));
+		await userEvent.click(screen.getByTestId("FilterNetwork__select-all-checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith(
 			expect.anything(),
@@ -196,13 +196,13 @@ describe("FilterNetworks", () => {
 		);
 	});
 
-	it("should toggle a public network option", () => {
+	it("should toggle a public network option", async () => {
 		const onChange = vi.fn();
 		render(<FilterNetworks options={networkOptions} onChange={onChange} />);
 
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		await userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{
@@ -213,14 +213,14 @@ describe("FilterNetworks", () => {
 		);
 	});
 
-	it("should toggle a testnet network option", () => {
+	it("should toggle a testnet network option", async () => {
 		const onChange = vi.fn();
 		const { container } = render(<FilterNetworks options={networkOptions} onChange={onChange} />);
 
 		expect(container).toMatchSnapshot();
 		expect(screen.getAllByTestId("FilterNetwork")).toHaveLength(2);
 
-		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
+		await userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[1].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith(
 			{

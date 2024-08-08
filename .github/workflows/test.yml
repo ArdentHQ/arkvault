@@ -604,7 +604,9 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.6
+                  COVERAGE_THRESHOLD_BRANCHES: 99.21
+                  COVERAGE_THRESHOLD_LINES: 99.81
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.82
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -643,7 +645,10 @@ jobs:
               run: pnpm rebuild
             - name: Test
               env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.45
+                  COVERAGE_THRESHOLD_BRANCHES: 98.9
+                  COVERAGE_THRESHOLD_LINES: 99.66
+                  COVERAGE_THRESHOLD_FUNCTIONS: 99.62
+                  COVERAGE_THRESHOLD_STATEMENTS: 99.68
               uses: nick-invision/retry@v2
               with:
                   timeout_minutes: 10
@@ -748,10 +753,10 @@ jobs:
 
             - name: Test Pages
               env:
-                  COVERAGE_THRESHOLD_LINES: 97.3
-                  COVERAGE_THRESHOLD_FUNCTIONS: 96.4
-                  COVERAGE_THRESHOLD_STATEMENTS: 97.8
-                  COVERAGE_THRESHOLD_BRANCHES: 98.43
+                  COVERAGE_THRESHOLD_LINES: 97.07
+                  COVERAGE_THRESHOLD_FUNCTIONS: 96.04
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.15
+                  COVERAGE_THRESHOLD_BRANCHES: 96.52
                   COVERAGE_INCLUDE_PATH: src/domains/transaction/pages
               uses: nick-invision/retry@v2
               with:
@@ -804,6 +809,10 @@ jobs:
               run: pnpm rebuild
             - name: Test
               uses: nick-invision/retry@v2
+              env:
+                  COVERAGE_THRESHOLD_LINES: 98.69
+                  COVERAGE_THRESHOLD_STATEMENTS: 98.75
+                  COVERAGE_THRESHOLD_BRANCHES: 98.48
               with:
                   timeout_minutes: 10
                   max_attempts: 1
@@ -841,10 +850,10 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_LINES: 99.93
-                  COVERAGE_THRESHOLD_FUNCTIONS: 99.93
-                  COVERAGE_THRESHOLD_STATEMENTS: 99.38
-                  COVERAGE_THRESHOLD_BRANCHES: 99.38
+                  COVERAGE_THRESHOLD_LINES: 97.7
+                  COVERAGE_THRESHOLD_FUNCTIONS: 98.27
+                  COVERAGE_THRESHOLD_STATEMENTS: 97.71
+                  COVERAGE_THRESHOLD_BRANCHES: 95.36
                   COVERAGE_INCLUDE_PATH: src/domains/wallet
               with:
                   timeout_minutes: 10

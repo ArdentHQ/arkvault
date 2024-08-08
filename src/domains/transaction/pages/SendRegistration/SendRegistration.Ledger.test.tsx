@@ -181,19 +181,20 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(screen.getByTestId("LedgerDeviceError")).toBeVisible(), { timeout: 4000 });
 
@@ -241,22 +242,23 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		const mockDerivationPath = vi.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 
 		// Skip Authentication Step
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
-		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Transaction Created"));
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useQRCode } from "./hooks";
 import * as themeUtils from "@/utils/theme";
@@ -43,9 +43,7 @@ describe("useQRCode hook", () => {
 	it.each([false, true])("should generate qr code in darkMode = %s", async (shouldUseDarkColors) => {
 		const themeSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
-		const { result, waitForNextUpdate } = renderQRCode();
-
-		await waitForNextUpdate();
+		const { result } = renderQRCode();
 
 		await waitFor(() =>
 			expect(result.current.uri).toBe(
@@ -59,9 +57,7 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate qr code with dark colors", async () => {
-		const { result, waitForNextUpdate } = renderQRCode();
-
-		await waitForNextUpdate();
+		const { result } = renderQRCode();
 
 		const darkColorsMock = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(true);
 
@@ -80,15 +76,13 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate without amount and memo", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
+		const { result } = renderHook(() =>
 			useQRCode({
 				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 				coin: "ARK",
 				nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
 			} as any),
 		);
-
-		await waitForNextUpdate();
 
 		await waitFor(() =>
 			expect(result.current.uri).toBe(
@@ -102,11 +96,9 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should return undefined if address is not provided", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
+		const { result } = renderHook(() =>
 			useQRCode({ nethash: "2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867" } as any),
 		);
-
-		await waitForNextUpdate();
 
 		await waitFor(() => expect(result.current.uri).toBeUndefined());
 		await waitFor(() => expect(result.current.image).toBeUndefined());

@@ -1,5 +1,5 @@
 import * as browserAccess from "browser-fs-access";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { isValidImage, ReadableFile, useFiles } from "./use-files";
 import { requestMock, server } from "@/tests/mocks/server";
 

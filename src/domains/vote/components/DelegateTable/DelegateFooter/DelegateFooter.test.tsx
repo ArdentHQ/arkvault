@@ -103,7 +103,7 @@ describe("DelegateFooter", () => {
 		votesAmountMinimumMock.mockRestore();
 	});
 
-	it("should disable continue button with tooltip if user doesn't select a delegate", () => {
+	it("should disable continue button with tooltip if user doesn't select a delegate", async () => {
 		const selectedDelegate: VoteDelegateProperties[] = [
 			{
 				amount: 0,
@@ -124,7 +124,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 
@@ -152,12 +152,12 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
 		expect(baseElement).not.toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 	});
 
-	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", () => {
+	it("should disable continue button with tooltip if there is at least 1 empty amount field when network requires vote amount", async () => {
 		const votesAmountMinimumMock = vi.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		const selectedDelegate: VoteDelegateProperties[] = [
@@ -180,7 +180,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton()).toBeDisabled();
 
-		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
+		await userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.INVALID_AMOUNT);
 

@@ -29,29 +29,29 @@ describe("FeeWarning", () => {
 		},
 	);
 
-	it("should call onCancel callback when closing the modal", () => {
+	it("should call onCancel callback when closing the modal", async () => {
 		const onCancel = vi.fn();
 
 		renderWithForm(<FeeWarning isOpen={true} onCancel={onCancel} onConfirm={vi.fn()} />);
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onCancel).toHaveBeenCalledWith(true);
 	});
 
-	it("should call onCancel callback when clicking on cancel button", () => {
+	it("should call onCancel callback when clicking on cancel button", async () => {
 		const onCancel = vi.fn();
 
 		renderWithForm(<FeeWarning isOpen={true} onCancel={onCancel} onConfirm={vi.fn()} />);
 
-		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		expect(onCancel).toHaveBeenCalledWith(false);
 	});
 
 	it.each([true, false])(
 		"should pass %s to onConfirm callback when clicking on continue button",
-		(suppressWarning) => {
+		async (suppressWarning) => {
 			const onConfirm = vi.fn();
 
 			renderWithForm(<FeeWarning isOpen={true} onCancel={vi.fn()} onConfirm={onConfirm} />, {
@@ -61,10 +61,10 @@ describe("FeeWarning", () => {
 			});
 
 			if (suppressWarning) {
-				userEvent.click(screen.getByTestId("FeeWarning__suppressWarning-toggle"));
+				await userEvent.click(screen.getByTestId("FeeWarning__suppressWarning-toggle"));
 			}
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			await userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 			expect(onConfirm).toHaveBeenCalledWith(suppressWarning);
 		},

@@ -113,7 +113,7 @@ describe("UnlockTokensModal", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(translations.COMMON.CLOSE));
+		await userEvent.click(screen.getByText(translations.COMMON.CLOSE));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -148,13 +148,13 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// back to select step
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		await waitFor(() => {
 			expect(within(screen.getAllByTestId("UnlockTokensTotal")[1]).getByTestId("Amount")).toHaveTextContent(
@@ -164,19 +164,19 @@ describe("UnlockTokensModal", () => {
 
 		// continue to review step
 
-		userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
+		await userEvent.click(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.UNLOCK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
 		// continue to auth step
 
-		userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
+		await userEvent.click(screen.getByText(translations.COMMON.CONFIRM));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// back to review step
 
-		userEvent.click(screen.getByText(translations.COMMON.BACK));
+		await userEvent.click(screen.getByText(translations.COMMON.BACK));
 
 		expect(screen.getByText(translations.TRANSACTION.UNLOCK_TOKENS.REVIEW.TITLE)).toBeInTheDocument();
 
@@ -188,7 +188,8 @@ describe("UnlockTokensModal", () => {
 
 		// enter signing key
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), mnemonic);
 
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(mnemonic));
 
@@ -216,7 +217,7 @@ describe("UnlockTokensModal", () => {
 			expect(screen.getByTestId("UnlockTokensAuthentication__send")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
+		await userEvent.click(screen.getByTestId("UnlockTokensAuthentication__send"));
 
 		await act(() => vi.runOnlyPendingTimers());
 

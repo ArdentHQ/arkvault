@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -43,13 +43,13 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 		});
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -79,13 +79,13 @@ describe("Add Participant", () => {
 			throw new Error("error");
 		});
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba");
 		});
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -128,13 +128,13 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P");
 		});
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -169,13 +169,13 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet.address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet.address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(wallet.address());
 		});
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -216,13 +216,13 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20");
 		});
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => {
 			expect(screen.getAllByTestId("Input__error")[0]).toBeVisible();
@@ -246,9 +246,9 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), profile.wallets().last().address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), profile.wallets().last().address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 
@@ -284,13 +284,13 @@ describe("Add Participant", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
 		);
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 	});
@@ -339,18 +339,18 @@ describe("Add Participant", () => {
 		expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue();
 
 		// add participant
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.queryAllByTestId("AddParticipantItem")).toHaveLength(2));
 
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 
 		// add participant
-		userEvent.paste(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
+		await userEvent.type(screen.getByTestId("SelectDropdown__input"), walletFixture.data.address);
 
-		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.queryAllByTestId("AddParticipantItem")).toHaveLength(3));
 
@@ -387,7 +387,7 @@ describe("Add Participant", () => {
 
 		expect(screen.getAllByTestId("AddParticipantItem--deleteButton")[1]).not.toBeDisabled();
 
-		userEvent.click(screen.getAllByTestId("AddParticipantItem--deleteButton")[1]);
+		await userEvent.click(screen.getAllByTestId("AddParticipantItem--deleteButton")[1]);
 
 		expect(onChange).toHaveBeenCalledWith([
 			{
@@ -411,7 +411,7 @@ describe("Add Participant", () => {
 
 		expect(screen.getByTestId("AddParticipantItem--deleteButton")).toBeDisabled();
 
-		userEvent.click(screen.getByTestId("AddParticipantItem--deleteButton"));
+		await userEvent.click(screen.getByTestId("AddParticipantItem--deleteButton"));
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(1));
 	});

@@ -61,7 +61,7 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
+		await userEvent.click(screen.getByTestId("TransactionExportForm__cancel-button"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -95,7 +95,7 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
+		await userEvent.click(screen.getAllByTestId("ButtonGroupOption")[1]);
 	});
 
 	it("should select last month", async () => {
@@ -107,11 +107,11 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--all-1"));
+		await userEvent.click(screen.getByTestId("dropdown__option--all-1"));
 	});
 
 	it("should render custom date range", async () => {
@@ -133,11 +133,11 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
+		await userEvent.click(screen.getByTestId("dropdown__option--custom-0"));
 	});
 
 	it("should select tab delimiter", async () => {
@@ -153,10 +153,10 @@ describe("TransactionExportForm", () => {
 			expect(dateToggle()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
+		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("dropdown__option--2"));
+		await userEvent.click(screen.getByTestId("dropdown__option--2"));
 	});
 });

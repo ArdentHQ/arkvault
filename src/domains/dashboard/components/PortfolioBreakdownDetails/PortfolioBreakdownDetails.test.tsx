@@ -8,7 +8,7 @@ import { buildTranslations } from "@/app/i18n/helpers";
 const translations = buildTranslations();
 
 describe("PortfolioBreakdownDetails", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const onClose = vi.fn();
 
 		const { asFragment } = render(
@@ -29,12 +29,12 @@ describe("PortfolioBreakdownDetails", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should render responsive", () => {
+	it("should render responsive", async () => {
 		const onClose = vi.fn();
 
 		const { asFragment } = renderResponsive(
@@ -57,7 +57,7 @@ describe("PortfolioBreakdownDetails", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -121,7 +121,7 @@ describe("PortfolioBreakdownDetails", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should show tooltip when hovering graph elements", () => {
+	it("should show tooltip when hovering graph elements", async () => {
 		render(
 			<PortfolioBreakdownDetails
 				assets={[
@@ -140,14 +140,14 @@ describe("PortfolioBreakdownDetails", () => {
 
 		expect(screen.queryByTestId("PortfolioBreakdownDetails__tooltip")).not.toBeInTheDocument();
 
-		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
+		await userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
 
 		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toBeInTheDocument();
 		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/LSK/);
 		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/15%/);
 
-		userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
-		userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
+		await userEvent.unhover(screen.getAllByTestId("DonutGraph__item-hover-area")[0]);
+		await userEvent.hover(screen.getAllByTestId("DonutGraph__item-hover-area")[1]);
 
 		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/ARK/);
 		expect(screen.getByTestId("PortfolioBreakdownDetails__tooltip")).toHaveTextContent(/85%/);

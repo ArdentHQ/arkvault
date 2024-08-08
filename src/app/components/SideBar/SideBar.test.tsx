@@ -51,7 +51,7 @@ describe("SideBar", () => {
 
 		expect(dropdown).toHaveTextContent("General");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		const passwordItem = screen.getByTestId("dropdown__option--1");
 
@@ -61,7 +61,7 @@ describe("SideBar", () => {
 
 		expect(handleActiveItemMock).toHaveBeenCalledTimes(0);
 
-		userEvent.click(passwordItem);
+		await userEvent.click(passwordItem);
 
 		await waitFor(() => expect(handleActiveItemMock).toHaveBeenCalledTimes(1));
 	});

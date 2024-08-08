@@ -1,7 +1,7 @@
 import { BigNumber } from "@ardenthq/sdk-helpers";
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { act, renderHook, waitFor } from "@testing-library/react";
 import React from "react";
 
 import { POLLING_INTERVAL } from "./UnlockTokens.contracts";
@@ -21,7 +21,7 @@ describe("useUnlockableBalances", () => {
 
 	it("should fetch unlockable balances every 60 seconds", async () => {
 		vi.useRealTimers();
-		vi.useFakeTimers("legacy");
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 
 		const unlockableBalances = vi.spyOn(wallet.coin().client(), "unlockableBalances").mockResolvedValue({
 			current: BigNumber.make(30),
@@ -37,22 +37,28 @@ describe("useUnlockableBalances", () => {
 			pending: BigNumber.make(0),
 		});
 
-		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
+		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
-		await waitForNextUpdate();
-
-		expect(unlockableBalances).toHaveBeenCalledTimes(1);
-		expect(result.current.items).toHaveLength(1);
-		expect(result.current.isFirstLoad).toBe(true);
+		await waitFor(() => {
+			expect(unlockableBalances).toHaveBeenCalledTimes(1);
+		});
+		await waitFor(() => {
+			expect(result.current.items).toHaveLength(1);
+		});
+		await waitFor(() => {
+			expect(result.current.isFirstLoad).toBe(true);
+		});
 
 		act(() => {
 			vi.advanceTimersByTime(POLLING_INTERVAL + 500);
 		});
 
-		await waitForNextUpdate();
-
-		expect(unlockableBalances).toHaveBeenCalledTimes(2);
-		expect(result.current.isFirstLoad).toBe(false);
+		await waitFor(() => {
+			expect(unlockableBalances).toHaveBeenCalledTimes(2);
+		});
+		await waitFor(() => {
+			expect(result.current.isFirstLoad).toBe(false);
+		});
 
 		unlockableBalances.mockRestore();
 	});
@@ -64,13 +70,17 @@ describe("useUnlockableBalances", () => {
 
 		const toastWarning = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
-		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
+		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
-		await waitForNextUpdate();
-
-		expect(result.current.items).toHaveLength(0);
-		expect(unlockableBalances).toHaveBeenCalledWith(wallet.address());
-		expect(toastWarning).toHaveBeenCalledWith(<UnlockTokensFetchError onRetry={expect.any(Function)} />);
+		await waitFor(() => {
+			expect(result.current.items).toHaveLength(0);
+		});
+		await waitFor(() => {
+			expect(unlockableBalances).toHaveBeenCalledWith(wallet.address());
+		});
+		await waitFor(() => {
+			expect(toastWarning).toHaveBeenCalledWith(<UnlockTokensFetchError onRetry={expect.any(Function)} />);
+		});
 
 		unlockableBalances.mockRestore();
 		toastWarning.mockRestore();
@@ -105,15 +115,23 @@ describe("useUnlockableBalances", () => {
 			pending: BigNumber.make(0),
 		});
 
-		const { result, waitForNextUpdate } = renderHook(() => useUnlockableBalances(wallet));
+		const { result } = renderHook(() => useUnlockableBalances(wallet));
 
-		await waitForNextUpdate();
-
-		expect(unlockableBalances).toHaveBeenCalledTimes(1);
-		expect(result.current.items).toHaveLength(3);
-		expect(result.current.items[0].timestamp.format("MM")).toBe("03");
-		expect(result.current.items[1].timestamp.format("MM")).toBe("02");
-		expect(result.current.items[2].timestamp.format("MM")).toBe("01");
+		await waitFor(() => {
+			expect(unlockableBalances).toHaveBeenCalledTimes(1);
+		});
+		await waitFor(() => {
+			expect(result.current.items).toHaveLength(3);
+		});
+		await waitFor(() => {
+			expect(result.current.items[0].timestamp.format("MM")).toBe("03");
+		});
+		await waitFor(() => {
+			expect(result.current.items[1].timestamp.format("MM")).toBe("02");
+		});
+		await waitFor(() => {
+			expect(result.current.items[2].timestamp.format("MM")).toBe("01");
+		});
 
 		unlockableBalances.mockRestore();
 	});
