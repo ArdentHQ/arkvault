@@ -140,8 +140,6 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletAvatar--compact")).toHaveLength(wallets.length);
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -233,7 +231,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -260,7 +258,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		const walletItems = screen.getAllByTestId("WalletListItemMobile");
+		const walletItems = screen.getAllByTestId("ReceiverItemMobile");
 
 		userEvent.click(walletItems[0]);
 
@@ -436,7 +434,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

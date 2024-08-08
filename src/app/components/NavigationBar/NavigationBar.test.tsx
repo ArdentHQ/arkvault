@@ -329,7 +329,7 @@ describe("NavigationBar", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toHaveTextContent("Select Address");
 
-		await userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		await userEvent.click(screen.getAllByTestId("ReceiverItemMobile")[0]);
 
 		await expect(screen.findByTestId("ReceiveFunds__Name_Address")).resolves.toBeVisible();
 
