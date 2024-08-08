@@ -581,7 +581,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1378,7 +1378,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"

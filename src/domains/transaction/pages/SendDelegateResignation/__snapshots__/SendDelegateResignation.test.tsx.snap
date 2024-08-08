@@ -460,7 +460,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1469,7 +1469,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2455,7 +2455,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   data-testid="SendDelegateResignation__review-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -3357,7 +3357,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -4207,346 +4207,98 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                   data-testid="ErrorStep"
                 >
                   <div
-                    class="space-y-8"
+                    class="space-y-2"
                   >
                     <div
-                      class="sm:mt-8"
+                      class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="flex flex-col"
-                      >
-                        <span
-                          class="css-tgbw37"
-                        >
-                          Transaction Error
-                        </span>
-                        <ul
-                          class="css-xa5o6q"
-                        >
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                          <li
-                            class="css-11vjikd"
-                          />
-                        </ul>
-                      </div>
-                      <div
-                        class="flex flex-col justify-between sm:flex-row"
+                        class="w-full sm:mt-8"
                       >
                         <div
-                          class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
+                          class="flex flex-col"
+                        >
+                          <span
+                            class="css-tgbw37"
+                          >
+                            Transaction Error
+                          </span>
+                          <ul
+                            class="css-xa5o6q"
+                          >
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                            <li
+                              class="css-11vjikd"
+                            />
+                          </ul>
+                        </div>
+                        <div
+                          class="flex flex-col justify-between sm:flex-row"
                         >
                           <div
-                            class="space-y-2"
+                            class="flex items-end justify-between bg-theme-background mt-8 hidden sm:block"
                           >
                             <div
-                              class="flex items-center gap-3"
+                              class="space-y-2"
                             >
-                              <h1
-                                class="mb-0 text-2xl leading-[29px]"
-                                data-testid="header__title"
+                              <div
+                                class="flex items-center gap-3"
                               >
-                                Transaction Error
-                              </h1>
+                                <svg
+                                  class="block h-[22px] w-[22px]"
+                                  fill="none"
+                                  height="25"
+                                  viewBox="0 0 24 25"
+                                  width="24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M12 23.5C18.0751 23.5 23 18.5751 23 12.5C23 6.42487 18.0751 1.5 12 1.5C5.92487 1.5 1 6.42487 1 12.5C1 18.5751 5.92487 23.5 12 23.5Z"
+                                    fill-rule="evenodd"
+                                    stroke="#DE5846"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M17.1845 14.5747L15.1136 12.5008L17.1845 10.426C17.7571 9.85323 17.7571 8.92483 17.1845 8.35209L16.151 7.31858C15.8759 7.04332 15.5027 6.88867 15.1136 6.88867C14.7244 6.88867 14.3512 7.04332 14.0761 7.31858L12.0023 9.38951L9.9284 7.31858C9.65332 7.04332 9.28013 6.88867 8.89098 6.88867C8.50183 6.88867 8.12864 7.04332 7.85356 7.31858L6.82005 8.35209C6.24748 8.92483 6.24748 9.85323 6.82005 10.426L8.89098 12.5008L6.82005 14.5747C6.24748 15.1474 6.24748 16.0758 6.82005 16.6485L7.85356 17.683C8.12864 17.9583 8.50183 18.1129 8.89098 18.1129C9.28013 18.1129 9.65332 17.9583 9.9284 17.683L12.0023 15.6121L14.0761 17.683C14.3512 17.9583 14.7244 18.1129 15.1136 18.1129C15.5027 18.1129 15.8759 17.9583 16.151 17.683L17.1874 16.6456C17.7572 16.0724 17.7559 15.1463 17.1845 14.5747Z"
+                                    fill="#FFE0DA"
+                                    fill-rule="evenodd"
+                                    stroke="#DE5846"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                </svg>
+                                <h1
+                                  class="mb-0 text-2xl leading-[29px]"
+                                  data-testid="header__title"
+                                >
+                                  Transaction Error
+                                </h1>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <svg
-                      class="hidden w-full md:block"
-                      height="142"
-                      viewBox="0 0 550 142"
-                      width="550"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        id="images"
-                        transform="translate(-404 -340)"
-                      >
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                        >
-                          <path
-                            d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(453 472)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(425 392)"
-                          >
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              r="32.5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              fill="none"
-                              r="31.5"
-                            />
-                          </g>
-                          <path
-                            d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                        </g>
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-                        >
-                          <path
-                            d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(895 367)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(868 392)"
-                          >
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              r="32.5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="32.5"
-                              cy="32.5"
-                              fill="none"
-                              r="31.5"
-                            />
-                          </g>
-                          <path
-                            d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-                            data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-                            fill="none"
-                            id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                        </g>
-                        <g
-                          data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-                          id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-                        >
-                          <path
-                            d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <path
-                            d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                          />
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(726 406)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-                            fill="none"
-                            id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-                            stroke="#dbdee5"
-                            stroke-width="2"
-                            transform="translate(625 434)"
-                          >
-                            <circle
-                              cx="5"
-                              cy="5"
-                              r="5"
-                              stroke="none"
-                            />
-                            <circle
-                              cx="5"
-                              cy="5"
-                              fill="none"
-                              r="4"
-                            />
-                          </g>
-                          <g
-                            data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-                            id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-                            transform="translate(-56 -698.5)"
-                          >
-                            <g
-                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                              fill="none"
-                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                              stroke="#de5846"
-                              stroke-width="2"
-                              transform="translate(704 1090)"
-                            >
-                              <circle
-                                cx="32.5"
-                                cy="32.5"
-                                r="32.5"
-                                stroke="none"
-                              />
-                              <circle
-                                cx="32.5"
-                                cy="32.5"
-                                fill="none"
-                                r="31.5"
-                              />
-                            </g>
-                            <path
-                              d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                              data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                              fill="#ffe0da"
-                              id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                              stroke="#de5846"
-                              stroke-width="2"
-                            />
-                            <g
-                              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                              fill="none"
-                              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                              stroke="#de5846"
-                              stroke-width="2"
-                              transform="translate(708 1094)"
-                            >
-                              <circle
-                                cx="28.5"
-                                cy="28.5"
-                                r="28.5"
-                                stroke="none"
-                              />
-                              <circle
-                                cx="28.5"
-                                cy="28.5"
-                                fill="none"
-                                r="27.5"
-                              />
-                            </g>
-                          </g>
-                        </g>
-                        <path
-                          d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-                          data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-                          fill="#dbdee5"
-                          id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-                        />
-                      </g>
-                    </svg>
                     <div
-                      class="space-y-6"
+                      class="space-y-4"
                     >
                       <p
                         class="hidden text-theme-secondary-text md:block"
                       >
-                        An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                        An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                       </p>
                       <div
                         class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -4593,7 +4345,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         <div
                           class="css-1y2ht9o"
                         >
-                          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+                          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
                         </div>
                       </div>
                       <div
@@ -5182,7 +4934,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -6074,7 +5826,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -7385,7 +7137,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -8571,7 +8323,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
