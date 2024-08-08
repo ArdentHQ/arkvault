@@ -4,17 +4,14 @@ import { useTranslation } from "react-i18next";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
-import { Image } from "@/app/components/Image";
-import {
-	TransactionExplorerLink,
-	TransactionNetwork,
-	TransactionSender,
-	TransactionType,
-	TransactionFee,
-} from "@/domains/transaction/components/TransactionDetail";
-import { Alert } from "@/app/components/Alert";
+import { TransactionAddresses, TransactionType } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
+import { Icon } from "@/app/components/Icon";
+import { useFormContext } from "react-hook-form";
+import { DetailWrapper, DetailLabel } from "@/app/components/DetailWrapper";
+import { Divider } from "@/app/components/Divider";
+import { TransactionId } from "../TransactionDetail/TransactionId";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -33,7 +30,11 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
+	const isTransactionConfirmed = false;
+	const { getValues } = useFormContext()
+	const { recipients } = getValues()
+	console.log({ recipients })
+	console.log({ isTransactionConfirmed })
 
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
@@ -55,51 +56,40 @@ export const TransactionSuccessful = ({
 			data-testid={isTransactionConfirmed ? "TransactionSuccessful" : "TransactionPending"}
 			className="space-y-8"
 		>
-			<StepHeader title={titleText} />
-
-			{isTransactionConfirmed ? (
-				<Image name="TransactionSuccessBanner" domain="transaction" className="hidden w-full md:block" />
-			) : (
-				<Image
-					name="TransactionPendingBanner"
-					domain="transaction"
-					className="hidden w-full md:block"
-					useAccentColor={false}
-				/>
-			)}
-
-			<p className="hidden text-theme-secondary-text md:block">{descriptionText}</p>
-
-			<Alert variant="success" className="md:hidden">
-				{descriptionText}
-			</Alert>
-
-			<div>
-				{isTransactionConfirmed && (
-					<TransactionExplorerLink
-						transaction={transaction}
-						border={false}
-						paddingPosition="bottom"
-						borderPosition="bottom"
+			<StepHeader title={titleText}
+				titleIcon={
+					<Icon
+						dimensions={[24, 24]}
+						name="PendingTransaction"
+						data-testid="icon-PendingTransaction"
+						className="text-theme-primary-600"
 					/>
-				)}
+				}
+			/>
 
-				<TransactionType type={transaction.type()} />
+			<TransactionId transaction={transaction} />
 
-				<TransactionNetwork network={senderWallet.network()} />
+			<TransactionAddresses senderWallet={senderWallet} recipients={recipients} profile={senderWallet.profile()} />
 
-				<TransactionSender address={senderWallet.address()} network={senderWallet.network()} />
+			<TransactionType type={transaction.type()} />
 
-				{children}
+			{children}
 
-				{!isTransactionConfirmed && (
-					<div className="mt-8 flex space-x-2 rounded border border-transparent bg-theme-warning-50 px-3 py-2 text-theme-warning-900 dark:border-theme-warning-600 dark:bg-transparent dark:text-theme-warning-600">
-						<Spinner size="sm" width={3} color="warning-alt" />
-
-						<span className="font-semibold">{t("TRANSACTION.PENDING.STATUS_TEXT")}</span>
+			{!isTransactionConfirmed && (
+				<div>
+					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+					<div
+						data-testid="PendingConfirmationAlert"
+						className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+					>
+						<Spinner color="warning-alt" size="sm" width={3} />
+						<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+						<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
+							{t("TRANSACTION.PENDING.STATUS_TEXT")}
+						</p>
 					</div>
-				)}
-			</div>
+				</div>
+			)}
 		</section>
 	);
 };

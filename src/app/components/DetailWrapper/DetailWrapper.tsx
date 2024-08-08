@@ -7,7 +7,7 @@ export const DetailLabelText = ({ children, minWidth }: { children: ReactNode; m
 	<div
 		data-testid="DetailLabelText"
 		className={cn("no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500", {
-			"min-w-16": minWidth === "sm",
+			"min-w-24": minWidth === "sm",
 			"min-w-36": minWidth === "md",
 		})}
 	>

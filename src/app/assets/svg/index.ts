@@ -23,6 +23,7 @@ import Cloud from "./cloud.svg?react";
 import Code from "./code.svg?react";
 import Copy from "./copy.svg?react";
 import CopyKey from "./copy-key.svg?react";
+import Corner from "./corner.svg?react";
 import Cross from "./cross.svg?react";
 import Download from "./download.svg?react";
 import CrossSmall from "./cross-small.svg?react";
@@ -32,6 +33,7 @@ import EllipsisVertical from "./ellipsis-vertical.svg?react";
 import ExtensionWwe from "./extension-wwe.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
+import External from "./external.svg?react";
 import Eye from "./eye.svg?react";
 import EyeSlash from "./eye-slash.svg?react";
 import File from "./file.svg?react";
@@ -110,6 +112,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Completed,
 	Copy,
 	CopyKey,
+	Corner,
 	Cross,
 	CrossSmall,
 	Dash,
@@ -121,6 +124,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWwe,
+	External,
 	Eye,
 	EyeSlash,
 	FTX,
