@@ -1,3 +1,4 @@
+import React from 'react';
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,7 +16,7 @@ const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => 
 			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 lg:text-2xl md:font-bold lg:leading-[29px]">
 				{title}
 			</h3>
-			<p className="mb-0 text-sm text-theme-secondary-700 md:mb-4 lg:text-base lg:leading-7"> {subtitle} </p>
+			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"> {subtitle} </p>
 		</div>
 		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
 			<Image name={imageName} alt={title} domain="profile" className="!hidden lg:!block" />
@@ -39,10 +40,10 @@ export const WelcomeSlider = (): JSX.Element => {
 		arrows: false,
 		autoplay: true,
 		customPaging: () => (
-			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700" />
+			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 dark:border-theme-secondary-600 hover:border-transparent dark:hover:border-transparent hover:bg-theme-navy-700 dark:hover:bg-theme-secondary-600" />
 		),
 		dots: true,
-		dotsClass: "home-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",
+		dotsClass: "welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",
 		infinite: true,
 		slidesToScroll: 1,
 		slidesToShow: 1,

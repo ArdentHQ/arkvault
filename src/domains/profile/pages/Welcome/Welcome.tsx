@@ -59,12 +59,11 @@ export const Welcome = () => {
 		selectedProfile ? { label: "Previous page", value: "previous" } : undefined,
 	);
 
-	const { setProfileTheme, resetTheme, setTheme } = useTheme();
+	const { setProfileTheme, resetTheme } = useTheme();
 	const { setProfileAccentColor } = useAccentColor();
 
 	useEffect(() => {
-		// resetTheme();
-		setTheme("light");
+		resetTheme();
 		setThemeLoaded(true);
 	}, [resetTheme]);
 
@@ -228,10 +227,10 @@ export const Welcome = () => {
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-20" innerClassName="w-full">
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')]">
+						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')]">
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100">
+						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 dark:border-theme-secondary-800">
 							<div className="mx-auto md:mt-8">
 								<h2 className="mx-4 text-2xl font-bold">
 									{hasProfiles

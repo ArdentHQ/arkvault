@@ -56,6 +56,6 @@ main {
 	}
 }
 
-.home-slider-dots .slick-active > button {
-	@apply bg-theme-navy-500 border-transparent
+.welcome-slider-dots .slick-active > button {
+	@apply bg-theme-navy-500 border-transparent hover:bg-theme-navy-500
 }

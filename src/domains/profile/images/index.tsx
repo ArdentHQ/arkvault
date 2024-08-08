@@ -20,12 +20,18 @@ import WelcomeModalStep4DarkGreen from "./welcome-modal-step-4-banner-dark-green
 import WelcomeModalStep4DarkNavy from "./welcome-modal-step-4-banner-dark-navy.png";
 import WelcomeModalStep4LightGreen from "./welcome-modal-step-4-banner-light-green.png";
 import WelcomeModalStep4LightNavy from "./welcome-modal-step-4-banner-light-navy.png";
-import WelcomeSlide1 from "./welcome-slide-1.png";
-import WelcomeSlide1Sm from "./welcome-slide-1-sm.png";
-import WelcomeSlide2 from "./welcome-slide-2.png";
-import WelcomeSlide2Sm from "./welcome-slide-2-sm.png";
-import WelcomeSlide3 from "./welcome-slide-3.png";
-import WelcomeSlide3Sm from "./welcome-slide-3-sm.png";
+import WelcomeSlide1LightNavy from "./welcome-slide-1-light-navy.png";
+import WelcomeSlide1SmLightNavy from "./welcome-slide-1-sm-light-navy.png";
+import WelcomeSlide2LightNavy from "./welcome-slide-2-light-navy.png";
+import WelcomeSlide2SmLightNavy from "./welcome-slide-2-sm-light-navy.png";
+import WelcomeSlide3LightNavy from "./welcome-slide-3-light-navy.png";
+import WelcomeSlide3SmLightNavy from "./welcome-slide-3-sm-light-navy.png";
+import WelcomeSlide1DarkNavy from "./welcome-slide-1-dark-navy.png";
+import WelcomeSlide1SmDarkNavy from "./welcome-slide-1-sm-dark-navy.png";
+import WelcomeSlide2DarkNavy from "./welcome-slide-2-dark-navy.png";
+import WelcomeSlide2SmDarkNavy from "./welcome-slide-2-sm-dark-navy.png";
+import WelcomeSlide3DarkNavy from "./welcome-slide-3-dark-navy.png";
+import WelcomeSlide3SmDarkNavy from "./welcome-slide-3-sm-dark-navy.png";
 
 export const profile = {
 	WelcomeModalBannerDarkGreen,
@@ -48,10 +54,16 @@ export const profile = {
 	WelcomeModalStep4DarkNavy,
 	WelcomeModalStep4LightGreen,
 	WelcomeModalStep4LightNavy,
-	WelcomeSlide1,
-	WelcomeSlide1Sm,
-	WelcomeSlide2,
-	WelcomeSlide2Sm,
-	WelcomeSlide3,
-	WelcomeSlide3Sm,
+	WelcomeSlide1DarkNavy,
+	WelcomeSlide1LightNavy,
+	WelcomeSlide1SmDarkNavy,
+	WelcomeSlide1SmLightNavy,
+	WelcomeSlide2DarkNavy,
+	WelcomeSlide2LightNavy,
+	WelcomeSlide2SmDarkNavy,
+	WelcomeSlide2SmLightNavy,
+	WelcomeSlide3DarkNavy,
+	WelcomeSlide3LightNavy,
+	WelcomeSlide3SmDarkNavy,
+	WelcomeSlide3SmLightNavy,
 };
