@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
-import { TransactionAddresses, TransactionType } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionAddresses, TransactionFee, TransactionType } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
