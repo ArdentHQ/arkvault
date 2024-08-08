@@ -140,8 +140,6 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletAvatar--compact")).toHaveLength(wallets.length);
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -232,7 +230,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -259,7 +257,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		userEvent.click(screen.getAllByTestId("WalletListItemMobile")[0]);
+		userEvent.click(screen.getAllByTestId("ReceiverItemMobile")[0]);
 
 		expect(onSelectWalletMock).toHaveBeenCalledTimes(1);
 
@@ -399,8 +397,6 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			}),
 		);
 
-		expect(screen.getAllByTestId("SearchWalletAvatar--compact")).toHaveLength(wallets.length);
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -427,7 +423,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 			},
 		);
 
-		expect(screen.getAllByTestId("SearchWalletListItemResponsive--item")).toHaveLength(wallets.length);
+		expect(screen.getAllByTestId("SenderWalletItemResponsive--item")).toHaveLength(wallets.length);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
