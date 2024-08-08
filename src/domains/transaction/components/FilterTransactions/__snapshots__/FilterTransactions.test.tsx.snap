@@ -95,7 +95,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
               class="-my-2 mx-8"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-t0fqin"
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-1m3aobs"
                 type="horizontal"
               />
             </div>
@@ -190,7 +190,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
               class="-my-2 mx-8"
             >
               <div
-                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-t0fqin"
+                class="border-theme-secondary-300 dark:border-theme-secondary-600 css-1m3aobs"
                 type="horizontal"
               />
             </div>

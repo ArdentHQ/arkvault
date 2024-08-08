@@ -7,7 +7,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-1q57rjh"
     >
       <div
         class="relative flex h-full flex-1"
@@ -44,7 +44,7 @@ exports[`SelectNetworkDropdown > should change network 1`] = `
             …
           </div>
           <div
-            class="css-n1b0kl"
+            class="css-1q57rjh"
           >
             <div
               aria-label="ARK"
@@ -160,7 +160,7 @@ exports[`SelectNetworkDropdown > should render 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-1q57rjh"
     >
       <div
         class="relative flex h-full flex-1"
@@ -191,7 +191,7 @@ exports[`SelectNetworkDropdown > should render 1`] = `
             id="downshift-0-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -269,7 +269,7 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
     data-testid="SelectDropdown"
   >
     <div
-      class="sr-only css-n1b0kl"
+      class="sr-only css-1q57rjh"
     >
       <div
         class="relative flex h-full flex-1"
@@ -300,7 +300,7 @@ exports[`SelectNetworkDropdown > should render with default network 1`] = `
             id="downshift-2-label"
           />
           <div
-            class="css-n1b0kl"
+            class="css-1q57rjh"
           >
             <div
               aria-label="ARK"

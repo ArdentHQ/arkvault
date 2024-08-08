@@ -1,218 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ReceiveFunds > should not render qrcode without an address 1`] = `
-<DocumentFragment>
-  <div
-    class="overflow-overlay fixed inset-0 z-50 flex w-full overflow-y-hidden bg-theme-secondary-900-rgba bg-opacity-60 dark:bg-black-rgba dark:bg-opacity-80 md:py-20"
-    data-testid="Modal__overlay"
-  >
-    <div
-      class="css-1uui4dw"
-      tabindex="-1"
-    >
-      <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
-        data-testid="Modal__inner"
-      >
-        <div
-          class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
-        >
-          <button
-            class="h-8 w-8 css-1hei9vx"
-            data-testid="Modal__close-button"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
-              >
-                <svg
-                  id="cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M.954 18.981l18-18M18.954 18.981l-18-18"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div
-          class="relative flex flex-1 flex-col space-y-1.5"
-        >
-          <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
-          >
-            Receive Funds
-          </h2>
-          <div
-            class="flex flex-1 flex-col"
-          >
-            <div
-              class="whitespace-pre-line pr-10 text-sm text-theme-secondary-text md:pr-0 md:text-base"
-            >
-              <p
-                class="mb-4"
-              >
-                Specify and confirm the amount to request.
-              </p>
-            </div>
-            <div
-              data-testid="ReceiveFunds__address"
-            >
-              <div
-                class="no-ligatures flex css-1slril7"
-                data-testid="TransactionDetail"
-              >
-                <div
-                  class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                  data-testid="TransactionDetail--desktop"
-                >
-                  <div
-                    class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                  >
-                    Address
-                  </div>
-                  <div
-                    class="flex items-center font-semibold"
-                  >
-                    <div
-                      class="relative flex h-6 grow justify-start"
-                    >
-                      <div
-                        class="absolute flex max-w-full items-center space-x-2 overflow-auto"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        />
-                        <span
-                          class="flex grow text-theme-primary-300 dark:text-theme-secondary-600"
-                        >
-                          <button
-                            class="ring-focus relative focus:outline-none"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="clipboard-icon__wrapper"
-                            type="button"
-                          >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="-space-x-1 whitespace-nowrap"
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="shrink-0 css-1n9jllj"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <button
-                class="mt-8 w-full css-6419sw"
-                data-testid="ReceiveFunds__toggle"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Specify Amount
-                </div>
-              </button>
-            </div>
-            <div
-              class="mx-auto mt-8 h-64 w-64"
-            />
-            <div
-              class="mx-auto mt-4 w-64"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`ReceiveFunds > should render with a wallet name 1`] = `
 <DocumentFragment>
   <div
@@ -271,7 +58,7 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Receive Funds
           </h2>
@@ -288,161 +75,70 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
               </p>
             </div>
             <div
-              data-testid="ReceiveFunds__name"
+              class="rounded-xl border border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              data-testid="ReceiveFunds__Name_Address"
             >
               <div
-                class="no-ligatures css-1slril7"
-                data-testid="TransactionDetail"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                  data-testid="TransactionDetail--desktop"
+                <span
+                  class="font-semibold text-base leading-5"
+                  data-testid="Address__alias"
                 >
-                  <div
-                    class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                  >
-                    Name
-                  </div>
-                  <div
-                    class="flex items-center font-semibold"
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
                   >
                     My Wallet
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <span
-                  class="flex-shrink-0"
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 leading-5 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  abc
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
                   <div
-                    aria-label="ARK Devnet"
-                    class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
                       >
                         <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
                         />
-                      </svg>
-                    </div>
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
                   </div>
-                </span>
-              </div>
-            </div>
-            <div
-              data-testid="ReceiveFunds__address"
-            >
-              <div
-                class="no-ligatures flex css-1slril7"
-                data-testid="TransactionDetail"
-              >
-                <div
-                  class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                  data-testid="TransactionDetail--desktop"
-                >
-                  <div
-                    class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-                  >
-                    Address
-                  </div>
-                  <div
-                    class="flex items-center font-semibold"
-                  >
-                    <div
-                      class="relative flex h-6 grow justify-start"
-                    >
-                      <div
-                        class="absolute flex max-w-full items-center space-x-2 overflow-auto"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            abc
-                          </span>
-                        </div>
-                        <span
-                          class="flex grow text-theme-primary-300 dark:text-theme-secondary-600"
-                        >
-                          <button
-                            class="ring-focus relative focus:outline-none"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="clipboard-icon__wrapper"
-                            type="button"
-                          >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="-space-x-1 whitespace-nowrap"
-                >
-                  <div
-                    class="shrink-0 css-1n9jllj"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                    >
-                      <img
-                        alt="abc"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
-                        title="abc"
-                      />
-                    </div>
-                  </div>
-                </div>
+                </button>
               </div>
             </div>
             <div>
               <button
-                class="mt-8 w-full css-6419sw"
+                class="mt-4 w-full css-6419sw"
                 data-testid="ReceiveFunds__toggle"
                 type="button"
               >
@@ -454,17 +150,17 @@ exports[`ReceiveFunds > should render with a wallet name 1`] = `
               </button>
             </div>
             <div
-              class="mx-auto mt-8 h-64 w-64"
+              class="mt-4"
             >
               <img
                 alt="QR Code"
-                class="h-64 w-64 rounded-lg border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
+                class="h-auto w-full rounded-xl border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
                 data-testid="ReceiveFunds__qrcode"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAAAklEQVR4AewaftIAAA9CSURBVO3B0W0dyw5FwaWGEjEJM/94CJCp6PmbmAu0RyMdud+uevtlvz/4QbqSHebBla5kMg/u6kp2mAdTVzKZB1NXcsU8mLqSHebBT9KV7DAPXqEr2WUeTF3JZB78FAsROd5CRI63EJHjLUTkeAsROd47/6Er+WrmwV1dyRXzYEdXssM8mLqSu7qSp5kHO7qSJ5kHU1dyxTy4qyt5knkwmQffoSv5aubBtBCR4y1E5HgLETneQkSO985fMA/u6kruMg+mruRKV3KXebDDPJi6kh3mwWeYB1NXssM82NGV3GUeXOlKdpgHd5kHU1cydSU7zIPvYB7c1ZXsWIjI8RYicryFiBxvISLHe+cfZR48rSuZzIOpK5nMgx1dydPMgx1dyV3mwdSVTObBLvNg6kom82DqSqauZDIPdnQlu7qSf81CRI63EJHjLUTkeAsROd47/6iu5Ip58KSu5K6uZDIPXsU8eJJ5MHUlV8yDqSv5ybqSUyxE5HgLETneQkSOtxCR473zF7qSn8I8uNKVPMk8mLqSqSuZzIMdXckV82DqSibzYOpK7jIPdnQlu7qSHebB1JVM5sHUlezoSibzYOpKvkNX8tUWInK8hYgcbyEix1uIyPHe+Q/mwU/WlVwxD6auZDIPpq7kLvNg6kom8+BVzIOpK9nRlUzmwdSVXDEPpq7kX2QeTF3JDvPgFRYicryFiBxvISLHW4jI8d67kn+RebDLPPjJzIPv0JXcZR7sMA+udCWTebDDPJi6kh1dyWQeTF3JZB5c6Up2dCU/xUJEjrcQkeMtROR4CxE53tsv+/3Bha5kMg++WlfyHcyDJ3Ulk3lwiq5kh3mwqyu5yzx4UlfyNPPgq3UlOxYicryFiBxvISLHW4jI8d67kivmwdSVTObBXV3JZB5MXclnmAdTV3KXeTCZB3d1JbvMg6krucs8mLqSyTz4DubBjq7kLvNgh3mwqyvZ0ZVM5sHUlewwD6auZFqIyPEWInK8hYgcbyEix1uIyPHeftnvDy50JV/NPLirK/kM8+CurmSHeTB1JZN5cKUr2WEe7OhKdpgHU1cymQdTV3LFPPhqXclkHkxdyWQevEpXMpkHT1qIyPEWInK8hYgcbyEix3vvSq6YB1NX8qSuZDIPPsM82NGV7DAPJvNg6kru6kp2mQdTV3KXeTB1Jd+hK5nMg6kr2WEeTF3Jjq5kMg+udCWTeTB1JZN5MJkHO7qSyTzYsRCR4y1E5HgLETneQkSO985fMA+mrmSHebCjK5nMg5/OPNhhHuzqSqauZDIPXqErmcyDK13Jjq5kMg+mrmSHefA08+CuruQu8+CuhYgcbyEix1uIyPEWInK8d/PgVbqSHV3JZB5c6Uom82AyD6au5K6uZId5MHUlu8yDqSu5yzz4DubB1JXs6Eru6kpexTyYupK7upLJPJi6kmkhIsdbiMjxFiJyvIWIHO/tl/3+4Bt0JZN5cFdXcsU8eFJX8iTzYFdXcpd58KSu5FXMgx1dyWQefIeuZId5MHUlk3kwdSWTebBjISLHW4jI8RYicryFiBzvvSu5Yh7s6Eru6kq+Q1dyl3kwdSV3dSWfYR5MXcmOrmQyD6au5GnmwdSV3NWVTObB1JW8inkwdSWTeTB1JTu6ksk8mBYicryFiBxvISLHW4jI8d75AubBk7qSyTz4Dl3JXebBjq7kinkwdSV3mQc7zIMdXclkHjytK5nMg6krucs8eFpXMpkHU1cymQc7upKpK5kWInK8hYgcbyEix1uIyPHeftnvDz6hK/lq5sFndCWTebCjK9lhHkxdyWQe7OpK7jIPdnQl38E8mLqSHebB1JVM5sGOruRp5sFdXclXW4jI8RYicryFiBxvISLHe/v4g03mwV1dyWQe7OhKJvPgSlfyU5gHU1cymQdXupLJPJi6kh3mwZO6ksk82NWVTObBXV3JZB5MXclkHkxdydPMg6krmcyDqSuZzIMdCxE53kJEjrcQkeMtROR4bx9/cME8mLqSHebBjq5kh3kwdSW7zIOpK9lhHjypK5nMgytdyV3mwdSV3GUe7OhKrpgHr9CV3GUePK0rmcyDqSvZYR7sWIjI8RYicryFiBxvISLHW4jI8d75D13Jk7qSyTy4yzy40pU8qSuZzIOpK5nMg88wD6auZDIPpq5kMg92dCVTV7LDPLjSldxlHuzoSibzYEdX8rSuZEdXssM8mLqSyTyYFiJyvIWIHG8hIsdbiMjx3j7+QP6TebCjK9lhHkxdyS7zYEdXMpkHU1fyHcyDJ3Uld5kHU1fyNPNg6kom82BHV3LXQkSOtxCR4y1E5HgLETne28cfXDAPTtGV7DAPpq5kMg++Q1cymQev0JX8JObB1JVM5sHUlUzmwdSVXDEP/jULETneQkSOtxCR4y1E5Hhvv+z3Bxe6krvMg6krucs8eFpXMpkHO7qSyTzY0ZV8hnmwoyu5yzy4qyu5Yh5MXclkHkxdyZPMgx1dyRXzYOpK7jIPdnQlO8yDaSEix1uIyPEWInK8hYgc752/YB48yTyYupIdXcku82BHV7LDPLjLPHgV82DqSnZ0JTvMg13mwdSVTObBk7qSyTx4mnkwdSV3mQd3LUTkeAsROd5CRI63EJHjvXclr9KV3GUe/CRdyWQefEZXMpkHd3Uld5kHr9KV7DAPdpgHU1fytK7kSV3JXQsROd5CRI63EJHjLUTkeG8ff3DBPNjRlUzmwVfrSq6YB1NXssM8uKsr2WEeTF3JFfNg6kom8+CrdSU7zINdXclkHtzVlUzmwV1dyRXz4Kt1JZN5cNdCRI63EJHjLUTkeAsROd47f6ErmcyDHV3JXebBrq5kMg92dCU7zIPJPJi6kh3mwU/SlUzmwdPMg7u6ksk8mLqSp3Ulk3kwdSU7zIPJPJi6krsWInK8hYgcbyEix1uIyPHe+aSuZDIPJvNgR1fyGebBjq5kMg+mrmTqSu7qSj7DPJi6ksk82NGVTObB1JV8hnkwdSV3mQc7zIO7upJdXclkHkxdyY6uZDIP7lqIyPEWInK8hYgcbyEix3s3Dz7DPJi6kid1JZN5cKUrmcyDu8yDu7qSHebBZ5gHU1cymQc7upKfxDyYupLJPJi6ksk8mLqSyTy40pXcZR5MXcmOruSuhYgcbyEix1uIyPEWInK8hYgc770ruWIeTObBk8yDn64r2WEeTObB1JVMXckV82DqSnaYBzvMg6kr2WEe7OpK7upKJvPgrq5kMg+mruSnMw92LETkeAsROd5CRI63EJHjvfNCXckO82DqSnZ1JZN5MHUlk3mwoyuZzIPJPHiaeTB1JZN5MHUlk3mwoyuZzINd5sHUlUzmwY6u5K6uZJd5MHUlU1cymQc7zIOpK5m6ksk8mBYicryFiBxvISLHW4jI8d5+2e8PLnQlk3mwoyuZzIMndSW7zIO7upLJPJi6krvMg11dyWQe7OhKJvNg6kp2mAdTV/I082DqSnaYB1NXssM8uNKVTObB1JXsMA+mrmQyD6auZMdCRI63EJHjLUTkeAsROd7bL/v9wYWu5C7zYOpKfhLz4BW6klcxD6auZId58BldyWQefLWu5GnmwY6uZDIPpq7kqy1E5HgLETneQkSOtxCR4719/MEF8+AVupLJPJi6kivmwY6uZId5sKMrmcyDHV3JFfPgFbqSHebB1JVcMQ+mrmQyD3Z0JTvMg6krmcyDXV3JZB7s6Ep2mAdTVzKZBzsWInK8hYgcbyEix1uIyPHezYPP6Eom82BHVzKZB1NXMpkHr9KVPMk8uNKVTObB1JU8yTyYupId5sGVrmQyD55kHkxdyWQe7OhKrpgHU1fypK7kSQsROd5CRI63EJHjLUTkeO9dyRXzYId5MHUlk3kwmQdTV/IZXclkHjzJPHhSV3LFPJi6kieZB1NXMpkHU1cymQe7upK7zIOpK5nMg6kr2WEeXOlKnmQeTF3JZB5MXclkHkwLETneQkSOtxCR4y1E5Hhvv+z3Bxe6kpOZB1NXcpd5sKMrmcyDK13JZB5MXclkHuzoSr6DeTB1JZN5sKMrucs8mLqSyTy40pVM5sFdXcld5sHUlUwLETneQkSOtxCR4y1E5HjvXckV82DqSu4yD+7qSibz4EpXMpkHd5kHO7qSu7qSK+bB1JVM5sHUlUzmwVczD650JZN5MHUlO8yDu7qSyTz4Dl3JZB7c1ZVM5sG0EJHjLUTkeAsROd5CRI739vEHF8yDu7qSVzEPdnQlO8yDr9aVvIp58KSu5Ip5MHUlk3mwoyu5yzyYupJd5sGOruQVzINpISLHW4jI8RYicryFiBxvISLHe/tlvz/4hK7kLvNg6kq+g3mwoyvZYR7s6Ep2mQdTVzKZB6/QlXyGeTB1JTvMg7u6kh3mwat0JZN5cNdCRI63EJHjLUTkeAsROd7bxx/8cObBrq7kSebBjq5kMg8+oyuZzIMdXcld5sHUlUzmwXfoSnaYBzu6kh3mwa6u5C7zYOpKnrQQkeMtROR4CxE53kJEjvf2y35/8IN0JTvMg8/oSibz4K6u5C7z4EpXssM8mLqSyTyYupLJPLirK7liHrxCVzKZB0/rSibzYOpKJvNgR1cymQc7FiJyvIWIHG8hIsdbiMjx3vkPXclXMw92mAe7upLJPJjMg6krmcyDqSuZzIO7upJd5sFdXcm/qCv5al3JLvNgR1fyCl3JtBCR4y1E5HgLETneQkSO985fMA/u6kqe1JXs6kp2mAdP6kom82AyD650JXeZB0/qSnaYB1e6kq9mHuzoSp5mHjypK5nMg6krmcyDaSEix1uIyPEWInK8hYgc753DmAd3dSWTefDVupJdXclkHkxdyQ7z4C7zYOpKrpgHU1fypK5kMg8m82DqSnZ1JZN58CTzYOpKJvNg6kqmhYgcbyEix1uIyPEWInK8d/4PdCWvYB7sMA+udCWTeTB1JZN5sKMrmcyDu8yDK13JXebBjq5k6kp2mAef0ZU8yTyYzIMd5sG0EJHjLUTkeAsROd5CRI73zl/oSl6hK5nMg1cxD6auZId5MHUl36ErmcyDu7qSXebBk7qSyTzY0ZXs6EqumAeTebCjK9nRldxlHkwLETneQkSOtxCR4y1E5Hhvv+z3Bz9IVzKZB1NXcsU8mLqSyTyYupId5sFP0pVM5sHUldxlHkxdyWQefEZXMpkHU1eywzx4Wlfy1cyDJy1E5HgLETneQkSOtxCR4/0PXGxgPLW8148AAAAASUVORK5CYII="
               />
             </div>
             <div
-              class="mx-auto mt-4 w-64"
+              class="mt-4"
             >
               <button
                 class="flex w-full space-x-2 css-6419sw"
@@ -567,7 +263,7 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
           >
             Receive Funds
           </h2>
@@ -584,133 +280,59 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
               </p>
             </div>
             <div
-              data-testid="ReceiveFunds__address"
+              class="rounded-xl border border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800"
+              data-testid="ReceiveFunds__Name_Address"
             >
               <div
-                class="no-ligatures flex css-1slril7"
-                data-testid="TransactionDetail"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  class="w-40 flex-1 space-y-2 whitespace-nowrap"
-                  data-testid="TransactionDetail--desktop"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 leading-5 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  abc
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
                   <div
-                    class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    Address
-                  </div>
-                  <div
-                    class="flex items-center font-semibold"
-                  >
-                    <div
-                      class="relative flex h-6 grow justify-start"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <div
-                        class="absolute flex max-w-full items-center space-x-2 overflow-auto"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            abc
-                          </span>
-                        </div>
-                        <span
-                          class="flex grow text-theme-primary-300 dark:text-theme-secondary-600"
-                        >
-                          <button
-                            class="ring-focus relative focus:outline-none"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="clipboard-icon__wrapper"
-                            type="button"
-                          >
-                            <div
-                              class="css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="-space-x-1 whitespace-nowrap"
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
                       >
                         <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
                         />
-                      </svg>
-                    </div>
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
                   </div>
-                  <div
-                    class="shrink-0 css-1n9jllj"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                    >
-                      <img
-                        alt="abc"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(76, 175, 80)" width="100" height="100"/><circle r="45" cx="30" cy="60" fill="rgb(255, 193, 7)"/><circle r="50" cx="50" cy="30" fill="rgb(244, 67, 54)"/><circle r="60" cx="80" cy="40" fill="rgb(0, 150, 136)"/></svg>"
-                        title="abc"
-                      />
-                    </div>
-                  </div>
-                </div>
+                </button>
               </div>
             </div>
             <div>
               <button
-                class="mt-8 w-full css-6419sw"
+                class="mt-4 w-full css-6419sw"
                 data-testid="ReceiveFunds__toggle"
                 type="button"
               >
@@ -722,17 +344,17 @@ exports[`ReceiveFunds > should render without a wallet name 1`] = `
               </button>
             </div>
             <div
-              class="mx-auto mt-8 h-64 w-64"
+              class="mt-4"
             >
               <img
                 alt="QR Code"
-                class="h-64 w-64 rounded-lg border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
+                class="h-auto w-full rounded-xl border border-theme-secondary-200 p-3 dark:border-theme-secondary-800 dark:bg-theme-secondary-200"
                 data-testid="ReceiveFunds__qrcode"
                 src="data:image/png;base64,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"
               />
             </div>
             <div
-              class="mx-auto mt-4 w-64"
+              class="mt-4"
             >
               <button
                 class="flex w-full space-x-2 css-6419sw"

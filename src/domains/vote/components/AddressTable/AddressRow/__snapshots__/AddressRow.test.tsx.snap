@@ -12,7 +12,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -246,7 +246,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -281,7 +281,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -551,7 +551,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -586,7 +586,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -820,7 +820,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -856,7 +856,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -1090,7 +1090,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -1125,7 +1125,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-hhd44j"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
             <div
               class="shrink-0 shrink-0 css-1i0wxh3"
@@ -1359,7 +1359,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div>
               <button
@@ -1394,7 +1394,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -1628,7 +1628,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -1654,7 +1654,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -1746,7 +1746,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -1781,7 +1781,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -2015,7 +2015,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -2041,7 +2041,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -2122,7 +2122,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -2158,7 +2158,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -2390,7 +2390,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -2425,7 +2425,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -2576,7 +2576,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -2611,7 +2611,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -2958,7 +2958,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -2993,7 +2993,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -3299,7 +3299,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -3334,7 +3334,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-hhd44j"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
             <div
               class="shrink-0 shrink-0 css-1i0wxh3"
@@ -3485,7 +3485,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div>
               <button
@@ -3520,7 +3520,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-hhd44j"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
             <div
               class="shrink-0 shrink-0 css-1i0wxh3"
@@ -3867,7 +3867,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div>
               <button
@@ -3902,7 +3902,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-hhd44j"
+            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
             <div
               class="shrink-0 shrink-0 css-1i0wxh3"
@@ -4208,7 +4208,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div>
               <button
@@ -4243,7 +4243,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -4477,7 +4477,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button
@@ -4512,7 +4512,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-bgc8eo"
+            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
             <div
               class="shrink-0 shrink-0 css-1px82g5"
@@ -4745,7 +4745,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <div>
               <button

@@ -58,7 +58,7 @@ exports[`Confirmation Modal > should render with custom title and description 1`
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl text-theme-text"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl text-theme-text"
           >
             My Title
           </h2>
@@ -293,7 +293,7 @@ exports[`Confirmation Modal > should render with default title and description 1
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 text-lg font-bold md:text-2xl text-theme-text"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl text-theme-text"
           >
             Confirmation
           </h2>

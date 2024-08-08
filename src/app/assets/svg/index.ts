@@ -47,6 +47,7 @@ import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
 import MagnifyingGlass from "./magnifying-glass.svg?react";
+import MagnifyingGlassAlt from "./magnifying-glass-alt.svg?react";
 import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
@@ -78,6 +79,11 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import SelectNetworkLight from "./select-network-light.svg?react";
+import SelectNetworkDark from "./select-network-dark.svg?react";
+import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
+import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
+import Completed from "./completed.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -101,6 +107,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ClockSmall,
 	Cloud,
 	Code,
+	Completed,
 	Copy,
 	CopyKey,
 	Cross,
@@ -133,6 +140,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Lock,
 	LockOpen: TransactionIcons.UnlockToken,
 	MagnifyingGlass,
+	MagnifyingGlassAlt,
 	MagnifyingGlassId,
 	Menu,
 	MenuOpen,
@@ -142,6 +150,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Plus,
 	QRCode,
 	QuestionMarkSmall,
+	SelectNetworkDark,
+	SelectNetworkLight,
 	Server,
 	ServerMultisign,
 	ServerPeer,
@@ -158,4 +168,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UnderlineSun,
 	User,
 	UserCheckMark,
+	WalletEncryptionDark,
+	WalletEncryptionLight,
 };

@@ -10,7 +10,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent css-rjc6e4"
           >
             <span />
           </div>
@@ -171,7 +171,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -206,7 +206,7 @@ exports[`DelegateRow > should render 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent css-rjc6e4"
           >
             <span />
           </div>
@@ -367,7 +367,7 @@ exports[`DelegateRow > should render 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -402,7 +402,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-rjc6e4"
           >
             <span />
           </div>
@@ -573,7 +573,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
                 class="relative"
               >
                 <div
-                  class="css-1kkerl1"
+                  class="css-1u9smw8"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -608,7 +608,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600 css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -643,7 +643,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-rjc6e4"
           >
             <span />
           </div>
@@ -804,7 +804,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600 css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -839,7 +839,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-hhd44j"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12 css-5gvahk"
           >
             <span />
           </div>
@@ -1000,7 +1000,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-yf8cy4"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-t4jv3s"
           >
             <div
               class="-mr-0.5"
@@ -1026,7 +1026,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-hhd44j"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-5gvahk"
           >
             <span />
           </div>
@@ -1187,7 +1187,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-yf8cy4"
+            class="justify-end border-2 border-l-0 border-transparent css-t4jv3s"
           >
             <div
               class="-mr-0.5"
@@ -1213,7 +1213,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent h-12 css-hhd44j"
+            class="font-bold border-2 border-r-0 border-transparent h-12 css-5gvahk"
           >
             <span />
           </div>
@@ -1374,7 +1374,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-yf8cy4"
+            class="justify-end border-2 border-l-0 border-transparent css-t4jv3s"
           >
             <div
               class="-mr-0.5"
@@ -1412,7 +1412,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-rjc6e4"
           >
             <span />
           </div>
@@ -1573,7 +1573,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -1599,7 +1599,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent css-rjc6e4"
           >
             <span />
           </div>
@@ -1760,7 +1760,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -1786,7 +1786,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent css-rjc6e4"
           >
             <span />
           </div>
@@ -1947,7 +1947,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -1985,7 +1985,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-rjc6e4"
           >
             <span />
           </div>
@@ -2146,7 +2146,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 css-160cp05"
           >
             <div
               class="-mr-0.5"
@@ -2181,7 +2181,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
       >
         <td>
           <div
-            class="font-bold border-2 border-r-0 border-transparent css-bgc8eo"
+            class="font-bold border-2 border-r-0 border-transparent css-rjc6e4"
           >
             <span />
           </div>
@@ -2352,7 +2352,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-1x0atc1"
+                  class="css-juhgab"
                   disabled=""
                 >
                   <div
@@ -2389,7 +2389,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           class="w-40"
         >
           <div
-            class="justify-end border-2 border-l-0 border-transparent css-10gefem"
+            class="justify-end border-2 border-l-0 border-transparent css-160cp05"
           >
             <div
               class="-mr-0.5"

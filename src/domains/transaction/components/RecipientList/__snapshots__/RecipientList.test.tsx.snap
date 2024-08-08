@@ -6,20 +6,19 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
     class="css-1sfei0c"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -35,7 +34,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -51,7 +50,7 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -486,20 +485,19 @@ exports[`RecipientList > should render condensed variant 1`] = `
     class="css-1sfei0c"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -515,7 +513,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -531,7 +529,7 @@ exports[`RecipientList > should render condensed variant 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -841,20 +839,19 @@ exports[`RecipientList > should render editable 1`] = `
     class="css-1sfei0c"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -870,7 +867,7 @@ exports[`RecipientList > should render editable 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -886,7 +883,7 @@ exports[`RecipientList > should render editable 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1320,20 +1317,19 @@ exports[`RecipientList > should render non-editable 1`] = `
     class="css-1sfei0c"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1349,7 +1345,7 @@ exports[`RecipientList > should render non-editable 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1591,20 +1587,19 @@ exports[`RecipientList > should render without amount column 1`] = `
     class="css-1sfei0c"
   >
     <div
-      class="-mt-3 css-1m6rt2i"
+      class="css-1m6rt2i"
       role="table"
     >
       <table
         cellpadding="0"
-        class="table-auto"
+        class="w-full table-auto"
       >
         <thead>
           <tr
-            class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1620,7 +1615,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1636,7 +1631,7 @@ exports[`RecipientList > should render without amount column 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"

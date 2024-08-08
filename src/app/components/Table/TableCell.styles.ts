@@ -7,7 +7,7 @@ const getHeight = (isCompact: boolean) => (isCompact ? tw`min-h-11` : tw`min-h-1
 const getVariant = (variant: "start" | "middle" | "end", size?: "sm" | "base"): TwStyle | undefined => {
 	if (variant === "start") {
 		const variants = {
-			base: () => tw`pl-4 -ml-4 rounded-l-xl`,
+			base: () => tw`pl-6 rounded-l-xl`,
 			sm: () => tw`pl-2 -ml-2 rounded-l-xl`,
 		};
 
@@ -16,7 +16,7 @@ const getVariant = (variant: "start" | "middle" | "end", size?: "sm" | "base"): 
 
 	if (variant === "end") {
 		const variants = {
-			base: () => tw`pr-4 -mr-4 rounded-r-xl`,
+			base: () => tw`pr-6 rounded-r-xl`,
 			sm: () => tw`pr-2 -mr-2 rounded-r-xl`,
 		};
 
