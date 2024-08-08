@@ -25,7 +25,7 @@ export const ErrorStep = ({
 	onBack,
 	onClose,
 	isBackDisabled = false,
-	errorMessage = "test",
+	errorMessage,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
