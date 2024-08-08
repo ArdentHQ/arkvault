@@ -460,7 +460,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1469,7 +1469,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   data-testid="SendDelegateResignation__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2455,7 +2455,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   data-testid="SendDelegateResignation__review-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -3357,7 +3357,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -4209,7 +4209,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                       class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="sm:mt-8"
+                        class="w-full sm:mt-8"
                       >
                         <div
                           class="flex flex-col"
@@ -4930,7 +4930,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -5822,7 +5822,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -7133,7 +7133,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -8319,7 +8319,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"

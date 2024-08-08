@@ -459,7 +459,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -699,7 +699,7 @@ exports[`SendIpfs > should render form step 1`] = `
     data-testid="SendIpfs__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -1016,7 +1016,7 @@ exports[`SendIpfs > should render review step 1`] = `
     data-testid="SendIpfs__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -1311,7 +1311,7 @@ exports[`SendIpfs > should render summary step 1`] = `
     data-testid="TransactionSuccessful"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -2800,7 +2800,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -4088,7 +4088,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -5378,7 +5378,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -6542,7 +6542,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                   data-testid="SendIpfs__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -7530,7 +7530,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
                       class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="sm:mt-8"
+                        class="w-full sm:mt-8"
                       >
                         <div
                           class="flex flex-col"

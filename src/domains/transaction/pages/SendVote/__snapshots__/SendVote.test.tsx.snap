@@ -586,7 +586,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1873,7 +1873,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2690,7 +2690,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                       class="flex flex-row items-center justify-start gap-3"
                     >
                       <div
-                        class="sm:mt-8"
+                        class="w-full sm:mt-8"
                       >
                         <div
                           class="flex flex-col"
