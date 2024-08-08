@@ -260,89 +260,140 @@ exports[`ErrorStep > should emit onBack 1`] = `
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-fl4fi0"
         data-testid="ErrorStep__back-button"
@@ -449,89 +500,140 @@ exports[`ErrorStep > should emit onClose 1`] = `
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-6419sw"
         data-testid="ErrorStep__close-button"
@@ -638,90 +740,140 @@ exports[`ErrorStep > should render with custom title 1`] = `
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
@@ -812,90 +964,140 @@ exports[`ErrorStep > should render with default texts 1`] = `
             An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
