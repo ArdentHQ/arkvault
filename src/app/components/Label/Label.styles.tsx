@@ -12,6 +12,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 		const colors = {
 			danger: () => tw`text-theme-danger-500 border-theme-danger-100 bg-theme-danger-100`,
 			default: () => tw`text-theme-warning-700 border-theme-warning-100 bg-theme-warning-100`,
+			neutral: () => tw`text-theme-success-600 border-theme-success-200 bg-theme-success-200`,
 			primary: () => tw`text-theme-primary-500 border-theme-primary-100 bg-theme-primary-100`,
 			success: () => tw`text-theme-success-600 border-theme-success-200 bg-theme-success-200`,
 		};
@@ -24,7 +25,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 		danger: () => tw`text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400`,
 		default: () => tw`text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700`,
 		neutral: () =>
-			tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`,
+			tw`text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:text-theme-secondary-500 dark:bg-transparent dark:border-theme-secondary-800`,
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
 	};
@@ -36,6 +37,10 @@ const getColor = (color?: ColorType, variant?: string) => {
 const getSize = (size?: Size) => {
 	if (size === "lg") {
 		return tw`text-lg`;
+	}
+
+	if (size === "xs") {
+		return tw`text-xs leading-5`;
 	}
 
 	return tw`text-base`;

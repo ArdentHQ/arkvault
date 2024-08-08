@@ -1,0 +1,45 @@
+import React, { ReactElement } from "react";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { useTranslation } from "react-i18next";
+import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { Address } from "@/app/components/Address";
+import { Divider } from "@/app/components/Divider";
+import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Amount, AmountLabel } from "@/app/components/Amount";
+
+interface Properties {
+	transaction: DTO.ExtendedSignedTransactionData;
+	senderWallet: Contracts.IReadWriteWallet;
+}
+
+export const TransactionSummary = ({ transaction, senderWallet }: Properties): ReactElement => {
+	const { t } = useTranslation();
+
+	return (
+		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
+			<div className="flex w-full">
+				<DetailLabelText minWidth="sm">{t("COMMON.AMOUNT")}</DetailLabelText>
+				<AmountLabel isNegative={transaction.isSent()} value={transaction.amount()} ticker={senderWallet.currency()} />
+			</div>
+
+			<div className="hidden h-8 w-full items-center sm:flex">
+				<Divider dashed />
+			</div>
+
+			<div className="flex w-full">
+				<DetailLabelText minWidth="sm">{t("COMMON.FEE")}</DetailLabelText>
+				<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
+			</div>
+
+			<div className="hidden h-8 w-full items-center sm:flex">
+				<Divider dashed />
+			</div>
+
+			<div className="flex w-full">
+				<DetailLabelText minWidth="sm">{t("COMMON.VALUE")}</DetailLabelText>
+				<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
+			</div>
+
+		</DetailWrapper>
+	);
+};

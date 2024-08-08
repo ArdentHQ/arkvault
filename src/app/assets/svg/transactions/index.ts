@@ -19,6 +19,7 @@ import VoteCombination from "./vote-combination.svg?react";
 import SendTransactionLight from "./send-transaction-light.svg?react";
 import SendTransactionDark from "./send-transaction-dark.svg?react";
 import ConfirmTransaction from "./confirm-transaction.svg?react";
+import PendingTransaction from "./compass.svg?react";
 
 export const TransactionIcons: any = {
 	ConfirmTransaction,
@@ -28,6 +29,7 @@ export const TransactionIcons: any = {
 	Magistrate,
 	Multipayment,
 	Multisignature,
+	PendingTransaction,
 	Received,
 	Return,
 	SecondSignature,
