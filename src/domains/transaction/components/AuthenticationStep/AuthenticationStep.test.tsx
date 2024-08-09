@@ -34,8 +34,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	let goMock: any;
-	const mnemonicMismatchError = 'This mnemonic does not correspond to your wallet'
-	const secretMismatchError = 'This secret does not correspond to your wallet'
+	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
+	const secretMismatchError = "This secret does not correspond to your wallet";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
