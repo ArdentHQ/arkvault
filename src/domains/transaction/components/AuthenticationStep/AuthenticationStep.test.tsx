@@ -34,6 +34,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	let goMock: any;
+	const mnemonicMismatchError = 'This mnemonic does not correspond to your wallet'
+	const secretMismatchError = 'This secret does not correspond to your wallet'
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -43,15 +45,15 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		vi.spyOn(reactRouterDomMock, "useHistory").mockReturnValue({ go: goMock });
 	});
 
-	// @TODO: Fix this test - Line 68 failing
-	/* it("should validate if mnemonic match the wallet address", async () => {
+	it("should validate if mnemonic match the wallet address", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[0],
 			network: ARKDevnet,
 		});
-		
+
 		const walletExists = profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.networkId());
+
 		if (!walletExists) {
 			profile.wallets().push(wallet);
 		}
@@ -65,7 +67,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
 		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
 
-		await waitFor(() => expect(form()?.formState.isValid).toBe(false));
+		await waitFor(() => expect(form()?.formState.errors.mnemonic.message).toBe(mnemonicMismatchError));
 
 		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
 		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
@@ -74,10 +76,9 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		profile.wallets().forget(wallet.id());
 		vi.clearAllMocks();
-	}); */
+	});
 
-	//@TODO: Fix this test - Line 103 returning truthy value
-	/* itif(subject === "transaction")(
+	itif(subject === "transaction")(
 		"should validate if second mnemonic matches the wallet second public key",
 		async () => {
 			wallet = await profile.walletFactory().fromMnemonicWithBIP39({
@@ -97,24 +98,24 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				withProviders: true,
 			});
 
+			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
 			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 			await userEvent.type(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.errors.secondMnemonic.message).toBe(mnemonicMismatchError));
 
 			await userEvent.clear(screen.getByTestId(secondMnemonicID));
 			await userEvent.type(screen.getByTestId(secondMnemonicID), secondMnemonic);
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+			await waitFor(() => expect(form()?.formState.errors.secondMnemonic).toBeUndefined());
 
 			profile.wallets().forget(wallet.id());
 			vi.clearAllMocks();
-		}, 
-	);*/
+		},
+	);
 
-	// @TODO: Fix this test - Line 135 returning truthy value
-	/* itif(subject === "transaction")(
+	itif(subject === "transaction")(
 		"should validate if second secret matches the wallet second public key",
 		async () => {
 			wallet = await profile.walletFactory().fromSecret({
@@ -133,14 +134,14 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			await userEvent.clear(screen.getByTestId(secondSecretID));
 			await userEvent.type(screen.getByTestId(secondSecretID), "wrong second secret");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.errors.secondSecret.message).toBe(secretMismatchError));
 
 			await userEvent.clear(screen.getByTestId(secondSecretID));
 			await userEvent.type(screen.getByTestId(secondSecretID), "abc");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+			await waitFor(() => expect(form()?.formState.errors.secondSecret).toBeUndefined());
 		},
-	); */
+	);
 
 	it("should request mnemonic if wallet was imported using mnemonic", async () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
