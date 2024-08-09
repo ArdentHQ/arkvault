@@ -29,6 +29,7 @@ import CrossSmall from "./cross-small.svg?react";
 import { Currencies } from "./currencies";
 import Dash from "./dash.svg?react";
 import EllipsisVertical from "./ellipsis-vertical.svg?react";
+import EllipsisVerticalFilled from "./ellipsis-vertical-filled.svg?react";
 import ExtensionWwe from "./extension-wwe.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
@@ -84,6 +85,7 @@ import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import Completed from "./completed.svg?react";
+import PersonLight from "./person-light.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -118,6 +120,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	DocumentView,
 	Download,
 	EllipsisVertical,
+	EllipsisVerticalFilled,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWwe,
@@ -147,6 +150,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MoneyCoinSwap,
 	Pencil,
 	PencilRuler,
+	PersonLight,
 	Plus,
 	QRCode,
 	QuestionMarkSmall,

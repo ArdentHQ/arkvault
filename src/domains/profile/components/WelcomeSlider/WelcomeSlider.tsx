@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,10 +13,12 @@ interface SlideProperties {
 const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
 	<div className="flex w-full flex-row md:w-auto lg:flex-col">
 		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]">
-			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 lg:text-2xl md:font-bold lg:leading-[29px]">
+			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]">
 				{title}
 			</h3>
-			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7"> {subtitle} </p>
+			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7">
+				{subtitle}
+			</p>
 		</div>
 		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
 			<Image name={imageName} alt={title} domain="profile" className="!hidden lg:!block" />
@@ -40,7 +42,7 @@ export const WelcomeSlider = (): JSX.Element => {
 		arrows: false,
 		autoplay: true,
 		customPaging: () => (
-			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 dark:border-theme-secondary-600 hover:border-transparent dark:hover:border-transparent hover:bg-theme-navy-700 dark:hover:bg-theme-secondary-600" />
+			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600" />
 		),
 		dots: true,
 		dotsClass: "welcome-slider-dots absolute top-4 left-4 sm:top-6 sm:left-6",
