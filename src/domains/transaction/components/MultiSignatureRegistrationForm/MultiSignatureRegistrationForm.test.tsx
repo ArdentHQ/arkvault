@@ -101,24 +101,23 @@ describe("MultiSignature Registration Form", () => {
 
 	it("should fill form", async () => {
 		const { form } = renderComponent();
+		const participantsCount = 2
 
 		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
 
-		await userEvent.clear(inputElement);
-		await userEvent.type(inputElement, "3");
+		await waitFor(() => expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"));
+		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
 
-		// @TODO: Fix this test - This line returning other value than expected
-		/* await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg))); */
-		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(participantsCount));
+		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.avg * participantsCount));
 
 		await userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 		await userEvent.type(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		await userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
-		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
 			expect(form?.getValues("participants")).toStrictEqual([
 				{
