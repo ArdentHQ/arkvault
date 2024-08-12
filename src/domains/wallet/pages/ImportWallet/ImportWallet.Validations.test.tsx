@@ -58,6 +58,50 @@ describe("ImportWallet Validations", () => {
 		resetProfileNetworksMock();
 	});
 
+
+	it("should error if address cannot be created", async () => {
+		const coin = profile.coins().get("ARK", testNetwork);
+		const coinMock = vi.spyOn(coin.address(), "fromSecret").mockImplementationOnce(() => {
+			throw new Error("test");
+		});
+
+		render(
+			<Route path="/profiles/:profileId/wallets/import">
+				<ImportWallet />
+			</Route>,
+			{
+				route: route,
+			},
+		);
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
+
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		await userEvent.click(continueButton());
+
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
+
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
+
+		expect(methodStep()).toBeInTheDocument();
+
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
+		const passphraseInput = screen.getByTestId(secretInputID);
+
+		expect(passphraseInput).toBeInTheDocument();
+
+		await userEvent.clear(passphraseInput);
+		await userEvent.type(passphraseInput, MNEMONICS[0]);
+
+		await waitFor(() => expect(continueButton()).not.toBeEnabled());
+	});
+
 	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
