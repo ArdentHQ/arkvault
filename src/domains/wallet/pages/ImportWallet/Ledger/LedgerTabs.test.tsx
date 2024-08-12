@@ -305,7 +305,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -366,7 +366,6 @@ describe("LedgerTabs", () => {
 		render(<Component activeIndex={1} />, {
 			route: `/profiles/${profile.id()}`,
 		});
-
 
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 		await userEvent.click(backSelector());
