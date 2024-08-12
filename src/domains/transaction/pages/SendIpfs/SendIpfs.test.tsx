@@ -1,4 +1,3 @@
-
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 
 import userEvent from "@testing-library/user-event";
@@ -26,7 +25,7 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	act,
-	MNEMONICS
+	MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -51,7 +50,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 			sender: () => ipfsFixture.data.sender,
 			type: () => "ipfs",
 			usesMultiSignature: () => false,
-		}
+		};
 	});
 
 let profile: Contracts.IProfile;
@@ -833,7 +832,6 @@ describe("SendIpfs", () => {
 		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
 
 		// Step 4
 		const signMock = vi
