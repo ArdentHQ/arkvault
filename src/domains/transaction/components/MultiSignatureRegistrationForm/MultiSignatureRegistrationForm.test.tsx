@@ -101,11 +101,13 @@ describe("MultiSignature Registration Form", () => {
 
 	it("should fill form", async () => {
 		const { form } = renderComponent();
-		const participantsCount = 2
+		const participantsCount = 2;
 
 		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
-		await waitFor(() => expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"));
+		await waitFor(() =>
+			expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"),
+		);
 		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(participantsCount));
