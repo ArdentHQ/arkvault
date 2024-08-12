@@ -15,21 +15,11 @@ interface CardProperties {
 	onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 	onSelect?: (option: DropdownOption) => void;
 	className?: string;
-	buttonClassName?: string;
 }
 
 const StyledButton = styled.button<{ variant?: ButtonVariant; onClick?: any }>(getStyles);
 
-export const Card = ({
-	variant,
-	children,
-	addonIcons,
-	actions,
-	onClick,
-	onSelect,
-	className,
-	buttonClassName,
-}: CardProperties) => (
+export const Card = ({ variant, children, addonIcons, actions, onClick, onSelect, className }: CardProperties) => (
 	<div className={className}>
 		<StyledButton
 			type="button"
@@ -37,10 +27,9 @@ export const Card = ({
 			onClick={onClick}
 			data-testid="Card"
 			tabIndex={onClick ? undefined : -1}
-			className={buttonClassName}
 		>
 			{children}
-			<div className="absolute -right-1 m-4 flex items-center space-x-1">
+			<div className="absolute -right-1 -top-1 m-4 flex items-center space-x-1">
 				{addonIcons}
 				{actions && actions.length > 0 && (
 					<Dropdown
@@ -50,7 +39,7 @@ export const Card = ({
 						toggleContent={
 							<div className="flex w-4 justify-center overflow-hidden">
 								<Icon
-									name="EllipsisVerticalFilled"
+									name="EllipsisVertical"
 									className="cursor-pointer p-1 text-theme-primary-300 transition-colors duration-200 hover:text-theme-primary-400 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
 									size="lg"
 								/>

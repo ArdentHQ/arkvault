@@ -253,7 +253,7 @@ export const Welcome = () => {
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.TITLE")}
 										</h2>
 
-										<p className="text-base text-theme-secondary-text">
+										<p className="text-base leading-7 text-theme-secondary-text">
 											{hasProfiles
 												? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION")
 												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.DESCRIPTION")}
