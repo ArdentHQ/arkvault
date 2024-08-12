@@ -105,8 +105,6 @@ describe("MultiSignature Registration Form", () => {
 
 		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
-		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
-
 		await waitFor(() => expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"));
 		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
 

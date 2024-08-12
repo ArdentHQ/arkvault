@@ -143,7 +143,7 @@ describe("SendIpfs", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render review step", async () => {
+	it("should render review step", () => {
 		const history = createHashHistory();
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
