@@ -446,6 +446,10 @@ describe("LedgerTabs", () => {
 			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
 			wallets: [
 				{
+					address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
+					path: "m/44'/1'/0'/0/1",
+				},
+				{
 					address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
 					path: "m/44'/1'/0'/0/0",
 				},
@@ -463,9 +467,9 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(4), { timeout: 3000 });
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(4));
 
 		await waitFor(() => {
 			expect(nextSelector()).toBeEnabled();
