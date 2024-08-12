@@ -14,31 +14,28 @@ interface ProfilesSliderProperties {
 
 const PROFILES_PER_SLIDE = 5;
 
-export const Profiles = (properties: ProfilesSliderProperties) => {
-	return properties.profiles.length <= PROFILES_PER_SLIDE ? (
+export const Profiles = (properties: ProfilesSliderProperties) =>
+	properties.profiles.length <= PROFILES_PER_SLIDE ? (
 		<div className="space-y-3">
 			<ProfilesSlide {...properties} />
 		</div>
 	) : (
 		<ProfilesSlider {...properties} />
 	);
-};
 
-const ProfilesSlide = ({ profiles, actions, onClick, onSelect }: ProfilesSliderProperties) => {
-	return (
-		<>
-			{profiles.map((profile: Contracts.IProfile, index: number) => (
-				<ProfileRow
-					key={index}
-					profile={profile}
-					actions={actions}
-					onClick={() => onClick(profile)}
-					onSelect={(action) => onSelect(profile, action)}
-				/>
-			))}
-		</>
-	);
-};
+const ProfilesSlide = ({ profiles, actions, onClick, onSelect }: ProfilesSliderProperties) => (
+	<>
+		{profiles.map((profile: Contracts.IProfile, index: number) => (
+			<ProfileRow
+				key={index}
+				profile={profile}
+				actions={actions}
+				onClick={() => onClick(profile)}
+				onSelect={(action) => onSelect(profile, action)}
+			/>
+		))}
+	</>
+);
 
 const ProfilesSlider = (properties: ProfilesSliderProperties) => {
 	const settings: Settings = {
