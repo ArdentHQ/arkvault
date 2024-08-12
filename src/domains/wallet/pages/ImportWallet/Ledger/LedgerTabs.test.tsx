@@ -1,4 +1,3 @@
-import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -372,6 +371,7 @@ describe("LedgerTabs", () => {
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 		await userEvent.click(backSelector());
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
+		ledgerTransportMock.mockRestore();
 	});
 
 	it("should render scan step with failing fetch", async () => {

@@ -100,6 +100,7 @@ describe("ImportWallet Validations", () => {
 		await userEvent.type(passphraseInput, MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).not.toBeEnabled());
+		coinMock.mockRestore()
 	});
 
 	it("should prompt for mnemonic if user enters bip39 compliant secret", async () => {

@@ -225,7 +225,10 @@ export const LedgerScanStep = ({
 
 		return [...profileWalletsPaths, ...ledgerPaths]
 			.filter(Boolean)
-			.sort((a, b) => (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1))[0];
+			.sort((a, b) => {
+				console.log({ isTrue: BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex })
+				return (BIP44.parse(a!).addressIndex > BIP44.parse(b!).addressIndex ? -1 : 1)
+			})[0];
 	}, [profile, wallets]);
 
 	const scanMore = useCallback(() => {

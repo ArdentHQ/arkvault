@@ -43,7 +43,7 @@ describe("Transactions", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/dashboard">
 				<Transactions profile={profile} wallets={profile.wallets().values()} />
 			</Route>,
