@@ -524,7 +524,7 @@ exports[`App > should not migrate profiles 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -572,7 +572,7 @@ exports[`App > should not migrate profiles 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
@@ -618,7 +618,7 @@ exports[`App > should not migrate profiles 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -692,7 +692,7 @@ exports[`App > should not migrate profiles 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
@@ -1607,7 +1607,7 @@ exports[`App > should render mock 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -1655,7 +1655,7 @@ exports[`App > should render mock 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
@@ -1701,7 +1701,7 @@ exports[`App > should render mock 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -1775,7 +1775,7 @@ exports[`App > should render mock 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
@@ -2782,7 +2782,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -2830,7 +2830,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
@@ -2876,7 +2876,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                             data-testid="ProfileRow"
                           >
                             <a
-                              class="flex min-w-0 py-1 pl-1 flex-1"
+                              class="flex min-w-0 flex-1 py-1 pl-1"
                               data-testid="ProfileRow__Link"
                               tabindex="1"
                             >
@@ -2950,7 +2950,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                                   data-testid="dropdown__toggle"
                                 >
                                   <div
-                                    class="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+                                    class="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
                                     tabindex="1"
                                   >
                                     <div
