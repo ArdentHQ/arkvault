@@ -1,3 +1,4 @@
+import { LedgerTransportFactory } from "@ardenthq/sdk-ledger";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
@@ -274,8 +275,9 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		await waitFor(() => expect(nextSelector()).toBeDisabled());
 		await waitFor(() => expect(backSelector()).toBeEnabled());
+
+		await userEvent.click(nextSelector());
 
 		formReference!.setValue("network", wallet.network(), { shouldDirty: true, shouldValidate: true });
 
@@ -295,9 +297,8 @@ describe("LedgerTabs", () => {
 			expect(nextSelector()).toBeEnabled();
 		});
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
-		await expect(screen.findByTestId("LedgerConnectionStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();
@@ -305,7 +306,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -358,6 +359,19 @@ describe("LedgerTabs", () => {
 		historySpy.mockRestore();
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
+	});
+
+	it("should go back and render disconnected state", async () => {
+		const ledgerTransportMock = mockLedgerTransportError();
+
+		render(<Component activeIndex={1} />, {
+			route: `/profiles/${profile.id()}`,
+		});
+
+
+		await waitFor(() => expect(backSelector()).toBeEnabled());
+		await userEvent.click(backSelector());
+		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
 	});
 
 	it("should render scan step with failing fetch", async () => {
