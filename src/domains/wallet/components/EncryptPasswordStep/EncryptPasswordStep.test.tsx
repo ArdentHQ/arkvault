@@ -43,6 +43,8 @@ describe("EncryptPasswordStep", () => {
 		await userEvent.clear(confirmPassword);
 		await userEvent.type(confirmPassword, passwordValue, { delay: 100 });
 
+		await waitFor(() => expect(confirmPassword).toHaveValue(passwordValue));
+
 		expect(asFragment()).toMatchSnapshot();
 	}, 10_000);
 });
