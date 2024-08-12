@@ -134,6 +134,29 @@ describe("MultiSignature Registration Form", () => {
 		);
 	});
 
+	it("should set min participants", async () => {
+		const { form } = renderComponent();
+		const participantsCount = 2;
+
+		await userEvent.click(screen.getByText(translations.FEES.AVERAGE));
+
+		await waitFor(() =>
+			expect(form?.formState.errors.feeCalculation.message).toBe("fee calculation not completed"),
+		);
+
+		await waitFor(() => expect(form?.formState.errors.feeCalculation).toBeUndefined());
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(participantsCount));
+		await waitFor(() => expect(form?.getValues("fee")).toBe(fees.avg * participantsCount));
+
+		await userEvent.clear(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"));
+		await userEvent.type(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), "3");
+
+		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
+
+
+	});
+
 	it("should show name of wallets in form step", async () => {
 		const { form } = renderComponent();
 
