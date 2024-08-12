@@ -86,6 +86,7 @@ import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import Completed from "./completed.svg?react";
 import PersonLight from "./person-light.svg?react";
+import PersonDark from "./person-dark.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -150,6 +151,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	MoneyCoinSwap,
 	Pencil,
 	PencilRuler,
+	PersonDark,
 	PersonLight,
 	Plus,
 	QRCode,

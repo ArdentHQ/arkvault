@@ -243,7 +243,7 @@ export const Welcome = () => {
 								<div className="flex flex-1 flex-col items-center justify-center">
 									<div className="flex flex-col items-center space-y-2 text-center">
 										<ThemeIcon
-											darkIcon="PersonLight"
+											darkIcon="PersonDark"
 											lightIcon="PersonLight"
 											dimensions={[24, 24]}
 										/>
@@ -270,6 +270,7 @@ export const Welcome = () => {
 										/>
 
 										<Button
+											data-testid="CreateProfile"
 											variant="primary"
 											className={cn({ "mt-3": profiles.length })}
 											onClick={() => history.push("/profiles/create")}

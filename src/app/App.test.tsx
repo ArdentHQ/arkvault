@@ -84,7 +84,7 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
@@ -278,7 +278,7 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
@@ -314,7 +314,7 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("Card")[1]);
+		userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();

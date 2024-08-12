@@ -16,12 +16,13 @@ interface ProfileRowProperties {
 
 export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: ProfileRowProperties) => (
 	<div
+		data-testid="ProfileRow"
 		className={cn(
-			"flex items-center rounded-lg border border-theme-navy-200 p-1 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-900 dark:hover:bg-theme-secondary-600",
+			"flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800",
 			className,
 		)}
 	>
-		<a onClick={onClick} onKeyPress={onClick} className="flex min-w-0 flex-1" tabIndex={1}>
+		<a data-testid="ProfileRow__Link" onClick={onClick} onKeyPress={onClick} className="flex min-w-0 py-1 pl-1 flex-1" tabIndex={1}>
 			<div className="flex h-full w-full min-w-0 items-center justify-between">
 				<div className="flex min-w-0 items-center">
 					<ProfileAvatar profile={profile} size="md" />
@@ -46,10 +47,10 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 				options={actions}
 				onSelect={onSelect}
 				toggleContent={
-					<div className="mr-1.5 flex justify-center rounded-md p-1.5 hover:bg-theme-navy-200" tabIndex={1}>
+					<div className="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700" tabIndex={1}>
 						<Icon
 							name="EllipsisVerticalFilled"
-							className="cursor-pointer text-theme-secondary-700 transition-colors duration-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
+							className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
 							size="lg"
 						/>
 					</div>
@@ -61,10 +62,10 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 
 export const ProfileRowSkeleton = () => (
 	<div className="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800">
-		<div className="h-10 w-10 bg-theme-secondary-100" />
+		<div className="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800" />
 		<Icon
 			name="EllipsisVerticalFilled"
-			className="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-600"
+			className="mr-1.5 pr-1.5 text-theme-secondary-200 dark:text-theme-secondary-800"
 			size="lg"
 		/>
 	</div>
