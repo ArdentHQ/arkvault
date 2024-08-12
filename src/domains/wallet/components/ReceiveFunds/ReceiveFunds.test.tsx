@@ -99,5 +99,4 @@ describe("ReceiveFunds", () => {
 		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
 	});
-
 });

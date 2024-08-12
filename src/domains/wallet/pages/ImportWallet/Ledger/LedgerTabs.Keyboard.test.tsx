@@ -7,7 +7,6 @@ import { Route } from "react-router-dom";
 import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
-import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
 import {
 	env,
 	getDefaultProfileId,
@@ -15,9 +14,7 @@ import {
 	screen,
 	waitFor,
 	mockNanoXTransport,
-	mockLedgerTransportError,
 	mockProfileWithPublicAndTestNetworks,
-	mockProfileWithOnlyPublicNetworks,
 } from "@/utils/testing-library";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { server, requestMock, requestMockOnce } from "@/tests/mocks/server";
@@ -26,9 +23,6 @@ import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 vi.mock("react-hook-form", async () => ({
 	...(await vi.importActual("react-hook-form")),
 }));
-
-const nextSelector = () => screen.getByTestId("Paginator__continue-button");
-const backSelector = () => screen.getByTestId("Paginator__back-button");
 
 let resetProfileNetworksMock: () => void;
 
@@ -40,7 +34,6 @@ describe("LedgerTabs", () => {
 	let getVersionSpy: vi.SpyInstance;
 
 	let publicKeyPaths = new Map<string, string>();
-	let mockFindWallet: vi.SpyInstance;
 
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
 import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
@@ -306,7 +305,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
 
 		const ledgerTransportMock = mockNanoXTransport();
 
