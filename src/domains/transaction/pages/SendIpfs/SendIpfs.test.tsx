@@ -37,21 +37,19 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
-		return {
-			amount: () => +ipfsFixture.data.amount / 1e8,
-			data: () => ({ data: () => ipfsFixture.data }),
-			explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
-			fee: () => +ipfsFixture.data.fee / 1e8,
-			hash: () => ipfsFixture.data.asset.ipfs,
-			id: () => ipfsFixture.data.id,
-			isMultiSignatureRegistration: () => false,
-			recipient: () => ipfsFixture.data.recipient,
-			sender: () => ipfsFixture.data.sender,
-			type: () => "ipfs",
-			usesMultiSignature: () => false,
-		};
-	});
+	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
+		amount: () => +ipfsFixture.data.amount / 1e8,
+		data: () => ({ data: () => ipfsFixture.data }),
+		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
+		fee: () => +ipfsFixture.data.fee / 1e8,
+		hash: () => ipfsFixture.data.asset.ipfs,
+		id: () => ipfsFixture.data.id,
+		isMultiSignatureRegistration: () => false,
+		recipient: () => ipfsFixture.data.recipient,
+		sender: () => ipfsFixture.data.sender,
+		type: () => "ipfs",
+		usesMultiSignature: () => false,
+	}));
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
