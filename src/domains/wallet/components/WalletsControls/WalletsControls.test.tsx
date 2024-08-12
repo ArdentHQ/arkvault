@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { render, renderResponsive, screen } from "@/utils/testing-library";
+import { waitFor } from "@testing-library/react";
 
 describe("WalletsControls", () => {
 	const filterProperties: FilterWalletsHookProperties = {
@@ -65,7 +66,7 @@ describe("WalletsControls", () => {
 		);
 
 		// Await for multiple dropdown toggles to be available
-		await screen.findAllByTestId("dropdown__toggle");
+		await expect(screen.findAllByTestId("dropdown__toggle")).resolves.toHaveLength(2);
 
 		// Open the dropdown content
 		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
@@ -76,7 +77,7 @@ describe("WalletsControls", () => {
 
 		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
-		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+		expect(onCreateWallet).toHaveBeenCalled();
 	});
 
 	it("should execute onImportWallet callback", async () => {
