@@ -1,5 +1,3 @@
-
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -163,7 +161,6 @@ describe("ImportWallet Validations", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-
 		const fromSecretMock = vi.spyOn(wallet.coin().address(), "fromSecret").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
@@ -172,7 +169,7 @@ describe("ImportWallet Validations", () => {
 		await userEvent.type(screen.getByTestId("EncryptPassword__second-secret"), "invalid second secret");
 
 		expect(screen.getByTestId("EncryptPassword__second-secret")).toHaveValue("invalid second secret");
-		expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveAttribute("aria-invalid")
+		expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveAttribute("aria-invalid");
 
 		fromSecretMock.mockRestore();
 	});
