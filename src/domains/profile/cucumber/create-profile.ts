@@ -15,9 +15,9 @@ const preSteps = {
 	},
 	"And she clicks create": async (t: TestController) => {
 		await t
-			.expect(Selector('[data-testid="Card"]').withExactText(translations.COMMON.CREATE).exists)
+			.expect(Selector('[data-testid="CreateProfile"]').exists)
 			.ok({ timeout: 60_000 });
-		await t.click(Selector('[data-testid="Card"]').withExactText(translations.COMMON.CREATE));
+		await t.click(Selector('[data-testid="CreateProfile"]'));
 		await t.expect(getLocation()).contains("/profiles/create");
 	},
 };
