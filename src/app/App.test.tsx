@@ -129,7 +129,7 @@ describe("App", () => {
 		toastSuccessMock.mockRestore();
 	});
 
-	it("should render profile cards in welcome screen", async () => {
+	it("should render profile rows in welcome screen", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		render(<App />, {
