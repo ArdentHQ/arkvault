@@ -32,8 +32,8 @@ const formStep = {
 const welcomeScreenStep = {
 	"Then she will see the welcome screen": async (t: TestController) => {
 		await t.expect(getLocation()).notContains("/profiles/create");
-		await t.expect(Selector("button").withText("John Doe").exists).ok();
-		await t.expect(Selector("button").withText("Anne Doe").exists).ok();
+		await t.expect(Selector("span").withText("John Doe").exists).ok();
+		await t.expect(Selector("span").withText("Anne Doe").exists).ok();
 	},
 };
 
@@ -41,7 +41,7 @@ cucumber("@createProfile-noPassword", {
 	...preSteps,
 	...formStep,
 	"And she submits the form": async (t: TestController) => {
-		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
+		await t.click(Selector('[data-testid="CreateProfile"]'));
 	},
 	...welcomeScreenStep,
 });
