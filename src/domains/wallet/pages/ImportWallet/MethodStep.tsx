@@ -287,7 +287,6 @@ const ImportInputField = ({
 					const { address } = await coin.address().fromSecret(value);
 					return address;
 				} catch (error) {
-					console.log({ error })
 					if (error.message.includes("value is BIP39")) {
 						throw new Error(t("WALLETS.PAGE_IMPORT_WALLET.VALIDATION.INVALID_SECRET"));
 					}
