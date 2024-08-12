@@ -25,7 +25,7 @@ const randomPublicKeyInvalid = "a34151a3ec46b5670a682b0a63394f863587d1bc97483b1b
 
 const route = `/profiles/${fixtureProfileId}/wallets/import`;
 
-const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
+const enableEncryptionToggle = async () => await userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
 const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
@@ -71,20 +71,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
@@ -92,13 +92,13 @@ describe("ImportWallet Methods", () => {
 		await userEvent.type(await addressInput(), randomAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);
@@ -117,20 +117,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -138,7 +138,7 @@ describe("ImportWallet Methods", () => {
 		await userEvent.type(publicKeyInput(), randomPublicKey);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -163,20 +163,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -202,20 +202,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.PUBLIC_KEY)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
+		await userEvent.click(screen.getByText(commonTranslations.PUBLIC_KEY));
 
 		await expect(screen.findByTestId("ImportWallet__publicKey-input")).resolves.toBeVisible();
 
@@ -239,20 +239,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
@@ -260,13 +260,13 @@ describe("ImportWallet Methods", () => {
 		await userEvent.type(screen.getByTestId(secretInputID), "secret.111");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(countBefore + 1));
 	});
@@ -283,20 +283,20 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
@@ -305,26 +305,26 @@ describe("ImportWallet Methods", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeEnabled();
 		});
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
-		userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
-		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__encryptionPassword")).toHaveValue(password);
 		});
 
-		userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
-		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordValidation__confirmEncryptionPassword")).toHaveValue(password);
@@ -333,7 +333,7 @@ describe("ImportWallet Methods", () => {
 		await waitFor(() => {
 			expect(continueButton()).toBeEnabled();
 		});
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(
 			() => {
@@ -379,7 +379,7 @@ describe("ImportWallet Methods", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
 		await userEvent.click(continueButton());
 
@@ -446,7 +446,7 @@ describe("ImportWallet Methods", () => {
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		enableEncryptionToggle();
+		await enableEncryptionToggle();
 
 		await userEvent.click(continueButton());
 
