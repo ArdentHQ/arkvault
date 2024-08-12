@@ -1,10 +1,12 @@
-/* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
-import { renderWithForm, screen } from "@/utils/testing-library";
+import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 describe("EncryptPasswordStep", () => {
+	const passwordValue = "123"
+
 	it("should render", () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />);
 
@@ -12,39 +14,35 @@ describe("EncryptPasswordStep", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	// @TODO: Flaky test - Snapshot match failing randomly on gh actions
-	/* it("should change password", async () => {
+	it("should change password", async () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />);
 
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 
 		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, "password");
+		await userEvent.type(passwordInput, passwordValue);
 
-		await waitFor(() => expect(passwordInput).toHaveValue("password"));
+		await waitFor(() => expect(passwordInput).toHaveValue(passwordValue));
 
 		expect(asFragment).toMatchSnapshot();
-	}); */
+	});
 
-	// @TODO: Flaky test - Lines 40 and 45 missing letters randomly. See a similar case fixed in: https://github.com/ArdentHQ/arkvault/blob/787855c6993213f45d425015694b3a039987e402/src/domains/profile/pages/Welcome/Welcome.test.tsx#L451
-	/* it("should trigger password confirmation validation when password is entered", async () => {
+	it("should trigger password confirmation validation when password is entered", async () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />, {
-			defaultValues: { confirmEncryptionPassword: "password" },
+			defaultValues: { confirmEncryptionPassword: "123" },
 		});
-	
+
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
-	
+
 		await userEvent.clear(passwordInput);
-		await userEvent.type(passwordInput, "password", { delay: 100 });
-	
-		await waitFor(() => expect(passwordInput).toHaveValue("password"));
-	
+		await userEvent.type(passwordInput, passwordValue, { delay: 100 });
+
+		await waitFor(() => expect(passwordInput).toHaveValue(passwordValue));
+
 		await userEvent.clear(confirmPassword);
-		await userEvent.type(confirmPassword, "password", { delay: 100 });
-	
-		await waitFor(() => expect(confirmPassword).toHaveValue("password"));
-	
+		await userEvent.type(confirmPassword, passwordValue, { delay: 100 });
+
 		expect(asFragment()).toMatchSnapshot();
-	}, 10000); */
+	}, 10_000);
 });

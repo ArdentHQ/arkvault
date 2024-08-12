@@ -10,6 +10,7 @@ import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actio
 import * as envHooks from "@/app/hooks/env";
 import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 const history = createHashHistory();
@@ -24,7 +25,7 @@ const clickItem = async (label: string) => {
 	await userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
 };
 
-const closeModal = () => userEvent.click(screen.getByTestId("Modal__close-button"));
+const closeModal = async () => await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 describe("WalletHeader", () => {
 	beforeAll(async () => {
@@ -171,8 +172,7 @@ describe("WalletHeader", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	// @TODO: Fix these tests - Final assertion with Modal__inner always fails for one case but works for the other
-	/* it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
+	it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.DELETE);
@@ -181,8 +181,9 @@ describe("WalletHeader", () => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
 		);
 
+		console.log({ action })
 		if (action === "close") {
-			closeModal();
+			await closeModal();
 		} else {
 			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
@@ -200,32 +201,31 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			closeModal();
+			await closeModal();
 		} else {
 			await userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-	}); */
+	});
 
-	/* it("should open & close receive funds modal", async () => {
+	it("should open & close receive funds modal", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
+		await clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
 		);
 
-		closeModal();
+		await closeModal();
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-	}); */
+	});
 
-	// @TODO: Fix this test - Aria-busy returns false, probably assertion logic needs to be refactored
-	/* it("should manually sync wallet data", async () => {
+	it("should manually sync wallet data", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
@@ -235,7 +235,7 @@ describe("WalletHeader", () => {
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
-	}); */
+	});
 
 	it("should handle message signing", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
