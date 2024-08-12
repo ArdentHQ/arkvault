@@ -39,7 +39,6 @@ const fixtureProfileId = getDefaultProfileId();
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
 	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
-		console.log("mock")
 		return {
 			amount: () => +ipfsFixture.data.amount / 1e8,
 			data: () => ({ data: () => ipfsFixture.data }),
