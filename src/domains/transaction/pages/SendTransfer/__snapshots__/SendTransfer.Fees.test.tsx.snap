@@ -582,7 +582,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1974,7 +1974,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
