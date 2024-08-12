@@ -5,7 +5,7 @@ import { EncryptPasswordStep } from "./EncryptPasswordStep";
 import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 describe("EncryptPasswordStep", () => {
-	const passwordValue = "123"
+	const passwordValue = "123";
 
 	it("should render", () => {
 		const { asFragment } = renderWithForm(<EncryptPasswordStep />);

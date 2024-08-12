@@ -181,7 +181,6 @@ describe("WalletHeader", () => {
 			expect(screen.getByTestId("Modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE),
 		);
 
-		console.log({ action })
 		if (action === "close") {
 			await closeModal();
 		} else {

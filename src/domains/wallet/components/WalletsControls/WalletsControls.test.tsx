@@ -4,7 +4,6 @@ import userEvent from "@testing-library/user-event";
 import { WalletsControls } from "./WalletsControls";
 import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { render, renderResponsive, screen } from "@/utils/testing-library";
-import { waitFor } from "@testing-library/react";
 
 describe("WalletsControls", () => {
 	const filterProperties: FilterWalletsHookProperties = {
@@ -61,7 +60,11 @@ describe("WalletsControls", () => {
 		const onCreateWallet = vi.fn();
 
 		renderResponsive(
-			<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+			<WalletsControls
+				onCreateWallet={onCreateWallet}
+				onImportWallet={vi.fn()}
+				filterProperties={filterProperties}
+			/>,
 			"xs",
 		);
 
