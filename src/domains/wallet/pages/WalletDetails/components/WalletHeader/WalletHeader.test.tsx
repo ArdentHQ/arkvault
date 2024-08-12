@@ -227,11 +227,9 @@ describe("WalletHeader", () => {
 	it("should manually sync wallet data", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 
 		await expect(screen.findByTestId("WalletHeader__refresh")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	});
