@@ -27,6 +27,7 @@ const route = `/profiles/${fixtureProfileId}/wallets/import`;
 
 const enableEncryptionToggle = () => userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
+const backButton = () => screen.getByTestId("ImportWallet__back-button");
 const addressInput = () => screen.findByTestId("ImportWallet__address-input");
 const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
 const successStep = () => screen.getByTestId("ImportWallet__success-step");
@@ -342,7 +343,6 @@ describe("ImportWallet Methods", () => {
 		);
 	});
 
-	// @TODO: Fix these tests
 	it("should import by secret with second signature and use password to encrypt both", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
@@ -410,7 +410,7 @@ describe("ImportWallet Methods", () => {
 		});
 	});
 
-	/* it("forgets the imported wallet if back from encrypted password step", async () => {
+	it("forgets the imported wallet if back from encrypted password step", async () => {
 		render(
 			<Route path="/profiles/:profileId/wallets/import">
 				<ImportWallet />
@@ -422,18 +422,18 @@ describe("ImportWallet Methods", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.SECRET)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.SECRET));
+		await userEvent.click(screen.getByText(commonTranslations.SECRET));
 
 		expect(methodStep()).toBeInTheDocument();
 
@@ -448,7 +448,7 @@ describe("ImportWallet Methods", () => {
 
 		enableEncryptionToggle();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -456,10 +456,10 @@ describe("ImportWallet Methods", () => {
 
 		const profileForgetWalletSpy = vi.spyOn(profile.wallets(), "forget").mockImplementation(() => {});
 
-		userEvent.click(backButton());
+		await userEvent.click(backButton());
 
 		expect(profileForgetWalletSpy).toHaveBeenCalledWith(expect.any(String));
 
 		profileForgetWalletSpy.mockRestore();
-	}); */
+	});
 });

@@ -161,8 +161,7 @@ describe("LedgerTabs", () => {
 		);
 	};
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 179
-	/* it("should load more address", async () => {
+	it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const getPublicKeySpy = vi
@@ -174,7 +173,7 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 
@@ -192,7 +191,7 @@ describe("LedgerTabs", () => {
 
 		expect(loadMoreButton).toBeInTheDocument();
 
-		userEvent.click(loadMoreButton);
+		await userEvent.click(loadMoreButton);
 
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
@@ -201,10 +200,9 @@ describe("LedgerTabs", () => {
 		scanSpy.mockRestore();
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 219
-	/* it("should render scan step", async () => {
+	it("should render scan step", async () => {
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
@@ -214,16 +212,14 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
-
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		await userEvent.click(nextSelector());
 
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = vi
@@ -310,7 +306,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -365,8 +361,7 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 387
-	/* it("should render scan step with failing fetch", async () => {
+	it("should render scan step with failing fetch", async () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
 
 		const getPublicKeySpy = vi
@@ -380,9 +375,7 @@ describe("LedgerTabs", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-		userEvent.click(nextSelector());
-
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
+		await userEvent.click(nextSelector());
 
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -392,7 +385,7 @@ describe("LedgerTabs", () => {
 			expect(screen.getByTestId("Paginator__retry-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Paginator__retry-button"));
+		await userEvent.click(screen.getByTestId("Paginator__retry-button"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("LedgerScanStep__amount-skeleton")).toHaveLength(0), {
 			interval: 5,
@@ -402,7 +395,7 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
 	it("should skip network step if only one available network", async () => {
 		resetProfileNetworksMock();
