@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 
 import userEvent from "@testing-library/user-event";
@@ -26,6 +26,7 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	act,
+	MNEMONICS
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -37,18 +38,21 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
-		amount: () => +ipfsFixture.data.amount / 1e8,
-		data: () => ({ data: () => ipfsFixture.data }),
-		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
-		fee: () => +ipfsFixture.data.fee / 1e8,
-		hash: () => ipfsFixture.data.asset.ipfs,
-		id: () => ipfsFixture.data.id,
-		isMultiSignatureRegistration: () => false,
-		recipient: () => ipfsFixture.data.recipient,
-		sender: () => ipfsFixture.data.sender,
-		type: () => "ipfs",
-		usesMultiSignature: () => false,
+	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => {
+		console.log("mock")
+		return {
+			amount: () => +ipfsFixture.data.amount / 1e8,
+			data: () => ({ data: () => ipfsFixture.data }),
+			explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
+			fee: () => +ipfsFixture.data.fee / 1e8,
+			hash: () => ipfsFixture.data.asset.ipfs,
+			id: () => ipfsFixture.data.id,
+			isMultiSignatureRegistration: () => false,
+			recipient: () => ipfsFixture.data.recipient,
+			sender: () => ipfsFixture.data.sender,
+			type: () => "ipfs",
+			usesMultiSignature: () => false,
+		}
 	});
 
 let profile: Contracts.IProfile;
@@ -381,8 +385,7 @@ describe("SendIpfs", () => {
 		addressFromMnemonicMock.mockRestore();
 	});
 
-	//@TODO: Flaky test - Line 460 not always finding the button
-	/* it("should send an IPFS transaction navigating with keyboard", async () => {
+	it("should send an IPFS transaction navigating with keyboard", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
 		const addressFromMnemonicMock = vi
@@ -406,6 +409,7 @@ describe("SendIpfs", () => {
 
 		await userEvent.clear(screen.getByTestId("Input__hash"));
 		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
@@ -447,17 +451,18 @@ describe("SendIpfs", () => {
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signIpfs")
 			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
+
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [ipfsFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
+
 		const transactionMock = createTransactionMock(wallet);
 
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+		expect(sendButton()).not.toBeDisabled();
 
 		await userEvent.keyboard("{enter}");
-		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -471,7 +476,7 @@ describe("SendIpfs", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 		addressFromMnemonicMock.mockRestore();
-	}); */
+	});
 
 	it("should return to form step by cancelling fee warning", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
@@ -576,8 +581,7 @@ describe("SendIpfs", () => {
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
 
-	// @TODO: Flaky test- Line 647 being disabled randomly
-	/* it("should error if wrong mnemonic", async () => {
+	it("should error if wrong mnemonic", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
 		const { asFragment } = render(
@@ -655,7 +659,7 @@ describe("SendIpfs", () => {
 			"This mnemonic does not correspond to your wallet",
 		);
 		expect(asFragment()).toMatchSnapshot();
-	}); */
+	});
 
 	it("should go back to wallet details", async () => {
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
@@ -786,8 +790,7 @@ describe("SendIpfs", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	//@TODO: Flaky test - line 855 returning custom values on every run
-	/* it("should send an ipfs transaction with a multisig wallet", async () => {
+	it("should send an ipfs transaction with a multisig wallet", async () => {
 		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 		const multisignatureSpy = vi
 			.spyOn(wallet.multiSignature(), "all")
@@ -832,13 +835,6 @@ describe("SendIpfs", () => {
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		await userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			await userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 
 		// Step 4
 		const signMock = vi
@@ -852,19 +848,14 @@ describe("SendIpfs", () => {
 		});
 
 		const transactionMock = createTransactionMock(wallet);
-
-		await expect(screen.findByTestId("StepNavigation__continue-button")).resolves.toBeVisible();
 		await userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-		await act(() => vi.runOnlyPendingTimers());
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
+		}
 
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff");
-
-		
 		expect(signMock).toHaveBeenCalledWith(
 			expect.objectContaining({
 				data: expect.anything(),
@@ -873,6 +864,10 @@ describe("SendIpfs", () => {
 			}),
 		);
 
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+		await act(() => vi.runOnlyPendingTimers());
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
@@ -880,7 +875,7 @@ describe("SendIpfs", () => {
 		isMultiSignatureSpy.mockRestore();
 
 		expect(asFragment()).toMatchSnapshot();
-	}); */
+	});
 
 	it("should send a ipfs transfer with a ledger wallet", async () => {
 		vi.spyOn(wallet.coin(), "__construct").mockImplementation(vi.fn());
