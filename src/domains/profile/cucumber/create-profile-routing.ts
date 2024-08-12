@@ -11,9 +11,7 @@ cucumber("@createProfileRouting", {
 		await t.expect(Selector('[data-testid="ProfileRow"]').count).eql(2);
 	},
 	"When she selects create profile": async (t: TestController) => {
-		await t
-			.expect(Selector('[data-testid="CreateProfile"]').exists)
-			.ok({ timeout: 60_000 });
+		await t.expect(Selector('[data-testid="CreateProfile"]').exists).ok({ timeout: 60_000 });
 		await t.click(Selector('[data-testid="CreateProfile"]'));
 	},
 	"Then she is on the create profile page": async (t: TestController) => {
