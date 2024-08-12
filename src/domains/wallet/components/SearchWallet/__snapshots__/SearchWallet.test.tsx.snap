@@ -312,7 +312,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -428,7 +428,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -803,7 +803,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -898,7 +898,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1273,7 +1273,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1366,7 +1366,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1762,7 +1762,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1878,7 +1878,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2207,7 +2207,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2312,7 +2312,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2623,7 +2623,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2728,7 +2728,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3039,7 +3039,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3144,7 +3144,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3522,7 +3522,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -3908,7 +3908,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4022,7 +4022,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4418,7 +4418,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4534,7 +4534,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4977,7 +4977,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5108,7 +5108,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5543,7 +5543,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5652,7 +5652,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6087,7 +6087,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6194,7 +6194,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6650,7 +6650,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6780,7 +6780,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -7123,7 +7123,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7228,7 +7228,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -7539,7 +7539,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7644,7 +7644,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -7955,7 +7955,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -8060,7 +8060,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                   data-testid="Avatar"
                                 >
                                   <div
-                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                   >
                                     <img
                                       alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -8485,7 +8485,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -8931,7 +8931,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9059,7 +9059,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -9515,7 +9515,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9645,7 +9645,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

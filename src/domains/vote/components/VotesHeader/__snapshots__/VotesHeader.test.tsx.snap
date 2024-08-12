@@ -149,7 +149,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
     class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-10 lg:container"
     >
       <div
         class="flex items-end justify-between bg-theme-background"
