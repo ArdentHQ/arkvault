@@ -39,21 +39,23 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 				)}
 			</div>
 		</a>
-		<Dropdown
-			position="top-right"
-			options={actions}
-			onSelect={onSelect}
-			className="relative"
-			toggleContent={
-				<div className="mr-1.5 flex justify-center rounded-md p-1.5 hover:bg-theme-navy-200" tabIndex={1}>
-					<Icon
-						name="EllipsisVerticalFilled"
-						className="cursor-pointer text-theme-secondary-700 transition-colors duration-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
-						size="lg"
-					/>
-				</div>
-			}
-		/>
+
+		<div className="relative">
+			<Dropdown
+				position="top-right"
+				options={actions}
+				onSelect={onSelect}
+				toggleContent={
+					<div className="mr-1.5 flex justify-center rounded-md p-1.5 hover:bg-theme-navy-200" tabIndex={1}>
+						<Icon
+							name="EllipsisVerticalFilled"
+							className="cursor-pointer text-theme-secondary-700 transition-colors duration-200 hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:hover:text-theme-secondary-200"
+							size="lg"
+						/>
+					</div>
+				}
+			/>
+		</div>
 	</div>
 );
 

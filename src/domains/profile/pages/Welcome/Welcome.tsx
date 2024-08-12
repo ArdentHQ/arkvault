@@ -231,7 +231,8 @@ export const Welcome = () => {
 							className={cn(
 								"min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')]",
 								{
-									"hidden sm:block": profiles.length > 0,
+									"hidden sm:block": hasProfiles,
+									"mb-6 sm:mb-0": !hasProfiles,
 								},
 							)}
 						>
@@ -260,7 +261,7 @@ export const Welcome = () => {
 										</p>
 									</div>
 
-									<div className="1max-w-[100vw] mt-4 flex w-full flex-col justify-center">
+									<div className="mt-4 flex w-full flex-col justify-center">
 										<Profiles
 											profiles={profiles}
 											actions={profileCardActions}
