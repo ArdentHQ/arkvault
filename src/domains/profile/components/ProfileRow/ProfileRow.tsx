@@ -22,7 +22,13 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 			className,
 		)}
 	>
-		<a data-testid="ProfileRow__Link" onClick={onClick} onKeyPress={onClick} className="flex min-w-0 py-1 pl-1 flex-1" tabIndex={1}>
+		<a
+			data-testid="ProfileRow__Link"
+			onClick={onClick}
+			onKeyPress={onClick}
+			className="flex min-w-0 flex-1 py-1 pl-1"
+			tabIndex={1}
+		>
 			<div className="flex h-full w-full min-w-0 items-center justify-between">
 				<div className="flex min-w-0 items-center">
 					<ProfileAvatar profile={profile} size="md" />
@@ -47,7 +53,10 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 				options={actions}
 				onSelect={onSelect}
 				toggleContent={
-					<div className="cursor-pointer mr-2.5 flex justify-center rounded-md p-1.5 group hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700" tabIndex={1}>
+					<div
+						className="group mr-2.5 flex cursor-pointer justify-center rounded-md p-1.5 hover:bg-theme-navy-200 dark:hover:bg-theme-secondary-700"
+						tabIndex={1}
+					>
 						<Icon
 							name="EllipsisVerticalFilled"
 							className="text-theme-secondary-700 transition-colors duration-200 group-hover:text-theme-navy-700 dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
