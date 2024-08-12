@@ -12,6 +12,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { Icon } from "@/app/components/Icon";
 
 const ConnectionContent = ({
 	error,
@@ -104,6 +105,13 @@ export const LedgerConnectionStep = ({
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.SUBTITLE")}
+				titleIcon={
+					<Icon
+						name="LedgerAlt"
+						dimensions={[22, 22]}
+						className="text-theme-primary-100 stroke-theme-primary-600 stroke-2"
+					/>
+				}
 			/>
 
 			<FormField name="network">
