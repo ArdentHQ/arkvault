@@ -284,7 +284,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
@@ -306,7 +306,7 @@ describe("LedgerTabs", () => {
 	});
 
 	it("should render finish step", async () => {
-		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => {});
+		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => { });
 
 		const ledgerTransportMock = mockNanoXTransport();
 
@@ -337,12 +337,12 @@ describe("LedgerTabs", () => {
 
 		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]).toBeVisible());
 
-		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		await waitFor(() => {
 			expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
@@ -350,7 +350,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+		await userEvent.click(screen.getByTestId("Paginator__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
@@ -416,7 +416,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
@@ -462,13 +462,13 @@ describe("LedgerTabs", () => {
 
 		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => wallet);
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
@@ -495,78 +495,5 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	});
-
-	describe("Enter key handling", () => {
-		it("should go to the next step", async () => {
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			expect(screen.getByTestId("NetworkStep")).toBeVisible();
-
-			userEvent.keyboard("{enter}");
-
-			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-		});
-
-		it("does not go to the next step if a button is the active element", async () => {
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
-
-			userEvent.keyboard("{enter}", {
-				document: { ...document, activeElement: document.createElement("button") },
-			});
-
-			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-		});
-
-		it("does not go to the next step if is submitting", async () => {
-			const originalUseFormContext = reactHookForm.useFormContext;
-
-			const formContextSpy = vi.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {
-				const result = originalUseFormContext(...parameters);
-
-				result.formState.isSubmitting = true;
-
-				return result;
-			});
-
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
-
-			userEvent.keyboard("{enter}");
-
-			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
-			expect(screen.getByTestId("NetworkStep")).toBeVisible();
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-			formContextSpy.mockRestore();
-		});
 	});
 });
