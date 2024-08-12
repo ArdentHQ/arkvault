@@ -41,7 +41,7 @@ cucumber("@createProfile-noPassword", {
 	...preSteps,
 	...formStep,
 	"And she submits the form": async (t: TestController) => {
-		await t.click(Selector('[data-testid="CreateProfile"]'));
+		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
 	},
 	...welcomeScreenStep,
 });
