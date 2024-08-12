@@ -12,9 +12,9 @@ cucumber("@navigateProfileSettings-noPassword", {
 	},
 	"When she selects Settings on a profile card": async (t: TestController) => {
 		await t
-			.expect(Selector('[data-testid="Card"] [data-testid="dropdown__toggle"]').child(0).exists)
+			.expect(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0).exists)
 			.ok({ timeout: 60_000 });
-		await t.click(Selector('[data-testid="Card"] [data-testid="dropdown__toggle"]').child(0));
+		await t.click(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0));
 		await t.click(
 			Selector('[data-testid="Card"] [data-testid="dropdown__option--0"]').withText(translations.COMMON.SETTINGS),
 		);
