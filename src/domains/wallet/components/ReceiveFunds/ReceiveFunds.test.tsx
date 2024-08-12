@@ -44,7 +44,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__Name_Address")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		});
@@ -68,7 +68,7 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
 	});
 
@@ -85,7 +85,7 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).not.toHaveBeenCalledWith(expect.anything()));
 	});
 
@@ -96,7 +96,8 @@ describe("ReceiveFunds", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId(downloadQrButton)).toHaveLength(1));
 
-		userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
+		await userEvent.click(screen.getByTestId("ReceiveFunds__download-qr"));
 		await waitFor(() => expect(successToastSpy).toHaveBeenCalledWith(expect.anything()));
 	});
+
 });
