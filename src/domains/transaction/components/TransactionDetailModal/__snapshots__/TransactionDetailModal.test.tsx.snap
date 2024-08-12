@@ -118,7 +118,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -519,7 +519,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -923,7 +923,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1347,7 +1347,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1695,7 +1695,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1834,7 +1834,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2297,7 +2297,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2739,7 +2739,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3087,7 +3087,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3138,7 +3138,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3601,7 +3601,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3639,7 +3639,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -3705,7 +3705,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4081,7 +4081,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4119,7 +4119,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4185,7 +4185,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4561,7 +4561,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4599,7 +4599,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4665,7 +4665,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -5041,7 +5041,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
