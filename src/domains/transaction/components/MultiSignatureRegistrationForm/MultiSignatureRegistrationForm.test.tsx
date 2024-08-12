@@ -153,8 +153,6 @@ describe("MultiSignature Registration Form", () => {
 		await userEvent.type(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), "3");
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
-
-
 	});
 
 	it("should show name of wallets in form step", async () => {
