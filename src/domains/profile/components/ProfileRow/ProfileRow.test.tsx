@@ -1,7 +1,7 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import { ProfileRow } from "./ProfileRow";
+import { ProfileRow, ProfileRowSkeleton } from "./ProfileRow";
 
 let profile: Contracts.IProfile;
 
@@ -29,5 +29,13 @@ describe("ProfileRow", () => {
 		expect(screen.getByTestId("Icon__Lock")).toBeInTheDocument();
 
 		mockUsesPassword.mockRestore();
+	});
+});
+
+describe("ProfileRowSkeleton", () => {
+	it("should render", () => {
+		render(<ProfileRowSkeleton />);
+
+		expect(screen.getByTestId("ProfileRowSkeleton")).toBeInTheDocument();
 	});
 });
