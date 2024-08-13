@@ -123,7 +123,7 @@ exports[`LedgerScanStep > should render cancelling screen 1`] = `
 exports[`LedgerScanStep > should render compact table 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="space-y-4"
     data-testid="LedgerScanStep"
   >
     <div
@@ -135,11 +135,53 @@ exports[`LedgerScanStep > should render compact table 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-primary-600 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 25 24"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.717 7.76562L11.2493 13.2334C10.9364 13.5454 10.43 13.5454 10.117 13.2334L8.28369 11.403"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.6405 17.2595L17.7595 22.1415C17.2091 22.6915 16.4627 23.0004 15.6846 23H4.43333C2.8133 23 1.5 21.6867 1.5 20.0667V3.93333C1.5 2.3133 2.8133 1 4.43333 1H20.5667C22.1867 1 23.5 2.3133 23.5 3.93333V15.1856C23.4998 15.9635 23.1907 16.7095 22.6405 17.2595V17.2595Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
-            Accounts
+            Addresses
           </h1>
         </div>
         <div
@@ -150,175 +192,10 @@ exports[`LedgerScanStep > should render compact table 1`] = `
         </div>
       </div>
     </div>
-    <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
+    <div
+      class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
     >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="network"
-      >
-        Cryptoasset
-      </label>
-      <div
-        data-testid="ImportWallet__network"
-      >
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-1q57rjh"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-42-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-42-input"
-                  id="downshift-42-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet
-                  …
-                </div>
-                <div
-                  class="css-13c7w0w"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-42-menu"
-                      aria-labelledby="downshift-42-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-42-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-42-label"
-                id="downshift-42-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-    <div>
-      <div
-        class=""
-      >
+      <div>
         <div
           class="css-1m6rt2i"
           role="table"
@@ -472,20 +349,6 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                     class="space-x-4 css-o5w6qc"
                   >
                     <div
-                      class="shrink-0 css-1px82g5"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
                       class="flex w-32 flex-1"
                     >
                       <div
@@ -497,6 +360,42 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
+                        <button
+                          class="ring-focus relative focus:outline-none"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            height="16"
+                            width="16"
+                          >
+                            <svg
+                              id="copy"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </button>
                       </div>
                     </div>
                     <span
@@ -526,7 +425,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
         </div>
       </div>
       <div
-        class="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800"
+        class="pb-4 px-6 flex flex-col gap-3"
       >
         <button
           class="w-full css-6419sw"
@@ -638,7 +537,7 @@ exports[`LedgerScanStep > should render ledger table in scanning mode 1`] = `
 exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="space-y-4"
     data-testid="LedgerScanStep"
   >
     <div
@@ -650,11 +549,53 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-primary-600 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 25 24"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.717 7.76562L11.2493 13.2334C10.9364 13.5454 10.43 13.5454 10.117 13.2334L8.28369 11.403"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.6405 17.2595L17.7595 22.1415C17.2091 22.6915 16.4627 23.0004 15.6846 23H4.43333C2.8133 23 1.5 21.6867 1.5 20.0667V3.93333C1.5 2.3133 2.8133 1 4.43333 1H20.5667C22.1867 1 23.5 2.3133 23.5 3.93333V15.1856C23.4998 15.9635 23.1907 16.7095 22.6405 17.2595V17.2595Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
-            Accounts
+            Addresses
           </h1>
         </div>
         <div
@@ -665,175 +606,10 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
         </div>
       </div>
     </div>
-    <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
+    <div
+      class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
     >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="network"
-      >
-        Cryptoasset
-      </label>
-      <div
-        data-testid="ImportWallet__network"
-      >
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-1q57rjh"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-27-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-27-input"
-                  id="downshift-27-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet
-                  …
-                </div>
-                <div
-                  class="css-13c7w0w"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-27-menu"
-                      aria-labelledby="downshift-27-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-27-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-27-label"
-                id="downshift-27-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-    <div>
-      <div
-        class=""
-      >
+      <div>
         <div
           class="css-1m6rt2i"
           role="table"
@@ -987,20 +763,6 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                     class="space-x-4 css-12appi5"
                   >
                     <div
-                      class="shrink-0 css-1i0wxh3"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
                       class="flex w-32 flex-1"
                     >
                       <div
@@ -1012,6 +774,42 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
+                        <button
+                          class="ring-focus relative focus:outline-none"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            height="16"
+                            width="16"
+                          >
+                            <svg
+                              id="copy"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </button>
                       </div>
                     </div>
                     <span
@@ -1041,7 +839,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
         </div>
       </div>
       <div
-        class="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800"
+        class="pb-4 px-6 flex flex-col gap-3"
       >
         <button
           class="w-full css-6419sw"
@@ -1093,7 +891,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
 exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="space-y-4"
     data-testid="LedgerScanStep"
   >
     <div
@@ -1105,11 +903,53 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-primary-600 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 25 24"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.717 7.76562L11.2493 13.2334C10.9364 13.5454 10.43 13.5454 10.117 13.2334L8.28369 11.403"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                fill-rule="evenodd"
+              />
+              <path
+                d="M16.1667 22.9602V18.6003C16.1667 16.9803 17.48 15.667 19.1001 15.667H23.46"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M22.6405 17.2595L17.7595 22.1415C17.2091 22.6915 16.4627 23.0004 15.6846 23H4.43333C2.8133 23 1.5 21.6867 1.5 20.0667V3.93333C1.5 2.3133 2.8133 1 4.43333 1H20.5667C22.1867 1 23.5 2.3133 23.5 3.93333V15.1856C23.4998 15.9635 23.1907 16.7095 22.6405 17.2595V17.2595Z"
+                fill-rule="evenodd"
+                stroke="#235B95"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
           >
-            Accounts
+            Addresses
           </h1>
         </div>
         <div
@@ -1120,175 +960,10 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
         </div>
       </div>
     </div>
-    <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
+    <div
+      class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
     >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="network"
-      >
-        Cryptoasset
-      </label>
-      <div
-        data-testid="ImportWallet__network"
-      >
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-1q57rjh"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-12-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-12-input"
-                  id="downshift-12-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet
-                  …
-                </div>
-                <div
-                  class="css-13c7w0w"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-12-menu"
-                      aria-labelledby="downshift-12-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-12-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-12-label"
-                id="downshift-12-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-    <div>
-      <div
-        class=""
-      >
+      <div>
         <div
           class="css-1m6rt2i"
           role="table"
@@ -1442,20 +1117,6 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                     class="space-x-4 css-12appi5"
                   >
                     <div
-                      class="shrink-0 css-1i0wxh3"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                    <div
                       class="flex w-32 flex-1"
                     >
                       <div
@@ -1467,6 +1128,42 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                         </span>
+                        <button
+                          class="ring-focus relative focus:outline-none"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            height="16"
+                            width="16"
+                          >
+                            <svg
+                              id="copy"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </button>
                       </div>
                     </div>
                     <span
@@ -1496,7 +1193,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
         </div>
       </div>
       <div
-        class="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800"
+        class="pb-4 px-6 flex flex-col gap-3"
       >
         <button
           class="w-full css-6419sw"
