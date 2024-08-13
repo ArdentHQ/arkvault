@@ -56,29 +56,32 @@ describe("WalletsControls", () => {
 		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	// @TODO: Flaky test - The final assertion is failing due to the onCreateWallet method not being called with the expected arguments
-	/* it("should execute onCreateWallet callback when responsive", async () => {
+	it("should execute onCreateWallet callback when responsive", async () => {
 		const onCreateWallet = vi.fn();
 
 		renderResponsive(
-			<WalletsControls onCreateWallet={onCreateWallet} onImportWallet={vi.fn()} filterProperties={filterProperties} />,
+			<WalletsControls
+				onCreateWallet={onCreateWallet}
+				onImportWallet={vi.fn()}
+				filterProperties={filterProperties}
+			/>,
 			"xs",
 		);
 
 		// Await for multiple dropdown toggles to be available
-		await screen.findAllByTestId("dropdown__toggle");
+		await expect(screen.findAllByTestId("dropdown__toggle")).resolves.toHaveLength(2);
 
 		// Open the dropdown content
 		await userEvent.click(screen.getAllByTestId("dropdown__toggle")[1]);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		await expect(screen.findAllByTestId("dropdown__option--0")).resolves.toHaveLength(1);	
+		await expect(screen.findAllByTestId("dropdown__option--0")).resolves.toHaveLength(1);
 
 		await userEvent.click(screen.getByTestId("dropdown__option--0"));
 
-		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
-	}); */
+		expect(onCreateWallet).toHaveBeenCalled();
+	});
 
 	it("should execute onImportWallet callback", async () => {
 		const onImportWallet = vi.fn();

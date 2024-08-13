@@ -340,18 +340,18 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(2);
+		expect(screen.getAllByText(commonTranslations.MNEMONIC_TYPE.BIP39)).toHaveLength(3);
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
@@ -405,20 +405,20 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
+		await userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		expect(methodStep()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
+		await userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
 		await expect(addressInput()).resolves.toBeVisible();
 
@@ -426,13 +426,13 @@ describe("ImportWallet", () => {
 		await userEvent.type(await addressInput(), randomNewAddress);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(finishButton());
+		await userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));

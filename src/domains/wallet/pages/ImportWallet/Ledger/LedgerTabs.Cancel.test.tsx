@@ -124,15 +124,15 @@ describe("LedgerTabs", () => {
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerConnected")).resolves.toBeVisible();
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("DisconnectDevice"));
+		await userEvent.click(screen.getByTestId("DisconnectDevice"));
 		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 

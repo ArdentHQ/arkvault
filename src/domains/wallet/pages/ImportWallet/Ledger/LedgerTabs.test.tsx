@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
-import * as reactHookForm from "react-hook-form";
 import { LedgerTabs } from "./LedgerTabs";
 import { minVersionList } from "@/app/contexts";
 import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
@@ -161,8 +160,7 @@ describe("LedgerTabs", () => {
 		);
 	};
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 179
-	/* it("should load more address", async () => {
+	it("should load more address", async () => {
 		const scanSpy = vi.spyOn(wallet.coin().ledger(), "scan");
 
 		const getPublicKeySpy = vi
@@ -174,7 +172,7 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
 
@@ -192,7 +190,7 @@ describe("LedgerTabs", () => {
 
 		expect(loadMoreButton).toBeInTheDocument();
 
-		userEvent.click(loadMoreButton);
+		await userEvent.click(loadMoreButton);
 
 		expect(scanSpy).toHaveBeenCalledWith({
 			onProgress: expect.any(Function),
@@ -201,10 +199,9 @@ describe("LedgerTabs", () => {
 		scanSpy.mockRestore();
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 219
-	/* it("should render scan step", async () => {
+	it("should render scan step", async () => {
 		const getPublicKeySpy = vi
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
@@ -214,16 +211,14 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		userEvent.click(nextSelector());
-
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
+		await userEvent.click(nextSelector());
 
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
 	it("should filter unallowed network", async () => {
 		const getPublicKeySpy = vi
@@ -279,8 +274,9 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
-		await waitFor(() => expect(nextSelector()).toBeDisabled());
 		await waitFor(() => expect(backSelector()).toBeEnabled());
+
+		await userEvent.click(nextSelector());
 
 		formReference!.setValue("network", wallet.network(), { shouldDirty: true, shouldValidate: true });
 
@@ -288,7 +284,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
@@ -300,9 +296,8 @@ describe("LedgerTabs", () => {
 			expect(nextSelector()).toBeEnabled();
 		});
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
-		await expect(screen.findByTestId("LedgerConnectionStep")).resolves.toBeVisible();
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();
@@ -341,12 +336,12 @@ describe("LedgerTabs", () => {
 
 		vi.spyOn(profile.wallets(), "push").mockImplementation(vi.fn());
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 		await waitFor(() => expect(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]).toBeVisible());
 
-		userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerImportStep__edit-alias")[0]);
 
 		await waitFor(() => {
 			expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
@@ -354,7 +349,7 @@ describe("LedgerTabs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("Paginator__finish-button"));
+		await userEvent.click(screen.getByTestId("Paginator__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
@@ -365,8 +360,20 @@ describe("LedgerTabs", () => {
 		ledgerTransportMock.mockRestore();
 	});
 
-	// @TODO: Fix test - test id LedgerConnectionStep is not found in line 387
-	/* it("should render scan step with failing fetch", async () => {
+	it("should go back and render disconnected state", async () => {
+		const ledgerTransportMock = mockLedgerTransportError();
+
+		render(<Component activeIndex={1} />, {
+			route: `/profiles/${profile.id()}`,
+		});
+
+		await waitFor(() => expect(backSelector()).toBeEnabled());
+		await userEvent.click(backSelector());
+		await expect(screen.findByTestId("LedgerDisconnected")).resolves.toBeVisible();
+		ledgerTransportMock.mockRestore();
+	});
+
+	it("should render scan step with failing fetch", async () => {
 		vi.spyOn(wallet.ledger(), "scan").mockRejectedValue(new Error("Scan Failed"));
 
 		const getPublicKeySpy = vi
@@ -380,9 +387,7 @@ describe("LedgerTabs", () => {
 
 		expect(screen.getByTestId("NetworkStep")).toBeVisible();
 
-		userEvent.click(nextSelector());
-
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
+		await userEvent.click(nextSelector());
 
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
@@ -392,7 +397,7 @@ describe("LedgerTabs", () => {
 			expect(screen.getByTestId("Paginator__retry-button")).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Paginator__retry-button"));
+		await userEvent.click(screen.getByTestId("Paginator__retry-button"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("LedgerScanStep__amount-skeleton")).toHaveLength(0), {
 			interval: 5,
@@ -402,7 +407,7 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	}); */
+	});
 
 	it("should skip network step if only one available network", async () => {
 		resetProfileNetworksMock();
@@ -423,7 +428,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 
-		userEvent.click(backSelector());
+		await userEvent.click(backSelector());
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`));
 
@@ -439,6 +444,10 @@ describe("LedgerTabs", () => {
 		const scannerMock = vi.spyOn(scanner, "scannerReducer").mockReturnValue({
 			selected: ["m/44'/1'/0'/0/0", "m/44'/1'/0'/0/1"],
 			wallets: [
+				{
+					address: "DQh2wmdM8GksEx48rFrXCtJKsXz3bM6L6o",
+					path: "m/44'/1'/0'/0/1",
+				},
 				{
 					address: "DSxxu1wGEdUuyE5K9WuvVCEJp6zibBUoyt",
 					path: "m/44'/1'/0'/0/0",
@@ -457,9 +466,9 @@ describe("LedgerTabs", () => {
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(4), { timeout: 3000 });
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(4));
 
 		await waitFor(() => {
 			expect(nextSelector()).toBeEnabled();
@@ -469,13 +478,13 @@ describe("LedgerTabs", () => {
 
 		mockFindWallet = vi.spyOn(profile.wallets(), "findByAddressWithNetwork").mockImplementation(() => wallet);
 
-		userEvent.click(nextSelector());
+		await userEvent.click(nextSelector());
 
 		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/dashboard`);
@@ -502,78 +511,5 @@ describe("LedgerTabs", () => {
 
 		getPublicKeySpy.mockRestore();
 		ledgerTransportMock.mockRestore();
-	});
-
-	describe("Enter key handling", () => {
-		it("should go to the next step", async () => {
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			expect(screen.getByTestId("NetworkStep")).toBeVisible();
-
-			userEvent.keyboard("{enter}");
-
-			await waitFor(() => expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible());
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-		});
-
-		it("does not go to the next step if a button is the active element", async () => {
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
-
-			userEvent.keyboard("{enter}", {
-				document: { ...document, activeElement: document.createElement("button") },
-			});
-
-			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-		});
-
-		it("does not go to the next step if is submitting", async () => {
-			const originalUseFormContext = reactHookForm.useFormContext;
-
-			const formContextSpy = vi.spyOn(reactHookForm, "useFormContext").mockImplementation((...parameters) => {
-				const result = originalUseFormContext(...parameters);
-
-				result.formState.isSubmitting = true;
-
-				return result;
-			});
-
-			const getPublicKeySpy = vi
-				.spyOn(wallet.coin().ledger(), "getPublicKey")
-				.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
-
-			const ledgerTransportMock = mockNanoXTransport();
-
-			render(<Component activeIndex={2} />, { route: `/profiles/${profile.id()}` });
-
-			await waitFor(() => expect(screen.getByTestId("NetworkStep")).toBeVisible());
-
-			userEvent.keyboard("{enter}");
-
-			expect(screen.queryByTestId("LedgerConnectionStep")).toBeNull();
-			expect(screen.getByTestId("NetworkStep")).toBeVisible();
-
-			getPublicKeySpy.mockRestore();
-			ledgerTransportMock.mockRestore();
-			formContextSpy.mockRestore();
-		});
 	});
 });

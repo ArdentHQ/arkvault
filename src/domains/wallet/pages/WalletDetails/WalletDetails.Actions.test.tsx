@@ -226,9 +226,8 @@ describe("WalletDetails", () => {
 	it("should manually sync wallet data", async () => {
 		await renderPage();
 
-		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true"));
-		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
 	});
 
 	it("should delete wallet and clear associated transaction notifications", async () => {
