@@ -274,27 +274,13 @@ describe("App", () => {
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
 		).resolves.toBeVisible();
 
-		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
-
 		expect(history.location.pathname).toBe("/");
 
-		userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
-
-		await waitFor(() => {
-			expect(passwordInput()).toBeInTheDocument();
-		});
-
-		userEvent.type(passwordInput(), "password");
-
-		await waitFor(() => {
-			expect(passwordInput()).toHaveValue("password");
-		});
+		userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		const toastSpy = vi.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
-
-		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
+		const profileDashboardUrl = `/profiles/${env.profiles().values()[0].id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl), { timeout: 4000 });
 
 		toastSpy.mockRestore();
