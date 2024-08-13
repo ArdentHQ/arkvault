@@ -17,25 +17,12 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
-import { useBreakpoint, useRandomNumber } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-
-const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
-	const amountWidth = useRandomNumber(100, 130);
-
-	if (isLoading) {
-		return (
-			<span data-testid="LedgerScanStep__amount-skeleton" className="flex items-center space-x-1">
-				<Skeleton height={16} width={amountWidth} />
-				<Skeleton height={16} width={35} />
-			</span>
-		);
-	}
-
-	return <div>{children}</div>;
-};
+import cn from 'classnames';
+import { AmountWrapper, LedgerMobileItem } from "./LedgerScanStep.blocks";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
 	network,
@@ -144,17 +131,89 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	}, [setShowAll]);
 
 	return (
-		<div className="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
-			<div>
-				<Table columns={columns} data={showAll ? data : data.slice(0, 6)}>
-					{renderTableRow}
-				</Table>
+		<div>
+			<div className="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800 hidden sm:block">
+				<div>
+					<Table columns={columns} data={showAll ? data : data.slice(0, 6)}>
+						{renderTableRow}
+					</Table>
+				</div>
+
+				{!showSkeleton && (
+					<div className="pb-4 px-6 flex flex-col gap-3">
+						<Button
+							data-testid="LedgerScanStep__scan-more"
+							isLoading={isScanningMore}
+							disabled={isScanningMore}
+							variant={isScanningMore ? "primary" : "secondary"}
+							icon="Plus"
+							iconPosition="left"
+							className="w-full"
+							onClick={scanMore}
+						>
+							<span className="pl-1">
+								<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
+							</span>
+						</Button>
+
+
+						{data.length > 6 && !showAll && (<Button
+							data-testid="LedgerScanStep__load-more"
+							isLoading={isScanningMore}
+							disabled={isScanningMore}
+							variant={isScanningMore ? "primary" : "secondary"}
+							className="w-full"
+							onClick={showMore}
+						>
+							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
+						</Button>)}
+					</div>
+				)}
 			</div>
 
-			{!showSkeleton && (
-				<div className="pb-4 px-6 flex flex-col gap-3">
+			<div className="sm:hidden">
+				<div className="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3">
+					<span className="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700">{t("COMMON.ADDRESS")}</span>
+					<label className={cn("flex flex-row gap-2 items-center", {
+						"dark:text-theme-secondary-700 text-theme-secondary-500": isScanning,
+						"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
+					})}>
+						<Checkbox
+							disabled={isScanning}
+							data-testid="LedgerScanStep__select-all-mobile"
+							onChange={() => toggleSelectAll()}
+							checked={isAllSelected}
+						/>
+						<span>{t("COMMON.SELECT_ALL")}</span>
+					</label>
+				</div>
+
+				<div className="flex flex-col gap-2 px-1">
+					{!showSkeleton && data.map((wallet) => (
+						<LedgerMobileItem
+							key={wallet.path}
+							isLoading={showSkeleton}
+							address={wallet.address}
+							balance={wallet.balance}
+							coin={network.ticker()}
+							isSelected={isSelected(wallet.path)}
+							handleClick={() => toggleSelect(wallet.path)}
+						/>
+					))}
+
+					{showSkeleton && Array.from({ length: 4 }).map((_, index) => (
+						<LedgerMobileItem
+							key={index}
+							isLoading={showSkeleton}
+							address=""
+							coin=""
+							handleClick={() => {}}
+							isSelected={false}
+						/>
+					))}
+
 					<Button
-						data-testid="LedgerScanStep__scan-more"
+						data-testid="LedgerScanStep__scan-more-mobile"
 						isLoading={isScanningMore}
 						disabled={isScanningMore}
 						variant={isScanningMore ? "primary" : "secondary"}
@@ -167,20 +226,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
 						</span>
 					</Button>
-
-
-					{data.length > 6 && !showAll && (<Button
-						data-testid="LedgerScanStep__load-more"
-						isLoading={isScanningMore}
-						disabled={isScanningMore}
-						variant={isScanningMore ? "primary" : "secondary"}
-						className="w-full"
-						onClick={showMore}
-					>
-						<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
-					</Button>)}
 				</div>
-			)}
+			</div>
 		</div>
 	);
 };
@@ -318,18 +365,8 @@ export const LedgerScanStep = ({
 						className="text-theme-primary-600"
 					/>
 				}
+				className="hidden md:block"
 			/>
-
-			{/* <FormField name="network">
-				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork
-					id="ImportWallet__network"
-					networks={[network, network, network]}
-					selectedNetwork={network}
-					isDisabled
-					profile={profile}
-				/>
-			</FormField> */}
 
 			{error ? (
 				<Alert variant="danger">
