@@ -160,7 +160,7 @@ describe("LedgerScanStep", () => {
 	it("should handle select in mobile", async () => {
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
+		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
 		await waitFor(() => {
 			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
@@ -168,19 +168,27 @@ describe("LedgerScanStep", () => {
 
 		// Unselect All
 
-		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(4));
 
 		// Select just first
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 
-		userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[1]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+	});
+
+	it("should handle click on mobile item", async () => {
+		render(<Component />);
+
+		await userEvent.click(screen.getAllByTestId("LedgerMobileItem__skeleton")[1]);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 	});
 
 	it("should handle select in desktop", async () => {
@@ -227,7 +235,6 @@ describe("LedgerScanStep", () => {
 	});
 
 	it('should render ledger table with "Show All" button in desktop view', () => {
-		// set the window width to desktop
 		global.innerWidth = 1024;
 
 		render(
@@ -241,6 +248,28 @@ describe("LedgerScanStep", () => {
 		);
 
 		expect(screen.getByTestId("LedgerScanStep__load-more")).toBeInTheDocument();
+	});
+
+	it("should show more wallets on clicking 'Show All' button", async () => {
+		global.innerWidth = 1024;
+
+		render(
+			<LedgerTable
+				wallets={sampleLedgerData}
+				selectedWallets={[]}
+				isScanningMore
+				isSelected={() => false}
+				network={profile.wallets().first().network()}
+			/>,
+		);
+
+		expect(screen.getAllByRole("row")).toHaveLength(6);
+
+		await userEvent.click(screen.getByTestId("LedgerScanStep__load-more"));
+
+		await waitFor(() => {
+			expect(screen.getAllByRole("row")).toHaveLength(7);
+		});
 	});
 
 	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
