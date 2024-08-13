@@ -123,7 +123,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
 						<div className="flex w-32 flex-1">
-							<Address address={wallet.address} showCopyButton  />
+							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
@@ -152,7 +152,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			</div>
 
 			{!showSkeleton && (
-				<div className="pb-4 px-6 flex flex-col gap-3">
+				<div className="flex flex-col gap-3 px-6 pb-4">
 					<Button
 						data-testid="LedgerScanStep__scan-more"
 						isLoading={isScanningMore}
@@ -168,17 +168,18 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 						</span>
 					</Button>
 
-
-					{data.length > 6 && !showAll && (<Button
-						data-testid="LedgerScanStep__load-more"
-						isLoading={isScanningMore}
-						disabled={isScanningMore}
-						variant={isScanningMore ? "primary" : "secondary"}
-						className="w-full"
-						onClick={showMore}
-					>
-						<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
-					</Button>)}
+					{data.length > 6 && !showAll && (
+						<Button
+							data-testid="LedgerScanStep__load-more"
+							isLoading={isScanningMore}
+							disabled={isScanningMore}
+							variant={isScanningMore ? "primary" : "secondary"}
+							className="w-full"
+							onClick={showMore}
+						>
+							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
+						</Button>
+					)}
 				</div>
 			)}
 		</div>
@@ -311,13 +312,7 @@ export const LedgerScanStep = ({
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={
-					<Icon
-						name="NoteCheck"
-						dimensions={[22, 22]}
-						className="text-theme-primary-600"
-					/>
-				}
+				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
 			/>
 
 			{/* <FormField name="network">
