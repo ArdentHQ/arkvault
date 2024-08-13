@@ -246,7 +246,13 @@ export const LedgerTabs = ({
 		setActiveTab(onlyHasOneNetwork ? LedgerTabStep.LedgerConnectionStep : LedgerTabStep.NetworkStep);
 	}, [setActiveTab]);
 
-	const steps: string[] = Array.from({ length: onlyHasOneNetwork ? 4 : 5 });
+	const steps = [
+		t("WALLETS.CONNECT_LEDGER.HEADER"),
+		t("WALLETS.PAGE_IMPORT_WALLET.NETWORK_STEP.TITLE"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ACCOUNTS"),
+		t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_IMPORT_STEP.TITLE")
+	];
 
 	const activeTabIndex = useMemo(() => {
 		if (onlyHasOneNetwork) {
