@@ -3,7 +3,7 @@
 exports[`LedgerConnectionStep > should emit event on connect 1`] = `
 <div>
   <section
-    class="space-y-8"
+    class="space-y-4"
     data-testid="LedgerConnectionStep"
   >
     <div
@@ -15,6 +15,24 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M17.5 23.5001V18.0009H22.9994V19.3757C22.9994 21.6538 21.1531 23.5001 18.8748 23.5001H17.5ZM9.25018 23.5V18.0008H14.7509V23.5H9.25018ZM5.12584 23.5C2.84757 23.5 1 21.6537 1 19.3757V18.0008H6.50067V23.5H5.12584ZM9.25018 15.2492V1.5H18.8754C21.1537 1.5 23 3.34756 23 5.62561V15.2492H9.25018ZM1 15.2491V9.74995H6.50067V15.2491H1ZM1 7.00046V5.62561C1 3.34756 2.84757 1.5 5.12584 1.5H6.50067V7.00046H1Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -30,171 +48,6 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
         </div>
       </div>
     </div>
-    <fieldset
-      class="flex min-w-0 flex-col css-1bcidjh"
-    >
-      <label
-        class="FormLabel mb-2 flex text-sm font-semibold leading-[17px] text-theme-secondary-text transition-colors duration-100"
-        data-testid="FormLabel"
-        for="network"
-      >
-        Cryptoasset
-      </label>
-      <div
-        data-testid="ImportWallet__network"
-      >
-        <div
-          class="relative w-full"
-          data-testid="SelectDropdown"
-        >
-          <div
-            class="sr-only css-1q57rjh"
-          >
-            <div
-              class="relative flex h-full flex-1"
-            >
-              <input
-                autocomplete="off"
-                class="no-ligatures w-full border-none css-1vs1awz"
-                data-testid="select-list__input"
-                name="network"
-                readonly=""
-                tabindex="-1"
-                type="text"
-                value="ark.devnet"
-              />
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="downshift-0-menu"
-              role="combobox"
-            >
-              <div>
-                <label
-                  for="downshift-0-input"
-                  id="downshift-0-label"
-                />
-                <div
-                  class="invisible fixed w-auto whitespace-nowrap"
-                >
-                  ARK Devnet
-                  …
-                </div>
-                <div
-                  class="css-13c7w0w"
-                  disabled=""
-                >
-                  <div
-                    aria-label="ARK Devnet"
-                    class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                    data-testid="NetworkIcon-ARK-ark.devnet"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      data-testid="NetworkIcon__icon"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="ark"
-                        viewBox="0 0 36.3 30.6"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div
-                    class="relative flex h-full flex-1"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="downshift-0-menu"
-                      aria-labelledby="downshift-0-label"
-                      autocomplete="off"
-                      class="no-ligatures w-full border-none text-theme-secondary-text css-1vs1awz"
-                      data-testid="SelectDropdown__input"
-                      disabled=""
-                      id="downshift-0-input"
-                      name="network"
-                      placeholder="Select option"
-                      type="text"
-                      value="ARK Devnet"
-                    />
-                    <span
-                      class="pointer-events-none absolute inset-y-0 flex w-full items-center font-normal opacity-50"
-                      data-testid="Input__suggestion"
-                    >
-                      <span
-                        class="truncate"
-                      >
-                        ARK Devnet
-                      </span>
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
-                    data-testid="Input__addon-end"
-                  >
-                    <div
-                      class=""
-                    >
-                      <div
-                        class="flex items-center"
-                      >
-                        <div
-                          class="flex items-center justify-center px-1 py-2"
-                          data-testid="SelectDropdown__caret"
-                        >
-                          <div
-                            class="absolute inset-0 block cursor-pointer md:hidden"
-                          />
-                          <div
-                            class="transition-transform text-theme-secondary-500 css-15txs7d"
-                            height="10"
-                            width="10"
-                          >
-                            <svg
-                              id="caret-down"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9.093 1.5H.907c-.754 0-1.178.859-.714 1.447l4.108 5.208a.91.91 0 0 0 1.43-.002l4.078-5.208c.46-.589.037-1.445-.716-1.445z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-labelledby="downshift-0-label"
-                id="downshift-0-menu"
-                role="listbox"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </fieldset>
     <div
       class="flex flex-col overflow-hidden rounded-xl"
     >
