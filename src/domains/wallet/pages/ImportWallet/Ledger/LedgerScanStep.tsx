@@ -21,7 +21,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
-import cn from 'classnames';
+import cn from "classnames";
 import { AmountWrapper, LedgerMobileItem } from "./LedgerScanStep.blocks";
 
 export const LedgerTable: FC<LedgerTableProperties> = ({
@@ -132,7 +132,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 	return (
 		<div>
-			<div className="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800 hidden sm:block">
+			<div className="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 				<div>
 					<Table columns={columns} data={showAll ? data : data.slice(0, 6)}>
 						{renderTableRow}
@@ -140,7 +140,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				</div>
 
 				{!showSkeleton && (
-					<div className="pb-4 px-6 flex flex-col gap-3">
+					<div className="flex flex-col gap-3 px-6 pb-4">
 						<Button
 							data-testid="LedgerScanStep__scan-more"
 							isLoading={isScanningMore}
@@ -156,28 +156,36 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							</span>
 						</Button>
 
-
-						{data.length > 6 && !showAll && (<Button
-							data-testid="LedgerScanStep__load-more"
-							isLoading={isScanningMore}
-							disabled={isScanningMore}
-							variant={isScanningMore ? "primary" : "secondary"}
-							className="w-full"
-							onClick={showMore}
-						>
-							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
-						</Button>)}
+						{data.length > 6 && !showAll && (
+							<Button
+								data-testid="LedgerScanStep__load-more"
+								isLoading={isScanningMore}
+								disabled={isScanningMore}
+								variant={isScanningMore ? "primary" : "secondary"}
+								className="w-full"
+								onClick={showMore}
+							>
+								<Trans
+									i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL"
+									count={data.length}
+								/>
+							</Button>
+						)}
 					</div>
 				)}
 			</div>
 
 			<div className="sm:hidden">
-				<div className="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3">
-					<span className="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700">{t("COMMON.ADDRESS")}</span>
-					<label className={cn("flex flex-row gap-2 items-center", {
-						"dark:text-theme-secondary-700 text-theme-secondary-500": isScanning,
-						"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
-					})}>
+				<div className="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800">
+					<span className="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+						{t("COMMON.ADDRESS")}
+					</span>
+					<label
+						className={cn("flex flex-row items-center gap-2", {
+							"text-theme-secondary-500 dark:text-theme-secondary-700": isScanning,
+							"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
+						})}
+					>
 						<Checkbox
 							disabled={isScanning}
 							data-testid="LedgerScanStep__select-all-mobile"
@@ -189,28 +197,30 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				</div>
 
 				<div className="flex flex-col gap-2 px-1">
-					{!showSkeleton && data.map((wallet) => (
-						<LedgerMobileItem
-							key={wallet.path}
-							isLoading={showSkeleton}
-							address={wallet.address}
-							balance={wallet.balance}
-							coin={network.ticker()}
-							isSelected={isSelected(wallet.path)}
-							handleClick={() => toggleSelect(wallet.path)}
-						/>
-					))}
+					{!showSkeleton &&
+						data.map((wallet) => (
+							<LedgerMobileItem
+								key={wallet.path}
+								isLoading={showSkeleton}
+								address={wallet.address}
+								balance={wallet.balance}
+								coin={network.ticker()}
+								isSelected={isSelected(wallet.path)}
+								handleClick={() => toggleSelect(wallet.path)}
+							/>
+						))}
 
-					{showSkeleton && Array.from({ length: 4 }).map((_, index) => (
-						<LedgerMobileItem
-							key={index}
-							isLoading={showSkeleton}
-							address=""
-							coin=""
-							handleClick={() => {}}
-							isSelected={false}
-						/>
-					))}
+					{showSkeleton &&
+						Array.from({ length: 4 }).map((_, index) => (
+							<LedgerMobileItem
+								key={index}
+								isLoading={showSkeleton}
+								address=""
+								coin=""
+								handleClick={() => {}}
+								isSelected={false}
+							/>
+						))}
 
 					<Button
 						data-testid="LedgerScanStep__scan-more-mobile"
@@ -358,13 +368,7 @@ export const LedgerScanStep = ({
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
-				titleIcon={
-					<Icon
-						name="NoteCheck"
-						dimensions={[22, 22]}
-						className="text-theme-primary-600"
-					/>
-				}
+				titleIcon={<Icon name="NoteCheck" dimensions={[22, 22]} className="text-theme-primary-600" />}
 				className="hidden md:block"
 			/>
 

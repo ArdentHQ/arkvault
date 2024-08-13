@@ -1,59 +1,94 @@
 import React from "react";
-import { LedgerMobileItem } from './LedgerScanStep.blocks';
-import { render, screen } from '@/utils/testing-library';
-import { vi } from 'vitest';
+import { LedgerMobileItem } from "./LedgerScanStep.blocks";
+import { render, screen } from "@/utils/testing-library";
+import { vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 
 const sampleAddress = "ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT";
 const sampleBalance = 1000;
 const sampleCoin = "ARK";
 
-describe('LedgerMobileItem', () => {
-    it('should render', () => {
-        const { container } = render(
-            <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={() => {}} />
-        );
+describe("LedgerMobileItem", () => {
+	it("should render", () => {
+		const { container } = render(
+			<LedgerMobileItem
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={false}
+				handleClick={() => {}}
+			/>,
+		);
 
-        expect(container).toMatchSnapshot();
-    })
+		expect(container).toMatchSnapshot();
+	});
 
-    it('should render skeleton', () => {
-        render(
-            <LedgerMobileItem isLoading={true} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={() => {}} />
-        );
+	it("should render skeleton", () => {
+		render(
+			<LedgerMobileItem
+				isLoading={true}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={false}
+				handleClick={() => {}}
+			/>,
+		);
 
-        // expect LedgerMobileItem__skeleton to be in the document as test id
-        expect(screen.getByTestId("LedgerMobileItem__skeleton")).toBeInTheDocument()
-        expect(screen).toMatchSnapshot();
-    })
+		// expect LedgerMobileItem__skeleton to be in the document as test id
+		expect(screen.getByTestId("LedgerMobileItem__skeleton")).toBeInTheDocument();
+		expect(screen).toMatchSnapshot();
+	});
 
-    it('should render selected', () => {
-        render(
-            <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={true} handleClick={() => {}} />
-        );
+	it("should render selected", () => {
+		render(
+			<LedgerMobileItem
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={true}
+				handleClick={() => {}}
+			/>,
+		);
 
-        expect(screen.getByTestId("LedgerMobileItem__checkbox")).toHaveAttribute("checked");
-    })
+		expect(screen.getByTestId("LedgerMobileItem__checkbox")).toHaveAttribute("checked");
+	});
 
-    it('should call handleClick', async () => {
-        const handleClick = vi.fn();
-        
-        render(
-            <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={handleClick} />
-        );
+	it("should call handleClick", async () => {
+		const handleClick = vi.fn();
 
-        expect(screen.getByTestId("LedgerMobileItem__checkbox")).not.toHaveAttribute("checked");
+		render(
+			<LedgerMobileItem
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={false}
+				handleClick={handleClick}
+			/>,
+		);
 
-        await userEvent.click(screen.getByTestId("LedgerMobileItem__checkbox"));
-        expect(handleClick).toHaveBeenCalled();
-    })
+		expect(screen.getByTestId("LedgerMobileItem__checkbox")).not.toHaveAttribute("checked");
 
-    it('should render dark theme', () => {
-        const { container } = render(
-            <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={() => {}} />,
-            { theme: 'dark' }
-        );
+		await userEvent.click(screen.getByTestId("LedgerMobileItem__checkbox"));
+		expect(handleClick).toHaveBeenCalled();
+	});
 
-        expect(container).toMatchSnapshot();
-    })
+	it("should render dark theme", () => {
+		const { container } = render(
+			<LedgerMobileItem
+				isLoading={false}
+				address={sampleAddress}
+				balance={sampleBalance}
+				coin={sampleCoin}
+				isSelected={false}
+				handleClick={() => {}}
+			/>,
+			{ theme: "dark" },
+		);
+
+		expect(container).toMatchSnapshot();
+	});
 });

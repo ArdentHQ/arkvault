@@ -62,7 +62,7 @@ export const LedgerConnectionStep = ({
 
 	const { watch, register, setValue, unregister } = useFormContext();
 	const { connect, abortConnectionRetry, error, isConnected } = useLedgerContext();
-	
+
 	const [network] = useState<Networks.Network>(() => watch("network"));
 
 	useEffect(() => {
@@ -116,16 +116,18 @@ export const LedgerConnectionStep = ({
 				className="hidden md:block"
 			/>
 
-			{!network && (<FormField name="network">
-				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork
-					id="ImportWallet__network"
-					networks={[network, network, network]}
-					selectedNetwork={network}
-					isDisabled
-					profile={activeProfile}
-				/>
-			</FormField>)}
+			{!network && (
+				<FormField name="network">
+					<FormLabel label={t("COMMON.CRYPTOASSET")} />
+					<SelectNetwork
+						id="ImportWallet__network"
+						networks={[network, network, network]}
+						selectedNetwork={network}
+						isDisabled
+						profile={activeProfile}
+					/>
+				</FormField>
+			)}
 
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>

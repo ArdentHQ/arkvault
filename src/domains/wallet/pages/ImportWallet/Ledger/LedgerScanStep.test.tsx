@@ -18,39 +18,40 @@ const validLedgerWallet = () =>
 const sampleLedgerData: LedgerData[] = [
 	{
 		address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		balance: 1000,
 		path: "3431431",
-		balance: 1000,	
-	}, 
+	},
 	{
 		address: "D7rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431432",
 		balance: 2000,
+		path: "3431432",
 	},
 	{
 		address: "D6rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431433",
 		balance: 3000,
+		path: "3431433",
 	},
 	{
 		address: "D5rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431434",
 		balance: 4000,
+		path: "3431434",
 	},
 	{
 		address: "D4rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431435",
 		balance: 5000,
+		path: "3431435",
 	},
 	{
 		address: "D3rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431436",
 		balance: 6000,
-	}, {
+		path: "3431436",
+	},
+	{
 		address: "D2rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-		path: "3431437",
 		balance: 7000,
-	}
-]
+		path: "3431437",
+	},
+];
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
@@ -192,7 +193,7 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => {
 			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
 		});
-	
+
 		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
@@ -212,13 +213,15 @@ describe("LedgerScanStep", () => {
 	});
 
 	it('should not render ledger table with "Show All" button in mobile view', () => {
-		render(<LedgerTable
-			wallets={[]}
-			selectedWallets={[]}
-			isScanningMore
-			isSelected={() => false}
-			network={profile.wallets().first().network()}
-		/>);
+		render(
+			<LedgerTable
+				wallets={[]}
+				selectedWallets={[]}
+				isScanningMore
+				isSelected={() => false}
+				network={profile.wallets().first().network()}
+			/>,
+		);
 
 		expect(screen.queryByTestId("LedgerScanStep__load-more")).not.toBeInTheDocument();
 	});
@@ -227,13 +230,15 @@ describe("LedgerScanStep", () => {
 		// set the window width to desktop
 		global.innerWidth = 1024;
 
-		render(<LedgerTable
-			wallets={sampleLedgerData}
-			selectedWallets={[]}
-			isScanningMore
-			isSelected={() => false}
-			network={profile.wallets().first().network()}
-		/>);
+		render(
+			<LedgerTable
+				wallets={sampleLedgerData}
+				selectedWallets={[]}
+				isScanningMore
+				isSelected={() => false}
+				network={profile.wallets().first().network()}
+			/>,
+		);
 
 		expect(screen.getByTestId("LedgerScanStep__load-more")).toBeInTheDocument();
 	});
