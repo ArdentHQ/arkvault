@@ -171,8 +171,47 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 				)}
 			</div>
 
-			{!showSkeleton && (
-				<div className="flex flex-col gap-3 px-6 pb-4">
+			<div className="sm:hidden">
+				<div className="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3">
+					<span className="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700">{t("COMMON.ADDRESS")}</span>
+					<label className={cn("flex flex-row gap-2 items-center", {
+						"dark:text-theme-secondary-700 text-theme-secondary-500": isScanning,
+						"text-theme-secondary-700 dark:text-theme-secondary-500": !isScanning,
+					})}>
+						<Checkbox
+							disabled={isScanning}
+							data-testid="LedgerScanStep__select-all-mobile"
+							onChange={() => toggleSelectAll()}
+							checked={isAllSelected}
+						/>
+						<span>{t("COMMON.SELECT_ALL")}</span>
+					</label>
+				</div>
+
+				<div className="flex flex-col gap-2 px-1">
+					{!showSkeleton && data.map((wallet) => (
+						<LedgerMobileItem
+							key={wallet.path}
+							isLoading={showSkeleton}
+							address={wallet.address}
+							balance={wallet.balance}
+							coin={network.ticker()}
+							isSelected={isSelected(wallet.path)}
+							handleClick={() => toggleSelect(wallet.path)}
+						/>
+					))}
+
+					{showSkeleton && Array.from({ length: 4 }).map((_, index) => (
+						<LedgerMobileItem
+							key={index}
+							isLoading={showSkeleton}
+							address=""
+							coin=""
+							handleClick={() => {}}
+							isSelected={false}
+						/>
+					))}
+
 					<Button
 						data-testid="LedgerScanStep__scan-more-mobile"
 						isLoading={isScanningMore}
@@ -187,19 +226,6 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
 						</span>
 					</Button>
-
-					{data.length > 6 && !showAll && (
-						<Button
-							data-testid="LedgerScanStep__load-more"
-							isLoading={isScanningMore}
-							disabled={isScanningMore}
-							variant={isScanningMore ? "primary" : "secondary"}
-							className="w-full"
-							onClick={showMore}
-						>
-							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
-						</Button>
-					)}
 				</div>
 			</div>
 		</div>
