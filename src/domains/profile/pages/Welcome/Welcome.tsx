@@ -14,7 +14,7 @@ import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/Delete
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
 import { toasts } from "@/app/services";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
-import { Profiles } from "@/domains/profile/components/ProfilesSlider/ProfilesSlider";
+import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
 import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
@@ -58,12 +58,11 @@ export const Welcome = () => {
 		selectedProfile ? { label: "Previous page", value: "previous" } : undefined,
 	);
 
-	const { setProfileTheme, resetTheme, setTheme } = useTheme();
+	const { setProfileTheme, resetTheme } = useTheme();
 	const { setProfileAccentColor } = useAccentColor();
 
 	useEffect(() => {
 		resetTheme();
-		setTheme("light");
 		setThemeLoaded(true);
 	}, [resetTheme]);
 
@@ -238,10 +237,10 @@ export const Welcome = () => {
 						>
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border">
-							<div className="mx-auto flex h-full max-w-[400px] flex-col sm:p-6">
+						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 sm:p-6 dark:border-theme-secondary-800 sm:border">
+							<div className="mx-auto flex h-full max-w-[400px] flex-col">
 								<div className="flex flex-1 flex-col items-center justify-center">
-									<div className="flex flex-col items-center space-y-2 text-center">
+									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
 										<ThemeIcon
 											darkIcon="PersonDark"
 											lightIcon="PersonLight"

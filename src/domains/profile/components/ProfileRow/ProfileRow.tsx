@@ -40,7 +40,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 				{profile.usesPassword() && (
 					<Icon
 						name="Lock"
-						className="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-600"
+						className="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200"
 						size="lg"
 					/>
 				)}
