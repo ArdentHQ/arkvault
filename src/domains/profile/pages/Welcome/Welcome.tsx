@@ -294,23 +294,24 @@ export const Welcome = () => {
 							</div>
 						</div>
 					</div>
-					<DeleteProfile
-						profileId={deletingProfileId!}
-						isOpen={!!deletingProfileId}
-						onCancel={closeDeleteProfileModal}
-						onClose={closeDeleteProfileModal}
-						onDelete={closeDeleteProfileModal}
-					/>
-
-					<SignIn
-						isOpen={!!selectedProfile && !!requestedAction}
-						profile={selectedProfile!}
-						onCancel={closeSignInModal}
-						onClose={closeSignInModal}
-						onSuccess={handleSuccessSignIn}
-					/>
 				</Section>
 			</Page>
+
+			<DeleteProfile
+				profileId={deletingProfileId!}
+				isOpen={!!deletingProfileId}
+				onCancel={closeDeleteProfileModal}
+				onClose={closeDeleteProfileModal}
+				onDelete={closeDeleteProfileModal}
+			/>
+
+			<SignIn
+				isOpen={!!selectedProfile && !!requestedAction}
+				profile={selectedProfile!}
+				onCancel={closeSignInModal}
+				onClose={closeSignInModal}
+				onSuccess={handleSuccessSignIn}
+			/>
 		</>
 	);
 };

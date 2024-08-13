@@ -1,7 +1,6 @@
 import React from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
-import "slick-carousel/slick/slick.css";
 
 interface SlideProperties {
 	title: string;
