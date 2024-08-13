@@ -24,6 +24,8 @@ import { useBreakpoint, useRandomNumber } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+
 const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
 	const amountWidth = useRandomNumber(100, 130);
 
@@ -51,6 +53,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	isSelected,
 	scanMore,
 }) => {
+	const [showAll, setShowAll] = useState<boolean>(false);
 	const { t } = useTranslation();
 
 	const isAllSelected = !isScanning && wallets.length > 0 && selectedWallets.length === wallets.length;
@@ -123,9 +126,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
-						<Avatar address={wallet.address} size={isCompact ? "xs" : "lg"} noShadow />
 						<div className="flex w-32 flex-1">
-							<Address address={wallet.address} />
+							<Address address={wallet.address} showCopyButton  />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
@@ -141,16 +143,20 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		[toggleSelect, showSkeleton, isSelected, network],
 	);
 
+	const showMore = useCallback(() => {
+		setShowAll(true);
+	}, [setShowAll]);
+
 	return (
-		<div>
-			<div className={cn({ "-mb-6": showSkeleton })}>
-				<Table columns={columns} data={data}>
+		<div className="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+			<div>
+				<Table columns={columns} data={showAll ? data : data.slice(0, 6)}>
 					{renderTableRow}
 				</Table>
 			</div>
 
 			{!showSkeleton && (
-				<div className="border-b border-theme-secondary-300 pb-8 pt-2 dark:border-theme-secondary-800">
+				<div className="pb-4 px-6 flex flex-col gap-3">
 					<Button
 						data-testid="LedgerScanStep__scan-more"
 						isLoading={isScanningMore}
@@ -165,6 +171,18 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 							<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.ADD_NEW_ADDRESS" />
 						</span>
 					</Button>
+
+
+					{data.length > 6 && !showAll && (<Button
+						data-testid="LedgerScanStep__load-more"
+						isLoading={isScanningMore}
+						disabled={isScanningMore}
+						variant={isScanningMore ? "primary" : "secondary"}
+						className="w-full"
+						onClick={showMore}
+					>
+						<Trans i18nKey="WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SHOW_ALL" count={data.length} />
+					</Button>)}
 				</div>
 			)}
 		</div>
@@ -293,13 +311,20 @@ export const LedgerScanStep = ({
 	}
 
 	return (
-		<section data-testid="LedgerScanStep" className="space-y-8">
+		<section data-testid="LedgerScanStep" className="space-y-4">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_SCAN_STEP.SUBTITLE")}
+				titleIcon={
+					<Icon
+						name="NoteCheck"
+						dimensions={[22, 22]}
+						className="text-theme-primary-600"
+					/>
+				}
 			/>
 
-			<FormField name="network">
+			{/* <FormField name="network">
 				<FormLabel label={t("COMMON.CRYPTOASSET")} />
 				<SelectNetwork
 					id="ImportWallet__network"
@@ -308,7 +333,7 @@ export const LedgerScanStep = ({
 					isDisabled
 					profile={profile}
 				/>
-			</FormField>
+			</FormField> */}
 
 			{error ? (
 				<Alert variant="danger">
