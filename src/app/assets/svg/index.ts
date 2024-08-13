@@ -53,6 +53,7 @@ import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
 import MoneyCoinSwap from "./money-coin-swap.svg?react";
+import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
 import PencilRuler from "./pencil-ruler.svg?react";
 import Server from "./server.svg?react";
@@ -147,6 +148,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Menu,
 	MenuOpen,
 	MoneyCoinSwap,
+	NoteCheck,
 	Pencil,
 	PencilRuler,
 	Plus,
