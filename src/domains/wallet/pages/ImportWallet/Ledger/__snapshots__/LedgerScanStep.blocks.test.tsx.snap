@@ -201,87 +201,56 @@ exports[`LedgerMobileItem > should render dark theme 1`] = `
 `;
 
 exports[`LedgerMobileItem > should render skeleton 1`] = `
-<div>
-  <div
-    class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
-    data-testid="LedgerMobileItem__skeleton"
-  >
-    <div
-      class="h-11 w-full bg-theme-secondary-100 pl-4 pt-3 dark:bg-black"
-    >
-      <span
-        aria-busy="true"
-        aria-live="polite"
-      >
-        <span
-          class="react-loading-skeleton"
-          style="width: 20px; height: 20px;"
-        >
-          ‌
-        </span>
-        <br />
-      </span>
-    </div>
-    <div
-      class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
-    >
-      <div
-        class="flex flex-col gap-2"
-      >
-        <span
-          aria-busy="true"
-          aria-live="polite"
-        >
-          <span
-            class="react-loading-skeleton"
-            style="width: 126px; height: 16px;"
-          >
-            ‌
-          </span>
-          <br />
-        </span>
-        <span
-          aria-busy="true"
-          aria-live="polite"
-        >
-          <span
-            class="react-loading-skeleton"
-            style="width: 101px; height: 16px;"
-          >
-            ‌
-          </span>
-          <br />
-        </span>
-      </div>
-      <div
-        class="flex flex-col gap-2"
-      >
-        <span
-          aria-busy="true"
-          aria-live="polite"
-        >
-          <span
-            class="react-loading-skeleton"
-            style="width: 126px; height: 16px;"
-          >
-            ‌
-          </span>
-          <br />
-        </span>
-        <span
-          aria-busy="true"
-          aria-live="polite"
-        >
-          <span
-            class="react-loading-skeleton"
-            style="width: 101px; height: 16px;"
-          >
-            ‌
-          </span>
-          <br />
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
+{
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "logTestingPlaygroundURL": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+}
 `;

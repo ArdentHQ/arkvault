@@ -1,6 +1,6 @@
 import React from "react";
 import { LedgerMobileItem } from './LedgerScanStep.blocks';
-import { render } from '@/utils/testing-library';
+import { render, screen } from '@/utils/testing-library';
 import { vi } from 'vitest';
 import userEvent from "@testing-library/user-event";
 
@@ -18,33 +18,33 @@ describe('LedgerMobileItem', () => {
     })
 
     it('should render skeleton', () => {
-        const { container } = render(
+        render(
             <LedgerMobileItem isLoading={true} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={() => {}} />
         );
 
         // expect LedgerMobileItem__skeleton to be in the document as test id
-        expect(container.querySelector("[data-testid='LedgerMobileItem__skeleton']")).toBeInTheDocument()
-        expect(container).toMatchSnapshot();
+        expect(screen.getByTestId("LedgerMobileItem__skeleton")).toBeInTheDocument()
+        expect(screen).toMatchSnapshot();
     })
 
     it('should render selected', () => {
-        const { container } = render(
+        render(
             <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={true} handleClick={() => {}} />
         );
 
-        expect(container.querySelector("[data-testid='LedgerMobileItem__checkbox']")).toHaveAttribute("checked");
+        expect(screen.getByTestId("LedgerMobileItem__checkbox")).toHaveAttribute("checked");
     })
 
     it('should call handleClick', async () => {
         const handleClick = vi.fn();
         
-        const { container } = render(
+        render(
             <LedgerMobileItem isLoading={false} address={sampleAddress} balance={sampleBalance} coin={sampleCoin} isSelected={false} handleClick={handleClick} />
         );
 
-        expect(container.querySelector("[data-testid='LedgerMobileItem__checkbox']")).toBeInTheDocument();
+        expect(screen.getByTestId("LedgerMobileItem__checkbox")).not.toHaveAttribute("checked");
 
-        await userEvent.click(container.querySelector("[data-testid='LedgerMobileItem__checkbox']"));
+        await userEvent.click(screen.getByTestId("LedgerMobileItem__checkbox"));
         expect(handleClick).toHaveBeenCalled();
     })
 
