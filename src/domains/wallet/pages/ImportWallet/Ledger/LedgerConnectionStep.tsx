@@ -103,7 +103,7 @@ export const LedgerConnectionStep = ({
 					<Icon
 						name="LedgerAlt"
 						dimensions={[22, 22]}
-						className="text-theme-primary-100 dark:text-theme-primary-900 stroke-theme-primary-600 dark:stroke-theme-primary-900 stroke-2"
+						className="text-theme-primary-100 dark:text-theme-primary-900 stroke-theme-primary-600 stroke-2"
 					/>
 				}
 			/>
