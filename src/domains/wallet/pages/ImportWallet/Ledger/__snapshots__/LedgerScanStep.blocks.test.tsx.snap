@@ -3,7 +3,7 @@
 exports[`LedgerMobileItem > should render 1`] = `
 <div>
   <div
-    class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
+    class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
     data-testid="LedgerMobileItem__wrapper"
   >
     <div
@@ -17,13 +17,13 @@ exports[`LedgerMobileItem > should render 1`] = `
       />
     </div>
     <div
-      class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
+      class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
     >
       <div
-        class="flex flex-col gap-2 w-36"
+        class="flex w-36 flex-col gap-2"
       >
         <span
-          class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           Address
         </span>
@@ -78,7 +78,7 @@ exports[`LedgerMobileItem > should render 1`] = `
         class="flex flex-col gap-2"
       >
         <span
-          class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="LedgerMobileItem__network"
         >
           Value
@@ -103,7 +103,7 @@ exports[`LedgerMobileItem > should render 1`] = `
 exports[`LedgerMobileItem > should render dark theme 1`] = `
 <div>
   <div
-    class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
+    class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
     data-testid="LedgerMobileItem__wrapper"
   >
     <div
@@ -117,13 +117,13 @@ exports[`LedgerMobileItem > should render dark theme 1`] = `
       />
     </div>
     <div
-      class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
+      class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
     >
       <div
-        class="flex flex-col gap-2 w-36"
+        class="flex w-36 flex-col gap-2"
       >
         <span
-          class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           Address
         </span>
@@ -178,7 +178,7 @@ exports[`LedgerMobileItem > should render dark theme 1`] = `
         class="flex flex-col gap-2"
       >
         <span
-          class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+          class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="LedgerMobileItem__network"
         >
           Value

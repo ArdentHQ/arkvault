@@ -194,7 +194,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
     </div>
     <div>
       <div
-        class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800 hidden sm:block"
+        class="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
       >
         <div>
           <div
@@ -426,7 +426,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
           </div>
         </div>
         <div
-          class="pb-4 px-6 flex flex-col gap-3"
+          class="flex flex-col gap-3 px-6 pb-4"
         >
           <button
             class="w-full css-6419sw"
@@ -475,15 +475,15 @@ exports[`LedgerScanStep > should render compact table 1`] = `
         class="sm:hidden"
       >
         <div
-          class="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3"
+          class="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
         >
           <span
-            class="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700"
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             Address
           </span>
           <label
-            class="flex flex-row gap-2 items-center text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="flex flex-row items-center gap-2 text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             <input
               class="css-kf7z38"
@@ -500,7 +500,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
           class="flex flex-col gap-2 px-1"
         >
           <div
-            class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
+            class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
             data-testid="LedgerMobileItem__wrapper"
           >
             <div
@@ -515,13 +515,13 @@ exports[`LedgerScanStep > should render compact table 1`] = `
               />
             </div>
             <div
-              class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
             >
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
                   Address
                 </span>
@@ -576,7 +576,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
                 class="flex flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                   data-testid="LedgerMobileItem__network"
                 >
                   Value
@@ -777,7 +777,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
     </div>
     <div>
       <div
-        class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800 hidden sm:block"
+        class="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
       >
         <div>
           <div
@@ -1009,7 +1009,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
           </div>
         </div>
         <div
-          class="pb-4 px-6 flex flex-col gap-3"
+          class="flex flex-col gap-3 px-6 pb-4"
         >
           <button
             class="w-full css-6419sw"
@@ -1058,15 +1058,15 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
         class="sm:hidden"
       >
         <div
-          class="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3"
+          class="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
         >
           <span
-            class="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700"
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             Address
           </span>
           <label
-            class="flex flex-row gap-2 items-center text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="flex flex-row items-center gap-2 text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             <input
               class="css-kf7z38"
@@ -1083,7 +1083,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
           class="flex flex-col gap-2 px-1"
         >
           <div
-            class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
+            class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
             data-testid="LedgerMobileItem__wrapper"
           >
             <div
@@ -1098,13 +1098,13 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
               />
             </div>
             <div
-              class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
             >
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
                   Address
                 </span>
@@ -1159,7 +1159,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
                 class="flex flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                   data-testid="LedgerMobileItem__network"
                 >
                   Value
@@ -1300,7 +1300,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
     </div>
     <div>
       <div
-        class="rounded-xl border border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800 hidden sm:block"
+        class="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
       >
         <div>
           <div
@@ -1532,7 +1532,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
           </div>
         </div>
         <div
-          class="pb-4 px-6 flex flex-col gap-3"
+          class="flex flex-col gap-3 px-6 pb-4"
         >
           <button
             class="w-full css-6419sw"
@@ -1581,15 +1581,15 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
         class="sm:hidden"
       >
         <div
-          class="w-full bg-theme-primary-100 dark:bg-theme-secondary-800 border-l-2 border-l-theme-primary-400 dark:border-l-theme-primary-300 h-9 px-3 flex flex-row justify-between items-center mb-3"
+          class="mb-3 flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
         >
           <span
-            class="text-base font-semibold dark:text-theme-secondary-500 text-theme-secondary-700"
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             Address
           </span>
           <label
-            class="flex flex-row gap-2 items-center text-theme-secondary-700 dark:text-theme-secondary-500"
+            class="flex flex-row items-center gap-2 text-theme-secondary-700 dark:text-theme-secondary-500"
           >
             <input
               class="css-kf7z38"
@@ -1606,7 +1606,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
           class="flex flex-col gap-2 px-1"
         >
           <div
-            class="border border-theme-secondary-300 bg-white dark:bg-theme-secondary-900 w-full dark:border-theme-secondary-800 rounded overflow-hidden"
+            class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
             data-testid="LedgerMobileItem__wrapper"
           >
             <div
@@ -1621,13 +1621,13 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
               />
             </div>
             <div
-              class="w-full pt-2.5 px-4 flex flex-col gap-4 pb-4"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
             >
               <div
-                class="flex flex-col gap-2 w-36"
+                class="flex w-36 flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 >
                   Address
                 </span>
@@ -1682,7 +1682,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
                 class="flex flex-col gap-2"
               >
                 <span
-                  class="text-theme-secondary-700 text-sm font-semibold dark:text-theme-secondary-500"
+                  class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                   data-testid="LedgerMobileItem__network"
                 >
                   Value

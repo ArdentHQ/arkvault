@@ -2350,7 +2350,9 @@ exports[`ImportWallet > should render as ledger import 1`] = `
               >
                 <span
                   class="css-tgbw37"
-                />
+                >
+                  Connect and Authorize Ledger Device
+                </span>
                 <ul
                   class="css-xa5o6q"
                 >
