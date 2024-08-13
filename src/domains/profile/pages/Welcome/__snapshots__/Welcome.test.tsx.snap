@@ -415,6 +415,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -459,6 +460,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -1028,6 +1030,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -1166,6 +1169,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -1735,6 +1739,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -1873,6 +1878,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -2442,6 +2448,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -2580,6 +2587,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -3149,6 +3157,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -3287,6 +3296,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -3856,6 +3866,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -3994,6 +4005,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -4563,6 +4575,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -4607,6 +4620,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -5176,6 +5190,7 @@ exports[`Welcome > should render with profiles 1`] = `
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     >
                       <div
                         class="flex cursor-pointer items-center rounded-lg border border-theme-navy-200 leading-tight hover:border-theme-navy-300 hover:bg-theme-navy-50 dark:border-theme-secondary-800 dark:hover:border-theme-secondary-800 dark:hover:bg-theme-secondary-800"
@@ -5314,6 +5329,7 @@ exports[`Welcome > should render with profiles 1`] = `
                             </div>
                             <div
                               class="border-r border-theme-secondary-300 pr-3 text-theme-secondary-900 dark:border-theme-secondary-800 dark:text-theme-secondary-200 css-1i4b0eq"
+                              data-testid="Icon__Lock"
                               height="20"
                               width="20"
                             >
@@ -5883,6 +5899,7 @@ exports[`Welcome > should render without profiles 1`] = `
                   >
                     <div
                       class="space-y-3"
+                      data-testid="ProfileList"
                     />
                     <button
                       class="css-fl4fi0"

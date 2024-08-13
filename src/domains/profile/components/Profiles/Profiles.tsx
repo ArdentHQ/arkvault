@@ -16,7 +16,7 @@ const PROFILES_PER_SLIDE = 5;
 
 export const Profiles = (properties: ProfilesSliderProperties) =>
 	properties.profiles.length <= PROFILES_PER_SLIDE ? (
-		<div className="space-y-3">
+		<div className="space-y-3" data-testid="ProfileList">
 			<ProfilesSlide {...properties} />
 		</div>
 	) : (
@@ -62,15 +62,17 @@ const ProfilesSlider = (properties: ProfilesSliderProperties) => {
 	const profileChunks = chunk(profiles, PROFILES_PER_SLIDE);
 
 	return (
-		<Slider {...settings}>
-			{profileChunks.map((profilesInChunk: Contracts.IProfile[], index) => (
-				<div className="space-y-3" key={index}>
-					<ProfilesSlide profiles={profilesInChunk} {...rest} />
-					{Array.from({ length: PROFILES_PER_SLIDE - profilesInChunk.length }).map((_, key) => (
-						<ProfileRowSkeleton key={key} />
-					))}
-				</div>
-			))}
-		</Slider>
+		<div data-testid="ProfileSlider">
+			<Slider {...settings}>
+				{profileChunks.map((profilesInChunk: Contracts.IProfile[], index) => (
+					<div className="space-y-3" key={index}>
+						<ProfilesSlide profiles={profilesInChunk} {...rest} />
+						{Array.from({ length: PROFILES_PER_SLIDE - profilesInChunk.length }).map((_, key) => (
+							<ProfileRowSkeleton key={key} />
+						))}
+					</div>
+				))}
+			</Slider>
+		</div>
 	);
 };

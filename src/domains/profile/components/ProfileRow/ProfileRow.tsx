@@ -71,7 +71,7 @@ export const ProfileRow = ({ actions, className, profile, onClick, onSelect }: P
 );
 
 export const ProfileRowSkeleton = () => (
-	<div className="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800">
+	<div data-testid="ProfileRowSkeleton" className="flex items-center justify-between rounded-lg border border-theme-secondary-200 p-1 dark:border-theme-secondary-800">
 		<div className="h-10 w-10 bg-theme-secondary-100 dark:bg-theme-secondary-800" />
 		<Icon
 			name="EllipsisVerticalFilled"
