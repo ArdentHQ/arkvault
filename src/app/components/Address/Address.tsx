@@ -85,7 +85,7 @@ export const Address = ({
 		if (width) {
 			if (orientation === "horizontal") {
 				/* istanbul ignore next -- @preserve */
-				return width - (aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0);
+				return width - (aliasReference.current ? aliasReference.current.getBoundingClientRect().width + 8 : 0) - (showCopyButton ? 22 : 0);
 			} else {
 				return width;
 			}
