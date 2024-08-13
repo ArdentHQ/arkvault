@@ -437,7 +437,7 @@ exports[`App > should not migrate profiles 1`] = `
                   </div>
                 </div>
                 <div
-                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 sm:p-6 dark:border-theme-secondary-800 sm:border"
+                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
                 >
                   <div
                     class="mx-auto flex h-full max-w-[400px] flex-col"
@@ -1520,7 +1520,7 @@ exports[`App > should render mock 1`] = `
                   </div>
                 </div>
                 <div
-                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 sm:p-6 dark:border-theme-secondary-800 sm:border"
+                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
                 >
                   <div
                     class="mx-auto flex h-full max-w-[400px] flex-col"
@@ -2695,7 +2695,7 @@ exports[`App > should render welcome screen after page skeleton 1`] = `
                   </div>
                 </div>
                 <div
-                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 sm:p-6 dark:border-theme-secondary-800 sm:border"
+                  class="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6"
                 >
                   <div
                     class="mx-auto flex h-full max-w-[400px] flex-col"
