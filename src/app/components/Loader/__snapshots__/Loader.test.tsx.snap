@@ -3,7 +3,7 @@
 exports[`Loader > should render with custom class names 1`] = `
 <DocumentFragment>
   <div
-    class="w-full px-6 py-5 border border-theme-warning-200 bg-theme-warning-50 dark:bg-transparent dark:border-theme-warning-600 flex flex-row gap-3 rounded-xl items-center custom-class"
+    class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent custom-class"
     data-testid="Loader__wrapper"
   >
     <div
@@ -15,7 +15,7 @@ exports[`Loader > should render with custom class names 1`] = `
       class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
     />
     <span
-      class="font-semibold md:text-base text-sm text-theme-secondary-700 dark:text-theme-warning-600"
+      class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
       data-testid="Loader__text"
     >
       Testing
@@ -27,7 +27,7 @@ exports[`Loader > should render with custom class names 1`] = `
 exports[`Loader > should render with custom text 1`] = `
 <DocumentFragment>
   <div
-    class="w-full px-6 py-5 border border-theme-warning-200 bg-theme-warning-50 dark:bg-transparent dark:border-theme-warning-600 flex flex-row gap-3 rounded-xl items-center"
+    class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
     data-testid="Loader__wrapper"
   >
     <div
@@ -39,7 +39,7 @@ exports[`Loader > should render with custom text 1`] = `
       class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
     />
     <span
-      class="font-semibold md:text-base text-sm text-theme-secondary-700 dark:text-theme-warning-600"
+      class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
       data-testid="Loader__text"
     >
       Testing

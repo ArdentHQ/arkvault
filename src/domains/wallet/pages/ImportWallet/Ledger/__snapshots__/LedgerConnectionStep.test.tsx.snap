@@ -16,7 +16,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="text-theme-primary-100 dark:text-theme-primary-900 stroke-theme-primary-600 stroke-2 css-mydt5v"
+            class="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900 css-mydt5v"
             height="22"
             width="22"
           >
