@@ -211,7 +211,7 @@ describe("LedgerScanStep", () => {
 		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot();
 	});
 
-	it('should not render ledger table with "Show All" button in mobile view', async () => {
+	it('should not render ledger table with "Show All" button in mobile view', () => {
 		render(<LedgerTable
 			wallets={[]}
 			selectedWallets={[]}
@@ -223,7 +223,7 @@ describe("LedgerScanStep", () => {
 		expect(screen.queryByTestId("LedgerScanStep__load-more")).not.toBeInTheDocument();
 	});
 
-	it('should render ledger table with "Show All" button in desktop view', async () => {
+	it('should render ledger table with "Show All" button in desktop view', () => {
 		// set the window width to desktop
 		global.innerWidth = 1024;
 
