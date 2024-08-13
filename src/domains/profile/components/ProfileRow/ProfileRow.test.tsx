@@ -1,8 +1,7 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-import {ProfileRow} from "./ProfileRow";
+import { ProfileRow } from "./ProfileRow";
 
 let profile: Contracts.IProfile;
 
@@ -17,7 +16,7 @@ describe("ProfileRow", () => {
 	});
 
 	it("should render", () => {
-		render(<ProfileRow profile={profile}/>);
+		render(<ProfileRow profile={profile} />);
 
 		expect(screen.getByTestId("ProfileRow")).toBeInTheDocument();
 	});
@@ -25,7 +24,7 @@ describe("ProfileRow", () => {
 	it("should show lock icon if profile is password protected", () => {
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockImplementation(() => true);
 
-		render(<ProfileRow profile={profile}/>);
+		render(<ProfileRow profile={profile} />);
 
 		expect(screen.getByTestId("Icon__Lock")).toBeInTheDocument();
 
