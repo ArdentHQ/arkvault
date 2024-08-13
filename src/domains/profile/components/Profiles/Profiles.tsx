@@ -14,7 +14,7 @@ interface ProfilesSliderProperties {
 
 const PROFILES_PER_SLIDE = 5;
 
-export const Profiles = (properties: ProfilesSliderProperties) =>
+export const Profiles = (properties: ProfilesSliderProperties): JSX.Element =>
 	properties.profiles.length <= PROFILES_PER_SLIDE ? (
 		<div className="space-y-3" data-testid="ProfileList">
 			<ProfilesSlide {...properties} />
