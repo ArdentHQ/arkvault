@@ -25,9 +25,9 @@ describe("ProfileRow", () => {
 	it("should show lock icon if profile is password protected", () => {
 		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockImplementation(() => true);
 
-		const { container } = render(<ProfileRow profile={profile}/>);
+		render(<ProfileRow profile={profile}/>);
 
-		expect(container.querySelector("svg#lock")).toBeInTheDocument();
+		expect(screen.getByTestId("Icon__Lock")).toBeInTheDocument();
 
 		mockUsesPassword.mockRestore();
 	});
