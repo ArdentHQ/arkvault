@@ -137,6 +137,7 @@ export const translations = {
 		},
 
 		LEDGER_SCAN_STEP: {
+			ACCOUNTS: "Accounts",
 			ADD_NEW_ADDRESS: "Add New Address",
 			SHOW_ALL: "Show All ({{count}})",
 			LOADED_SINGLE_WALLET: "Loaded <strong>1</strong> Wallet",
