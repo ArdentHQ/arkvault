@@ -8,10 +8,49 @@ import { LedgerScanStep, showLoadedLedgerWalletsMessage, LedgerTable } from "./L
 import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 import { toasts } from "@/app/services";
 import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
+
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 const validLedgerWallet = () =>
 	expect(formReference.getValues("wallets")).toMatchObject([{ address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" }]);
+
+const sampleLedgerData: LedgerData[] = [
+	{
+		address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431431",
+		balance: 1000,	
+	}, 
+	{
+		address: "D7rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431432",
+		balance: 2000,
+	},
+	{
+		address: "D6rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431433",
+		balance: 3000,
+	},
+	{
+		address: "D5rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431434",
+		balance: 4000,
+	},
+	{
+		address: "D4rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431435",
+		balance: 5000,
+	},
+	{
+		address: "D3rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431436",
+		balance: 6000,
+	}, {
+		address: "D2rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		path: "3431437",
+		balance: 7000,
+	}
+]
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
@@ -117,20 +156,20 @@ describe("LedgerScanStep", () => {
 		`);
 	});
 
-	it("should handle select", async () => {
+	it("should handle select in mobile", async () => {
 		render(<Component />);
 
-		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
+		userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
 		});
 
 		// Unselect All
 
 		userEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(4));
 
 		// Select just first
 
@@ -139,6 +178,22 @@ describe("LedgerScanStep", () => {
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 
 		userEvent.click(screen.getAllByRole("checkbox")[1]);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+	});
+
+	it("should handle select in desktop", async () => {
+		global.innerWidth = 1024;
+
+		render(<Component />);
+
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
+
+		await waitFor(() => {
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
+		});
+	
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
@@ -154,6 +209,33 @@ describe("LedgerScanStep", () => {
 			/>,
 		);
 		expect(screen.getByTestId("LedgerScanStep__scan-more")).toMatchSnapshot();
+	});
+
+	it('should not render ledger table with "Show All" button in mobile view', async () => {
+		render(<LedgerTable
+			wallets={[]}
+			selectedWallets={[]}
+			isScanningMore
+			isSelected={() => false}
+			network={profile.wallets().first().network()}
+		/>);
+
+		expect(screen.queryByTestId("LedgerScanStep__load-more")).not.toBeInTheDocument();
+	});
+
+	it('should render ledger table with "Show All" button in desktop view', async () => {
+		// set the window width to desktop
+		global.innerWidth = 1024;
+
+		render(<LedgerTable
+			wallets={sampleLedgerData}
+			selectedWallets={[]}
+			isScanningMore
+			isSelected={() => false}
+			network={profile.wallets().first().network()}
+		/>);
+
+		expect(screen.getByTestId("LedgerScanStep__load-more")).toBeInTheDocument();
 	});
 
 	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
@@ -217,10 +299,10 @@ describe("LedgerScanStep", () => {
 		render(<Component />);
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(2);
+			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
 		});
 
-		await expect(screen.findByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).resolves.toBeVisible();
+		expect(screen.getAllByText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(2);
 
 		expect(toastUpdateSpy).toHaveBeenCalledTimes(1);
 
