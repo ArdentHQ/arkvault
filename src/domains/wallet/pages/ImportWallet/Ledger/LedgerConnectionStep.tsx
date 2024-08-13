@@ -36,7 +36,12 @@ const ConnectionContent = ({
 			<div className="inline-flex w-full items-center justify-center space-x-3">
 				<Loader text={t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })} />
 			</div>
-			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto w-full max-w-[400px]" useAccentColor={false} />
+			<Image
+				name="WaitingLedgerDevice"
+				domain="wallet"
+				className="mx-auto w-full max-w-[400px]"
+				useAccentColor={false}
+			/>
 		</div>
 	);
 };
@@ -103,7 +108,7 @@ export const LedgerConnectionStep = ({
 					<Icon
 						name="LedgerAlt"
 						dimensions={[22, 22]}
-						className="text-theme-primary-100 dark:text-theme-primary-900 stroke-theme-primary-600 stroke-2"
+						className="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900"
 					/>
 				}
 			/>
