@@ -6,10 +6,10 @@ import {ProfileRow} from "./ProfileRow";
 
 let profile: Contracts.IProfile;
 
-const options = [
-	{ label: "Option 1", value: "1" },
-	{ label: "Option 2", value: "2" },
-];
+// const options = [
+// 	{ label: "Option 1", value: "1" },
+// 	{ label: "Option 2", value: "2" },
+// ];
 
 describe("ProfileRow", () => {
 	beforeAll(() => {
