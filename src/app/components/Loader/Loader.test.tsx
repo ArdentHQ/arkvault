@@ -7,14 +7,14 @@ describe("Loader", () => {
 	it("should render with custom text", () => {
 		const { asFragment } = render(<Loader text="Testing" />);
 
-		expect(screen.getByText("Loader__wrapper")).toBeInTheDocument();
+		expect(screen.getByTestId("Loader__wrapper")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
     it("should render with custom class names", () => {
         const { asFragment } = render(<Loader text="Testing" className="custom-class" />);
 
-        expect(screen.getByText("Loader__wrapper")).toHaveClass("custom-class");
+        expect(screen.getByTestId("Loader__wrapper")).toHaveClass("custom-class");
         expect(asFragment()).toMatchSnapshot();
     })
 
