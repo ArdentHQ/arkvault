@@ -417,6 +417,26 @@ describe("Welcome with deeplink", () => {
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`));
 	});
 
+	it("should prompt the user to select a profile", async () => {
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: mainnetDeepLink,
+			},
+		);
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+
+		toastWarningSpy.mockRestore();
+	});
+
 	it("should redirect to profile if only one available", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 
@@ -443,26 +463,6 @@ describe("Welcome with deeplink", () => {
 
 		toastWarningSpy.mockRestore();
 		profilesSpy.mockRestore();
-	});
-
-	it("should prompt the user to select a profile", async () => {
-		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
-
-		render(
-			<Route path="/">
-				<Welcome />
-			</Route>,
-			{
-				history,
-				route: mainnetDeepLink,
-			},
-		);
-
-		await waitFor(() =>
-			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
-		);
-
-		toastWarningSpy.mockRestore();
 	});
 
 	it.each([
