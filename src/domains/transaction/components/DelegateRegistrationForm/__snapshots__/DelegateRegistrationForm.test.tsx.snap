@@ -183,7 +183,7 @@ exports[`DelegateRegistrationForm > should error if username is too long 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -585,7 +585,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -873,7 +873,7 @@ exports[`DelegateRegistrationForm > should render review step 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1186,7 +1186,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1563,7 +1563,7 @@ exports[`DelegateRegistrationForm > should show error if username already exists
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1965,7 +1965,7 @@ exports[`DelegateRegistrationForm > should show error if username contains illeg
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

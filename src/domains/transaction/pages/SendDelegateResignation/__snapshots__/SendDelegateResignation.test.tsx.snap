@@ -420,7 +420,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -446,7 +446,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -666,7 +666,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should change fee 1`] 
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -1429,7 +1429,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1455,7 +1455,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1675,7 +1675,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 1st step
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -2415,7 +2415,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2441,7 +2441,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -2608,7 +2608,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -3316,7 +3316,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -3342,7 +3342,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 3rd step
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -4163,7 +4163,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4189,7 +4189,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -4889,7 +4889,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4915,7 +4915,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show mnemonic a
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -5781,7 +5781,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -5807,7 +5807,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -6464,7 +6464,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -7092,7 +7092,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -7118,7 +7118,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -7775,7 +7775,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -8278,7 +8278,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -8304,7 +8304,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -8961,7 +8961,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"

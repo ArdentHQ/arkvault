@@ -328,7 +328,7 @@ exports[`SelectAddress > should render with preselected address 1`] = `
         data-testid="Avatar"
       >
         <div
-          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
         >
           <img
             alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"

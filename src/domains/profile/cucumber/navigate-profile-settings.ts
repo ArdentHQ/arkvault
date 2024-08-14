@@ -8,15 +8,17 @@ const translations = buildTranslations();
 cucumber("@navigateProfileSettings-noPassword", {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
-		await t.expect(Selector('[data-testid="Card"]').count).eql(3);
+		await t.expect(Selector('[data-testid="ProfileRow"]').count).eql(3);
 	},
 	"When she selects Settings on a profile card": async (t: TestController) => {
 		await t
-			.expect(Selector('[data-testid="Card"] [data-testid="dropdown__toggle"]').child(0).exists)
+			.expect(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0).exists)
 			.ok({ timeout: 60_000 });
-		await t.click(Selector('[data-testid="Card"] [data-testid="dropdown__toggle"]').child(0));
+		await t.click(Selector('[data-testid="ProfileRow"] [data-testid="dropdown__toggle"]').child(0));
 		await t.click(
-			Selector('[data-testid="Card"] [data-testid="dropdown__option--0"]').withText(translations.COMMON.SETTINGS),
+			Selector('[data-testid="ProfileRow"] [data-testid="dropdown__option--0"]').withText(
+				translations.COMMON.SETTINGS,
+			),
 		);
 	},
 	"Then she is navigated to the settings page for that profile": async (t: TestController) => {

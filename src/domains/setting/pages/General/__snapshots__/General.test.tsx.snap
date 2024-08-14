@@ -551,7 +551,7 @@ exports[`General Settings > should disable submit button when profile is not res
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -930,7 +930,7 @@ exports[`General Settings > should disable submit button when profile is not res
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -2547,7 +2547,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2928,7 +2928,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -4628,7 +4628,7 @@ exports[`General Settings > should render 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -5009,7 +5009,7 @@ exports[`General Settings > should render 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -6626,7 +6626,7 @@ exports[`General Settings > should show identicon when removing image if name is
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -7007,7 +7007,7 @@ exports[`General Settings > should show identicon when removing image if name is
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -8624,7 +8624,7 @@ exports[`General Settings > should update profile 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -9001,7 +9001,7 @@ exports[`General Settings > should update profile 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -10618,7 +10618,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -10999,7 +10999,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -12616,7 +12616,7 @@ exports[`General Settings > should update the avatar when removing focus from na
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -12997,7 +12997,7 @@ exports[`General Settings > should update the avatar when removing focus from na
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"

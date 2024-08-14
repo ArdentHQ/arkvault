@@ -539,7 +539,7 @@ exports[`Dashboard > should render 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -565,7 +565,7 @@ exports[`Dashboard > should render 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-8 py-4 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
@@ -1330,7 +1330,7 @@ exports[`Dashboard > should render 1`] = `
         class="mt-4 md:mt-0 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <h2
             class="mb-6 text-2xl font-bold"
@@ -1636,7 +1636,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
@@ -1671,7 +1671,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -1859,7 +1859,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
@@ -1894,7 +1894,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -2082,7 +2082,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
@@ -2117,7 +2117,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
@@ -2305,7 +2305,7 @@ exports[`Dashboard > should render 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax"
@@ -2340,7 +2340,7 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A"
