@@ -66,7 +66,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -397,7 +397,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -603,7 +603,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -977,7 +977,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1307,7 +1307,7 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1466,7 +1466,7 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1716,7 +1716,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2090,7 +2090,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2512,7 +2512,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2886,7 +2886,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

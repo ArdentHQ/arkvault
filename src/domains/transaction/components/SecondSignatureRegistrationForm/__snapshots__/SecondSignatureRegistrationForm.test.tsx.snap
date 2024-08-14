@@ -84,19 +84,19 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
             </div>
           </div>
           <ul
-            class="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4"
+            class="grid grid-cols-1 gap-x-3 gap-y-2 sm:grid-cols-4 sm:gap-y-4 sm:pt-1.5"
           >
             <li
-              class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+              class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
               data-testid="MnemonicList__item"
             >
               <span
-                class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+                class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
               >
                 1
               </span>
               <div
-                class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
               >
                 1
               </div>
@@ -107,16 +107,16 @@ exports[`SecondSignatureRegistrationForm > backup step > should render 1`] = `
               </div>
             </li>
             <li
-              class="relative flex items-center rounded border border-theme-secondary-400 p-2 dark:border-theme-secondary-700 sm:p-4"
+              class="relative flex items-center rounded border border-theme-secondary-400 p-0 dark:border-theme-secondary-700 sm:p-4"
               data-testid="MnemonicList__item"
             >
               <span
-                class="absolute left-0 top-0 hidden -translate-y-2 translate-x-2 bg-theme-background px-1 text-xs text-theme-secondary-700 sm:block"
+                class="absolute left-0 top-0 hidden -translate-y-2.5 translate-x-2 bg-theme-background px-1 text-sm font-semibold text-theme-secondary-700 sm:block"
               >
                 2
               </span>
               <div
-                class="ml-1 mr-4 block text-xs text-theme-secondary-700 sm:hidden"
+                class="mr-4 block w-12 rounded-l bg-theme-secondary-200 p-2 text-center text-sm font-semibold text-theme-secondary-700 dark:bg-theme-secondary-200 dark:text-theme-secondary-800 sm:hidden"
               >
                 2
               </div>
@@ -368,7 +368,7 @@ exports[`SecondSignatureRegistrationForm > should not generate mnemonic if alrea
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -636,7 +636,7 @@ exports[`SecondSignatureRegistrationForm > should render generation step 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

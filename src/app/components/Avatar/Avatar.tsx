@@ -8,6 +8,7 @@ import { Size } from "@/types";
 interface Properties {
 	address?: string;
 	className?: string;
+	innerClassName?: string;
 	shadowClassName?: string;
 	highlight?: boolean;
 	noShadow?: boolean;
@@ -47,6 +48,7 @@ const AvatarWrapper = styled.div<Properties>`
 export const Avatar = ({
 	address = "",
 	className,
+	innerClassName = "rounded-full",
 	highlight,
 	noShadow,
 	shadowClassName,
@@ -65,8 +67,9 @@ export const Avatar = ({
 		>
 			<div
 				className={cn(
-					"inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle",
+					"inline-flex h-full w-full items-center justify-center overflow-hidden align-middle",
 					{ "ring-2 ring-theme-primary-600": highlight },
+					innerClassName,
 				)}
 			>
 				{svg && <img alt={address} title={address} src={`data:image/svg+xml;utf8,${svg}`} />}

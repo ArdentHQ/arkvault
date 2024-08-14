@@ -19,7 +19,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -141,7 +141,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -288,7 +288,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -446,7 +446,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -593,7 +593,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -715,7 +715,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -863,7 +863,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -985,7 +985,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1132,7 +1132,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1254,7 +1254,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1401,7 +1401,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1523,7 +1523,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1661,7 +1661,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -1788,7 +1788,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1910,7 +1910,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2048,7 +2048,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
@@ -2165,7 +2165,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2287,7 +2287,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2432,7 +2432,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2618,7 +2618,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2750,7 +2750,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2800,7 +2800,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -2850,7 +2850,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -2900,7 +2900,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3000,7 +3000,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3132,7 +3132,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -3182,7 +3182,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -3232,7 +3232,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -3341,7 +3341,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3527,7 +3527,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3659,7 +3659,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -3709,7 +3709,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -3759,7 +3759,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -3809,7 +3809,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3909,7 +3909,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4041,7 +4041,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -4091,7 +4091,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -4141,7 +4141,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -4250,7 +4250,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4372,7 +4372,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -4519,7 +4519,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4641,7 +4641,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
