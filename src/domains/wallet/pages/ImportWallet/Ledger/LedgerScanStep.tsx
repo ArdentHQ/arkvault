@@ -205,8 +205,8 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 								address={wallet.address}
 								balance={wallet.balance}
 								coin={network.ticker()}
-								isSelected={isSelected(wallet.path)}
 								handleClick={() => toggleSelect(wallet.path)}
+								isSelected={isSelected(wallet.path)}
 							/>
 						))}
 
