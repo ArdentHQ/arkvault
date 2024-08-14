@@ -697,7 +697,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
@@ -718,7 +718,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(4));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
 		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
