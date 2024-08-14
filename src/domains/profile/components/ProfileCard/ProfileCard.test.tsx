@@ -18,7 +18,7 @@ describe("ProfileCard", () => {
 	});
 
 	it("should render", () => {
-		const { container} = render(<ProfileCard profile={profile} />);
+		const { container } = render(<ProfileCard profile={profile} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe("ProfileCard", () => {
 	it("should render the profile with avatar image", () => {
 		profile.settings().set(Contracts.ProfileSetting.Avatar, "avatarImage");
 
-		const { container} = render(<ProfileCard profile={profile} />);
+		const { container } = render(<ProfileCard profile={profile} />);
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByText(profile.name())).toBeInTheDocument();
