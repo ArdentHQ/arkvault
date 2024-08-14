@@ -231,7 +231,7 @@ describe("Password Settings", () => {
 	it("should not allow setting the current password as the new password", async () => {
 		profile.auth().setPassword(password);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
