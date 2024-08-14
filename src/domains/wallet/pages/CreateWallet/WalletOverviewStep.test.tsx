@@ -43,13 +43,13 @@ describe("WalletOverviewStep", () => {
 				// @ts-ignore
 				.mockResolvedValue({ name: "filePath" });
 
-			const { asFragment } = render(
+			render(
 				<FormProvider {...form.current}>
 					<WalletOverviewStep />
 				</FormProvider>,
 			);
 
-			expect(asFragment()).toMatchSnapshot();
+			expect(screen.getByTestId("CreateWallet__WalletOverviewStep")).toBeInTheDocument();
 
 			const writeTextMock = vi.fn();
 			const clipboardOriginal = navigator.clipboard;

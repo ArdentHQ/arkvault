@@ -6,6 +6,7 @@ import { Header } from "@/app/components/Header";
 import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
 import { Divider } from "@/app/components/Divider";
 import { Checkbox } from "@/app/components/Checkbox";
+import { Icon } from "@/app/components/Icon";
 
 export const ConfirmPassphraseStep = () => {
 	const { getValues, setValue, watch } = useFormContext();
@@ -34,6 +35,7 @@ export const ConfirmPassphraseStep = () => {
 		<section data-testid="CreateWallet__ConfirmPassphraseStep">
 			<Header
 				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.TITLE")}
+				titleIcon={<Icon name="ConfirmYourPassphrase" dimensions={[24, 24]} className="text-theme-navy-600" />}
 				subtitle={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_CONFIRMATION_STEP.SUBTITLE")}
 				className="hidden sm:block"
 			/>
