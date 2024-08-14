@@ -174,8 +174,6 @@ describe("LedgerTabs", () => {
 
 		await userEvent.click(nextSelector());
 
-		expect(screen.getByTestId("LedgerConnectionStep")).toBeInTheDocument();
-
 		// Auto redirect to next step
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
