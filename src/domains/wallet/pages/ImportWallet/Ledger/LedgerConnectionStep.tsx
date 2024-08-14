@@ -11,8 +11,6 @@ import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
 import { Icon } from "@/app/components/Icon";
 import { Loader } from "@/app/components/Loader";
-import { FormField, FormLabel } from "@/app/components/Form";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 const ConnectionContent = ({
 	error,
