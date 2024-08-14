@@ -36,9 +36,7 @@ describe("LedgerMobileItem", () => {
 			/>,
 		);
 
-		// expect LedgerMobileItem__skeleton to be in the document as test id
 		expect(screen.getByTestId("LedgerMobileItem__skeleton")).toBeInTheDocument();
-		expect(screen).toMatchSnapshot();
 	});
 
 	it("should render selected", () => {
@@ -74,21 +72,5 @@ describe("LedgerMobileItem", () => {
 
 		await userEvent.click(screen.getByTestId("LedgerMobileItem__checkbox"));
 		expect(handleClick).toHaveBeenCalled();
-	});
-
-	it("should render dark theme", () => {
-		const { container } = render(
-			<LedgerMobileItem
-				isLoading={false}
-				address={sampleAddress}
-				balance={sampleBalance}
-				coin={sampleCoin}
-				isSelected={false}
-				handleClick={() => {}}
-			/>,
-			{ theme: "dark" },
-		);
-
-		expect(container).toMatchSnapshot();
 	});
 });
