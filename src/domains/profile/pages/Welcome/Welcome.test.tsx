@@ -28,6 +28,7 @@ import {
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
+const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052"
 
 const submitTestID = "SignIn__submit-button";
 const passwordTestID = "SignIn__input--password";
@@ -522,7 +523,7 @@ describe("Welcome with deeplink", () => {
 describe("Welcome", () => {
 	it("should render with profiles", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+		const profile = env.profiles().findById(mockedProfileIdp);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -539,7 +540,7 @@ describe("Welcome", () => {
 	it("should navigate to profile dashboard", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+		const profile = env.profiles().findById("mockedProfileId");
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -563,7 +564,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+		const profile = env.profiles().findById("mockedProfileId");
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -643,7 +644,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+		const profile = env.profiles().findById("mockedProfileId");
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -749,7 +750,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
+		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
