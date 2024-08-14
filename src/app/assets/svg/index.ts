@@ -85,6 +85,9 @@ import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import Completed from "./completed.svg?react";
+import YourPassphraseLight from "./your-passphrase-light.svg?react";
+import YourPassphraseDark from "./your-passphrase-dark.svg?react";
+import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -109,6 +112,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Cloud,
 	Code,
 	Completed,
+	ConfirmYourPassphrase,
 	Copy,
 	CopyKey,
 	Cross,
@@ -172,4 +176,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UserCheckMark,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
+	YourPassphraseDark,
+	YourPassphraseLight,
 };
