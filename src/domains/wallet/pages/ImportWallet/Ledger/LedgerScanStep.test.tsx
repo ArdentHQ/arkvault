@@ -9,7 +9,7 @@ import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } f
 import { toasts } from "@/app/services";
 import { server, requestMockOnce, requestMock } from "@/tests/mocks/server";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-import { vi } from 'vitest';
+import { vi } from "vitest";
 
 let formReference: UseFormMethods<{ network: Networks.Network }>;
 
@@ -278,7 +278,7 @@ describe("LedgerScanStep", () => {
 		});
 	});
 
-	it('should call toggleSelect on clicking a checkbox', async() => {
+	it("should call toggleSelect on clicking a checkbox", async () => {
 		const toggleSelect = vi.fn();
 
 		render(
@@ -295,7 +295,7 @@ describe("LedgerScanStep", () => {
 		await userEvent.click(screen.getAllByRole("checkbox")[3]);
 
 		expect(toggleSelect).toHaveBeenCalled();
-	})
+	});
 
 	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
 		const { container } = renderResponsive(<Component />, breakpoint);
