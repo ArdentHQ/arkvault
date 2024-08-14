@@ -10,7 +10,7 @@ const sampleCoin = "ARK";
 
 describe("LedgerMobileItem", () => {
 	it("should render", () => {
-		const { container } = render(
+		render(
 			<LedgerMobileItem
 				isLoading={false}
 				address={sampleAddress}
