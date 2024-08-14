@@ -112,7 +112,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 			{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} size="xl" />}
 
 			<div className="mt-4">
-				<span className="mr-px hidden font-semibold sm:inline">
+				<span className="mr-px hidden font-semibold sm:inline text-lg leading-[21px]">
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")}{" "}
 				</span>
 				<button
@@ -120,7 +120,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+					className="link ring-focus relative cursor-pointer font-semibold focus:outline-none text-lg leading-[21px]"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}
@@ -152,8 +152,8 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 				className={cn(
 					"flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200",
 					{
-						"bg-theme-primary-100 dark:bg-black": isDragging || dropError,
-						"bg-theme-primary-50 dark:bg-theme-secondary-800": !isDragging && !dropError,
+						"bg-theme-primary-100 dark:bg-theme-secondary-800": isDragging || dropError,
+						"bg-theme-primary-50 dark:bg-black": !isDragging && !dropError,
 					},
 				)}
 			>

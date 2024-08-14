@@ -38,7 +38,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 	return (
 		<div className="mx-auto max-w-xl">
 			<StepHeader
-				titleIcon={<Icon name="ImportProfile" dimensions={[24, 24]} />}
+				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.SELECT_FILE_STEP.DESCRIPTION", { fileFormat })}
 			/>

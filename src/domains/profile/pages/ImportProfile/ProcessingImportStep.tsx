@@ -113,7 +113,7 @@ export const ProcessingImport = ({
 	return (
 		<div className="mx-auto max-w-xl" data-testid="ProcessingImport">
 			<StepHeader
-				titleIcon={<Icon name="ImportProfile" dimensions={[24, 24]} />}
+				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.DESCRIPTION", { name: file?.name || "" })}
 			/>

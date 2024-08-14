@@ -67,13 +67,13 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	return (
 		<div className="mx-auto max-w-xl">
 			<StepHeader
-				titleIcon={<Icon name="ImportProfile" dimensions={[24, 24]} />}
+				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")}
 			/>
 
 			<div className="rounded-xl border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 mt-4 sm:border">
-				<div className="px-6 py-5 bg-theme-secondary-100 rounded-t-xl">
+				<div className="px-6 py-5 bg-theme-secondary-100 dark:bg-black rounded-t-xl">
 					<FilePreview file={file} variant="success" useBorders={false} />
 				</div>
 

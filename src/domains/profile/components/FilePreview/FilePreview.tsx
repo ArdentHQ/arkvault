@@ -35,7 +35,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 			)}
 
 			{variant === "success" && (
-				<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500">
+				<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-navy-100 dark:bg-theme-navy-600 text-theme-navy-600 dark:text-white">
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
 			)}
