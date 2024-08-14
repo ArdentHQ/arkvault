@@ -13,7 +13,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="relative flex h-21"
       >
         <div
-          class="flex flex-1 px-8 sm:ml-12"
+          class="flex flex-1 px-10"
         >
           <div
             class="my-auto flex items-center"
@@ -62,7 +62,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="mt-6 sm:mt-8"
@@ -862,7 +862,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="relative flex h-21"
       >
         <div
-          class="flex flex-1 px-8 sm:ml-12"
+          class="flex flex-1 px-10"
         >
           <div
             class="my-auto flex items-center"
@@ -911,7 +911,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="mt-6 sm:mt-8"
@@ -1711,7 +1711,7 @@ exports[`ImportProfile > should render first step 1`] = `
         class="relative flex h-21"
       >
         <div
-          class="flex flex-1 px-8 sm:ml-12"
+          class="flex flex-1 px-10"
         >
           <div
             class="my-auto flex items-center"
@@ -1760,7 +1760,7 @@ exports[`ImportProfile > should render first step 1`] = `
         class="-mt-8 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="mt-6 sm:mt-8"

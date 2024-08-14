@@ -7,7 +7,7 @@ exports[`Avatar > should render 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -26,7 +26,7 @@ exports[`Avatar > should render with custom shadow color 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -45,7 +45,7 @@ exports[`Avatar > should render with highlight 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle ring-2 ring-theme-primary-600"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-600 rounded-full"
     >
       <img
         alt="abc"
@@ -64,7 +64,7 @@ exports[`Avatar > should render with highlight and custom shadow color 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle ring-2 ring-theme-primary-600"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle ring-2 ring-theme-primary-600 rounded-full"
     >
       <img
         alt="abc"
@@ -83,7 +83,7 @@ exports[`Avatar > should render with size 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -102,7 +102,7 @@ exports[`Avatar > should render with size 2`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -121,7 +121,7 @@ exports[`Avatar > should render with size 3`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -140,7 +140,7 @@ exports[`Avatar > should render with size 4`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"
@@ -159,7 +159,7 @@ exports[`Avatar > should render without shadow 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
     >
       <img
         alt="abc"

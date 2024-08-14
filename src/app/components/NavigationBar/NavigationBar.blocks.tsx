@@ -88,7 +88,7 @@ export const NavigationBarLogoOnly: React.VFC<NavigationBarLogoOnlyProperties> =
 	return (
 		<NavWrapper aria-labelledby="main menu" noBorder scroll={scroll}>
 			<div className="relative flex h-21">
-				<div className="flex flex-1 px-8 sm:ml-12">
+				<div className="flex flex-1 px-10">
 					<NavigationBarLogo title={title} />
 				</div>
 			</div>
