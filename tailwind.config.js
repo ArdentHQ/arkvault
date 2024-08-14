@@ -266,6 +266,7 @@ module.exports = {
 			},
 			borderRadius: {
 				"2.5xl": "1.25rem",
+				"table": "0.65rem"
 			},
 			fontFamily: {
 				sans: ["Inter", ...defaultTheme.fontFamily.sans],
