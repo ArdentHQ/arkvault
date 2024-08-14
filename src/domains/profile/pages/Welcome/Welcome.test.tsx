@@ -28,7 +28,7 @@ import {
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
-const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052"
+const mockedProfileId = "cba050f1-880f-45f0-9af9-cfe48f406052";
 
 const submitTestID = "SignIn__submit-button";
 const passwordTestID = "SignIn__input--password";
