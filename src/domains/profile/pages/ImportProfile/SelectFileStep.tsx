@@ -46,7 +46,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 			<SelectFile fileFormat={fileFormat} onSelect={onSelect} />
 
 			{fileFormat === ".wwe" && (
-				<p className="mt-4 text-center text-base text-theme-secondary-text">
+				<p className="mt-4 text-center text-base text-theme-secondary-text" data-testid="SelectFileStep__WweImport">
 					<span>{t("PROFILE.IMPORT.SELECT_FILE_STEP.LEGACY_IMPORT")} </span>
 					<button
 						type="button"
@@ -62,7 +62,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 			)}
 
 			{fileFormat === ".json" && (
-				<div className="mt-4">
+				<div className="mt-4"  data-testid="SelectFileStep__JsonImport">
 					<Alert>{t("PROFILE.IMPORT.SELECT_FILE_STEP.DEPRECATION_WARNING")}</Alert>
 				</div>
 			)}
