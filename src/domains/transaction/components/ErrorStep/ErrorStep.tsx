@@ -25,19 +25,29 @@ export const ErrorStep = ({
 	onBack,
 	onClose,
 	isBackDisabled = false,
-	errorMessage = "test",
+	errorMessage,
 }: Properties) => {
 	const { t } = useTranslation();
 	const errorMessageReference = useRef();
 
 	return (
 		<div data-testid="ErrorStep">
-			<div className="space-y-8">
-				<StepHeader title={title || t("TRANSACTION.ERROR.TITLE")} />
+			<div className="space-y-2">
+				<div className="flex flex-row items-center justify-start gap-3">
+					<StepHeader
+						title={title || t("TRANSACTION.ERROR.TITLE")}
+						titleIcon={
+							<Image
+								name="ErrorHeaderIcon"
+								domain="transaction"
+								className="block h-[22px] w-[22px]"
+								useAccentColor={false}
+							/>
+						}
+					/>
+				</div>
 
-				<Image name="TransactionErrorBanner" domain="transaction" className="hidden w-full md:block" />
-
-				<div className="space-y-6">
+				<div className="space-y-4">
 					<p className="hidden text-theme-secondary-text md:block">
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</p>
@@ -46,7 +56,7 @@ export const ErrorStep = ({
 						{description || t("TRANSACTION.ERROR.DESCRIPTION")}
 					</Alert>
 
-					{errorMessage && (
+					{errorMessage ? (
 						<TextArea
 							data-testid="ErrorStep__errorMessage"
 							className="py-4"
@@ -54,6 +64,13 @@ export const ErrorStep = ({
 							defaultValue={errorMessage}
 							ref={errorMessageReference}
 							disabled
+						/>
+					) : (
+						<Image
+							name="TransactionErrorBanner"
+							domain="transaction"
+							className="mx-auto mt-4 block w-full max-w-[400px]"
+							useAccentColor={false}
 						/>
 					)}
 				</div>

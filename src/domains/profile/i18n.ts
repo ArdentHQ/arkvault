@@ -56,7 +56,7 @@ export const translations = {
 		TITLE: "Select Address",
 	},
 	MODAL_SELECT_SENDER: {
-		DESCRIPTION: "Find and select the sender from your wallets",
+		DESCRIPTION: "Locate and select the sender address.",
 		SEARCH_PLACEHOLDER: "Enter name or address",
 		TITLE: "Select Sender",
 	},
