@@ -278,7 +278,7 @@ describe("LedgerScanStep", () => {
 		});
 	});
 
-	it('should call toggleSelect on clicking a checkbox', async() => {
+	it('should call toggleSelect on clicking a checkbox in mobile', async() => {
 		const toggleSelect = vi.fn();
 
 		render(
@@ -292,7 +292,7 @@ describe("LedgerScanStep", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getAllByRole("checkbox")[3]);
+		await userEvent.click(screen.getAllByRole("checkbox")[4]);
 
 		expect(toggleSelect).toHaveBeenCalled();
 	})
