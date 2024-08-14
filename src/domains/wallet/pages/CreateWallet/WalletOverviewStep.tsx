@@ -9,6 +9,8 @@ import { toasts } from "@/app/services";
 import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/MnemonicList";
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
+import { ThemeIcon } from "@/app/components/Icon";
+import { Divider } from "@/app/components/Divider";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
 	const { getValues, setValue, unregister, watch } = useFormContext();
@@ -43,9 +45,15 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 
 	return (
 		<section data-testid="CreateWallet__WalletOverviewStep">
-			<Header title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")} className="hidden sm:block" />
+			<Header
+				title={t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon darkIcon="YourPassphraseDark" lightIcon="YourPassphraseLight" dimensions={[24, 24]} />
+				}
+				className="hidden sm:block"
+			/>
 
-			<div className="mt-8 space-y-8">
+			<div className="mt-4 space-y-4">
 				<Alert className="mt-6">{t("WALLETS.PAGE_CREATE_WALLET.PASSPHRASE_STEP.WARNING")}</Alert>
 
 				{isGeneratingWallet ? <MnemonicListSkeleton /> : <MnemonicList mnemonic={mnemonic} />}
@@ -57,6 +65,8 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 					onClickDownload={() => handleDownload()}
 					disabled={isGeneratingWallet}
 				/>
+
+				<Divider />
 
 				<div className="flex w-full flex-col space-y-2">
 					<div className="flex items-center justify-between space-x-5">
