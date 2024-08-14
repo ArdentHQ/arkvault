@@ -10,6 +10,7 @@ import { MnemonicList, MnemonicListSkeleton } from "@/domains/wallet/components/
 import { useFiles } from "@/app/hooks/use-files";
 import { CopyOrDownload } from "@/app/components/CopyOrDownload";
 import { ThemeIcon } from "@/app/components/Icon";
+import {Divider} from "@/app/components/Divider";
 
 export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet: boolean }) => {
 	const { getValues, setValue, unregister, watch } = useFormContext();
@@ -64,6 +65,8 @@ export const WalletOverviewStep = ({ isGeneratingWallet }: { isGeneratingWallet:
 					onClickDownload={() => handleDownload()}
 					disabled={isGeneratingWallet}
 				/>
+
+				<Divider/>
 
 				<div className="flex w-full flex-col space-y-2">
 					<div className="flex items-center justify-between space-x-5">
