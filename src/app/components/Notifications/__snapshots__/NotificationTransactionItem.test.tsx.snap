@@ -42,7 +42,7 @@ exports[`Notifications > should render in xs 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -127,7 +127,7 @@ exports[`Notifications > should render in xs 2`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -224,7 +224,7 @@ exports[`Notifications > should render in xs 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -343,7 +343,7 @@ exports[`Notifications > should render in xs 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -462,7 +462,7 @@ exports[`Notifications > should render in xs 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -581,7 +581,7 @@ exports[`Notifications > should render notification item 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

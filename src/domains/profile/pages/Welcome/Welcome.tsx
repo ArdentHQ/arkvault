@@ -4,19 +4,18 @@ import { Trans, useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
 import { LocationState } from "router/router.types";
 import cn from "classnames";
-import { Card } from "@/app/components/Card";
-import { Circle } from "@/app/components/Circle";
 import { DropdownOption } from "@/app/components/Dropdown";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { Page, Section } from "@/app/components/Layout";
 import { Link } from "@/app/components/Link";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useAccentColor, useDeeplink, useTheme } from "@/app/hooks";
 import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
-import { ProfileCard } from "@/domains/profile/components/ProfileCard";
 import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
 import { toasts } from "@/app/services";
 import { WelcomeSlider } from "@/domains/profile/components/WelcomeSlider/WelcomeSlider";
+import { Profiles } from "@/domains/profile/components/Profiles/Profiles";
+import { Button } from "@/app/components/Button";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();
@@ -227,98 +226,92 @@ export const Welcome = () => {
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-20" innerClassName="w-full">
 					<div className="flex flex-col gap-3 lg:flex-row">
-						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')]">
+						<div
+							className={cn(
+								"min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 bg-theme-navy-50 bg-[url('/welcome-bg-white.svg')] dark:border-theme-secondary-800 dark:bg-theme-secondary-800 dark:bg-[url('/welcome-bg-dark.svg')]",
+								{
+									"hidden sm:block": hasProfiles,
+									"mb-6 sm:mb-0": !hasProfiles,
+								},
+							)}
+						>
 							<WelcomeSlider />
 						</div>
-						<div className="min-w-0 basis-1/2 rounded-xl border border-theme-navy-100 dark:border-theme-secondary-800">
-							<div className="mx-auto md:mt-8">
-								<h2 className="mx-4 text-2xl font-bold">
-									{hasProfiles
-										? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.TITLE")
-										: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.TITLE")}
-								</h2>
+						<div className="min-w-0 basis-1/2 rounded-xl border-theme-navy-100 dark:border-theme-secondary-800 sm:border sm:p-6">
+							<div className="mx-auto flex h-full max-w-[400px] flex-col">
+								<div className="flex flex-1 flex-col items-center justify-center">
+									<div className="flex flex-col items-center space-y-2 text-center sm:px-4">
+										<ThemeIcon
+											darkIcon="PersonDark"
+											lightIcon="PersonLight"
+											dimensions={[24, 24]}
+										/>
 
-								<p className="text-base text-theme-secondary-text">
-									{hasProfiles
-										? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION")
-										: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.DESCRIPTION")}
-								</p>
+										<h2 className="mx-4 text-2xl font-bold">
+											{hasProfiles
+												? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.TITLE")
+												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.TITLE")}
+										</h2>
 
-								<div className="mt-6 flex justify-center md:mt-8">
-									<div
-										className={cn(
-											"gap-5",
-											{ "md:grid-cols-4": profiles.length >= 3 },
-											{ "md:grid-cols-3": profiles.length === 2 },
-											{ "grid grid-cols-2": profiles.length >= 2 },
-											{ "flex w-full justify-center": profiles.length < 2 },
-										)}
-									>
-										{profiles.map((profile: Contracts.IProfile, index: number) => (
-											<ProfileCard
-												key={index}
-												actions={profileCardActions}
-												profile={profile}
-												onClick={() => handleClick(profile)}
-												onSelect={(action) => handleProfileAction(profile, action)}
-											/>
-										))}
+										<p className="text-base leading-7 text-theme-secondary-text">
+											{hasProfiles
+												? t("PROFILE.PAGE_WELCOME.WITH_PROFILES.DESCRIPTION")
+												: t("PROFILE.PAGE_WELCOME.WITHOUT_PROFILES.DESCRIPTION")}
+										</p>
+									</div>
 
-										<Card
-											variant="secondary"
-											className={cn(
-												"group h-40 leading-tight sm:w-40",
-												{ "w-36": hasProfiles },
-												{ "w-full": !hasProfiles },
-											)}
+									<div className="mt-4 flex w-full flex-col justify-center">
+										<Profiles
+											profiles={profiles}
+											actions={profileCardActions}
+											onClick={handleClick}
+											onSelect={handleProfileAction}
+										/>
+
+										<Button
+											data-testid="CreateProfile"
+											variant="primary"
+											className={cn({ "mt-3": profiles.length })}
 											onClick={() => history.push("/profiles/create")}
 										>
-											<div className="mx-auto flex h-full flex-col items-center justify-center">
-												<div>
-													<Circle
-														size="xl"
-														className="border-theme-primary-600 text-theme-primary-600 group-hover:border-white group-hover:text-white"
-														durationClassName="duration-200"
-														noShadow
-													>
-														<Icon name="Plus" />
-													</Circle>
-												</div>
-												<span className="mt-3 max-w-32 truncate font-semibold text-theme-primary-600 transition-colors group-hover:text-white">
-													{t("COMMON.CREATE")}
-												</span>
-											</div>
-										</Card>
+											<Icon name="Plus" />
+											<span className="pl-2"> {t("COMMON.CREATE")} </span>
+										</Button>
 									</div>
 								</div>
 
-								<p className="mt-8 text-base text-theme-secondary-text md:mt-16">
-									<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
-									<Link to="/profiles/import" title={t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE_TITLE")}>
-										{t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE")}
-									</Link>
-								</p>
-
-								<DeleteProfile
-									profileId={deletingProfileId!}
-									isOpen={!!deletingProfileId}
-									onCancel={closeDeleteProfileModal}
-									onClose={closeDeleteProfileModal}
-									onDelete={closeDeleteProfileModal}
-								/>
-
-								<SignIn
-									isOpen={!!selectedProfile && !!requestedAction}
-									profile={selectedProfile!}
-									onCancel={closeSignInModal}
-									onClose={closeSignInModal}
-									onSuccess={handleSuccessSignIn}
-								/>
+								<div className="fixed bottom-8 left-1/2 mt-8 w-full -translate-x-1/2 sm:static sm:bottom-0 sm:translate-x-0">
+									<p className="text-center text-base text-theme-secondary-text">
+										<span>{t("PROFILE.PAGE_WELCOME.HAS_EXPORTED_PROFILES")} </span>
+										<Link
+											to="/profiles/import"
+											title={t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE_TITLE")}
+										>
+											{t("PROFILE.PAGE_WELCOME.IMPORT_PROFILE")}
+										</Link>
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</Section>
 			</Page>
+
+			<DeleteProfile
+				profileId={deletingProfileId!}
+				isOpen={!!deletingProfileId}
+				onCancel={closeDeleteProfileModal}
+				onClose={closeDeleteProfileModal}
+				onDelete={closeDeleteProfileModal}
+			/>
+
+			<SignIn
+				isOpen={!!selectedProfile && !!requestedAction}
+				profile={selectedProfile!}
+				onCancel={closeSignInModal}
+				onClose={closeSignInModal}
+				onSuccess={handleSuccessSignIn}
+			/>
 		</>
 	);
 };

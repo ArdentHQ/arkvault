@@ -542,7 +542,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1737,7 +1737,7 @@ exports[`ExchangeView > should render 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2916,7 +2916,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4107,7 +4107,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -5298,7 +5298,7 @@ exports[`ExchangeView > should render warning without exchange 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"

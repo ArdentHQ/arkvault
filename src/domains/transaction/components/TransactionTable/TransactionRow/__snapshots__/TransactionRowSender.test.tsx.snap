@@ -38,7 +38,7 @@ exports[`TransactionRowSender > should render 1`] = `
       data-testid="Avatar"
     >
       <div
-        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
       >
         <img
           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -114,7 +114,7 @@ exports[`TransactionRowSender > should render compact 1`] = `
       data-testid="Avatar"
     >
       <div
-        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
       >
         <img
           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

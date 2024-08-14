@@ -510,7 +510,7 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -542,7 +542,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
       class="relative flex h-21"
     >
       <div
-        class="flex flex-1 px-8 sm:ml-12"
+        class="flex flex-1 px-10"
       >
         <div
           class="my-auto flex items-center"
@@ -1099,7 +1099,7 @@ exports[`NavigationBar > should render full variant when profile restored is fal
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -1629,7 +1629,7 @@ exports[`NavigationBar > should render full variant when profile restored is tru
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -2161,7 +2161,7 @@ exports[`NavigationBar > should render in lg 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -2693,7 +2693,7 @@ exports[`NavigationBar > should render in md 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -3225,7 +3225,7 @@ exports[`NavigationBar > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -3757,7 +3757,7 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -4289,7 +4289,7 @@ exports[`NavigationBar > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -4821,7 +4821,7 @@ exports[`NavigationBar > should render with custom menu 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -5353,7 +5353,7 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="Profile Avatar"
@@ -5385,7 +5385,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
       class="relative flex h-21"
     >
       <div
-        class="flex flex-1 px-8 sm:ml-12"
+        class="flex flex-1 px-10"
       >
         <div
           class="my-auto flex items-center"

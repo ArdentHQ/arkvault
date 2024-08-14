@@ -30,7 +30,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -85,7 +85,7 @@ exports[`Signatures > should handle exception when checking if participant is aw
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -156,7 +156,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -211,7 +211,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -282,7 +282,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -337,7 +337,7 @@ exports[`Signatures > should not require signature if waiting for final signatur
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -408,7 +408,7 @@ exports[`Signatures > should render 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -473,7 +473,7 @@ exports[`Signatures > should render 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -544,7 +544,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -599,7 +599,7 @@ exports[`Signatures > should render with waiting badge 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -670,7 +670,7 @@ exports[`Signatures > should show all participants as signed when all signatures
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>
@@ -725,7 +725,7 @@ exports[`Signatures > should show all participants as signed when all signatures
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 />
               </div>
             </div>

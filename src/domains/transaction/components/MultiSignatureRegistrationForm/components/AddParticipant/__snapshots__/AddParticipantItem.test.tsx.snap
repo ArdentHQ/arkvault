@@ -17,7 +17,7 @@ exports[`Add Participant item > should render 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -68,7 +68,7 @@ exports[`Add Participant item > should render 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

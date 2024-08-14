@@ -1,7 +1,6 @@
 import React from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
-import "slick-carousel/slick/slick.css";
 
 interface SlideProperties {
 	title: string;
@@ -17,8 +16,7 @@ const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => 
 				{title}
 			</h3>
 			<p className="mb-0 text-sm text-theme-secondary-700 dark:text-theme-secondary-500 md:mb-4 lg:text-base lg:leading-7">
-				{" "}
-				{subtitle}{" "}
+				{subtitle}
 			</p>
 		</div>
 		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">

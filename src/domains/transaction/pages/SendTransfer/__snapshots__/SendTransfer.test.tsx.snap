@@ -418,7 +418,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -444,7 +444,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -1094,7 +1094,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1145,7 +1145,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -1482,7 +1482,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2001,7 +2001,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2027,7 +2027,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -2817,7 +2817,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2843,7 +2843,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -4145,7 +4145,7 @@ exports[`SendTransfer > should render form and use location state with network p
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4171,7 +4171,7 @@ exports[`SendTransfer > should render form and use location state with network p
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -5473,7 +5473,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -5499,7 +5499,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -10991,7 +10991,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -11017,7 +11017,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -13542,7 +13542,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -13568,7 +13568,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -14218,7 +14218,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14269,7 +14269,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -14811,7 +14811,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -14837,7 +14837,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -15487,7 +15487,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -15538,7 +15538,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -15875,7 +15875,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -16632,7 +16632,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -16658,7 +16658,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -17308,7 +17308,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -17359,7 +17359,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -17901,7 +17901,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -17927,7 +17927,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -18577,7 +18577,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -18628,7 +18628,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
@@ -19170,7 +19170,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -19196,7 +19196,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -19846,7 +19846,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -19897,7 +19897,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv"
