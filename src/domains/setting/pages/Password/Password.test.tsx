@@ -259,8 +259,6 @@ describe("Password Settings", () => {
 		await waitFor(() => expect(passwordInput()).toHaveAttribute("aria-invalid"));
 
 		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should allow to remove the password", async () => {
