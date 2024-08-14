@@ -33,7 +33,7 @@ export const translations = {
 	ENCRYPTION_PASSWORD: "Encryption Password",
 	ERROR: {
 		DESCRIPTION:
-			"An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet",
+			"An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.",
 		TITLE: "Transaction Error",
 	},
 	EXPIRATION: {
@@ -194,9 +194,9 @@ export const translations = {
 		UPLOAD: "Upload Image",
 	},
 	MODAL_SEARCH_RECIPIENT: {
-		DESCRIPTION: "Find and select a recipient from your contacts and wallets",
+		DESCRIPTION: "Locate and select the recipient address.",
 		SEARCH_PLACEHOLDER: "Enter name or address",
-		TITLE: "Select Recipient",
+		TITLE: "Recipient Search",
 	},
 	MODAL_SECOND_SIGNATURE_DETAIL: {
 		TITLE: "Second Signature",

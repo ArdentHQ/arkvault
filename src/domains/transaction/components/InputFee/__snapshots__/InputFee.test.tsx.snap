@@ -46,7 +46,7 @@ exports[`InputFee > advanced view type > should allow to input a value 1`] = `
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -186,7 +186,7 @@ exports[`InputFee > advanced view type > should display converted value when on 
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -296,7 +296,7 @@ exports[`InputFee > advanced view type > should render disabled 1`] = `
     class="relative"
   >
     <div
-      class="css-xk5t3v"
+      class="css-13c7w0w"
       disabled=""
     >
       <div
@@ -438,7 +438,7 @@ exports[`InputFee > should keep different values for simple and advanced view ty
       class="relative"
     >
       <div
-        class="css-n1b0kl"
+        class="css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -695,7 +695,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -731,7 +731,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-1q57rjh"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -865,7 +865,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -901,7 +901,7 @@ exports[`InputFee > simple view type > should change fee option with converted v
               0.006 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-1q57rjh"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -1853,7 +1853,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -1889,7 +1889,7 @@ exports[`InputFee > simple view type > should render simple view in xs 1`] = `
               0.456 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-1q57rjh"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"
@@ -2563,7 +2563,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
       data-testid="SelectDropdown"
     >
       <div
-        class="sr-only css-n1b0kl"
+        class="sr-only css-1q57rjh"
       >
         <div
           class="relative flex h-full flex-1"
@@ -2599,7 +2599,7 @@ exports[`InputFee > simple view type > should render simple view with converted 
               0.456 DARK…
             </div>
             <div
-              class="relative css-n1b0kl"
+              class="relative css-1q57rjh"
             >
               <div
                 class="-ml-4 mr-2 flex h-full items-center rounded-l border-r border-theme-secondary-400 bg-theme-secondary-100 px-4 dark:border-theme-secondary-700 dark:bg-theme-secondary-background"

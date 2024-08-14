@@ -585,7 +585,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -669,7 +669,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         </div>
                       </span>
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -714,7 +714,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1368,7 +1368,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1452,7 +1452,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         </div>
                       </span>
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -1497,7 +1497,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2151,7 +2151,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2235,7 +2235,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         </div>
                       </span>
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -2280,7 +2280,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       Message
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"

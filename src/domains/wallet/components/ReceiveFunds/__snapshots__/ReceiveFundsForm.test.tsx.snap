@@ -6,7 +6,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -28,7 +28,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -63,7 +63,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -105,7 +105,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -127,7 +127,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -162,7 +162,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -204,7 +204,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -226,7 +226,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -255,7 +255,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
     data-testid="ReceiveFundsForm"
   >
     <div
-      class="mt-8 space-y-5"
+      class="mt-4 space-y-4"
     >
       <fieldset
         class="flex min-w-0 flex-col css-1bcidjh"
@@ -277,7 +277,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-n1b0kl"
+            class="pr-20 css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -312,7 +312,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"

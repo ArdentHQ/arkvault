@@ -581,7 +581,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                   data-testid="SendTransfer__network-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -771,7 +771,7 @@ exports[`SendTransfer Network Selection > should select cryptoasset 1`] = `
                     </div>
                   </fieldset>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                 </section>

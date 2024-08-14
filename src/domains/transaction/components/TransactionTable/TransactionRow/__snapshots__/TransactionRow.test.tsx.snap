@@ -10,7 +10,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -213,7 +213,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -239,7 +239,7 @@ exports[`TransactionRow > should render 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -459,7 +459,7 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -485,7 +485,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
       >
         <td>
           <div
-            class="css-bgc8eo"
+            class="css-rjc6e4"
           >
             <span
               aria-busy="true"
@@ -652,7 +652,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-10gefem"
+            class="justify-end css-160cp05"
           >
             <span
               class="flex items-center space-x-1"
@@ -1134,7 +1134,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <span
               aria-busy="true"
@@ -1297,7 +1297,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <span
               class="flex items-center space-x-1"
@@ -1347,7 +1347,7 @@ exports[`TransactionRow > should render with currency 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -1550,7 +1550,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <span
               class="whitespace-nowrap"

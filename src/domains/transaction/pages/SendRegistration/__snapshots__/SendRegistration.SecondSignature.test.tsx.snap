@@ -462,7 +462,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -535,7 +535,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                       Mnemonic
                     </label>
                     <div
-                      class="css-n1b0kl"
+                      class="css-1q57rjh"
                     >
                       <div
                         class="relative flex h-full flex-1"

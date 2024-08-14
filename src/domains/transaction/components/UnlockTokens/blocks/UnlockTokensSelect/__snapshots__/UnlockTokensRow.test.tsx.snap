@@ -10,7 +10,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -34,7 +34,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div
               class="flex items-center"
@@ -100,7 +100,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
       >
         <td>
           <div
-            class="css-hhd44j"
+            class="css-5gvahk"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -124,7 +124,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end css-yf8cy4"
+            class="justify-end css-t4jv3s"
           >
             <div
               class="flex items-center"

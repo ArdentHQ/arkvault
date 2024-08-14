@@ -8,7 +8,7 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionReviewDetail } from "@/domains/transaction/components/TransactionReviewDetail";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const TransferLedgerReview = ({
 	wallet,
@@ -53,12 +53,12 @@ export const TransferLedgerReview = ({
 			<TransactionAddresses senderWallet={wallet} recipients={recipients} profile={profile} />
 
 			{memo && (
-				<TransactionReviewDetail label={t("COMMON.MEMO_SMARTBRIDGE")}>
+				<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
 					<p data-testid="TransactionMemo">{memo}</p>
-				</TransactionReviewDetail>
+				</DetailWrapper>
 			)}
 
-			<TransactionReviewDetail
+			<DetailWrapper
 				label={
 					<div data-testid="LedgerReview__expiration" className="flex items-center space-x-2">
 						<span>{t("COMMON.EXPIRATION")}</span>
@@ -72,7 +72,7 @@ export const TransferLedgerReview = ({
 				}
 			>
 				{renderExpiration()}
-			</TransactionReviewDetail>
+			</DetailWrapper>
 
 			<div className="mt-2">
 				<TotalAmountBox amount={amount} fee={fee} ticker={wallet.currency()} />

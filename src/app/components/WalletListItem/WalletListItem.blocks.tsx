@@ -19,14 +19,17 @@ import {
 	WalletCellProperties,
 	StarredProperties,
 	InfoProperties,
+	RecipientItemMobileProperties,
+	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
 import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import { Skeleton } from "@/app/components/Skeleton";
 import { useWalletActions } from "@/domains/wallet/hooks";
 import { useWalletTransactions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-transactions";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -380,6 +383,101 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 					)}
 				</div>
 			)}
+		</div>
+	);
+};
+
+export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
+	onClick,
+	selected = false,
+	type,
+	address,
+	name,
+}) => {
+	const { isSmAndAbove } = useBreakpoint();
+	const maxCharacters = isSmAndAbove ? 20 : 10;
+
+	return (
+		<div
+			data-testid={selected ? "WalletListItemMobile--selected" : "WalletListItemMobile"}
+			className={cn(
+				"flex h-18 w-full cursor-pointer flex-row overflow-hidden rounded-xl bg-theme-primary-100 ring-2 dark:bg-theme-background",
+				{
+					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+				},
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
+		>
+			<div className="flex h-full w-full flex-col items-start justify-center gap-1.5 p-4">
+				<div className="flex flex-row gap-1.5">
+					<span className="truncate text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+						<TruncateEnd text={name} maxChars={maxCharacters} showTooltip={name.length > maxCharacters} />
+					</span>
+					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+						({type})
+					</span>
+				</div>
+
+				{address}
+			</div>
+			<div
+				className={cn("flex h-full w-11 items-center justify-center", {
+					"bg-theme-primary-100 dark:bg-theme-background": !selected,
+					"bg-theme-primary-600 dark:bg-theme-primary-600": selected,
+				})}
+			>
+				<Icon
+					className={cn({
+						"text-theme-primary-200 dark:text-theme-secondary-800": !selected,
+						"text-theme-primary-50": selected,
+					})}
+					name="CircleCheckMark"
+					size="lg"
+				/>
+			</div>
+		</div>
+	);
+};
+
+export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
+	onClick,
+	selected = false,
+	balance,
+	address,
+	name,
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<div
+			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
+			className={cn(
+				"flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background",
+				{
+					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+				},
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
+		>
+			<div className="flex flex-col gap-2 pl-2 pt-2">
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{name}
+				</span>
+				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+					{address}
+				</span>
+			</div>
+
+			<div className="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white">
+				<div className="pl-2">{balance}</div>
+				<button className="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3">
+					{t("COMMON.SELECT")}
+				</button>
+			</div>
 		</div>
 	);
 };

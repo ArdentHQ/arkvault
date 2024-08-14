@@ -74,7 +74,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                 class="mx-auto max-w-xl"
               >
                 <div
-                  class="sm:mt-8"
+                  class="w-full sm:mt-8"
                 >
                   <div
                     class="flex flex-col"
@@ -215,7 +215,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                   <div
@@ -246,7 +246,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                   Profile Name
                                 </label>
                                 <div
-                                  class=" css-n1b0kl"
+                                  class=" css-1q57rjh"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -334,7 +334,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               </span>
                             </label>
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -413,7 +413,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               </span>
                             </label>
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -492,7 +492,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="sr-only css-n1b0kl"
+                                  class="sr-only css-1q57rjh"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -524,7 +524,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                         id="ProfileForm__currency-label"
                                       />
                                       <div
-                                        class="css-n1b0kl"
+                                        class="css-1q57rjh"
                                       >
                                         <div
                                           class="relative flex h-full flex-1"
@@ -706,7 +706,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                           </div>
                         </div>
                         <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                           type="horizontal"
                         />
                         <div
@@ -923,7 +923,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                 class="mx-auto max-w-xl"
               >
                 <div
-                  class="sm:mt-8"
+                  class="w-full sm:mt-8"
                 >
                   <div
                     class="flex flex-col"
@@ -1064,7 +1064,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                     </div>
                   </div>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                   <div
@@ -1095,7 +1095,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                   Profile Name
                                 </label>
                                 <div
-                                  class=" css-n1b0kl"
+                                  class=" css-1q57rjh"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -1183,7 +1183,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               </span>
                             </label>
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -1262,7 +1262,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                               </span>
                             </label>
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -1341,7 +1341,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                 data-testid="SelectDropdown"
                               >
                                 <div
-                                  class="sr-only css-n1b0kl"
+                                  class="sr-only css-1q57rjh"
                                 >
                                   <div
                                     class="relative flex h-full flex-1"
@@ -1373,7 +1373,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                                         id="ProfileForm__currency-label"
                                       />
                                       <div
-                                        class="css-n1b0kl"
+                                        class="css-1q57rjh"
                                       >
                                         <div
                                           class="relative flex h-full flex-1"
@@ -1555,7 +1555,7 @@ exports[`ImportProfile > should apply theme setting of imported profile regardle
                           </div>
                         </div>
                         <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                           type="horizontal"
                         />
                         <div
@@ -1772,7 +1772,7 @@ exports[`ImportProfile > should render first step 1`] = `
                 class="mx-auto max-w-xl"
               >
                 <div
-                  class="sm:mt-8"
+                  class="w-full sm:mt-8"
                 >
                   <div
                     class="flex flex-col"

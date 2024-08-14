@@ -459,7 +459,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1317,7 +1317,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     class="relative flex flex-1 flex-col space-y-1.5"
                   >
                     <h2
-                      class="mb-0 text-lg font-bold md:text-2xl"
+                      class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                     >
                       Confirm Transaction
                     </h2>
@@ -1334,20 +1334,19 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         data-testid="TransactionTable"
                       >
                         <div
-                          class="-mt-3 css-1m6rt2i"
+                          class="css-1m6rt2i"
                           role="table"
                         >
                           <table
                             cellpadding="0"
-                            class="table-auto"
+                            class="w-full table-auto"
                           >
                             <thead>
                               <tr
-                                class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -1393,7 +1392,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -1409,7 +1408,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"
@@ -1465,7 +1464,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1521,7 +1520,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-yf8cy4"
+                                    class="justify-end css-t4jv3s"
                                   >
                                     <div
                                       class="css-41vn9a"
@@ -2043,7 +2042,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2110,7 +2109,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-12mz4i6"
+                      class="css-1hr3i2s"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2858,7 +2857,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -3062,7 +3061,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                             </div>
                           </span>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -3226,7 +3225,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-n1b0kl"
+                                      class="sr-only css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -3259,7 +3258,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-n1b0kl"
+                                            class="css-1q57rjh"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -3372,7 +3371,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                     class="relative"
                                   >
                                     <div
-                                      class="css-n1b0kl"
+                                      class="css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -3424,7 +3423,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                         </span>
                       </label>
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -3470,7 +3469,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                         class="relative"
                       >
                         <div
-                          class="css-xk5t3v"
+                          class="css-13c7w0w"
                           disabled=""
                         >
                           <div
@@ -4186,7 +4185,7 @@ exports[`SendTransfer > should render form and use location state with network p
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -4390,7 +4389,7 @@ exports[`SendTransfer > should render form and use location state with network p
                             </div>
                           </span>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -4554,7 +4553,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-n1b0kl"
+                                      class="sr-only css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -4587,7 +4586,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-n1b0kl"
+                                            class="css-1q57rjh"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -4700,7 +4699,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                     class="relative"
                                   >
                                     <div
-                                      class="css-n1b0kl"
+                                      class="css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -4752,7 +4751,7 @@ exports[`SendTransfer > should render form and use location state with network p
                         </span>
                       </label>
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -4798,7 +4797,7 @@ exports[`SendTransfer > should render form and use location state with network p
                         class="relative"
                       >
                         <div
-                          class="css-xk5t3v"
+                          class="css-13c7w0w"
                           disabled=""
                         >
                           <div
@@ -5514,7 +5513,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -5718,7 +5717,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                             </div>
                           </span>
                           <div
-                            class="css-n1b0kl"
+                            class="css-1q57rjh"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -5882,7 +5881,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-n1b0kl"
+                                      class="sr-only css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -5915,7 +5914,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-n1b0kl"
+                                            class="css-1q57rjh"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -6028,7 +6027,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                     class="relative"
                                   >
                                     <div
-                                      class="css-n1b0kl"
+                                      class="css-1q57rjh"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -6080,7 +6079,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                         </span>
                       </label>
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -6126,7 +6125,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                         class="relative"
                       >
                         <div
-                          class="css-xk5t3v"
+                          class="css-13c7w0w"
                           disabled=""
                         >
                           <div
@@ -6267,7 +6266,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -6453,7 +6452,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               />
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -6617,7 +6616,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -6650,7 +6649,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-xk5t3v"
+                              class="css-13c7w0w"
                               disabled=""
                             >
                               <div
@@ -6752,7 +6751,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -6807,7 +6806,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -6973,7 +6972,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -7159,7 +7158,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               />
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -7323,7 +7322,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -7356,7 +7355,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-xk5t3v"
+                              class="css-13c7w0w"
                               disabled=""
                             >
                               <div
@@ -7458,7 +7457,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -7513,7 +7512,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -7559,7 +7558,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           class="relative"
         >
           <div
-            class="css-xk5t3v"
+            class="css-13c7w0w"
             disabled=""
           >
             <div
@@ -7666,7 +7665,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -7870,7 +7869,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
               </div>
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -8034,7 +8033,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8067,7 +8066,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -8180,7 +8179,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                       class="relative"
                     >
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8232,7 +8231,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -8278,7 +8277,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
           class="relative"
         >
           <div
-            class="css-xk5t3v"
+            class="css-13c7w0w"
             disabled=""
           >
             <div
@@ -8386,7 +8385,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -8590,7 +8589,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
               </div>
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -8754,7 +8753,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8787,7 +8786,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-n1b0kl"
+                              class="css-1q57rjh"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -8900,7 +8899,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                       class="relative"
                     >
                       <div
-                        class="css-n1b0kl"
+                        class="css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8952,7 +8951,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -8998,7 +8997,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
           class="relative"
         >
           <div
-            class="css-xk5t3v"
+            class="css-13c7w0w"
             disabled=""
           >
             <div
@@ -9106,7 +9105,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -9292,7 +9291,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
               />
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -9456,7 +9455,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -9489,7 +9488,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-xk5t3v"
+                              class="css-13c7w0w"
                               disabled=""
                             >
                               <div
@@ -9591,7 +9590,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -9643,7 +9642,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
           class="relative"
         >
           <div
-            class="css-xk5t3v"
+            class="css-13c7w0w"
             disabled=""
           >
             <div
@@ -9750,7 +9749,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -9936,7 +9935,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
               />
             </span>
             <div
-              class="css-n1b0kl"
+              class="css-1q57rjh"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -10100,7 +10099,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-n1b0kl"
+                        class="sr-only css-1q57rjh"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -10133,7 +10132,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-xk5t3v"
+                              class="css-13c7w0w"
                               disabled=""
                             >
                               <div
@@ -10235,7 +10234,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-xk5t3v"
+                        class="css-13c7w0w"
                         disabled=""
                       >
                         <div
@@ -10290,7 +10289,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
           </span>
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -11032,7 +11031,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   data-testid="SendTransfer__network-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -11222,7 +11221,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     </div>
                   </fieldset>
                   <div
-                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+                    class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
                     type="horizontal"
                   />
                 </section>
@@ -11269,7 +11268,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
     data-testid="SendTransfer__network-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11343,7 +11342,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -11375,7 +11374,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -11456,7 +11455,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
     data-testid="SendTransfer__network-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11643,7 +11642,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
       </div>
     </fieldset>
     <div
-      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-t0fqin"
+      class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1m3aobs"
       type="horizontal"
     />
   </section>
@@ -11656,7 +11655,7 @@ exports[`SendTransfer > should render review step 1`] = `
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11784,15 +11783,15 @@ exports[`SendTransfer > should render review step 1`] = `
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -11805,7 +11804,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -11871,7 +11870,7 @@ exports[`SendTransfer > should render review step 1`] = `
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -11880,7 +11879,7 @@ exports[`SendTransfer > should render review step 1`] = `
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -11945,15 +11944,15 @@ exports[`SendTransfer > should render review step 1`] = `
         </div>
       </div>
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -11971,11 +11970,11 @@ exports[`SendTransfer > should render review step 1`] = `
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -12084,7 +12083,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -12212,15 +12211,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -12233,7 +12232,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -12299,7 +12298,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12308,7 +12307,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12364,7 +12363,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12418,15 +12417,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
         </div>
       </div>
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Memo (SmartBridge)
           </div>
@@ -12444,11 +12443,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -12557,7 +12556,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -12685,15 +12684,15 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       class="mt-4 space-y-3 sm:space-y-4"
     >
       <div
-        data-testid="TransactionReviewDetail"
+        data-testid="DetailWrapper"
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Addressing
           </div>
@@ -12706,7 +12705,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               From
             </div>
@@ -12772,7 +12771,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             class="hidden h-8 w-full items-center sm:flex"
           >
             <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+              class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
               type="horizontal"
             />
           </div>
@@ -12781,7 +12780,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12837,7 +12836,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
           >
             <div
               class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
-              data-testid="TransactionReviewLabelText"
+              data-testid="DetailLabelText"
             >
               To
             </div>
@@ -12895,11 +12894,11 @@ exports[`SendTransfer > should render review step with multiple recipients (with
       >
         <div
           class="border-l-2 border-x-theme-primary-400 bg-theme-secondary-100 px-3 py-2 dark:bg-theme-secondary-800 sm:border-none sm:bg-transparent sm:p-0 dark:sm:bg-transparent"
-          data-testid="TransactionReviewDetailLabel"
+          data-testid="DetailLabel"
         >
           <div
             class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-            data-testid="TransactionReviewLabelText"
+            data-testid="DetailLabelText"
           >
             Transaction Summary
           </div>
@@ -13584,7 +13583,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -14853,7 +14852,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -15711,7 +15710,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     class="relative flex flex-1 flex-col space-y-1.5"
                   >
                     <h2
-                      class="mb-0 text-lg font-bold md:text-2xl"
+                      class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
                     >
                       Confirm Transaction
                     </h2>
@@ -15728,20 +15727,19 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         data-testid="TransactionTable"
                       >
                         <div
-                          class="-mt-3 css-1m6rt2i"
+                          class="css-1m6rt2i"
                           role="table"
                         >
                           <table
                             cellpadding="0"
-                            class="table-auto"
+                            class="w-full table-auto"
                           >
                             <thead>
                               <tr
-                                class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -15787,7 +15785,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -15803,7 +15801,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"
@@ -15859,7 +15857,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -15915,7 +15913,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-yf8cy4"
+                                    class="justify-end css-t4jv3s"
                                   >
                                     <div
                                       class="css-41vn9a"
@@ -15941,7 +15939,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-hhd44j"
+                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -16030,7 +16028,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-yf8cy4"
+                                    class="justify-end css-t4jv3s"
                                   >
                                     <div
                                       class="css-41vn9a"
@@ -16675,7 +16673,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -17944,7 +17942,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -19213,7 +19211,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"

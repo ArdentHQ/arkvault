@@ -21,14 +21,6 @@ export interface SearchWalletListItemProperties {
 	onAction: (wallet: SelectedWallet) => void;
 	profile: Contracts.IProfile;
 }
-export interface SearchWalletListItemResponsiveProperties {
-	selectedAddress?: string;
-	wallet: Contracts.IReadWriteWallet;
-	alias?: string;
-	showNetwork?: boolean;
-	onAction: (wallet: SelectedWallet) => void;
-	profile: Contracts.IProfile;
-}
 
 export interface SearchWalletProperties {
 	isOpen: boolean;

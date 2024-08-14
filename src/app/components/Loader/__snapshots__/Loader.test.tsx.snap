@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Loader > should render with custom class names 1`] = `
+<DocumentFragment>
+  <div
+    class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent custom-class"
+    data-testid="Loader__wrapper"
+  >
+    <div
+      class="rounded-full css-1m8vfsi"
+      color="warning-alt"
+      width="3"
+    />
+    <hr
+      class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
+    />
+    <span
+      class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+      data-testid="Loader__text"
+    >
+      Testing
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Loader > should render with custom text 1`] = `
+<DocumentFragment>
+  <div
+    class="flex w-full flex-row items-center gap-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+    data-testid="Loader__wrapper"
+  >
+    <div
+      class="rounded-full css-1m8vfsi"
+      color="warning-alt"
+      width="3"
+    />
+    <hr
+      class="h-5 w-px border-transparent bg-theme-warning-200 dark:bg-theme-secondary-800"
+    />
+    <span
+      class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-warning-600 md:text-base"
+      data-testid="Loader__text"
+    >
+      Testing
+    </span>
+  </div>
+</DocumentFragment>
+`;

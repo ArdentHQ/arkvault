@@ -72,7 +72,6 @@ describe("RecipientList", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-
 		expect(container).toMatchSnapshot();
 	});
 

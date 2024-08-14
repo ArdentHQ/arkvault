@@ -6,313 +6,37 @@ exports[`ErrorStep > should display error details 1`] = `
     data-testid="ErrorStep"
   >
     <div
-      class="space-y-8"
+      class="space-y-2"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
-          class="space-y-2"
+          class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="flex items-center gap-3"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Transaction Error
-            </h1>
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Transaction Error
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-      <svg
-        class="hidden w-full md:block"
-        height="142"
-        viewBox="0 0 550 142"
-        width="550"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="images"
-          transform="translate(-404 -340)"
-        >
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-          >
-            <path
-              d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(453 472)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(425 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-          >
-            <path
-              d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(895 367)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(868 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-          >
-            <path
-              d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(726 406)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(625 434)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-              id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-              transform="translate(-56 -698.5)"
-            >
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(704 1090)"
-              >
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  r="32.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  fill="none"
-                  r="31.5"
-                />
-              </g>
-              <path
-                d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                fill="#ffe0da"
-                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                stroke="#de5846"
-                stroke-width="2"
-              />
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(708 1094)"
-              >
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  r="28.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  fill="none"
-                  r="27.5"
-                />
-              </g>
-            </g>
-          </g>
-          <path
-            d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-            fill="#dbdee5"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-          />
-        </g>
-      </svg>
       <div
-        class="space-y-6"
+        class="space-y-4"
       >
         <p
           class="hidden text-theme-secondary-text md:block"
         >
-          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -359,7 +83,7 @@ exports[`ErrorStep > should display error details 1`] = `
           <div
             class="css-1y2ht9o"
           >
-            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+            An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
         <div
@@ -456,313 +180,37 @@ exports[`ErrorStep > should emit onBack 1`] = `
     data-testid="ErrorStep"
   >
     <div
-      class="space-y-8"
+      class="space-y-2"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
-          class="space-y-2"
+          class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="flex items-center gap-3"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Custom error title
-            </h1>
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Custom error title
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-      <svg
-        class="hidden w-full md:block"
-        height="142"
-        viewBox="0 0 550 142"
-        width="550"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="images"
-          transform="translate(-404 -340)"
-        >
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-          >
-            <path
-              d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(453 472)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(425 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-          >
-            <path
-              d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(895 367)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(868 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-          >
-            <path
-              d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(726 406)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(625 434)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-              id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-              transform="translate(-56 -698.5)"
-            >
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(704 1090)"
-              >
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  r="32.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  fill="none"
-                  r="31.5"
-                />
-              </g>
-              <path
-                d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                fill="#ffe0da"
-                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                stroke="#de5846"
-                stroke-width="2"
-              />
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(708 1094)"
-              >
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  r="28.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  fill="none"
-                  r="27.5"
-                />
-              </g>
-            </g>
-          </g>
-          <path
-            d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-            fill="#dbdee5"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-          />
-        </g>
-      </svg>
       <div
-        class="space-y-6"
+        class="space-y-4"
       >
         <p
           class="hidden text-theme-secondary-text md:block"
         >
-          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -809,92 +257,143 @@ exports[`ErrorStep > should emit onBack 1`] = `
           <div
             class="css-1y2ht9o"
           >
-            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+            An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-fl4fi0"
         data-testid="ErrorStep__back-button"
@@ -921,313 +420,37 @@ exports[`ErrorStep > should emit onClose 1`] = `
     data-testid="ErrorStep"
   >
     <div
-      class="space-y-8"
+      class="space-y-2"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
-          class="space-y-2"
+          class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="flex items-center gap-3"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Custom error title
-            </h1>
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Custom error title
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-      <svg
-        class="hidden w-full md:block"
-        height="142"
-        viewBox="0 0 550 142"
-        width="550"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="images"
-          transform="translate(-404 -340)"
-        >
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-          >
-            <path
-              d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(453 472)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(425 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-          >
-            <path
-              d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(895 367)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(868 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-          >
-            <path
-              d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(726 406)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(625 434)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-              id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-              transform="translate(-56 -698.5)"
-            >
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(704 1090)"
-              >
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  r="32.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  fill="none"
-                  r="31.5"
-                />
-              </g>
-              <path
-                d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                fill="#ffe0da"
-                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                stroke="#de5846"
-                stroke-width="2"
-              />
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(708 1094)"
-              >
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  r="28.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  fill="none"
-                  r="27.5"
-                />
-              </g>
-            </g>
-          </g>
-          <path
-            d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-            fill="#dbdee5"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-          />
-        </g>
-      </svg>
       <div
-        class="space-y-6"
+        class="space-y-4"
       >
         <p
           class="hidden text-theme-secondary-text md:block"
         >
-          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -1274,92 +497,143 @@ exports[`ErrorStep > should emit onClose 1`] = `
           <div
             class="css-1y2ht9o"
           >
-            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+            An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
     >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
       <button
         class="css-6419sw"
         data-testid="ErrorStep__close-button"
@@ -1386,313 +660,37 @@ exports[`ErrorStep > should render with custom title 1`] = `
     data-testid="ErrorStep"
   >
     <div
-      class="space-y-8"
+      class="space-y-2"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
-          class="space-y-2"
+          class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="flex items-center gap-3"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Custom error title
-            </h1>
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Custom error title
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-      <svg
-        class="hidden w-full md:block"
-        height="142"
-        viewBox="0 0 550 142"
-        width="550"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="images"
-          transform="translate(-404 -340)"
-        >
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-          >
-            <path
-              d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(453 472)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(425 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-          >
-            <path
-              d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(895 367)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(868 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-          >
-            <path
-              d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(726 406)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(625 434)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-              id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-              transform="translate(-56 -698.5)"
-            >
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(704 1090)"
-              >
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  r="32.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  fill="none"
-                  r="31.5"
-                />
-              </g>
-              <path
-                d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                fill="#ffe0da"
-                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                stroke="#de5846"
-                stroke-width="2"
-              />
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(708 1094)"
-              >
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  r="28.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  fill="none"
-                  r="27.5"
-                />
-              </g>
-            </g>
-          </g>
-          <path
-            d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-            fill="#dbdee5"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-          />
-        </g>
-      </svg>
       <div
-        class="space-y-6"
+        class="space-y-4"
       >
         <p
           class="hidden text-theme-secondary-text md:block"
         >
-          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -1739,93 +737,143 @@ exports[`ErrorStep > should render with custom title 1`] = `
           <div
             class="css-1y2ht9o"
           >
-            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+            An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;
@@ -1836,313 +884,37 @@ exports[`ErrorStep > should render with default texts 1`] = `
     data-testid="ErrorStep"
   >
     <div
-      class="space-y-8"
+      class="space-y-2"
     >
       <div
-        class="flex items-end justify-between bg-theme-background"
+        class="flex flex-row items-center justify-start gap-3"
       >
         <div
-          class="space-y-2"
+          class="flex items-end justify-between bg-theme-background"
         >
           <div
-            class="flex items-center gap-3"
+            class="space-y-2"
           >
-            <h1
-              class="mb-0 text-2xl leading-[29px]"
-              data-testid="header__title"
+            <div
+              class="flex items-center gap-3"
             >
-              Transaction Error
-            </h1>
+              <h1
+                class="mb-0 text-2xl leading-[29px]"
+                data-testid="header__title"
+              >
+                Transaction Error
+              </h1>
+            </div>
           </div>
         </div>
       </div>
-      <svg
-        class="hidden w-full md:block"
-        height="142"
-        viewBox="0 0 550 142"
-        width="550"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          id="images"
-          transform="translate(-404 -340)"
-        >
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-          >
-            <path
-              d="M454.184,476.9a52.5,52.5,0,1,1,55.6-57.241c.146,1.595,1.488,4.344,7.22,4.344h97"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(453 472)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(425 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M484,407s-17.041,12.613-19,14-6,4.6-6,9v26"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M478,401s-15.94,11.4-18,13-7.1,2.131-11-1-13-11-13-11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4_\\u043A\\u043E\\u043F\\u0438\\u044F_4"
-          >
-            <path
-              d="M903.816,372.1a52.5,52.5,0,1,1-55.6,57.241c-.146-1.6-1.488-4.344-7.221-4.344H748"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 4"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_4-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(895 367)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(868 392)"
-            >
-              <circle
-                cx="32.5"
-                cy="32.5"
-                r="32.5"
-                stroke="none"
-              />
-              <circle
-                cx="32.5"
-                cy="32.5"
-                fill="none"
-                r="31.5"
-              />
-            </g>
-            <path
-              d="M874,442s17.041-12.613,19-14,6-4.6,6-9V393"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1007"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1007-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M880,448s15.94-11.4,18-13,7.1-2.131,11,1,13,11,13,11"
-              data-name="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430 1008"
-              fill="none"
-              id="\\u0424\\u0438\\u0433\\u0443\\u0440\\u0430_1008-2"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-          </g>
-          <g
-            data-name="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 4"
-            id="\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_4"
-          >
-            <path
-              d="M631.179,442.532a52.513,52.513,0,0,0,101.469-11.917c.233-2.006,4.1-5.615,7.352-5.615h8"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 5"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_5"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <path
-              d="M730.129,406.468a52.681,52.681,0,0,0-101.736,11.917c-.233,2.006-4.107,5.615-7.372,5.615H613"
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 6"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_6"
-              stroke="#dbdee5"
-              stroke-width="2"
-            />
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(726 406)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2050 \\u043A\\u043E\\u043F\\u0438\\u044F 2"
-              fill="none"
-              id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2050_\\u043A\\u043E\\u043F\\u0438\\u044F_2"
-              stroke="#dbdee5"
-              stroke-width="2"
-              transform="translate(625 434)"
-            >
-              <circle
-                cx="5"
-                cy="5"
-                r="5"
-                stroke="none"
-              />
-              <circle
-                cx="5"
-                cy="5"
-                fill="none"
-                r="4"
-              />
-            </g>
-            <g
-              data-name="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C 715"
-              id="\\u0421\\u0433\\u0440\\u0443\\u043F\\u043F\\u0438\\u0440\\u043E\\u0432\\u0430\\u0442\\u044C_715"
-              transform="translate(-56 -698.5)"
-            >
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(704 1090)"
-              >
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  r="32.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="32.5"
-                  cy="32.5"
-                  fill="none"
-                  r="31.5"
-                />
-              </g>
-              <path
-                d="M739.823,1130.253,736,1126.43l-3.823,3.823a2.447,2.447,0,0,1-3.461-3.461l3.823-3.823-3.792-3.792a2.447,2.447,0,0,1,3.461-3.46l3.792,3.792,3.792-3.792a2.447,2.447,0,0,1,3.461,3.46l-3.792,3.792,3.823,3.823a2.448,2.448,0,1,1-3.461,3.461Z"
-                data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A, \\u0441\\u043A\\u0440\\u0443\\u0433\\u043B. \\u0443\\u0433\\u043B\\u044B2086 \\u043A\\u043E\\u043F\\u0438\\u044F"
-                fill="#ffe0da"
-                id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_\\u0441\\u043A\\u0440\\u0443\\u0433\\u043B._\\u0443\\u0433\\u043B\\u044B2086_\\u043A\\u043E\\u043F\\u0438\\u044F"
-                stroke="#de5846"
-                stroke-width="2"
-              />
-              <g
-                data-name="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441 2047 \\u043A\\u043E\\u043F\\u0438\\u044F 3"
-                fill="none"
-                id="\\u042D\\u043B\\u043B\\u0438\\u043F\\u0441_2047_\\u043A\\u043E\\u043F\\u0438\\u044F_3-2"
-                stroke="#de5846"
-                stroke-width="2"
-                transform="translate(708 1094)"
-              >
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  r="28.5"
-                  stroke="none"
-                />
-                <circle
-                  cx="28.5"
-                  cy="28.5"
-                  fill="none"
-                  r="27.5"
-                />
-              </g>
-            </g>
-          </g>
-          <path
-            d="M815,475v-7H777v7h-2v-7H760v-2h15V448h2v18h38v-8h2v8h10v2H817v7Zm-240,0v-7H537v7h-2v-7H525v-2h10V454h2v12h38V456h2v10h18v2H577v7Zm-40-31v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm280-45V388H805v-2h10V348H777v11h-2V348H764v-2h11v-6h2v6h38v-6h2v6h38v-6h2v6h8v2h-8v21h-2V348H817v38h16v2H817v11Zm-280,0V388H521v-2h14V348H497v11h-2V348H477v-2h18v-6h2v6h38v-6h2v6h11v2H537v38h9v2h-9v11Zm80-33V348H597v-2h18v-6h2v6h16v2H617v18Zm265-14v-4h-4v-2h4v-4h2v4h4v2h-4v4Zm-230,0v-4h-4v-2h4v-4h2v4h4v2h-4v4Z"
-            data-name="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 21"
-            fill="#dbdee5"
-            id="\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_21"
-          />
-        </g>
-      </svg>
       <div
-        class="space-y-6"
+        class="space-y-4"
       >
         <p
           class="hidden text-theme-secondary-text md:block"
         >
-          An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+          An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
         </p>
         <div
           class="flex flex-col overflow-hidden rounded-xl md:hidden"
@@ -2189,93 +961,143 @@ exports[`ErrorStep > should render with default texts 1`] = `
           <div
             class="css-1y2ht9o"
           >
-            An error occurred that prevented the broadcast of this transaction. Select Retry to attempt to broadcast the transaction again. Alternatively, return to your wallet
+            An error occurred while sending your transaction. Please go 'Back' and try again, or click 'Close' to return to the wallet.
           </div>
         </div>
-        <div
-          class="relative"
+        <svg
+          class="mx-auto mt-4 block w-full max-w-[400px]"
+          fill="none"
+          viewBox="0 0 400 126"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <div
-            class="pointer-events-none absolute bottom-4 right-3 z-10 hidden h-0 w-0 -rotate-45 border-x-8 border-t-8 border-x-transparent border-t-theme-secondary-400 dark:border-t-theme-secondary-700 md:block"
-          />
-          <div
-            class="py-4 css-1prn1rr"
-            disabled=""
+          <g
+            clip-path="url(#clip0_13894_13854)"
           >
-            <div
-              class="relative flex h-full flex-1"
+            <path
+              d="M39 30H23M31 22V38M17 30H1M9 22V38M17 52H1M9 44V60M17 74H1M9 66V82M17 96H1M9 88V104M39 118H23M31 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M119 38L119 22M127 30L111 30M97 38L97 22M105 30L89 30M75 38L75 22M83 30L67 30M75 16L75 -2.27299e-06M83 8L67 8M53 38L53 22M61 30L45 30M53 16L53 -3.23464e-06M61 8L45 8"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M378 8H362M370 0V16M400 30H384M392 22V38M378 30H362M370 22V38M400 52H384M392 44V60M400 74H384M392 66V82M400 96H384M392 88V104M334 96H318M326 88V104M356 118H340M348 110V126M334 118H318M326 110V126M312 118H296M304 110V126M290 118H274M282 110V126"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M326 22L326 38M318 30L334 30M348 -1.31134e-06L348 16M340 8L356 8M348 22L348 38M340 30L356 30"
+              stroke="#DBDEE5"
+              stroke-width="2"
+            />
+            <path
+              d="M146.611 51.278L163.174 67.9663M146.889 93.4533L150.017 90.2467M154.181 85.9784L163.373 76.5568M110.787 75.2722L113.498 72.5618L110.413 69.5288M97.703 88.3565L86 100.059H110.29L137.329 72.5618L110.29 45.5225H86L98.6179 57.9301M102.275 61.5266L108.04 67.1948M110.579 51.4411L131.469 72.489L110.857 93.6164M134.592 99.8952H122.949L150.447 72.3976L135.567 57.7658M171.021 87.834L168.609 90.2467L159.318 99.537H178M154.115 52.2371L147.238 45.3594L122.948 45.3594L130.908 53.1866M163.174 61.2954L158.812 56.934M141.408 99.8964H147.238L166.281 80.5309M255.611 51.278L276.501 72.3259L263.181 85.9784M255.889 93.4533L259.017 90.2467M292.837 93.2886L313.449 72.1612L296.861 55.4475M294.306 52.8726L292.559 51.1133M243.592 99.8952H231.949L259.447 72.3976L244.567 57.7658M235.573 83.5L246.329 72.5618L235.573 61.8059M236.5 76.5568L240.469 72.489L236.5 68.4902M293.106 74.7497L295.816 72.0394L292.732 69.0064M280.021 87.834L268.318 99.537H292.608L319.647 72.0393L292.608 45H268.318L280.936 57.4076M284.594 61.0041L290.358 66.6724M263.115 52.2371L256.238 45.3594L231.948 45.3594L239.908 53.1866M272.174 61.2954L267.812 56.934M275.281 64.4022L283.277 72.3988L256.238 99.8964H250.408M176.5 45H159.318L167.644 53.1866"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="351"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M351 75C353.209 75 355 73.2091 355 71C355 68.7909 353.209 67 351 67C348.791 67 347 68.7909 347 71C347 73.2091 348.791 75 351 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M343 87C343 82.5817 346.582 79 351 79C355.418 79 359 82.5817 359 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="23"
+              stroke="#DBDEE5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="53"
+              cy="72"
+              r="17"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M53 75C55.2091 75 57 73.2091 57 71C57 68.7909 55.2091 67 53 67C50.7909 67 49 68.7909 49 71C49 73.2091 50.7909 75 53 75Z"
+              fill-rule="evenodd"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              d="M45 87C45 82.5817 48.5817 79 53 79C57.4183 79 61 82.5817 61 87"
+              stroke="#212225"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.5"
+              cy="71.5"
+              r="31.5"
+              stroke="#DE5846"
+              stroke-width="2"
+            />
+            <circle
+              cx="200.488"
+              cy="71.4414"
+              fill="#DE5846"
+              fill-opacity="0.2"
+              r="27.5"
+            />
+            <path
+              d="M200.488 78.2664L206.938 84.7294C207.744 85.5373 208.801 85.9414 209.858 85.9414C210.915 85.9414 211.972 85.5373 212.779 84.7294C214.391 83.1135 214.391 80.4933 212.779 78.8774L206.328 72.415L212.727 66.0036C214.34 64.3877 214.34 61.7692 212.727 60.1533C211.114 58.5374 208.499 58.5374 206.886 60.1533C206.886 60.1533 206.533 60.5075 206.1 60.9414M200.488 66.5641L194.089 60.1533C192.476 58.5374 189.862 58.5374 188.25 60.1533C186.637 61.7692 186.637 64.3877 188.25 66.0036L194.648 72.415L188.198 78.8774C186.585 80.4933 186.585 83.1135 188.198 84.7294C189.811 86.3453 192.426 86.3453 194.037 84.7294L194.823 83.9414M203.859 63.1864L202.173 64.8753M198.317 80.4414L196.717 82.0444"
+              stroke="#DE5846"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_13894_13854"
             >
-              <textarea
-                autocomplete="off"
-                class="no-ligatures w-full border-none resize-none min-h-[8rem] md:min-h-auto md:resize-y resize-none text-theme-secondary-text css-1vs1awz"
-                data-testid="ErrorStep__errorMessage"
-                disabled=""
-                style="height: 4px;"
-                type="text"
-              >
-                test
-              </textarea>
-            </div>
-          </div>
-        </div>
+              <rect
+                fill="white"
+                height="126"
+                width="400"
+              />
+            </clippath>
+          </defs>
+        </svg>
       </div>
     </div>
     <div
       class="css-145pihz"
-    >
-      <div
-        class="mr-auto"
-      >
-        <div
-          class="relative"
-        >
-          <button
-            class="css-6419sw"
-            data-testid="clipboard-button__wrapper"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="copy"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                    />
-                    <path
-                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <span
-                class="hidden sm:block"
-              >
-                Copy Error
-              </span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </DocumentFragment>
 `;

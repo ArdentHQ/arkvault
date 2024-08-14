@@ -51,14 +51,37 @@ export interface ButtonsCellProperties {
 	onSelectOption: ReturnType<typeof useWalletActions>["handleSelectOption"];
 }
 
-export interface WalletListItemMobileProperties {
+interface MobileItemProperties {
 	onClick?: () => void;
 	onButtonClick?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
 	buttonLabel?: React.ReactNode;
+	selected?: boolean;
+}
+
+export interface WalletListItemMobileProperties extends MobileItemProperties {
 	isButtonDisabled?: boolean;
 	avatar?: React.ReactNode;
 	details?: React.ReactNode;
 	balance?: React.ReactNode;
 	extraDetails?: React.ReactNode;
+}
+export interface RecipientItemMobileProperties extends MobileItemProperties {
+	type: string;
+	address: React.ReactNode;
+	name: string;
+}
+
+export interface ReceiverItemMobileProperties extends MobileItemProperties {
+	address: React.ReactNode;
+	name: string;
+	balance: React.ReactNode;
+}
+export interface RecipientItemMobileProperties {
+	onClick?: () => void;
+	onButtonClick?: (event?: React.MouseEvent<HTMLElement, MouseEvent> | undefined) => void;
+	buttonLabel?: React.ReactNode;
 	selected?: boolean;
+	type: string;
+	address: React.ReactNode;
+	name: string;
 }

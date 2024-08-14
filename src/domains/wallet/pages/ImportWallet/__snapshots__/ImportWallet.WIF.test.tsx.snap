@@ -110,7 +110,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -148,7 +148,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -239,7 +239,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -301,7 +301,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
@@ -457,7 +457,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-n1b0kl"
+            class="sr-only css-1q57rjh"
           >
             <div
               class="relative flex h-full flex-1"
@@ -495,7 +495,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-n1b0kl"
+                  class="css-1q57rjh"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -586,7 +586,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-n1b0kl"
+          class="css-1q57rjh"
         >
           <div
             class="relative flex h-full flex-1"
@@ -648,7 +648,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
         </div>
       </fieldset>
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-pvb4ee"
+        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
         type="horizontal"
       />
       <div
