@@ -1,4 +1,3 @@
-
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
@@ -989,7 +988,7 @@ describe("Servers Settings", () => {
 		});
 
 		it("can refresh servers in mobile", async () => {
-			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn())
+			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
 
 			renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
@@ -1010,10 +1009,10 @@ describe("Servers Settings", () => {
 			await userEvent.click(screen.getByTestId("CustomPeers-network-item--mobile--refresh"));
 
 			await waitFor(() => {
-				expect(refreshPersistMock).toHaveBeenCalledOnce()
-			})
+				expect(refreshPersistMock).toHaveBeenCalledOnce();
+			});
 
-			refreshPersistMock.mockRestore()
+			refreshPersistMock.mockRestore();
 		});
 
 		it("should not expand peer when clicking on status", async () => {
@@ -1452,6 +1451,5 @@ describe("Servers Settings", () => {
 
 			expect(asFragment()).toMatchSnapshot();
 		});
-
 	});
 });
