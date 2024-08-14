@@ -518,6 +518,32 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/sign-message`));
 	});
+
+	it("should not navigate when clicking multiple times", async () => {
+		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
+		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true)
+
+		const { container } = render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+			},
+		);
+
+		expect(container).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)));
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
+		await userEvent.click(screen.getAllByText(profile.settings().get(Contracts.ProfileSetting.Name))[0]);
+
+		mockDelegateName.mockRestore();
+		mockProfiles.mockRestore();
+		mockUsesPassword.mockRestore();
+	});
 });
 
 describe("Welcome", () => {
