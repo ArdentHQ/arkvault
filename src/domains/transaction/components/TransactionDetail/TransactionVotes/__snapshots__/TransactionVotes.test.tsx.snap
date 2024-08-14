@@ -82,7 +82,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -125,7 +125,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -191,7 +191,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -234,7 +234,7 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -305,7 +305,7 @@ exports[`TransactionVotes > should render with unvotes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -376,7 +376,7 @@ exports[`TransactionVotes > should render with votes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -447,7 +447,7 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"
@@ -513,7 +513,7 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="test-address"

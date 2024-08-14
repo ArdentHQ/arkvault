@@ -43,7 +43,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -444,7 +444,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -870,7 +870,7 @@ exports[`WalletHeader > should render 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1189,7 +1189,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1514,7 +1514,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1859,7 +1859,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2210,7 +2210,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2561,7 +2561,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2941,7 +2941,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

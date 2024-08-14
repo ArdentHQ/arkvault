@@ -159,7 +159,7 @@ exports[`ProfilePageSkeleton > should render without profile 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="w-full"

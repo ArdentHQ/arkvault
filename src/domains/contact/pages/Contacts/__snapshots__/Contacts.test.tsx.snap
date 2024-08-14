@@ -538,7 +538,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -564,7 +564,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -696,7 +696,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="w-full"
@@ -896,7 +896,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1130,7 +1130,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
@@ -1352,7 +1352,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
@@ -1574,7 +1574,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
@@ -2290,7 +2290,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2316,7 +2316,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2448,7 +2448,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="w-full"
@@ -2648,7 +2648,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2882,7 +2882,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
@@ -3104,7 +3104,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
@@ -3326,7 +3326,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
@@ -4042,7 +4042,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4965,7 +4965,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4991,7 +4991,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -5123,7 +5123,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="w-full"
@@ -5323,7 +5323,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -5557,7 +5557,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
@@ -5779,7 +5779,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
@@ -6001,7 +6001,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
@@ -6717,7 +6717,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -6743,7 +6743,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6792,7 +6792,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"

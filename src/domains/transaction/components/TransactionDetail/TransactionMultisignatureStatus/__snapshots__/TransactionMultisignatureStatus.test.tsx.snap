@@ -132,7 +132,7 @@ exports[`TransactionMultisignatureStatus > should not render delegate icon 1`] =
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -271,7 +271,7 @@ exports[`TransactionMultisignatureStatus > should render in lg awaiting final si
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -410,7 +410,7 @@ exports[`TransactionMultisignatureStatus > should render in md awaiting final si
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -555,7 +555,7 @@ exports[`TransactionMultisignatureStatus > should render in sm awaiting final si
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -696,7 +696,7 @@ exports[`TransactionMultisignatureStatus > should render in xl awaiting final si
           data-testid="Avatar"
         >
           <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
           >
             <img
               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -841,7 +841,7 @@ exports[`TransactionMultisignatureStatus > should render in xs awaiting final si
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

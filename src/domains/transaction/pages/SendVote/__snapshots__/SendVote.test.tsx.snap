@@ -545,7 +545,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -571,7 +571,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1222,7 +1222,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1260,7 +1260,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1313,7 +1313,7 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1832,7 +1832,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1858,7 +1858,7 @@ exports[`SendVote > should show error if wrong mnemonic 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -2648,7 +2648,7 @@ exports[`SendVote > should show error step and go back 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2674,7 +2674,7 @@ exports[`SendVote > should show error step and go back 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
