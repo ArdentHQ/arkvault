@@ -28,7 +28,6 @@ import {
 } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
-const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
 
 const submitTestID = "SignIn__submit-button";
 const passwordTestID = "SignIn__input--password";
@@ -523,7 +522,7 @@ describe("Welcome with deeplink", () => {
 describe("Welcome", () => {
 	it("should render with profiles", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
-		const profile = env.profiles().findById(fixtureProfileId);
+		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -531,20 +530,26 @@ describe("Welcome", () => {
 
 		await userEvent.click(screen.getByText(profile.name()));
 
-		expect(history.location.pathname).toBe(profileDashboardUrl);
+		await submitPassword();
+
+		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to profile dashboard", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 
-		const profile = env.profiles().findById(fixtureProfileId);
+		const profile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
 		expect(container).toBeInTheDocument();
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+
+		await expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
+		await submitPassword();
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
