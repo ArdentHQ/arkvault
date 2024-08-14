@@ -167,7 +167,7 @@ describe("Servers Settings", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render servers settings", async () => {
+	it("should render servers settings", () => {
 		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/settings/servers">
 				<ServersSettings />
@@ -229,7 +229,7 @@ describe("Servers Settings", () => {
 	});
 
 	describe("default peers", () => {
-		it("should render node statuses", async () => {
+		it("should render node statuses", () => {
 			const { container } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -246,7 +246,7 @@ describe("Servers Settings", () => {
 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 		});
 
-		it("should render only live nodes if doesnt use test networks", async () => {
+		it("should render only live nodes if doesnt use test networks", () => {
 			const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 			const { container } = render(
@@ -706,7 +706,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render custom servers", async () => {
+		it("should render custom servers", () => {
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -863,7 +863,7 @@ describe("Servers Settings", () => {
 			expect(nameField).toHaveValue("ARK Peer #1");
 		});
 
-		it("should render customs servers in xs", async () => {
+		it("should render customs servers in xs", () => {
 			const { asFragment } = renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
