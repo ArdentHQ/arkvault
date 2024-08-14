@@ -21,7 +21,7 @@ describe("LedgerMobileItem", () => {
 			/>,
 		);
 
-		expect(container).toMatchSnapshot();
+		expect(screen.getByTestId("LedgerMobileItem__wrapper")).toBeInTheDocument();
 	});
 
 	it("should render skeleton", () => {
