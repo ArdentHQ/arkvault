@@ -616,7 +616,9 @@ describe("SendDelegateResignation", () => {
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			await userEvent.clear(screen.getByTestId("AuthenticationStep__encryption-password"));
-			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+			await userEvent.type(screen.getByTestId("AuthenticationStep__encryption-password"), "password", {
+				delay: 100,
+			});
 			await waitFor(() =>
 				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 			);
