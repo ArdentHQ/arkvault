@@ -149,7 +149,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -213,7 +213,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -319,7 +319,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -383,7 +383,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -622,7 +622,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -686,7 +686,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
@@ -792,7 +792,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -856,7 +856,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1130,7 +1130,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1148,7 +1148,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1464,7 +1464,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1482,7 +1482,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"

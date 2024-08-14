@@ -6,7 +6,7 @@ exports[`AddressTable > should render 1`] = `
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-10 lg:container"
     >
       <div
         data-testid="AddressTable"
@@ -289,7 +289,7 @@ exports[`AddressTable > should render 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -358,7 +358,7 @@ exports[`AddressTable > should render 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -609,7 +609,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -664,7 +664,7 @@ exports[`AddressTable > should render in xs screen 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -911,7 +911,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -966,7 +966,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 1
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1213,7 +1213,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1268,7 +1268,7 @@ exports[`AddressTable > should render in xs screen when wallet network is live 2
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1402,7 +1402,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-10 lg:container"
     >
       <div
         data-testid="AddressTable"
@@ -1669,7 +1669,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1748,7 +1748,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1839,7 +1839,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-10 lg:container"
     >
       <div
         data-testid="AddressTable"
@@ -2122,7 +2122,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

@@ -61,11 +61,13 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			{
 				Header: t("COMMON.ADDRESS"),
 				accessor: "address",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
 				accessor: "balance",
 				className: "justify-end",
+				headerClassName: "no-border",
 			},
 		],
 		[t, isAllSelected, isScanning, toggleSelectAll],

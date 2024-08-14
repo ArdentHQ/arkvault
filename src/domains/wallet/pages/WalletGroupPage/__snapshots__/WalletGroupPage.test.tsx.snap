@@ -543,7 +543,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -569,7 +569,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex flex-col rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 dark:bg-theme-background md:border-2"
@@ -1110,7 +1110,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1334,7 +1334,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1558,7 +1558,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1782,7 +1782,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2006,7 +2006,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2230,7 +2230,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2454,7 +2454,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2678,7 +2678,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2902,7 +2902,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3126,7 +3126,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3350,7 +3350,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3574,7 +3574,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3798,7 +3798,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4022,7 +4022,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4246,7 +4246,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

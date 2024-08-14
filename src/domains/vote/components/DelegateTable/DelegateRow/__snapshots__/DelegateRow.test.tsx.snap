@@ -24,7 +24,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -220,7 +220,7 @@ exports[`DelegateRow > should render 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -416,7 +416,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -657,7 +657,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -853,7 +853,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1040,7 +1040,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1227,7 +1227,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1426,7 +1426,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1613,7 +1613,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1800,7 +1800,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1999,7 +1999,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2195,7 +2195,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"

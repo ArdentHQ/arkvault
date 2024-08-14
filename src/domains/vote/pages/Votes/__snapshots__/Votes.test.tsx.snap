@@ -545,7 +545,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -571,7 +571,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -790,7 +790,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -988,7 +988,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -1185,7 +1185,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1214,7 +1214,7 @@ exports[`Votes > should filter current delegates 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2113,7 +2113,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2139,7 +2139,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2306,7 +2306,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -2565,7 +2565,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -2758,7 +2758,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -2951,7 +2951,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -3152,7 +3152,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3181,7 +3181,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4084,7 +4084,7 @@ exports[`Votes > should render 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4110,7 +4110,7 @@ exports[`Votes > should render 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -4277,7 +4277,7 @@ exports[`Votes > should render 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -4475,7 +4475,7 @@ exports[`Votes > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -4668,7 +4668,7 @@ exports[`Votes > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -4861,7 +4861,7 @@ exports[`Votes > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -5062,7 +5062,7 @@ exports[`Votes > should render 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5091,7 +5091,7 @@ exports[`Votes > should render 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5990,7 +5990,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -6016,7 +6016,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6183,7 +6183,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -6381,7 +6381,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -6574,7 +6574,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -6767,7 +6767,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -6968,7 +6968,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6997,7 +6997,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7896,7 +7896,7 @@ exports[`Votes > should render with no wallets 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -7920,7 +7920,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -7952,7 +7952,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -8617,7 +8617,7 @@ exports[`Votes > should select a delegate 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -8643,7 +8643,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -8810,7 +8810,7 @@ exports[`Votes > should select a delegate 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -9008,7 +9008,7 @@ exports[`Votes > should select a delegate 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -9201,7 +9201,7 @@ exports[`Votes > should select a delegate 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -9394,7 +9394,7 @@ exports[`Votes > should select a delegate 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -9595,7 +9595,7 @@ exports[`Votes > should select a delegate 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9624,7 +9624,7 @@ exports[`Votes > should select a delegate 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -10519,7 +10519,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -10545,7 +10545,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -10889,7 +10889,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -11929,7 +11929,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -11955,7 +11955,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -12299,7 +12299,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -13342,7 +13342,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -13368,7 +13368,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -13535,7 +13535,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -13794,7 +13794,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -13987,7 +13987,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -14180,7 +14180,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -14381,7 +14381,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14410,7 +14410,7 @@ exports[`Votes > should show resigned delegate notice 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -15306,7 +15306,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -15332,7 +15332,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -15669,7 +15669,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             data-testid="AddressTable"
@@ -15952,7 +15952,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
@@ -16060,7 +16060,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -16178,7 +16178,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -16833,7 +16833,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -16859,7 +16859,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -17026,7 +17026,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10 lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -17285,7 +17285,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -17478,7 +17478,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -17674,7 +17674,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8"
@@ -17878,7 +17878,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -17907,7 +17907,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

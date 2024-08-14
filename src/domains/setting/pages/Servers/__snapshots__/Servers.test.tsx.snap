@@ -541,7 +541,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -922,7 +922,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -1871,7 +1871,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2252,7 +2252,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -4025,7 +4025,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4406,7 +4406,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -6179,7 +6179,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -6560,7 +6560,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -7925,7 +7925,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -8306,7 +8306,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -10217,7 +10217,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -10598,7 +10598,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -12101,7 +12101,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -12482,7 +12482,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -14238,7 +14238,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -14619,7 +14619,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -16515,7 +16515,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -16896,7 +16896,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -18384,7 +18384,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -18765,7 +18765,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="-mt-2 lg:mt-0 css-ycib48"
             >
               <div
-                class="mx-auto px-8 lg:container md:px-10 lg:px-12"
+                class="mx-auto px-10 lg:container lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
