@@ -51,6 +51,11 @@ const sampleLedgerData: LedgerData[] = [
 		balance: 7000,
 		path: "3431437",
 	},
+	{
+		address: "D1rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+		balance: 8000,
+		path: "3431237",
+	},
 ];
 
 describe("LedgerScanStep", () => {
@@ -257,18 +262,18 @@ describe("LedgerScanStep", () => {
 			<LedgerTable
 				wallets={sampleLedgerData}
 				selectedWallets={[]}
-				isScanningMore
+				isScanningMore={false}
 				isSelected={() => false}
 				network={profile.wallets().first().network()}
 			/>,
 		);
 
-		expect(screen.getAllByRole("row")).toHaveLength(6);
+		expect(screen.getAllByRole("row")).toHaveLength(7);
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__load-more"));
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("row")).toHaveLength(7);
+			expect(screen.getAllByRole("row")).toHaveLength(9);
 		});
 	});
 
