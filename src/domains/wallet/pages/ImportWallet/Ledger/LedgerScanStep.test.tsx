@@ -292,9 +292,9 @@ describe("LedgerScanStep", () => {
 			/>,
 		);
 
-		await userEvent.click(screen.getAllByRole("checkbox")[4]);
+		await userEvent.click(screen.getAllByTestId("LedgerMobileItem__checkbox")[1]);
 
-		expect(toggleSelect).toHaveBeenCalled();
+		await expect(toggleSelect).toHaveBeenCalled();
 	});
 
 	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
