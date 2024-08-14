@@ -522,7 +522,7 @@ describe("Welcome with deeplink", () => {
 	it("should not navigate when clicking multiple times", async () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
-		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true)
+		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);
 
 		const { container } = render(
 			<Route path="/">
