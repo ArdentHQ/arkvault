@@ -523,7 +523,7 @@ describe("Welcome with deeplink", () => {
 describe("Welcome", () => {
 	it("should render with profiles", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
-		const profile = env.profiles().findById(mockedProfileIdp);
+		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -540,7 +540,7 @@ describe("Welcome", () => {
 	it("should navigate to profile dashboard", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 
-		const profile = env.profiles().findById("mockedProfileId");
+		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -564,7 +564,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const profile = env.profiles().findById("mockedProfileId");
+		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
@@ -644,7 +644,7 @@ describe("Welcome", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const profile = env.profiles().findById("mockedProfileId");
+		const profile = env.profiles().findById(mockedProfileId);
 
 		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
 
