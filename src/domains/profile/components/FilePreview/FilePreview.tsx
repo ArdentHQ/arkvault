@@ -23,7 +23,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 		<div className="flex items-center justify-between space-x-4">
 			<div className="flex flex-grow items-center space-x-2">
 				<Icon name={fileTypeIcon[file.extension] || "File"} size="lg" />
-				<div className="w-0 flex-1 text-lg leading-[21px] truncate font-semibold">{file.name}</div>
+				<div className="w-0 flex-1 text-sm sm:text-lg leading-[17px] sm:leading-[21px] truncate font-semibold">{file.name}</div>
 			</div>
 
 			{variant === "loading" && <Spinner className="!border-[3px] !w-6 !h-6"/>}
@@ -53,7 +53,7 @@ export const FilePreview = ({ file, useBorders = true, variant }: FilePreviewPro
 	}
 
 	return (
-		<div className="rounded-lg border border-theme-secondary-300 py-5 px-6 dark:border-theme-secondary-800">
+		<div className="rounded-xl border border-theme-secondary-300 p-4 sm:py-5 sm:px-6 dark:border-theme-secondary-800">
 			<FilePreviewPlain variant={variant} file={file} />
 		</div>
 	);

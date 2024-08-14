@@ -120,7 +120,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 						/>
 					)}
 
-					<div className="flex pb-1">
+					<div className="flex pb-1 flex-col sm:flex-row">
 						<FormField className="flex flex-1 flex-col" name="currency">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 							<Select
@@ -141,7 +141,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							/>
 						</FormField>
 
-						<div className="ml-4 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800">
+						<div className="sm:ml-4 sm:border-l border-theme-secondary-300 mt-4 sm:mt-0 sm:pl-4 dark:border-theme-secondary-800">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
 								<ButtonGroup className="space-x-2">

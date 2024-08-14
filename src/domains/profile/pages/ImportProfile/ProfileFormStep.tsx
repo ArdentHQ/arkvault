@@ -73,11 +73,11 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 			/>
 
 			<div className="rounded-xl border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 mt-4 sm:border">
-				<div className="px-6 py-5 bg-theme-secondary-100 dark:bg-black rounded-t-xl">
+				<div className="p-4 sm:px-6 sm:py-5 bg-theme-secondary-100 dark:bg-black rounded-xl sm:rounded-b-none sm:rounded-t-xl">
 					<FilePreview file={file} variant="success" useBorders={false} />
 				</div>
 
-				<div className="px-6 pb-6 pt-5 mb-16 sm:mb-0">
+				<div className="sm:px-6 pb-6 pt-5 mb-16 sm:mb-0">
 					<ProfileForm
 						defaultValues={{
 							avatarImage: profile.settings().get(Contracts.ProfileSetting.Avatar, ""),
