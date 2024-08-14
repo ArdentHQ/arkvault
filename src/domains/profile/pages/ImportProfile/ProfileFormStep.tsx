@@ -8,6 +8,7 @@ import { ProfileForm, ProfileFormState } from "@/domains/profile/components/Prof
 import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useAccentColor } from "@/app/hooks";
+import { Icon } from "@/app/components/Icon";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;
@@ -65,16 +66,18 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 
 	return (
 		<div className="mx-auto max-w-xl">
-			<StepHeader title={t("PROFILE.IMPORT.TITLE")} subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")} />
+			<StepHeader
+				titleIcon={<Icon name="ImportProfile" dimensions={[24, 24]} />}
+				title={t("PROFILE.IMPORT.TITLE")}
+				subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")}
+			/>
 
-			<div className="rounded-lg border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 sm:mt-6 sm:border sm:p-10">
-				<div className="mt-6 sm:mt-0">
+			<div className="rounded-xl border-theme-secondary-300 bg-theme-background dark:border-theme-secondary-800 mt-4 sm:border">
+				<div className="px-6 py-5 bg-theme-secondary-100 rounded-t-xl">
 					<FilePreview file={file} variant="success" useBorders={false} />
 				</div>
 
-				<Divider />
-
-				<div className="mb-16 sm:mb-0">
+				<div className="px-6 pb-6 pt-5 mb-16 sm:mb-0">
 					<ProfileForm
 						defaultValues={{
 							avatarImage: profile.settings().get(Contracts.ProfileSetting.Avatar, ""),

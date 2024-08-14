@@ -11,6 +11,7 @@ import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useNavigationContext } from "@/app/contexts";
+import { Icon } from "@/app/components/Icon";
 
 interface ImportErrorProperties {
 	file: ReadableFile;
@@ -29,11 +30,11 @@ const ImportError = ({ file, onCancel, onRetry }: ImportErrorProperties) => {
 
 	return (
 		<div className="mx-auto max-w-xl" data-testid="ImportError">
-			<Alert className="mt-6" variant="danger">
+			<Alert className="mt-4" variant="danger">
 				{t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.ERROR")}
 			</Alert>
 
-			<div className="mt-6">
+			<div className="mt-4">
 				<FilePreview file={file} variant="danger" />
 			</div>
 
@@ -112,11 +113,12 @@ export const ProcessingImport = ({
 	return (
 		<div className="mx-auto max-w-xl" data-testid="ProcessingImport">
 			<StepHeader
+				titleIcon={<Icon name="ImportProfile" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.DESCRIPTION", { name: file?.name || "" })}
 			/>
 
-			<div className="mt-6 sm:mt-8">{renderStep()}</div>
+			<div className="mt-4">{renderStep()}</div>
 
 			<div className="items-left text-left">
 				<PasswordModal

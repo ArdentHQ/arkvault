@@ -80,6 +80,7 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import ImportProfile from "../svg/import-profile.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
@@ -172,4 +173,5 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UserCheckMark,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
+	ImportProfile,
 };

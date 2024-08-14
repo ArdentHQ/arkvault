@@ -95,36 +95,20 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 	return (
 		<div>
 			<Form context={form} onSubmit={onSubmit} data-testid="ProfileForm__form">
-				<div className="relative space-y-5">
-					<div className="flex items-end justify-between">
-						<div className="mr-6 w-full">
-							<FormField name="name">
-								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
-								<InputDefault
-									ref={register(createProfile.name())}
-									onBlur={() => {
-										/* istanbul ignore else -- @preserve */
-										if (avatarImage.length === 0 || isSvg) {
-											setValue("avatarImage", Helpers.Avatar.make(formattedName));
-										}
-									}}
-								/>
-							</FormField>
-						</div>
-
-						<SelectProfileImage
-							value={avatarImage}
-							name={formattedName}
-							showLabel={false}
-							onSelect={(image) => {
-								if (!image) {
-									setValue("avatarImage", formattedName ? Helpers.Avatar.make(formattedName) : "");
-									return;
-								}
-
-								setValue("avatarImage", image);
-							}}
-						/>
+				<div className="relative space-y-4">
+					<div>
+						<FormField name="name">
+							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
+							<InputDefault
+								ref={register(createProfile.name())}
+								onBlur={() => {
+									/* istanbul ignore else -- @preserve */
+									if (avatarImage.length === 0 || isSvg) {
+										setValue("avatarImage", Helpers.Avatar.make(formattedName));
+									}
+								}}
+							/>
+						</FormField>
 					</div>
 
 					{showPasswordFields && (
@@ -136,7 +120,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 						/>
 					)}
 
-					<div className="flex pb-1 sm:pb-3">
+					<div className="flex pb-1">
 						<FormField className="flex flex-1 flex-col" name="currency">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 							<Select
@@ -188,7 +172,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 				<Divider />
 
-				<div className="mb-8 pt-1 sm:py-3">
+				<div className="mb-8 py-1">
 					<FormField name="disclaimer">
 						<label className="flex cursor-pointer items-center space-x-3">
 							<Checkbox

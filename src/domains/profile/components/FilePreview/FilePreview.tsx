@@ -21,21 +21,21 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 
 	return (
 		<div className="flex items-center justify-between space-x-4">
-			<div className="flex flex-grow items-center space-x-4">
-				<Icon name={fileTypeIcon[file.extension] || "File"} size="xl" />
-				<div className="w-0 flex-1 truncate font-semibold">{file.name}</div>
+			<div className="flex flex-grow items-center space-x-2">
+				<Icon name={fileTypeIcon[file.extension] || "File"} size="lg" />
+				<div className="w-0 flex-1 text-lg leading-[21px] truncate font-semibold">{file.name}</div>
 			</div>
 
-			{variant === "loading" && <Spinner size="md" />}
+			{variant === "loading" && <Spinner className="!border-[3px] !w-6 !h-6"/>}
 
 			{variant === "danger" && (
-				<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500">
+				<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-danger-200 text-theme-danger-500">
 					<Icon name="CrossSmall" size="sm" />
 				</div>
 			)}
 
 			{variant === "success" && (
-				<div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500">
+				<div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500">
 					<Icon name="CheckmarkSmall" size="sm" />
 				</div>
 			)}
@@ -53,7 +53,7 @@ export const FilePreview = ({ file, useBorders = true, variant }: FilePreviewPro
 	}
 
 	return (
-		<div className="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800">
+		<div className="rounded-lg border border-theme-secondary-300 py-5 px-6 dark:border-theme-secondary-800">
 			<FilePreviewPlain variant={variant} file={file} />
 		</div>
 	);

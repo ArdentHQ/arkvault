@@ -111,7 +111,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 		<>
 			{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} size="xl" />}
 
-			<div className="mt-8">
+			<div className="mt-4">
 				<span className="mr-px hidden font-semibold sm:inline">
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")}{" "}
 				</span>
@@ -136,7 +136,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	return (
 		<div
 			data-testid="SelectFile"
-			className="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+			className="relative mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 p-1.5 dark:border-theme-secondary-800"
 		>
 			<div
 				data-testid="SelectFile__drop-zone"
