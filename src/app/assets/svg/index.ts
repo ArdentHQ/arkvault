@@ -44,6 +44,7 @@ import GlobePointer from "./globe-pointer.svg?react";
 import Grid from "./grid.svg?react";
 import HintSmall from "./hint-small.svg?react";
 import Ledger from "./ledger.svg?react";
+import LedgerAlt from "./ledger-alt.svg?react";
 import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
@@ -139,6 +140,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ImportWalletDark,
 	ImportWalletLight,
 	Ledger,
+	LedgerAlt,
 	List,
 	LoaderLogo,
 	Lock,

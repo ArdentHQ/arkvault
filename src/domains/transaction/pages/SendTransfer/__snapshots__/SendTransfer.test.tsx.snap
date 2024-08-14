@@ -459,7 +459,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2042,7 +2042,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -2857,7 +2857,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -4185,7 +4185,7 @@ exports[`SendTransfer > should render form and use location state with network p
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -5513,7 +5513,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                   data-testid="SendTransfer__form-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -6266,7 +6266,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -6972,7 +6972,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -7665,7 +7665,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -8385,7 +8385,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -9105,7 +9105,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -9749,7 +9749,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
     data-testid="SendTransfer__form-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11031,7 +11031,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   data-testid="SendTransfer__network-step"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -11268,7 +11268,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
     data-testid="SendTransfer__network-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11455,7 +11455,7 @@ exports[`SendTransfer > should render network step with network cards 1`] = `
     data-testid="SendTransfer__network-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -11655,7 +11655,7 @@ exports[`SendTransfer > should render review step 1`] = `
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -12083,7 +12083,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -12556,7 +12556,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
     data-testid="SendTransfer__review-step"
   >
     <div
-      class="sm:mt-8"
+      class="w-full sm:mt-8"
     >
       <div
         class="flex flex-col"
@@ -13583,7 +13583,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -14852,7 +14852,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -16673,7 +16673,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -17942,7 +17942,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -19211,7 +19211,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   data-testid="TransactionSuccessful"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"

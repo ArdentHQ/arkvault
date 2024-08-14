@@ -3,7 +3,7 @@
 exports[`StepHeader > should render 1`] = `
 <DocumentFragment>
   <div
-    class="sm:mt-8"
+    class="w-full sm:mt-8"
   >
     <div
       class="flex flex-col"
@@ -94,7 +94,7 @@ exports[`StepHeader > should render simple header without a provider 1`] = `
 exports[`StepHeader > should render with extra 1`] = `
 <DocumentFragment>
   <div
-    class="sm:mt-8"
+    class="w-full sm:mt-8"
   >
     <div
       class="flex flex-col"

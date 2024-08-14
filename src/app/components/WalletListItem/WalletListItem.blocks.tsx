@@ -20,6 +20,7 @@ import {
 	StarredProperties,
 	InfoProperties,
 	RecipientItemMobileProperties,
+	ReceiverItemMobileProperties,
 } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useBreakpoint, useWalletAlias } from "@/app/hooks";
@@ -435,6 +436,47 @@ export const RecipientItemMobile: React.FC<RecipientItemMobileProperties> = ({
 					name="CircleCheckMark"
 					size="lg"
 				/>
+			</div>
+		</div>
+	);
+};
+
+export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
+	onClick,
+	selected = false,
+	balance,
+	address,
+	name,
+}) => {
+	const { t } = useTranslation();
+
+	return (
+		<div
+			data-testid={selected ? "ReceiverItemMobile--selected" : "ReceiverItemMobile"}
+			className={cn(
+				"flex h-[117px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-theme-primary-100 p-2 ring-2 dark:bg-theme-background",
+				{
+					"ring-theme-primary-100 dark:ring-theme-secondary-800": !selected,
+					"ring-theme-primary-600 dark:ring-theme-primary-600": selected,
+				},
+			)}
+			tabIndex={onClick ? 0 : -1}
+			onClick={onClick}
+		>
+			<div className="flex flex-col gap-2 pl-2 pt-2">
+				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					{name}
+				</span>
+				<span className="text-xs font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
+					{address}
+				</span>
+			</div>
+
+			<div className="flex flex-row items-center justify-between overflow-hidden rounded-lg bg-theme-primary-500 text-sm font-semibold text-white">
+				<div className="pl-2">{balance}</div>
+				<button className="flex h-full items-center justify-center bg-theme-primary-600 px-5 py-3">
+					{t("COMMON.SELECT")}
+				</button>
 			</div>
 		</div>
 	);

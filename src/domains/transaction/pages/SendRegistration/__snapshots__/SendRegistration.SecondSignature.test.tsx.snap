@@ -462,7 +462,7 @@ exports[`Second Signature Registration > should register second signature 1`] = 
                   data-testid="AuthenticationStep"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
