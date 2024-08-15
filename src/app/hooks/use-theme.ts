@@ -3,7 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Theme } from "@/types";
 import { shouldUseDarkColors } from "@/utils/theme";
 import { browser } from "@/utils/platform";
-import {useCallback, useEffect, useState} from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export type ViewingModeType = "light" | "dark";
 
@@ -56,9 +56,12 @@ export const useTheme: () => {
 
 	const isDarkMode = theme === "dark";
 
-	const onThemeChange = useCallback((data: CustomEvent) => {
-		setCurrentTheme(data.detail as ViewingModeType)
-	}, [setCurrentTheme])
+	const onThemeChange = useCallback(
+		(data: CustomEvent) => {
+			setCurrentTheme(data.detail as ViewingModeType);
+		},
+		[setCurrentTheme],
+	);
 
 	useEffect(() => {
 		const htmlElement = document.querySelector("html") as HTMLElement;
