@@ -24,11 +24,7 @@ export const FilePreviewPlain = ({ file, variant }: { file: ReadableFile; varian
 	return (
 		<div className="flex items-center justify-between space-x-4" data-testid="FilePreviewPlain">
 			<div className="flex flex-grow items-center space-x-2">
-				<ThemeIcon
-					darkIcon={icons ? icons[0] : "File"}
-					lightIcon={icons ? icons[1] : "File"}
-					size="lg"
-				/>
+				<ThemeIcon darkIcon={icons ? icons[0] : "File"} lightIcon={icons ? icons[1] : "File"} size="lg" />
 				<div className="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]">
 					{file.name}
 				</div>
