@@ -3,6 +3,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Theme } from "@/types";
 import { shouldUseDarkColors } from "@/utils/theme";
 import { browser } from "@/utils/platform";
+import {useCallback, useEffect, useState} from "react";
 
 export type ViewingModeType = "light" | "dark";
 
@@ -23,11 +24,15 @@ const setTheme = (theme: Theme) => {
 			document.documentElement.classList.add(`firefox-scrollbar-${theme}`);
 		}
 
+		htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: theme }));
+
 		return;
 	}
 
 	htmlElement.classList.remove(theme === "dark" ? "light" : "dark");
 	htmlElement.classList.add(theme);
+
+	htmlElement.dispatchEvent(new CustomEvent("themeChanged", { detail: theme }));
 
 	if (!browser.supportsOverflowOverlay()) {
 		document.documentElement.classList.remove(
@@ -47,8 +52,23 @@ export const useTheme: () => {
 	theme: "light" | "dark";
 	setProfileTheme: (profile: Contracts.IProfile) => void;
 } = () => {
-	const theme: ViewingModeType = shouldUseDarkColors() ? "dark" : "light";
+	const [theme, setCurrentTheme] = useState<ViewingModeType>(shouldUseDarkColors() ? "dark" : "light");
+
 	const isDarkMode = theme === "dark";
+
+	const onThemeChange = useCallback((data: CustomEvent) => {
+		setCurrentTheme(data.detail as ViewingModeType)
+	}, [setCurrentTheme])
+
+	useEffect(() => {
+		const htmlElement = document.querySelector("html") as HTMLElement;
+
+		htmlElement.addEventListener("themeChanged", onThemeChange as EventListener);
+
+		return () => {
+			htmlElement.removeEventListener("themeChanged", onThemeChange as EventListener);
+		};
+	}, [onThemeChange]);
 
 	const setProfileTheme = (profile: Contracts.IProfile) => {
 		const profileTheme = profile.appearance().get("theme");
