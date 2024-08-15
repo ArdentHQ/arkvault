@@ -979,7 +979,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                                 id="SelectRecipient__dropdown-label"
                               />
                               <div
-                                class="css-13c7w0w"
+                                class="css-xk5t3v"
                                 disabled=""
                               >
                                 <div
@@ -1760,7 +1760,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
               >
                 Transaction ID
-                :
+                : 
                 id
               </span>
               <span
@@ -1958,7 +1958,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
                 </span>
                 <span>
                   ≈
-
+                   
                   <span
                     class="whitespace-nowrap font-semibold"
                     data-testid="Amount"
@@ -2029,7 +2029,7 @@ exports[`ExchangeForm > should render exchange form with id of pending order 1`]
             <div
               class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
             >
-              If you have any question about your exchange, please contact ChangeNOW support team via email at
+              If you have any question about your exchange, please contact ChangeNOW support team via email at 
               <a
                 class="ring-focus group inline-block css-7nwwrh"
                 data-ring-focus-margin="-m-1"
@@ -2135,7 +2135,7 @@ exports[`FormStep > should render 1`] = `
                     id="fromCurrency-label"
                   />
                   <div
-                    class="css-13c7w0w"
+                    class="css-xk5t3v"
                     disabled=""
                   >
                     <div
@@ -2366,7 +2366,7 @@ exports[`FormStep > should render 1`] = `
                       id="toCurrency-label"
                     />
                     <div
-                      class="css-13c7w0w"
+                      class="css-xk5t3v"
                       disabled=""
                     >
                       <div
@@ -2547,7 +2547,7 @@ exports[`FormStep > should render 1`] = `
                         id="SelectRecipient__dropdown-label"
                       />
                       <div
-                        class="css-13c7w0w"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
@@ -2621,9 +2621,9 @@ exports[`ReviewStep > should render 1`] = `
         <span
           class="text-xs font-semibold"
         >
-          1
+          1 
           BTC
-           ≈
+           ≈ 
           <span
             class="whitespace-nowrap"
             data-testid="Amount"
@@ -2697,7 +2697,7 @@ exports[`ReviewStep > should render 1`] = `
           type="checkbox"
         />
         <span>
-          I've read and agree to the ChangeNOW
+          I've read and agree to the ChangeNOW 
           <a
             class="ring-focus group inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
@@ -2735,7 +2735,7 @@ exports[`ReviewStep > should render 1`] = `
               </svg>
             </div>
           </a>
-           and
+           and 
           <a
             class="ring-focus group inline-block css-7nwwrh"
             data-ring-focus-margin="-m-1"
@@ -2793,7 +2793,7 @@ exports[`StatusStep > should render 1`] = `
         class="text-xs font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
       >
         Transaction ID
-        :
+        : 
         id
       </span>
       <span
@@ -2991,7 +2991,7 @@ exports[`StatusStep > should render 1`] = `
         </span>
         <span>
           ≈
-
+           
           <span
             class="whitespace-nowrap font-semibold"
             data-testid="Amount"
@@ -3062,7 +3062,7 @@ exports[`StatusStep > should render 1`] = `
     <div
       class="mt-6 rounded-lg bg-theme-secondary-100 px-6 py-3 text-sm dark:bg-theme-secondary-800"
     >
-      If you have any question about your exchange, please contact ChangeNOW support team via email at
+      If you have any question about your exchange, please contact ChangeNOW support team via email at 
       <a
         class="ring-focus group inline-block css-7nwwrh"
         data-ring-focus-margin="-m-1"

@@ -696,7 +696,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-13c7w0w"
+                                    class="css-xk5t3v"
                                     disabled=""
                                   >
                                     <div
@@ -927,7 +927,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-13c7w0w"
+                                      class="css-xk5t3v"
                                       disabled=""
                                     >
                                       <div
@@ -1108,7 +1108,7 @@ exports[`ExchangeView > should fetch providers if not loaded yet 1`] = `
                                         id="SelectRecipient__dropdown-label"
                                       />
                                       <div
-                                        class="css-13c7w0w"
+                                        class="css-xk5t3v"
                                         disabled=""
                                       >
                                         <div
@@ -2291,7 +2291,7 @@ exports[`ExchangeView > should render 1`] = `
                                         id="SelectRecipient__dropdown-label"
                                       />
                                       <div
-                                        class="css-13c7w0w"
+                                        class="css-xk5t3v"
                                         disabled=""
                                       >
                                         <div
@@ -3070,7 +3070,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-13c7w0w"
+                                    class="css-xk5t3v"
                                     disabled=""
                                   >
                                     <div
@@ -3301,7 +3301,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-13c7w0w"
+                                      class="css-xk5t3v"
                                       disabled=""
                                     >
                                       <div
@@ -3482,7 +3482,7 @@ exports[`ExchangeView > should render dark theme 1`] = `
                                         id="SelectRecipient__dropdown-label"
                                       />
                                       <div
-                                        class="css-13c7w0w"
+                                        class="css-xk5t3v"
                                         disabled=""
                                       >
                                         <div
@@ -4261,7 +4261,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                                     id="fromCurrency-label"
                                   />
                                   <div
-                                    class="css-13c7w0w"
+                                    class="css-xk5t3v"
                                     disabled=""
                                   >
                                     <div
@@ -4492,7 +4492,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                                       id="toCurrency-label"
                                     />
                                     <div
-                                      class="css-13c7w0w"
+                                      class="css-xk5t3v"
                                       disabled=""
                                     >
                                       <div
@@ -4673,7 +4673,7 @@ exports[`ExchangeView > should render light theme 1`] = `
                                         id="SelectRecipient__dropdown-label"
                                       />
                                       <div
-                                        class="css-13c7w0w"
+                                        class="css-xk5t3v"
                                         disabled=""
                                       >
                                         <div
