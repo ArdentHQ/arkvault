@@ -175,7 +175,8 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(screen.getByTestId("Input__error").getAttribute("data-errortext")).toBe(t("COMMON.VALIDATION.PASSWORD_MISMATCH"))
+		expect(screen.getByTestId("Input__error").getAttribute("data-errortext")).toBe(
+			t("COMMON.VALIDATION.PASSWORD_MISMATCH"),
+		);
 	});
-
 });

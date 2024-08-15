@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
-import {Icon, ThemeIcon} from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { ReadableFile, useFiles } from "@/app/hooks/use-files";
 
 interface SelectFileProperties {
@@ -109,10 +109,16 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderContent = () => (
 		<>
-			{fileFormatIcon[fileFormat] && <ThemeIcon darkIcon={fileFormatIcon[fileFormat][0]} lightIcon={fileFormatIcon[fileFormat][1]} size="xl" />}
+			{fileFormatIcon[fileFormat] && (
+				<ThemeIcon
+					darkIcon={fileFormatIcon[fileFormat][0]}
+					lightIcon={fileFormatIcon[fileFormat][1]}
+					size="xl"
+				/>
+			)}
 
 			<div className="mt-4">
-				<span className="mr-px hidden font-semibold sm:inline text-lg leading-[21px]">
+				<span className="mr-px hidden text-lg font-semibold leading-[21px] sm:inline">
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")}{" "}
 				</span>
 				<button
@@ -120,7 +126,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer font-semibold focus:outline-none text-lg leading-[21px]"
+					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}

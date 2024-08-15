@@ -11,7 +11,7 @@ import { Button } from "@/app/components/Button";
 import { FormButtons } from "@/app/components/Form";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useNavigationContext } from "@/app/contexts";
-import {ThemeIcon} from "@/app/components/Icon";
+import { ThemeIcon } from "@/app/components/Icon";
 
 interface ImportErrorProperties {
 	file: ReadableFile;
@@ -113,7 +113,9 @@ export const ProcessingImport = ({
 	return (
 		<div className="mx-auto max-w-xl" data-testid="ProcessingImport">
 			<StepHeader
-				titleIcon={<ThemeIcon darkIcon="ImportProfileDark" lightIcon="LightProfileDark" dimensions={[24, 24]} />}
+				titleIcon={
+					<ThemeIcon darkIcon="ImportProfileDark" lightIcon="LightProfileDark" dimensions={[24, 24]} />
+				}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.PROCESSING_IMPORT_STEP.DESCRIPTION", { name: file?.name || "" })}
 			/>
