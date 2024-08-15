@@ -64,12 +64,12 @@ export const useTheme: () => {
 	);
 
 	useEffect(() => {
-		const htmlElement = document.querySelector("html") as HTMLElement;
+		const htmlElement = document.querySelector("html");
 
-		htmlElement.addEventListener("themeChanged", onThemeChange as EventListener);
+		htmlElement?.addEventListener("themeChanged", onThemeChange as EventListener);
 
 		return () => {
-			htmlElement.removeEventListener("themeChanged", onThemeChange as EventListener);
+			htmlElement?.removeEventListener("themeChanged", onThemeChange as EventListener);
 		};
 	}, [onThemeChange]);
 

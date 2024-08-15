@@ -228,7 +228,7 @@ exports[`AddRecipient > should hide available balance if fee > balance 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -528,7 +528,7 @@ exports[`AddRecipient > should render 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -813,7 +813,7 @@ exports[`AddRecipient > should render with empty array of recipients as default 
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -1098,7 +1098,7 @@ exports[`AddRecipient > should render with multiple recipients switch 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -1383,7 +1383,7 @@ exports[`AddRecipient > should render with single recipient data 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -1601,7 +1601,7 @@ exports[`AddRecipient > should render without the single & multiple switch 1`] =
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -1886,7 +1886,7 @@ exports[`AddRecipient > should set available amount 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -2171,7 +2171,7 @@ exports[`AddRecipient > should show available balance after fee 1`] = `
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"
@@ -2471,7 +2471,7 @@ exports[`AddRecipient > should show zero amount if wallet has zero or insufficie
             >
               (
               Available
-
+               
               <span
                 class="whitespace-nowrap"
                 data-testid="Amount"

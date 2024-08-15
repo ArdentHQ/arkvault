@@ -26,7 +26,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1hr3i2s"
+                class="sr-only css-12mz4i6"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -106,7 +106,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="flex items-center"
@@ -414,7 +414,7 @@ exports[`Add Participant > should fail to find 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1hr3i2s"
+                class="sr-only css-12mz4i6"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -494,7 +494,7 @@ exports[`Add Participant > should fail to find 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="flex items-center"
@@ -802,7 +802,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1hr3i2s"
+                class="sr-only css-12mz4i6"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -887,7 +887,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD…
                     </div>
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="flex items-center"
@@ -1200,7 +1200,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1hr3i2s"
+                class="sr-only css-12mz4i6"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1280,7 +1280,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="flex items-center"
@@ -1588,7 +1588,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1hr3i2s"
+                class="sr-only css-12mz4i6"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -1668,7 +1668,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="flex items-center"
