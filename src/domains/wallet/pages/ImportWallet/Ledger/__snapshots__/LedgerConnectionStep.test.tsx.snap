@@ -7,7 +7,7 @@ exports[`LedgerConnectionStep > should emit event on connect 1`] = `
     data-testid="LedgerConnectionStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex items-end justify-between bg-theme-background hidden md:block"
     >
       <div
         class="space-y-2"

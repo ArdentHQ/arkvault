@@ -111,6 +111,7 @@ export const LedgerConnectionStep = ({
 						className="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900"
 					/>
 				}
+				className="hidden md:block"
 			/>
 
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
