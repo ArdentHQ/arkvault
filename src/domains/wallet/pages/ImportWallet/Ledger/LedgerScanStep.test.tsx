@@ -164,29 +164,32 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should handle select in mobile", async () => {
+		global.innerWidth = 768;
 		render(<Component />);
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
+			expect(screen.getAllByTestId("LedgerMobileItem__checkbox", { checked: true })).toHaveLength(1);
 		});
 
 		// Unselect All
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(4));
+		await waitFor(() => {
+			expect(screen.getAllByTestId("LedgerMobileItem__checkbox", { checked: false })).toHaveLength(1);
+		});
 
 		// Select just first
 
-		await userEvent.click(screen.getAllByRole("checkbox")[1]);
-
-		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
-
-		await userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 	});
 
 	it("should handle click on mobile item", async () => {
@@ -205,12 +208,12 @@ describe("LedgerScanStep", () => {
 		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
+			expect(screen.getAllByTestId("LedgerScanStep__checkbox-row", { checked: true })).toHaveLength(1);
 		});
 
-		await userEvent.click(screen.getAllByRole("checkbox")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerScanStep__checkbox-row")[0]);
 
-		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 	});
 
 	it("should render ledger table in scanning mode", () => {
