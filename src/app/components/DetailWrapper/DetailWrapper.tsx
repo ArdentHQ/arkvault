@@ -37,7 +37,7 @@ export const DetailWrapper = ({
 		{label && <DetailLabel>{label}</DetailLabel>}
 		<div
 			className={cn(
-				"w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words",
+				"w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5",
 				{
 					"mt-0 sm:mt-2": !!label,
 				},
