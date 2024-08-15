@@ -328,7 +328,7 @@ describe("LedgerTabs", () => {
 
 		expect(profile.wallets().values()).toHaveLength(2);
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(4));
 
 		await waitFor(
 			() => {
@@ -454,7 +454,7 @@ describe("LedgerTabs", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(3));
+		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(6));
 
 		await waitFor(() => {
 			expect(nextSelector()).toBeEnabled();

@@ -3,6 +3,7 @@ export const translations = {
 	ADAPTER: "Adapter",
 	ADD: "Add",
 	ADDRESS: "Address",
+	ADDRESSES: "Addresses",
 	ADD_NEW: "Add New",
 	ADVANCED_MODE: "Advanced Mode",
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again",
