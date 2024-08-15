@@ -12,6 +12,7 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
+import { createHashHistory } from "history";
 
 const profileName = "test profile";
 
@@ -64,7 +65,24 @@ describe("CreateProfile", () => {
 	it("should render", async () => {
 		await renderComponent();
 
+		userEvent.click(screen.getByText("Back"));
 		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
+	});
+
+	it("should navigate back", async () => {
+		const history = createHashHistory();
+
+		render(<CreateProfile />, { history });
+
+		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
+
+		const historySpy = vi.spyOn(history, "push");
+
+		userEvent.click(screen.getByText("Back"));
+
+		expect(historySpy).toHaveBeenCalledWith(`/`);
+
+		historySpy.mockRestore();
 	});
 
 	it("should select currency based on locale", async () => {
