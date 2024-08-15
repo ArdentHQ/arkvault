@@ -168,7 +168,7 @@ exports[`LedgerScanStep > should render compact table 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -683,7 +683,7 @@ exports[`LedgerScanStep > should render responsive (lg)) 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1138,7 +1138,7 @@ exports[`LedgerScanStep > should render responsive (xs)) 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"

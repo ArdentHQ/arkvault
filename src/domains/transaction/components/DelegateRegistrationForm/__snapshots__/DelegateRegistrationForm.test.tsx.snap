@@ -610,7 +610,7 @@ exports[`DelegateRegistrationForm > should render form step 1`] = `
               Delegate Name
             </label>
             <div
-              class=" css-1q57rjh"
+              class=" css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -1211,7 +1211,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
               Delegate Name
             </label>
             <div
-              class=" css-1q57rjh"
+              class=" css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -1280,7 +1280,7 @@ exports[`DelegateRegistrationForm > should set fee 1`] = `
                 class="relative"
               >
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"

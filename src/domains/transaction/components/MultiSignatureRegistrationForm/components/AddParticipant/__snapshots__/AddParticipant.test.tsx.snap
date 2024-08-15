@@ -1976,7 +1976,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1q57rjh"
+                class="sr-only css-n1b0kl"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2009,7 +2009,7 @@ exports[`Add Participant > should render custom participants 1`] = `
                       id="SelectRecipient__dropdown-label"
                     />
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="flex items-center"
@@ -2253,7 +2253,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="SelectDropdown"
             >
               <div
-                class="sr-only css-1q57rjh"
+                class="sr-only css-n1b0kl"
               >
                 <div
                   class="relative flex h-full flex-1"
@@ -2291,7 +2291,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                       D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb…
                     </div>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="flex items-center"

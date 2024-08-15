@@ -877,7 +877,7 @@ exports[`SendIpfs > should render form step 1`] = `
           IPFS Hash
         </label>
         <div
-          class=" css-1q57rjh"
+          class=" css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -1741,7 +1741,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               <span>
                 Multisignature Address
               </span>
-               
+
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -2175,7 +2175,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2 
+                2
               </span>
               <span
                 class="whitespace text-theme-secondary-700"

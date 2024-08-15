@@ -3061,7 +3061,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                             </div>
                           </span>
                           <div
-                            class="css-1q57rjh"
+                            class="css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -3225,7 +3225,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-1q57rjh"
+                                      class="sr-only css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -3258,7 +3258,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-1q57rjh"
+                                            class="css-n1b0kl"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -3351,7 +3351,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available 
+                                  (Available
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -3371,7 +3371,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1q57rjh"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -3423,7 +3423,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                         </span>
                       </label>
                       <div
-                        class="css-1q57rjh"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -4389,7 +4389,7 @@ exports[`SendTransfer > should render form and use location state with network p
                             </div>
                           </span>
                           <div
-                            class="css-1q57rjh"
+                            class="css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -4553,7 +4553,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-1q57rjh"
+                                      class="sr-only css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -4586,7 +4586,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-1q57rjh"
+                                            class="css-n1b0kl"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -4679,7 +4679,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available 
+                                  (Available
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -4699,7 +4699,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1q57rjh"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -4751,7 +4751,7 @@ exports[`SendTransfer > should render form and use location state with network p
                         </span>
                       </label>
                       <div
-                        class="css-1q57rjh"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -5717,7 +5717,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                             </div>
                           </span>
                           <div
-                            class="css-1q57rjh"
+                            class="css-n1b0kl"
                           >
                             <div
                               class="relative flex h-full flex-1 invisible"
@@ -5881,7 +5881,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                     data-testid="SelectDropdown"
                                   >
                                     <div
-                                      class="sr-only css-1q57rjh"
+                                      class="sr-only css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -5914,7 +5914,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                             id="SelectRecipient__dropdown-label"
                                           />
                                           <div
-                                            class="css-1q57rjh"
+                                            class="css-n1b0kl"
                                           >
                                             <div
                                               class="relative flex h-full flex-1"
@@ -6007,7 +6007,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available 
+                                  (Available
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -6027,7 +6027,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                     class="relative"
                                   >
                                     <div
-                                      class="css-1q57rjh"
+                                      class="css-n1b0kl"
                                     >
                                       <div
                                         class="relative flex h-full flex-1"
@@ -6079,7 +6079,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                         </span>
                       </label>
                       <div
-                        class="css-1q57rjh"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -6452,7 +6452,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
               />
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -6616,7 +6616,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -6806,7 +6806,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -7158,7 +7158,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
               />
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -7322,7 +7322,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -7512,7 +7512,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -7869,7 +7869,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
               </div>
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -8033,7 +8033,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8066,7 +8066,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-1q57rjh"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -8159,7 +8159,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available 
+                    (Available
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8179,7 +8179,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                       class="relative"
                     >
                       <div
-                        class="css-1q57rjh"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8231,7 +8231,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -8589,7 +8589,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
               </div>
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -8753,7 +8753,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8786,7 +8786,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-1q57rjh"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="relative flex h-full flex-1"
@@ -8879,7 +8879,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available 
+                    (Available
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8899,7 +8899,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                       class="relative"
                     >
                       <div
-                        class="css-1q57rjh"
+                        class="css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -8951,7 +8951,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -9291,7 +9291,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
               />
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -9455,7 +9455,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -9935,7 +9935,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
               />
             </span>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1 invisible"
@@ -10099,7 +10099,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -10289,7 +10289,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -11342,7 +11342,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -11374,7 +11374,7 @@ exports[`SendTransfer > should render network step with dropdown 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"

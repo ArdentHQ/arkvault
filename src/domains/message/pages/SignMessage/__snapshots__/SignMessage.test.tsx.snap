@@ -714,7 +714,7 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -1497,7 +1497,7 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                       Message
                     </label>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -2280,7 +2280,7 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                       Message
                     </label>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
