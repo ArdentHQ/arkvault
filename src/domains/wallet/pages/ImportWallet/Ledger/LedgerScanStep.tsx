@@ -107,7 +107,11 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			return (
 				<TableRow isSelected={isSelected(wallet.path)}>
 					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
-						<Checkbox checked={isSelected(wallet.path)} onChange={() => toggleSelect(wallet.path)} data-testid="LedgerScanStep__checkbox-row" />
+						<Checkbox
+							checked={isSelected(wallet.path)}
+							onChange={() => toggleSelect(wallet.path)}
+							data-testid="LedgerScanStep__checkbox-row"
+						/>
 					</TableCell>
 
 					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
