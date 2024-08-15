@@ -12,4 +12,5 @@ export interface HeaderSearchBarProperties {
 	debounceTimeout?: number;
 	defaultQuery?: string;
 	resetFields?: boolean;
+	alwaysDisplayClearButton?: boolean;
 }

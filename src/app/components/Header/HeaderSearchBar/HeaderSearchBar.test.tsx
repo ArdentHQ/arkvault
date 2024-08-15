@@ -144,4 +144,23 @@ describe("HeaderSearchBar", () => {
 
 		expect(onSearch).toHaveBeenCalledWith("test");
 	});
+
+	it("should always show clear button", async () => {
+		render(<HeaderSearchBar alwaysDisplayClearButton />);
+
+		await userEvent.click(screen.getByRole("button"));
+
+		expect(screen.getByTestId("header-search-bar__reset")).toBeInTheDocument();
+		expect(screen.getByTestId("header-search-bar__reset-icon")).toHaveClass("w-4");
+		expect(screen.getByTestId("header-search-bar__reset")).toHaveClass("mr-4");
+	});
+
+	it("should not always show clear button by default", async () => {
+		render(<HeaderSearchBar />);
+
+		await userEvent.click(screen.getByRole("button"));
+
+		expect(screen.getByTestId("header-search-bar__reset-icon")).toHaveClass("w-0");
+		expect(screen.getByTestId("header-search-bar__reset")).not.toHaveClass("mr-4");
+	});
 });
