@@ -13,7 +13,7 @@ import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import {renderHook} from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 
 const translations = buildTranslations();
 
@@ -542,7 +542,9 @@ describe("General Settings", () => {
 	it("should reset appearance settings on reset", async () => {
 		const toastSpy = vi.spyOn(toasts, "success");
 		const { setAccentColor, getCurrentAccentColor } = useAccentColor();
-		const { result: { current } } = renderHook(() => useTheme());
+		const {
+			result: { current },
+		} = renderHook(() => useTheme());
 		const { setTheme, theme } = current;
 
 		expect(getCurrentAccentColor()).toBe("navy");

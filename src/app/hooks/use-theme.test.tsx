@@ -13,7 +13,9 @@ describe("useTheme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			expect(current.theme).toBe("dark");
 		});
@@ -21,7 +23,9 @@ describe("useTheme", () => {
 		it("should return 'light' if shouldUseDarkColors is false", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			expect(current.theme).toBe("light");
 		});
@@ -31,7 +35,9 @@ describe("useTheme", () => {
 		it("should return true if dark mode", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			expect(current.isDarkMode).toBe(true);
 		});
@@ -39,7 +45,9 @@ describe("useTheme", () => {
 		it("should return false if not dark mode", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			expect(current.isDarkMode).toBe(false);
 		});
@@ -47,7 +55,9 @@ describe("useTheme", () => {
 
 	describe("setTheme", () => {
 		it.each(["light", "dark"])("should set %s theme", (theme) => {
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			current.setTheme(theme === "light" ? "dark" : "light");
 
@@ -83,7 +93,9 @@ describe("useTheme", () => {
 				writable: true,
 			});
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 			current.setTheme("system");
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(false);
@@ -99,7 +111,9 @@ describe("useTheme", () => {
 
 			overflowOverlayMock.mockReturnValue(false);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 			current.setTheme("light");
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(true);
@@ -123,7 +137,9 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 			current.setTheme("dark");
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
@@ -139,7 +155,9 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			current.setTheme("light");
 
@@ -165,7 +183,9 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
 			current.setTheme(systemTheme);
 
@@ -187,7 +207,9 @@ describe("useTheme", () => {
 		it("should reset theme to defaults", () => {
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
-			const { result: { current } } = renderHook(() => useTheme());
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 			current.setTheme("dark");
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
