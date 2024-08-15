@@ -49,7 +49,6 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 			handleQueryReset();
 		}
 	}, [resetFields, handleQueryReset]);
-	console.log(alwaysDisplayClearButton);
 	return (
 		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
 			<ControlButton
