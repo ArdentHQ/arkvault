@@ -20,7 +20,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         <div
           class="flex w-full"
@@ -151,7 +151,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         123
       </div>
@@ -275,7 +275,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         <div
           class="flex w-full"
@@ -406,7 +406,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         <span
           class="my-0.5 flex"
@@ -547,7 +547,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         <div
           class="flex w-full"
@@ -641,7 +641,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         <p
           data-testid="TransactionMemo"
@@ -702,7 +702,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         </div>
       </div>
       <div
-        class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
+        class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
       >
         123
       </div>
