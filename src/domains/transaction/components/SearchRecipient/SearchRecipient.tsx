@@ -168,6 +168,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 						onReset={() => setSearchKeyword("")}
 						debounceTimeout={100}
 						noToggleBorder
+						alwaysDisplayClearButton
 					/>
 				),
 				accessor: "id",
