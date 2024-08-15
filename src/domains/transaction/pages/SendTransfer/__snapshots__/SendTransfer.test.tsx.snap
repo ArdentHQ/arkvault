@@ -2109,7 +2109,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -3351,7 +3351,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -3469,7 +3469,7 @@ exports[`SendTransfer > should render form and use location state with nethash p
                         class="relative"
                       >
                         <div
-                          class="css-13c7w0w"
+                          class="css-xk5t3v"
                           disabled=""
                         >
                           <div
@@ -4679,7 +4679,7 @@ exports[`SendTransfer > should render form and use location state with network p
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -4797,7 +4797,7 @@ exports[`SendTransfer > should render form and use location state with network p
                         class="relative"
                       >
                         <div
-                          class="css-13c7w0w"
+                          class="css-xk5t3v"
                           disabled=""
                         >
                           <div
@@ -6007,7 +6007,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                                   class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                                   data-testid="AddRecipient__available"
                                 >
-                                  (Available
+                                  (Available 
                                   <span
                                     class="whitespace-nowrap"
                                     data-testid="Amount"
@@ -6125,7 +6125,7 @@ exports[`SendTransfer > should render form and use location state without memo 1
                         class="relative"
                       >
                         <div
-                          class="css-13c7w0w"
+                          class="css-xk5t3v"
                           disabled=""
                         >
                           <div
@@ -6649,7 +6649,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-13c7w0w"
+                              class="css-xk5t3v"
                               disabled=""
                             >
                               <div
@@ -6751,7 +6751,7 @@ exports[`SendTransfer > should render form step (lg) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-13c7w0w"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
@@ -7355,7 +7355,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-13c7w0w"
+                              class="css-xk5t3v"
                               disabled=""
                             >
                               <div
@@ -7457,7 +7457,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-13c7w0w"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
@@ -7558,7 +7558,7 @@ exports[`SendTransfer > should render form step (xs) 1`] = `
           class="relative"
         >
           <div
-            class="css-13c7w0w"
+            class="css-xk5t3v"
             disabled=""
           >
             <div
@@ -8159,7 +8159,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8277,7 +8277,7 @@ exports[`SendTransfer > should render form step with deeplink values and handle 
           class="relative"
         >
           <div
-            class="css-13c7w0w"
+            class="css-xk5t3v"
             disabled=""
           >
             <div
@@ -8879,7 +8879,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
                     class="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700"
                     data-testid="AddRecipient__available"
                   >
-                    (Available
+                    (Available 
                     <span
                       class="whitespace-nowrap"
                       data-testid="Amount"
@@ -8997,7 +8997,7 @@ exports[`SendTransfer > should render form step with deeplink values and use the
           class="relative"
         >
           <div
-            class="css-13c7w0w"
+            class="css-xk5t3v"
             disabled=""
           >
             <div
@@ -9488,7 +9488,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-13c7w0w"
+                              class="css-xk5t3v"
                               disabled=""
                             >
                               <div
@@ -9590,7 +9590,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-13c7w0w"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div
@@ -9642,7 +9642,7 @@ exports[`SendTransfer > should render form step without memo input 1`] = `
           class="relative"
         >
           <div
-            class="css-13c7w0w"
+            class="css-xk5t3v"
             disabled=""
           >
             <div
@@ -10132,7 +10132,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-13c7w0w"
+                              class="css-xk5t3v"
                               disabled=""
                             >
                               <div
@@ -10234,7 +10234,7 @@ exports[`SendTransfer > should render form step without test networks 1`] = `
                       class="relative"
                     >
                       <div
-                        class="css-13c7w0w"
+                        class="css-xk5t3v"
                         disabled=""
                       >
                         <div

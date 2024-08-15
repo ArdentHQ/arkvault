@@ -526,7 +526,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
                       Mnemonic
                     </label>
                     <div
-                      class="css-1hr3i2s"
+                      class="css-12mz4i6"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -908,7 +908,7 @@ exports[`SendIpfs > should render form step 1`] = `
           class="relative"
         >
           <div
-            class="css-13c7w0w"
+            class="css-xk5t3v"
             disabled=""
           >
             <div
@@ -1741,7 +1741,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               <span>
                 Multisignature Address
               </span>
-
+               
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -2175,7 +2175,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2
+                2 
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
@@ -6720,7 +6720,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
                         IPFS Hash
                       </label>
                       <div
-                        class=" css-1hr3i2s"
+                        class=" css-12mz4i6"
                       >
                         <div
                           class="relative flex h-full flex-1"
