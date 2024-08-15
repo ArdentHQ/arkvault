@@ -65,7 +65,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	}, []);
 
 	return (
-		<div className="mx-auto max-w-xl">
+		<div className="mx-auto max-w-xl" data-testid="ProfileFormStep">
 			<StepHeader
 				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
