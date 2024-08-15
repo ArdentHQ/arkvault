@@ -3350,7 +3350,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
         >
           <div
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
@@ -3451,7 +3451,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
         >
           <div
             class="flex w-full items-center justify-between sm:justify-start"
@@ -3614,7 +3614,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
         >
           <div
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
@@ -3715,7 +3715,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 break-words mt-0 sm:mt-2"
         >
           <div
             class="flex w-full items-center justify-between sm:justify-start"
