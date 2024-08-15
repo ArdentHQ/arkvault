@@ -8,7 +8,7 @@ import { SelectFile } from "@/app/components/SelectFile";
 import { ReadableFile } from "@/app/hooks/use-files";
 import { useNavigationContext } from "@/app/contexts";
 import { StepHeader } from "@/app/components/StepHeader";
-import { Icon } from "@/app/components/Icon";
+import {ThemeIcon} from "@/app/components/Icon";
 
 interface SelectFileStepProperties {
 	fileFormat: string;
@@ -38,7 +38,7 @@ export const SelectFileStep = ({ onBack, onSelect, onFileFormatChange, fileForma
 	return (
 		<div className="mx-auto max-w-xl">
 			<StepHeader
-				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
+				titleIcon={<ThemeIcon darkIcon="ImportProfileDark" lightIcon="LightProfileDark" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.SELECT_FILE_STEP.DESCRIPTION", { fileFormat })}
 			/>

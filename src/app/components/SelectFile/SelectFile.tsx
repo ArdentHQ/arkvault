@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
+import {Icon, ThemeIcon} from "@/app/components/Icon";
 import { ReadableFile, useFiles } from "@/app/hooks/use-files";
 
 interface SelectFileProperties {
@@ -90,9 +90,9 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 		onSelect(raw);
 	};
 
-	const fileFormatIcon: Record<string, string> = {
-		".json": "ExtensionJson",
-		".wwe": "ExtensionWwe",
+	const fileFormatIcon: Record<string, string[]> = {
+		".json": ["ExtensionJsonDark", "ExtensionJsonLight"],
+		".wwe": ["ExtensionWweDark", "ExtensionWweLight"],
 	};
 
 	const renderError = () => (
@@ -109,7 +109,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderContent = () => (
 		<>
-			{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} size="xl" />}
+			{fileFormatIcon[fileFormat] && <ThemeIcon darkIcon={fileFormatIcon[fileFormat][0]} lightIcon={fileFormatIcon[fileFormat][1]} size="xl" />}
 
 			<div className="mt-4">
 				<span className="mr-px hidden font-semibold sm:inline text-lg leading-[21px]">

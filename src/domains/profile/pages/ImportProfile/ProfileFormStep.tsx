@@ -8,7 +8,7 @@ import { ProfileForm, ProfileFormState } from "@/domains/profile/components/Prof
 import { ReadableFile } from "@/app/hooks/use-files";
 import { StepHeader } from "@/app/components/StepHeader";
 import { useAccentColor } from "@/app/hooks";
-import { Icon } from "@/app/components/Icon";
+import {ThemeIcon} from "@/app/components/Icon";
 
 interface ImportProfileFormProperties {
 	file?: ReadableFile;
@@ -67,7 +67,7 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 	return (
 		<div className="mx-auto max-w-xl" data-testid="ProfileFormStep">
 			<StepHeader
-				titleIcon={<Icon name="ImportProfile" className="dark:text-theme-navy-600" dimensions={[24, 24]} />}
+				titleIcon={<ThemeIcon darkIcon="ImportProfileDark" lightIcon="LightProfileDark" dimensions={[24, 24]} />}
 				title={t("PROFILE.IMPORT.TITLE")}
 				subtitle={t("PROFILE.IMPORT.FORM_STEP.DESCRIPTION")}
 			/>

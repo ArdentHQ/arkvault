@@ -30,7 +30,8 @@ import { Currencies } from "./currencies";
 import Dash from "./dash.svg?react";
 import EllipsisVertical from "./ellipsis-vertical.svg?react";
 import EllipsisVerticalFilled from "./ellipsis-vertical-filled.svg?react";
-import ExtensionWwe from "./extension-wwe.svg?react";
+import ExtensionWweDark from "./extension-wwe-dark.svg?react";
+import ExtensionWweLight from "./extension-wwe-light.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
 import Eye from "./eye.svg?react";
@@ -81,7 +82,8 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
-import ImportProfile from "../svg/import-profile.svg?react";
+import ImportProfileLight from "./import-profile-light.svg?react";
+import ImportProfileDark from "./import-profile-dark.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
@@ -130,7 +132,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	EllipsisVerticalFilled,
 	ExtensionCsv,
 	ExtensionJson,
-	ExtensionWwe,
+	ExtensionWweDark,
+	ExtensionWweLight,
 	Eye,
 	EyeSlash,
 	FTX,
@@ -142,6 +145,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	GlobePointer,
 	Grid,
 	HintSmall,
+	ImportProfileDark,
+	ImportProfileLight,
 	ImportWalletDark,
 	ImportWalletLight,
 	Ledger,
@@ -185,5 +190,4 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	WalletEncryptionLight,
 	YourPassphraseDark,
 	YourPassphraseLight,
-	ImportProfile,
 };
