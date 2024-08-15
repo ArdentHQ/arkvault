@@ -230,7 +230,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 1`] 
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -419,7 +419,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 2`] 
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -608,7 +608,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 3`] 
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -797,7 +797,7 @@ exports[`UpdateWalletName > should show an error message for duplicate name 4`] 
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -986,7 +986,7 @@ exports[`UpdateWalletName > should show error message when name consists only of
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"
@@ -1175,7 +1175,7 @@ exports[`UpdateWalletName > should show error message when name exceeds 42 chara
                   class="relative"
                 >
                   <div
-                    class="css-1hr3i2s"
+                    class="css-12mz4i6"
                   >
                     <div
                       class="relative flex h-full flex-1"

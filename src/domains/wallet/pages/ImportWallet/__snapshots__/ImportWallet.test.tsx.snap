@@ -3419,7 +3419,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             <div
               class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              Balance
+              Balance 
             </div>
             <div
               class="font-semibold"
@@ -3465,7 +3465,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
               <div
                 class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
               >
-                 ARK Wallet 1
+                 ARK Wallet 1 
               </div>
               <div
                 class="flex h-5 items-center sm:hidden"
@@ -3683,7 +3683,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             <div
               class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
             >
-              Balance
+              Balance 
             </div>
             <div
               class="font-semibold"
@@ -3729,7 +3729,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
               <div
                 class="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none"
               >
-                 ARK Wallet 1
+                 ARK Wallet 1 
               </div>
               <div
                 class="flex h-5 items-center sm:hidden"
