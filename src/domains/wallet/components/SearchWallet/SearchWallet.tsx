@@ -189,11 +189,12 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					Header: (
 						<HeaderSearchBar
 							placeholder={searchPlaceholder}
-							offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
+							offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
 							onSearch={setSearchKeyword}
 							onReset={() => setSearchKeyword("")}
 							debounceTimeout={100}
 							noToggleBorder
+							alwaysDisplayClearButton
 						/>
 					),
 					accessor: "search",
@@ -209,11 +210,12 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				Header: (
 					<HeaderSearchBar
 						placeholder={searchPlaceholder}
-						offsetClassName="top-1/3 -translate-y-16 -translate-x-6"
+						offsetClassName="top-1/3 -translate-y-8 -translate-x-6"
 						onSearch={setSearchKeyword}
 						onReset={() => setSearchKeyword("")}
 						debounceTimeout={100}
 						noToggleBorder
+						alwaysDisplayClearButton
 					/>
 				),
 				accessor: "search",
