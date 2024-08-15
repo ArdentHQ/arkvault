@@ -49,7 +49,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 			handleQueryReset();
 		}
 	}, [resetFields, handleQueryReset]);
-console.log(alwaysDisplayClearButton)
+	console.log(alwaysDisplayClearButton);
 	return (
 		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
 			<ControlButton
@@ -86,7 +86,7 @@ console.log(alwaysDisplayClearButton)
 
 					<button
 						data-testid="header-search-bar__reset"
-						className={cn("transition-all duration-300 focus:outline-none", { 
+						className={cn("transition-all duration-300 focus:outline-none", {
 							"mr-4": query !== "" || alwaysDisplayClearButton,
 						})}
 						onClick={handleQueryReset}

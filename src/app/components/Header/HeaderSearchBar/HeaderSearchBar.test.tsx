@@ -153,7 +153,7 @@ describe("HeaderSearchBar", () => {
 		expect(screen.getByTestId("header-search-bar__reset")).toBeInTheDocument();
 		expect(screen.getByTestId("header-search-bar__reset-icon")).toHaveClass("w-4");
 		expect(screen.getByTestId("header-search-bar__reset")).toHaveClass("mr-4");
-	})
+	});
 
 	it("should not always show clear button by default", async () => {
 		render(<HeaderSearchBar />);
