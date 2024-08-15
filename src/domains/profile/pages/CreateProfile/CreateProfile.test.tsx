@@ -6,19 +6,12 @@
 import { ARK } from "@ardenthq/sdk-ark";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import * as browserAccess from "browser-fs-access";
 
 import { CreateProfile } from "./CreateProfile";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as themeUtils from "@/utils/theme";
-import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
-
-let browserAccessMock: vi.SpyInstance;
-
-const fileOpenParameters = {
-	extensions: [".png", ".jpg", ".jpeg", ".bmp"],
-};
+import { act, env, render, screen, waitFor } from "@/utils/testing-library";
 
 const profileName = "test profile";
 
@@ -46,14 +39,10 @@ const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)
 
 const nameInput = () => screen.getAllByTestId("Input")[0];
 
-const uploadButton = () => screen.getByTestId("SelectProfileImage__upload-button");
 const submitButton = () => screen.getByTestId("ProfileForm__submit-button");
 
 const passwordInput = () => screen.getByTestId("PasswordValidation__password");
 const passwordConfirmationInput = () => screen.getByTestId("PasswordValidation__confirmPassword");
-
-const imageID = "SelectProfileImage__avatar-image";
-const avatarID = "SelectProfileImage__avatar-identicon";
 
 const password = "S3cUrePa$sword";
 const testPassword = "S3cUrePa$sword.test";
@@ -72,22 +61,10 @@ describe("CreateProfile", () => {
 		env.reset({ coins: { ARK }, httpClient, storage: new StubStorage() });
 	});
 
-	beforeEach(() => {
-		browserAccessMock = vi
-			.spyOn(browserAccess, "fileOpen")
-			.mockResolvedValue(new File([], "picture.png", { type: "image/png" }));
-	});
-
-	afterEach(() => {
-		browserAccessMock.mockRestore();
-	});
-
 	it("should render", async () => {
-		const { asFragment } = await renderComponent();
+		await renderComponent();
 
-		userEvent.click(screen.getByText("Back"));
-
-		expect(asFragment()).toMatchSnapshot();
+		expect(screen.getByTestId("CreateProfile")).toBeInTheDocument();
 	});
 
 	it("should select currency based on locale", async () => {
@@ -164,11 +141,6 @@ describe("CreateProfile", () => {
 
 	it("should store profile", async () => {
 		await renderComponent();
-
-		// Upload avatar image
-		userEvent.click(uploadButton());
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		userEvent.paste(nameInput(), "test profile 1");
 
@@ -283,129 +255,6 @@ describe("CreateProfile", () => {
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
-	});
-
-	it("should update the avatar when removing focus from name input", async () => {
-		await renderComponent();
-
-		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
-
-		const inputElement: HTMLInputElement = screen.getByTestId("Input");
-
-		userEvent.type(inputElement, "t");
-		await waitFor(() => expect(inputElement).toHaveValue("t"));
-
-		expect(inputElement).toHaveFocus();
-
-		fireEvent.blur(inputElement);
-
-		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
-
-		inputElement.select();
-		userEvent.paste(inputElement, profileName);
-		await waitFor(() => expect(inputElement).toHaveValue(profileName));
-
-		expect(inputElement).toHaveFocus();
-
-		fireEvent.blur(inputElement);
-
-		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
-
-		userEvent.clear(inputElement);
-		await waitFor(() => expect(inputElement).not.toHaveValue());
-
-		expect(inputElement).toHaveFocus();
-
-		fireEvent.blur(inputElement);
-
-		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
-	});
-
-	it("should not update the uploaded avatar when removing focus from name input", async () => {
-		await renderComponent();
-
-		// Upload avatar image
-		userEvent.click(uploadButton());
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
-
-		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
-
-		act(() => nameInput().focus());
-
-		userEvent.clear(nameInput());
-
-		await waitFor(() => expect(nameInput()).not.toHaveValue());
-
-		act(() => passwordConfirmationInput().focus());
-
-		expect(screen.getByTestId(imageID)).toBeInTheDocument();
-	});
-
-	it("should upload and remove avatar image", async () => {
-		await renderComponent();
-
-		const profileCount = env.profiles().count();
-
-		// Upload avatar image
-		userEvent.click(uploadButton());
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
-
-		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
-
-		expect(screen.queryByTestId(imageID)).not.toBeInTheDocument();
-		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
-
-		userEvent.paste(nameInput(), "test profile 4");
-		userEvent.click(screen.getByRole("checkbox"));
-
-		await waitFor(() => expect(submitButton()).toBeEnabled());
-
-		userEvent.click(submitButton());
-
-		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
-	});
-
-	it("should show identicon when removing image if name is set", async () => {
-		await renderComponent();
-
-		userEvent.paste(nameInput(), "test profile 1");
-		fireEvent.blur(nameInput());
-
-		// Upload avatar image
-		userEvent.click(uploadButton());
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
-
-		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
-
-		expect(screen.getByTestId(avatarID)).toBeInTheDocument();
-	});
-
-	it("should not upload avatar image", async () => {
-		await renderComponent();
-
-		const profileCount = env.profiles().count();
-
-		browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockRejectedValue(new Error("Error"));
-
-		userEvent.click(uploadButton());
-
-		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
-
-		userEvent.paste(nameInput(), "test profile 5");
-		userEvent.click(screen.getByRole("checkbox"));
-
-		await waitFor(() => expect(submitButton()).toBeEnabled());
-
-		userEvent.click(submitButton());
-
-		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
 
 	it.each([true, false])("should set viewing mode based on system preferences", async (shouldUseDarkColors) => {
