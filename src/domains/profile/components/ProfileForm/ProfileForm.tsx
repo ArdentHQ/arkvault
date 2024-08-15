@@ -11,7 +11,6 @@ import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { Select } from "@/app/components/SelectDropdown";
-import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useAccentColor, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";

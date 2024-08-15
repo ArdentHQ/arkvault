@@ -39,7 +39,7 @@ describe("Import Profile Select File Step", () => {
 		expect(onBack).toHaveBeenCalledWith();
 	});
 
-	it("should change back from json to wwe", async () => {
+	it("should change back from json to wwe", () => {
 		const onFileFormatChange = vi.fn();
 
 		render(<SelectFileStep fileFormat=".json" onFileFormatChange={onFileFormatChange} />);

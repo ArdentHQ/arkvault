@@ -59,7 +59,7 @@ describe("Import Profile - Processing import", () => {
 	it("should require password for password-protected profile import", async () => {
 		const onPasswordChange = vi.fn();
 
-		const { container } = render(
+		render(
 			<ProcessingImport env={env} file={passwordProtectedWwe} onPasswordChange={onPasswordChange} />,
 		);
 

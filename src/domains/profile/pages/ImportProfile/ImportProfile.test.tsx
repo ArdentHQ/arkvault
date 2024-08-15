@@ -33,7 +33,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should render first step", async () => {
-		const { container } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
