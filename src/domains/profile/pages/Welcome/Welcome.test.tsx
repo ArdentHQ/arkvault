@@ -1,4 +1,3 @@
-
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -78,8 +77,8 @@ describe("Welcome with deeplink", () => {
 	});
 
 	afterAll(() => {
-		vi.restoreAllMocks()
-	})
+		vi.restoreAllMocks();
+	});
 
 	it("should redirect to password protected profile if only one available", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
