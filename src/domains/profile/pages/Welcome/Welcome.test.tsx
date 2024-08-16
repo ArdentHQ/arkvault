@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -194,7 +194,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getByText(passwordProtectedProfile.name()));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		
+
 		await act(async () => {
 			await submitPassword();
 		});
@@ -553,7 +553,6 @@ describe("Welcome with deeplink", () => {
 
 		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)));
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
-		await userEvent.click(screen.getAllByText(profile.settings().get(Contracts.ProfileSetting.Name))[0]);
 
 		mockDelegateName.mockRestore();
 		mockProfiles.mockRestore();
@@ -872,14 +871,14 @@ describe("Welcome", () => {
 	});
 
 	it("should use the system theme", async () => {
-		const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: true }) as any);
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
 		render(<Welcome />);
 
 		await waitFor(() => {
-			expect(spy).toHaveBeenNthCalledWith(1, theme);
+			expect(spy).toHaveBeenNthCalledWith(1, "dark");
 		});
 
 		spy.mockRestore();
