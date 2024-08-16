@@ -209,7 +209,6 @@ describe("DelegateVoteAmount", () => {
 		});
 
 		it("should show error if value is more than the available balance", async () => {
-			console.log({ walletBalance: wallet.balance().toString() });
 			render(<Component />);
 
 			await userEvent.clear(screen.getByTestId("InputCurrency"));
