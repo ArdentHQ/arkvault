@@ -109,9 +109,7 @@ describe("Welcome with deeplink", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await act(async () => {
-			await submitPassword();
-		});
+		await submitPassword();
 
 		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
@@ -606,9 +604,7 @@ describe("Welcome", () => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		});
 
-		await act(async () => {
-			await submitPassword();
-		})
+		await submitPassword();
 
 		expect(history.location.pathname).toBe(`/profiles/${passwordProtectedProfile.id()}/dashboard`);
 		expect(asFragment()).toMatchSnapshot();
