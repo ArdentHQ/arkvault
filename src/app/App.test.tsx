@@ -84,7 +84,7 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		await userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
@@ -128,7 +128,7 @@ describe("App", () => {
 		toastSuccessMock.mockRestore();
 	});
 
-	it("should render profile cards in welcome screen", async () => {
+	it("should render profile rows in welcome screen", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
 
 		render(<App />, {
@@ -264,11 +264,9 @@ describe("App", () => {
 			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined),
 		).resolves.toBeVisible();
 
-		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
-
 		expect(history.location.pathname).toBe("/");
 
-		await userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();
@@ -309,7 +307,7 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		await userEvent.click(screen.getAllByTestId("Card")[1]);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[1]);
 
 		await waitFor(() => {
 			expect(passwordInput()).toBeInTheDocument();

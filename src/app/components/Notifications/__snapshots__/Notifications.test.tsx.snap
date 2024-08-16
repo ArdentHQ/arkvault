@@ -174,7 +174,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -284,7 +284,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -394,7 +394,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -726,7 +726,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -836,7 +836,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -946,7 +946,7 @@ exports[`Notifications > should render with plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1190,7 +1190,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1300,7 +1300,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1410,7 +1410,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

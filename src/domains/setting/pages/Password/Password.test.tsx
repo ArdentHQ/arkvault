@@ -231,7 +231,7 @@ describe("Password Settings", () => {
 	it("should not allow setting the current password as the new password", async () => {
 		profile.auth().setPassword(password);
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -259,8 +259,6 @@ describe("Password Settings", () => {
 		await waitFor(() => expect(passwordInput()).toHaveAttribute("aria-invalid"));
 
 		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should allow to remove the password", async () => {

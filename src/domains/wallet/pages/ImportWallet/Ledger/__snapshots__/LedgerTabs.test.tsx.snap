@@ -10,7 +10,9 @@ exports[`LedgerTabs > should render connection step 1`] = `
     >
       <span
         class="css-tgbw37"
-      />
+      >
+        Select a Cryptoasset
+      </span>
       <ul
         class="css-xa5o6q"
       >

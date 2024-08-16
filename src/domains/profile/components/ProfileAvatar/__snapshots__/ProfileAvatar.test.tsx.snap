@@ -7,11 +7,11 @@ exports[`Avatar > should render with profile image 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="John Doe"
-        class="h-20 w-20 rounded-full bg-cover bg-center bg-no-repeat object-cover"
+        class="h-20 w-20 rounded bg-cover bg-center bg-no-repeat object-cover"
         data-testid="ProfileAvatar__image"
         src="avatarImage"
         title="John Doe"
@@ -28,7 +28,7 @@ exports[`Avatar > should render with svg 1`] = `
     data-testid="Avatar"
   >
     <div
-      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
     >
       <img
         alt="John Doe"

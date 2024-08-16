@@ -116,7 +116,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20"
@@ -270,7 +270,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -321,7 +321,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -504,7 +504,7 @@ exports[`Add Participant > should fail to find 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
@@ -658,7 +658,7 @@ exports[`Add Participant > should fail to find 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -709,7 +709,7 @@ exports[`Add Participant > should fail to find 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -897,7 +897,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1067,7 +1067,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1107,7 +1107,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1290,7 +1290,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P"
@@ -1444,7 +1444,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1495,7 +1495,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1678,7 +1678,7 @@ exports[`Add Participant > should handle exception on find and show address not 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba"
@@ -1832,7 +1832,7 @@ exports[`Add Participant > should handle exception on find and show address not 
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1883,7 +1883,7 @@ exports[`Add Participant > should handle exception on find and show address not 
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2121,7 +2121,7 @@ exports[`Add Participant > should render custom participants 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2161,7 +2161,7 @@ exports[`Add Participant > should render custom participants 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2398,7 +2398,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2449,7 +2449,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2527,7 +2527,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2578,7 +2578,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

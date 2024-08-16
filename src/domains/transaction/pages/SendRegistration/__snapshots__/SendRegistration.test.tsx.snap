@@ -549,7 +549,7 @@ exports[`Registration > should show error step and go back 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -575,7 +575,7 @@ exports[`Registration > should show error step and go back 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1276,7 +1276,7 @@ exports[`Registration > should show mnemonic error 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1302,7 +1302,7 @@ exports[`Registration > should show mnemonic error 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"

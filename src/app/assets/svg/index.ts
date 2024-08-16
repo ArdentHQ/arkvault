@@ -29,6 +29,7 @@ import CrossSmall from "./cross-small.svg?react";
 import { Currencies } from "./currencies";
 import Dash from "./dash.svg?react";
 import EllipsisVertical from "./ellipsis-vertical.svg?react";
+import EllipsisVerticalFilled from "./ellipsis-vertical-filled.svg?react";
 import ExtensionWwe from "./extension-wwe.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
@@ -53,6 +54,7 @@ import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
 import MoneyCoinSwap from "./money-coin-swap.svg?react";
+import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
 import PencilRuler from "./pencil-ruler.svg?react";
 import Server from "./server.svg?react";
@@ -85,6 +87,11 @@ import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import Completed from "./completed.svg?react";
+import YourPassphraseLight from "./your-passphrase-light.svg?react";
+import YourPassphraseDark from "./your-passphrase-dark.svg?react";
+import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
+import PersonLight from "./person-light.svg?react";
+import PersonDark from "./person-dark.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -109,6 +116,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Cloud,
 	Code,
 	Completed,
+	ConfirmYourPassphrase,
 	Copy,
 	CopyKey,
 	Cross,
@@ -119,6 +127,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	DocumentView,
 	Download,
 	EllipsisVertical,
+	EllipsisVerticalFilled,
 	ExtensionCsv,
 	ExtensionJson,
 	ExtensionWwe,
@@ -147,8 +156,11 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Menu,
 	MenuOpen,
 	MoneyCoinSwap,
+	NoteCheck,
 	Pencil,
 	PencilRuler,
+	PersonDark,
+	PersonLight,
 	Plus,
 	QRCode,
 	QuestionMarkSmall,
@@ -172,4 +184,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UserCheckMark,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
+	YourPassphraseDark,
+	YourPassphraseLight,
 };

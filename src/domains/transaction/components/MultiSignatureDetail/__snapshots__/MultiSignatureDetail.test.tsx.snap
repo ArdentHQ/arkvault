@@ -127,7 +127,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -178,7 +178,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -440,7 +440,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -501,7 +501,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -711,7 +711,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -762,7 +762,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1024,7 +1024,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1085,7 +1085,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1295,7 +1295,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1346,7 +1346,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1608,7 +1608,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1669,7 +1669,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1853,7 +1853,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1904,7 +1904,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2166,7 +2166,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2227,7 +2227,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2411,7 +2411,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2668,7 +2668,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2729,7 +2729,7 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2924,7 +2924,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3125,7 +3125,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3186,7 +3186,7 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3370,7 +3370,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3421,7 +3421,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3683,7 +3683,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3744,7 +3744,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3928,7 +3928,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3966,7 +3966,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -4195,7 +4195,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4256,7 +4256,7 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4762,7 +4762,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4813,7 +4813,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5075,7 +5075,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5136,7 +5136,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5438,7 +5438,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5499,7 +5499,7 @@ exports[`MultiSignatureDetail > should sign transaction after authentication pag
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5775,7 +5775,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5836,7 +5836,7 @@ exports[`MultiSignatureDetail > should sign transaction with a ledger wallet 1`]
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6112,7 +6112,7 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6173,7 +6173,7 @@ exports[`MultiSignatureDetail > should submit transaction signing using keyboard
                                     data-testid="Avatar"
                                   >
                                     <div
-                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                     >
                                       <img
                                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

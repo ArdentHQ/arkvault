@@ -231,7 +231,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -341,7 +341,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -451,7 +451,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -636,7 +636,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -698,7 +698,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1276,7 +1276,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1386,7 +1386,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1496,7 +1496,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1802,7 +1802,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1912,7 +1912,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2022,7 +2022,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2324,7 +2324,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2400,7 +2400,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -2476,7 +2476,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -2760,7 +2760,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2870,7 +2870,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2980,7 +2980,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3289,7 +3289,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3365,7 +3365,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -3441,7 +3441,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       data-testid="Avatar"
                                     >
                                       <div
-                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                       >
                                         <img
                                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
