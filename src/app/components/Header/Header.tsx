@@ -19,9 +19,16 @@ export const Header = ({ title, titleIcon, titleSuffix, className, subtitle, ext
 		<div className="space-y-2">
 			<div className="flex items-center gap-3">
 				{titleIcon ?? undefined}
-				<h1 className={cn("mb-0", {
-					"text-2xl leading-[29px]": !titleClassName
-				}, titleClassName)} data-testid="header__title">
+				<h1
+					className={cn(
+						"mb-0",
+						{
+							"text-2xl leading-[29px]": !titleClassName,
+						},
+						titleClassName,
+					)}
+					data-testid="header__title"
+				>
 					{title}
 					{titleSuffix && <span> {titleSuffix}</span>}
 				</h1>
