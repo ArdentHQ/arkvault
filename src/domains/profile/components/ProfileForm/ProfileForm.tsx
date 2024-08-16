@@ -85,9 +85,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 					<div>
 						<FormField name="name">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
-							<InputDefault
-								ref={register(createProfile.name())}
-							/>
+							<InputDefault ref={register(createProfile.name())} />
 						</FormField>
 					</div>
 
