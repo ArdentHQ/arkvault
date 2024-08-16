@@ -34,7 +34,6 @@ export const CreateProfile = () => {
 
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, currency);
 		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
-		profile.settings().set(Contracts.ProfileSetting.Avatar, avatarImage);
 
 		if (password) {
 			profile.auth().setPassword(password);

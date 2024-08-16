@@ -44,7 +44,6 @@ export const ImportProfileForm: React.VFC<ImportProfileFormProperties> = ({
 
 		profile.settings().set(Contracts.ProfileSetting.Name, name.trim());
 		profile.settings().set(Contracts.ProfileSetting.Theme, viewingMode);
-		profile.settings().set(Contracts.ProfileSetting.Avatar, avatarImage);
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, currency);
 
 		profile
