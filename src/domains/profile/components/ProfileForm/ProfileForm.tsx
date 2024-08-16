@@ -1,5 +1,4 @@
-import { Helpers } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { ProfileFormState } from "./ProfileForm.contracts";
@@ -27,7 +26,6 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 	const form = useForm<ProfileFormState>({
 		defaultValues: {
-			avatarImage: "",
 			disclaimer: "",
 			name: "",
 			...defaultValues,
@@ -39,32 +37,21 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 	const { errors, isSubmitting, isDirty, isValid } = formState;
 
 	useEffect(() => {
-		register("avatarImage");
 		register("viewingMode", { required: true });
 	}, [register]);
 
-	const { avatarImage, confirmPassword, currency, disclaimer, name, password, viewingMode } = watch();
+	const { confirmPassword, currency, disclaimer, password, viewingMode } = watch();
 
 	const { resetAccentColor } = useAccentColor();
 	const { resetTheme, setTheme } = useTheme();
 
 	const { createProfile } = useValidation();
 
-	const formattedName = name?.trim();
-
-	const isSvg = useMemo(() => avatarImage.endsWith("</svg>"), [avatarImage]);
-
 	useEffect(() => {
 		if (shouldValidate) {
 			trigger();
 		}
 	}, [shouldValidate, trigger]);
-
-	useEffect(() => {
-		if (!formattedName && isSvg) {
-			setValue("avatarImage", "");
-		}
-	}, [formattedName, isSvg, setValue]);
 
 	useEffect(() => {
 		setTheme(viewingMode);
@@ -100,12 +87,6 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
 							<InputDefault
 								ref={register(createProfile.name())}
-								onBlur={() => {
-									/* istanbul ignore else -- @preserve */
-									if (avatarImage.length === 0 || isSvg) {
-										setValue("avatarImage", Helpers.Avatar.make(formattedName));
-									}
-								}}
 							/>
 						</FormField>
 					</div>

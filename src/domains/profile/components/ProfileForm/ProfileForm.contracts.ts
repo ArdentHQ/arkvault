@@ -2,7 +2,7 @@ import { ValidationState } from "@/app/hooks/use-password-validation";
 import { Theme } from "@/types";
 
 interface ProfileFormState {
-	avatarImage: string;
+	avatarImage?: string;
 	confirmPassword?: string;
 	disclaimer: boolean;
 	name: string;
