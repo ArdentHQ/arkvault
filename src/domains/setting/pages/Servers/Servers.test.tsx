@@ -1443,11 +1443,8 @@ describe("Servers Settings", () => {
 				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
 			);
 
-			// // Is loading initially
-			// expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
-			//
-			// // After ping it should show error
-			// await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
+			// After ping it should show error
+			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
 		});
