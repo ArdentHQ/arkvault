@@ -595,7 +595,7 @@ describe("SendDelegateResignation", () => {
 			const resignationEncryptedUrl = `/profiles/${getDefaultProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
 			history.push(resignationEncryptedUrl);
 
-			const { asFragment } = render(
+			render(
 				<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
 					<SendDelegateResignation />
 				</Route>,
