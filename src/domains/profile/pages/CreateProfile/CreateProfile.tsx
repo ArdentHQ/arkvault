@@ -28,7 +28,7 @@ export const CreateProfile = () => {
 		};
 	}, [resetTheme]);
 
-	const handleSubmit = async ({ avatarImage, name, password, currency, viewingMode }: ProfileFormState) => {
+	const handleSubmit = async ({ name, password, currency, viewingMode }: ProfileFormState) => {
 		const profile = await env.profiles().create(name.trim());
 		await env.profiles().restore(profile);
 
