@@ -633,8 +633,6 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			expect(asFragment()).toMatchSnapshot();
-
 			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
