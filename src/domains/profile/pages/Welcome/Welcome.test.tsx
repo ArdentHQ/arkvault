@@ -201,6 +201,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getByText(passwordProtectedProfile.name()));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+
 		await act(async () => {
 			await submitPassword();
 		});
