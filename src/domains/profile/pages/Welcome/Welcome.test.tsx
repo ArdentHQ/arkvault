@@ -122,7 +122,8 @@ describe("Welcome with deeplink", () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test&vote=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+		const route =
+			"?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test&vote=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD";
 
 		render(
 			<Route path="/">
@@ -136,21 +137,26 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-vote${route}`));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-vote${route}`),
+		);
 
-		toastWarningSpy.mockRestore()
-		historyPushMock.mockRestore()
-		mockDelegateName.mockRestore()
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
+		mockDelegateName.mockRestore();
 	});
 
 	it("should navigate to verify message page", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature"
+		const route =
+			"?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature";
 
 		render(
 			<Route path="/">
@@ -164,14 +170,18 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/verify-message${route}`));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/verify-message${route}`),
+		);
 
-		toastWarningSpy.mockRestore()
-		historyPushMock.mockRestore()
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	//@TODO: Fix this test - No content is being rendered on the welcome page
@@ -388,7 +398,7 @@ describe("Welcome with deeplink", () => {
 	it("should navigate to transfer page with network parameter", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=transfer&coin=ark&network=ark.devnet"
+		const route = "?method=transfer&coin=ark&network=ark.devnet";
 
 		render(
 			<Route path="/">
@@ -402,20 +412,25 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-transfer${route}`));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-transfer${route}`),
+		);
 
-		toastWarningSpy.mockRestore()
-		historyPushMock.mockRestore()
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	it("should navigate to transfer page with nethash parameter", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867"
+		const route =
+			"?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867";
 
 		render(
 			<Route path="/">
@@ -429,14 +444,18 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/send-transfer${route}`));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/send-transfer${route}`),
+		);
 
-		toastWarningSpy.mockRestore()
-		historyPushMock.mockRestore()
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	it("should prompt the user to select a profile", async () => {
@@ -537,7 +556,8 @@ describe("Welcome with deeplink", () => {
 	it("should navigate to sign page", async () => {
 		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
 		const historyPushMock = vi.spyOn(history, "push");
-		const route = "?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message+to+sign"
+		const route =
+			"?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message+to+sign";
 
 		render(
 			<Route path="/">
@@ -551,14 +571,18 @@ describe("Welcome with deeplink", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
 		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
-		await waitFor(() => expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/sign-message${route}`));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/sign-message${route}`),
+		);
 
-		toastWarningSpy.mockRestore()
-		historyPushMock.mockRestore()
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	it("should not navigate when clicking multiple times", async () => {
@@ -913,5 +937,4 @@ describe("Welcome", () => {
 		spy.mockRestore();
 		windowSpy.mockRestore();
 	});
-
 });
