@@ -6,7 +6,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react";
-import { vi } from "vitest";
+import { afterAll, vi } from "vitest";
 import { Welcome } from "./Welcome";
 import { ProfilePaths } from "@/router/paths";
 import { EnvironmentProvider } from "@/app/contexts";
@@ -76,6 +76,10 @@ describe("Welcome with deeplink", () => {
 
 		resetProfileNetworksMock();
 	});
+
+	afterAll(() => {
+		vi.restoreAllMocks()
+	})
 
 	it("should redirect to password protected profile if only one available", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
