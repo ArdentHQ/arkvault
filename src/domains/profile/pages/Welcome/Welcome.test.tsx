@@ -15,7 +15,6 @@ import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
 import {
-	act,
 	env,
 	getDefaultPassword,
 	getDefaultProfileId,
