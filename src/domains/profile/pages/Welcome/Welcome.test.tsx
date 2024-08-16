@@ -494,7 +494,7 @@ describe("Welcome with deeplink", () => {
 		toastWarningSpy.mockRestore();
 	});
 
-	it("should clear the profile validation timeout", async () => {
+	it("should clear the profile validation timeout", () => {
 		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
 		const { unmount } = render(
@@ -882,5 +882,6 @@ describe("Welcome", () => {
 		});
 
 		spy.mockRestore();
+		windowSpy.mockRestore();
 	});
 });
