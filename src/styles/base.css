@@ -59,3 +59,11 @@ main {
 .welcome-slider-dots .slick-active > button {
 	@apply bg-theme-navy-500 border-transparent hover:bg-theme-navy-500
 }
+
+table > tbody > tr:not(:last-child) td:first-child::after {
+	@apply content-[''] w-6 block bg-white h-px absolute left-0
+}
+
+table > tbody > tr:not(:last-child) td:last-child::after {
+	@apply content-[''] w-6 block bg-white h-px absolute right-0
+}

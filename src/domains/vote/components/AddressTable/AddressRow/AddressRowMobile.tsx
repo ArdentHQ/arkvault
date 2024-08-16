@@ -159,8 +159,6 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 		if (maxVotes === 1) {
 			return (
 				<>
-					<Avatar size="xs" address={votes[0].wallet.address()} noShadow />
-
 					{votes[0].wallet && (
 						<div className="flex items-center">
 							<div className="flex flex-1 justify-end overflow-hidden">
@@ -209,10 +207,8 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 				>
 					<div className="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
-							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />
-
 							<div className="flex w-0 flex-1 overflow-hidden">
-								<Address address={wallet.address()} walletName={alias} />
+								<Address address={wallet.address()} walletName={alias} showCopyButton />
 							</div>
 						</div>
 					</div>

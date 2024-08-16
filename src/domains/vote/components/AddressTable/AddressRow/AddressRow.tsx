@@ -157,21 +157,13 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
 			return (
-				<>
-					<Circle
-						size={useCompact ? "xs" : "lg"}
-						className="border-theme-secondary-300 dark:border-theme-secondary-800"
-						noShadow
-					/>
-					<span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>
-				</>
+				<span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>
 			);
 		}
 
 		if (maxVotes === 1) {
 			return (
 				<div className="flex items-center space-x-3 overflow-hidden">
-					<Avatar size={useCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
 					<Link
 						to={votes[0].wallet?.explorerLink() as string}
 						isExternal
@@ -224,26 +216,18 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				)}
 				isCompact={useCompact}
 			>
-				<Avatar className="shrink-0" size={useCompact ? "xs" : "lg"} address={wallet.address()} noShadow />
 				<div className="w-40 flex-1">
 					<Address
 						address={wallet.address()}
 						walletName={alias}
+						showCopyButton
 						walletNameClass="text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
 					/>
 				</div>
 			</TableCell>
 
 			<TableCell
-				className="hidden md:table-cell"
-				innerClassName="justify-center space-x-2"
-				isCompact={useCompact}
-			>
-				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
-			</TableCell>
-
-			<TableCell
-				className="hidden xl:table-cell"
+				className="hidden lg:table-cell"
 				innerClassName="justify-end font-bold text-theme-secondary-text whitespace-nowrap"
 				isCompact={useCompact}
 			>
@@ -280,7 +264,15 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				</TableCell>
 			)}
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact={useCompact}>
+			<TableCell
+				className="hidden lg:table-cell"
+				innerClassName="justify-center space-x-2"
+				isCompact={useCompact}
+			>
+				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
+			</TableCell>
+
+			<TableCell className="pr-6" variant="end" innerClassName="justify-end" isCompact={useCompact}>
 				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 					<div>
 						<Button

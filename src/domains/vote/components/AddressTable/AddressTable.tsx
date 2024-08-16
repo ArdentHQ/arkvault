@@ -34,22 +34,14 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				cellWidth: "w-80",
 			},
 			{
-				Header: t("COMMON.WALLET_TYPE"),
-				accessor: () => "wallet-type",
-				cellWidth: "w-30",
-				className: "justify-center",
-				disableSortBy: true,
-				headerClassName: "hidden md:table-cell",
-			},
-			{
 				Header: t("COMMON.BALANCE"),
 				accessor: (wallet) => wallet.balance?.(),
 				cellWidth: "w-60",
 				className: "justify-end",
-				headerClassName: "hidden xl:table-cell",
+				headerClassName: "hidden lg:table-cell",
 			},
 			{
-				Header: maxVotes === 1 ? t("COMMON.DELEGATE") : t("COMMON.DELEGATES"),
+				Header: t("COMMON.VALIDATED"),
 				accessor: (wallet) => {
 					let votes: Contracts.VoteRegistryItem[];
 
@@ -87,6 +79,14 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					disableSortBy: true,
 				},
 				{
+					Header: t("COMMON.INFO"),
+					accessor: () => "wallet-type",
+					cellWidth: "w-30",
+					className: "justify-center",
+					disableSortBy: true,
+					headerClassName: "hidden lg:table-cell",
+				},
+				{
 					accessor: "onSelect",
 					disableSortBy: true,
 					headerClassName: "no-border",
@@ -102,6 +102,14 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				cellWidth: "w-20",
 				className: "justify-center",
 				disableSortBy: true,
+			},
+			{
+				Header: t("COMMON.INFO"),
+				accessor: () => "wallet-type",
+				cellWidth: "w-30",
+				className: "justify-center",
+				disableSortBy: true,
+				headerClassName: "hidden lg:table-cell",
 			},
 			{
 				accessor: "onSelect",
@@ -158,7 +166,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 						{isExpanded && (
 							<AccordionContent data-testid="AddressAccordion">
 								<Table
-									className="-mt-3 sm:mt-0"
+									className="-mt-3 sm:mt-0 sm:border border-theme-secondary-300 rounded-xl"
 									columns={columns}
 									data={memoizedWallets}
 									hideHeader={isXs}
@@ -182,7 +190,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 							</div>
 						</div>
 
-						<Table columns={columns} data={memoizedWallets}>
+						<Table className="border border-theme-secondary-300 rounded-xl" columns={columns} data={memoizedWallets}>
 							{renderTableRow}
 						</Table>
 					</div>
