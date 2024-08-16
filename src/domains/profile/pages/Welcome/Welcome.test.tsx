@@ -127,7 +127,7 @@ describe("Welcome with deeplink", () => {
 		const historyPushMock = vi.spyOn(history, "push");
 		const route = "?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test&vote=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
@@ -147,7 +147,7 @@ describe("Welcome with deeplink", () => {
 
 		toastWarningSpy.mockRestore()
 		historyPushMock.mockRestore()
-
+		mockDelegateName.mockRestore()
 	});
 
 	it("should navigate to verify message page", async () => {
@@ -155,7 +155,7 @@ describe("Welcome with deeplink", () => {
 		const historyPushMock = vi.spyOn(history, "push");
 		const route = "?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature"
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
@@ -393,7 +393,7 @@ describe("Welcome with deeplink", () => {
 		const historyPushMock = vi.spyOn(history, "push");
 		const route = "?method=transfer&coin=ark&network=ark.devnet"
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
@@ -420,7 +420,7 @@ describe("Welcome with deeplink", () => {
 		const historyPushMock = vi.spyOn(history, "push");
 		const route = "?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867"
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
@@ -542,7 +542,7 @@ describe("Welcome with deeplink", () => {
 		const historyPushMock = vi.spyOn(history, "push");
 		const route = "?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message+to+sign"
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
