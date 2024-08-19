@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@ardenthq/sdk";
 import { Contracts, Wallet } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";

@@ -1,6 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
-
+import { renderHook } from "@testing-library/react";
 import { useLedgerModelStatus } from "./use-ledger-model-status";
 
 describe("useLedgerModelStatus", () => {

@@ -43,19 +43,19 @@ describe("Dropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with custom icon classname", () => {
+	it("should render with custom icon classname", async () => {
 		const optionsWithIcon = [{ icon: "trash", iconClassName: "custom-class-name", label: "Option 1", value: "1" }];
 
 		const { container } = render(<Dropdown options={optionsWithIcon} />);
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		expect(container).toContainHTML("custom-class-name");
 	});
 
-	it("should render with custom icon classname from a function", () => {
+	it("should render with custom icon classname from a function", async () => {
 		const optionsWithIcon = [
 			{ icon: "trash", iconClassName: (option) => option.label + "--class", label: "option-1", value: "1" },
 		];
@@ -64,12 +64,12 @@ describe("Dropdown", () => {
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		expect(container).toContainHTML("option-1--class");
 	});
 
-	it("should render with secondary label", () => {
+	it("should render with secondary label", async () => {
 		const optionsWithIcon = [
 			{
 				icon: "trash",
@@ -84,35 +84,35 @@ describe("Dropdown", () => {
 
 		const dropdown = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(dropdown);
+		await userEvent.click(dropdown);
 
 		expect(container).toContainHTML("option-1--class");
 	});
 
-	it("should open dropdown options on icon click", () => {
+	it("should open dropdown options on icon click", async () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
 
-	it("shouldn't open dropdown by disableToggle param on icon click", () => {
+	it("shouldn't open dropdown by disableToggle param on icon click", async () => {
 		render(<Dropdown options={options} disableToggle={true} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
 	});
 
-	it("should select option by click", () => {
+	it("should select option by click", async () => {
 		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -120,17 +120,17 @@ describe("Dropdown", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
-	it("should do nothing by click on disable option", () => {
+	it("should do nothing by click on disable option", async () => {
 		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -138,46 +138,46 @@ describe("Dropdown", () => {
 
 		expect(thirdOption).toBeInTheDocument();
 
-		userEvent.click(thirdOption);
+		await userEvent.click(thirdOption);
 
 		expect(onSelect).not.toHaveBeenCalledWith();
 	});
 
-	it("should select option with enter key", () => {
+	it("should select option with enter key", async () => {
 		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.tab();
-		userEvent.keyboard("{enter}");
+		await userEvent.tab();
+		await userEvent.keyboard("{enter}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
-	it("should select option with space key", () => {
+	it("should select option with space key", async () => {
 		const onSelect = vi.fn();
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.tab();
-		userEvent.keyboard("{space}");
+		await userEvent.tab();
+		await userEvent.keyboard("{Spacebar}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
-	it("should ignore triggering onSelect callback if not exists", () => {
+	it("should ignore triggering onSelect callback if not exists", async () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -185,12 +185,12 @@ describe("Dropdown", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 
-	it("should close dropdown content when click outside", () => {
+	it("should close dropdown content when click outside", async () => {
 		render(
 			<div>
 				<div data-testid="dropdown__outside" className="mt-16">
@@ -203,7 +203,7 @@ describe("Dropdown", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -215,20 +215,20 @@ describe("Dropdown", () => {
 
 		expect(outsideElement).toBeInTheDocument();
 
-		userEvent.click(outsideElement);
+		await userEvent.click(outsideElement);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 
-	it("should close dropdown with escape key", () => {
+	it("should close dropdown with escape key", async () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		userEvent.keyboard("{esc}");
+		await userEvent.keyboard("{esc}");
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -247,61 +247,61 @@ describe("Dropdown", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a bottom position", () => {
+	it("should render a bottom position", async () => {
 		const { container } = render(<Dropdown options={options} position="bottom" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a bottom-left position", () => {
+	it("should render a bottom-left position", async () => {
 		const { container } = render(<Dropdown options={options} position="bottom-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a left position", () => {
+	it("should render a left position", async () => {
 		const { container } = render(<Dropdown options={options} position="left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a top-left position", () => {
+	it("should render a top-left position", async () => {
 		const { container } = render(<Dropdown options={options} position="top-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a top", () => {
+	it("should render a top", async () => {
 		const { container } = render(<Dropdown options={options} position="top" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render a top-right", () => {
+	it("should render a top-right", async () => {
 		const { container } = render(<Dropdown options={options} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render dropdown group options with divider, icon and secondary label", () => {
+	it("should render dropdown group options with divider, icon and secondary label", async () => {
 		const primaryOptions: DropdownOptionGroup = {
 			hasDivider: false,
 			key: "primary",
@@ -340,12 +340,12 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render without options one", () => {
+	it("should render without options one", async () => {
 		const primaryOptions: DropdownOptionGroup = {
 			key: "primary",
 			options: [],
@@ -361,39 +361,39 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
 });
 
 describe("Dropdown ClickOutside Hook", () => {
-	it("should not call callback if clicked on target element", () => {
+	it("should not call callback if clicked on target element", async () => {
 		const element = document;
 		const reference = { current: element };
 		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
-		userEvent.click(element.body);
+		await userEvent.click(element.body);
 
 		expect(callback).not.toHaveBeenCalled();
 	});
 
-	it("should call callback if clicked outside target element", () => {
+	it("should call callback if clicked outside target element", async () => {
 		const div = document.createElement("div");
 		const reference = { current: div };
 
 		const callback = vi.fn();
 		clickOutsideHandler(reference, callback);
 
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
 	});
 });
 
 describe("Dropdown positioning", () => {
-	it("should render content below toggle", () => {
+	it("should render content below toggle", async () => {
 		const documentClientHeightSpy = vi.spyOn(document.body, "clientHeight", "get").mockReturnValue(50);
 		const getComputedStyleSpy = vi.spyOn(window, "getComputedStyle").mockReturnValueOnce({ marginTop: "10px" });
 
@@ -404,7 +404,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
 
@@ -412,7 +412,7 @@ describe("Dropdown positioning", () => {
 		getComputedStyleSpy.mockRestore();
 	});
 
-	it("should render content below toggle and reduce its height", () => {
+	it("should render content below toggle and reduce its height", async () => {
 		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 90, top: 0 });
@@ -429,7 +429,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toHaveAttribute(
 			"style",
@@ -443,7 +443,7 @@ describe("Dropdown positioning", () => {
 		elementClientHeightSpy.mockRestore();
 	});
 
-	it("should render content above toggle and apply a negative margin", () => {
+	it("should render content above toggle and apply a negative margin", async () => {
 		const getBoundingClientRectSpy = vi
 			.spyOn(Element.prototype, "getBoundingClientRect")
 			.mockReturnValue({ height: 50, top: 100 });
@@ -458,7 +458,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		fireEvent.resize(window);
 
@@ -469,7 +469,7 @@ describe("Dropdown positioning", () => {
 		documentClientHeightSpy.mockRestore();
 	});
 
-	it("shouldn't do resize if no ref found", () => {
+	it("shouldn't do resize if no ref found", async () => {
 		const reference = { current: undefined };
 		Object.defineProperty(reference, "current", {
 			get: vi.fn(() => {}),
@@ -486,7 +486,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(getBoundingClientRectSpy).not.toHaveBeenCalled();
 

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import { act as hookAct, renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useProfileTransactions } from "./use-profile-transactions";
@@ -39,10 +39,9 @@ describe("useProfileTransactions", () => {
 			items: () => items,
 		} as any);
 
-		const { result, waitForNextUpdate } = renderHook(
-			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
+		});
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
@@ -170,30 +169,23 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const { result, waitForNextUpdate } = renderHook(
-			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-			{
-				wrapper,
-			},
-		);
-
-		hookAct(() => {
-			result.current.updateFilters({ activeMode: "sent" });
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
 
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "sent" });
 		});
 
-		await waitForNextUpdate();
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "sent" });
+		});
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "all" });
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
 		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
@@ -206,8 +198,6 @@ describe("useProfileTransactions", () => {
 		hookAct(() => {
 			result.current.updateFilters({ activeMode: "sent" });
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
 		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));

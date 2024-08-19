@@ -1,4 +1,4 @@
-import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import { act as hookAct, renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
@@ -30,7 +30,7 @@ describe("Synchronizer Hook", () => {
 	];
 
 	beforeEach(() => {
-		vi.useFakeTimers();
+		vi.useFakeTimers({ shouldAdvanceTime: true });
 		onCall = vi.fn();
 	});
 
@@ -53,7 +53,7 @@ describe("Synchronizer Hook", () => {
 
 		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
@@ -79,7 +79,7 @@ describe("Synchronizer Hook", () => {
 
 		const clearIntervalSpy = vi.spyOn(window, "clearInterval").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByRole("button"));
+		await userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearIntervalSpy).toHaveBeenCalledTimes(2));
 
@@ -122,13 +122,11 @@ describe("Synchronizer Hook", () => {
 			},
 		];
 
-		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
+		const { result } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 
 		act(() => {
 			result.current.runAll();
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() =>
 			expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }),
@@ -145,15 +143,15 @@ describe("Synchronizer Hook", () => {
 			},
 		];
 
-		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
+		const { result } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 
 		hookAct(() => {
 			result.current.runAll();
 		});
 
-		await waitForNextUpdate();
-
-		expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) });
+		await waitFor(() =>
+			expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }),
+		);
 
 		hookAct(() => {
 			result.current.clearError();

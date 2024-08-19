@@ -60,40 +60,40 @@ describe("Switch", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should allow changing the selected option by clicking the handle", () => {
+	it("should allow changing the selected option by clicking the handle", async () => {
 		render(<Wrapper />);
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
 		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
 	});
 
-	it("should allow changing the selected option by clicking the option text", () => {
+	it("should allow changing the selected option by clicking the option text", async () => {
 		render(<Wrapper />);
 
-		userEvent.click(screen.getByText("Option B"));
+		await userEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
 		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		userEvent.click(screen.getByText("Option A"));
+		await userEvent.click(screen.getByText("Option A"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
 	});
 
-	it("should not select option by clicking the option text when disabled", () => {
+	it("should not select option by clicking the option text when disabled", async () => {
 		render(<Switch disabled value="a" onChange={onChange} leftOption={leftOption} rightOption={rightOption} />);
 
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
 
-		userEvent.click(screen.getByText("Option B"));
+		await userEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).not.toHaveBeenCalled();
 		expect(screen.getByRole("checkbox")).not.toBeChecked();

@@ -60,11 +60,11 @@ describe("Button", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should emit event on click", () => {
+	it("should emit event on click", async () => {
 		const onClick = vi.fn();
 		render(<Button onClick={onClick}>Click Me</Button>);
 
-		userEvent.click(screen.getByText("Click Me"));
+		await userEvent.click(screen.getByText("Click Me"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

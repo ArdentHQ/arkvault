@@ -78,7 +78,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 
@@ -102,7 +102,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("AccordionHeader"));
+		await userEvent.click(screen.getByTestId("AccordionHeader"));
 
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 

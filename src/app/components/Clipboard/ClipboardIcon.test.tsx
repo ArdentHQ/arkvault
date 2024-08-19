@@ -16,14 +16,14 @@ describe("ClipboardIcon", () => {
 		(navigator as any).clipboard.writeText.mockRestore();
 	});
 
-	it("should render with tooltip in the dark mode", () => {
+	it("should render with tooltip in the dark mode", async () => {
 		render(
 			<Clipboard variant="icon" data="" tooltipDarkTheme>
 				<span>Hello!</span>
 			</Clipboard>,
 		);
 
-		userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
+		await userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});
@@ -35,12 +35,12 @@ describe("ClipboardIcon", () => {
 			</Clipboard>,
 		);
 
-		userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
+		await userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
 		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 
-		userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+		await userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		await waitFor(() => expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT));
 
