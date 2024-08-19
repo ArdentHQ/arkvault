@@ -5,6 +5,7 @@ import { env } from "@/utils/testing-library";
 import "cross-fetch/polyfill";
 import Tippy from "@tippyjs/react";
 import crypto from "crypto";
+import "jest-styled-components";
 
 import { server } from "./src/tests/mocks/server";
 

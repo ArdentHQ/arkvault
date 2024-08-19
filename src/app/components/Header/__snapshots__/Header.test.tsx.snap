@@ -147,7 +147,7 @@ exports[`PageHeader > should render responsive (md) 1`] = `
     class=" css-ycib48"
   >
     <div
-      class="mx-auto px-8 lg:container md:px-10"
+      class="mx-auto px-10 lg:container"
     >
       <div
         class="flex items-end justify-between bg-theme-background"

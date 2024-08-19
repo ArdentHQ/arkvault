@@ -34,6 +34,8 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
 	let goMock: any;
+	const mnemonicMismatchError = "This mnemonic does not correspond to your wallet";
+	const secretMismatchError = "This secret does not correspond to your wallet";
 
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -50,7 +52,11 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			network: ARKDevnet,
 		});
 
-		profile.wallets().push(wallet);
+		const walletExists = profile.wallets().findByAddressWithNetwork(wallet.address(), wallet.networkId());
+
+		if (!walletExists) {
+			profile.wallets().push(wallet);
+		}
 
 		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
@@ -58,12 +64,13 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 			withProviders: true,
 		});
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), "wrong passphrase");
 
-		await waitFor(() => expect(form()?.formState.isValid).toBe(false));
+		await waitFor(() => expect(form()?.formState.errors.mnemonic.message).toBe(mnemonicMismatchError));
 
-		userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
@@ -91,16 +98,17 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				withProviders: true,
 			});
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
-			userEvent.paste(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
+			await userEvent.type(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.errors.secondMnemonic.message).toBe(mnemonicMismatchError));
 
-			userEvent.clear(screen.getByTestId(secondMnemonicID));
-			userEvent.paste(screen.getByTestId(secondMnemonicID), secondMnemonic);
+			await userEvent.clear(screen.getByTestId(secondMnemonicID));
+			await userEvent.type(screen.getByTestId(secondMnemonicID), secondMnemonic);
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+			await waitFor(() => expect(form()?.formState.errors.secondMnemonic).toBeUndefined());
 
 			profile.wallets().forget(wallet.id());
 			vi.clearAllMocks();
@@ -120,16 +128,18 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 				withProviders: true,
 			});
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
+			await userEvent.clear(screen.getByTestId("AuthenticationStep__secret"));
+			await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
-			userEvent.paste(screen.getByTestId(secondSecretID), "wrong second secret");
+			await userEvent.clear(screen.getByTestId(secondSecretID));
+			await userEvent.type(screen.getByTestId(secondSecretID), "wrong second secret");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
+			await waitFor(() => expect(form()?.formState.errors.secondSecret.message).toBe(secretMismatchError));
 
-			userEvent.clear(screen.getByTestId(secondSecretID));
-			userEvent.paste(screen.getByTestId(secondSecretID), "abc");
+			await userEvent.clear(screen.getByTestId(secondSecretID));
+			await userEvent.type(screen.getByTestId(secondSecretID), "abc");
 
-			await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
+			await waitFor(() => expect(form()?.formState.errors.secondSecret).toBeUndefined());
 		},
 	);
 
@@ -150,7 +160,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
@@ -176,7 +186,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		expect(screen.getByTestId("AuthenticationStep__secret")).toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ secret: "secret" }));
 
@@ -202,7 +212,7 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
 		await waitFor(() => expect(form()?.getValues()).toStrictEqual({ mnemonic: MNEMONICS[0] }));
 
@@ -260,13 +270,13 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await expect(screen.findByTestId("AuthenticationStep__mnemonic")).resolves.toBeVisible();
 		await expect(screen.findByTestId(secondMnemonicID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
 			expect(screen.getByTestId(secondMnemonicID)).toBeEnabled();
 		});
 
-		userEvent.paste(screen.getByTestId(secondMnemonicID), MNEMONICS[1]);
+		await userEvent.type(screen.getByTestId(secondMnemonicID), MNEMONICS[1]);
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({
@@ -294,13 +304,13 @@ describe.each(["transaction", "message"])("AuthenticationStep (%s)", (subject) =
 		await expect(screen.findByTestId("AuthenticationStep__secret")).resolves.toBeVisible();
 		await expect(screen.findByTestId(secondSecretID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
+		await userEvent.type(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
 		await waitFor(() => {
 			expect(screen.getByTestId(secondSecretID)).toBeEnabled();
 		});
 
-		userEvent.paste(screen.getByTestId(secondSecretID), "abc");
+		await userEvent.type(screen.getByTestId(secondSecretID), "abc");
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({

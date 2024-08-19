@@ -110,7 +110,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -148,7 +148,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -239,7 +239,7 @@ exports[`ImportWallet > import with private key > when is not valid 1`] = `
           Private Key
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -457,7 +457,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -495,7 +495,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -586,7 +586,7 @@ exports[`ImportWallet > import with private key > when is valid 1`] = `
           Private Key
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -804,7 +804,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -842,7 +842,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -933,7 +933,7 @@ exports[`ImportWallet > import with wif > with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -1151,7 +1151,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1189,7 +1189,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1280,7 +1280,7 @@ exports[`ImportWallet > import with wif > with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -1498,7 +1498,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1536,7 +1536,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -1630,7 +1630,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           class="relative"
         >
           <div
-            class="css-1q57rjh"
+            class="css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -1658,7 +1658,7 @@ exports[`ImportWallet > should import with encryped wif 1`] = `
           Password
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -2310,7 +2310,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2336,7 +2336,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -2350,7 +2350,9 @@ exports[`ImportWallet > should render as ledger import 1`] = `
               >
                 <span
                   class="css-tgbw37"
-                />
+                >
+                  Connect and Authorize Ledger Device
+                </span>
                 <ul
                   class="css-xa5o6q"
                 >
@@ -2701,7 +2703,7 @@ exports[`ImportWallet > should render method step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -2739,7 +2741,7 @@ exports[`ImportWallet > should render method step 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -2830,7 +2832,7 @@ exports[`ImportWallet > should render method step 1`] = `
           Mnemonic
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -3151,7 +3153,7 @@ exports[`ImportWallet > should render network step 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -3183,7 +3185,7 @@ exports[`ImportWallet > should render network step 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -3348,7 +3350,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
@@ -3449,7 +3451,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
             class="flex w-full items-center justify-between sm:justify-start"
@@ -3612,7 +3614,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
@@ -3713,7 +3715,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
           </div>
         </div>
         <div
-          class="w-full rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
+          class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
         >
           <div
             class="flex w-full items-center justify-between sm:justify-start"

@@ -110,7 +110,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -148,7 +148,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -239,7 +239,7 @@ exports[`ImportWallet WIF > should import with invalid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -457,7 +457,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -495,7 +495,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
                   …
                 </div>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -586,7 +586,7 @@ exports[`ImportWallet WIF > should import with valid wif 1`] = `
           WIF
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"

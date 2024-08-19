@@ -28,7 +28,7 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 	});
@@ -44,11 +44,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PaginationSearch__cancel"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__cancel"));
 
 		await waitFor(() => expect(screen.queryByTestId("PaginationSearchForm")).not.toBeInTheDocument());
 	});
@@ -66,17 +66,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PaginationSearch__input"), "1");
+		await userEvent.type(screen.getByTestId("PaginationSearch__input"), "1");
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(1));
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(1));
 	});
@@ -94,17 +94,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PaginationSearch__input"), "6");
+		await userEvent.type(screen.getByTestId("PaginationSearch__input"), "6");
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(5));
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(5));
 	});
@@ -122,11 +122,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -144,17 +144,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PaginationSearch__input"), "0");
+		await userEvent.type(screen.getByTestId("PaginationSearch__input"), "0");
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(0));
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -172,17 +172,18 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PaginationSearch__input"), "100000000");
+		await userEvent.clear(screen.getByTestId("PaginationSearch__input"));
+		await userEvent.type(screen.getByTestId("PaginationSearch__input"), "100000000");
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(100_000_000));
 
-		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		await userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(100_000_000));
 	});
@@ -206,11 +207,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		await userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("somewhere-outside"));
+		await userEvent.click(screen.getByTestId("somewhere-outside"));
 
 		await waitFor(() => expect(screen.queryByTestId("PaginationSearchForm")).not.toBeInTheDocument());
 	});

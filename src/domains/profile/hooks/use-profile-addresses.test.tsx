@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useProfileAddresses } from "./use-profile-addresses";
 import { env, getDefaultProfileId, MNEMONICS } from "@/utils/testing-library";

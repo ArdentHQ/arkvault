@@ -14,6 +14,7 @@ export default defineConfig((env) => {
 		viteConfig(env),
 		defineConfig({
 			test: {
+				css: false,
 				logHeapUsage: true,
 				maxConcurrency: 4,
 				maxWorkers: 1,
@@ -62,6 +63,7 @@ export default defineConfig((env) => {
 			resolve: {
 				alias: {
 					"@": path.resolve(__dirname, "./src"),
+					"identity-obj-proxy": require.resolve("identity-obj-proxy"),
 				},
 			},
 		}),

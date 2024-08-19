@@ -48,6 +48,6 @@ export const Section = ({
 		border={border}
 		className={cn(className, backgroundClassName, { [borderClassName]: border, hasBorder: border })}
 	>
-		<div className={cn("mx-auto px-8 lg:container md:px-10", innerClassName)}>{children}</div>
+		<div className={cn("mx-auto px-10 lg:container", innerClassName)}>{children}</div>
 	</SectionWrapper>
 );

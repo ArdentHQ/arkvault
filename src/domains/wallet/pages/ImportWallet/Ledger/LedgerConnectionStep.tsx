@@ -5,13 +5,12 @@ import { useTranslation } from "react-i18next";
 
 import { LedgerCancelling } from "./LedgerCancelling";
 import { Alert } from "@/app/components/Alert";
-import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
-import { Spinner } from "@/app/components/Spinner";
 import { useLedgerContext } from "@/app/contexts/Ledger";
 import { useActiveProfile } from "@/app/hooks";
-import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { Icon } from "@/app/components/Icon";
+import { Loader } from "@/app/components/Loader";
 
 const ConnectionContent = ({
 	error,
@@ -33,15 +32,16 @@ const ConnectionContent = ({
 	}
 
 	return (
-		<div className="space-y-8">
-			<Image name="WaitingLedgerDevice" domain="wallet" className="mx-auto max-w-full" useAccentColor={false} />
-
+		<div className="space-y-4">
 			<div className="inline-flex w-full items-center justify-center space-x-3">
-				<Spinner />
-				<span className="animate-pulse font-semibold text-theme-secondary-text">
-					{t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })}
-				</span>
+				<Loader text={t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", { coin: coinName })} />
 			</div>
+			<Image
+				name="WaitingLedgerDevice"
+				domain="wallet"
+				className="mx-auto w-full max-w-[400px]"
+				useAccentColor={false}
+			/>
 		</div>
 	);
 };
@@ -100,22 +100,19 @@ export const LedgerConnectionStep = ({
 	}
 
 	return (
-		<section data-testid="LedgerConnectionStep" className="space-y-8">
+		<section data-testid="LedgerConnectionStep" className="space-y-4">
 			<Header
 				title={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.TITLE")}
 				subtitle={t("WALLETS.PAGE_IMPORT_WALLET.LEDGER_CONNECTION_STEP.SUBTITLE")}
+				titleIcon={
+					<Icon
+						name="LedgerAlt"
+						dimensions={[22, 22]}
+						className="stroke-theme-primary-600 stroke-2 text-theme-primary-100 dark:text-theme-primary-900"
+					/>
+				}
+				className="hidden md:block"
 			/>
-
-			<FormField name="network">
-				<FormLabel label={t("COMMON.CRYPTOASSET")} />
-				<SelectNetwork
-					id="ImportWallet__network"
-					networks={[network, network, network]}
-					selectedNetwork={network}
-					isDisabled
-					profile={activeProfile}
-				/>
-			</FormField>
 
 			<ConnectionContent error={error} isConnected={isConnected} coinName={network.coin()} />
 		</section>

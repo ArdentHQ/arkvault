@@ -189,7 +189,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature registra
                       Mnemonic
                     </label>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"
@@ -503,7 +503,7 @@ exports[`ConfirmRemovePendingTransaction > should render multisignature transact
                       Mnemonic
                     </label>
                     <div
-                      class="css-1q57rjh"
+                      class="css-n1b0kl"
                     >
                       <div
                         class="relative flex h-full flex-1"

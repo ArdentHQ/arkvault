@@ -19,7 +19,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -35,7 +35,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -81,7 +81,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -97,7 +97,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -113,7 +113,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -1209,7 +1209,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -1225,7 +1225,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -1271,7 +1271,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -1287,7 +1287,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -1303,7 +1303,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -2399,7 +2399,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -2415,7 +2415,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -2461,7 +2461,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -2477,7 +2477,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -2493,7 +2493,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -2539,7 +2539,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell w-28 min-w-28"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell w-28 min-w-28"
               colspan="1"
               data-testid="table__th--5"
               role="columnheader"
@@ -3605,7 +3605,7 @@ exports[`TransactionTable > should render compact 1`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -3621,7 +3621,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -3667,7 +3667,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -3683,7 +3683,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -3699,7 +3699,7 @@ exports[`TransactionTable > should render compact 1`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -3871,7 +3871,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -3906,7 +3906,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4097,7 +4097,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4143,7 +4143,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -4326,7 +4326,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -4361,7 +4361,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4555,7 +4555,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -4590,7 +4590,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4784,7 +4784,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -4819,7 +4819,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5013,7 +5013,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -5048,7 +5048,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5242,7 +5242,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -5277,7 +5277,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5471,7 +5471,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -5506,7 +5506,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5700,7 +5700,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -5735,7 +5735,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5926,7 +5926,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5972,7 +5972,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -6140,7 +6140,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -6171,7 +6171,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6347,7 +6347,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6378,7 +6378,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -6532,7 +6532,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -6563,7 +6563,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6728,7 +6728,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -6759,7 +6759,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6924,7 +6924,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -6955,7 +6955,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7120,7 +7120,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -7151,7 +7151,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7316,7 +7316,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -7347,7 +7347,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7512,7 +7512,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -7543,7 +7543,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7708,7 +7708,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -7739,7 +7739,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7915,7 +7915,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -7946,7 +7946,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -8124,7 +8124,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -8155,7 +8155,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -8331,7 +8331,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -8362,7 +8362,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -8516,7 +8516,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -8547,7 +8547,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -8712,7 +8712,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -8743,7 +8743,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -8908,7 +8908,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -8939,7 +8939,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9104,7 +9104,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -9135,7 +9135,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9300,7 +9300,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -9331,7 +9331,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9496,7 +9496,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -9527,7 +9527,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9692,7 +9692,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -9723,7 +9723,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9899,7 +9899,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -9930,7 +9930,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -10027,7 +10027,7 @@ exports[`TransactionTable > should render responsive 3`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -10043,7 +10043,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -10089,7 +10089,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -10105,7 +10105,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -10121,7 +10121,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -10293,7 +10293,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -10328,7 +10328,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -10519,7 +10519,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -10565,7 +10565,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -10748,7 +10748,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -10783,7 +10783,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -10977,7 +10977,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -11012,7 +11012,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -11206,7 +11206,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -11241,7 +11241,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -11435,7 +11435,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -11470,7 +11470,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -11664,7 +11664,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -11699,7 +11699,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -11893,7 +11893,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -11928,7 +11928,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -12122,7 +12122,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -12157,7 +12157,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -12348,7 +12348,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -12394,7 +12394,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -12481,7 +12481,7 @@ exports[`TransactionTable > should render responsive 4`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -12497,7 +12497,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -12543,7 +12543,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -12559,7 +12559,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -12575,7 +12575,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -12747,7 +12747,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -12782,7 +12782,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -12973,7 +12973,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -13019,7 +13019,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -13202,7 +13202,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -13237,7 +13237,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -13431,7 +13431,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -13466,7 +13466,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -13660,7 +13660,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -13695,7 +13695,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -13889,7 +13889,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -13924,7 +13924,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14118,7 +14118,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -14153,7 +14153,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14347,7 +14347,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -14382,7 +14382,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14576,7 +14576,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -14611,7 +14611,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14802,7 +14802,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -14848,7 +14848,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -14935,7 +14935,7 @@ exports[`TransactionTable > should render responsive 5`] = `
             role="row"
           >
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
               colspan="1"
               data-testid="table__th--0"
               role="columnheader"
@@ -14951,7 +14951,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
               colspan="1"
               data-testid="table__th--1"
               role="columnheader"
@@ -14997,7 +14997,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--2"
               role="columnheader"
@@ -15013,7 +15013,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
               colspan="1"
               data-testid="table__th--3"
               role="columnheader"
@@ -15029,7 +15029,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               </div>
             </th>
             <th
-              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
               colspan="1"
               data-testid="table__th--4"
               role="columnheader"
@@ -15201,7 +15201,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy"
@@ -15236,7 +15236,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -15427,7 +15427,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -15473,7 +15473,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g"
@@ -15656,7 +15656,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -15691,7 +15691,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -15885,7 +15885,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -15920,7 +15920,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -16114,7 +16114,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -16149,7 +16149,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -16343,7 +16343,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -16378,7 +16378,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -16572,7 +16572,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -16607,7 +16607,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -16801,7 +16801,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -16836,7 +16836,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -17030,7 +17030,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"
@@ -17065,7 +17065,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -17256,7 +17256,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -17302,7 +17302,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2"

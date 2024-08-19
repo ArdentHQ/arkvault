@@ -17,7 +17,7 @@ exports[`ContactForm > should render responsive 1`] = `
         Name
       </label>
       <div
-        class=" css-1q57rjh"
+        class=" css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
@@ -51,7 +51,7 @@ exports[`ContactForm > should render responsive 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -83,7 +83,7 @@ exports[`ContactForm > should render responsive 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -165,7 +165,7 @@ exports[`ContactForm > should render responsive 1`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -250,7 +250,7 @@ exports[`ContactForm > should render responsive 2`] = `
         Name
       </label>
       <div
-        class=" css-1q57rjh"
+        class=" css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
@@ -284,7 +284,7 @@ exports[`ContactForm > should render responsive 2`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -307,28 +307,28 @@ exports[`ContactForm > should render responsive 2`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-2-menu"
+              aria-owns="downshift-3-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-2-input"
-                  id="downshift-2-label"
+                  for="downshift-3-input"
+                  id="downshift-3-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-2-menu"
-                      aria-labelledby="downshift-2-label"
+                      aria-controls="downshift-3-menu"
+                      aria-labelledby="downshift-3-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
-                      id="downshift-2-input"
+                      id="downshift-3-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -378,8 +378,8 @@ exports[`ContactForm > should render responsive 2`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-2-label"
-                id="downshift-2-menu"
+                aria-labelledby="downshift-3-label"
+                id="downshift-3-menu"
                 role="listbox"
               />
             </div>
@@ -398,7 +398,7 @@ exports[`ContactForm > should render responsive 2`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -483,7 +483,7 @@ exports[`ContactForm > should render with errors 1`] = `
         Name
       </label>
       <div
-        class=" css-1hr3i2s"
+        class=" css-12mz4i6"
       >
         <div
           class="relative flex h-full flex-1"
@@ -565,7 +565,7 @@ exports[`ContactForm > should render with errors 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -588,28 +588,28 @@ exports[`ContactForm > should render with errors 1`] = `
             <div
               aria-expanded="false"
               aria-haspopup="listbox"
-              aria-owns="downshift-4-menu"
+              aria-owns="downshift-7-menu"
               role="combobox"
             >
               <div>
                 <label
-                  for="downshift-4-input"
-                  id="downshift-4-label"
+                  for="downshift-7-input"
+                  id="downshift-7-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="downshift-4-menu"
-                      aria-labelledby="downshift-4-label"
+                      aria-controls="downshift-7-menu"
+                      aria-labelledby="downshift-7-label"
                       autocomplete="off"
                       class="no-ligatures w-full border-none cursor-default css-1vs1awz"
                       data-testid="SelectDropdown__input"
-                      id="downshift-4-input"
+                      id="downshift-7-input"
                       name="network"
                       placeholder="Enter a cryptoasset name"
                       type="text"
@@ -659,8 +659,8 @@ exports[`ContactForm > should render with errors 1`] = `
                 </div>
               </div>
               <div
-                aria-labelledby="downshift-4-label"
-                id="downshift-4-menu"
+                aria-labelledby="downshift-7-label"
+                id="downshift-7-menu"
                 role="listbox"
               />
             </div>
@@ -679,7 +679,7 @@ exports[`ContactForm > should render with errors 1`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"

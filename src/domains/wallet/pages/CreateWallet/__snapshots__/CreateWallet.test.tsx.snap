@@ -545,7 +545,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -571,7 +571,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1437,7 +1437,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1463,7 +1463,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1683,7 +1683,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
@@ -1701,7 +1701,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                               data-testid="Avatar"
                             >
                               <div
-                                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                               >
                                 <img
                                   alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
@@ -2355,7 +2355,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -2381,7 +2381,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -3253,7 +3253,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -3279,7 +3279,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -4147,7 +4147,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -4173,7 +4173,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -5043,7 +5043,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -5069,7 +5069,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"

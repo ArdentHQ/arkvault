@@ -92,7 +92,7 @@ describe("useDeeplink hook", () => {
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DeeplinkValidate"));
+		await userEvent.click(screen.getByTestId("DeeplinkValidate"));
 
 		await expect(screen.findByTestId("DeeplinkFailed")).resolves.toBeVisible();
 
@@ -113,12 +113,12 @@ describe("useDeeplink hook", () => {
 
 		expect(screen.getByTestId("DeeplinkValidate")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DeeplinkValidate"));
+		await userEvent.click(screen.getByTestId("DeeplinkValidate"));
 
 		await waitFor(() => expect(screen.queryByTestId("DeeplinkFailed")).not.toBeInTheDocument());
 	});
 
-	it("should handle url", () => {
+	it("should handle url", async () => {
 		history.push(url);
 
 		const historySpy = vi.spyOn(history, "push");
@@ -134,7 +134,7 @@ describe("useDeeplink hook", () => {
 
 		expect(screen.getByTestId("DeeplinkHandle")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DeeplinkHandle"));
+		await userEvent.click(screen.getByTestId("DeeplinkHandle"));
 
 		expect(historySpy).toHaveBeenCalledWith(
 			"/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer?method=transfer&coin=ark&network=ark.devnet&recipient=DNSBvFTJtQpS4hJfLerEjSXDrBT7K6HL2o&amount=1.2&memo=ARK",

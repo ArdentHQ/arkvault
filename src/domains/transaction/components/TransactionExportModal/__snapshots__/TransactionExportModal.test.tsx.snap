@@ -1885,9 +1885,8 @@ exports[`TransactionExportModal > should render progress status 1`] = `
                         </div>
                       </button>
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="TransactionExport__submit-button"
-                        disabled=""
                         type="submit"
                       >
                         <div
@@ -1990,38 +1989,42 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                   <div>
                     <svg
                       class="mx-auto mb-6 hidden h-26 md:block"
+                      id="success-light-green"
                       viewBox="0 0 207 106"
                       xml:space="preserve"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M131.5 68.9l11.6-11.6c2.4-2.4 2.4-6.2 0-8.6l-35.3-35.3c-2.4-2.4-6.2-2.4-8.6 0L63.9 48.7c-2.4 2.4-2.4 6.2 0 8.6l35.3 35.3c2.4 2.4 6.2 2.4 8.6 0l12.4-12.4m6.7-6.8l-2.7 2.7"
+                        d="M146.516 53.426c0 23.748-19.252 43-43 43-4.902 0-9.612-.82-14-2.33m55.831-50.67a42.662 42.662 0 0 0-1.907-6m-4.24-8c-7.724-11.462-20.824-19-35.684-19-23.749 0-43 19.252-43 43 0 8.46 2.442 16.348 6.661 23m13.339 13.338a43.209 43.209 0 0 1-8.285-6.838"
                         fill="none"
-                        stroke="#FC9F0F"
+                        stroke="#DBDEE5"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="103.016"
+                        cy="53.926"
+                        fill="none"
+                        r="31.5"
+                        stroke="#289548"
+                        stroke-width="2"
+                      />
+                      <circle
+                        cx="103"
+                        cy="53.867"
+                        fill="#E2F0E6"
+                        r="27.5"
+                      />
+                      <path
+                        d="M111.516 47.035l3.687-3.61 5.313 5.205-16.5 16.147-4.75 4.649-2.044-2m9.485-15.684l-7.442 7.285-7.437-7.285-5.312 5.202 5.089 4.982m3.41 3.34l-1.368-1.34"
+                        fill="none"
+                        stroke="#289548"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
                       />
                       <path
-                        d="M89.5 16.7l7.6-7.6c3.5-3.5 9.3-3.5 12.8 0l37.4 37.4c3.5 3.5 3.5 9.3 0 12.8l-37.4 37.4c-3.5 3.5-9.3 3.5-12.8 0L59.7 59.4c-3.5-3.5-3.5-9.3 0-12.8L73.3 33m13.2-13.2l-9.8 9.8"
-                        fill="none"
-                        stroke="#FC9F0F"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M100.5 40.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6v13.9c0 2-1.6 3.6-3.6 3.6s-3.6-1.6-3.6-3.6V40.4zm0 25.4c0-2 1.6-3.6 3.6-3.6s3.6 1.6 3.6 3.6-1.6 3.6-3.6 3.6-3.6-1.6-3.6-3.6z"
-                        fill="#F7FAFB"
-                        stroke="#212225"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7z"
-                        fill="#DBDEE5"
-                      />
-                      <path
-                        d="M30.1 17h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-66h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm0 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.5-22h2v-7h7V8h-7V1h-2v7h-7v2h7v7zm103.8 0h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm-43 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm66 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-66h-2v-7h-7V8h7V1h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7V8h7V1h2v7h7v2h-7v7z"
+                        d="M30.06 17.371h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm43 88h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-66.001-.002h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm0-21.999h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm22.5 0h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm-.001-66h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm.001 22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm21.499-22h2v-7h7v-2h-7v-7h-2v7h-7v2h7v7zm103.882-.003h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-43.001 88h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm65.998 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-22.5 0h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm.001-66h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm0 22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7zm-21.5-22h-2v-7h-7v-2h7v-7h2v7h7v2h-7v7z"
                         fill="#DBDEE5"
                       />
                     </svg>
@@ -2029,7 +2032,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                       class="flex flex-col overflow-hidden rounded-xl mb-6"
                     >
                       <div
-                        class="css-rzhg83"
+                        class="css-1o2lvkz"
                       >
                         <div
                           class="css-v0ob3f"
@@ -2037,7 +2040,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                           width="16"
                         >
                           <svg
-                            id="circle-exclamation-mark"
+                            id="circle-check-mark"
                             viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
@@ -2056,12 +2059,7 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                                 stroke-miterlimit="10"
                               />
                               <path
-                                d="M10 10.5v-5"
-                                stroke-linecap="round"
-                                stroke-miterlimit="10"
-                              />
-                              <path
-                                d="M10 14h0"
+                                d="M13.6 6.5l-5 6.8c-.2.3-.6.4-.9.2l-.1-.1L6.4 12"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                               />
@@ -2069,28 +2067,30 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                           </svg>
                         </div>
                         <span>
-                          Warning
+                          Success
                         </span>
                       </div>
                       <div
-                        class="css-trjt6n"
+                        class="css-1n20uf5"
                       >
-                        No transactions could be found for the selected period.
+                        1 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
-                      class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+                      class="rounded-xl border border-theme-secondary-300 p-4 dark:border-theme-secondary-800 sm:px-6 sm:py-5"
                     >
                       <div
                         class="flex items-center justify-between space-x-4"
+                        data-testid="FilePreviewPlain"
                       >
                         <div
-                          class="flex flex-grow items-center space-x-4"
+                          class="flex flex-grow items-center space-x-2"
                         >
                           <div
-                            class="css-1atxdzc"
-                            height="40"
-                            width="40"
+                            class="css-1i4b0eq"
+                            data-testid="icon-ExtensionCsv"
+                            height="20"
+                            width="20"
                           >
                             <svg
                               viewBox="0 0 28 28"
@@ -2118,13 +2118,14 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                             </svg>
                           </div>
                           <div
-                            class="w-0 flex-1 truncate font-semibold"
+                            class="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </div>
                         </div>
                         <div
-                          class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500"
+                          class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 dark:text-white"
+                          data-testid="FilePreviewPlain__Success"
                         >
                           <div
                             class="css-15txs7d"
@@ -2167,9 +2168,8 @@ exports[`TransactionExportModal > should render success and download file 1`] = 
                         </div>
                       </button>
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="TransactionExportSuccess__download-button"
-                        disabled=""
                         type="submit"
                       >
                         <div
@@ -2356,22 +2356,24 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                       <div
                         class="css-1n20uf5"
                       >
-                        10 transactions have been retrieved and are ready to be exported.
+                        1 transactions have been retrieved and are ready to be exported.
                       </div>
                     </div>
                     <div
-                      class="rounded-lg border-2 border-theme-secondary-200 p-4 dark:border-theme-secondary-800"
+                      class="rounded-xl border border-theme-secondary-300 p-4 dark:border-theme-secondary-800 sm:px-6 sm:py-5"
                     >
                       <div
                         class="flex items-center justify-between space-x-4"
+                        data-testid="FilePreviewPlain"
                       >
                         <div
-                          class="flex flex-grow items-center space-x-4"
+                          class="flex flex-grow items-center space-x-2"
                         >
                           <div
-                            class="css-1atxdzc"
-                            height="40"
-                            width="40"
+                            class="css-1i4b0eq"
+                            data-testid="icon-ExtensionCsv"
+                            height="20"
+                            width="20"
                           >
                             <svg
                               viewBox="0 0 28 28"
@@ -2399,13 +2401,14 @@ exports[`TransactionExportModal > should render success and stay open if downloa
                             </svg>
                           </div>
                           <div
-                            class="w-0 flex-1 truncate font-semibold"
+                            class="w-0 flex-1 truncate text-sm font-semibold leading-[17px] sm:text-lg sm:leading-[21px]"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                           </div>
                         </div>
                         <div
-                          class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-theme-success-200 text-theme-success-500"
+                          class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-theme-navy-100 text-theme-navy-600 dark:bg-theme-navy-600 dark:text-white"
+                          data-testid="FilePreviewPlain__Success"
                         >
                           <div
                             class="css-15txs7d"

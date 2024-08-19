@@ -60,7 +60,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       data-testid="SelectDropdown"
                     >
                       <div
-                        class="sr-only css-1q57rjh"
+                        class="sr-only css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -93,7 +93,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                               id="SelectRecipient__dropdown-label"
                             />
                             <div
-                              class="css-1q57rjh"
+                              class="css-n1b0kl"
                             >
                               <div
                                 class="flex items-center"
@@ -205,7 +205,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -256,7 +256,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -331,7 +331,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               Minimum Required Signatures
             </label>
             <div
-              class="css-1q57rjh"
+              class="css-n1b0kl"
             >
               <div
                 class="relative flex h-full flex-1"
@@ -377,7 +377,7 @@ exports[`MultiSignature Registration Form > should render form step 1`] = `
               class="relative"
             >
               <div
-                class="css-13c7w0w"
+                class="css-xk5t3v"
                 disabled=""
               >
                 <div
@@ -610,7 +610,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
               data-testid="Avatar"
             >
               <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
               >
                 <img
                   alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -653,7 +653,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -669,7 +669,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -685,7 +685,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -720,7 +720,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -752,7 +752,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -781,7 +781,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -813,7 +813,7 @@ exports[`MultiSignature Registration Form > should render review step 1`] = `
                             data-testid="Avatar"
                           >
                             <div
-                              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                             >
                               <img
                                 alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

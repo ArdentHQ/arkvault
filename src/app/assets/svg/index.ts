@@ -30,7 +30,9 @@ import CrossSmall from "./cross-small.svg?react";
 import { Currencies } from "./currencies";
 import Dash from "./dash.svg?react";
 import EllipsisVertical from "./ellipsis-vertical.svg?react";
-import ExtensionWwe from "./extension-wwe.svg?react";
+import EllipsisVerticalFilled from "./ellipsis-vertical-filled.svg?react";
+import ExtensionWweDark from "./extension-wwe-dark.svg?react";
+import ExtensionWweLight from "./extension-wwe-light.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
 import External from "./external.svg?react";
@@ -45,6 +47,7 @@ import GlobePointer from "./globe-pointer.svg?react";
 import Grid from "./grid.svg?react";
 import HintSmall from "./hint-small.svg?react";
 import Ledger from "./ledger.svg?react";
+import LedgerAlt from "./ledger-alt.svg?react";
 import List from "./list.svg?react";
 import LoaderLogo from "./loader-logo.svg?react";
 import Lock from "./lock.svg?react";
@@ -54,6 +57,7 @@ import MagnifyingGlassId from "./magnifying-glass-id.svg?react";
 import Menu from "./menu.svg?react";
 import MenuOpen from "./menu-open.svg?react";
 import MoneyCoinSwap from "./money-coin-swap.svg?react";
+import NoteCheck from "./note-check.svg?react";
 import Pencil from "./pencil.svg?react";
 import PencilRuler from "./pencil-ruler.svg?react";
 import Server from "./server.svg?react";
@@ -81,11 +85,18 @@ import Dashboard from "./dashboard.svg?react";
 import DocumentView from "./document-view.svg?react";
 import ImportWalletLight from "./import-wallet-light.svg?react";
 import ImportWalletDark from "./import-wallet-dark.svg?react";
+import ImportProfileLight from "./import-profile-light.svg?react";
+import ImportProfileDark from "./import-profile-dark.svg?react";
 import SelectNetworkLight from "./select-network-light.svg?react";
 import SelectNetworkDark from "./select-network-dark.svg?react";
 import WalletEncryptionDark from "./wallet-encryption-dark.svg?react";
 import WalletEncryptionLight from "./wallet-encryption-light.svg?react";
 import Completed from "./completed.svg?react";
+import YourPassphraseLight from "./your-passphrase-light.svg?react";
+import YourPassphraseDark from "./your-passphrase-dark.svg?react";
+import ConfirmYourPassphrase from "./confirm-your-passphrase.svg?react";
+import PersonLight from "./person-light.svg?react";
+import PersonDark from "./person-dark.svg?react";
 
 export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
@@ -110,6 +121,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Cloud,
 	Code,
 	Completed,
+	ConfirmYourPassphrase,
 	Copy,
 	CopyKey,
 	Corner,
@@ -121,9 +133,11 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	DocumentView,
 	Download,
 	EllipsisVertical,
+	EllipsisVerticalFilled,
 	ExtensionCsv,
 	ExtensionJson,
-	ExtensionWwe,
+	ExtensionWweDark,
+	ExtensionWweLight,
 	External,
 	Eye,
 	EyeSlash,
@@ -136,9 +150,12 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	GlobePointer,
 	Grid,
 	HintSmall,
+	ImportProfileDark,
+	ImportProfileLight,
 	ImportWalletDark,
 	ImportWalletLight,
 	Ledger,
+	LedgerAlt,
 	List,
 	LoaderLogo,
 	Lock,
@@ -149,8 +166,11 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Menu,
 	MenuOpen,
 	MoneyCoinSwap,
+	NoteCheck,
 	Pencil,
 	PencilRuler,
+	PersonDark,
+	PersonLight,
 	Plus,
 	QRCode,
 	QuestionMarkSmall,
@@ -174,4 +194,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	UserCheckMark,
 	WalletEncryptionDark,
 	WalletEncryptionLight,
+	YourPassphraseDark,
+	YourPassphraseLight,
 };

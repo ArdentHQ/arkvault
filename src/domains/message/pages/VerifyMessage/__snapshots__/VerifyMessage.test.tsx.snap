@@ -541,7 +541,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -567,7 +567,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -581,7 +581,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -688,7 +688,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -715,7 +715,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -742,7 +742,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1338,7 +1338,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1364,7 +1364,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
         class="flex-1 css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1378,7 +1378,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                   class="space-y-5"
                 >
                   <div
-                    class="sm:mt-8"
+                    class="w-full sm:mt-8"
                   >
                     <div
                       class="flex flex-col"
@@ -1485,7 +1485,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1512,7 +1512,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1539,7 +1539,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"

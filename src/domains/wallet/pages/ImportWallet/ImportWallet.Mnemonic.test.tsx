@@ -73,16 +73,17 @@ describe("ImportWallet", () => {
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{Enter}");
 
 		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), mnemonic);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), mnemonic);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{Enter}");
 
 		await waitFor(() => {
 			expect(successStep()).toBeInTheDocument();
@@ -92,7 +93,8 @@ describe("ImportWallet", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "test alias");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
@@ -131,7 +133,8 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[3]);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), MNEMONICS[3]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -143,10 +146,10 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(password);
 
-		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 		await expect(screen.findByTestId("PasswordValidation__confirmEncryptionPassword")).resolves.toHaveValue(
 			password,
 		);
@@ -182,7 +185,8 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -190,9 +194,7 @@ describe("ImportWallet", () => {
 
 		enableEncryptionToggle();
 
-		expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked();
-
-		// Select address that doesnt accept encryption
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).toBeChecked());
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText(commonTranslations.ADDRESS)).resolves.toBeVisible();
@@ -201,7 +203,7 @@ describe("ImportWallet", () => {
 
 		await expect(addressInput()).resolves.toBeVisible();
 
-		expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked();
+		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryption-toggle")).not.toBeChecked());
 	});
 
 	it("should import by mnemonic with second signature and use password to encrypt both", async () => {
@@ -227,7 +229,8 @@ describe("ImportWallet", () => {
 
 		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -239,10 +242,13 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
+		await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
+		await userEvent.type(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
 
-		userEvent.paste(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
-		userEvent.paste(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), password);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), password);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.click(continueButton());
@@ -280,7 +286,8 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
+		await userEvent.clear(mnemonicInput());
+		await userEvent.type(mnemonicInput(), MNEMONICS[0]);
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -292,7 +299,8 @@ describe("ImportWallet", () => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(
+		await userEvent.clear(screen.getByTestId("EncryptPassword__second-mnemonic"));
+		await userEvent.type(
 			screen.getByTestId("EncryptPassword__second-mnemonic"),
 			"invalid second mnemonic fjdkfjdkjfkdjf",
 		);

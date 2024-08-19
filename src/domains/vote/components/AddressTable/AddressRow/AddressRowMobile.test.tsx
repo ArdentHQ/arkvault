@@ -344,7 +344,7 @@ describe("AddressRowMobile", () => {
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());

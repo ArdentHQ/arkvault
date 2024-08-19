@@ -1,6 +1,6 @@
 import { uniq } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook, act } from "@testing-library/react";
 import React from "react";
 
 import { useWalletConfig } from "./use-wallet-config";
@@ -102,7 +102,7 @@ describe("useWalletConfig", () => {
 	it("should set value", async () => {
 		profile.wallets().first().toggleStarred();
 
-		const { result, waitForNextUpdate } = renderHook(
+		const { result } = renderHook(
 			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "all" }, profile }),
 			{
 				wrapper,
@@ -112,8 +112,6 @@ describe("useWalletConfig", () => {
 		act(() => {
 			result.current.setValue("selectedNetworkIds", ["ark.devnet"]);
 		});
-
-		await waitForNextUpdate();
 
 		await waitFor(() => {
 			expect(result.current.selectedNetworkIds).toStrictEqual(["ark.devnet"]);

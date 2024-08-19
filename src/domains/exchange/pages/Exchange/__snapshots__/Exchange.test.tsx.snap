@@ -543,7 +543,7 @@ exports[`Exchange > should render empty 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -569,7 +569,7 @@ exports[`Exchange > should render empty 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -649,7 +649,7 @@ exports[`Exchange > should render empty 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -1209,7 +1209,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="Profile Avatar"
@@ -1235,7 +1235,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -1315,7 +1315,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-8 lg:container md:px-10"
+          class="mx-auto px-10 lg:container"
         >
           <div
             class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"

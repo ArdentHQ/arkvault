@@ -118,7 +118,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -519,7 +519,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -923,7 +923,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1347,7 +1347,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1695,7 +1695,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1834,7 +1834,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2297,7 +2297,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2444,7 +2444,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                             role="row"
                           >
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--0"
                               role="columnheader"
@@ -2460,7 +2460,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               </div>
                             </th>
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--1"
                               role="columnheader"
@@ -2479,7 +2479,130 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                         </thead>
                         <tbody
                           role="rowgroup"
-                        />
+                        >
+                          <tr
+                            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                            data-testid="recipient-list__recipient-list-item"
+                          >
+                            <td
+                              class="mr-3 table-cell md:hidden"
+                            />
+                            <td
+                              class="hidden md:table-cell"
+                            >
+                              <div
+                                class="shrink-0 css-h8w6w0"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="w-28 flex-1 justify-end md:ml-4"
+                            >
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              >
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
+                            </td>
+                            <td
+                              class="ml-2 table-cell md:hidden"
+                            >
+                              <div
+                                class="shrink-0 css-1yk316i"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
+                                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="hidden md:table-cell"
+                            />
+                          </tr>
+                          <tr
+                            class="flex items-center border-b border-dashed border-theme-secondary-300 py-4 last:border-b-0 dark:border-theme-secondary-800"
+                            data-testid="recipient-list__recipient-list-item"
+                          >
+                            <td
+                              class="mr-3 table-cell md:hidden"
+                            />
+                            <td
+                              class="hidden md:table-cell"
+                            >
+                              <div
+                                class="shrink-0 css-h8w6w0"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                    title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="w-28 flex-1 justify-end md:ml-4"
+                            >
+                              <div
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                              >
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                </span>
+                              </div>
+                            </td>
+                            <td
+                              class="ml-2 table-cell md:hidden"
+                            >
+                              <div
+                                class="shrink-0 css-1yk316i"
+                                data-testid="Avatar"
+                              >
+                                <div
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                                >
+                                  <img
+                                    alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
+                                    title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
+                                  />
+                                </div>
+                              </div>
+                            </td>
+                            <td
+                              class="hidden md:table-cell"
+                            />
+                          </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -2503,6 +2626,53 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   2 / 2
+                </div>
+              </div>
+            </div>
+            <div
+              class="no-ligatures css-qu17s6"
+              data-testid="TransactionDetail"
+            >
+              <div
+                class="w-40 flex-1 space-y-2 whitespace-nowrap"
+                data-testid="TransactionDetail--desktop"
+              >
+                <div
+                  class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  Multisignature Address
+                </div>
+                <div
+                  class="flex items-center font-semibold"
+                >
+                  <div
+                    class="w-0 flex-1 text-right md:text-left"
+                  >
+                    <div
+                      class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="shrink-0 css-1n9jllj"
+                data-testid="Avatar"
+              >
+                <div
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                >
+                  <img
+                    alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
+                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 152, 0)" width="100" height="100"/><circle r="40" cx="60" cy="70" fill="rgb(255, 193, 7)"/><circle r="45" cx="50" cy="30" fill="rgb(0, 188, 212)"/><circle r="35" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
+                    title="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
+                  />
                 </div>
               </div>
             </div>
@@ -2739,7 +2909,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3087,7 +3257,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3138,7 +3308,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3601,7 +3771,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3639,7 +3809,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -3705,7 +3875,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4081,7 +4251,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4119,7 +4289,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4185,7 +4355,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4561,7 +4731,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4599,7 +4769,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -4665,7 +4835,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
@@ -5041,7 +5211,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"

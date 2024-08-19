@@ -676,7 +676,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -727,7 +727,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -770,7 +770,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -786,7 +786,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -802,7 +802,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -837,7 +837,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -869,7 +869,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -898,7 +898,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -930,7 +930,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1546,7 +1546,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1597,7 +1597,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -1640,7 +1640,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -1656,7 +1656,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -1672,7 +1672,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -1707,7 +1707,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1739,7 +1739,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1768,7 +1768,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1800,7 +1800,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2430,7 +2430,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2485,7 +2485,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -2558,7 +2558,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2625,7 +2625,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3217,7 +3217,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3268,7 +3268,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -3311,7 +3311,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -3327,7 +3327,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -3343,7 +3343,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -3378,7 +3378,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3410,7 +3410,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -3439,7 +3439,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -3471,7 +3471,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4101,7 +4101,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4156,7 +4156,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4229,7 +4229,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -4296,7 +4296,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -4888,7 +4888,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4939,7 +4939,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             data-testid="Avatar"
           >
             <div
-              class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+              class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
             >
               <img
                 alt="DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH"
@@ -4982,7 +4982,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -4998,7 +4998,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -5014,7 +5014,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5049,7 +5049,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5081,7 +5081,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5110,7 +5110,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5142,7 +5142,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5672,7 +5672,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -5688,7 +5688,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -5704,7 +5704,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -5739,7 +5739,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5771,7 +5771,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -5800,7 +5800,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -5832,7 +5832,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6362,7 +6362,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                       role="row"
                     >
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--0"
                         role="columnheader"
@@ -6378,7 +6378,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--1"
                         role="columnheader"
@@ -6394,7 +6394,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                         </div>
                       </th>
                       <th
-                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                         colspan="1"
                         data-testid="table__th--2"
                         role="columnheader"
@@ -6429,7 +6429,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6461,7 +6461,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -6490,7 +6490,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -6522,7 +6522,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
                           data-testid="Avatar"
                         >
                           <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                           >
                             <img
                               alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"

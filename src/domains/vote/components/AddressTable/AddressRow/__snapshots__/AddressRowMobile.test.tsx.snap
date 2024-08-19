@@ -28,7 +28,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -83,7 +83,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -231,7 +231,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -286,7 +286,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -435,7 +435,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -490,7 +490,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -639,7 +639,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -700,7 +700,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -718,7 +718,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -736,7 +736,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -754,7 +754,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -850,7 +850,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -911,7 +911,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -929,7 +929,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr"
@@ -947,7 +947,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                         data-testid="Avatar"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                         >
                           <img
                             alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
@@ -1052,7 +1052,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1107,7 +1107,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1246,7 +1246,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
@@ -1357,7 +1357,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1412,7 +1412,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1551,7 +1551,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
@@ -1652,7 +1652,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1759,7 +1759,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1814,7 +1814,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1962,7 +1962,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2017,7 +2017,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -2165,7 +2165,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2220,7 +2220,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"

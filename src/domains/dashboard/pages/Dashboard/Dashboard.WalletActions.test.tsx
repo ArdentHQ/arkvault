@@ -81,7 +81,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		await userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await waitFor(() =>
 			expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import/ledger`),
@@ -103,7 +103,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText("Create"));
+		await userEvent.click(screen.getByText("Create"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/create`);
 	});
@@ -121,7 +121,7 @@ describe("Dashboard", () => {
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
-		userEvent.click(screen.getByText("Import"));
+		await userEvent.click(screen.getByText("Import"));
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/wallets/import`);
 	});

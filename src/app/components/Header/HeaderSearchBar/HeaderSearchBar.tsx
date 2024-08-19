@@ -25,6 +25,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 	defaultQuery = "",
 	debounceTimeout = 500,
 	resetFields = false,
+	alwaysDisplayClearButton = false,
 	...properties
 }) => {
 	const { t } = useTranslation();
@@ -48,7 +49,6 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 			handleQueryReset();
 		}
 	}, [resetFields, handleQueryReset]);
-
 	return (
 		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
 			<ControlButton
@@ -68,7 +68,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 					data-testid="HeaderSearchBar__input"
 					ref={reference}
 					className={cn(
-						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-10 py-2.5 text-base shadow-xl",
+						"absolute z-50 -mx-10 flex items-center rounded-lg bg-theme-background px-6 py-2.5 text-base shadow-xl",
 						offsetClassName || "top-1/2 -translate-y-1/2",
 						{
 							"right-0": noToggleBorder,
@@ -85,18 +85,21 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 
 					<button
 						data-testid="header-search-bar__reset"
-						className={cn("transition-all duration-300 focus:outline-none", { "mr-4": query !== "" })}
+						className={cn("transition-all duration-300 focus:outline-none", {
+							"mr-4": query !== "" || alwaysDisplayClearButton,
+						})}
 						onClick={handleQueryReset}
 						type="button"
 					>
 						<Icon
 							className={cn(
 								"text-theme-text transition-all duration-300",
-								{ "w-0": query === "" },
-								{ "w-4": query !== "" },
+								{ "w-0": query === "" && !alwaysDisplayClearButton },
+								{ "w-4": query !== "" || alwaysDisplayClearButton },
 							)}
 							name="Cross"
 							size="md"
+							data-testid="header-search-bar__reset-icon"
 						/>
 					</button>
 

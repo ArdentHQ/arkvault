@@ -83,7 +83,7 @@ exports[`SignIn > should render a modal 1`] = `
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded"
                   >
                     <img
                       alt="Jane Doe"
@@ -135,7 +135,7 @@ exports[`SignIn > should render a modal 1`] = `
                   Password
                 </label>
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -211,8 +211,9 @@ exports[`SignIn > should render a modal 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-fl4fi0"
+                  class="css-qrwjsp"
                   data-testid="SignIn__submit-button"
+                  disabled=""
                   type="submit"
                 >
                   <div

@@ -41,7 +41,7 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
         Mnemonic
       </label>
       <div
-        class="css-1q57rjh"
+        class="css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
@@ -117,8 +117,9 @@ exports[`UnlockTokensAuthentication > should render 1`] = `
       </div>
     </button>
     <button
-      class="css-fl4fi0"
+      class="css-qrwjsp"
       data-testid="UnlockTokensAuthentication__send"
+      disabled=""
       type="submit"
     >
       <div

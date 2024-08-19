@@ -126,7 +126,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -273,7 +273,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                             role="row"
                           >
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--0"
                               role="columnheader"
@@ -289,7 +289,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               </div>
                             </th>
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--1"
                               role="columnheader"
@@ -324,7 +324,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -356,7 +356,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -385,7 +385,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -417,7 +417,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -497,7 +497,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -740,7 +740,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -887,7 +887,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                             role="row"
                           >
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--0"
                               role="columnheader"
@@ -903,7 +903,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               </div>
                             </th>
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--1"
                               role="columnheader"
@@ -938,7 +938,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -970,7 +970,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -999,7 +999,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1031,7 +1031,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -1111,7 +1111,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1356,7 +1356,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1615,7 +1615,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1693,7 +1693,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -1942,7 +1942,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                   data-testid="Avatar"
                 >
                   <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                   >
                     <img
                       alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2089,7 +2089,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                             role="row"
                           >
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--0"
                               role="columnheader"
@@ -2105,7 +2105,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                               </div>
                             </th>
                             <th
-                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                              class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
                               colspan="1"
                               data-testid="table__th--1"
                               role="columnheader"
@@ -2140,7 +2140,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2172,7 +2172,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2201,7 +2201,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2233,7 +2233,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                                 data-testid="Avatar"
                               >
                                 <div
-                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                                 >
                                   <img
                                     alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
@@ -2313,7 +2313,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                 data-testid="Avatar"
               >
                 <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                 >
                   <img
                     alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2558,7 +2558,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2817,7 +2817,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                       data-testid="Avatar"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                       >
                         <img
                           alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
@@ -2895,7 +2895,7 @@ exports[`MultiSignatureRegistrationDetail > should render sender's address as ge
                     data-testid="Avatar"
                   >
                     <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
+                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
                     >
                       <img
                         alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
