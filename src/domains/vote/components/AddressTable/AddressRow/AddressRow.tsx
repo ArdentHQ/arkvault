@@ -165,7 +165,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 					<Link
 						to={votes[0].wallet?.explorerLink() as string}
 						isExternal
-						className="block w-24 truncate md:w-auto"
+						className="block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 					>
 						{votes[0].wallet?.username()}
 					</Link>
@@ -195,7 +195,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow className="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
+		<TableRow className="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative">
 			<TableCell
 				data-testid="AddressRow__wallet"
 				onClick={() => {
