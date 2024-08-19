@@ -4,8 +4,7 @@ import { styled } from "twin.macro";
 
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
-import { ViewingModeType } from "@/app/hooks";
-import { shouldUseDarkColors } from "@/utils/theme";
+import { useTheme } from "@/app/hooks/use-theme";
 
 type IconProperties = {
 	name: string;
@@ -61,9 +60,8 @@ type ThemeIconProperties = {
 } & Omit<IconProperties, "name">;
 
 export const ThemeIcon = ({ darkIcon, lightIcon, ...properties }: ThemeIconProperties): JSX.Element => {
-	const theme: ViewingModeType = shouldUseDarkColors() ? "dark" : "light";
-
-	const icon = theme === "dark" ? darkIcon : lightIcon;
+	const { isDarkMode } = useTheme();
+	const icon = isDarkMode ? darkIcon : lightIcon;
 
 	return <Icon name={icon} data-testid={`icon-${icon}`} {...properties} />;
 };

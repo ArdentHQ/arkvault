@@ -3083,7 +3083,11 @@ exports[`General Settings > should not update the uploaded avatar when removing 
                             Profile Name
                           </label>
                           <div
-                            class=" css-n1b0kl"
+<<<<<<< HEAD
+                            class=" css-1q57rjh"
+=======
+                            class=" css-12mz4i6"
+>>>>>>> develop
                           >
                             <div
                               class="relative flex h-full flex-1"

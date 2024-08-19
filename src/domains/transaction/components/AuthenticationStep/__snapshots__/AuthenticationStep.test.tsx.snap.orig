@@ -147,7 +147,11 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         Mnemonic
       </label>
       <div
-        class="css-12mz4i6"
+<<<<<<< HEAD
+        class="css-1hr3i2s"
+=======
+        class="css-n1b0kl"
+>>>>>>> develop
       >
         <div
           class="relative flex h-full flex-1"
@@ -296,7 +300,11 @@ exports[`AuthenticationStep (message) > should request mnemonic if wallet was im
         Mnemonic
       </label>
       <div
-        class="css-12mz4i6"
+<<<<<<< HEAD
+        class="css-1hr3i2s"
+=======
+        class="css-n1b0kl"
+>>>>>>> develop
       >
         <div
           class="relative flex h-full flex-1"
@@ -1529,7 +1537,11 @@ exports[`AuthenticationStep (transaction) > should request mnemonic and second m
         2nd Mnemonic
       </label>
       <div
-        class="css-12mz4i6"
+<<<<<<< HEAD
+        class="css-1hr3i2s"
+=======
+        class="css-n1b0kl"
+>>>>>>> develop
       >
         <div
           class="relative flex h-full flex-1"
@@ -1678,7 +1690,11 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         Mnemonic
       </label>
       <div
-        class="css-12mz4i6"
+<<<<<<< HEAD
+        class="css-1hr3i2s"
+=======
+        class="css-n1b0kl"
+>>>>>>> develop
       >
         <div
           class="relative flex h-full flex-1"
@@ -1827,7 +1843,11 @@ exports[`AuthenticationStep (transaction) > should request mnemonic if wallet wa
         Mnemonic
       </label>
       <div
-        class="css-12mz4i6"
+<<<<<<< HEAD
+        class="css-1hr3i2s"
+=======
+        class="css-n1b0kl"
+>>>>>>> develop
       >
         <div
           class="relative flex h-full flex-1"

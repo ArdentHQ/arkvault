@@ -688,7 +688,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -715,7 +715,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -742,7 +742,7 @@ exports[`VerifyMessage > should render (lg) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1485,7 +1485,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Message
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1512,7 +1512,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signatory
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"
@@ -1539,7 +1539,7 @@ exports[`VerifyMessage > should render (xs) 1`] = `
                         Signature
                       </label>
                       <div
-                        class=" css-1q57rjh"
+                        class=" css-n1b0kl"
                       >
                         <div
                           class="relative flex h-full flex-1"

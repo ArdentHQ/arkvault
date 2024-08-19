@@ -86,9 +86,7 @@ describe("SelectFile", () => {
 	it("should change background when dragging over drop zone", async () => {
 		render(<SelectFile fileFormat=".json" onSelect={vi.fn} />);
 
-		expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass(
-			"bg-theme-primary-50 dark:bg-theme-secondary-800",
-		);
+		expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass("bg-theme-primary-50 dark:bg-black");
 
 		fireEvent.dragEnter(screen.getByTestId("SelectFile__drop-zone"), {
 			dataTransfer: {
@@ -97,7 +95,9 @@ describe("SelectFile", () => {
 		});
 
 		await waitFor(() =>
-			expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass("bg-theme-primary-100 dark:bg-black"),
+			expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass(
+				"bg-theme-primary-100 dark:bg-theme-secondary-800",
+			),
 		);
 
 		fireEvent.dragLeave(screen.getByTestId("SelectFile__drop-zone"), {

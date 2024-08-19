@@ -160,7 +160,16 @@ describe("CreateProfile", () => {
 	it("should store profile", async () => {
 		await renderComponent();
 
+<<<<<<< HEAD
+		// Upload avatar image
+		await userEvent.click(uploadButton());
+
+		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
+
 		await userEvent.type(nameInput(), "test profile 1");
+=======
+		userEvent.paste(nameInput(), "test profile 1");
+>>>>>>> develop
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
@@ -282,6 +291,133 @@ describe("CreateProfile", () => {
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
 
+<<<<<<< HEAD
+	it("should update the avatar when removing focus from name input", async () => {
+		await renderComponent();
+
+		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
+
+		const inputElement: HTMLInputElement = screen.getByTestId("Input");
+
+		await userEvent.type(inputElement, "t");
+		await waitFor(() => expect(inputElement).toHaveValue("t"));
+
+		expect(inputElement).toHaveFocus();
+
+		fireEvent.blur(inputElement);
+
+		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
+
+		inputElement.select();
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, profileName);
+		await waitFor(() => expect(inputElement).toHaveValue(profileName));
+
+		expect(inputElement).toHaveFocus();
+
+		fireEvent.blur(inputElement);
+
+		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
+
+		await userEvent.clear(inputElement);
+		await waitFor(() => expect(inputElement).not.toHaveValue());
+
+		expect(inputElement).toHaveFocus();
+
+		fireEvent.blur(inputElement);
+
+		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
+	});
+
+	it("should not update the uploaded avatar when removing focus from name input", async () => {
+		await renderComponent();
+
+		// Upload avatar image
+		await userEvent.click(uploadButton());
+
+		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
+
+		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
+
+		act(() => nameInput().focus());
+
+		await userEvent.clear(nameInput());
+
+		await waitFor(() => expect(nameInput()).not.toHaveValue());
+
+		act(() => passwordConfirmationInput().focus());
+
+		expect(screen.getByTestId(imageID)).toBeInTheDocument();
+	});
+
+	it("should upload and remove avatar image", async () => {
+		await renderComponent();
+
+		const profileCount = env.profiles().count();
+
+		// Upload avatar image
+		await userEvent.click(uploadButton());
+
+		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
+
+		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+
+		expect(screen.queryByTestId(imageID)).not.toBeInTheDocument();
+		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
+
+		await userEvent.type(nameInput(), "test profile 4");
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => expect(submitButton()).toBeEnabled());
+
+		await userEvent.click(submitButton());
+
+		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
+	});
+
+	it("should show identicon when removing image if name is set", async () => {
+		await renderComponent();
+
+		await userEvent.type(nameInput(), "test profile 1");
+		fireEvent.blur(nameInput());
+
+		// Upload avatar image
+		await userEvent.click(uploadButton());
+
+		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
+
+		await expect(screen.findByTestId(imageID)).resolves.toBeVisible();
+
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+
+		expect(screen.getByTestId(avatarID)).toBeInTheDocument();
+	});
+
+	it("should not upload avatar image", async () => {
+		await renderComponent();
+
+		const profileCount = env.profiles().count();
+
+		browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockRejectedValue(new Error("Error"));
+
+		await userEvent.click(uploadButton());
+
+		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
+
+		await userEvent.type(nameInput(), "test profile 5");
+		await userEvent.click(screen.getByRole("checkbox"));
+
+		await waitFor(() => expect(submitButton()).toBeEnabled());
+
+		await userEvent.click(submitButton());
+
+		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
+	});
+
+=======
+>>>>>>> develop
 	it.each([true, false])("should set viewing mode based on system preferences", async (shouldUseDarkColors) => {
 		const shouldUseDarkColorsSpy = vi.spyOn(themeUtils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 

@@ -3,7 +3,7 @@
 exports[`InputAddress > should not use default validation 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
@@ -24,7 +24,7 @@ exports[`InputAddress > should not use default validation 1`] = `
 exports[`InputAddress > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"

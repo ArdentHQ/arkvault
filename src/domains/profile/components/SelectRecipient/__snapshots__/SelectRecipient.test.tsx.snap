@@ -12,7 +12,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1q57rjh"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -43,7 +43,7 @@ exports[`SelectRecipient > should render disabled 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-13c7w0w"
+                class="css-xk5t3v"
                 disabled=""
               >
                 <div
@@ -142,7 +142,7 @@ exports[`SelectRecipient > should render empty 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1q57rjh"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -173,7 +173,7 @@ exports[`SelectRecipient > should render empty 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1q57rjh"
+                class="css-n1b0kl"
               >
                 <div
                   class="flex items-center"
@@ -270,7 +270,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1hr3i2s"
+          class="sr-only css-12mz4i6"
         >
           <div
             class="relative flex h-full flex-1"
@@ -348,7 +348,7 @@ exports[`SelectRecipient > should render invalid 1`] = `
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1hr3i2s"
+                class="css-12mz4i6"
               >
                 <div
                   class="flex items-center"
@@ -487,7 +487,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
         data-testid="SelectDropdown"
       >
         <div
-          class="sr-only css-1q57rjh"
+          class="sr-only css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -518,7 +518,7 @@ exports[`SelectRecipient > should update internal state when prop changes 1`] = 
                 id="SelectRecipient__dropdown-label"
               />
               <div
-                class="css-1q57rjh"
+                class="css-n1b0kl"
               >
                 <div
                   class="flex items-center"
