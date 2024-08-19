@@ -33,12 +33,12 @@ describe("ExchangeGrid", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(<ExchangeGrid exchanges={[exchange]} onClick={onClick} />);
 
-		userEvent.click(screen.getByTestId("Card"));
+		await userEvent.click(screen.getByTestId("Card"));
 
 		expect(onClick).toHaveBeenCalledWith(exchange.slug);
 	});

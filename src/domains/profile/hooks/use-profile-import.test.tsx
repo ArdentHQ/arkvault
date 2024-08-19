@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import fs from "fs";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { act, renderHook } from "@testing-library/react";
 
 import { ReadableFile } from "@/app/hooks/use-files";
 import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";

@@ -29,7 +29,8 @@ describe("ReceiveFundsForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 
-		userEvent.paste(screen.getByTestId("ReceiveFundsForm__amount"), "10");
+		await userEvent.clear(screen.getByTestId("ReceiveFundsForm__amount"));
+		await userEvent.type(screen.getByTestId("ReceiveFundsForm__amount"), "10");
 
 		await waitFor(() => expect(form()?.getValues("amount")).toBe("10"));
 
@@ -40,7 +41,8 @@ describe("ReceiveFundsForm", () => {
 		const { asFragment, form } = renderWithForm(<ReceiveFundsForm network={network} />);
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 
-		userEvent.paste(screen.getByTestId("ReceiveFundsForm__memo"), "test");
+		await userEvent.clear(screen.getByTestId("ReceiveFundsForm__memo"));
+		await userEvent.type(screen.getByTestId("ReceiveFundsForm__memo"), "test");
 		await waitFor(() => expect(form()?.getValues("memo")).toBe("test"));
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).toHaveValue("test"));
 

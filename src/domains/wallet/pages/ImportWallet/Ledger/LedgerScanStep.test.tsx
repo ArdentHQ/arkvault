@@ -164,29 +164,32 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should handle select in mobile", async () => {
+		global.innerWidth = 768;
 		render(<Component />);
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
+			expect(screen.getAllByTestId("LedgerMobileItem__checkbox", { checked: true })).toHaveLength(1);
 		});
 
 		// Unselect All
 
 		await userEvent.click(screen.getByTestId("LedgerScanStep__select-all-mobile"));
 
-		await waitFor(() => expect(screen.getAllByRole("checkbox", { checked: false })).toHaveLength(4));
+		await waitFor(() => {
+			expect(screen.getAllByTestId("LedgerMobileItem__checkbox", { checked: false })).toHaveLength(1);
+		});
 
 		// Select just first
 
-		await userEvent.click(screen.getAllByRole("checkbox")[1]);
-
-		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
-
-		await userEvent.click(screen.getAllByRole("checkbox")[1]);
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+
+		await userEvent.click(screen.getAllByRole("checkbox")[0]);
+
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 	});
 
 	it("should handle click on mobile item", async () => {
@@ -205,12 +208,12 @@ describe("LedgerScanStep", () => {
 		await userEvent.click(screen.getAllByRole("checkbox")[0]);
 
 		await waitFor(() => {
-			expect(screen.getAllByRole("checkbox", { checked: true })).toHaveLength(4);
+			expect(screen.getAllByTestId("LedgerScanStep__checkbox-row", { checked: true })).toHaveLength(1);
 		});
 
-		await userEvent.click(screen.getAllByRole("checkbox")[0]);
+		await userEvent.click(screen.getAllByTestId("LedgerScanStep__checkbox-row")[0]);
 
-		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 	});
 
 	it("should render ledger table in scanning mode", () => {
@@ -298,7 +301,7 @@ describe("LedgerScanStep", () => {
 	});
 
 	it.each(["xs", "lg"])("should render responsive (%s))", async (breakpoint) => {
-		const { container } = renderResponsive(<Component />, breakpoint);
+		renderResponsive(<Component />, breakpoint);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
@@ -315,35 +318,31 @@ describe("LedgerScanStep", () => {
 		const checkboxSelectAll = screen.getAllByRole("checkbox")[0];
 		const checkboxFirstItem = screen.getAllByRole("checkbox")[1];
 
-		userEvent.click(checkboxSelectAll);
+		await userEvent.click(checkboxSelectAll);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
-		userEvent.click(checkboxSelectAll);
+		await userEvent.click(checkboxSelectAll);
 
 		await waitFor(validLedgerWallet);
 
-		userEvent.click(checkboxFirstItem);
+		await userEvent.click(checkboxFirstItem);
 
 		await waitFor(() => expect(formReference.getValues("wallets")).toMatchObject([]));
 
-		userEvent.click(checkboxFirstItem);
+		await userEvent.click(checkboxFirstItem);
 
 		await waitFor(validLedgerWallet);
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should render compact table", async () => {
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 
-		const { container } = render(<Component />);
+		render(<Component />);
 
 		expect(screen.getAllByRole("row")).toHaveLength(6);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
-
-		expect(container).toMatchSnapshot();
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});

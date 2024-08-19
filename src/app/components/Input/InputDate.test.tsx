@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { FormProvider, useForm } from "react-hook-form";
 import { InputDate } from "./InputDate";
 import { render, screen } from "@/utils/testing-library";
@@ -13,7 +13,7 @@ const defaultValues: { startDate: string | number; endDate: string | number } = 
 };
 
 describe("InputDate", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const { result: form } = renderHook(() => useForm({ defaultValues }));
 		const { asFragment } = render(
 			<FormProvider {...form.current}>
@@ -25,7 +25,7 @@ describe("InputDate", () => {
 
 		expect(screen.getByTestId("InputDate")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("InputDate__calendar"));
+		await userEvent.click(screen.getByTestId("InputDate__calendar"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
