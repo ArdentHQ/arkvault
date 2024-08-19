@@ -8,16 +8,11 @@ import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/Ad
 import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
 import { Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
-import { useAccordion, useBreakpoint } from "@/app/hooks";
-import { Icon } from "@/app/components/Icon";
-import { networkDisplayName } from "@/utils/network-utils";
+import { useBreakpoint } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
-	const { isExpanded, handleHeaderClick } = useAccordion();
 	const wallet = useMemo(() => wallets[0], [wallets]);
 	const maxVotes = wallet.network().maximumVotesPerWallet();
 	const { isXs, isSm } = useBreakpoint();
@@ -29,16 +24,17 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
 		const commonColumns: Column<Contracts.IReadWriteWallet>[] = [
 			{
-				Header: t("COMMON.MY_ADDRESS"),
+				Header: t("COMMON.NAME"),
 				accessor: (wallet) => wallet.alias() || wallet.address(),
 				cellWidth: "w-80",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
 				accessor: (wallet) => wallet.balance?.(),
 				cellWidth: "w-60",
 				className: "justify-end",
-				headerClassName: "hidden lg:table-cell",
+				headerClassName: "hidden xl:table-cell no-border",
 			},
 			{
 				Header: t("COMMON.VALIDATED"),
@@ -57,6 +53,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				},
 				cellWidth: "w-60",
 				className: maxVotes === 1 ? "ml-15" : "",
+				headerClassName: "no-border"
 			},
 		];
 
@@ -69,7 +66,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					cellWidth: "w-20",
 					className: "justify-center",
 					disableSortBy: true,
-					headerClassName: "hidden lg:table-cell",
+					headerClassName: "hidden lg:table-cell no-border",
 				},
 				{
 					Header: t("COMMON.STATUS"),
@@ -77,6 +74,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					cellWidth: "w-20",
 					className: "justify-center",
 					disableSortBy: true,
+					headerClassName: "no-border",
 				},
 				{
 					Header: t("COMMON.INFO"),
@@ -84,7 +82,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					cellWidth: "w-30",
 					className: "justify-center",
 					disableSortBy: true,
-					headerClassName: "hidden lg:table-cell",
+					headerClassName: "hidden lg:table-cell no-border",
 				},
 				{
 					accessor: "onSelect",
@@ -102,6 +100,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				cellWidth: "w-20",
 				className: "justify-center",
 				disableSortBy: true,
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.INFO"),
@@ -109,7 +108,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				cellWidth: "w-30",
 				className: "justify-center",
 				disableSortBy: true,
-				headerClassName: "hidden lg:table-cell",
+				headerClassName: "hidden lg:table-cell no-border",
 			},
 			{
 				accessor: "onSelect",
@@ -121,7 +120,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 
 	const renderTableRow = useCallback(
 		(wallet: Contracts.IReadWriteWallet, index: number) => {
-			if (isXs) {
+			if (isSm || isXs) {
 				return <AddressRowMobile index={index} maxVotes={maxVotes} wallet={wallet} onSelect={onSelect} />;
 			}
 
@@ -135,67 +134,21 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				/>
 			);
 		},
-		[maxVotes, onSelect, isCompact, isXs],
+		[maxVotes, onSelect, isCompact, isSm, isXs],
 	);
 
 	return (
-		<>
-			{isXs || isSm ? (
-				<div>
-					<AccordionWrapper>
-						<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
-							<div className="flex h-8 w-full flex-grow items-center space-x-3">
-								<Icon
-									className={cn({
-										"text-theme-primary-600": network.isLive(),
-										"text-theme-secondary-700": !network.isLive(),
-									})}
-									name={network.ticker()}
-									size="lg"
-								/>
-
-								<div className="flex space-x-2">
-									<h2 className="mb-0 text-lg font-bold">{networkDisplayName(network)}</h2>
-									<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
-										{wallets.length}
-									</span>
-								</div>
-							</div>
-						</AccordionHeader>
-
-						{isExpanded && (
-							<AccordionContent data-testid="AddressAccordion">
-								<Table
-									className="-mt-3 sm:mt-0 sm:border border-theme-secondary-300 rounded-xl"
-									columns={columns}
-									data={memoizedWallets}
-									hideHeader={isXs}
-								>
-									{renderTableRow}
-								</Table>
-							</AccordionContent>
-						)}
-					</AccordionWrapper>
-				</div>
-			) : (
-				<Section>
-					<div data-testid="AddressTable">
-						<div className="flex items-center space-x-4 py-5">
-							<NetworkIcon size="lg" network={network} />
-							<div className="flex space-x-2">
-								<h2 className="mb-0 text-lg font-bold">{networkDisplayName(network)}</h2>
-								<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
-									{wallets.length}
-								</span>
-							</div>
-						</div>
-
-						<Table className="border border-theme-secondary-300 rounded-xl" columns={columns} data={memoizedWallets}>
-							{renderTableRow}
-						</Table>
-					</div>
-				</Section>
-			)}
-		</>
+		<Section>
+			<div data-testid="AddressTable" className="-mt-1 md:mt-2">
+				<Table
+					className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border with-x-padding"
+					columns={columns}
+					data={memoizedWallets}
+					hideHeader={isSm || isXs}
+				>
+					{renderTableRow}
+				</Table>
+			</div>
+		</Section>
 	);
 };

@@ -17,11 +17,12 @@ export const TableRow: React.FC<TableRowProperties> = ({
 	children,
 	isSelected,
 	onClick,
+	className,
 	...properties
 }) => (
 	<TableRowStyled
 		data-testid={properties["data-testid"] || "TableRow"}
-		className={cn({ group: !!onClick }, "relative")}
+		className={cn({ group: !!onClick }, "relative", className)}
 		border={border}
 		dotted={dotted}
 		isSelected={isSelected}

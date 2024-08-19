@@ -156,9 +156,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 
 	const renderWalletVotes = () => {
 		if (!hasVotes) {
-			return (
-				<span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>
-			);
+			return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
 		}
 
 		if (maxVotes === 1) {
@@ -197,7 +195,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow>
+		<TableRow className="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
 			<TableCell
 				data-testid="AddressRow__wallet"
 				onClick={() => {
@@ -210,7 +208,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				}}
 				variant="start"
 				innerClassName={cn(
-					"font-bold cursor-pointer group transition duration-300",
+					"cursor-pointer group transition duration-300",
 					{ "space-x-3": useCompact },
 					{ "space-x-4": !useCompact },
 				)}
@@ -227,15 +225,15 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			</TableCell>
 
 			<TableCell
-				className="hidden lg:table-cell"
-				innerClassName="justify-end font-bold text-theme-secondary-text whitespace-nowrap"
+				className="hidden xl:table-cell"
+				innerClassName="justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
 				isCompact={useCompact}
 			>
 				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
 			<TableCell
-				innerClassName={cn("font-bold", { "space-x-3": useCompact }, { "space-x-4": !useCompact })}
+				innerClassName={cn("font-semibold", { "space-x-3": useCompact }, { "space-x-4": !useCompact })}
 				isCompact={useCompact}
 			>
 				{renderWalletVotes()}
@@ -245,7 +243,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				<>
 					<TableCell
 						className="hidden lg:table-cell"
-						innerClassName="justify-center font-bold text-theme-secondary-text"
+						innerClassName="justify-center font-semibold text-theme-secondary-text"
 						isCompact={useCompact}
 					>
 						{renderRank(votes[0]?.wallet)}
@@ -257,7 +255,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				</>
 			) : (
 				<TableCell innerClassName="justify-center" isCompact={useCompact}>
-					<div className="font-bold text-theme-secondary-400">
+					<div className="font-semibold text-theme-secondary-400">
 						<span className="text-theme-secondary-text">{hasVotes ? votes.length : "0"}</span>
 						<span>/{maxVotes}</span>
 					</div>
@@ -272,7 +270,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
 			</TableCell>
 
-			<TableCell className="pr-6" variant="end" innerClassName="justify-end" isCompact={useCompact}>
+			<TableCell className="pr-6" variant="end" innerClassName="justify-end !pr-0" isCompact={useCompact}>
 				<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 					<div>
 						<Button
