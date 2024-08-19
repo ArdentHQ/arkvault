@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
-import cn from "classnames";
 import { AddressTableProperties } from "./AddressTable.contracts";
 import { AddressRow } from "@/domains/vote/components/AddressTable/AddressRow/AddressRow";
 import { AddressRowMobile } from "@/domains/vote/components/AddressTable/AddressRow/AddressRowMobile";
@@ -64,6 +63,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					Header: t("COMMON.RANK"),
 					accessor: "rank",
 					cellWidth: "w-20",
+					// eslint-disable-next-line sonarjs/no-duplicate-string
 					className: "justify-center",
 					disableSortBy: true,
 					headerClassName: "hidden lg:table-cell no-border",

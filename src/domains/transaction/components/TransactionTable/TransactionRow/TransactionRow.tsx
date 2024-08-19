@@ -50,7 +50,7 @@ export const TransactionRow = memo(
 		}
 
 		return (
-			<TableRow onClick={onClick} className={cn("group", className)} {...properties}>
+			<TableRow onClick={onClick} className={className} {...properties}>
 				<TableCell variant="start" isCompact={isCompact}>
 					<Link
 						to={transaction.explorerLink()}

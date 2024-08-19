@@ -5,29 +5,15 @@ exports[`AddressRow > should emit action on select button 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -51,12 +37,163 @@ exports[`AddressRow > should emit action on select button 1`] = `
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-4 css-o5w6qc"
+          >
+            <div
+              class="flex items-center space-x-3 overflow-hidden"
+            >
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-170792"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-o5w6qc"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -116,10 +253,114 @@ exports[`AddressRow > should emit action on select button 1`] = `
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
+          >
+            <div>
+              <button
+                class="css-6419sw"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render for a multisignature wallet 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -131,27 +372,13 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -194,7 +421,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           >
             <span
               class="text-theme-secondary-400"
@@ -244,88 +471,8 @@ exports[`AddressRow > should emit action on select button 1`] = `
             </span>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
-          >
-            <div>
-              <button
-                class="css-6419sw"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render for a multisignature wallet 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -421,10 +568,114 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
+          >
+            <div>
+              <button
+                class="css-6419sw"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render tooltip wallet when ledger and incompatible 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -436,27 +687,13 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -499,7 +736,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           >
             <span
               class="text-theme-secondary-400"
@@ -549,88 +786,8 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
             </span>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
-          >
-            <div>
-              <button
-                class="css-6419sw"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render tooltip wallet when ledger and incompatible 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -690,137 +847,10 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-4 css-o5w6qc"
-          >
-            <div
-              class="flex items-center space-x-3 overflow-hidden"
-            >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
-              <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="css-170792"
-                >
-                  arkx
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                  data-testid="Link__external"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="arrow-external"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
-          >
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-o5w6qc"
-          >
-            <span>
-              <div
-                class="text-theme-danger-400 css-1i4b0eq"
-                data-testid="StatusIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="circle-cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M7 13l6-6M13 13L7 7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -849,29 +879,15 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -895,12 +911,163 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-4 css-o5w6qc"
+          >
+            <div
+              class="flex items-center space-x-3 overflow-hidden"
+            >
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-170792"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-o5w6qc"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -960,10 +1127,114 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
+          >
+            <div>
+              <button
+                class="css-6419sw"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render when isCompact = true 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -975,27 +1246,13 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-3 css-12appi5"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
@@ -1038,7 +1295,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-12appi5"
           >
             <span
               class="text-theme-secondary-400"
@@ -1049,7 +1306,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="justify-center css-12appi5"
           >
             <span>
               <div
@@ -1088,88 +1345,8 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
             </span>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
-          >
-            <div>
-              <button
-                class="css-6419sw"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render when isCompact = true 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-12appi5"
@@ -1229,137 +1406,10 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-3 css-12appi5"
-          >
-            <div
-              class="flex items-center space-x-3 overflow-hidden"
-            >
-              <div
-                class="shrink-0 css-1i0wxh3"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
-              <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="css-170792"
-                >
-                  arkx
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                  data-testid="Link__external"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="arrow-external"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="justify-center font-bold text-theme-secondary-text css-12appi5"
-          >
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-12appi5"
-          >
-            <span>
-              <div
-                class="text-theme-danger-400 css-1i4b0eq"
-                data-testid="StatusIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="circle-cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M7 13l6-6M13 13L7 7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-t4jv3s"
+            class="justify-end !pr-0 css-t4jv3s"
           >
             <div>
               <button
@@ -1387,29 +1437,15 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -1433,12 +1469,163 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-4 css-o5w6qc"
+          >
+            <div
+              class="flex items-center space-x-3 overflow-hidden"
+            >
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-170792"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-o5w6qc"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -1498,137 +1685,10 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-4 css-o5w6qc"
-          >
-            <div
-              class="flex items-center space-x-3 overflow-hidden"
-            >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
-              <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="css-170792"
-                >
-                  arkx
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                  data-testid="Link__external"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="arrow-external"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
-          >
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-o5w6qc"
-          >
-            <span>
-              <div
-                class="text-theme-danger-400 css-1i4b0eq"
-                data-testid="StatusIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="circle-cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M7 13l6-6M13 13L7 7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -1647,29 +1707,15 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="55" cx="40" cy="30" fill="rgb(3, 169, 244)"/><circle r="35" cx="90" cy="70" fill="rgb(0, 188, 212)"/><circle r="60" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
-                  title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -1693,22 +1739,51 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
                 >
                   DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-o5w6qc"
-          />
-        </td>
-        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -1720,11 +1795,8 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-qrfosa"
-            />
             <span
               class="text-theme-secondary-400"
             >
@@ -1736,7 +1808,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           />
         </td>
         <td>
@@ -1744,9 +1816,18 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
             class="justify-center css-o5w6qc"
           />
         </td>
-        <td>
+        <td
+          class="hidden lg:table-cell"
+        >
           <div
-            class="justify-end css-160cp05"
+            class="justify-center space-x-2 css-o5w6qc"
+          />
+        </td>
+        <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -1774,29 +1855,15 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -1820,12 +1887,163 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-4 css-o5w6qc"
+          >
+            <div
+              class="flex items-center space-x-3 overflow-hidden"
+            >
+              <a
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                rel="noopener noreferrer"
+              >
+                <span
+                  class="css-170792"
+                >
+                  arkx
+                </span>
+                <div
+                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
+                  data-testid="Link__external"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="arrow-external"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
+        >
+          <div
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-o5w6qc"
+          >
+            <span>
+              <div
+                class="text-theme-danger-400 css-1i4b0eq"
+                data-testid="StatusIcon__icon"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="circle-cross"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M7 13l6-6M13 13L7 7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </span>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -1885,137 +2103,10 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-4 css-o5w6qc"
-          >
-            <div
-              class="flex items-center space-x-3 overflow-hidden"
-            >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
-              <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
-                data-ring-focus-margin="-m-1"
-                data-testid="Link"
-                href="https://test.arkscan.io/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                rel="noopener noreferrer"
-              >
-                <span
-                  class="css-170792"
-                >
-                  arkx
-                </span>
-                <div
-                  class="mb-[3px] shrink-0 align-middle duration-200 inline-block text-sm css-v0ob3f"
-                  data-testid="Link__external"
-                  height="16"
-                  width="16"
-                >
-                  <svg
-                    id="arrow-external"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden lg:table-cell"
-        >
-          <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
-          >
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-o5w6qc"
-          >
-            <span>
-              <div
-                class="text-theme-danger-400 css-1i4b0eq"
-                data-testid="StatusIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="circle-cross"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="9"
-                      stroke-miterlimit="10"
-                    />
-                    <path
-                      d="M7 13l6-6M13 13L7 7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -2034,29 +2125,15 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
       </tr>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(205, 220, 57)" width="100" height="100"/><circle r="60" cx="100" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="20" cy="40" fill="rgb(3, 169, 244)"/><circle r="35" cx="30" cy="60" fill="rgb(33, 150, 243)"/></svg>"
-                  title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -2069,22 +2146,51 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
                 >
                   DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-o5w6qc"
-          />
-        </td>
-        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -2096,11 +2202,8 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-qrfosa"
-            />
             <span
               class="text-theme-secondary-400"
             >
@@ -2112,7 +2215,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           />
         </td>
         <td>
@@ -2120,9 +2223,18 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
             class="justify-center css-o5w6qc"
           />
         </td>
-        <td>
+        <td
+          class="hidden lg:table-cell"
+        >
           <div
-            class="justify-end css-160cp05"
+            class="justify-center space-x-2 css-o5w6qc"
+          />
+        </td>
+        <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -2151,29 +2263,15 @@ exports[`AddressRow > should render with active delegate 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -2197,66 +2295,42 @@ exports[`AddressRow > should render with active delegate 1`] = `
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-o5w6qc"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 text-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="star-filled"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2265,7 +2339,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -2277,27 +2351,13 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -2340,7 +2400,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           >
             <span>
               #1
@@ -2388,9 +2448,71 @@ exports[`AddressRow > should render with active delegate 1`] = `
             </span>
           </div>
         </td>
-        <td>
+        <td
+          class="hidden lg:table-cell"
+        >
           <div
-            class="justify-end css-160cp05"
+            class="justify-center space-x-2 css-o5w6qc"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -2418,29 +2540,15 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -2464,12 +2572,91 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-4 css-o5w6qc"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-o5w6qc"
+          >
+            <div
+              class="font-semibold text-theme-secondary-400"
+            >
+              <span
+                class="text-theme-secondary-text"
+              >
+                0
+              </span>
+              <span>
+                /10
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -2529,54 +2716,10 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-4 css-o5w6qc"
-          >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-qrfosa"
-            />
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-o5w6qc"
-          >
-            <div
-              class="font-bold text-theme-secondary-400"
-            >
-              <span
-                class="text-theme-secondary-text"
-              >
-                0
-              </span>
-              <span>
-                /10
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -2604,29 +2747,15 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
           >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -2650,66 +2779,42 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-o5w6qc"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 text-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="star-filled"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -2718,7 +2823,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -2730,7 +2835,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center -space-x-2"
@@ -2943,7 +3048,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
             class="justify-center css-o5w6qc"
           >
             <div
-              class="font-bold text-theme-secondary-400"
+              class="font-semibold text-theme-secondary-400"
             >
               <span
                 class="text-theme-secondary-text"
@@ -2956,88 +3061,8 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
             </div>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
-          >
-            <div>
-              <button
-                class="css-6419sw"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render with isCompact = false when the wallet has many votes 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -3097,10 +3122,114 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
+          >
+            <div>
+              <button
+                class="css-6419sw"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render with isCompact = false when the wallet has many votes 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -3112,7 +3241,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center -space-x-2"
@@ -3284,7 +3413,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
             class="justify-center css-o5w6qc"
           >
             <div
-              class="font-bold text-theme-secondary-400"
+              class="font-semibold text-theme-secondary-400"
             >
               <span
                 class="text-theme-secondary-text"
@@ -3297,9 +3426,71 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
             </div>
           </div>
         </td>
-        <td>
+        <td
+          class="hidden lg:table-cell"
+        >
           <div
-            class="justify-end css-160cp05"
+            class="justify-center space-x-2 css-o5w6qc"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button
@@ -3327,29 +3518,15 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
-            <div
-              class="shrink-0 shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -3373,12 +3550,91 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </td>
         <td
-          class="hidden md:table-cell"
+          class="hidden xl:table-cell"
+        >
+          <div
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              33.75089801 DARK
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="font-semibold space-x-3 css-12appi5"
+          >
+            <span
+              class="text-theme-secondary-400"
+            >
+              N/A
+            </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="justify-center css-12appi5"
+          >
+            <div
+              class="font-semibold text-theme-secondary-400"
+            >
+              <span
+                class="text-theme-secondary-text"
+              >
+                0
+              </span>
+              <span>
+                /10
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-12appi5"
@@ -3438,54 +3694,10 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           </div>
         </td>
         <td
-          class="hidden xl:table-cell"
+          class="pr-6"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              33.75089801 DARK
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="font-bold space-x-3 css-12appi5"
-          >
-            <div
-              class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
-            />
-            <span
-              class="text-theme-secondary-400"
-            >
-              N/A
-            </span>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-center css-12appi5"
-          >
-            <div
-              class="font-bold text-theme-secondary-400"
-            >
-              <span
-                class="text-theme-secondary-text"
-              >
-                0
-              </span>
-              <span>
-                /10
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="justify-end css-t4jv3s"
+            class="justify-end !pr-0 css-t4jv3s"
           >
             <div>
               <button
@@ -3513,29 +3725,15 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
         data-testid="TableRow"
       >
         <td
           data-testid="AddressRow__wallet"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
           >
-            <div
-              class="shrink-0 shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
             <div
               class="w-40 flex-1"
             >
@@ -3559,66 +3757,42 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                 </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-12appi5"
-          >
-            <div
-              class="inline-block p-1 text-theme-secondary-700"
-              data-testid="WalletIcon__Ledger"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ledger"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
                 >
-                  <path
-                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="inline-block p-1 text-theme-warning-400"
-              data-testid="WalletIcon__Starred"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="star-filled"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -3627,7 +3801,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -3639,7 +3813,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-12appi5"
+            class="font-semibold space-x-3 css-12appi5"
           >
             <div
               class="flex items-center -space-x-1"
@@ -3852,7 +4026,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
             class="justify-center css-12appi5"
           >
             <div
-              class="font-bold text-theme-secondary-400"
+              class="font-semibold text-theme-secondary-400"
             >
               <span
                 class="text-theme-secondary-text"
@@ -3865,88 +4039,8 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
             </div>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-t4jv3s"
-          >
-            <div>
-              <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render with isCompact = true when the wallet has many votes 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-12appi5"
@@ -4006,10 +4100,114 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-t4jv3s"
+          >
+            <div>
+              <button
+                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render with isCompact = true when the wallet has many votes 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
           >
             <span
               class="whitespace-nowrap"
@@ -4021,7 +4219,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="font-bold space-x-3 css-12appi5"
+            class="font-semibold space-x-3 css-12appi5"
           >
             <div
               class="flex items-center -space-x-1"
@@ -4193,7 +4391,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
             class="justify-center css-12appi5"
           >
             <div
-              class="font-bold text-theme-secondary-400"
+              class="font-semibold text-theme-secondary-400"
             >
               <span
                 class="text-theme-secondary-text"
@@ -4206,91 +4404,11 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
             </div>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-t4jv3s"
-          >
-            <div>
-              <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render with resigned delegate 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
+          class="hidden lg:table-cell"
         >
           <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
-        >
-          <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="justify-center space-x-2 css-12appi5"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -4347,10 +4465,114 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-t4jv3s"
+          >
+            <div>
+              <button
+                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render with resigned delegate 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -4362,27 +4584,13 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -4425,7 +4633,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           >
             <span
               class="text-theme-secondary-400"
@@ -4475,88 +4683,8 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
             </span>
           </div>
         </td>
-        <td>
-          <div
-            class="justify-end css-160cp05"
-          >
-            <div>
-              <button
-                class="css-6419sw"
-                data-testid="AddressRow__select-0"
-                type="button"
-              >
-                <div
-                  class="flex items-center space-x-2"
-                >
-                  Vote
-                </div>
-              </button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`AddressRow > should render with standby delegate 1`] = `
-<DocumentFragment>
-  <table>
-    <tbody>
-      <tr
-        class=" css-16ynu5g"
-        data-testid="TableRow"
-      >
         <td
-          data-testid="AddressRow__wallet"
-        >
-          <div
-            class="font-bold cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
-          >
-            <div
-              class="shrink-0 shrink-0 css-1px82g5"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-40 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          class="hidden md:table-cell"
+          class="hidden lg:table-cell"
         >
           <div
             class="justify-center space-x-2 css-o5w6qc"
@@ -4616,10 +4744,114 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           </div>
         </td>
         <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
+          >
+            <div>
+              <button
+                class="css-6419sw"
+                data-testid="AddressRow__select-0"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Vote
+                </div>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`AddressRow > should render with standby delegate 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+        data-testid="TableRow"
+      >
+        <td
+          data-testid="AddressRow__wallet"
+        >
+          <div
+            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+          >
+            <div
+              class="w-40 flex-1"
+            >
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="no-ligatures css-9nx3be"
+                    data-testid="TruncateEnd"
+                  >
+                    ARK Wallet 1
+                  </span>
+                </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
           >
             <span
               class="whitespace-nowrap"
@@ -4631,27 +4863,13 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-bold space-x-4 css-o5w6qc"
+            class="font-semibold space-x-4 css-o5w6qc"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
             >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                    title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                  />
-                </div>
-              </div>
               <a
-                class="ring-focus group inline-block block w-24 truncate md:w-auto css-7nwwrh"
+                class="ring-focus group inline-block block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
                 data-ring-focus-margin="-m-1"
                 data-testid="Link"
                 href=""
@@ -4694,7 +4912,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-bold text-theme-secondary-text css-o5w6qc"
+            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
           >
             <span>
               #100
@@ -4743,9 +4961,71 @@ exports[`AddressRow > should render with standby delegate 1`] = `
             </span>
           </div>
         </td>
-        <td>
+        <td
+          class="hidden lg:table-cell"
+        >
           <div
-            class="justify-end css-160cp05"
+            class="justify-center space-x-2 css-o5w6qc"
+          >
+            <div
+              class="inline-block p-1 text-theme-secondary-700"
+              data-testid="WalletIcon__Ledger"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="ledger"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M15 20v-5h5v1.25c0 2.125-1.625 3.75-3.75 3.75H15zm-7.5 0v-5h5v5h-5zm-3.75 0C1.625 20 0 18.375 0 16.25V15h5v5H3.75zm3.75-7.5V0h8.75C18.375 0 20 1.625 20 3.75v8.75H7.5zm-7.5 0v-5h5v5H0zM0 5V3.75C0 1.625 1.625 0 3.75 0H5v5H0z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="inline-block p-1 text-theme-warning-400"
+              data-testid="WalletIcon__Starred"
+            >
+              <div
+                class="css-1i4b0eq"
+                height="20"
+                width="20"
+              >
+                <svg
+                  id="star-filled"
+                  viewBox="0 0 20 20"
+                  x="0"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  y="0"
+                >
+                  <path
+                    d="M10.558 1.411l2.711 5.273 5.12.497c.603.1.804.697.402 1.094l-4.217 4.179 1.607 5.67c.1.498-.402 1.094-1.004.796l-5.221-2.686-5.12 2.587c-.302.198-1.105-.1-.904-.796l1.606-5.77-4.317-3.98c-.3-.397-.401-.994.402-1.094l5.12-.497L9.454 1.41c.301-.597.803-.497 1.104 0h0z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          class="pr-6"
+        >
+          <div
+            class="justify-end !pr-0 css-160cp05"
           >
             <div>
               <button

@@ -24,20 +24,6 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -60,6 +46,42 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -78,20 +100,6 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -227,20 +235,6 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -263,6 +257,42 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -281,20 +311,6 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -431,20 +447,6 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -467,6 +469,42 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -485,20 +523,6 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -635,20 +659,6 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -671,6 +681,42 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -846,20 +892,6 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -882,6 +914,42 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1048,20 +1116,6 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1084,6 +1138,42 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1102,20 +1192,6 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -1242,20 +1318,6 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 87, 34)" width="100" height="100"/><circle r="55" cx="40" cy="30" fill="rgb(3, 169, 244)"/><circle r="35" cx="90" cy="70" fill="rgb(0, 188, 212)"/><circle r="60" cx="30" cy="40" fill="rgb(233, 30, 99)"/></svg>"
-                      title="DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1278,6 +1340,42 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     >
                       DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1353,20 +1451,6 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1389,6 +1473,42 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1407,20 +1527,6 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -1547,20 +1653,6 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(205, 220, 57)" width="100" height="100"/><circle r="60" cx="100" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="20" cy="40" fill="rgb(3, 169, 244)"/><circle r="35" cx="30" cy="60" fill="rgb(33, 150, 243)"/></svg>"
-                      title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1572,6 +1664,42 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     >
                       DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1648,20 +1776,6 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1684,6 +1798,42 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1755,20 +1905,6 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1791,6 +1927,42 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1809,20 +1981,6 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -1958,20 +2116,6 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -1994,6 +2138,42 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -2012,20 +2192,6 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
@@ -2161,20 +2327,6 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 class="flex items-center justify-start space-x-3 overflow-hidden"
               >
                 <div
-                  class="shrink-0 shrink-0 css-1i0wxh3"
-                  data-testid="Avatar"
-                >
-                  <div
-                    class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                  >
-                    <img
-                      alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                      title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    />
-                  </div>
-                </div>
-                <div
                   class="flex w-0 flex-1 overflow-hidden"
                 >
                   <div
@@ -2197,6 +2349,42 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                     </span>
+                    <button
+                      class="ring-focus relative focus:outline-none"
+                      data-ring-focus-margin="-m-1"
+                      data-testid="clipboard-icon__wrapper"
+                      type="button"
+                    >
+                      <div
+                        class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="copy"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <g
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          >
+                            <path
+                              d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                            />
+                            <path
+                              d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                            />
+                          </g>
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -2215,20 +2403,6 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 <div
                   class="flex flex-grow items-center space-x-2 overflow-hidden"
                 >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                        title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                      />
-                    </div>
-                  </div>
                   <div
                     class="flex items-center"
                   >
