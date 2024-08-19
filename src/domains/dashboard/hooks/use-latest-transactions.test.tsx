@@ -1,5 +1,6 @@
+/* eslint-disable max-lines-per-function */
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import React from "react";
 
 import { useLatestTransactions } from "./use-latest-transactions";
@@ -47,12 +48,8 @@ describe("useLatestTransactions", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
-		const { result, waitForNextUpdate } = renderHook(
-			() => useLatestTransactions({ profile, profileIsSyncing: false }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: false }), { wrapper });
 
-		await waitForNextUpdate();
 		await waitFor(() => expect(result.current.isLoadingTransactions).toBeFalsy());
 
 		expect(result.current.latestTransactions).toHaveLength(10);
@@ -60,22 +57,18 @@ describe("useLatestTransactions", () => {
 		mockTransactionsAggregate.mockRestore();
 	});
 
-	it("should render loading state when profile is syncing", async () => {
+	it("should render loading state when profile is syncing", () => {
 		vi.useFakeTimers();
 
 		const mockTransactionsAggregate = vi
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
-		const { result, waitForNextUpdate } = renderHook(
-			() => useLatestTransactions({ profile, profileIsSyncing: true }),
-			{ wrapper },
-		);
+		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: true }), { wrapper });
 
 		vi.runOnlyPendingTimers();
 
-		await waitForNextUpdate();
-		await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
+		expect(result.current.isLoadingTransactions).toBeTruthy();
 
 		mockTransactionsAggregate.mockRestore();
 

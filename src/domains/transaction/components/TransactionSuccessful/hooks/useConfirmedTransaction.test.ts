@@ -1,4 +1,4 @@
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook, waitFor } from "@testing-library/react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
@@ -28,17 +28,20 @@ describe("useConfirmedTransaction", () => {
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
-		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({});
+		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({ id: "123" });
 
-		const { result, waitForNextUpdate } = renderHook(() =>
+		const { result } = renderHook(() =>
 			useConfirmedTransaction({
 				transactionId: "123",
 				wallet: wallet,
 			}),
 		);
 
-		await waitForNextUpdate();
-
-		expect(result.current).toBe(true);
+		await waitFor(
+			() => {
+				expect(result.current).toBe(true);
+			},
+			{ timeout: 5000 },
+		);
 	});
 });

@@ -4,7 +4,7 @@ import { CopyOrDownload } from "./CopyOrDownload";
 import { screen, render } from "@/utils/testing-library";
 
 describe("CopyOrDownload", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const onClickDownload = vi.fn();
 
 		const { asFragment } = render(
@@ -19,7 +19,7 @@ describe("CopyOrDownload", () => {
 		expect(screen.getByText("title")).toBeInTheDocument();
 		expect(screen.getByText("description")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("CopyOrDownload__download"));
+		await userEvent.click(screen.getByTestId("CopyOrDownload__download"));
 
 		expect(onClickDownload).toHaveBeenCalledTimes(1);
 

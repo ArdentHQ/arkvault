@@ -38,11 +38,11 @@ describe("Toggle", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should toggle checked", () => {
+	it("should toggle checked", async () => {
 		const { asFragment } = render(<Toggle />);
 		const toggle = screen.getByRole("checkbox");
 
-		userEvent.click(toggle);
+		await userEvent.click(toggle);
 
 		expect(toggle.checked).toBe(true);
 		expect(asFragment()).toMatchSnapshot();

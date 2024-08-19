@@ -25,10 +25,10 @@ describe("NetworkIcon", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with tooltip in the dark mode", () => {
+	it("should render with tooltip in the dark mode", async () => {
 		render(<NetworkIcon network={network} size="lg" tooltipDarkTheme />, {});
 
-		userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
+		await userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});

@@ -104,8 +104,8 @@ describe("WalletHeaderMobile", () => {
 		const input = screen.getByTestId("UpdateWalletName__input");
 		const submitButton = screen.getByTestId("UpdateWalletName__submit");
 
-		userEvent.clear(input);
-		userEvent.paste(input, "New name");
+		await userEvent.clear(input);
+		await userEvent.type(input, "New name");
 
 		expect(input).toHaveValue("New name");
 

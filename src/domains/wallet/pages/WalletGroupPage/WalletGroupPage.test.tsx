@@ -87,7 +87,7 @@ describe("WalletGroupPage", () => {
 		expect(asFragment).toMatchSnapshot();
 	});
 
-	it("should paginate", () => {
+	it("should paginate", async () => {
 		render(
 			<Route path="/profiles/:profileId/network/:networkId">
 				<ResponsiveContext.Provider value={{ width: 1024 }}>
@@ -103,7 +103,7 @@ describe("WalletGroupPage", () => {
 		expect(screen.getByTestId("Pagination")).toBeInTheDocument();
 		expect(screen.getByTestId("Pagination__next")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Pagination__next"));
+		await userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 	});

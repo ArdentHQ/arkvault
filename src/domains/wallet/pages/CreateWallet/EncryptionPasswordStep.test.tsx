@@ -71,7 +71,7 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -117,9 +117,12 @@ describe("EncryptionPasswordStep", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
@@ -135,11 +138,13 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-		userEvent.paste(passwordInput, password);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, password);
 
 		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
-		userEvent.paste(confirmPassword, password);
+		await userEvent.clear(confirmPassword);
+		await userEvent.type(confirmPassword, password);
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
@@ -185,7 +190,7 @@ describe("EncryptionPasswordStep", () => {
 
 		expect(backButton).toBeEnabled();
 
-		userEvent.click(backButton);
+		await userEvent.click(backButton);
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
 
@@ -229,9 +234,12 @@ describe("EncryptionPasswordStep", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 		await waitFor(() => expect(continueButton).toBeEnabled());
 
 		userEvent.click(continueButton);
@@ -252,11 +260,13 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getByTestId("PasswordValidation__encryptionPassword");
 		const confirmPassword = screen.getByTestId("PasswordValidation__confirmEncryptionPassword");
 
-		userEvent.paste(passwordInput, password);
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, password);
 
 		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
-		userEvent.paste(confirmPassword, password);
+		await userEvent.clear(confirmPassword);
+		await userEvent.type(confirmPassword, password);
 
 		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 

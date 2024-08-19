@@ -23,22 +23,22 @@ describe("TableRemoveButton", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should execute onClick callback", () => {
+	it("should execute onClick callback", async () => {
 		const onClick = vi.fn();
 
 		render(<TableRemoveButton onClick={onClick} />);
 
-		userEvent.click(screen.getByTestId("TableRemoveButton"));
+		await userEvent.click(screen.getByTestId("TableRemoveButton"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
-	it("should not execute onClick callback if disabled", () => {
+	it("should not execute onClick callback if disabled", async () => {
 		const onClick = vi.fn();
 
 		render(<TableRemoveButton onClick={onClick} isDisabled />);
 
-		userEvent.click(screen.getByTestId("TableRemoveButton"));
+		await userEvent.click(screen.getByTestId("TableRemoveButton"));
 
 		expect(onClick).not.toHaveBeenCalled();
 	});

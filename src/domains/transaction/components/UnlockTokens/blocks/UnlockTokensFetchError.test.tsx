@@ -8,7 +8,7 @@ import { render, screen } from "@/utils/testing-library";
 const translations = buildTranslations();
 
 describe("UnlockTokensFetchError", () => {
-	it("should render", () => {
+	it("should render", async () => {
 		const onRetry = vi.fn();
 
 		const { asFragment } = render(<UnlockTokensFetchError onRetry={onRetry} />);
@@ -17,7 +17,7 @@ describe("UnlockTokensFetchError", () => {
 
 		expect(screen.getByText(translations.COMMON.HERE)).toBeInTheDocument();
 
-		userEvent.click(screen.getByText(translations.COMMON.HERE));
+		await userEvent.click(screen.getByText(translations.COMMON.HERE));
 
 		expect(onRetry).toHaveBeenCalledTimes(1);
 	});

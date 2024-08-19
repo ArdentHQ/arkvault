@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import * as browserAccess from "browser-fs-access";
 import { useFileDownload } from "./use-file-download";
 

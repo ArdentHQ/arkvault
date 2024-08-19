@@ -42,11 +42,11 @@ describe("InstallPWA IOS", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__install"));
+		await userEvent.click(screen.getByTestId("InstallPWA__install"));
 
 		await expect(screen.findByTestId("IOsInstructions")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Modal__close-button"));
+		await userEvent.click(screen.getByTestId("Modal__close-button"));
 
 		await expect(screen.findByTestId("IOsInstructions")).rejects.toThrow(/Unable to find/);
 
@@ -71,11 +71,11 @@ describe("InstallPWA IOS", () => {
 			window.dispatchEvent(event);
 		});
 
-		userEvent.click(screen.getByTestId("InstallPWA__install"));
+		await userEvent.click(screen.getByTestId("InstallPWA__install"));
 
 		await expect(screen.findByTestId("IOsInstructions")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
+		await userEvent.click(screen.getByTestId("IOsInstructions__close-button"));
 
 		await expect(screen.findByTestId("IOsInstructions")).rejects.toThrow(/Unable to find/);
 

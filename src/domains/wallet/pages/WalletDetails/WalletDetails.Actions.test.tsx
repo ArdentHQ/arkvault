@@ -65,8 +65,6 @@ describe("WalletDetails", () => {
 		profile.wallets().push(unvotedWallet);
 
 		await syncDelegates(profile);
-
-		// Mock musig server requests
 		vi.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 	});
 
@@ -86,12 +84,13 @@ describe("WalletDetails", () => {
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
 		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-transfer`);
+		});
 
 		historySpy.mockRestore();
 	});
@@ -105,12 +104,13 @@ describe("WalletDetails", () => {
 		await renderPage();
 
 		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
-
-		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).not.toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("WalletVote__button"));
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}/votes`);
+		});
 
 		walletSpy.mockRestore();
 		historySpy.mockRestore();
@@ -143,12 +143,17 @@ describe("WalletDetails", () => {
 		const historySpy = vi.spyOn(history, "push");
 
 		await renderPage();
+		await waitFor(() =>
+			expect(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE)).toBeEnabled(),
+		);
 
 		userEvent.click(screen.getByText(translations.WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE));
 
-		expect(historySpy).toHaveBeenCalledWith({
-			pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
-			search: "?filter=current",
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith({
+				pathname: `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`,
+				search: "?filter=current",
+			});
 		});
 
 		walletSpy.mockRestore();
@@ -160,6 +165,8 @@ describe("WalletDetails", () => {
 		await renderPage();
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[4]);
+		// eslint-disable-next-line testing-library/prefer-explicit-assert
+		await screen.findByTestId("dropdown__option--primary-0");
 
 		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
 
@@ -167,8 +174,8 @@ describe("WalletDetails", () => {
 
 		const name = "Sample label name";
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), name);
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), name);
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
@@ -201,24 +208,26 @@ describe("WalletDetails", () => {
 		expect(dropdown).toBeInTheDocument();
 
 		userEvent.click(dropdown);
+		// eslint-disable-next-line testing-library/prefer-explicit-assert
+		await screen.findByTestId("dropdown__option--secondary-0");
 
 		const openWalletOption = screen.getByTestId("dropdown__option--secondary-0");
 
 		expect(openWalletOption).toBeInTheDocument();
 
 		userEvent.click(openWalletOption);
+		await waitFor(() => {
+			expect(windowSpy).toHaveBeenCalledWith(wallet.explorerLink(), "_blank");
+		});
 
-		expect(windowSpy).toHaveBeenCalledWith(wallet.explorerLink(), "_blank");
+		windowSpy.mockRestore();
 	});
 
 	it("should manually sync wallet data", async () => {
 		await renderPage();
 
-		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
-
-		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
-
-		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "false"));
+		await userEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		await waitFor(() => expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true"));
 	});
 
 	it("should delete wallet and clear associated transaction notifications", async () => {
@@ -229,6 +238,8 @@ describe("WalletDetails", () => {
 		expect(dropdown).toBeInTheDocument();
 
 		userEvent.click(dropdown);
+		// eslint-disable-next-line testing-library/prefer-explicit-assert
+		await screen.findByTestId("dropdown__option--secondary-1");
 
 		const deleteWalletOption = screen.getByTestId("dropdown__option--secondary-1");
 
