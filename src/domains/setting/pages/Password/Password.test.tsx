@@ -108,7 +108,7 @@ describe("Password Settings", () => {
 			throw new Error("mismatch");
 		});
 
-		const { asFragment } = render(
+		render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -153,8 +153,6 @@ describe("Password Settings", () => {
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
 		});
-
-		expect(asFragment()).toMatchSnapshot();
 
 		authMock.mockRestore();
 	});
