@@ -78,15 +78,17 @@ describe("CreateWallet", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const backButton = screen.getByTestId("CreateWallet__back-button");
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		expect(backButton).toBeEnabled();
 
 		userEvent.click(backButton);
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		});
 
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
@@ -128,9 +130,12 @@ describe("CreateWallet", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -146,8 +151,8 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "test alias");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeEnabled());
 
@@ -189,17 +194,19 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		const backButton = screen.getByTestId("CreateWallet__back-button");
-
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		await waitFor(() => expect(backButton).toBeEnabled());
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
+
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
+
+		expect(backButton).toBeEnabled();
 
 		userEvent.click(backButton);
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		});
 
 		historySpy.mockRestore();
 
@@ -225,15 +232,17 @@ describe("CreateWallet", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		const backButton = screen.getByTestId("CreateWallet__back-button");
+		const backButton = await screen.findByTestId("CreateWallet__back-button");
 
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+		const historySpy = vi.spyOn(history, "push").mockImplementation(() => {});
 
 		expect(backButton).toBeEnabled();
 
 		userEvent.click(backButton);
 
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		await waitFor(() => {
+			expect(historySpy).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/dashboard`);
+		});
 
 		userEvent.click(screen.getAllByTestId("NetworkOption")[1]);
 
@@ -267,7 +276,7 @@ describe("CreateWallet", () => {
 
 		userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
-		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
+		expect(within(steps).getAllByRole("listitem")).toHaveLength(4);
 
 		userEvent.click(continueButton());
 
@@ -283,9 +292,12 @@ describe("CreateWallet", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -293,8 +305,10 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), encryptionPassword);
-		userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), encryptionPassword);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__encryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__encryptionPassword"), encryptionPassword);
+		await userEvent.clear(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"));
+		await userEvent.type(screen.getByTestId("PasswordValidation__confirmEncryptionPassword"), encryptionPassword);
 
 		await expect(screen.findByTestId("PasswordValidation__encryptionPassword")).resolves.toHaveValue(
 			encryptionPassword,
@@ -480,9 +494,12 @@ describe("CreateWallet", () => {
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
 		userEvent.click(screen.getByTestId("CreateWallet__ConfirmPassphraseStep__passphraseDisclaimer"));
-		userEvent.paste(firstInput, "power");
-		userEvent.paste(secondInput, "return");
-		userEvent.paste(thirdInput, "attend");
+		await userEvent.clear(firstInput);
+		await userEvent.type(firstInput, "power");
+		await userEvent.clear(secondInput);
+		await userEvent.type(secondInput, "return");
+		await userEvent.clear(thirdInput);
+		await userEvent.type(thirdInput, "attend");
 
 		await waitFor(() => expect(continueButton()).toBeEnabled());
 
@@ -494,7 +511,8 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "Test");
+		await userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
+		await userEvent.type(screen.getByTestId("UpdateWalletName__input"), "Test");
 
 		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled());
 

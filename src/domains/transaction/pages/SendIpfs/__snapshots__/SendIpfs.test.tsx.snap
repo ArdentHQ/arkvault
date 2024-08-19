@@ -6950,12 +6950,16 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
 exports[`SendIpfs > should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-kmmje1"
+    class="css-w3nefz"
   >
     <div
-      class="css-wwznix"
+      class="css-sdeely"
       data-testid="NavigationBarMobile"
     >
+      <div
+        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
+        data-testid="NavigationBar__buttons-separator"
+      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >

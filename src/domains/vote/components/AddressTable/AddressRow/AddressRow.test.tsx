@@ -370,7 +370,7 @@ describe("AddressRow", () => {
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
-		userEvent.click(selectButton);
+		await userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
@@ -403,8 +403,9 @@ describe("AddressRow", () => {
 		const history = createHashHistory();
 
 		const historySpy = vi.spyOn(history, "push");
+		history.push(route);
 
-		const { container } = render(
+		render(
 			<AddressWrapper>
 				<AddressRow index={0} maxVotes={1} wallet={wallet} />
 			</AddressWrapper>,
@@ -413,12 +414,10 @@ describe("AddressRow", () => {
 				route,
 			},
 		);
-		history.push(route);
 
-		expect(container).toBeInTheDocument();
+		await expect(screen.findByTestId("AddressRow__wallet")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("AddressRow__wallet"));
-
+		await userEvent.click(screen.getByTestId("AddressRow__wallet"));
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
 

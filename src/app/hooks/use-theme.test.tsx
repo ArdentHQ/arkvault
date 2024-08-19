@@ -6,7 +6,7 @@ import { Theme } from "@/types";
 import * as themeUtils from "@/utils/theme";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 describe("useTheme", () => {
 	describe("theme", () => {

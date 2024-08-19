@@ -8,7 +8,7 @@ import * as browserAccess from "browser-fs-access";
 import { EnvironmentProvider } from "@/app/contexts";
 import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
 import { env, render, screen, waitFor } from "@/utils/testing-library";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import { useTranslation } from "react-i18next";
 let profile: Contracts.IProfile;
 
@@ -99,29 +99,31 @@ describe("Import Profile - Profile Form Step", () => {
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 1");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 1");
 
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile 2");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "test profile 2");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -147,30 +149,34 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		userEvent.paste(screen.getAllByTestId("Input")[0], "asdasdas");
+		await userEvent.type(screen.getAllByTestId("Input")[0], "asdasdas");
 
-		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
-		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
-		userEvent.click(screen.getByRole("checkbox"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+		await userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		await userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.test");
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.test");
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword");
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordConfirmationInput().select();
-		userEvent.paste(passwordConfirmationInput(), "S3cUrePa$sword.test");
+		await userEvent.clear(passwordConfirmationInput());
+		await userEvent.type(passwordConfirmationInput(), "S3cUrePa$sword.test");
 
 		passwordInput().select();
-		userEvent.paste(passwordInput(), "S3cUrePa$sword.wrong");
+		await userEvent.clear(passwordInput());
+		await userEvent.type(passwordInput(), "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 

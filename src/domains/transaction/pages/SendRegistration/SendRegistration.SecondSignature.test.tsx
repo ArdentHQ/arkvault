@@ -151,38 +151,38 @@ describe("Second Signature Registration", () => {
 		});
 
 		const fees = within(screen.getByTestId("InputFee")).getAllByTestId("ButtonGroupOption");
-		userEvent.click(fees[1]);
+		await userEvent.click(fees[1]);
 
-		userEvent.click(
+		await userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__backup-step")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__verification-step")).resolves.toBeVisible();
 
 		const [firstInput, secondInput, thirdInput] = screen.getAllByTestId("MnemonicVerificationInput__input");
-		userEvent.paste(firstInput, "master");
-		userEvent.paste(secondInput, "dizzy");
-		userEvent.paste(thirdInput, "era");
+		await userEvent.type(firstInput, "master");
+		await userEvent.type(secondInput, "dizzy");
+		await userEvent.type(thirdInput, "era");
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__review-step")).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => expect(sendButton()).toBeEnabled());
@@ -205,7 +205,7 @@ describe("Second Signature Registration", () => {
 			.spyOn(wallet.coin().address(), "fromMnemonic")
 			.mockResolvedValue({ address: wallet.address() });
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith({

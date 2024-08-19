@@ -116,7 +116,8 @@ describe("ImportWallet WIF", () => {
 
 		await waitFor(() => expect(wifInput()));
 
-		userEvent.paste(wifInput(), wif);
+		await userEvent.clear(wifInput());
+		await userEvent.type(wifInput(), wif);
 
 		await testFormValues(form);
 
@@ -152,7 +153,8 @@ describe("ImportWallet WIF", () => {
 
 		await waitFor(() => expect(wifInput()));
 
-		userEvent.paste(wifInput(), wif);
+		await userEvent.clear(wifInput());
+		await userEvent.type(wifInput(), wif);
 
 		await testFormValues(form);
 

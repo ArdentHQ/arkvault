@@ -1,5 +1,5 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 import { useMultiSignatureStatus } from "./use-multisignature-status";
 import { env, getDefaultProfileId } from "@/utils/testing-library";

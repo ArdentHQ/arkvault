@@ -13,7 +13,7 @@ import { toasts } from "@/app/services";
 import GeneralSettings from "@/domains/setting/pages/General";
 import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 
 const translations = buildTranslations();
 
@@ -72,7 +72,7 @@ describe("General Settings", () => {
 		// Idle
 		history.push(`/profiles/${profile.id()}/dashboard`);
 
-		userEvent.paste(nameInput(), "My Profile");
+		await userEvent.type(nameInput(), "My Profile");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
@@ -135,10 +135,10 @@ describe("General Settings", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 		fireEvent.blur(nameInput());
 
-		userEvent.paste(nameInput(), "t");
+		await userEvent.type(nameInput(), "t");
 		fireEvent.blur(nameInput());
 
 		expect(avatarIdenticon()).toBeInTheDocument();
@@ -147,7 +147,7 @@ describe("General Settings", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 
 		await waitFor(() => expect(nameInput()).not.toHaveValue());
 
@@ -155,7 +155,7 @@ describe("General Settings", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 
 		await waitFor(() => expect(nameInput()).not.toHaveValue());
 
@@ -179,13 +179,13 @@ describe("General Settings", () => {
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		await waitFor(() => expect(avatarImage()).toBeInTheDocument());
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		await waitFor(() => expect(avatarIdenticon()).toBeInTheDocument());
 
@@ -206,7 +206,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
@@ -214,7 +214,7 @@ describe("General Settings", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 
 		await waitFor(() => {
 			expect(nameInput()).not.toHaveValue();
@@ -226,13 +226,13 @@ describe("General Settings", () => {
 
 		act(() => nameInput().focus());
 
-		userEvent.paste(nameInput(), "t");
+		await userEvent.type(nameInput(), "t");
 
 		await waitFor(() => {
 			expect(nameInput()).toHaveValue("t");
 		});
 
-		userEvent.click(document.body);
+		await userEvent.click(document.body);
 
 		expect(avatarImage()).toBeInTheDocument();
 
@@ -255,56 +255,56 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
 		await waitFor(() => expect(avatarImage()).toBeInTheDocument());
 
-		userEvent.paste(nameInput(), "test profile");
+		await userEvent.type(nameInput(), "test profile");
 
 		// change auto signout period
 		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
 
-		userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
 		const firstOption = within(autoSignout()).getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
 
 		expect(submitButton()).toBeEnabled();
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		// Remove avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		await waitFor(() => expect(avatarIdenticon()).toBeInTheDocument());
 
-		userEvent.paste(nameInput(), "t");
+		await userEvent.type(nameInput(), "t");
 		await waitFor(() => expect(submitButton()).toBeEnabled());
-		userEvent.clear(nameInput());
+		await userEvent.clear(nameInput());
 		await waitFor(() => expect(submitButton()).toBeDisabled());
-		userEvent.paste(nameInput(), "test profile 2");
+		await userEvent.type(nameInput(), "test profile 2");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		// Not upload avatar image
 		browserAccessMock = vi
 			.spyOn(browserAccess, "fileOpen")
 			.mockRejectedValue(new Error("The user aborted a request"));
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		await userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(browserAccessMock).toHaveBeenCalledWith(fileOpenParameters));
 
@@ -327,7 +327,8 @@ describe("General Settings", () => {
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "     ");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "     ");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -354,7 +355,8 @@ describe("General Settings", () => {
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), otherProfile!.name());
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), otherProfile!.name());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -363,7 +365,8 @@ describe("General Settings", () => {
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "unique profile name");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "unique profile name");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 	});
@@ -385,12 +388,14 @@ describe("General Settings", () => {
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), otherProfile!.name().toUpperCase());
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), otherProfile!.name().toUpperCase());
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "unique profile name");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "unique profile name");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 	});
@@ -408,12 +413,13 @@ describe("General Settings", () => {
 		await waitFor(() => expect(nameInput()).toHaveValue(profile.name()));
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "test profile".repeat(10));
+		await userEvent.type(nameInput(), "test profile".repeat(10));
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "unique profile name");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "unique profile name");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 	});
@@ -435,12 +441,14 @@ describe("General Settings", () => {
 			.find((element: Contracts.IProfile) => element.id() !== profile.id());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), `  ${otherProfile?.name()}  `);
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), `  ${otherProfile?.name()}  `);
 
 		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		(nameInput() as HTMLInputElement).select();
-		userEvent.paste(nameInput(), "unique profile name");
+		await userEvent.clear(nameInput());
+		await userEvent.type(nameInput(), "unique profile name");
 
 		await waitFor(() => expect(submitButton()).toBeEnabled());
 	});
@@ -465,7 +473,7 @@ describe("General Settings", () => {
 
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByRole("button", { name: new RegExp(commonTranslations.RESET) }));
+		await userEvent.click(screen.getByRole("button", { name: new RegExp(commonTranslations.RESET) }));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -476,7 +484,7 @@ describe("General Settings", () => {
 			translations.PROFILE.MODAL_RESET_PROFILE.DESCRIPTION,
 		);
 
-		userEvent.click(screen.getByTestId(buttonId));
+		await userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
 			expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
@@ -501,13 +509,13 @@ describe("General Settings", () => {
 			expect(submitButton()).toBeDisabled();
 		});
 
-		userEvent.type(nameInput(), "new profile name");
+		await userEvent.type(nameInput(), "new profile name");
 
 		await waitFor(() => {
 			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(submitButton());
+		await userEvent.click(submitButton());
 
 		const buttonRegex = new RegExp(commonTranslations.RESET);
 
@@ -515,7 +523,7 @@ describe("General Settings", () => {
 			expect(screen.getByRole("button", { name: buttonRegex })).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByRole("button", { name: buttonRegex }));
+		await userEvent.click(screen.getByRole("button", { name: buttonRegex }));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -530,7 +538,7 @@ describe("General Settings", () => {
 			expect(screen.getByTestId(resetSubmitID)).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId(resetSubmitID));
+		await userEvent.click(screen.getByTestId(resetSubmitID));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
@@ -572,7 +580,7 @@ describe("General Settings", () => {
 			expect(screen.getByRole("button", { name: buttonRegex })).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByRole("button", { name: buttonRegex }));
+		await userEvent.click(screen.getByRole("button", { name: buttonRegex }));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -587,7 +595,7 @@ describe("General Settings", () => {
 			expect(screen.getByTestId(resetSubmitID)).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId(resetSubmitID));
+		await userEvent.click(screen.getByTestId(resetSubmitID));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(translations.PROFILE.MODAL_RESET_PROFILE.SUCCESS);
@@ -631,29 +639,29 @@ describe("General Settings", () => {
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
 		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
-		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
 		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByText("EUR (€)"));
+		await userEvent.click(screen.getByText("EUR (€)"));
 
 		expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)");
 
-		userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
-		userEvent.click(screen.getByText("CoinGecko"));
+		await userEvent.click(screen.getByText("CoinGecko"));
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko");
 
-		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
-		userEvent.click(screen.getByText("VND (₫)"));
+		await userEvent.click(screen.getByText("VND (₫)"));
 
 		expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)");
 
-		userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
-		userEvent.click(screen.getByText("CryptoCompare"));
+		await userEvent.click(screen.getByText("CryptoCompare"));
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
 
@@ -692,13 +700,13 @@ describe("General Settings", () => {
 		// change auto signout period
 		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("15");
 
-		userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
+		await userEvent.click(within(autoSignout()).getByTestId("SelectDropdown__caret"));
 
 		const firstOption = within(autoSignout()).getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		userEvent.click(firstOption);
+		await userEvent.click(firstOption);
 
 		expect(within(autoSignout()).getByTestId("select-list__input")).toHaveValue("1");
 

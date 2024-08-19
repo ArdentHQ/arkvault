@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
 import { Contracts } from "@ardenthq/sdk-profiles";
-import { renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -167,12 +167,12 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		await waitFor(() => expect(continueButton()).not.toBeDisabled());
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// Review Step
 		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -188,14 +188,15 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__encryption-password");
-		userEvent.paste(passwordInput, "password");
+		await userEvent.clear(passwordInput);
+		await userEvent.type(passwordInput, "password");
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(sendButton());
+			await userEvent.click(sendButton());
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();

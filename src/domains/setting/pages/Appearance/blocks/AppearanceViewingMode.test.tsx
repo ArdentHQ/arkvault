@@ -24,7 +24,7 @@ describe("AppearanceViewingMode", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["light", "dark"])("should allow to change the value", (viewingMode: string) => {
+	it.each(["light", "dark"])("should allow to change the value", async (viewingMode: string) => {
 		const watch = vi.fn();
 		const setValue = vi.fn();
 
@@ -38,7 +38,7 @@ describe("AppearanceViewingMode", () => {
 
 		const buttonText = translations.APPEARANCE.OPTIONS.VIEWING_MODE.VIEWING_MODES[viewingMode.toUpperCase()];
 
-		userEvent.click(screen.getByText(buttonText));
+		await userEvent.click(screen.getByText(buttonText));
 
 		expect(setValue).toHaveBeenCalledWith("viewingMode", viewingMode, {
 			shouldDirty: true,

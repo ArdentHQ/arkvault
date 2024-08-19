@@ -4,7 +4,7 @@ import React from "react";
 import * as browserAccess from "browser-fs-access";
 
 import QRScanner from "qr-scanner";
-import * as reactQrReaderMock from "react-qr-reader";
+import { QrReader } from "react-qr-reader";
 import { QRModal } from "./QRModal";
 import { toasts } from "@/app/services";
 import { render, screen } from "@/utils/testing-library";
@@ -33,14 +33,14 @@ describe("QRModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should execute onCancel callback", () => {
+	it("should execute onCancel callback", async () => {
 		const onCancel = vi.fn();
 
 		render(<QRModal isOpen={true} onCancel={onCancel} onRead={vi.fn()} />);
 
 		const closeButton = screen.getByTestId("Modal__close-button");
 
-		userEvent.click(closeButton);
+		await userEvent.click(closeButton);
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -49,13 +49,13 @@ describe("QRModal", () => {
 		const toastSpy = vi.spyOn(toasts, "error");
 
 		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
-		reactQrReaderMock.QrReader.mockImplementation(() => null);
+		QrReader.mockImplementation(() => null);
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockImplementation(() => {
 			throw new Error("InvalidQR");
 		});
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.MODAL_QR_CODE.INVALID_QR_CODE);
@@ -70,11 +70,11 @@ describe("QRModal", () => {
 	it("should handle read", async () => {
 		const onRead = vi.fn();
 		const browserAccessMock = vi.spyOn(browserAccess, "fileOpen").mockResolvedValue(new File([], "test.png"));
-		reactQrReaderMock.QrReader.mockImplementation(() => null);
+		QrReader.mockImplementation(() => null);
 		const scanImageMock = vi.spyOn(QRScanner, "scanImage").mockReturnValue({ data: qrCodeUrl });
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={onRead} />);
-		userEvent.click(screen.getByTestId("QRFileUpload__upload"));
+		await userEvent.click(screen.getByTestId("QRFileUpload__upload"));
 
 		await waitFor(() => expect(onRead).toHaveBeenCalledWith(qrCodeUrl));
 		scanImageMock.mockRestore();
@@ -82,15 +82,13 @@ describe("QRModal", () => {
 	});
 
 	it("should render permission denied error", () => {
-		reactQrReaderMock.QrReader.mockImplementation(
-			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
-				if (onResult) {
-					onResult(undefined, new Error("Permission denied"));
-				}
+		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
+			if (onResult) {
+				onResult(undefined, new Error("Permission denied"));
+			}
 
-				return null;
-			},
-		);
+			return null;
+		});
 
 		render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 
@@ -106,15 +104,13 @@ describe("QRModal", () => {
 	it("should render other error", async () => {
 		const toastSpy = vi.spyOn(toasts, "error");
 
-		reactQrReaderMock.QrReader.mockImplementation(
-			({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
-				if (onResult) {
-					onResult(undefined, new Error("other error"));
-				}
+		QrReader.mockImplementation(({ onResult }: { onResult: (result: any, error?: Error | null) => void }) => {
+			if (onResult) {
+				onResult(undefined, new Error("other error"));
+			}
 
-				return null;
-			},
-		);
+			return null;
+		});
 
 		const { rerender } = render(<QRModal isOpen={true} onCancel={vi.fn()} onRead={vi.fn()} />);
 

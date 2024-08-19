@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 
 import userEvent from "@testing-library/user-event";
@@ -17,7 +16,6 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
-	MNEMONICS,
 	render,
 	renderWithForm,
 	screen,
@@ -27,6 +25,7 @@ import {
 	mockNanoXTransport,
 	mockProfileWithPublicAndTestNetworks,
 	act,
+	MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -38,7 +37,7 @@ const fixtureProfileId = getDefaultProfileId();
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore
-	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
+	vi.spyOn(wallet.transaction(), "transaction").mockImplementation(() => ({
 		amount: () => +ipfsFixture.data.amount / 1e8,
 		data: () => ({ data: () => ipfsFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${ipfsFixture.data.id}`,
@@ -50,7 +49,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => ipfsFixture.data.sender,
 		type: () => "ipfs",
 		usesMultiSignature: () => false,
-	});
+	}));
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -140,7 +139,7 @@ describe("SendIpfs", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render review step", async () => {
+	it("should render review step", () => {
 		const history = createHashHistory();
 		const ipfsURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-ipfs`;
 
@@ -239,38 +238,41 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		userEvent.click(continueButton());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -298,40 +300,43 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[1]).toBeChecked();
 
-		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 4
@@ -347,7 +352,7 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
 		await act(() => vi.runOnlyPendingTimers());
@@ -365,7 +370,7 @@ describe("SendIpfs", () => {
 		// Go back to wallet
 		const historySpy = vi.spyOn(history, "push");
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -398,57 +403,62 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[1]).toBeChecked();
 
-		userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
+		await userEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 		await waitFor(() => expect(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]).toBeChecked());
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.keyboard("{enter}");
+		await userEvent.keyboard("{enter}");
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 4
 		const signMock = vi
 			.spyOn(wallet.transaction(), "signIpfs")
 			.mockReturnValue(Promise.resolve(ipfsFixture.data.id));
+
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
 			accepted: [ipfsFixture.data.id],
 			errors: {},
 			rejected: [],
 		});
+
 		const transactionMock = createTransactionMock(wallet);
 
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
+		expect(sendButton()).not.toBeDisabled();
 
-		userEvent.keyboard("{enter}");
-		userEvent.click(sendButton());
+		await userEvent.keyboard("{enter}");
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
 
@@ -485,31 +495,33 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		await userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
 		await expect(formStep()).resolves.toBeVisible();
 
@@ -534,32 +546,33 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		// Fee
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId(feeWarningContinueID));
+		await userEvent.click(screen.getByTestId(feeWarningContinueID));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
@@ -582,33 +595,35 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
 		// Fee
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		// Auth Step
@@ -616,7 +631,8 @@ describe("SendIpfs", () => {
 
 		const mnemonicInput: HTMLInputElement = screen.getByTestId("AuthenticationStep__mnemonic");
 
-		userEvent.paste(mnemonicInput, passphrase);
+		await userEvent.clear(mnemonicInput);
+		await userEvent.type(mnemonicInput, passphrase);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(passphrase));
 
 		await waitFor(() => {
@@ -624,7 +640,8 @@ describe("SendIpfs", () => {
 		});
 
 		mnemonicInput.select();
-		userEvent.paste(mnemonicInput, MNEMONICS[0]);
+		await userEvent.clear(mnemonicInput);
+		await userEvent.type(mnemonicInput, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(MNEMONICS[0]));
 
 		await waitFor(() => {
@@ -656,7 +673,7 @@ describe("SendIpfs", () => {
 
 		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		await userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -685,37 +702,39 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -726,7 +745,7 @@ describe("SendIpfs", () => {
 		await waitFor(() => {
 			expect(sendButton()).toBeEnabled();
 		});
-		userEvent.click(sendButton());
+		await userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
@@ -736,7 +755,7 @@ describe("SendIpfs", () => {
 
 		const historyMock = vi.spyOn(history, "push").mockReturnValue();
 
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+		await userEvent.click(screen.getByTestId("ErrorStep__close-button"));
 
 		expect(historyMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`);
 
@@ -756,7 +775,8 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "invalid-ipfs-hash");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "invalid-ipfs-hash");
 		await waitFor(() => expect(screen.getByTestId("Input__hash")).toHaveValue("invalid-ipfs-hash"));
 
 		await waitFor(() => {
@@ -789,33 +809,27 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
-
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
-		}
 
 		// Step 4
 		const signMock = vi
@@ -829,16 +843,13 @@ describe("SendIpfs", () => {
 		});
 
 		const transactionMock = createTransactionMock(wallet);
+		await userEvent.click(continueButton());
 
-		userEvent.click(continueButton());
+		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-
-		await act(() => vi.runOnlyPendingTimers());
-
-		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent("1e9b975eff");
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
+		}
 
 		expect(signMock).toHaveBeenCalledWith(
 			expect.objectContaining({
@@ -847,6 +858,10 @@ describe("SendIpfs", () => {
 				signatory: expect.any(Object),
 			}),
 		);
+
+		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+		await act(() => vi.runOnlyPendingTimers());
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -897,17 +912,19 @@ describe("SendIpfs", () => {
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
 		await waitFor(() => expect(screen.getByTestId("TransactionSender")).toHaveTextContent(wallet.address()));
 
-		userEvent.paste(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
+		await userEvent.clear(screen.getByTestId("Input__hash"));
+		await userEvent.type(screen.getByTestId("Input__hash"), "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__hash")).toHaveValue("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco"),
 		);
 
-		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		await userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		inputElement.select();
-		userEvent.paste(inputElement, "10");
+		await userEvent.clear(inputElement);
+		await userEvent.type(inputElement, "10");
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
@@ -944,16 +961,16 @@ describe("SendIpfs", () => {
 
 		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(continueButton());
+		await userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
 			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId(feeWarningContinueID));
+			await userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();

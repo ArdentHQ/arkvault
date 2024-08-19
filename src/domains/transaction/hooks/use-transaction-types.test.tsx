@@ -1,5 +1,4 @@
-import { renderHook } from "@testing-library/react-hooks";
-
+import { renderHook } from "@testing-library/react";
 import { useTransactionTypes } from "./use-transaction-types";
 import { env } from "@/utils/testing-library";
 
