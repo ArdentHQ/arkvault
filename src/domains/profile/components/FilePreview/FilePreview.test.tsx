@@ -4,7 +4,7 @@ import { FilePreview } from "./FilePreview";
 import { render } from "@/utils/testing-library";
 
 describe("FilePreview", () => {
-	const file = { content: "dfdf", extension: ".wwe", name: "filename" };
+	const file = { content: "dfdf", extension: "wwe", name: "filename" };
 
 	it("should render", () => {
 		const { asFragment } = render(<FilePreview file={file} />);

@@ -3,7 +3,7 @@
 exports[`Input > should render as custom element 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
@@ -42,7 +42,7 @@ exports[`Input > should render as textarea 1`] = `
 exports[`Input > should render disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-13c7w0w"
+    class="css-xk5t3v"
     disabled=""
   >
     <div
@@ -64,7 +64,7 @@ exports[`Input > should render disabled 1`] = `
 exports[`Input > should render invalid 1`] = `
 <DocumentFragment>
   <div
-    class="css-1hr3i2s"
+    class="css-12mz4i6"
   >
     <div
       class="relative flex h-full flex-1"
@@ -132,7 +132,7 @@ exports[`Input > should render invalid 1`] = `
 exports[`Input > should render invalid and disabled 1`] = `
 <DocumentFragment>
   <div
-    class="css-wgnltm"
+    class="css-4xrsad"
     disabled=""
   >
     <div
@@ -202,7 +202,7 @@ exports[`Input > should render invalid and disabled 1`] = `
 exports[`Input > should render when isCompact = false 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
@@ -242,7 +242,7 @@ exports[`Input > should render when isCompact = true 1`] = `
 exports[`Input > should render with addons 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <span>
       start
@@ -277,7 +277,7 @@ exports[`Input > should render with addons 1`] = `
 exports[`Input > should render with focus 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"
@@ -302,7 +302,7 @@ exports[`Input > should render with suggestion 1`] = `
     …
   </div>
   <div
-    class="css-1q57rjh"
+    class="css-n1b0kl"
   >
     <div
       class="relative flex h-full flex-1"

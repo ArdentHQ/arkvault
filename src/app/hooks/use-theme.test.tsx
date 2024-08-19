@@ -1,24 +1,33 @@
 /* eslint-disable testing-library/no-node-access */
 import { Contracts } from "@ardenthq/sdk-profiles";
 
-import { useTheme } from "@/app/hooks/use-theme";
+import { useTheme, ViewingModeType } from "@/app/hooks/use-theme";
 import { Theme } from "@/types";
 import * as themeUtils from "@/utils/theme";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 import { browser } from "@/utils/platform";
+import { renderHook } from "@testing-library/react-hooks";
 
 describe("useTheme", () => {
 	describe("theme", () => {
 		it("should return 'dark' if shouldUseDarkColors is true", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
-			expect(useTheme().theme).toBe("dark");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			expect(current.theme).toBe("dark");
 		});
 
 		it("should return 'light' if shouldUseDarkColors is false", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
-			expect(useTheme().theme).toBe("light");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			expect(current.theme).toBe("light");
 		});
 	});
 
@@ -26,23 +35,35 @@ describe("useTheme", () => {
 		it("should return true if dark mode", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => true);
 
-			expect(useTheme().isDarkMode).toBe(true);
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			expect(current.isDarkMode).toBe(true);
 		});
 
 		it("should return false if not dark mode", () => {
 			vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementationOnce(() => false);
 
-			expect(useTheme().isDarkMode).toBe(false);
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			expect(current.isDarkMode).toBe(false);
 		});
 	});
 
 	describe("setTheme", () => {
 		it.each(["light", "dark"])("should set %s theme", (theme) => {
-			useTheme().setTheme(theme === "light" ? "dark" : "light");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+
+			current.setTheme(theme === "light" ? "dark" : "light");
 
 			expect(document.querySelector("html").classList.contains(theme)).toBe(false);
 
-			useTheme().setTheme(theme);
+			current.setTheme(theme as ViewingModeType);
 
 			expect(document.querySelector("html").classList.contains(theme)).toBe(true);
 		});
@@ -72,7 +93,10 @@ describe("useTheme", () => {
 				writable: true,
 			});
 
-			useTheme().setTheme("system");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+			current.setTheme("system");
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(false);
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
@@ -87,17 +111,20 @@ describe("useTheme", () => {
 
 			overflowOverlayMock.mockReturnValue(false);
 
-			useTheme().setTheme("light");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+			current.setTheme("light");
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(true);
 
-			useTheme().setTheme("dark");
+			current.setTheme("dark");
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-dark")).toBe(true);
 
 			overflowOverlayMock.mockReturnValue(true);
 
-			useTheme().setTheme("light");
+			current.setTheme("light");
 
 			expect(document.documentElement.classList.contains("firefox-scrollbar-light")).toBe(false);
 
@@ -110,12 +137,15 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			useTheme().setTheme("dark");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+			current.setTheme("dark");
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 			expect(document.querySelector("html").classList.contains("light")).toBe(false);
 
-			useTheme().setProfileTheme(profile);
+			current.setProfileTheme(profile);
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(false);
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
@@ -125,21 +155,17 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			const themeHook = useTheme();
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
-			themeHook.setTheme("light");
-
-			const themeSpy = vi.spyOn(themeHook, "setTheme");
-
-			expect(document.querySelector("html").classList.contains("light")).toBe(true);
-
-			themeHook.setProfileTheme(profile);
+			current.setTheme("light");
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
-			expect(themeSpy).not.toHaveBeenCalledWith();
+			current.setProfileTheme(profile);
 
-			themeSpy.mockRestore();
+			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});
 	});
 
@@ -157,18 +183,20 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			const { resetProfileTheme, setTheme } = useTheme();
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
 
-			setTheme(systemTheme);
+			current.setTheme(systemTheme);
 
 			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 
 			profile.settings().set(Contracts.ProfileSetting.Theme, profileTheme);
-			setTheme(profileTheme as Theme);
+			current.setTheme(profileTheme as Theme);
 
 			expect(document.querySelector("html").classList.contains(profileTheme)).toBe(true);
 
-			resetProfileTheme(profile);
+			current.resetProfileTheme(profile);
 
 			expect(document.querySelector("html").classList.contains(systemTheme)).toBe(true);
 			expect(profile.appearance().get("theme")).toBe(systemTheme);
@@ -179,11 +207,14 @@ describe("useTheme", () => {
 		it("should reset theme to defaults", () => {
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 
-			useTheme().setTheme("dark");
+			const {
+				result: { current },
+			} = renderHook(() => useTheme());
+			current.setTheme("dark");
 
 			expect(document.querySelector("html").classList.contains("dark")).toBe(true);
 
-			useTheme().resetTheme();
+			current.resetTheme();
 
 			expect(document.querySelector("html").classList.contains("light")).toBe(true);
 		});

@@ -28,7 +28,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-1q57rjh"
+            class="pr-20 css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -63,7 +63,7 @@ exports[`ReceiveFundsForm > should emit amount onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -127,7 +127,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-1q57rjh"
+            class="pr-20 css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -162,7 +162,7 @@ exports[`ReceiveFundsForm > should emit memo onChange event 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -226,7 +226,7 @@ exports[`ReceiveFundsForm > should not show memo if is not supported by network 
           class="relative"
         >
           <div
-            class="pr-20 css-1q57rjh"
+            class="pr-20 css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -277,7 +277,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
           class="relative"
         >
           <div
-            class="pr-20 css-1q57rjh"
+            class="pr-20 css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -312,7 +312,7 @@ exports[`ReceiveFundsForm > should render 1`] = `
           </span>
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
