@@ -1271,4 +1271,71 @@ describe("SendVote", () => {
 		mockWalletData.mockRestore();
 		nanoXMock.mockRestore();
 	});
+
+	it("should error if ledger is not supported", async () => {
+		const nanoXMock = mockNanoXTransport();
+		const isLedgerSpy = vi.spyOn(wallet, "isLedger").mockImplementation(() => true);
+		process.env.REACT_APP_IS_UNIT = undefined;
+
+		const getPublicKeySpy = vi
+			.spyOn(wallet.coin().ledger(), "getPublicKey")
+			.mockResolvedValue("0335a27397927bfa1704116814474d39c2b933aabb990e7226389f022886e48deb");
+
+		const signTransactionSpy = vi
+			.spyOn(wallet.transaction(), "signVote")
+			.mockReturnValue(Promise.resolve(voteFixture.data.id));
+
+		const voteTransactionMock = createVoteTransactionMock(wallet);
+
+		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [voteFixture.data.id],
+			errors: {},
+			rejected: [],
+		});
+
+		const voteURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-vote`;
+		const parameters = new URLSearchParams(`?walletId=${wallet.id()}&nethash=${wallet.network().meta().nethash}`);
+
+		const unvotes: VoteDelegateProperties[] = [
+			{
+				amount: 10,
+				delegateAddress: delegateData[0].address,
+			},
+		];
+
+		appendParameters(parameters, "unvote", unvotes);
+
+		render(
+			<Route path="/profiles/:profileId/wallets/:walletId/send-vote">
+				<SendVote />
+			</Route>,
+			{
+				route: {
+					pathname: voteURL,
+					search: `?${parameters}`,
+				},
+			},
+		);
+
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
+
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
+
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		await userEvent.click(continueButton());
+
+		// Review Step
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+
+		await userEvent.click(continueButton());
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
+		getPublicKeySpy.mockRestore();
+		signTransactionSpy.mockRestore();
+		isLedgerSpy.mockRestore();
+		broadcastMock.mockRestore();
+		voteTransactionMock.mockRestore();
+		nanoXMock.mockRestore();
+	});
 });

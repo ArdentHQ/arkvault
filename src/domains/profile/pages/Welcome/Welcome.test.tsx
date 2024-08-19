@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -6,7 +5,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { truncate } from "@ardenthq/sdk-helpers";
 import { renderHook } from "@testing-library/react";
-import { vi } from "vitest";
+import { afterAll, vi } from "vitest";
 import { Welcome } from "./Welcome";
 import { ProfilePaths } from "@/router/paths";
 import { EnvironmentProvider } from "@/app/contexts";
@@ -16,7 +15,6 @@ import { httpClient, toasts } from "@/app/services";
 import { translations as profileTranslations } from "@/domains/profile/i18n";
 import { StubStorage } from "@/tests/mocks";
 import {
-	act,
 	env,
 	getDefaultPassword,
 	getDefaultProfileId,
@@ -77,6 +75,10 @@ describe("Welcome with deeplink", () => {
 		resetProfileNetworksMock();
 	});
 
+	afterAll(() => {
+		vi.restoreAllMocks();
+	});
+
 	it("should redirect to password protected profile if only one available", async () => {
 		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
@@ -106,9 +108,7 @@ describe("Welcome with deeplink", () => {
 
 		await expect(screen.findByTestId("Modal__inner")).resolves.toBeVisible();
 
-		await act(async () => {
-			await submitPassword();
-		});
+		await submitPassword();
 
 		await waitFor(() => expect(mockPasswordGetter).toHaveBeenCalledWith());
 		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
@@ -120,48 +120,68 @@ describe("Welcome with deeplink", () => {
 
 	it("should navigate to vote page", async () => {
 		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const historyPushMock = vi.spyOn(history, "push");
+		const route =
+			"?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test&vote=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD";
 
-		const { container } = render(
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
+				route,
 			},
 		);
 
-		expect(container).toBeInTheDocument();
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
-		//@TODO: Fix this test - After the click, a white page is being rendered, with no content
-		/* await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-vote`)); */
-		await waitFor(() => expect(history.location.pathname).toBe(`/`));
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-vote${route}`),
+		);
 
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 		mockDelegateName.mockRestore();
 	});
 
 	it("should navigate to verify message page", async () => {
-		const { container } = render(
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const historyPushMock = vi.spyOn(history, "push");
+		const route =
+			"?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature";
+
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=verify&coin=ark&network=ark.devnet&message=hello+world&signatory=signatory&signature=signature",
+				route,
 			},
 		);
 
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
 		await waitFor(() =>
-			//@TODO: Fix this test - After the click, a white page is being rendered, with no content
-			/* expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/verify-message`), */
-			expect(history.location.pathname).toBe(`/`),
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
 		);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/verify-message${route}`),
+		);
+
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	//@TODO: Fix this test - No content is being rendered on the welcome page
@@ -190,7 +210,7 @@ describe("Welcome with deeplink", () => {
 		await userEvent.click(screen.getByText(passwordProtectedProfile.name()));
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		
+
 		await act(async () => {
 			await submitPassword();
 		});
@@ -376,43 +396,66 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to transfer page with network parameter", async () => {
-		const { container } = render(
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const historyPushMock = vi.spyOn(history, "push");
+		const route = "?method=transfer&coin=ark&network=ark.devnet";
+
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ark&network=ark.devnet",
+				route,
 			},
 		);
 
-		expect(container).toBeInTheDocument();
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
-		//@TODO: Fix this test - After the click, a white page is being rendered, with no content
-		/* await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`)); */
-		await waitFor(() => expect(history.location.pathname).toBe(`/`));
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${fixtureProfileId}/send-transfer${route}`),
+		);
+
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	it("should navigate to transfer page with nethash parameter", async () => {
-		const { container } = render(
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const historyPushMock = vi.spyOn(history, "push");
+		const route =
+			"?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867";
+
+		render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=transfer&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867",
+				route,
 			},
 		);
 
-		expect(container).toBeInTheDocument();
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
 
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
 
-		//@TODO: Fix this test - After the click, a white page is being rendered, with no content
-		/* await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/send-transfer`)); */
-		await waitFor(() => expect(history.location.pathname).toBe(`/`));
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/send-transfer${route}`),
+		);
+
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
 	});
 
 	it("should prompt the user to select a profile", async () => {
@@ -490,7 +533,7 @@ describe("Welcome with deeplink", () => {
 		toastWarningSpy.mockRestore();
 	});
 
-	it("should clear the profile validation timeout", async () => {
+	it("should clear the profile validation timeout", () => {
 		const clearTimeoutSpy = vi.spyOn(window, "clearTimeout");
 
 		const { unmount } = render(
@@ -511,27 +554,85 @@ describe("Welcome with deeplink", () => {
 	});
 
 	it("should navigate to sign page", async () => {
+		const toastWarningSpy = vi.spyOn(toasts, "warning").mockImplementation(vi.fn());
+		const historyPushMock = vi.spyOn(history, "push");
+		const route =
+			"?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message+to+sign";
+
+		render(
+			<Route path="/">
+				<Welcome />
+			</Route>,
+			{
+				history,
+				route,
+			},
+		);
+
+		await waitFor(() => expect(screen.getAllByTestId("ProfileRow")).toHaveLength(2));
+
+		await waitFor(() =>
+			expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.SELECT_A_PROFILE, { delay: 500 }),
+		);
+		await userEvent.click(screen.getAllByTestId("ProfileRow__Link")[0]);
+
+		await waitFor(() => expect(toastWarningSpy).toHaveBeenCalledWith(commonTranslations.VALIDATING_URI));
+		await waitFor(() =>
+			expect(historyPushMock).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/sign-message${route}`),
+		);
+
+		toastWarningSpy.mockRestore();
+		historyPushMock.mockRestore();
+	});
+
+	it("should not navigate when clicking multiple times", async () => {
+		const mockDelegateName = vi.spyOn(env.delegates(), "findByUsername").mockReturnValue(profile.wallets().first());
+		const mockProfiles = vi.spyOn(env.profiles(), "values").mockReturnValue([profile]);
+		const mockUsesPassword = vi.spyOn(profile, "usesPassword").mockReturnValue(true);
+
 		const { container } = render(
 			<Route path="/">
 				<Welcome />
 			</Route>,
 			{
 				history,
-				route: "/?method=sign&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&message=message%20to%20sign",
+				route: "/?method=vote&coin=ark&nethash=2a44f340d76ffc3df204c5f38cd355b7496c9065a1ade2ef92071436bd72e867&delegate=test",
 			},
 		);
 
 		expect(container).toBeInTheDocument();
 
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
+		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)));
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
 
-		//@TODO: Fix this test - After the click, a white page is being rendered, with no content
-		/* await waitFor(() => expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/sign-message`)); */
-		await waitFor(() => expect(history.location.pathname).toBe(`/`));
+		mockDelegateName.mockRestore();
+		mockProfiles.mockRestore();
+		mockUsesPassword.mockRestore();
 	});
 });
 
 describe("Welcome", () => {
+	it("should navigate to profile dashboard", async () => {
+		const { container, asFragment, history } = render(<Welcome />);
+
+		const passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
+
+		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
+
+		expect(container).toBeInTheDocument();
+
+		await userEvent.click(screen.getByText(passwordProtectedProfile.name()));
+
+		await waitFor(() => {
+			expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
+		});
+
+		await submitPassword();
+
+		expect(history.location.pathname).toBe(`/profiles/${passwordProtectedProfile.id()}/dashboard`);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render with profiles", async () => {
 		const { container, asFragment, history } = render(<Welcome />);
 		const profile = env.profiles().findById(mockedProfileId);
@@ -541,25 +642,6 @@ describe("Welcome", () => {
 		expect(container).toBeInTheDocument();
 
 		await userEvent.click(screen.getByText(profile.name()));
-
-		await submitPassword();
-
-		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should navigate to profile dashboard", async () => {
-		const { container, asFragment, history } = render(<Welcome />);
-
-		const profile = env.profiles().findById(mockedProfileId);
-
-		expect(screen.getByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).toBeInTheDocument();
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
-
-		await expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 
 		await submitPassword();
 
@@ -842,16 +924,17 @@ describe("Welcome", () => {
 	});
 
 	it("should use the system theme", async () => {
-		const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+		const windowSpy = vi.spyOn(window, "matchMedia").mockImplementation(() => ({ matches: true }) as any);
 		// eslint-disable-next-line testing-library/no-node-access
 		const spy = vi.spyOn(document.querySelector("html").classList, "add");
 
 		render(<Welcome />);
 
 		await waitFor(() => {
-			expect(spy).toHaveBeenNthCalledWith(1, theme);
+			expect(spy).toHaveBeenNthCalledWith(1, "dark");
 		});
 
 		spy.mockRestore();
+		windowSpy.mockRestore();
 	});
 });

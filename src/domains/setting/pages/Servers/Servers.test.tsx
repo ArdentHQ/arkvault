@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import { vi } from "vitest";
+import { expect, vi } from "vitest";
 import ServersSettings from "@/domains/setting/pages/Servers";
 import {
 	env,
@@ -167,7 +166,7 @@ describe("Servers Settings", () => {
 		resetProfileNetworksMock();
 	});
 
-	it("should render servers settings", async () => {
+	it("should render servers settings", () => {
 		const { container, asFragment } = render(
 			<Route path="/profiles/:profileId/settings/servers">
 				<ServersSettings />
@@ -229,7 +228,7 @@ describe("Servers Settings", () => {
 	});
 
 	describe("default peers", () => {
-		it("should render node statuses", async () => {
+		it("should render node statuses", () => {
 			const { container } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -246,7 +245,7 @@ describe("Servers Settings", () => {
 			expect(screen.getAllByTestId(nodeStatusNodeItemTestId)).toHaveLength(2);
 		});
 
-		it("should render only live nodes if doesnt use test networks", async () => {
+		it("should render only live nodes if doesnt use test networks", () => {
 			const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
 
 			const { container } = render(
@@ -706,7 +705,7 @@ describe("Servers Settings", () => {
 			profileHostsSpy.mockRestore();
 		});
 
-		it("should render custom servers", async () => {
+		it("should render custom servers", () => {
 			const { asFragment } = render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -863,7 +862,7 @@ describe("Servers Settings", () => {
 			expect(nameField).toHaveValue("ARK Peer #1");
 		});
 
-		it("should render customs servers in xs", async () => {
+		it("should render customs servers in xs", () => {
 			const { asFragment } = renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -988,8 +987,9 @@ describe("Servers Settings", () => {
 			await expect(screen.findByTestId(serverDeleteConfirmationTestId)).resolves.toBeVisible();
 		});
 
-		//@TODO: Fix this test
-		/* it("can refresh servers in mobile", async () => {
+		it("can refresh servers in mobile", async () => {
+			const refreshPersistMock = vi.spyOn(env, "persist").mockImplementation(vi.fn());
+
 			renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -1008,8 +1008,12 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(screen.getByTestId("CustomPeers-network-item--mobile--refresh"));
 
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(2);
-		}); */
+			await waitFor(() => {
+				expect(refreshPersistMock).toHaveBeenCalledOnce();
+			});
+
+			refreshPersistMock.mockRestore();
+		});
 
 		it("should not expand peer when clicking on status", async () => {
 			renderResponsiveWithRoute(
@@ -1095,8 +1099,7 @@ describe("Servers Settings", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		//@TODO: Fix this test
-		/* it("should show status ok after ping the servers on mobile when expanded", async () => {
+		it("should show status ok after ping the servers on mobile when expanded", async () => {
 			const { asFragment } = renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -1111,14 +1114,11 @@ describe("Servers Settings", () => {
 				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
 			);
 
-			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
-
 			// After ping it should show ok
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
-		}); */
+		});
 
 		it("should ping the servers in an interval", async () => {
 			const originalSetInterval = global.setInterval;
@@ -1296,8 +1296,7 @@ describe("Servers Settings", () => {
 			});
 		});
 
-		//@TODO: Fix this test
-		/* it("can refresh a server", async () => {
+		it("can refresh a server", async () => {
 			render(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -1323,11 +1322,10 @@ describe("Servers Settings", () => {
 
 			await userEvent.click(refreshButton);
 
-			await waitFor(() => expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(1));
 			await waitFor(() => expect(screen.queryByTestId(peerStatusLoadingTestId)).not.toBeInTheDocument());
 
 			expect(screen.getAllByTestId(peerStatusOkTestId)).toHaveLength(3);
-		}); */
+		});
 
 		it("can check and uncheck a server", async () => {
 			const serverPushSpy = vi.spyOn(profile.hosts(), "push");
@@ -1430,8 +1428,7 @@ describe("Servers Settings", () => {
 			expect(asFragment()).toMatchSnapshot();
 		});
 
-		//@TODO: Fix this test
-		/* it("should show status error if request fails on mobile when expanded", async () => {
+		it("should show status error if request fails on mobile when expanded", async () => {
 			const { asFragment } = renderResponsiveWithRoute(
 				<Route path="/profiles/:profileId/settings/servers">
 					<ServersSettings />
@@ -1446,13 +1443,10 @@ describe("Servers Settings", () => {
 				within(screen.getByTestId(customPeerListTestId)).getAllByTestId(networkAccordionIconTestId)[0],
 			);
 
-			// Is loading initially
-			expect(screen.getAllByTestId(peerStatusLoadingTestId)).toHaveLength(4);
-
 			// After ping it should show error
 			await waitFor(() => expect(screen.getAllByTestId(peerStatusErrorTestId)).toHaveLength(4));
 
 			expect(asFragment()).toMatchSnapshot();
-		}); */
+		});
 	});
 });
