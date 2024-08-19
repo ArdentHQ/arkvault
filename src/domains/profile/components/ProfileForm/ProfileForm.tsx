@@ -11,7 +11,6 @@ import { Icon } from "@/app/components/Icon";
 import { InputDefault } from "@/app/components/Input";
 import { PasswordValidation } from "@/app/components/PasswordValidation";
 import { Select } from "@/app/components/SelectDropdown";
-import { SelectProfileImage } from "@/app/components/SelectProfileImage";
 import { useAccentColor, useTheme, useValidation } from "@/app/hooks";
 import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
 import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
@@ -95,36 +94,20 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 	return (
 		<div>
 			<Form context={form} onSubmit={onSubmit} data-testid="ProfileForm__form">
-				<div className="relative space-y-5">
-					<div className="flex items-end justify-between">
-						<div className="mr-6 w-full">
-							<FormField name="name">
-								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
-								<InputDefault
-									ref={register(createProfile.name())}
-									onBlur={() => {
-										/* istanbul ignore else -- @preserve */
-										if (avatarImage.length === 0 || isSvg) {
-											setValue("avatarImage", Helpers.Avatar.make(formattedName));
-										}
-									}}
-								/>
-							</FormField>
-						</div>
-
-						<SelectProfileImage
-							value={avatarImage}
-							name={formattedName}
-							showLabel={false}
-							onSelect={(image) => {
-								if (!image) {
-									setValue("avatarImage", formattedName ? Helpers.Avatar.make(formattedName) : "");
-									return;
-								}
-
-								setValue("avatarImage", image);
-							}}
-						/>
+				<div className="relative space-y-4">
+					<div>
+						<FormField name="name">
+							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.NAME")} />
+							<InputDefault
+								ref={register(createProfile.name())}
+								onBlur={() => {
+									/* istanbul ignore else -- @preserve */
+									if (avatarImage.length === 0 || isSvg) {
+										setValue("avatarImage", Helpers.Avatar.make(formattedName));
+									}
+								}}
+							/>
+						</FormField>
 					</div>
 
 					{showPasswordFields && (
@@ -136,7 +119,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 						/>
 					)}
 
-					<div className="flex pb-1 sm:pb-3">
+					<div className="flex flex-col pb-1 sm:flex-row">
 						<FormField className="flex flex-1 flex-col" name="currency">
 							<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 							<Select
@@ -157,7 +140,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 							/>
 						</FormField>
 
-						<div className="ml-4 border-l border-theme-secondary-300 pl-4 dark:border-theme-secondary-800">
+						<div className="mt-4 border-theme-secondary-300 dark:border-theme-secondary-800 sm:ml-4 sm:mt-0 sm:border-l sm:pl-4">
 							<FormField name="viewingMode">
 								<FormLabel label={t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")} />
 								<ButtonGroup className="space-x-2">
@@ -188,7 +171,7 @@ export const ProfileForm = ({ defaultValues, onBack, onSubmit, shouldValidate, s
 
 				<Divider />
 
-				<div className="mb-8 pt-1 sm:py-3">
+				<div className="mb-8 py-1">
 					<FormField name="disclaimer">
 						<label className="flex cursor-pointer items-center space-x-3">
 							<Checkbox

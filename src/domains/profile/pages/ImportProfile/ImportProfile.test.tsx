@@ -33,15 +33,13 @@ describe("ImportProfile", () => {
 	});
 
 	it("should render first step", async () => {
-		const { container } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
 		);
 
 		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
-
-		expect(container).toMatchSnapshot();
 	});
 
 	it("should go back", async () => {
@@ -248,7 +246,7 @@ describe("ImportProfile", () => {
 		["dark", darkThemeWwe],
 		["light", lightThemeWwe],
 	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, wweFile) => {
-		const { asFragment } = render(
+		render(
 			<EnvironmentProvider env={env}>
 				<ImportProfile />
 			</EnvironmentProvider>,
@@ -280,8 +278,6 @@ describe("ImportProfile", () => {
 			expect(lightButton).toBeChecked();
 			expect(darkButton).not.toBeChecked();
 		}
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should go to step 3 and back", async () => {

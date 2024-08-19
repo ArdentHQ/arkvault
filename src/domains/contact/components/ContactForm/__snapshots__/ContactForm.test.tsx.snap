@@ -17,7 +17,7 @@ exports[`ContactForm > should render responsive 1`] = `
         Name
       </label>
       <div
-        class=" css-1q57rjh"
+        class=" css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
@@ -51,7 +51,7 @@ exports[`ContactForm > should render responsive 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -83,7 +83,7 @@ exports[`ContactForm > should render responsive 1`] = `
                   id="downshift-0-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -165,7 +165,7 @@ exports[`ContactForm > should render responsive 1`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -250,7 +250,7 @@ exports[`ContactForm > should render responsive 2`] = `
         Name
       </label>
       <div
-        class=" css-1q57rjh"
+        class=" css-n1b0kl"
       >
         <div
           class="relative flex h-full flex-1"
@@ -284,7 +284,7 @@ exports[`ContactForm > should render responsive 2`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -316,7 +316,7 @@ exports[`ContactForm > should render responsive 2`] = `
                   id="downshift-2-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -398,7 +398,7 @@ exports[`ContactForm > should render responsive 2`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"
@@ -483,7 +483,7 @@ exports[`ContactForm > should render with errors 1`] = `
         Name
       </label>
       <div
-        class=" css-1hr3i2s"
+        class=" css-12mz4i6"
       >
         <div
           class="relative flex h-full flex-1"
@@ -565,7 +565,7 @@ exports[`ContactForm > should render with errors 1`] = `
           data-testid="SelectDropdown"
         >
           <div
-            class="sr-only css-1q57rjh"
+            class="sr-only css-n1b0kl"
           >
             <div
               class="relative flex h-full flex-1"
@@ -597,7 +597,7 @@ exports[`ContactForm > should render with errors 1`] = `
                   id="downshift-4-label"
                 />
                 <div
-                  class="css-1q57rjh"
+                  class="css-n1b0kl"
                 >
                   <div
                     class="relative flex h-full flex-1"
@@ -679,7 +679,7 @@ exports[`ContactForm > should render with errors 1`] = `
           Address
         </label>
         <div
-          class="css-1q57rjh"
+          class="css-n1b0kl"
         >
           <div
             class="relative flex h-full flex-1"

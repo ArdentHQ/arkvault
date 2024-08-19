@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
+import { Icon, ThemeIcon } from "@/app/components/Icon";
 import { ReadableFile, useFiles } from "@/app/hooks/use-files";
 
 interface SelectFileProperties {
@@ -90,9 +90,9 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 		onSelect(raw);
 	};
 
-	const fileFormatIcon: Record<string, string> = {
-		".json": "ExtensionJson",
-		".wwe": "ExtensionWwe",
+	const fileFormatIcon: Record<string, string[]> = {
+		".json": ["ExtensionJsonDark", "ExtensionJsonLight"],
+		".wwe": ["ExtensionWweDark", "ExtensionWweLight"],
 	};
 
 	const renderError = () => (
@@ -109,10 +109,16 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 
 	const renderContent = () => (
 		<>
-			{fileFormatIcon[fileFormat] && <Icon name={fileFormatIcon[fileFormat]} size="xl" />}
+			{fileFormatIcon[fileFormat] && (
+				<ThemeIcon
+					darkIcon={fileFormatIcon[fileFormat][0]}
+					lightIcon={fileFormatIcon[fileFormat][1]}
+					size="xl"
+				/>
+			)}
 
-			<div className="mt-8">
-				<span className="mr-px hidden font-semibold sm:inline">
+			<div className="mt-4">
+				<span className="mr-px hidden text-lg font-semibold leading-[21px] sm:inline">
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.DRAG_AND_DROP")}{" "}
 				</span>
 				<button
@@ -120,7 +126,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 					onClick={handleOpenFile}
 					title={t("PROFILE.IMPORT.SELECT_FILE_STEP.UPLOAD_TITLE")}
 					data-testid="SelectFile__browse-files"
-					className="link ring-focus relative cursor-pointer font-semibold focus:outline-none"
+					className="link ring-focus relative cursor-pointer text-lg font-semibold leading-[21px] focus:outline-none"
 					data-ring-focus-margin="-m-1"
 				>
 					{t("PROFILE.IMPORT.SELECT_FILE_STEP.BROWSE_FILES")}
@@ -136,7 +142,7 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 	return (
 		<div
 			data-testid="SelectFile"
-			className="relative mt-6 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 p-2 dark:border-theme-secondary-800 sm:mt-8"
+			className="relative mt-4 h-52 rounded-xl border-2 border-dashed border-theme-secondary-300 p-1.5 dark:border-theme-secondary-800"
 		>
 			<div
 				data-testid="SelectFile__drop-zone"
@@ -152,8 +158,8 @@ export const SelectFile = ({ onSelect, fileFormat }: SelectFileProperties) => {
 				className={cn(
 					"flex h-full flex-col items-center justify-center rounded-lg transition-colors duration-200",
 					{
-						"bg-theme-primary-100 dark:bg-black": isDragging || dropError,
-						"bg-theme-primary-50 dark:bg-theme-secondary-800": !isDragging && !dropError,
+						"bg-theme-primary-100 dark:bg-theme-secondary-800": isDragging || dropError,
+						"bg-theme-primary-50 dark:bg-black": !isDragging && !dropError,
 					},
 				)}
 			>
