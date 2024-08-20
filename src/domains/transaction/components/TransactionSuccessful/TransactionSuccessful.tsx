@@ -1,3 +1,4 @@
+import cn from "classnames"
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -25,12 +26,11 @@ export const TransactionSuccessful = ({
 	transaction,
 	senderWallet,
 	title,
-	description,
 	children,
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
+	const { isConfirmed, confirmations } = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
 	const { getValues } = useFormContext()
 	const { recipients } = getValues()
 
@@ -42,25 +42,24 @@ export const TransactionSuccessful = ({
 		);
 	}
 
-	const descriptionText =
-		description ??
-		(isTransactionConfirmed ? t("TRANSACTION.SUCCESS.DESCRIPTION") : t("TRANSACTION.PENDING.DESCRIPTION"));
-
 	const titleText =
-		title ?? (isTransactionConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
+		title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
 		<section
-			data-testid={isTransactionConfirmed ? "TransactionSuccessful" : "TransactionPending"}
+			data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}
 			className="space-y-8"
 		>
 			<StepHeader title={titleText}
 				titleIcon={
 					<Icon
 						dimensions={[24, 24]}
-						name={isTransactionConfirmed ? "ConfirmTransaction" : "PendingTransaction"}
+						name={isConfirmed ? "CheckmarkDoubleCircle" : "PendingTransaction"}
 						data-testid="icon-PendingTransaction"
-						className="text-theme-primary-600"
+						className={cn({
+							"text-theme-primary-600": !isConfirmed,
+							"text-theme-success-600": isConfirmed
+						})}
 					/>
 				}
 			/>
@@ -73,10 +72,10 @@ export const TransactionSuccessful = ({
 
 			{children}
 
-			{!isTransactionConfirmed && (
-				<div>
-					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div className="mt-2">
+			<div>
+				<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+				<div className="mt-2">
+					{!isConfirmed && (
 						<div
 							data-testid="PendingConfirmationAlert"
 							className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
@@ -87,9 +86,27 @@ export const TransactionSuccessful = ({
 								{t("TRANSACTION.PENDING.STATUS_TEXT")}
 							</p>
 						</div>
-					</div>
+					)}
+
+					{isConfirmed && (
+						<div
+							data-testid="TransactionSuccessAlert"
+							className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+						>
+							<div className="flex items-center space-x-2 text-theme-success-600">
+								<Icon name="CheckmarkDouble" />
+								<p>{t("COMMON.ALERT.SUCCESS")}</p>
+							</div>
+
+							<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />
+
+							<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
+								<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
+							</p>
+						</div>
+					)}
 				</div>
-			)}
+			</div>
 		</section>
 	);
 };
