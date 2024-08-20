@@ -78,15 +78,17 @@ export const TransactionSuccessful = ({
 			{!isTransactionConfirmed && (
 				<div>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-					<div
-						data-testid="PendingConfirmationAlert"
-						className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
-					>
-						<Spinner color="warning-alt" size="sm" width={3} />
-						<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
-						<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-							{t("TRANSACTION.PENDING.STATUS_TEXT")}
-						</p>
+					<div className="mt-2">
+						<div
+							data-testid="PendingConfirmationAlert"
+							className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+						>
+							<Spinner color="warning-alt" size="sm" width={3} />
+							<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+							<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
+								{t("TRANSACTION.PENDING.STATUS_TEXT")}
+							</p>
+						</div>
 					</div>
 				</div>
 			)}
