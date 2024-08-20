@@ -4,6 +4,7 @@ export const translations = {
 	ADD: "Add",
 	ADDRESS: "Address",
 	ADDRESSES: "Addresses",
+	ADDRESS_NAME: "Address Name",
 	ADD_NEW: "Add New",
 	ADVANCED_MODE: "Advanced Mode",
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again",
@@ -104,6 +105,7 @@ export const translations = {
 	DOWNLOADING: "Downloading",
 	DO_NOT_SHOW_AGAIN: "Do not show this message again",
 	EDIT: "Edit",
+	EDIT_item: "Edit {{item}}",
 	EMPTY_RESULTS: {
 		SUBTITLE: "No results found. Refine your search and try again.",
 		TITLE: "No Results",

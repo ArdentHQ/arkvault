@@ -6,7 +6,7 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
     data-testid="LedgerImportStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex items-end justify-between bg-theme-background mb-4 hidden sm:block"
     >
       <div
         class="space-y-2"
@@ -14,6 +14,48 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.76465L11.0312 13.2446"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -29,445 +71,285 @@ exports[`LedgerImportStep > should render with multiple import 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
-    >
+    <div>
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        class="mb-3 sm:hidden"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          data-testid="SectionHeaderMobile__wrapper"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
-            Cryptoasset
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
-          </div>
+            Addresses
+          </span>
         </div>
+      </div>
+      <div
+        class="flex flex-col gap-2"
+      >
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+          data-testid="LedgerMobileItem__wrapper"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
           >
-            <div
-              class="w-full truncate"
+            <span
+              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             >
-              ARK Devnet
-            </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+              ARK Devnet #3
+            </span>
+            <button
+              class="!p-0 text-theme-primary-600 dark:text-theme-secondary-500 css-i9zlwr"
+              data-testid="LedgerImportStep__edit-alias"
+              type="button"
             >
               <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
+                class="flex items-center space-x-2"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="pencil"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <span>
+                  Edit
+                </span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
+          >
+            <div
+              class="flex w-36 flex-col gap-2"
+            >
+              <span
+                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              >
+                Address
+              </span>
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-2"
+            >
+              <span
+                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="LedgerMobileItem__network"
+              >
+                Value
+                 (
+                DARK
+                )
+              </span>
+              <div>
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 DARK
+                </span>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
+          data-testid="LedgerMobileItem__wrapper"
+        >
           <div
-            class="flex items-center sm:hidden"
+            class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
           >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
+            <span
+              class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+            >
+              ARK Devnet #4
+            </span>
+            <button
+              class="!p-0 text-theme-primary-600 dark:text-theme-secondary-500 css-i9zlwr"
+              data-testid="LedgerImportStep__edit-alias"
+              type="button"
             >
               <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
+                class="flex items-center space-x-2"
               >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
                 >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    id="pencil"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <path
+                      d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+                <span>
+                  Edit
+                </span>
+              </div>
+            </button>
+          </div>
+          <div
+            class="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5"
+          >
+            <div
+              class="flex w-36 flex-col gap-2"
+            >
+              <span
+                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              >
+                Address
+              </span>
+              <div
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              >
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
+                  >
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-2"
+            >
+              <span
+                class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                data-testid="LedgerMobileItem__network"
+              >
+                Value
+                 (
+                DARK
+                )
+              </span>
+              <div>
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  NaN DARK
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <ul>
-        <li>
-          <div
-            class="no-ligatures py-4 pt-6 css-47538l"
-            data-testid="TransactionDetail"
-          >
-            <div
-              class="flex w-full items-center justify-between space-x-4"
-            >
-              <div
-                class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-              >
-                <div
-                  class="hidden items-center font-semibold sm:flex"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                  >
-                    <div
-                      class="shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
-                          title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex w-full min-w-0 flex-col justify-between"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Devnet #3
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                        </span>
-                      </div>
-                      <p
-                        class="text-sm font-medium text-theme-secondary-500"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-              >
-                <div
-                  class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-                >
-                  <div
-                    class="w-full truncate"
-                  >
-                    <div
-                      class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                        >
-                          <img
-                            alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
-                            title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="flex w-full min-w-0 flex-col justify-between"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="font-semibold text-base text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures css-9nx3be"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Devnet #3
-                            </span>
-                          </span>
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                          </span>
-                        </div>
-                        <p
-                          class="text-sm font-medium text-theme-secondary-500"
-                        >
-                          <span
-                            class="whitespace-nowrap"
-                            data-testid="Amount"
-                          >
-                            0 DARK
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="css-6419sw"
-                  data-testid="LedgerImportStep__edit-alias"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div
-            class="no-ligatures py-4 pb-6 css-47538l"
-            data-testid="TransactionDetail"
-          >
-            <div
-              class="flex w-full items-center justify-between space-x-4"
-            >
-              <div
-                class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-              >
-                <div
-                  class="hidden items-center font-semibold sm:flex"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                  >
-                    <div
-                      class="shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                          title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex w-full min-w-0 flex-col justify-between"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Devnet #4
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                        </span>
-                      </div>
-                      <p
-                        class="text-sm font-medium text-theme-secondary-500"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-              >
-                <div
-                  class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-                >
-                  <div
-                    class="w-full truncate"
-                  >
-                    <div
-                      class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                        >
-                          <img
-                            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="flex w-full min-w-0 flex-col justify-between"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                        >
-                          <span
-                            class="font-semibold text-base text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures css-9nx3be"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Devnet #4
-                            </span>
-                          </span>
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                          </span>
-                        </div>
-                        <p
-                          class="text-sm font-medium text-theme-secondary-500"
-                        >
-                          <span
-                            class="whitespace-nowrap"
-                            data-testid="Amount"
-                          >
-                            0 DARK
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="css-6419sw"
-                  data-testid="LedgerImportStep__edit-alias"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
     </div>
   </section>
 </div>
@@ -479,7 +361,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
     data-testid="LedgerImportStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex items-end justify-between bg-theme-background mb-4 hidden sm:block"
     >
       <div
         class="space-y-2"
@@ -487,6 +369,48 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.76465L11.0312 13.2446"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -502,201 +426,144 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         </div>
       </div>
     </div>
-    <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
-    >
+    <div>
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        class="mb-3 sm:hidden"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          data-testid="SectionHeaderMobile__wrapper"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
-            Cryptoasset
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              ARK Devnet
-            </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+            Addresses
+          </span>
         </div>
       </div>
-    </div>
-    <div>
-      <ul>
-        <li>
+      <div
+        class="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      >
+        <div>
           <div
-            class="no-ligatures py-4 pt-6 css-47538l"
-            data-testid="TransactionDetail"
+            class="css-1m6rt2i"
+            role="table"
           >
-            <div
-              class="flex w-full items-center justify-between space-x-4"
+            <table
+              cellpadding="0"
+              class="w-full table-auto"
             >
-              <div
-                class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-              >
-                <div
-                  class="hidden items-center font-semibold sm:flex"
+              <thead>
+                <tr
+                  role="row"
                 >
-                  <div
-                    class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                    colspan="1"
+                    data-testid="table__th--0"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
                   >
                     <div
-                      class="shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
+                      class="flex flex-inline align-top"
                     >
                       <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                        class=""
                       >
-                        <img
-                          alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
-                          title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                        />
+                        Address
                       </div>
-                    </div>
-                    <div
-                      class="flex w-full min-w-0 flex-col justify-between"
-                    >
                       <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Devnet #3
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                        </span>
-                      </div>
-                      <p
-                        class="text-sm font-medium text-theme-secondary-500"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-              >
-                <div
-                  class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-                >
-                  <div
-                    class="w-full truncate"
-                  >
-                    <div
-                      class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                       >
                         <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
                         >
-                          <img
-                            alt="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(103, 58, 183)" width="100" height="100"/><circle r="55" cx="60" cy="70" fill="rgb(244, 67, 54)"/><circle r="35" cx="30" cy="50" fill="rgb(139, 195, 74)"/><circle r="60" cx="20" cy="60" fill="rgb(255, 152, 0)"/></svg>"
-                            title="DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq"
-                          />
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
                         </div>
                       </div>
+                    </div>
+                  </th>
+                  <th
+                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                    colspan="1"
+                    data-testid="table__th--1"
+                    role="columnheader"
+                    style="cursor: pointer;"
+                    title="Toggle SortBy"
+                  >
+                    <div
+                      class="flex flex-inline align-top justify-end flex-row-reverse"
+                    >
                       <div
-                        class="flex w-full min-w-0 flex-col justify-between"
+                        class=""
+                      >
+                        Edit Name
+                      </div>
+                      <div
+                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                      >
+                        <div
+                          class="transition-transform rotate-180 css-15txs7d"
+                          height="10"
+                          role="img"
+                          width="10"
+                        >
+                          <svg
+                            id="chevron-down-small"
+                            viewBox="0 0 10 10"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                role="rowgroup"
+              >
+                <tr
+                  class=" css-16ynu5g"
+                  data-testid="TableRow"
+                >
+                  <td>
+                    <div
+                      class="justify-center css-5gvahk"
+                    >
+                      <div
+                        class="flex flex-1 flex-col py-2"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -712,161 +579,117 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                               ARK Devnet #3
                             </span>
                           </span>
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
+                          <div
+                            class="relative grow text-left"
                           >
-                            DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                          </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
+                            >
+                              DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
                         </div>
-                        <p
-                          class="text-sm font-medium text-theme-secondary-500"
-                        >
+                        <div>
                           <span
-                            class="whitespace-nowrap"
+                            class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="Amount"
                           >
                             0 DARK
                           </span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="css-6419sw"
-                  data-testid="LedgerImportStep__edit-alias"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div
-            class="no-ligatures py-4 pb-6 css-8zhymy"
-            data-testid="TransactionDetail"
-          >
-            <div
-              class="flex w-full items-center justify-between space-x-4"
-            >
-              <div
-                class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-              >
-                <div
-                  class="hidden items-center font-semibold sm:flex"
-                >
-                  <div
-                    class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                  >
-                    <div
-                      class="shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                          title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="flex w-full min-w-0 flex-col justify-between"
-                    >
-                      <div
-                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                      >
-                        <span
-                          class="font-semibold text-base text-theme-text"
-                          data-testid="Address__alias"
-                        >
-                          <span
-                            class="no-ligatures css-9nx3be"
-                            data-testid="TruncateEnd"
-                          >
-                            ARK Devnet #4
-                          </span>
-                        </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                        </span>
-                      </div>
-                      <p
-                        class="text-sm font-medium text-theme-secondary-500"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-              >
-                <div
-                  class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-                >
-                  <div
-                    class="w-full truncate"
-                  >
-                    <div
-                      class="flex w-0 flex-1 items-center space-x-3 overflow-hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1n9jllj"
-                        data-testid="Avatar"
-                      >
-                        <div
-                          class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                        >
-                          <img
-                            alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                            src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                            title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                          />
                         </div>
                       </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      class="justify-end font-semibold css-t4jv3s"
+                    >
+                      <button
+                        class="css-6419sw"
+                        data-testid="LedgerImportStep__edit-alias"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="css-1cn0px"
+                            height="14"
+                            width="14"
+                          >
+                            <svg
+                              id="pencil"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  class=" css-16ynu5g"
+                  data-testid="TableRow"
+                >
+                  <td>
+                    <div
+                      class="justify-center css-5gvahk"
+                    >
                       <div
-                        class="flex w-full min-w-0 flex-col justify-between"
+                        class="flex flex-1 flex-col py-2"
                       >
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -882,65 +705,112 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                               ARK Devnet #4
                             </span>
                           </span>
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
+                          <div
+                            class="relative grow text-left"
                           >
-                            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                          </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                              data-testid="Address__address"
+                            >
+                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                            </span>
+                            <span>
+                               
+                            </span>
+                          </div>
+                          <button
+                            class="ring-focus relative focus:outline-none"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="clipboard-icon__wrapper"
+                            type="button"
+                          >
+                            <div
+                              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                              height="16"
+                              width="16"
+                            >
+                              <svg
+                                id="copy"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <g
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                  />
+                                  <path
+                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                          </button>
                         </div>
-                        <p
-                          class="text-sm font-medium text-theme-secondary-500"
-                        >
+                        <div>
                           <span
-                            class="whitespace-nowrap"
+                            class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="Amount"
                           >
                             0 DARK
                           </span>
-                        </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <button
-                  class="css-6419sw"
-                  data-testid="LedgerImportStep__edit-alias"
-                  type="button"
-                >
-                  <div
-                    class="flex items-center space-x-2"
-                  >
+                  </td>
+                  <td>
                     <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                      class="justify-end font-semibold css-t4jv3s"
                     >
-                      <svg
-                        id="pencil"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <button
+                        class="css-6419sw"
+                        data-testid="LedgerImportStep__edit-alias"
+                        type="button"
                       >
-                        <path
-                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="css-1cn0px"
+                            height="14"
+                            width="14"
+                          >
+                            <svg
+                              id="pencil"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <path
+                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
                     </div>
-                  </div>
-                </button>
-              </div>
-            </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </section>
 </div>
@@ -952,7 +822,7 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
     data-testid="LedgerImportStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex items-end justify-between bg-theme-background mb-4 hidden sm:block"
     >
       <div
         class="space-y-2"
@@ -960,6 +830,48 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.76465L11.0312 13.2446"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -976,303 +888,182 @@ exports[`LedgerImportStep > should render with single import (lg) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
+      class="flex flex-col gap-4"
     >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        class="flex flex-col gap-4"
+        data-tesid="DesktopImportSection__wrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex flex-col gap-2"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700"
           >
-            Cryptoasset
-          </div>
+            Imported
+          </span>
           <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800"
           >
             <div
-              class="w-full truncate"
-            >
-              ARK Devnet
-            </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Address
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+              class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+              data-testid="SectionBodyItem__wrapper"
             >
               <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
               >
-                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                Address
               </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                  </span>
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="w-full border border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+              data-testid="SectionBodyItem__wrapper"
+            >
+              <span
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+              >
+                Balance
+              </span>
+              <div
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
               >
                 <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
                 >
-                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                  0 DARK
                 </span>
               </div>
             </div>
           </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              class="shrink-0 css-1yk316i"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                  title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="hidden sm:flex sm:items-center"
-          >
-            <div
-              class="shrink-0 css-1n9jllj"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                  title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
       <div
-        class="flex w-full items-center justify-between space-x-4"
+        class="flex flex-col gap-4"
+        data-tesid="DesktopImportSection__wrapper"
       >
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex flex-col gap-2"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700"
           >
-            Balance
-          </div>
+            Address Name
+          </span>
           <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
-            >
-              0 DARK
-            </span>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex flex-col gap-4 rounded-xl border border-theme-secondary-300 px-6 py-5 dark:border-theme-secondary-800"
           >
             <div
-              class="w-full truncate"
+              class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+              data-testid="SectionBodyItem__wrapper"
             >
               <span
-                class="whitespace-nowrap"
-                data-testid="Amount"
+                class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
               >
-                0 DARK
+                Name
               </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-1uo4ck9"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Wallet Name
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet #4
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              ARK Devnet #4
-            </div>
-          </div>
-          <button
-            class="css-6419sw"
-            data-testid="LedgerImportStep__edit-alias"
-            type="button"
-          >
-            <div
-              class="flex items-center space-x-2"
-            >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
               >
-                <svg
-                  id="pencil"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="flex w-full flex-row items-center justify-between"
                 >
-                  <path
-                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <span>
+                    ARK Devnet #4
+                  </span>
+                  <button
+                    class="!p-0 text-theme-primary-600 dark:text-theme-secondary-500 css-i9zlwr"
+                    data-testid="LedgerImportStep__edit-alias"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <div
+                        class="css-v0ob3f"
+                        height="16"
+                        width="16"
+                      >
+                        <svg
+                          id="pencil"
+                          viewBox="0 0 20 20"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                      <span>
+                        Edit
+                      </span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1286,7 +1077,7 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
     data-testid="LedgerImportStep"
   >
     <div
-      class="flex items-end justify-between bg-theme-background"
+      class="flex items-end justify-between bg-theme-background mb-4 hidden sm:block"
     >
       <div
         class="space-y-2"
@@ -1294,6 +1085,48 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
         <div
           class="flex items-center gap-3"
         >
+          <div
+            class="text-theme-success-100 dark:text-theme-success-900 css-mydt5v"
+            height="22"
+            width="22"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 24 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12.5"
+                fill="currentColor"
+                r="11"
+                stroke="#289548"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.4034 8.76465L12.3234 16.9246C12.1634 17.0846 12.0034 17.2447 11.7634 17.2447C11.5234 17.2447 11.2834 17.1646 11.1234 17.0046L9.52344 15.4046"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M5.59375 15.4775L7.19375 17.0775C7.35375 17.2375 7.51375 17.3175 7.75375 17.3175C7.83375 17.3175 7.99375 17.3175 8.07375 17.2375"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M14.3912 8.76465L11.0312 13.2446"
+                stroke="#289548"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
           <h1
             class="mb-0 text-2xl leading-[29px]"
             data-testid="header__title"
@@ -1310,225 +1143,98 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
       </div>
     </div>
     <div
-      class="no-ligatures mt-2 css-1iw2tte"
-      data-testid="WalletDetailNetwork"
+      class="flex flex-col gap-6"
+      data-testid="SingleImport__container-mobile"
     >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
+      <div>
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          data-testid="SectionHeaderMobile__wrapper"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
-            Cryptoasset
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet
-          </div>
+            Imported
+          </span>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="flex flex-col gap-3 px-3 pt-3"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              ARK Devnet
-            </div>
-          </div>
-          <div
-            class="hidden sm:block"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-              data-testid="NetworkIcon-ARK-ark.devnet"
-            >
-              <div
-                class="css-1i4b0eq"
-                data-testid="NetworkIcon__icon"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="ark"
-                  viewBox="0 0 36.3 30.6"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Address
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-            >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
-            <div
-              class="w-full truncate"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex items-center sm:hidden"
-          >
-            <div
-              class="shrink-0 css-1yk316i"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                  title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="hidden sm:flex sm:items-center"
-          >
-            <div
-              class="shrink-0 css-1n9jllj"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(63, 81, 181)" width="100" height="100"/><circle r="40" cx="100" cy="40" fill="rgb(0, 150, 136)"/><circle r="55" cx="60" cy="60" fill="rgb(205, 220, 57)"/><circle r="50" cx="50" cy="30" fill="rgb(33, 150, 243)"/></svg>"
-                  title="DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
-        <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
-        >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
-          >
-            Balance
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
+            class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+            data-testid="SectionBodyItem__wrapper"
           >
             <span
-              class="whitespace-nowrap"
-              data-testid="Amount"
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
             >
-              0 DARK
+              Address
             </span>
-          </div>
-        </div>
-        <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
-        >
-          <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
-          >
             <div
-              class="w-full truncate"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
+            >
+              <div
+                class="w-32"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
+                >
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                  </span>
+                  <button
+                    class="ring-focus relative focus:outline-none"
+                    data-ring-focus-margin="-m-1"
+                    data-testid="clipboard-icon__wrapper"
+                    type="button"
+                  >
+                    <div
+                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="copy"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                          />
+                          <path
+                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+            data-testid="SectionBodyItem__wrapper"
+          >
+            <span
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
+            >
+              Balance
+            </span>
+            <div
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
             >
               <span
                 class="whitespace-nowrap"
@@ -1540,73 +1246,78 @@ exports[`LedgerImportStep > should render with single import (xs) 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="no-ligatures css-qu17s6"
-      data-testid="TransactionDetail"
-    >
-      <div
-        class="flex w-full items-center justify-between space-x-4"
-      >
+      <div>
         <div
-          class="w-40 space-y-2 whitespace-nowrap sm:flex-1"
+          class="flex h-9 w-full flex-row items-center justify-between border-l-2 border-l-theme-primary-400 bg-theme-primary-100 px-3 dark:border-l-theme-primary-300 dark:bg-theme-secondary-800"
+          data-testid="SectionHeaderMobile__wrapper"
         >
-          <div
-            class="no-ligatures text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          <span
+            class="text-base font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           >
-            Wallet Name
-          </div>
-          <div
-            class="hidden items-center font-semibold sm:flex"
-          >
-            ARK Devnet #4
-          </div>
+            Address Name
+          </span>
         </div>
         <div
-          class="flex w-full items-center justify-end overflow-auto sm:w-auto"
+          class="flex flex-col gap-3 px-3 pt-3"
         >
           <div
-            class="flex w-full items-center justify-end overflow-auto pr-4 font-semibold sm:hidden"
+            class="flex w-full flex-row items-center justify-between text-sm font-semibold sm:justify-start sm:gap-3 sm:text-base"
+            data-testid="SectionBodyItem__wrapper"
           >
-            <div
-              class="w-full truncate"
+            <span
+              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:w-[90px]"
             >
-              ARK Devnet #4
-            </div>
-          </div>
-          <button
-            class="css-6419sw"
-            data-testid="LedgerImportStep__edit-alias"
-            type="button"
-          >
+              Name
+            </span>
             <div
-              class="flex items-center space-x-2"
+              class="text-theme-secondary-900 dark:text-theme-secondary-200 sm:w-full"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex flex-row items-center gap-2"
               >
-                <svg
-                  id="pencil"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                ARK Devnet #4
+                <hr
+                  class="h-5 w-px border-transparent bg-theme-secondary-300 dark:bg-theme-secondary-800"
+                />
+                <button
+                  class="!p-0 text-theme-primary-600 dark:text-theme-secondary-500 css-i9zlwr"
+                  data-testid="LedgerImportStep__edit-alias"
+                  type="button"
                 >
-                  <path
-                    d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="pencil"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                    <span>
+                      Edit
+                    </span>
+                  </div>
+                </button>
               </div>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
