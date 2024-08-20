@@ -41,7 +41,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					)}
 
 					<div className="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4">
-						{error && (<ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>)}
+						{error && <ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>}
 
 						<Button data-testid="ApplicationError__button--reload" onClick={() => window.location.reload()}>
 							{t("ERROR.APPLICATION.RELOAD")}
