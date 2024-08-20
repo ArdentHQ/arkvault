@@ -25,6 +25,7 @@ import Copy from "./copy.svg?react";
 import CopyKey from "./copy-key.svg?react";
 import Cross from "./cross.svg?react";
 import Download from "./download.svg?react";
+import DoubleCheckedCircle from "./double-circle.svg?react";
 import CrossSmall from "./cross-small.svg?react";
 import { Currencies } from "./currencies";
 import Dash from "./dash.svg?react";
@@ -128,6 +129,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Dashboard,
 	Delegate: TransactionIcons.DelegateRegistration,
 	DocumentView,
+	DoubleCheckedCircle,
 	Download,
 	EllipsisVertical,
 	EllipsisVerticalFilled,

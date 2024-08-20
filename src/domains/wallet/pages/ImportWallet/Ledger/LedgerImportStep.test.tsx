@@ -90,6 +90,10 @@ describe("LedgerImportStep", () => {
 	it.each(["xs", "lg"])("should render with single import (%s)", async (breakpoint) => {
 		const { container, onClickEditWalletName } = renderComponent(breakpoint, ledgerWallets.slice(1));
 
+		if (breakpoint === "xs") {
+			expect(screen.getByTestId("SingleImport__container-mobile")).toBeInTheDocument();
+		}
+
 		await userEvent.click(screen.getByTestId("LedgerImportStep__edit-alias"));
 
 		expect(onClickEditWalletName).toHaveBeenCalledTimes(1);
