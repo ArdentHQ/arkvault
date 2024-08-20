@@ -9,7 +9,11 @@ export const Offline = () => {
 	const { t } = useTranslation();
 
 	return (
-		<Page pageTitle={t("ERROR.OFFLINE.TITLE")} navbarVariant="logo-only" title={<Trans i18nKey="COMMON.APP_NAME" />}>
+		<Page
+			pageTitle={t("ERROR.OFFLINE.TITLE")}
+			navbarVariant="logo-only"
+			title={<Trans i18nKey="COMMON.APP_NAME" />}
+		>
 			<Section className="flex flex-1 flex-col justify-center !pt-0 text-center">
 				<div className="mx-auto flex w-full max-w-xs justify-center">
 					<Image name="ConnectionError" domain="error" />
