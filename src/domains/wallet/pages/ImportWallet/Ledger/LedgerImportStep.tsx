@@ -159,7 +159,7 @@ export const LedgerImportStep = ({
 				titleIcon={
 					<Icon
 						name="DoubleCheckedCircle"
-						className="text-theme-primary-100 dark:text-theme-primary-900"
+						className="text-theme-success-100 dark:text-theme-success-900"
 						dimensions={[22, 22]}
 					/>
 				}
