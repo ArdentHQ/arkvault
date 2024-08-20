@@ -185,7 +185,6 @@ describe("CreateProfile", () => {
 		expect(profile.name()).toBe("test profile 1");
 		expect(profile.settings().all()).toStrictEqual({
 			...baseSettings,
-			AVATAR: expect.stringMatching(BASE64_REGEX),
 			NAME: "test profile 1",
 		});
 		expect(profile.usesPassword()).toBe(false);
