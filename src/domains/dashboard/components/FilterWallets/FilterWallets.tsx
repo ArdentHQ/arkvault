@@ -22,7 +22,7 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 				<div className="font-semibold text-theme-secondary-text">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.TITLE")}
 				</div>
-				<div className="mt-1 text-sm text-theme-secondary-500 font-semibold">
+				<div className="mt-1 text-sm font-semibold text-theme-secondary-500">
 					{t("DASHBOARD.FILTER_WALLETS.CRYPTOASSET.DESCRIPTION")}
 				</div>
 			</div>
@@ -46,11 +46,11 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 							{t("DASHBOARD.FILTER_WALLETS.WALLETS.TITLE")}
 						</div>
 
-						<div className="mt-2 pr-12 text-sm text-theme-secondary-500 font-semibold">
+						<div className="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500">
 							{t("DASHBOARD.FILTER_WALLETS.WALLETS.DESCRIPTION")}
 						</div>
 					</div>
-				
+
 					<Dropdown
 						dropdownClass="mx-4 sm:mx-0"
 						toggleIcon="ChevronDownSmall"
@@ -74,8 +74,6 @@ export const FilterWallets = ({ networks, walletsDisplayType, onChange }: Filter
 						)}
 					/>
 				</div>
-
-	
 			</div>
 		</div>
 	);

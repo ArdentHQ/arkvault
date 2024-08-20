@@ -110,7 +110,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		return (
 			<Circle
 				size="lg"
-				className="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:bg-theme-secondary-800 dark:border-theme-secondary-600"
+				className="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800"
 			>
 				{rest}
 			</Circle>
@@ -146,7 +146,13 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
 		}
 
-		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-navy-600 dark:text-theme-primary-600" />;
+		return (
+			<StatusIcon
+				label={t("WALLETS.STATUS.ACTIVE")}
+				icon="CircleCheckMark"
+				color="text-theme-navy-600 dark:text-theme-primary-600"
+			/>
+		);
 	};
 
 	const renderWalletVotes = () => {
@@ -176,7 +182,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		!isLedgerWalletCompatible(wallet);
 
 	return (
-		<TableRow className="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative">
+		<TableRow className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
 			<TableCell
 				data-testid="AddressRow__wallet"
 				onClick={() => {

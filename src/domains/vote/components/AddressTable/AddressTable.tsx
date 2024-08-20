@@ -52,7 +52,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				},
 				cellWidth: "w-60",
 				className: maxVotes === 1 ? "ml-15" : "",
-				headerClassName: "no-border"
+				headerClassName: "no-border",
 			},
 		];
 
@@ -141,7 +141,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 		<Section>
 			<div data-testid="AddressTable" className="-mt-1 md:mt-2">
 				<Table
-					className="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border with-x-padding"
+					className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
 					columns={columns}
 					data={memoizedWallets}
 					hideHeader={isSm || isXs}

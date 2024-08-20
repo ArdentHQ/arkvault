@@ -37,11 +37,11 @@ export const VotingWallets = ({
 	return (
 		<>
 			<AddressTable
-					wallets={Object.values(walletsByCoin).flat()}
-					onSelect={onSelectAddress}
-					isCompact={isCompact}
-					profile={profile}
-				/>
+				wallets={Object.values(walletsByCoin).flat()}
+				onSelect={onSelectAddress}
+				isCompact={isCompact}
+				profile={profile}
+			/>
 		</>
 	);
 };

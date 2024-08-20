@@ -26,7 +26,17 @@ interface AddressRowMobileProperties {
 	onSelect?: (walletAddress: string, walletNetwork: string) => void;
 }
 
-const StatusIcon = ({ label, icon, color, size = "lg" }: { label: string; icon: string; color: string, size?: Size }) => (
+const StatusIcon = ({
+	label,
+	icon,
+	color,
+	size = "lg",
+}: {
+	label: string;
+	icon: string;
+	color: string;
+	size?: Size;
+}) => (
 	<Tooltip content={label}>
 		<span>
 			<Icon name={icon} className={color} size={size} data-testid="StatusIcon__icon" />
@@ -95,7 +105,7 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 			return (
 				<Circle
 					size="xs"
-					className="w-4 h-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+					className="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 					noShadow
 				/>
 			);
@@ -104,14 +114,30 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 		assertReadOnlyWallet(wallet);
 
 		if (wallet.isResignedDelegate()) {
-			return <StatusIcon size="md" label={t("WALLETS.STATUS.RESIGNED")} icon="CircleCross" color="text-theme-danger-400" />;
+			return (
+				<StatusIcon
+					size="md"
+					label={t("WALLETS.STATUS.RESIGNED")}
+					icon="CircleCross"
+					color="text-theme-danger-400"
+				/>
+			);
 		}
 
 		if (Number(wallet.rank()) > activeDelegates) {
-			return <StatusIcon size="md" label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
+			return (
+				<StatusIcon size="md" label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />
+			);
 		}
 
-		return <StatusIcon size="md" label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-primary-600" />;
+		return (
+			<StatusIcon
+				size="md"
+				label={t("WALLETS.STATUS.ACTIVE")}
+				icon="CircleCheckMark"
+				color="text-theme-primary-600"
+			/>
+		);
 	};
 
 	const renderWalletVotes = () => {
@@ -180,10 +206,10 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 
 					<div className="flex">
 						<div className="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black">
-							<span className="text-theme-secondary-500 font-semibold leading-[17px]">
+							<span className="font-semibold leading-[17px] text-theme-secondary-500">
 								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 							</span>
-							<div className="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]">
+							<div className="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]">
 								{renderWalletVotes()}
 
 								<Divider type="vertical" />
