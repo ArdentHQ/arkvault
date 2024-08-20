@@ -1,6 +1,6 @@
 import React from "react";
 import { FallbackProps } from "react-error-boundary";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
@@ -16,14 +16,14 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 
 	return (
 		<main className={theme} data-testid="Main">
-			<Page pageTitle={t("COMMON.ERROR")} navbarVariant="logo-only">
+			<Page pageTitle={t("COMMON.ERROR")} navbarVariant="logo-only" title={<Trans i18nKey="COMMON.APP_NAME" />}>
 				<Section className="flex flex-1 flex-col justify-center text-center">
 					<div className="mx-auto flex w-full max-w-xs justify-center">
 						<Image name="GenericError" domain="error" />
 					</div>
 
 					<div data-testid="ApplicationError__text" className="mt-8">
-						<h2 className="text-2xl font-bold">{t("ERROR.APPLICATION.TITLE")}</h2>
+						<h2 className="text-2xl font-bold capitalize">{t("ERROR.APPLICATION.TITLE")}</h2>
 						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.DESCRIPTION")}</p>
 						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>
 					</div>
