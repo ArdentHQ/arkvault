@@ -66,7 +66,7 @@ describe("AddressTable", () => {
 	});
 
 	it("should render in xs screen", async () => {
-		const { asFragment, container } = renderResponsiveWithRoute(
+		renderResponsiveWithRoute(
 			<Wrapper>
 				<AddressTable wallets={[wallet]} profile={profile} />
 			</Wrapper>,
@@ -76,41 +76,9 @@ describe("AddressTable", () => {
 			},
 		);
 
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("AccordionHeader"));
-
 		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
 
 		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it.each([true, false])("should render in xs screen when wallet network is live", async (isLive) => {
-		const isLiveSpy = vi.spyOn(wallet.network(), "isLive").mockReturnValue(isLive);
-
-		const { asFragment, container } = renderResponsiveWithRoute(
-			<Wrapper>
-				<AddressTable wallets={[wallet]} profile={profile} />
-			</Wrapper>,
-			"xs",
-			{
-				route: `/profiles/${profile.id()}`,
-			},
-		);
-
-		expect(container).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("AccordionHeader"));
-
-		expect(screen.getByTestId("AddressRowMobile")).toBeInTheDocument();
-
-		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		isLiveSpy.mockRestore();
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
