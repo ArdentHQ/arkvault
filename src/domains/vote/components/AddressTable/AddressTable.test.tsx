@@ -2,7 +2,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import userEvent from "@testing-library/user-event";
 import { AddressTable } from "@/domains/vote/components/AddressTable";
 import {
 	env,
