@@ -17,27 +17,29 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
-			<div className="flex w-full">
-				<DetailLabelText minWidth="sm">{t("COMMON.AMOUNT")}</DetailLabelText>
-				<AmountLabel isNegative={transaction.isSent()} value={transaction.amount()} ticker={senderWallet.currency()} />
-			</div>
+			<div className="space-y-3 sm:space-y-0">
+				<div className="flex w-full justify-between sm:justify-start">
+					<DetailLabelText minWidth="sm">{t("COMMON.AMOUNT")}</DetailLabelText>
+					<AmountLabel isNegative={transaction.isSent()} value={transaction.amount()} ticker={senderWallet.currency()} />
+				</div>
 
-			<div className="hidden h-8 w-full items-center sm:flex">
-				<Divider dashed />
-			</div>
+				<div className="hidden h-8 w-full items-center sm:flex">
+					<Divider dashed />
+				</div>
 
-			<div className="flex w-full">
-				<DetailLabelText minWidth="sm">{t("COMMON.FEE")}</DetailLabelText>
-				<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
-			</div>
+				<div className="flex w-full justify-between sm:justify-start">
+					<DetailLabelText minWidth="sm">{t("COMMON.FEE")}</DetailLabelText>
+					<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
+				</div>
 
-			<div className="hidden h-8 w-full items-center sm:flex">
-				<Divider dashed />
-			</div>
+				<div className="hidden h-8 w-full items-center sm:flex">
+					<Divider dashed />
+				</div>
 
-			<div className="flex w-full">
-				<DetailLabelText minWidth="sm">{t("COMMON.VALUE")}</DetailLabelText>
-				<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
+				<div className="flex w-full justify-between sm:justify-start">
+					<DetailLabelText minWidth="sm">{t("COMMON.VALUE")}</DetailLabelText>
+					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
+				</div>
 			</div>
 
 		</DetailWrapper>
