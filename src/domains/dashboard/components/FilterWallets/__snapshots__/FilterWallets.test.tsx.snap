@@ -7,7 +7,7 @@ exports[`FilterWallets > should render 1`] = `
     data-testid="FilterWallets"
   >
     <div
-      class="mb-5"
+      class="mb-6"
     >
       <div
         class="font-semibold text-theme-secondary-text"
@@ -15,16 +15,16 @@ exports[`FilterWallets > should render 1`] = `
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm text-theme-secondary-500"
+        class="mt-1 text-sm text-theme-secondary-500 font-semibold"
       >
         Select the networks to show.
       </div>
     </div>
     <div
-      class="space-y-4"
+      class="space-y-2"
     />
     <div
-      class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
     />
     <div
       class="flex flex-col"
@@ -32,10 +32,17 @@ exports[`FilterWallets > should render 1`] = `
       <div
         class="flex items-center justify-between"
       >
-        <div
-          class="font-semibold text-theme-secondary-text"
-        >
-          Your Wallets
+        <div>
+          <div
+            class="font-semibold text-theme-secondary-text"
+          >
+            Your Wallets
+          </div>
+          <div
+            class="mt-2 pr-12 text-sm text-theme-secondary-500 font-semibold"
+          >
+            Select which wallets to view.
+          </div>
         </div>
         <div
           class="static sm:relative"
@@ -77,11 +84,6 @@ exports[`FilterWallets > should render 1`] = `
           </span>
         </div>
       </div>
-      <div
-        class="mt-1 pr-12 text-sm text-theme-secondary-500"
-      >
-        Select which wallets to view.
-      </div>
     </div>
   </div>
 </div>
@@ -94,7 +96,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
     data-testid="FilterWallets"
   >
     <div
-      class="mb-5"
+      class="mb-6"
     >
       <div
         class="font-semibold text-theme-secondary-text"
@@ -102,19 +104,19 @@ exports[`FilterWallets > should render with networks selection 1`] = `
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm text-theme-secondary-500"
+        class="mt-1 text-sm text-theme-secondary-500 font-semibold"
       >
         Select the networks to show.
       </div>
     </div>
     <div
-      class="space-y-4"
+      class="space-y-2"
     >
       <div
         data-testid="FilterNetwork"
       >
         <div
-          class="mb-3 text-sm font-bold text-theme-secondary-400"
+          class="mb-3 text-sm font-semibold text-theme-secondary-700"
         >
           Development Networks
         </div>
@@ -123,7 +125,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
           data-testid="NetworkOptions"
         >
           <li
-            class="inline-block cursor-pointer pb-5 pr-5"
+            class="inline-block cursor-pointer pb-4 pr-4"
             data-testid="NetworkOption__ark.devnet"
           >
             <div
@@ -166,7 +168,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
       </div>
     </div>
     <div
-      class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+      class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
     />
     <div
       class="flex flex-col"
@@ -174,10 +176,17 @@ exports[`FilterWallets > should render with networks selection 1`] = `
       <div
         class="flex items-center justify-between"
       >
-        <div
-          class="font-semibold text-theme-secondary-text"
-        >
-          Your Wallets
+        <div>
+          <div
+            class="font-semibold text-theme-secondary-text"
+          >
+            Your Wallets
+          </div>
+          <div
+            class="mt-2 pr-12 text-sm text-theme-secondary-500 font-semibold"
+          >
+            Select which wallets to view.
+          </div>
         </div>
         <div
           class="static sm:relative"
@@ -218,11 +227,6 @@ exports[`FilterWallets > should render with networks selection 1`] = `
             </div>
           </span>
         </div>
-      </div>
-      <div
-        class="mt-1 pr-12 text-sm text-theme-secondary-500"
-      >
-        Select which wallets to view.
       </div>
     </div>
   </div>
