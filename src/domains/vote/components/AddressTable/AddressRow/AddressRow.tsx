@@ -99,23 +99,18 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 	}, [profileHasSyncedOnce, profileIsSyncingWallets, wallet]);
 
 	const hasVotes = votes.length > 0;
-	const [first, second, third, ...rest] = votes;
 
 	const renderRestOfVotes = (restOfVotes: number) => {
 		const rest = (
-			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-600">
+			<span className="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500">
 				+{restOfVotes}
 			</span>
 		);
 
-		if (useCompact) {
-			return <div className="pl-3">{rest}</div>;
-		}
-
 		return (
 			<Circle
 				size="lg"
-				className="relative border-theme-secondary-900 bg-theme-background dark:border-theme-secondary-600"
+				className="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:bg-theme-secondary-800 dark:border-theme-secondary-600"
 			>
 				{rest}
 			</Circle>
@@ -151,7 +146,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
 		}
 
-		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-success-600" />;
+		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-navy-600 dark:text-theme-primary-600" />;
 	};
 
 	const renderWalletVotes = () => {
@@ -159,31 +154,17 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 			return <span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>;
 		}
 
-		if (maxVotes === 1) {
-			return (
-				<div className="flex items-center space-x-3 overflow-hidden">
-					<Link
-						to={votes[0].wallet?.explorerLink() as string}
-						isExternal
-						className="block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
-					>
-						{votes[0].wallet?.username()}
-					</Link>
-				</div>
-			);
-		}
-
+		// @TODO handle multiple validators
 		return (
-			<div className={cn("flex items-center", useCompact ? "-space-x-1" : "-space-x-2")}>
-				<WalletAvatar wallet={first.wallet} />
-
-				{second && <WalletAvatar wallet={second.wallet} />}
-
-				{third && <WalletAvatar wallet={third.wallet} />}
-
-				{rest && rest.length === 1 && <WalletAvatar wallet={rest[0].wallet} />}
-
-				{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
+			<div className="flex items-center space-x-3 overflow-hidden">
+				{maxVotes > 1 && renderRestOfVotes(votes.length)}
+				<Link
+					to={votes[0].wallet?.explorerLink() as string}
+					isExternal
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+				>
+					{votes[0].wallet?.username()}
+				</Link>
 			</div>
 		);
 	};

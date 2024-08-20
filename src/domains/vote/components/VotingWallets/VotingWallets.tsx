@@ -36,18 +36,12 @@ export const VotingWallets = ({
 
 	return (
 		<>
-			{Object.keys(walletsByCoin).map(
-				(coin, index) =>
-					walletsByCoin[coin].length > 0 && (
-						<AddressTable
-							key={index}
-							wallets={walletsByCoin[coin]}
-							onSelect={onSelectAddress}
-							isCompact={isCompact}
-							profile={profile}
-						/>
-					),
-			)}
+			<AddressTable
+					wallets={Object.values(walletsByCoin).flat()}
+					onSelect={onSelectAddress}
+					isCompact={isCompact}
+					profile={profile}
+				/>
 		</>
 	);
 };
