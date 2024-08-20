@@ -357,6 +357,7 @@ export const translations = {
 	},
 	STATUS: "Status",
 	SUCCESS: {
+		CONFIRMED: "Transaction Confirmed",
 		CREATED: "Transaction Created",
 		DESCRIPTION:
 			"Your transaction has been sent successfully. Please monitor the blockchain to ensure your transaction is confirmed and processed. The following is relevant information for your transaction:",
@@ -368,10 +369,10 @@ export const translations = {
 	TIMESTAMP: "Timestamp",
 	TOTAL_AMOUNT: "Total Amount",
 	TRANSACTION: "Transaction",
-	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_AMOUNT: "Transaction Amount",
 	TRANSACTION_DETAILS: "Transaction Details",
 	TRANSACTION_FEE: "Transaction Fee",
+	TRANSACTION_ID: "Transaction ID",
 	TRANSACTION_REMOVED: "Transaction successfully removed",
 	TRANSACTION_SIGNED: "Transaction Signed",
 	TRANSACTION_TYPE: "Transaction Type",

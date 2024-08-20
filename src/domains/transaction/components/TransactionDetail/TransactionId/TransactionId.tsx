@@ -9,6 +9,7 @@ import { useResizeDetector } from "react-resize-detector";
 import { Clipboard } from "@/app/components/Clipboard";
 import { useTheme } from "@/app/hooks/use-theme";
 import { Icon } from "@/app/components/Icon";
+import { useLink } from "@/app/hooks/use-link";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData
@@ -19,6 +20,8 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { ref } = useResizeDetector<HTMLSpanElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
+	const { openExternal } = useLink()
+
 
 	return (
 		<div className="flex-row sm:flex items-center sm:rounded-lg sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800 sm:border">
@@ -50,7 +53,9 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					{isSmAndAbove && <Button icon="Copy" variant="secondary" size="icon" />}
 				</Clipboard>
 
-				<Button icon="External" variant="secondary" size="icon" disabled />
+				<Button icon="External" variant="secondary" size="icon" disabled={transaction.isConfirmed()} onClick={() => {
+					openExternal(transaction.explorerLink())
+				}} />
 			</div>
 		</div >
 	);

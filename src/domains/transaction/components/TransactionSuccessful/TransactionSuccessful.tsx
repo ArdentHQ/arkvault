@@ -30,11 +30,9 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const isTransactionConfirmed = false;
+	const isTransactionConfirmed = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
 	const { getValues } = useFormContext()
 	const { recipients } = getValues()
-	console.log({ recipients })
-	console.log({ isTransactionConfirmed })
 
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
@@ -49,7 +47,7 @@ export const TransactionSuccessful = ({
 		(isTransactionConfirmed ? t("TRANSACTION.SUCCESS.DESCRIPTION") : t("TRANSACTION.PENDING.DESCRIPTION"));
 
 	const titleText =
-		title ?? (isTransactionConfirmed ? t("TRANSACTION.SUCCESS.TITLE") : t("TRANSACTION.PENDING.TITLE"));
+		title ?? (isTransactionConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
 		<section
@@ -60,7 +58,7 @@ export const TransactionSuccessful = ({
 				titleIcon={
 					<Icon
 						dimensions={[24, 24]}
-						name="PendingTransaction"
+						name={isTransactionConfirmed ? "ConfirmTransaction" : "PendingTransaction"}
 						data-testid="icon-PendingTransaction"
 						className="text-theme-primary-600"
 					/>
