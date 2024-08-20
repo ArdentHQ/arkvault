@@ -25,7 +25,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					<div data-testid="ApplicationError__text" className="mt-8">
 						<h2 className="text-2xl font-bold capitalize">{t("ERROR.APPLICATION.TITLE")}</h2>
 						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.DESCRIPTION")}</p>
-						<p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>
+						{error && <p className="text-theme-secondary-text">{t("ERROR.APPLICATION.HELP_TEXT")}</p>}
 					</div>
 
 					{error && (
@@ -41,7 +41,7 @@ export const ApplicationError = ({ error }: Partial<FallbackProps>) => {
 					)}
 
 					<div className="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4">
-						<ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>
+						{error && (<ClipboardButton data={String(error?.message)}>{t("COMMON.COPY")}</ClipboardButton>)}
 
 						<Button data-testid="ApplicationError__button--reload" onClick={() => window.location.reload()}>
 							{t("ERROR.APPLICATION.RELOAD")}
