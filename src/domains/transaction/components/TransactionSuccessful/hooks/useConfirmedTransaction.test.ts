@@ -2,6 +2,7 @@ import { renderHook, waitFor } from "@testing-library/react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useConfirmedTransaction } from "./useConfirmedTransaction";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 
 describe("useConfirmedTransaction", () => {
 	let profile: Contracts.IProfile;
@@ -23,12 +24,14 @@ describe("useConfirmedTransaction", () => {
 				wallet: wallet,
 			}),
 		);
-
-		expect(result.current).toBe(false);
+		expect(result.current.isConfirmed).toBe(false);
 	});
 
 	it("should set isConfirmed to true when transaction is found", async () => {
-		vi.spyOn(wallet.coin().client(), "transaction").mockResolvedValue({ id: "123" });
+		vi.spyOn(wallet.coin().client(), "transaction").mockImplementation(async (id) => ({
+			confirmations: () => BigNumber.make(1),
+			id: () => "123"
+		}))
 
 		const { result } = renderHook(() =>
 			useConfirmedTransaction({
@@ -39,7 +42,7 @@ describe("useConfirmedTransaction", () => {
 
 		await waitFor(
 			() => {
-				expect(result.current).toBe(true);
+				expect(result.current.isConfirmed).toBe(true);
 			},
 			{ timeout: 5000 },
 		);
