@@ -287,6 +287,7 @@ export const translations = {
 	REFRESH: "Refresh",
 	REGISTER: "Register",
 	REGISTRATIONS: "Registrations",
+	RELOAD: "Reload",
 	REMOVE: "Remove",
 	RENAME: "Rename",
 	REPEAT: "Repeat",
