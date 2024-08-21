@@ -26,20 +26,10 @@ interface AddressRowMobileProperties {
 	onSelect?: (walletAddress: string, walletNetwork: string) => void;
 }
 
-const StatusIcon = ({
-	label,
-	icon,
-	color,
-	size = "lg",
-}: {
-	label: string;
-	icon: string;
-	color: string;
-	size?: Size;
-}) => (
+const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
 	<Tooltip content={label}>
 		<span>
-			<Icon name={icon} className={color} size={size} data-testid="StatusIcon__icon" />
+			<Icon name={icon} className={color} size="md" data-testid="StatusIcon__icon" />
 		</span>
 	</Tooltip>
 );
@@ -114,30 +104,14 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 		assertReadOnlyWallet(wallet);
 
 		if (wallet.isResignedDelegate()) {
-			return (
-				<StatusIcon
-					size="md"
-					label={t("WALLETS.STATUS.RESIGNED")}
-					icon="CircleCross"
-					color="text-theme-danger-400"
-				/>
-			);
+			return <StatusIcon label={t("WALLETS.STATUS.RESIGNED")} icon="CircleCross" color="text-theme-danger-400" />;
 		}
 
 		if (Number(wallet.rank()) > activeDelegates) {
-			return (
-				<StatusIcon size="md" label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />
-			);
+			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
 		}
 
-		return (
-			<StatusIcon
-				size="md"
-				label={t("WALLETS.STATUS.ACTIVE")}
-				icon="CircleCheckMark"
-				color="text-theme-primary-600"
-			/>
-		);
+		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-primary-600" />;
 	};
 
 	const renderWalletVotes = () => {
