@@ -13,7 +13,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients, profile }: Properties): ReactElement => {
+export const TransactionAddresses = ({ senderWallet, recipients = [], profile }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
