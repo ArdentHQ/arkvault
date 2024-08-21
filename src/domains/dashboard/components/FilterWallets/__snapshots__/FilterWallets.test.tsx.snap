@@ -15,7 +15,7 @@ exports[`FilterWallets > should render 1`] = `
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm text-theme-secondary-500 font-semibold"
+        class="mt-1 text-sm font-semibold text-theme-secondary-500"
       >
         Select the networks to show.
       </div>
@@ -39,7 +39,7 @@ exports[`FilterWallets > should render 1`] = `
             Your Wallets
           </div>
           <div
-            class="mt-2 pr-12 text-sm text-theme-secondary-500 font-semibold"
+            class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
           >
             Select which wallets to view.
           </div>
@@ -104,7 +104,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
         Filter Networks
       </div>
       <div
-        class="mt-1 text-sm text-theme-secondary-500 font-semibold"
+        class="mt-1 text-sm font-semibold text-theme-secondary-500"
       >
         Select the networks to show.
       </div>
@@ -183,7 +183,7 @@ exports[`FilterWallets > should render with networks selection 1`] = `
             Your Wallets
           </div>
           <div
-            class="mt-2 pr-12 text-sm text-theme-secondary-500 font-semibold"
+            class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
           >
             Select which wallets to view.
           </div>
