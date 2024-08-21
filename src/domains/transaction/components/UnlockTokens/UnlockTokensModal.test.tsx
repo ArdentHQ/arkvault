@@ -75,6 +75,7 @@ describe("UnlockTokensModal", () => {
 			explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
+			isConfirmed: () => true,
 			isMultiSignatureRegistration: () => false,
 			isUnlockToken: () => true,
 			sender: () => transactionFixture.data.sender,
@@ -82,7 +83,6 @@ describe("UnlockTokensModal", () => {
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
-			isConfirmed: () => true
 		} as any);
 	});
 
@@ -203,15 +203,15 @@ describe("UnlockTokensModal", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
-					accepted: [transactionFixture.data.id],
-					errors: {},
-					rejected: [],
-				}
+						accepted: [transactionFixture.data.id],
+						errors: {},
+						rejected: [],
+					}
 				: {
-					accepted: [],
-					errors: { error: "unable to unlock token" },
-					rejected: [transactionFixture.data.id],
-				},
+						accepted: [],
+						errors: { error: "unable to unlock token" },
+						rejected: [transactionFixture.data.id],
+					},
 		);
 
 		await waitFor(() => {
