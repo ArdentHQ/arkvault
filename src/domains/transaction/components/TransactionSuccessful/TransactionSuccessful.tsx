@@ -1,18 +1,22 @@
-import cn from "classnames"
+import cn from "classnames";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React, { Children } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
-import { TransactionAddresses, TransactionFee, TransactionType } from "@/domains/transaction/components/TransactionDetail";
+import {
+	TransactionAddresses,
+	TransactionFee,
+	TransactionType,
+} from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
 import { useFormContext } from "react-hook-form";
-import { DetailWrapper, DetailLabel } from "@/app/components/DetailWrapper";
+import { DetailLabel } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
-import { TransactionId } from "../TransactionDetail/TransactionId";
+import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;
@@ -23,16 +27,16 @@ interface TransactionSuccessfulProperties {
 }
 
 export const TransactionDetailPadded = ({ children }: { children: React.ReactNode }) => (
-	<div className="flex group">
-		<div className="sm:flex hidden sm:ml-3">
-			<div className="flex-row pr-3 min-w-9">
-				<div className="w-full h-6 border-l-2 border-b-2 rounded-bl-xl border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2" />
-				<div className="w-full h-[110%] border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800 group-last:hidden" />
+	<div className="group flex">
+		<div className="hidden sm:ml-3 sm:flex">
+			<div className="min-w-9 flex-row pr-3">
+				<div className="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800" />
+				<div className="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800" />
 			</div>
 		</div>
-		<div className="sm:flex-row w-full">{children}</div>
+		<div className="w-full sm:flex-row">{children}</div>
 	</div>
-)
+);
 
 export const TransactionSuccessful = ({
 	transaction,
@@ -42,9 +46,12 @@ export const TransactionSuccessful = ({
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
-	const { isConfirmed, confirmations } = useConfirmedTransaction({ transactionId: transaction.id(), wallet: senderWallet });
-	const { getValues } = useFormContext()
-	const { recipients } = getValues()
+	const { isConfirmed, confirmations } = useConfirmedTransaction({
+		transactionId: transaction.id(),
+		wallet: senderWallet,
+	});
+	const { getValues } = useFormContext();
+	const { recipients } = getValues();
 
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (
@@ -54,15 +61,12 @@ export const TransactionSuccessful = ({
 		);
 	}
 
-	const titleText =
-		title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
+	const titleText = title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
-		<section
-			data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}
-			className="space-y-8"
-		>
-			<StepHeader title={titleText}
+		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"} className="space-y-8">
+			<StepHeader
+				title={titleText}
 				titleIcon={
 					<Icon
 						dimensions={[24, 24]}
@@ -70,7 +74,7 @@ export const TransactionSuccessful = ({
 						data-testid="icon-PendingTransaction"
 						className={cn({
 							"text-theme-primary-600": !isConfirmed,
-							"text-theme-success-600": isConfirmed
+							"text-theme-success-600": isConfirmed,
 						})}
 					/>
 				}
@@ -79,7 +83,11 @@ export const TransactionSuccessful = ({
 			<TransactionId transaction={transaction} />
 
 			<TransactionDetailPadded>
-				<TransactionAddresses senderWallet={senderWallet} recipients={recipients} profile={senderWallet.profile()} />
+				<TransactionAddresses
+					senderWallet={senderWallet}
+					recipients={recipients}
+					profile={senderWallet.profile()}
+				/>
 			</TransactionDetailPadded>
 
 			<TransactionDetailPadded>

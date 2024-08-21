@@ -1,8 +1,6 @@
 import React, { ReactElement } from "react";
-import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount, AmountLabel } from "@/app/components/Amount";
@@ -20,7 +18,11 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText minWidth="sm">{t("COMMON.AMOUNT")}</DetailLabelText>
-					<AmountLabel isNegative={transaction.isSent()} value={transaction.amount()} ticker={senderWallet.currency()} />
+					<AmountLabel
+						isNegative={transaction.isSent()}
+						value={transaction.amount()}
+						ticker={senderWallet.currency()}
+					/>
 				</div>
 
 				<div className="hidden h-8 w-full items-center sm:flex">
@@ -41,7 +43,6 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
 				</div>
 			</div>
-
 		</DetailWrapper>
 	);
 };
