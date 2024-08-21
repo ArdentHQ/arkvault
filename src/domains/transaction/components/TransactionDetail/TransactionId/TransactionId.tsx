@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, RefObject } from "react";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
@@ -17,7 +17,7 @@ interface Properties {
 
 export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { ref } = useResizeDetector<HTMLSpanElement>({ handleHeight: false });
+	const { ref } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink()

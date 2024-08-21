@@ -359,7 +359,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<SummaryStep transaction={transaction!} senderWallet={wallet!} profile={activeProfile} />
+				<SummaryStep transaction={transaction!} senderWallet={wallet!} />
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>
