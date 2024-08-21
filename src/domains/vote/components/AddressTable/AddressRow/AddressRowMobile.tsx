@@ -17,7 +17,6 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import { ProfilePaths } from "@/router/paths";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { Size } from "@/types";
 
 interface AddressRowMobileProperties {
 	index: number;
