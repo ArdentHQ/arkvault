@@ -1,6 +1,6 @@
 import cn from "classnames"
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import React from "react";
+import React, { Children } from "react";
 import { useTranslation } from "react-i18next";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
@@ -21,6 +21,18 @@ interface TransactionSuccessfulProperties {
 	description?: string;
 	children?: React.ReactNode;
 }
+
+export const TransactionDetailPadded = ({ children }: { children: React.ReactNode }) => (
+	<div className="flex group">
+		<div className="sm:flex hidden sm:ml-3">
+			<div className="flex-row pr-3 min-w-9">
+				<div className="w-full h-6 border-l-2 border-b-2 rounded-bl-xl border-theme-secondary-300 dark:border-theme-secondary-800 -mt-2" />
+				<div className="w-full h-[110%] border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800 group-last:hidden" />
+			</div>
+		</div>
+		<div className="sm:flex-row w-full">{children}</div>
+	</div>
+)
 
 export const TransactionSuccessful = ({
 	transaction,
@@ -66,13 +78,17 @@ export const TransactionSuccessful = ({
 
 			<TransactionId transaction={transaction} />
 
-			<TransactionAddresses senderWallet={senderWallet} recipients={recipients} profile={senderWallet.profile()} />
+			<TransactionDetailPadded>
+				<TransactionAddresses senderWallet={senderWallet} recipients={recipients} profile={senderWallet.profile()} />
+			</TransactionDetailPadded>
 
-			<TransactionType type={transaction.type()} />
+			<TransactionDetailPadded>
+				<TransactionType type={transaction.type()} />
+			</TransactionDetailPadded>
 
 			{children}
 
-			<div>
+			<TransactionDetailPadded>
 				<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 				<div className="mt-2">
 					{!isConfirmed && (
@@ -106,7 +122,7 @@ export const TransactionSuccessful = ({
 						</div>
 					)}
 				</div>
-			</div>
+			</TransactionDetailPadded>
 		</section>
 	);
 };

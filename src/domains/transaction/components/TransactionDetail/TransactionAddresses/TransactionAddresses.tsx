@@ -32,6 +32,7 @@ export const TransactionAddresses = ({ senderWallet, recipients, profile }: Prop
 					walletName={alias}
 					walletNameClass="text-theme-text"
 					showCopyButton
+					wrapperClass="sm:w-3/4"
 				/>
 			</div>
 
@@ -48,6 +49,7 @@ export const TransactionAddresses = ({ senderWallet, recipients, profile }: Prop
 						walletName={recipient.alias}
 						walletNameClass="text-theme-text"
 						showCopyButton
+						wrapperClass="sm:w-3/4"
 					/>
 				</div>
 			))}
