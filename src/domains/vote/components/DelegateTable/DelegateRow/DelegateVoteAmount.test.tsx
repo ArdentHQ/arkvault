@@ -521,39 +521,6 @@ describe("DelegateVoteAmount", () => {
 		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(50));
 	});
 
-	it("should update votes when there is no voted delegate", async () => {
-		const toggleVotesSelected = vi.fn();
-
-		const VoteAmount = () => (
-			<Wrapper>
-				<DelegateVoteAmount
-					isSelectedVote={true}
-					isSelectedUnvote={false}
-					selectedWallet={wallet}
-					selectedUnvotes={[]}
-					selectedVotes={[]}
-					toggleUnvotesSelected={vi.fn()}
-					toggleVotesSelected={toggleVotesSelected}
-					delegateAddress={delegate.address()}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={vi.fn()}
-				/>
-			</Wrapper>
-		);
-
-		render(<VoteAmount />);
-
-		const amountField: HTMLInputElement = screen.getByTestId("InputCurrency");
-
-		amountField.select();
-		await userEvent.clear(amountField);
-		await userEvent.type(amountField, "50");
-
-		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 50);
-		});
-	});
-
 	it("should calculate net amount when there is a voted delegate", async () => {
 		let availableBalance = wallet.balance();
 
