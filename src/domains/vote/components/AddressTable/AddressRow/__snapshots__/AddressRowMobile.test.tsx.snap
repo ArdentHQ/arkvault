@@ -93,12 +93,12 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -304,12 +304,12 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -516,12 +516,12 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -728,12 +728,12 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -939,12 +939,12 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -1150,12 +1150,12 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -1352,12 +1352,12 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
@@ -1372,7 +1372,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                     type="vertical"
                   />
                   <div
-                    class="w-4 h-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
@@ -1485,12 +1485,12 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -1676,12 +1676,12 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
@@ -1696,7 +1696,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                     type="vertical"
                   />
                   <div
-                    class="w-4 h-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
@@ -1810,12 +1810,12 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
@@ -1826,7 +1826,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                     type="vertical"
                   />
                   <div
-                    class="w-4 h-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
+                    class="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
                   />
                 </div>
               </div>
@@ -1939,12 +1939,12 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -2150,12 +2150,12 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"
@@ -2361,12 +2361,12 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 class="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black"
               >
                 <span
-                  class="text-theme-secondary-500 font-semibold leading-[17px]"
+                  class="font-semibold leading-[17px] text-theme-secondary-500"
                 >
                   Voting for
                 </span>
                 <div
-                  class="flex flex-grow items-center space-x-3 mt-2 overflow-hidden leading-[17px]"
+                  class="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]"
                 >
                   <div
                     class="flex items-center"

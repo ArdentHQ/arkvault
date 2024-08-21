@@ -13,7 +13,7 @@ exports[`AddressTable > should render 1`] = `
         data-testid="AddressTable"
       >
         <div
-          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border with-x-padding css-1m6rt2i"
+          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
         >
           <table
@@ -232,7 +232,7 @@ exports[`AddressTable > should render 1`] = `
               role="rowgroup"
             >
               <tr
-                class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
@@ -470,7 +470,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
         data-testid="AddressTable"
       >
         <div
-          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border with-x-padding css-1m6rt2i"
+          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
         >
           <table
@@ -673,7 +673,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
               role="rowgroup"
             >
               <tr
-                class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
@@ -767,7 +767,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                       class="flex items-center space-x-3 overflow-hidden"
                     >
                       <div
-                        class="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:bg-theme-secondary-800 dark:border-theme-secondary-600 ring-theme-background duration-100 css-1nqcsx"
+                        class="relative !h-8 !w-8 border-theme-secondary-300 bg-theme-secondary-200 dark:border-theme-secondary-600 dark:bg-theme-secondary-800 ring-theme-background duration-100 css-1nqcsx"
                       >
                         <span
                           class="text-sm font-semibold text-theme-primary-700 dark:text-theme-secondary-500"
@@ -884,7 +884,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
         data-testid="AddressTable"
       >
         <div
-          class="overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border with-x-padding css-1m6rt2i"
+          class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
         >
           <table
@@ -1103,7 +1103,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
               role="rowgroup"
             >
               <tr
-                class="last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 relative css-16ynu5g"
+                class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                 data-testid="TableRow"
               >
                 <td
