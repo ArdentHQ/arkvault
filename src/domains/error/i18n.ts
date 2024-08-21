@@ -6,7 +6,7 @@ export const translations = {
 		TITLE: "Something went wrong",
 	},
 	OFFLINE: {
-		DESCRIPTION: "Check your internet connection if it doesn't work, check it again.",
-		TITLE: "Cannot Connect",
+		DESCRIPTION: "It looks like there may be a problem connecting to the Internet. Check your connection.",
+		TITLE: "Connectivity Issue",
 	},
 };

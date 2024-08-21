@@ -18,6 +18,7 @@ describe("ApplicationError", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).not.toHaveTextContent(translations.APPLICATION.HELP_TEXT);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -28,6 +29,8 @@ describe("ApplicationError", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
+		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.HELP_TEXT);
+		expect(screen.getByTestId("clipboard-button__wrapper")).toBeInTheDocument();
 
 		Object.defineProperty(window, "location", {
 			value: {
