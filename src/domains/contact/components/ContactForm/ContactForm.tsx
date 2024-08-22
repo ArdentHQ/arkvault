@@ -134,7 +134,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				/>
 			</FormField>
 
-			<SubForm className="!p-4 !-mx-4 !mt-4">
+			<SubForm className="!-mx-4 !mt-4 !p-4">
 				<FormField name="network">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
 					<SelectNetworkDropdown
@@ -175,7 +175,6 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 
 				{addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
 			</SubForm>
-
 
 			<div
 				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${

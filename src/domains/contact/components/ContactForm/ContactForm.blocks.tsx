@@ -8,6 +8,7 @@ import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useBreakpoint } from "@/app/hooks";
+import { networkDisplayName } from "@/utils/network-utils";
 
 const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemove }) => {
 	const { t } = useTranslation();
@@ -28,37 +29,41 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 	return (
 		<div
 			data-testid="contact-form__address-list-item"
-			className="flex items-center justify-between border bg-white sm:bg-transparent sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed border-theme-secondary-300 last:pb-0 mt-2 first:mt-0 sm:mt-0 dark:border-theme-secondary-800 sm:py-3"
+			className="mt-2 flex items-center justify-between overflow-hidden rounded border border-theme-secondary-300 bg-white first:mt-0 last:pb-0 dark:border-theme-secondary-800 dark:bg-black sm:mt-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed sm:bg-transparent sm:py-3 dark:sm:bg-transparent"
 		>
 			<div className="w-full min-w-0">
-				<div className="flex items-center justify-between bg-theme-secondary-100 sm:bg-transparent px-4 py-3 sm:p-0">
-					<div className="font-semibold text-theme-secondary-700 sm:mb-2 text-sm leading-[17px]">{network?.coin()}</div>
+				<div className="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent">
+					<div className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-2">
+						{networkDisplayName(network)}
+					</div>
 					<Button
 						data-testid="contact-form__remove-address-btn-sm"
 						size="icon"
-						className="sm:!hidden !p-0 text-theme-secondary-700"
+						className="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
 						variant="transparent"
 						onClick={() => onRemove()}
 					>
 						<Icon name="Trash" size="lg" />
 					</Button>
 				</div>
-				<div className="sm:p-0 px-4 pt-3 pb-4">
-					<div className="sm:hidden font-semibold text-theme-secondary-700 mb-2 text-sm leading-[17px]">
+				<div className="px-4 pb-4 pt-3 sm:p-0">
+					<div className="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden">
 						{t("COMMON.ADDRESS")}
 					</div>
 					<span className="flex-1 truncate font-semibold">
-						<Address address={address.address} addressClass="text-sm leading-[17px] sm:text-base sm:leading-[20px]"/>
+						<Address
+							address={address.address}
+							addressClass="text-sm leading-[17px] sm:text-base sm:leading-[20px]"
+						/>
 					</span>
 				</div>
-
 			</div>
 
 			<Button
 				data-testid="contact-form__remove-address-btn"
 				size="icon"
-				className="!p-3.5 bg-theme-danger-100 !hidden sm:!flex items-center"
-				variant={isXs ? "transparent" : "danger"}
+				className="!hidden items-center !p-3.5 sm:!flex"
+				variant="danger"
 				onClick={() => onRemove()}
 			>
 				<Icon name="Trash" />

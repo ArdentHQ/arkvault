@@ -4,7 +4,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
 import { Select, OptionProperties } from "@/app/components/SelectDropdown";
 import { networksAsOptions } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 interface SelectNetworkDropdownProperties {
 	networks?: Networks.Network[];
