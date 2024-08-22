@@ -51,9 +51,14 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 		return <tr />;
 	};
 
-	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => (
-		<tr {...headerGroup.getHeaderGroupProps()}>{headerGroup.headers.map(renderColumn)}</tr>
-	);
+	const renderHeaderGroup = (headerGroup: HeaderGroup<RowDataType>) => {
+		const { key, ...headerGroupProps } = headerGroup.getHeaderGroupProps();
+		return (
+			<tr key={key} {...headerGroupProps}>
+				{headerGroup.headers.map(renderColumn)}
+			</tr>
+		);
+	};
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
 		const thElementClassName = cn(
@@ -79,12 +84,10 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 			"rotate-180": (column.isSorted && !column.isSortedDesc) || (!column.isSorted && !column.sortDescFirst),
 		});
 
+		const { key, ...headerProps } = column.getHeaderProps(column.getSortByToggleProps());
+
 		return (
-			<th
-				className={thElementClassName}
-				data-testid={`table__th--${thIndex}`}
-				{...column.getHeaderProps(column.getSortByToggleProps())}
-			>
+			<th className={thElementClassName} data-testid={`table__th--${thIndex}`} key={key} {...headerProps}>
 				<div className={rootDivClassName}>
 					<div className={cn({ "whitespace-nowrap": column.noWrap })}>{column.render("Header")}</div>
 					{!column.hideSortArrow && column.canSort && (

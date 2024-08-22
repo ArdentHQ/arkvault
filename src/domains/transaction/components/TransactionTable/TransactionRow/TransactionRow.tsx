@@ -1,4 +1,3 @@
-import cn from "classnames";
 import React, { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -50,7 +49,7 @@ export const TransactionRow = memo(
 		}
 
 		return (
-			<TableRow onClick={onClick} className={cn("group", className)} {...properties}>
+			<TableRow onClick={onClick} className={className} {...properties}>
 				<TableCell variant="start" isCompact={isCompact}>
 					<Link
 						to={transaction.explorerLink()}

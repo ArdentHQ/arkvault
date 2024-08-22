@@ -23,7 +23,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
       data-testid="NetworkOptions"
     >
       <li
-        class="inline-block cursor-pointer pb-5 pr-5"
+        class="inline-block cursor-pointer pb-4 pr-4"
         data-testid="NetworkOption__ark.mainnet"
       >
         <div
@@ -63,7 +63,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
         </div>
       </li>
       <li
-        class="inline-block cursor-pointer pb-5 pr-5"
+        class="inline-block cursor-pointer pb-4 pr-4"
         data-testid="NetworkOption__ark.devnet"
       >
         <div
@@ -110,7 +110,7 @@ exports[`FilterNetwork > should render public networks 1`] = `
 exports[`FilterNetworks > should render empty 1`] = `
 <div>
   <div
-    class="space-y-4"
+    class="space-y-2"
   />
 </div>
 `;
@@ -118,13 +118,13 @@ exports[`FilterNetworks > should render empty 1`] = `
 exports[`FilterNetworks > should render public and testnet networks 1`] = `
 <div>
   <div
-    class="space-y-4"
+    class="space-y-2"
   >
     <div
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Public Networks
       </div>
@@ -133,7 +133,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -178,7 +178,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Development Networks
       </div>
@@ -187,7 +187,7 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.devnet"
         >
           <div
@@ -235,13 +235,13 @@ exports[`FilterNetworks > should render public and testnet networks 1`] = `
 exports[`FilterNetworks > should toggle a testnet network option 1`] = `
 <div>
   <div
-    class="space-y-4"
+    class="space-y-2"
   >
     <div
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Public Networks
       </div>
@@ -250,7 +250,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -318,7 +318,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Development Networks
       </div>
@@ -327,7 +327,7 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.devnet"
         >
           <div
@@ -375,13 +375,13 @@ exports[`FilterNetworks > should toggle a testnet network option 1`] = `
 exports[`FilterNetworks > should toggle view all 1`] = `
 <div>
   <div
-    class="space-y-4"
+    class="space-y-2"
   >
     <div
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Public Networks
       </div>
@@ -428,7 +428,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -468,7 +468,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
           </div>
         </li>
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -526,7 +526,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Development Networks
       </div>
@@ -573,7 +573,7 @@ exports[`FilterNetworks > should toggle view all 1`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.devnet"
         >
           <div
@@ -621,13 +621,13 @@ exports[`FilterNetworks > should toggle view all 1`] = `
 exports[`FilterNetworks > should toggle view all 2`] = `
 <div>
   <div
-    class="space-y-4"
+    class="space-y-2"
   >
     <div
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Public Networks
       </div>
@@ -674,7 +674,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -714,7 +714,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
           </div>
         </li>
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.mainnet"
         >
           <div
@@ -759,7 +759,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
       data-testid="FilterNetwork"
     >
       <div
-        class="mb-3 text-sm font-bold text-theme-secondary-400"
+        class="mb-3 text-sm font-semibold text-theme-secondary-700"
       >
         Development Networks
       </div>
@@ -806,7 +806,7 @@ exports[`FilterNetworks > should toggle view all 2`] = `
         data-testid="NetworkOptions"
       >
         <li
-          class="inline-block cursor-pointer pb-5 pr-5"
+          class="inline-block cursor-pointer pb-4 pr-4"
           data-testid="NetworkOption__ark.devnet"
         >
           <div
@@ -858,7 +858,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
     data-testid="NetworkOptions"
   >
     <li
-      class="inline-block cursor-pointer pb-5 pr-5"
+      class="inline-block cursor-pointer pb-4 pr-4"
       data-testid="NetworkOption__ark.mainnet"
     >
       <div
@@ -898,7 +898,7 @@ exports[`NetworkOptions > should render available networks options 1`] = `
       </div>
     </li>
     <li
-      class="inline-block cursor-pointer pb-5 pr-5"
+      class="inline-block cursor-pointer pb-4 pr-4"
       data-testid="NetworkOption__ark.devnet"
     >
       <div

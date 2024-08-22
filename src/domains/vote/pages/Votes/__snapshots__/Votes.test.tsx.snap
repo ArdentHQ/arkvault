@@ -10709,14 +10709,14 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full px-10 py-7 sm:w-96 md:w-128"
+                          class="w-full px-8 py-5 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
                             data-testid="FilterWallets"
                           >
                             <div
-                              class="mb-5"
+                              class="mb-6"
                             >
                               <div
                                 class="font-semibold text-theme-secondary-text"
@@ -10724,19 +10724,19 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                                 Filter Networks
                               </div>
                               <div
-                                class="mt-1 text-sm text-theme-secondary-500"
+                                class="mt-1 text-sm font-semibold text-theme-secondary-500"
                               >
                                 Select the networks to show.
                               </div>
                             </div>
                             <div
-                              class="space-y-4"
+                              class="space-y-2"
                             >
                               <div
                                 data-testid="FilterNetwork"
                               >
                                 <div
-                                  class="mb-3 text-sm font-bold text-theme-secondary-400"
+                                  class="mb-3 text-sm font-semibold text-theme-secondary-700"
                                 >
                                   Development Networks
                                 </div>
@@ -10745,7 +10745,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pb-5 pr-5"
+                                    class="inline-block cursor-pointer pb-4 pr-4"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -10811,7 +10811,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                               </div>
                             </div>
                             <div
-                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -10819,10 +10819,17 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                               <div
                                 class="flex items-center justify-between"
                               >
-                                <div
-                                  class="font-semibold text-theme-secondary-text"
-                                >
-                                  Your Wallets
+                                <div>
+                                  <div
+                                    class="font-semibold text-theme-secondary-text"
+                                  >
+                                    Your Wallets
+                                  </div>
+                                  <div
+                                    class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
+                                  >
+                                    Select which wallets to view.
+                                  </div>
                                 </div>
                                 <div
                                   class="static sm:relative"
@@ -10865,11 +10872,6 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                                     </div>
                                   </span>
                                 </div>
-                              </div>
-                              <div
-                                class="mt-1 pr-12 text-sm text-theme-secondary-500"
-                              >
-                                Select which wallets to view.
                               </div>
                             </div>
                           </div>
@@ -12119,14 +12121,14 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     >
                       <div>
                         <div
-                          class="w-full px-10 py-7 sm:w-96 md:w-128"
+                          class="w-full px-8 py-5 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
                             data-testid="FilterWallets"
                           >
                             <div
-                              class="mb-5"
+                              class="mb-6"
                             >
                               <div
                                 class="font-semibold text-theme-secondary-text"
@@ -12134,19 +12136,19 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                                 Filter Networks
                               </div>
                               <div
-                                class="mt-1 text-sm text-theme-secondary-500"
+                                class="mt-1 text-sm font-semibold text-theme-secondary-500"
                               >
                                 Select the networks to show.
                               </div>
                             </div>
                             <div
-                              class="space-y-4"
+                              class="space-y-2"
                             >
                               <div
                                 data-testid="FilterNetwork"
                               >
                                 <div
-                                  class="mb-3 text-sm font-bold text-theme-secondary-400"
+                                  class="mb-3 text-sm font-semibold text-theme-secondary-700"
                                 >
                                   Development Networks
                                 </div>
@@ -12155,7 +12157,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pb-5 pr-5"
+                                    class="inline-block cursor-pointer pb-4 pr-4"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -12221,7 +12223,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                               </div>
                             </div>
                             <div
-                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -12229,10 +12231,17 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                               <div
                                 class="flex items-center justify-between"
                               >
-                                <div
-                                  class="font-semibold text-theme-secondary-text"
-                                >
-                                  Your Wallets
+                                <div>
+                                  <div
+                                    class="font-semibold text-theme-secondary-text"
+                                  >
+                                    Your Wallets
+                                  </div>
+                                  <div
+                                    class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
+                                  >
+                                    Select which wallets to view.
+                                  </div>
                                 </div>
                                 <div
                                   class="static sm:relative"
@@ -12275,11 +12284,6 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                                     </div>
                                   </span>
                                 </div>
-                              </div>
-                              <div
-                                class="mt-1 pr-12 text-sm text-theme-secondary-500"
-                              >
-                                Select which wallets to view.
                               </div>
                             </div>
                           </div>
@@ -13522,14 +13526,14 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     >
                       <div>
                         <div
-                          class="w-full px-10 py-7 sm:w-96 md:w-128"
+                          class="w-full px-8 py-5 sm:w-96 md:w-128"
                         >
                           <div
                             class="flex flex-col text-left"
                             data-testid="FilterWallets"
                           >
                             <div
-                              class="mb-5"
+                              class="mb-6"
                             >
                               <div
                                 class="font-semibold text-theme-secondary-text"
@@ -13537,19 +13541,19 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                 Filter Networks
                               </div>
                               <div
-                                class="mt-1 text-sm text-theme-secondary-500"
+                                class="mt-1 text-sm font-semibold text-theme-secondary-500"
                               >
                                 Select the networks to show.
                               </div>
                             </div>
                             <div
-                              class="space-y-4"
+                              class="space-y-2"
                             >
                               <div
                                 data-testid="FilterNetwork"
                               >
                                 <div
-                                  class="mb-3 text-sm font-bold text-theme-secondary-400"
+                                  class="mb-3 text-sm font-semibold text-theme-secondary-700"
                                 >
                                   Development Networks
                                 </div>
@@ -13558,7 +13562,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                   data-testid="NetworkOptions"
                                 >
                                   <li
-                                    class="inline-block cursor-pointer pb-5 pr-5"
+                                    class="inline-block cursor-pointer pb-4 pr-4"
                                     data-testid="NetworkOption__ark.devnet"
                                   >
                                     <div
@@ -13624,7 +13628,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               </div>
                             </div>
                             <div
-                              class="mb-8 mt-6 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
+                              class="mb-6 mt-2 border-t border-dotted border-theme-secondary-300 dark:border-theme-secondary-800"
                             />
                             <div
                               class="flex flex-col"
@@ -13632,10 +13636,17 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                               <div
                                 class="flex items-center justify-between"
                               >
-                                <div
-                                  class="font-semibold text-theme-secondary-text"
-                                >
-                                  Your Wallets
+                                <div>
+                                  <div
+                                    class="font-semibold text-theme-secondary-text"
+                                  >
+                                    Your Wallets
+                                  </div>
+                                  <div
+                                    class="mt-2 pr-12 text-sm font-semibold text-theme-secondary-500"
+                                  >
+                                    Select which wallets to view.
+                                  </div>
                                 </div>
                                 <div
                                   class="static sm:relative"
@@ -13679,11 +13690,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                                   </span>
                                 </div>
                               </div>
-                              <div
-                                class="mt-1 pr-12 text-sm text-theme-secondary-500"
-                              >
-                                Select which wallets to view.
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -13703,54 +13709,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           class="mx-auto px-10 lg:container"
         >
           <div
+            class="-mt-1 md:mt-2"
             data-testid="AddressTable"
           >
             <div
-              class="flex items-center space-x-4 py-5"
-            >
-              <div
-                aria-label="ARK Devnet"
-                class="text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background duration-100 css-1nqcsx"
-                data-testid="NetworkIcon-ARK-ark.devnet"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  data-testid="NetworkIcon__icon"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="ark"
-                    viewBox="0 0 36.3 30.6"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="flex space-x-2"
-              >
-                <h2
-                  class="mb-0 text-lg font-bold"
-                >
-                  ARK Devnet
-                </h2>
-                <span
-                  class="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700"
-                >
-                  3
-                </span>
-              </div>
-            </div>
-            <div
-              class="css-1m6rt2i"
+              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -13762,7 +13725,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     role="row"
                   >
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-80 min-w-80"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-80 min-w-80"
                       colspan="1"
                       data-testid="table__th--0"
                       role="columnheader"
@@ -13775,7 +13738,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         <div
                           class=""
                         >
-                          My Address
+                          Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -13808,25 +13771,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden md:table-cell w-30 min-w-30"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border w-60 min-w-60"
                       colspan="1"
                       data-testid="table__th--1"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div
-                          class=""
-                        >
-                          Wallet Type
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell w-60 min-w-60"
-                      colspan="1"
-                      data-testid="table__th--2"
                       role="columnheader"
                       style="cursor: pointer;"
                       title="Toggle SortBy"
@@ -13870,9 +13817,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-60 min-w-60"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-60 min-w-60"
                       colspan="1"
-                      data-testid="table__th--3"
+                      data-testid="table__th--2"
                       role="columnheader"
                       style="cursor: pointer;"
                       title="Toggle SortBy"
@@ -13883,7 +13830,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         <div
                           class=""
                         >
-                          Delegate
+                          Validated
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -13916,9 +13863,9 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-20 min-w-20"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-20 min-w-20"
                       colspan="1"
-                      data-testid="table__th--4"
+                      data-testid="table__th--3"
                       role="columnheader"
                     >
                       <div
@@ -13932,7 +13879,23 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-20 min-w-20"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-20 min-w-20"
+                      colspan="1"
+                      data-testid="table__th--4"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top justify-center"
+                      >
+                        <div
+                          class=""
+                        >
+                          Status
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-30 min-w-30"
                       colspan="1"
                       data-testid="table__th--5"
                       role="columnheader"
@@ -13943,7 +13906,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         <div
                           class=""
                         >
-                          Status
+                          Info
                         </div>
                       </div>
                     </th>
@@ -13969,29 +13932,15 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+                        class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
                       >
-                        <div
-                          class="shrink-0 shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(205, 220, 57)" width="100" height="100"/><circle r="60" cx="100" cy="50" fill="rgb(244, 67, 54)"/><circle r="45" cx="20" cy="40" fill="rgb(3, 169, 244)"/><circle r="35" cx="30" cy="60" fill="rgb(33, 150, 243)"/></svg>"
-                              title="DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z"
-                            />
-                          </div>
-                        </div>
                         <div
                           class="w-40 flex-1"
                         >
@@ -14004,22 +13953,51 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             >
                               DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
                             </span>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  id="copy"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </td>
                     <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="justify-center space-x-2 css-12appi5"
-                      />
-                    </td>
-                    <td
                       class="hidden xl:table-cell"
                     >
                       <div
-                        class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
+                        class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -14031,11 +14009,8 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     </td>
                     <td>
                       <div
-                        class="font-bold space-x-3 css-12appi5"
+                        class="font-semibold space-x-3 css-12appi5"
                       >
-                        <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
-                        />
                         <span
                           class="text-theme-secondary-400"
                         >
@@ -14047,7 +14022,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="hidden lg:table-cell"
                     >
                       <div
-                        class="justify-center font-bold text-theme-secondary-text css-12appi5"
+                        class="justify-center font-semibold text-theme-secondary-text css-12appi5"
                       />
                     </td>
                     <td>
@@ -14055,9 +14030,18 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="justify-center css-12appi5"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="hidden lg:table-cell"
+                    >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="justify-center space-x-2 css-12appi5"
+                      />
+                    </td>
+                    <td
+                      class="pr-6"
+                    >
+                      <div
+                        class="justify-end !pr-0 css-t4jv3s"
                       >
                         <div>
                           <button
@@ -14077,29 +14061,15 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+                        class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
                       >
-                        <div
-                          class="shrink-0 shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                            />
-                          </div>
-                        </div>
                         <div
                           class="w-40 flex-1"
                         >
@@ -14123,22 +14093,51 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
                             </span>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  id="copy"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </td>
                     <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="justify-center space-x-2 css-12appi5"
-                      />
-                    </td>
-                    <td
                       class="hidden xl:table-cell"
                     >
                       <div
-                        class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
+                        class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -14150,11 +14149,8 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     </td>
                     <td>
                       <div
-                        class="font-bold space-x-3 css-12appi5"
+                        class="font-semibold space-x-3 css-12appi5"
                       >
-                        <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
-                        />
                         <span
                           class="text-theme-secondary-400"
                         >
@@ -14166,7 +14162,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="hidden lg:table-cell"
                     >
                       <div
-                        class="justify-center font-bold text-theme-secondary-text css-12appi5"
+                        class="justify-center font-semibold text-theme-secondary-text css-12appi5"
                       />
                     </td>
                     <td>
@@ -14174,9 +14170,18 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="justify-center css-12appi5"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="hidden lg:table-cell"
+                    >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="justify-center space-x-2 css-12appi5"
+                      />
+                    </td>
+                    <td
+                      class="pr-6"
+                    >
+                      <div
+                        class="justify-end !pr-0 css-t4jv3s"
                       >
                         <div>
                           <button
@@ -14195,29 +14200,15 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="font-bold cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+                        class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
                       >
-                        <div
-                          class="shrink-0 shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="20" cy="50" fill="rgb(205, 220, 57)"/><circle r="60" cx="0" cy="70" fill="rgb(0, 188, 212)"/><circle r="55" cx="80" cy="30" fill="rgb(76, 175, 80)"/></svg>"
-                              title="D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb"
-                            />
-                          </div>
-                        </div>
                         <div
                           class="w-40 flex-1"
                         >
@@ -14241,22 +14232,51 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             >
                               D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
                             </span>
+                            <button
+                              class="ring-focus relative focus:outline-none"
+                              data-ring-focus-margin="-m-1"
+                              data-testid="clipboard-icon__wrapper"
+                              type="button"
+                            >
+                              <div
+                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                height="16"
+                                width="16"
+                              >
+                                <svg
+                                  id="copy"
+                                  viewBox="0 0 20 20"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <g
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  >
+                                    <path
+                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                    />
+                                    <path
+                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                    />
+                                  </g>
+                                </svg>
+                              </div>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </td>
                     <td
-                      class="hidden md:table-cell"
-                    >
-                      <div
-                        class="justify-center space-x-2 css-12appi5"
-                      />
-                    </td>
-                    <td
                       class="hidden xl:table-cell"
                     >
                       <div
-                        class="justify-end font-bold text-theme-secondary-text whitespace-nowrap css-12appi5"
+                        class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -14268,11 +14288,8 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     </td>
                     <td>
                       <div
-                        class="font-bold space-x-3 css-12appi5"
+                        class="font-semibold space-x-3 css-12appi5"
                       >
-                        <div
-                          class="border-theme-secondary-300 dark:border-theme-secondary-800 ring-theme-background duration-100 css-168czqh"
-                        />
                         <span
                           class="text-theme-secondary-400"
                         >
@@ -14284,7 +14301,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="hidden lg:table-cell"
                     >
                       <div
-                        class="justify-center font-bold text-theme-secondary-text css-12appi5"
+                        class="justify-center font-semibold text-theme-secondary-text css-12appi5"
                       />
                     </td>
                     <td>
@@ -14292,9 +14309,18 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                         class="justify-center css-12appi5"
                       />
                     </td>
-                    <td>
+                    <td
+                      class="hidden lg:table-cell"
+                    >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="justify-center space-x-2 css-12appi5"
+                      />
+                    </td>
+                    <td
+                      class="pr-6"
+                    >
+                      <div
+                        class="justify-end !pr-0 css-t4jv3s"
                       >
                         <div>
                           <button
