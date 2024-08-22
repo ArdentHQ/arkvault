@@ -68,7 +68,7 @@ const getVariant = (
 			return tw`disabled:(text-theme-secondary-400 dark:text-theme-secondary-700)`;
 		}
 
-		if (variant === "danger-icon" && isCompact) {
+		if (variant === "secondary-icon" && isCompact) {
 			return tw`disabled:(bg-none text-theme-secondary-400 dark:text-theme-secondary-700)`;
 		}
 
@@ -105,29 +105,6 @@ const getVariant = (
 				bg-theme-danger-100 text-theme-danger-400
 				dark:(bg-theme-danger-400 text-white)
 				hover:(bg-theme-danger-400 text-white dark:bg-theme-danger-500)
-				focus:ring-theme-danger-300
-			`,
-			);
-		},
-		"danger-icon": (breakpoint?: LayoutBreakpoint) => {
-			const responsive: {
-				[key in LayoutBreakpoint]?: TwStyle;
-			} = {
-				md: tw`
-					md:text-theme-danger-400 md:bg-transparent
-					md:dark:(text-theme-danger-400 bg-transparent)
-					md:hover:(text-theme-danger-500 bg-transparent dark:text-theme-danger-500 dark:bg-transparent)
-					md:focus:ring-theme-danger-300
-				`,
-			};
-
-			return getResponsiveVariant(
-				responsive,
-				breakpoint,
-				tw`
-				text-theme-danger-400 bg-transparent
-				dark:(text-theme-danger-400 bg-transparent)
-				hover:(text-theme-danger-500 bg-transparent)
 				focus:ring-theme-danger-300
 			`,
 			);
@@ -195,6 +172,8 @@ const getVariant = (
 				`,
 			);
 		},
+		"secondary-icon": () => tw`text-theme-secondary-700 bg-transparent
+				dark:(text-theme-secondary-600 bg-transparent)`,
 		warning: () => tw`
 			bg-theme-warning-100 text-theme-warning-700
 			dark:(bg-theme-warning-600 text-white)
