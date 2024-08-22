@@ -28,13 +28,6 @@ export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNe
 				renderLabel={(properties) => <NetworkOptionLabel network={findById(properties.value)} />}
 				onChange={(option?: OptionProperties) => onChange?.(findById(option?.value))}
 				ref={reference}
-				addons={{
-					start: {
-						content: selectedNetwork && (
-							<NetworkIcon network={selectedNetwork} showTooltip={false} isCompact />
-						),
-					},
-				}}
 			/>
 		);
 	},
