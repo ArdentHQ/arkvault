@@ -25,7 +25,7 @@ export type ButtonVariant =
 	| "transparent"
 	| "info"
 	| "reverse"
-	| "danger-icon";
+	| "secondary-icon";
 
 export type ResponsiveButtonVariant = {
 	[key in LayoutBreakpoint]?: ButtonVariant;
