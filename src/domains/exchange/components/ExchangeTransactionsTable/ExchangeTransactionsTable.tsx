@@ -117,7 +117,7 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 	return (
 		<div data-testid="ExchangeTransactionsTable">
 			<TableWrapper>
-				<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive}>
+				<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive} className="with-x-padding">
 					{renderTableRow}
 				</Table>
 			</TableWrapper>

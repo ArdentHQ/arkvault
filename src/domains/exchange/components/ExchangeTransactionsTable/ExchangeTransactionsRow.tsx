@@ -131,7 +131,7 @@ export const ExchangeTransactionsRow = ({
 	};
 
 	return (
-		<TableRow>
+		<TableRow className="relative">
 			<TableCell variant="start" isCompact={isCompact}>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
