@@ -106,7 +106,7 @@ const ExchangeStatus = ({ exchangeTransaction }: { exchangeTransaction: Contract
 		);
 	}
 
-	const status = exchangeTransaction.status();
+	const status = 2
 
 	return (
 		<div className="items-top my-6 flex justify-center px-10 sm:px-20">

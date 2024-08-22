@@ -11,16 +11,19 @@ import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { delay } from "@/utils/delay";
+import { useActiveProfile } from "@/app/hooks";
 
 interface StatusStepProperties {
 	exchangeTransaction: Contracts.IExchangeTransaction;
 	onUpdate: (orderId: string, parameters: any) => void;
 }
 
-export const StatusStep = ({ exchangeTransaction, onUpdate }: StatusStepProperties) => {
+export const StatusStep = ({ exchangeTransaction: transaction, onUpdate }: StatusStepProperties) => {
 	const { t } = useTranslation();
 
 	const { provider: exchangeProvider } = useExchangeContext();
+	const profile = useActiveProfile()
+	const exchangeTransaction = transaction ?? profile.exchangeTransactions().values().at(0)
 
 	const { checkOrderStatus, prepareParameters } = useOrderStatus();
 

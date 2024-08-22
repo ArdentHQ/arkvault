@@ -33,7 +33,6 @@ enum Step {
 	StatusStep,
 	ConfirmationStep,
 }
-
 const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => void }) => {
 	const { t } = useTranslation();
 
@@ -48,9 +47,58 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 	assertExchangeService(exchangeService);
 
 	const [exchangeTransaction, setExchangeTransaction] = useState<Contracts.IExchangeTransaction | undefined>();
-	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
+	const [activeTab, setActiveTab] = useState<Step>(Step.ReviewStep);
 
-	const form = useForm<ExchangeFormState>({ mode: "onChange" });
+	const form = useForm<ExchangeFormState>({
+		defaultValues: {
+			"currencies": [
+				{
+					"coin": "ark",
+					"name": "Ark",
+					"image": "https://content-api.changenow.io/uploads/ark_fd200b9b4a.svg"
+				},
+				{
+					"coin": "btc",
+					"name": "Bitcoin",
+					"image": "https://content-api.changenow.io/uploads/btc_1_527dc9ec3c.svg"
+				},
+			],
+			"payinAmount": 176528.6332576,
+			"payoutAmount": 0.9052558,
+			"recipientWallet": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+			"fromCurrency": {
+				"coin": "ark",
+				"name": "Ark",
+				"image": "https://content-api.changenow.io/uploads/ark_fd200b9b4a.svg",
+				"warnings": {
+					"to": "",
+					"from": ""
+				},
+				"hasExternalId": false,
+				"externalIdName": null,
+				"addressExplorerMask": "https://explorer.ark.io/wallets/{}",
+				"transactionExplorerMask": "https://explorer.ark.io/transaction/{}"
+			},
+			"toCurrency": {
+				"coin": "btc",
+				"name": "Bitcoin",
+				"image": "https://content-api.changenow.io/uploads/btc_1_527dc9ec3c.svg",
+				"warnings": {
+					"to": "",
+					"from": ""
+				},
+				"hasExternalId": false,
+				"externalIdName": null,
+				"addressExplorerMask": "https://blockchair.com/bitcoin/address/{}",
+				"transactionExplorerMask": "https://blockchair.com/bitcoin/transaction/{}"
+			},
+			"minPayinAmount": 18.9372322,
+			"minPayoutAmount": 0.000105,
+			"exchangeRate": "0.00000513",
+			"estimatedTime": "10-60"
+		},
+		mode: "onChange",
+	});
 
 	const { clearErrors, formState, getValues, handleSubmit, register, trigger, setValue, watch } = form;
 	const { isDirty, isSubmitting, isValid } = formState;
