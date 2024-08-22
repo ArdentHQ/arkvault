@@ -49,7 +49,7 @@ export const FilterNetwork = ({
 
 	return (
 		<div className={className} data-testid="FilterNetwork">
-			{title && <div className="mb-3 text-sm font-bold text-theme-secondary-400">{title}</div>}
+			{title && <div className="mb-3 text-sm font-semibold text-theme-secondary-700">{title}</div>}
 
 			<ToggleAllOption isSelected={showAll} isHidden={hideViewAll} onClick={handleToggleAll} />
 
@@ -90,7 +90,7 @@ export const FilterNetworks = ({ options = [], ...properties }: FilterNetworksPr
 	}, [options]);
 
 	return (
-		<div className="space-y-4">
+		<div className="space-y-2">
 			{liveNetworks.length > 0 && (
 				<FilterNetwork
 					{...properties}
