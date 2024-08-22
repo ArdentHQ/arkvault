@@ -1705,14 +1705,14 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-z5g6dp"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 400,000 DARK
@@ -1928,14 +1928,14 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-z5g6dp"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 400,000 DARK
@@ -2151,14 +2151,14 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-z5g6dp"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 50,000 DARK
@@ -2374,14 +2374,14 @@ exports[`Dashboard > should render 1`] = `
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-z5g6dp"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 50,000 DARK

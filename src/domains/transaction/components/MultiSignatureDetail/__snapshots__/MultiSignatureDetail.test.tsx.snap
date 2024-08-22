@@ -206,14 +206,14 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK
@@ -790,14 +790,14 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK
@@ -1374,14 +1374,14 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK
@@ -1932,14 +1932,14 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK
@@ -3449,14 +3449,14 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK
@@ -4841,14 +4841,14 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-jp7m6o"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 1 DARK

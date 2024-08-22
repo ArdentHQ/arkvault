@@ -18,7 +18,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -63,14 +63,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -87,14 +87,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -163,7 +163,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -224,7 +224,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -269,14 +269,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -293,14 +293,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -360,7 +360,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -421,7 +421,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -466,14 +466,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -490,14 +490,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -557,7 +557,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -618,7 +618,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -663,14 +663,14 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -687,14 +687,14 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded pr-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -728,7 +728,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -751,7 +751,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 New
               </span>
               <div
-                class="text-theme-secondary-500 dark:text-theme-secondary-700 css-1i4b0eq"
+                class="text-theme-warning-300 css-1i4b0eq"
                 height="20"
                 width="20"
               >
@@ -789,7 +789,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -850,7 +850,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -895,14 +895,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -919,14 +919,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -991,7 +991,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1052,7 +1052,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
             <div
               class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
             >
-              ID
+              Tx ID
             </div>
             <button
               class="link font-semibold"
@@ -1097,14 +1097,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               From
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1vfji1i"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -1121,14 +1121,14 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               To
             </div>
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-1lmplf5"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -1193,7 +1193,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1252,7 +1252,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
         <div
           class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
         >
-          ID
+          Tx ID
         </div>
         <span
           class="text-theme-secondary-700 dark:text-theme-secondary-200"
@@ -1291,14 +1291,14 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
           From
         </div>
         <div
-          class="css-148b4hi"
-          color="danger"
+          class="rounded px-1.5 css-1vfji1i"
+          color="danger-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               - 1 BTC
@@ -1315,14 +1315,14 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
           To
         </div>
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-1lmplf5"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 100 ARK
@@ -1382,7 +1382,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+          class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
           data-testid="TableRemoveButton"
           type="button"
         >
@@ -1439,7 +1439,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
         <div
           class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
         >
-          ID
+          Tx ID
         </div>
         <button
           class="link font-semibold"
@@ -1486,14 +1486,14 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           From
         </div>
         <div
-          class="css-148b4hi"
-          color="danger"
+          class="rounded px-1.5 css-1vfji1i"
+          color="danger-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               - 1 BTC
@@ -1510,14 +1510,14 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           To
         </div>
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-1lmplf5"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 100 ARK
@@ -1577,7 +1577,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+          class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
           data-testid="TableRemoveButton"
           type="button"
         >
