@@ -9,6 +9,7 @@ import { ExchangeTransactionsTableProperties } from "./ExchangeTransactionsTable
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> = ({
 	exchangeTransactions,
@@ -37,30 +38,37 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 	const columns = useMemo<Column<Contracts.IExchangeTransaction>[]>(
 		() => [
 			{
-				Header: t("COMMON.ID"),
-				minimumWidth: true,
+				Header: t("COMMON.TX_ID"),
+				className: "w-20",
+				headerClassName: "no-border",
+			},
+			{
+				Header: t("COMMON.AGE"),
+				accessor: "createdAt",
+				headerClassName: "hidden lg:table-cell no-border",
 			},
 			{
 				Header: t("COMMON.EXCHANGE"),
 				accessor: "provider",
-			},
-			{
-				Header: t("COMMON.DATE"),
-				accessor: "createdAt",
-				headerClassName: "hidden lg:table-cell",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.FROM"),
 				accessor: (exchangeTransaction) => exchangeTransaction.input().ticker,
+				className: "justify-end",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.TO"),
 				accessor: (exchangeTransaction) => exchangeTransaction.output().ticker,
+				className: "justify-end",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.STATUS"),
 				cellWidth: "w-24",
 				className: "justify-center",
+				headerClassName: "no-border",
 			},
 			{
 				Header: "Actions",
@@ -108,9 +116,11 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 
 	return (
 		<div data-testid="ExchangeTransactionsTable">
-			<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive}>
-				{renderTableRow}
-			</Table>
+			<TableWrapper>
+				<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive}>
+					{renderTableRow}
+				</Table>
+			</TableWrapper>
 		</div>
 	);
 };
