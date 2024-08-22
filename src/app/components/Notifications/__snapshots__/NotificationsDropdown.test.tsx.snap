@@ -273,14 +273,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -383,14 +383,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -493,14 +493,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -726,14 +726,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="css-148b4hi"
-                      color="danger"
+                      class="rounded px-1.5 css-jp7m6o"
+                      color="danger-bg"
                     >
                       <div
                         class="flex space-x-1 items-stretch"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
                           - 1 DARK
@@ -1318,14 +1318,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -1428,14 +1428,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -1538,14 +1538,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -1844,14 +1844,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -1954,14 +1954,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -2064,14 +2064,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -2344,14 +2344,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -2420,14 +2420,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -2496,14 +2496,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -2802,14 +2802,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -2912,14 +2912,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -3022,14 +3022,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                   class="justify-end css-t4jv3s"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -3309,14 +3309,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-jp7m6o"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -3385,14 +3385,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -3461,14 +3461,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-2etg0c"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK

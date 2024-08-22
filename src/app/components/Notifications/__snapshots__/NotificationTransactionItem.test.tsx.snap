@@ -62,14 +62,14 @@ exports[`Notifications > should render in xs 1`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -147,14 +147,14 @@ exports[`Notifications > should render in xs 2`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -266,14 +266,14 @@ exports[`Notifications > should render in xs 3`] = `
               class="justify-end css-160cp05"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -385,14 +385,14 @@ exports[`Notifications > should render in xs 4`] = `
               class="justify-end css-160cp05"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -504,14 +504,14 @@ exports[`Notifications > should render in xs 5`] = `
               class="justify-end css-160cp05"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -623,14 +623,14 @@ exports[`Notifications > should render notification item 1`] = `
               class="justify-end css-160cp05"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-2etg0c"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK

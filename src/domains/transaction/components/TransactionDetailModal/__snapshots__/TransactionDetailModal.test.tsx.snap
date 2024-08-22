@@ -1862,14 +1862,14 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded px-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 DARK
@@ -3336,14 +3336,14 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded px-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 ARK
@@ -5239,14 +5239,14 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded px-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 ARK
