@@ -86,7 +86,7 @@ export const VotesHeader = ({
 									</ControlButton>
 								}
 							>
-								<div className="w-full px-10 py-7 sm:w-96 md:w-128">
+								<div className="w-full px-8 py-5 sm:w-96 md:w-128">
 									<FilterWallets {...filterProperties} />
 								</div>
 							</Dropdown>

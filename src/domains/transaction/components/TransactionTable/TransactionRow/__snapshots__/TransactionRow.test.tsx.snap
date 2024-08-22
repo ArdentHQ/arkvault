@@ -697,7 +697,7 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -913,7 +913,7 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td

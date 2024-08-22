@@ -31,7 +31,10 @@ export const ClipboardIcon = ({
 				type="button"
 				data-testid="clipboard-icon__wrapper"
 				className="ring-focus relative focus:outline-none"
-				onClick={() => copy(data)}
+				onClick={(e) => {
+					e.stopPropagation();
+					copy(data);
+				}}
 				data-ring-focus-margin="-m-1"
 			>
 				{children}

@@ -5,7 +5,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -204,7 +204,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -403,7 +403,7 @@ exports[`TransactionRowMobile > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -619,7 +619,7 @@ exports[`TransactionRowMobile > should render 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -835,7 +835,7 @@ exports[`TransactionRowMobile > should render compact skeleton 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1050,7 +1050,7 @@ exports[`TransactionRowMobile > should render compact skeleton 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1265,7 +1265,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1480,7 +1480,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1695,7 +1695,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td
@@ -1899,7 +1899,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group css-16ynu5g"
         data-testid="TableRow"
       >
         <td

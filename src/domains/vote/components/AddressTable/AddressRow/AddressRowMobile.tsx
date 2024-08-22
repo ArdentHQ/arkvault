@@ -5,7 +5,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useMediaQuery } from "react-responsive";
-import { Avatar } from "@/app/components/Avatar";
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -29,7 +28,7 @@ interface AddressRowMobileProperties {
 const StatusIcon = ({ label, icon, color }: { label: string; icon: string; color: string }) => (
 	<Tooltip content={label}>
 		<span>
-			<Icon name={icon} className={color} size="lg" data-testid="StatusIcon__icon" />
+			<Icon name={icon} className={color} size="md" data-testid="StatusIcon__icon" />
 		</span>
 	</Tooltip>
 );
@@ -48,7 +47,7 @@ export const AddressRowMobileDelegateName = ({ name }: { name?: string }) => {
 	);
 };
 
-export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressRowMobileProperties) => {
+export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobileProperties) => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
@@ -90,32 +89,12 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 		loadVotes();
 	}, [profileHasSyncedOnce, profileIsSyncingWallets, wallet]);
 
-	const [first, second, third, ...rest] = votes;
-
-	const renderAvatar = (address?: string, username?: string) => (
-		<Tooltip content={username}>
-			<span className="flex">
-				<Avatar className="ring-2 ring-theme-background" size="xs" address={address} noShadow />
-			</span>
-		</Tooltip>
-	);
-
-	const renderRestOfVotes = (restOfVotes: number) => {
-		const rest = (
-			<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-600">
-				+{restOfVotes}
-			</span>
-		);
-
-		return <div className="pl-3">{rest}</div>;
-	};
-
 	const renderDelegateStatus = (wallet: Contracts.IReadOnlyWallet | undefined, activeDelegates: number) => {
 		if (!wallet) {
 			return (
 				<Circle
 					size="xs"
-					className="shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+					className="h-4 w-4 shrink-0 border-theme-secondary-300 dark:border-theme-secondary-800"
 					noShadow
 				/>
 			);
@@ -131,7 +110,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 			return <StatusIcon label={t("WALLETS.STATUS.STANDBY")} icon="Clock" color="text-theme-warning-300" />;
 		}
 
-		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-success-600" />;
+		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-primary-600" />;
 	};
 
 	const renderWalletVotes = () => {
@@ -156,40 +135,23 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 			);
 		}
 
-		if (maxVotes === 1) {
-			return (
-				<>
-					<Avatar size="xs" address={votes[0].wallet.address()} noShadow />
-
-					{votes[0].wallet && (
-						<div className="flex items-center">
-							<div className="flex flex-1 justify-end overflow-hidden">
-								<Link
-									isExternal
-									to={votes[0].wallet.explorerLink()}
-									className="flex w-full items-center"
-								>
-									<AddressRowMobileDelegateName name={votes[0].wallet.username()} />
-								</Link>
-							</div>
-						</div>
-					)}
-				</>
-			);
-		}
-
+		// @TODO handle multiple validators
 		return (
-			<div className="flex items-center -space-x-1">
-				{renderAvatar(first.wallet?.address(), first.wallet?.username())}
-
-				{second && renderAvatar(second.wallet?.address(), second.wallet?.username())}
-
-				{third && renderAvatar(third.wallet?.address(), third.wallet?.username())}
-
-				{rest && rest.length === 1 && renderAvatar(rest[0].wallet?.address(), rest[0].wallet?.username())}
-
-				{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
-			</div>
+			<>
+				{votes[0].wallet && (
+					<div className="flex items-center">
+						<div className="flex flex-1 justify-end overflow-hidden">
+							<Link
+								isExternal
+								to={votes[0].wallet.explorerLink()}
+								className="flex w-full items-center [&_svg]:hidden"
+							>
+								<AddressRowMobileDelegateName name={votes[0].wallet.username()} />
+							</Link>
+						</div>
+					</div>
+				)}
+			</>
 		);
 	};
 
@@ -207,22 +169,20 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 						);
 					}}
 				>
-					<div className="overflow-hidden border-b border-theme-secondary-300 px-6 py-4 dark:border-theme-secondary-800">
+					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
-							<Avatar className="shrink-0" size="xs" address={wallet.address()} noShadow />
-
 							<div className="flex w-0 flex-1 overflow-hidden">
-								<Address address={wallet.address()} walletName={alias} />
+								<Address address={wallet.address()} walletName={alias} showCopyButton />
 							</div>
 						</div>
 					</div>
 
 					<div className="flex">
-						<div className="flex w-full flex-col bg-theme-secondary-100 px-6 py-4 dark:bg-black">
-							<span className="text-theme-secondary-500">
+						<div className="flex w-full flex-col bg-theme-secondary-100 p-4 dark:bg-black">
+							<span className="font-semibold leading-[17px] text-theme-secondary-500">
 								{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.VOTING_FOR")}
 							</span>
-							<div className="flex flex-grow items-center space-x-2 overflow-hidden">
+							<div className="mt-2 flex flex-grow items-center space-x-3 overflow-hidden leading-[17px]">
 								{renderWalletVotes()}
 
 								<Divider type="vertical" />
@@ -233,7 +193,7 @@ export const AddressRowMobile = ({ index, maxVotes, wallet, onSelect }: AddressR
 						<Button
 							disabled={!wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()}
 							variant="secondary"
-							sizeClassName="p-6"
+							sizeClassName="px-5 py-6"
 							roundedClassName="rounded-none"
 							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
 							data-testid={`AddressRowMobile__select-${index}`}
