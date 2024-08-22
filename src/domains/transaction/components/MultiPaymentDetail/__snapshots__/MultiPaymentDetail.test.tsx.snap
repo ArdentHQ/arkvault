@@ -272,14 +272,14 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded px-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 ARK
@@ -874,15 +874,15 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded pr-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <div
                         aria-describedby="tippy-16"
-                        class="flex items-center justify-center bg-theme-danger-100 dark:bg-theme-danger-400 -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-[#A56D4C] dark:bg-[#AA6868] text-white -ml-1.5 px-2"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -916,7 +916,7 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                         </div>
                       </div>
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 ARK
@@ -1510,14 +1510,14 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="css-148b4hi"
-                    color="danger"
+                    class="rounded px-1.5 css-jp7m6o"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 100 ARK

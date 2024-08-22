@@ -13,113 +13,60 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -130,51 +77,17 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -293,113 +206,60 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -410,51 +270,17 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -564,113 +390,60 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -681,51 +454,17 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -835,113 +574,60 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -952,51 +638,17 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded pr-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -1030,7 +682,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                   </div>
                 </div>
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -1141,113 +793,60 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -1258,51 +857,17 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -1417,113 +982,60 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="css-rjc6e4"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-o5w6qc"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-o5w6qc"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="font-semibold text-sm css-o5w6qc"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -1534,51 +1046,17 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-o5w6qc"
+            class="gap-3 justify-end css-o5w6qc"
           >
             <div
-              class="hidden lg:flex"
-            >
-              <div
-                class="border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="received"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-2etg0c"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -1693,109 +1171,60 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="css-5gvahk"
           >
             <button
-              class="link"
+              class="w-full max-w-20 cursor-pointer"
               type="button"
             >
               <div
-                class="css-v0ob3f"
-                height="16"
-                width="16"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <svg
-                  id="magnifying-glass-id"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
+                <div
+                  class="relative grow text-left"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <path
-                      d="M19 17l-3.172-3.172"
-                    />
-                    <circle
-                      cx="13"
-                      cy="11"
-                      r="4"
-                    />
-                  </g>
-                  <path
-                    d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
+                    id
+                  </span>
+                  <span>
+                     
+                  </span>
+                </div>
               </div>
             </button>
           </div>
         </td>
-        <td>
-          <div
-            class="font-semibold css-12appi5"
-          />
-        </td>
         <td
-          class="hidden lg:table-cell"
+          class="hidden text-sm lg:table-cell"
         >
           <div
             class="css-12appi5"
           >
-            01.01.2021 12:00 AM
+            <span
+              data-testid="TimeAgo"
+            >
+              A few seconds ago
+            </span>
           </div>
         </td>
         <td>
           <div
-            class="gap-3 css-12appi5"
+            class="font-semibold text-sm css-12appi5"
+          />
+        </td>
+        <td>
+          <div
+            class="gap-3 justify-end css-12appi5"
           >
-            <span
-              class="hidden h-5 w-5 items-center lg:flex border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="sent"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <path
-                    d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-            </span>
             <div
-              class="css-41vn9a"
-              color="danger"
+              class="rounded px-1.5 css-1ejba3f"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-center"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 1 BTC
@@ -1806,47 +1235,17 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="gap-3 css-12appi5"
+            class="gap-3 justify-end css-12appi5"
           >
-            <span
-              class="hidden h-5 w-5 items-center lg:flex border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-            >
-              <div
-                class="css-1i4b0eq"
-                height="20"
-                width="20"
-              >
-                <svg
-                  id="received"
-                  viewBox="0 0 20 20"
-                  x="0"
-                  xml:space="preserve"
-                  xmlns="http://www.w3.org/2000/svg"
-                  y="0"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </span>
             <div
-              class="css-1q2kz5x"
-              color="success"
+              class="rounded px-1.5 css-z5g6dp"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-center"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK
@@ -1900,7 +1299,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="justify-end text-theme-secondary-text css-t4jv3s"
           >
             <button
-              class="css-evohxk"
+              class="css-1it5mhj"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
