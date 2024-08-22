@@ -1,17 +1,16 @@
 import { DateTime } from "@ardenthq/sdk-intl";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 
 import { AmountLabel } from "@/app/components/Amount";
-import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { Address } from "@/app/components/Address";
+import { TimeAgo } from "@/app/components/TimeAgo";
 
 const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 	const { exchangeProviders } = useExchangeContext();
@@ -29,20 +28,6 @@ interface ExchangeTransactionsRowStatusProperties {
 	status: Contracts.ExchangeTransactionStatus;
 }
 
-const getCircle = (type: string) => {
-	if (type === "sent") {
-		return {
-			circleStyles: "border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400",
-			iconName: "Sent",
-		};
-	}
-
-	return {
-		circleStyles: "border-theme-success-200 text-theme-success-600 dark:border-theme-success-600",
-		iconName: "Received",
-	};
-};
-
 const ExchangeTransactionRowAmount = ({
 	type,
 	data,
@@ -56,29 +41,8 @@ const ExchangeTransactionRowAmount = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { iconName, circleStyles } = getCircle(type);
-
-	const renderIcon = () => {
-		if (isCompact) {
-			return (
-				<span className={cn("hidden h-5 w-5 items-center lg:flex", circleStyles)}>
-					<Icon name={iconName} size="lg" />
-				</span>
-			);
-		}
-
-		return (
-			<div className="hidden lg:flex">
-				<Circle size="lg" className={circleStyles}>
-					<Icon name={iconName} size="lg" />
-				</Circle>
-			</div>
-		);
-	};
-
 	return (
 		<>
-			{renderIcon()}
 			<AmountLabel
 				hint={isPending ? t("EXCHANGE.EXPECTED_AMOUNT_HINT") : undefined}
 				value={data.amount}
@@ -159,8 +123,6 @@ export const ExchangeTransactionsRow = ({
 	onClick,
 	onRemove,
 }: ExchangeTransactionsRowProperties) => {
-	const timeFormat = useTimeFormat();
-
 	const handleRemove = (event: MouseEvent) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -171,30 +133,34 @@ export const ExchangeTransactionsRow = ({
 	return (
 		<TableRow>
 			<TableCell variant="start" isCompact={isCompact}>
-				<Tooltip content={exchangeTransaction.orderId()} className="no-ligatures">
+				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
-						className="link"
+						className="w-full max-w-20 cursor-pointer"
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
-						<Icon name="MagnifyingGlassId" />
+						<Address
+							address={exchangeTransaction.orderId()}
+							truncateOnTable
+							addressClass="text-theme-primary-600 text-sm"
+						/>
 					</button>
 				</Tooltip>
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold" isCompact={isCompact}>
+			<TableCell className="hidden text-sm lg:table-cell" isCompact={isCompact}>
+				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
+			</TableCell>
+
+			<TableCell innerClassName="font-semibold text-sm" isCompact={isCompact}>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
-			<TableCell className="hidden lg:table-cell" isCompact={isCompact}>
-				{DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).format(timeFormat)}
-			</TableCell>
-
-			<TableCell innerClassName="gap-3" isCompact={isCompact}>
+			<TableCell innerClassName="gap-3 justify-end" isCompact={isCompact}>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
 			</TableCell>
 
-			<TableCell innerClassName="gap-3" isCompact={isCompact}>
+			<TableCell innerClassName="gap-3 justify-end" isCompact={isCompact}>
 				<ExchangeTransactionRowAmount
 					type="received"
 					data={exchangeTransaction.output()}
