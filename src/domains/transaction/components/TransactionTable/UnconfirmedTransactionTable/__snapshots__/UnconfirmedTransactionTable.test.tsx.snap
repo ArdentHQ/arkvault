@@ -196,14 +196,14 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -311,14 +311,14 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -531,14 +531,14 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -646,14 +646,14 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -774,14 +774,14 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -911,14 +911,14 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1131,14 +1131,14 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1246,14 +1246,14 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="justify-end css-t4jv3s"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1374,14 +1374,14 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK
@@ -1511,14 +1511,14 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 1 DARK

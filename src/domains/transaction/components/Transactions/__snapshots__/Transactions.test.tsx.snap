@@ -627,14 +627,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -883,14 +883,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -1142,14 +1142,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -1398,14 +1398,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -1654,14 +1654,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -1907,14 +1907,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -2163,14 +2163,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -2416,14 +2416,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -2668,14 +2668,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 5 DARK
@@ -2923,14 +2923,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -3175,14 +3175,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 5 DARK
@@ -3430,14 +3430,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -3653,14 +3653,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -3876,14 +3876,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -4099,14 +4099,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -4322,14 +4322,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -4545,14 +4545,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -4768,14 +4768,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -4991,14 +4991,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -5214,14 +5214,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -5437,14 +5437,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -5660,14 +5660,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -5883,14 +5883,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -6106,14 +6106,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -6329,14 +6329,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -6552,14 +6552,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -6775,14 +6775,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -6998,14 +6998,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -7221,14 +7221,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -7444,14 +7444,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -7667,14 +7667,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -7890,14 +7890,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -8124,14 +8124,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -8358,14 +8358,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -8592,14 +8592,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -8826,14 +8826,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -9049,14 +9049,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -9272,14 +9272,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -9495,14 +9495,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -9718,14 +9718,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -9941,14 +9941,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -10164,14 +10164,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -10387,14 +10387,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -10610,14 +10610,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -10851,14 +10851,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -11092,14 +11092,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -11333,14 +11333,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -11574,14 +11574,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -11797,14 +11797,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -12020,14 +12020,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -12243,14 +12243,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -12466,14 +12466,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -12730,14 +12730,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -12994,14 +12994,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -13258,14 +13258,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -13522,14 +13522,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -13745,14 +13745,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -13968,14 +13968,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -14191,14 +14191,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -14414,14 +14414,14 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -15091,14 +15091,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -15347,14 +15347,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -15603,14 +15603,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -15856,14 +15856,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -16108,14 +16108,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 5 DARK
@@ -16363,14 +16363,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -16586,14 +16586,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -16809,14 +16809,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -17032,14 +17032,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -17255,14 +17255,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -17478,14 +17478,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -17701,14 +17701,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -17924,14 +17924,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -18147,14 +18147,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -18370,14 +18370,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -18593,14 +18593,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -18827,14 +18827,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -19061,14 +19061,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -19284,14 +19284,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -19507,14 +19507,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -19730,14 +19730,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -19953,14 +19953,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -20194,14 +20194,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -20435,14 +20435,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -20658,14 +20658,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -20881,14 +20881,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -21145,14 +21145,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -21409,14 +21409,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -21632,14 +21632,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -21855,14 +21855,14 @@ exports[`Transactions > should hide view more button when there are no next page
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -22532,14 +22532,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -22788,14 +22788,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -23044,14 +23044,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -23297,14 +23297,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 0.20716584 DARK
@@ -23549,14 +23549,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-41vn9a"
-                    color="danger"
+                    class="rounded px-1.5 css-1ejba3f"
+                    color="danger-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         - 5 DARK
@@ -23804,14 +23804,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -24027,14 +24027,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -24250,14 +24250,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 400,000 DARK
@@ -24473,14 +24473,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -24696,14 +24696,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 50,000 DARK
@@ -24919,14 +24919,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -25142,14 +25142,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -25365,14 +25365,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -25588,14 +25588,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -25811,14 +25811,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -26034,14 +26034,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -26268,14 +26268,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -26502,14 +26502,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 270,000 DARK
@@ -26725,14 +26725,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -26948,14 +26948,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 1 DARK
@@ -27171,14 +27171,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -27394,14 +27394,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10,000 DARK
@@ -27635,14 +27635,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -27876,14 +27876,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -28099,14 +28099,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -28322,14 +28322,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 100,000 DARK
@@ -28586,14 +28586,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -28850,14 +28850,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-124k9k9"
+                    class="rounded px-1.5 css-124k9k9"
                     color="neutral"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         0 DARK
@@ -29073,14 +29073,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK
@@ -29296,14 +29296,14 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   data-testid="TransactionAmount__tooltip"
                 >
                   <div
-                    class="css-1q2kz5x"
-                    color="success"
+                    class="rounded px-1.5 css-z5g6dp"
+                    color="success-bg"
                   >
                     <div
                       class="flex space-x-1 items-center"
                     >
                       <span
-                        class="whitespace-nowrap"
+                        class="whitespace-nowrap text-sm"
                         data-testid="Amount"
                       >
                         + 10 DARK

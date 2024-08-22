@@ -3947,14 +3947,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -4173,14 +4173,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -4402,14 +4402,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -4631,14 +4631,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -4860,14 +4860,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -5089,14 +5089,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -5318,14 +5318,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -5547,14 +5547,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -5776,14 +5776,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -6002,14 +6002,14 @@ exports[`TransactionTable > should render compact 1`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK
@@ -6217,14 +6217,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -6413,14 +6413,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -6609,14 +6609,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -6805,14 +6805,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7001,14 +7001,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7197,14 +7197,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7393,14 +7393,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7589,14 +7589,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7785,14 +7785,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -7981,14 +7981,14 @@ exports[`TransactionTable > should render responsive 1`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK
@@ -8201,14 +8201,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -8397,14 +8397,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -8593,14 +8593,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -8789,14 +8789,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -8985,14 +8985,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -9181,14 +9181,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -9377,14 +9377,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -9573,14 +9573,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -9769,14 +9769,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -9965,14 +9965,14 @@ exports[`TransactionTable > should render responsive 2`] = `
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK
@@ -10369,14 +10369,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -10595,14 +10595,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -10824,14 +10824,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -11053,14 +11053,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -11282,14 +11282,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -11511,14 +11511,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -11740,14 +11740,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -11969,14 +11969,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -12198,14 +12198,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -12424,14 +12424,14 @@ exports[`TransactionTable > should render responsive 3`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK
@@ -12823,14 +12823,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -13049,14 +13049,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -13278,14 +13278,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -13507,14 +13507,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -13736,14 +13736,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -13965,14 +13965,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -14194,14 +14194,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -14423,14 +14423,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -14652,14 +14652,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -14878,14 +14878,14 @@ exports[`TransactionTable > should render responsive 4`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK
@@ -15277,14 +15277,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 20 DARK
@@ -15503,14 +15503,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 20.03499657 DARK
@@ -15732,14 +15732,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -15961,14 +15961,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -16190,14 +16190,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -16419,14 +16419,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -16648,14 +16648,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -16877,14 +16877,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -17106,14 +17106,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.0000001 DARK
@@ -17332,14 +17332,14 @@ exports[`TransactionTable > should render responsive 5`] = `
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 0.100001 DARK

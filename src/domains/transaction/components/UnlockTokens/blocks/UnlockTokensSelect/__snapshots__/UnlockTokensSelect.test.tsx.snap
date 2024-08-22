@@ -513,14 +513,14 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Total Amount
         </p>
         <div
-          class="css-6qumvg"
+          class="rounded px-1.5 css-6qumvg"
           color="neutral"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               0 DARK
@@ -538,14 +538,14 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="css-6qumvg"
+          class="rounded px-1.5 css-6qumvg"
           color="neutral"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               0 DARK

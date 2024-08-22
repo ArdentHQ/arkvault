@@ -192,14 +192,14 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-41vn9a"
-                color="danger"
+                class="rounded px-1.5 css-1ejba3f"
+                color="danger-bg"
               >
                 <div
                   class="flex space-x-1 items-center"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 121 BTC
@@ -439,14 +439,14 @@ exports[`TransactionRow > should render 1`] = `
             class="justify-end css-12appi5"
           >
             <div
-              class="css-41vn9a"
-              color="danger"
+              class="rounded px-1.5 css-1ejba3f"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-center"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 121 DARK
@@ -867,14 +867,14 @@ exports[`TransactionRow > should render responsive 1`] = `
               Amount
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 121 DARK
@@ -1083,14 +1083,14 @@ exports[`TransactionRow > should render responsive 2`] = `
               Amount
             </div>
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-jp7m6o"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 121 DARK
@@ -1529,14 +1529,14 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="css-41vn9a"
-                color="danger"
+                class="rounded px-1.5 css-1ejba3f"
+                color="danger-bg"
               >
                 <div
                   class="flex space-x-1 items-center"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     - 121 BTC

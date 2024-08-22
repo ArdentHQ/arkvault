@@ -176,14 +176,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -684,14 +684,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -992,14 +992,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -1507,14 +1507,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -1851,14 +1851,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -2388,14 +2388,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -2732,14 +2732,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -3269,14 +3269,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -3611,14 +3611,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.1 DARK
@@ -4029,14 +4029,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.1 DARK
@@ -4239,14 +4239,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.1 DARK
@@ -4660,14 +4660,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 0.1 DARK
@@ -4869,14 +4869,14 @@ exports[`Signed Transaction Table > should render different status > should show
                   Amount
                 </div>
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -5404,14 +5404,14 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -5733,14 +5733,14 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 1.1 DARK
@@ -6138,14 +6138,14 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 1.1 DARK
@@ -6540,14 +6540,14 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-1q2kz5x"
-                  color="success"
+                  class="rounded px-1.5 css-z5g6dp"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 1.1 DARK
@@ -6947,14 +6947,14 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -7489,14 +7489,14 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -7990,14 +7990,14 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 1.1 DARK
@@ -8184,14 +8184,14 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
                   Amount
                 </div>
                 <div
-                  class="css-1v19423"
-                  color="success"
+                  class="rounded px-1.5 css-2etg0c"
+                  color="success-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       + 1.1 DARK
@@ -8594,14 +8594,14 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="justify-end css-o5w6qc"
               >
                 <div
-                  class="css-148b4hi"
-                  color="danger"
+                  class="rounded px-1.5 css-jp7m6o"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -9136,14 +9136,14 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                 class="justify-end css-12appi5"
               >
                 <div
-                  class="css-41vn9a"
-                  color="danger"
+                  class="rounded px-1.5 css-1ejba3f"
+                  color="danger-bg"
                 >
                   <div
                     class="flex space-x-1 items-center"
                   >
                     <span
-                      class="whitespace-nowrap"
+                      class="whitespace-nowrap text-sm"
                       data-testid="Amount"
                     >
                       - 15 DARK
@@ -9197,7 +9197,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   </button>
                   <div>
                     <button
-                      class="css-evohxk"
+                      class="css-1it5mhj"
                       data-testid="TableRemoveButton--compact"
                       type="button"
                     >
