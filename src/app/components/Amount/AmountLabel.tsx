@@ -5,6 +5,7 @@ import { Amount } from "./Amount";
 import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 import { Tooltip } from "@/app/components/Tooltip";
+import { Size } from "@/types";
 
 interface AmountLabelHintProperties {
 	className: string;
@@ -16,11 +17,7 @@ const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCo
 	<Tooltip content={tooltipContent}>
 		<div
 			data-testid="AmountLabel__hint"
-			className={cn(
-				"flex items-center justify-center",
-				className,
-				isCompact ? "h-5 w-5 rounded-full" : "-ml-1.5 px-2",
-			)}
+			className={cn("flex items-center justify-center", className, isCompact ? "h-5 w-5" : "-ml-1.5 px-2")}
 		>
 			<Icon name="HintSmall" size="sm" className="dark:text-white" />
 		</div>
@@ -33,15 +30,16 @@ interface AmountLabelProperties {
 	value: number;
 	ticker: string;
 	hint?: string;
+	size?: Size;
 }
 
-export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint }) => {
-	let labelColor = "success";
-	let hintClassName = "bg-theme-success-200 dark:bg-theme-success-600";
+export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint, size }) => {
+	let labelColor = "success-bg";
+	let hintClassName = "bg-theme-success-500 dark:bg-theme-success-700";
 
 	if (isNegative) {
-		labelColor = "danger";
-		hintClassName = "bg-theme-danger-100 dark:bg-theme-danger-400";
+		labelColor = "danger-bg";
+		hintClassName = "bg-[#A56D4C] dark:bg-[#AA6868] text-white";
 	}
 
 	if (value === 0) {
@@ -50,10 +48,24 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, i
 	}
 
 	return (
-		<Label color={labelColor as any} noBorder={isCompact}>
+		<Label
+			color={labelColor as any}
+			noBorder={isCompact}
+			className={cn("rounded", {
+				"pr-1.5": hint,
+				"px-1.5": !hint,
+			})}
+			size={size}
+		>
 			<div className={cn("flex space-x-1", isCompact ? "items-center" : "items-stretch")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
-				<Amount showSign={value !== 0} ticker={ticker} value={value} isNegative={isNegative} />
+				<Amount
+					showSign={value !== 0}
+					ticker={ticker}
+					value={value}
+					isNegative={isNegative}
+					className="text-sm"
+				/>
 			</div>
 		</Label>
 	);
