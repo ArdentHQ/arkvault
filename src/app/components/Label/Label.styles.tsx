@@ -30,7 +30,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
 		"success-bg": () =>
-			tw`bg-theme-success-100 border border-transparent dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
+			tw`bg-theme-success-100 text-theme-success-700 border border-transparent dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
