@@ -7,6 +7,7 @@ export const translations = {
 	ADDRESS_NAME: "Address Name",
 	ADD_NEW: "Add New",
 	ADVANCED_MODE: "Advanced Mode",
+	AGE: "Age",
 	AGREE_DO_NOT_SHOW_AGAIN: "I agree, do not show this message again",
 	ALERT: {
 		DANGER: "Error",
@@ -362,6 +363,7 @@ export const translations = {
 	TRANSACTION_HISTORY: "Transaction History",
 	TRANSACTION_SUMMARY: "Transaction Summary",
 	TRANSFER: "Transfer",
+	TX_ID: "Tx ID",
 	TYPE: "Type",
 	UNSELECT: "Unselect",
 	UNSELECTED: "Unselected",
