@@ -11,7 +11,7 @@ type TableCellProperties = {
 	children: React.ReactNode;
 } & Omit<React.HTMLProps<any>, "size">;
 
-const TableCellInnerWrapper = ({...props}) => <div {...props} />;
+const TableCellInnerWrapper = ({ ...props }) => <div {...props} />;
 
 export const TableCell = ({
 	variant = "middle",
@@ -23,9 +23,7 @@ export const TableCell = ({
 	...properties
 }: TableCellProperties) => (
 	<td className={className} {...properties}>
-		<TableCellInnerWrapper
-			className={twMerge(getStyles({variant, isCompact, size}), innerClassName)}
-		>
+		<TableCellInnerWrapper className={twMerge(getStyles({ isCompact, size, variant }), innerClassName)}>
 			{children}
 		</TableCellInnerWrapper>
 	</td>

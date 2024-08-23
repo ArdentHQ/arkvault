@@ -134,7 +134,7 @@ export const ExchangeTransactionsRow = ({
 	return (
 		<TableRow className="relative">
 			<TableCell
-				innerClassName={`flex flex-col items-start xl:items-center gap-1 my-3 min-h-fit xl:flex-row`}
+				innerClassName="flex flex-col items-start xl:items-center gap-1 my-3 min-h-fit xl:flex-row"
 				variant="start"
 				isCompact={isCompact}
 			>
@@ -159,19 +159,19 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="hidden text-sm xl:table-cell"
-				innerClassName={`items-start xl:items-center`}
+				innerClassName="items-start xl:items-center"
 				isCompact={isCompact}
 			>
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName={`font-semibold text-sm items-start xl:items-center`} isCompact={isCompact}>
+			<TableCell innerClassName="font-semibold text-sm items-start xl:items-center" isCompact={isCompact}>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
 			<TableCell
 				className="lg:hidden"
-				innerClassName={`items-end flex flex-col gap-1.5 my-3`}
+				innerClassName="items-end flex flex-col gap-1.5 my-3"
 				isCompact={isCompact}
 			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
@@ -185,7 +185,7 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName={`gap-3 justify-end items-start xl:items-center my-3`}
+				innerClassName="gap-3 justify-end items-start xl:items-center my-3"
 				isCompact={isCompact}
 			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
@@ -193,7 +193,7 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="hidden lg:table-cell"
-				innerClassName={`gap-3 justify-end items-start xl:items-center my-3`}
+				innerClassName="gap-3 justify-end items-start xl:items-center my-3"
 				isCompact={isCompact}
 			>
 				<ExchangeTransactionRowAmount
@@ -204,13 +204,13 @@ export const ExchangeTransactionsRow = ({
 				/>
 			</TableCell>
 
-			<TableCell innerClassName={`justify-center items-start xl:items-center my-3`} isCompact={isCompact}>
+			<TableCell innerClassName="justify-center items-start xl:items-center my-3" isCompact={isCompact}>
 				<ExchangeTransactionsRowStatus status={exchangeTransaction.status()} />
 			</TableCell>
 
 			<TableCell
 				variant="end"
-				innerClassName={`items-start xl:items-center justify-end text-theme-secondary-text my-3`}
+				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-3"
 				isCompact={isCompact}
 			>
 				<TableRemoveButton isCompact={isCompact} onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
