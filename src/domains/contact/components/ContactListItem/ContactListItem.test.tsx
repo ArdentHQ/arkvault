@@ -10,6 +10,8 @@ import {
 	screen,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import {fireEvent} from "@testing-library/dom";
+import {translations} from "../../i18n";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
@@ -114,6 +116,20 @@ describe("ContactListItem", () => {
 		const { asFragment } = renderContactList({ options });
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show no wallets message", async () => {
+		contact.addresses().create({
+			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
+			coin: "INVALID",
+			network: "invalid",
+		});
+
+		renderContactList({ options });
+
+		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
+
+		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
 	});
 
 	it("should render options", () => {
