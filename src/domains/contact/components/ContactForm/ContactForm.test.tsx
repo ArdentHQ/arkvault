@@ -425,7 +425,7 @@ describe("ContactForm", () => {
 				onCancel={onCancel}
 				onSave={onSave}
 			/>,
-			"xs"
+			"xs",
 		);
 
 		expect(screen.getAllByTestId(addressListID)).toHaveLength(contact.addresses().count());
