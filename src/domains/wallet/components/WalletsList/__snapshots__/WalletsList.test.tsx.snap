@@ -252,7 +252,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="space-x-3 css-f2t2np"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -292,7 +292,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <div
                     class="flex shrink-0 items-center"
@@ -341,7 +341,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -415,7 +415,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="font-semibold justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -430,7 +430,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -441,7 +441,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <div>
                     <button
@@ -527,7 +527,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="space-x-3 css-f2t2np"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -567,7 +567,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <div
                     class="flex shrink-0 items-center"
@@ -616,7 +616,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -654,7 +654,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="font-semibold justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -669,7 +669,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -680,7 +680,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <div>
                     <button
@@ -1021,7 +1021,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="space-x-3 css-f2t2np"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -1061,7 +1061,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <div
                     class="flex shrink-0 items-center"
@@ -1110,7 +1110,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1133,7 +1133,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="font-semibold justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1148,7 +1148,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1159,7 +1159,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <div>
                     <button
@@ -1245,7 +1245,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Starred"
               >
                 <div
-                  class="space-x-3 css-f2t2np"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -1285,7 +1285,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <div
                     class="flex shrink-0 items-center"
@@ -1334,7 +1334,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
                 >
                   <div
                     class="inline-flex items-center space-x-1"
@@ -1357,7 +1357,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="font-semibold justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1372,7 +1372,7 @@ exports[`WalletsList > should render 1`] = `
                 data-testid="CurrencyCell"
               >
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1383,7 +1383,7 @@ exports[`WalletsList > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <div>
                     <button
@@ -1722,7 +1722,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="flex shrink-0 css-f2t2np"
+                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl flex shrink-0"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -1745,7 +1745,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -1777,12 +1777,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1801,7 +1801,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1820,7 +1820,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <button
                     class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
@@ -1896,7 +1896,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="flex shrink-0 css-f2t2np"
+                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl flex shrink-0"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -1919,7 +1919,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -1951,12 +1951,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1975,7 +1975,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -1994,7 +1994,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <button
                     class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
@@ -2070,7 +2070,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="flex shrink-0 css-f2t2np"
+                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl flex shrink-0"
                 >
                   <div
                     class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -2093,7 +2093,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="-ml-3 space-x-3 css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
                 >
                   <span
                     aria-busy="true"
@@ -2125,12 +2125,12 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-center css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
                 />
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2149,7 +2149,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                 >
                   <span
                     aria-busy="true"
@@ -2168,7 +2168,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end text-theme-secondary-text css-opqlbz"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
                 >
                   <button
                     class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"

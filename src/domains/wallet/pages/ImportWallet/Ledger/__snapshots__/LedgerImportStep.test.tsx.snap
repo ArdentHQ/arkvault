@@ -560,7 +560,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 >
                   <td>
                     <div
-                      class="justify-center css-5gvahk"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
                     >
                       <div
                         class="flex flex-1 flex-col py-2"
@@ -642,7 +642,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-end font-semibold css-t4jv3s"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
                     >
                       <button
                         class="css-6419sw"
@@ -686,7 +686,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 >
                   <td>
                     <div
-                      class="justify-center css-5gvahk"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
                     >
                       <div
                         class="flex flex-1 flex-col py-2"
@@ -768,7 +768,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </td>
                   <td>
                     <div
-                      class="justify-end font-semibold css-t4jv3s"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
                     >
                       <button
                         class="css-6419sw"
