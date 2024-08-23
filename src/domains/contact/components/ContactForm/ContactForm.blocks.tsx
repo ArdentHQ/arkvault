@@ -7,14 +7,12 @@ import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useBreakpoint } from "@/app/hooks";
 import { networkDisplayName } from "@/utils/network-utils";
 
 const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemove }) => {
 	const { t } = useTranslation();
 
 	const { env } = useEnvironmentContext();
-	const { isXs } = useBreakpoint();
 
 	const network = useMemo(
 		() =>
