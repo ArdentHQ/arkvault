@@ -126,7 +126,7 @@ describe("ContactListItem", () => {
 
 		renderContactList({ options });
 
-		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
+		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button")[1]);
 
 		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
 	});
