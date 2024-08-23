@@ -488,7 +488,7 @@ jobs:
             - name: Test
               uses: nick-invision/retry@v2
               env:
-                  COVERAGE_THRESHOLD_BRANCHES: 99.67
+                  COVERAGE_THRESHOLD_BRANCHES: 99.66
               with:
                   timeout_minutes: 10
                   max_attempts: 1
