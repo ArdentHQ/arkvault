@@ -12,7 +12,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       >
         <td>
           <div
-            class="flex shrink-0 css-gfxyas"
+            class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl flex shrink-0"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -35,7 +35,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <span
               aria-busy="true"
@@ -67,12 +67,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           />
         </td>
         <td>
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               aria-busy="true"
@@ -91,7 +91,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               aria-busy="true"
@@ -110,7 +110,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <button
               class="ml-3 my-auto css-qrwjsp"
@@ -197,7 +197,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
       >
         <td>
           <div
-            class="flex shrink-0 css-f2t2np"
+            class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl flex shrink-0"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -220,7 +220,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="-ml-3 space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <span
               aria-busy="true"
@@ -252,12 +252,12 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-center css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
           />
         </td>
         <td>
           <div
-            class="justify-end css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               aria-busy="true"
@@ -276,7 +276,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               aria-busy="true"
@@ -295,7 +295,7 @@ exports[`WalletListItemSkeleton > should render wallet list skeleton when isComp
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-opqlbz"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <button
               class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"

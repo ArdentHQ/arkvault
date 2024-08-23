@@ -16,7 +16,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -56,7 +56,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -105,7 +105,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -128,7 +128,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -143,7 +143,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -154,7 +154,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -553,7 +553,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -593,7 +593,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -642,7 +642,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -665,7 +665,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -680,7 +680,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -691,7 +691,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -927,7 +927,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-3 css-f2t2np"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -967,7 +967,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
@@ -1016,7 +1016,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -1039,7 +1039,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -1054,7 +1054,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1065,7 +1065,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-opqlbz"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -1705,7 +1705,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -1745,7 +1745,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -1794,7 +1794,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -1817,7 +1817,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -1832,7 +1832,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1843,7 +1843,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -2079,7 +2079,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -2119,7 +2119,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -2168,7 +2168,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2230,7 +2230,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               aria-busy="true"
@@ -2252,7 +2252,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2263,7 +2263,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -2501,7 +2501,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -2541,7 +2541,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -2590,7 +2590,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2613,7 +2613,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -2628,7 +2628,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2639,7 +2639,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
@@ -2875,7 +2875,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Starred"
         >
           <div
-            class="space-x-4 css-gfxyas"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l-xl space-x-4"
           >
             <div
               class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
@@ -2915,7 +2915,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Wallet"
         >
           <div
-            class="-ml-3 space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
           >
             <div
               class="flex shrink-0 items-center"
@@ -2964,7 +2964,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="justify-center text-sm font-bold text-center align-middle css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2987,7 +2987,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="font-semibold justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -3002,7 +3002,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="CurrencyCell"
         >
           <div
-            class="justify-end css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3013,7 +3013,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="justify-end text-theme-secondary-text css-31g0sb"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
           >
             <div>
               <button
