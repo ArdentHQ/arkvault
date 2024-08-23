@@ -239,7 +239,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -308,7 +308,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -320,7 +320,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
@@ -369,7 +369,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -380,7 +380,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   >
                     <span>
                       <div
@@ -423,14 +423,14 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -680,7 +680,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -749,7 +749,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -761,7 +761,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
@@ -817,7 +817,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   >
                     <div
                       class="font-semibold text-theme-secondary-400"
@@ -837,14 +837,14 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -1110,7 +1110,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -1179,7 +1179,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1191,7 +1191,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -1204,26 +1204,26 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   />
                 </td>
                 <td
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
                   >
                     <div>
                       <button
