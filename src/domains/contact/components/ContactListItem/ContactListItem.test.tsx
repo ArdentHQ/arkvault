@@ -99,6 +99,29 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should show no wallets message", async () => {
+		const contactAddresses = contact.addresses().values().map(address => ({
+			address: address.address(),
+			coin: address.coin(),
+			network: address.network()
+		}));
+
+		contact.addresses().create({
+			address: "AXtmcoxmKcuKHAivTRc2TJev48WkmnzPuC",
+			coin: "INVALID",
+			network: "invalid",
+		});
+
+		console.log(contact.addresses().all())
+		renderContactList({ options });
+
+		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
+
+		await expect(screen.findByText(translations.VALIDATION.NO_WALLETS)).resolves.toBeVisible();
+
+		profile.contacts().update(contact.id(), { addresses: contactAddresses });
+	});
+
 	it("should render with multiple addresses", () => {
 		contact.addresses().create({
 			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
@@ -115,20 +138,6 @@ describe("ContactListItem", () => {
 		const { asFragment } = renderContactList({ options });
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show no wallets message", async () => {
-		contact.addresses().create({
-			address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-			coin: "INVALID",
-			network: "invalid",
-		});
-
-		renderContactList({ options });
-
-		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
-
-		expect(screen.getByText(translations.VALIDATION.NO_WALLETS)).toBeInTheDocument();
 	});
 
 	it("should render options", () => {
