@@ -60,7 +60,6 @@ export const Exchange = () => {
 		const fetchStatus = async () => {
 			const responses = await checkOrderStatus(activeProfile.exchangeTransactions().pending());
 
-			// istanbul ignore next
 			if (responses) {
 				for (const response of Object.values(responses)) {
 					handleStatusChange(response);
