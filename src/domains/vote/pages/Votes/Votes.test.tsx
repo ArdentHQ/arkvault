@@ -604,7 +604,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(4));
 
 		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
@@ -623,7 +623,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(4));
 
 		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
@@ -642,7 +642,7 @@ describe("Votes", () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
 
-		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(4));
 
 		await userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
