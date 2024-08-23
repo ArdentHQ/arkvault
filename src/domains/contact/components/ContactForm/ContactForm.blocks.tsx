@@ -70,14 +70,12 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 	);
 };
 
-export const AddressList: React.VFC<AddressListProperties> = ({ addresses, onRemove }) => {
-	return (
-		<div className="group">
-			<div data-testid="contact-form__address-list">
-				{addresses.map((address, index) => (
-					<AddressListItem key={index} address={address} onRemove={() => onRemove(address)} />
-				))}
-			</div>
+export const AddressList: React.VFC<AddressListProperties> = ({ addresses, onRemove }) => (
+	<div className="group">
+		<div data-testid="contact-form__address-list">
+			{addresses.map((address, index) => (
+				<AddressListItem key={index} address={address} onRemove={() => onRemove(address)} />
+			))}
 		</div>
-	);
-};
+	</div>
+);
