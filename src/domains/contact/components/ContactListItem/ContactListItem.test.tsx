@@ -10,8 +10,7 @@ import {
 	screen,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
-import {fireEvent} from "@testing-library/dom";
-import {translations} from "../../i18n";
+import { translations } from "@/domains/contact/i18n";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
