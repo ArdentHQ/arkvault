@@ -30,7 +30,7 @@ export const TableCell = ({
 		<TableCellInnerWrapper
 			variant={variant}
 			size={size}
-			css={typeof innerClassName !== "string" ? innerClassName : ""}
+			css={typeof innerClassName === "string" ? "" : innerClassName}
 			className={typeof innerClassName === "string" ? innerClassName : ""}
 			isCompact={isCompact}
 		>
