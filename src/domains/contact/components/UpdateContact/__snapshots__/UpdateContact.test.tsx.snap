@@ -286,7 +286,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                             </div>
                             <button
                               class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
-                              data-testid="contact-form__remove-address-btn-sm"
+                              data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
                               <div
@@ -711,7 +711,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                             </div>
                             <button
                               class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
-                              data-testid="contact-form__remove-address-btn-sm"
+                              data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
                               <div
@@ -1180,7 +1180,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                             </div>
                             <button
                               class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
-                              data-testid="contact-form__remove-address-btn-sm"
+                              data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
                               <div

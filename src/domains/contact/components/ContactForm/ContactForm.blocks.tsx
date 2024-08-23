@@ -35,7 +35,7 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 						{networkDisplayName(network)}
 					</div>
 					<Button
-						data-testid="contact-form__remove-address-btn-sm"
+						data-testid="contact-form__remove-address-btn-xs"
 						size="icon"
 						className="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
 						variant="transparent"
