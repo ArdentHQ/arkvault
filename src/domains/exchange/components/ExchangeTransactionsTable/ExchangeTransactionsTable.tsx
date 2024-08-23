@@ -45,7 +45,7 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 			{
 				Header: t("COMMON.AGE"),
 				accessor: "createdAt",
-				headerClassName: "hidden lg:table-cell no-border",
+				headerClassName: "hidden xl:table-cell no-border",
 			},
 			{
 				Header: t("COMMON.EXCHANGE"),
@@ -53,16 +53,22 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 				headerClassName: "no-border",
 			},
 			{
+				Header: `${t("COMMON.FROM")}-${t("COMMON.TO")}`,
+				accessor: (exchangeTransaction) => exchangeTransaction.input().ticker,
+				className: "justify-end",
+				headerClassName: "no-border lg:hidden",
+			},
+			{
 				Header: t("COMMON.FROM"),
 				accessor: (exchangeTransaction) => exchangeTransaction.input().ticker,
 				className: "justify-end",
-				headerClassName: "no-border",
+				headerClassName: "no-border hidden lg:table-cell",
 			},
 			{
 				Header: t("COMMON.TO"),
 				accessor: (exchangeTransaction) => exchangeTransaction.output().ticker,
 				className: "justify-end",
-				headerClassName: "no-border",
+				headerClassName: "no-border hidden lg:table-cell",
 			},
 			{
 				Header: t("COMMON.STATUS"),
@@ -108,7 +114,7 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 
 	if (tableData.length === 0) {
 		return (
-			<EmptyBlock data-testid="ExchangeTransactionsTable__empty-message">
+			<EmptyBlock data-testid="ExchangeTransactionsTable__empty-message" className="">
 				{t("EXCHANGE.EMPTY_MESSAGE")}
 			</EmptyBlock>
 		);
@@ -117,7 +123,13 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 	return (
 		<div data-testid="ExchangeTransactionsTable">
 			<TableWrapper>
-				<Table columns={columns} data={tableData} initialState={initialState} hideHeader={useResponsive} className="with-x-padding">
+				<Table
+					columns={columns}
+					data={tableData}
+					initialState={initialState}
+					hideHeader={useResponsive}
+					className="with-x-padding"
+				>
 					{renderTableRow}
 				</Table>
 			</TableWrapper>

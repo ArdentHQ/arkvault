@@ -11,6 +11,7 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { Address } from "@/app/components/Address";
 import { TimeAgo } from "@/app/components/TimeAgo";
+import tw from "twin.macro";
 
 const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 	const { exchangeProviders } = useExchangeContext();
@@ -92,7 +93,7 @@ const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusPrope
 		}
 
 		return {
-			color: "text-theme-secondary-500 dark:text-theme-secondary-700",
+			color: "text-theme-warning-300",
 			name: "Clock",
 		};
 	};
@@ -132,11 +133,15 @@ export const ExchangeTransactionsRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" isCompact={isCompact}>
+			<TableCell
+				innerClassName={tw`flex flex-col items-start xl:items-center gap-1 my-3 min-h-fit xl:flex-row`}
+				variant="start"
+				isCompact={isCompact}
+			>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
-						className="w-full max-w-20 cursor-pointer"
+						className="h-[17px] w-full max-w-20 cursor-pointer"
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
 						<Address
@@ -146,21 +151,30 @@ export const ExchangeTransactionsRow = ({
 						/>
 					</button>
 				</Tooltip>
+
+				<div className="text-xs xl:hidden">
+					<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
+				</div>
 			</TableCell>
 
-			<TableCell className="hidden text-sm lg:table-cell" isCompact={isCompact}>
+			<TableCell
+				className="hidden text-sm xl:table-cell"
+				innerClassName={tw`items-start xl:items-center`}
+				isCompact={isCompact}
+			>
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold text-sm" isCompact={isCompact}>
+			<TableCell innerClassName={tw`font-semibold text-sm items-start xl:items-center`} isCompact={isCompact}>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
-			<TableCell innerClassName="gap-3 justify-end" isCompact={isCompact}>
+			<TableCell
+				className="lg:hidden"
+				innerClassName={tw`items-end flex flex-col gap-1.5 my-3`}
+				isCompact={isCompact}
+			>
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
-			</TableCell>
-
-			<TableCell innerClassName="gap-3 justify-end" isCompact={isCompact}>
 				<ExchangeTransactionRowAmount
 					type="received"
 					data={exchangeTransaction.output()}
@@ -169,12 +183,37 @@ export const ExchangeTransactionsRow = ({
 				/>
 			</TableCell>
 
-			<TableCell innerClassName="justify-center" isCompact={isCompact}>
+			<TableCell
+				className="hidden lg:table-cell"
+				innerClassName={tw`gap-3 justify-end items-start xl:items-center my-3`}
+				isCompact={isCompact}
+			>
+				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
+			</TableCell>
+
+			<TableCell
+				className="hidden lg:table-cell"
+				innerClassName={tw`gap-3 justify-end items-start xl:items-center my-3`}
+				isCompact={isCompact}
+			>
+				<ExchangeTransactionRowAmount
+					type="received"
+					data={exchangeTransaction.output()}
+					isPending={exchangeTransaction.isPending()}
+					isCompact={isCompact}
+				/>
+			</TableCell>
+
+			<TableCell innerClassName={tw`justify-center items-start xl:items-center my-3`} isCompact={isCompact}>
 				<ExchangeTransactionsRowStatus status={exchangeTransaction.status()} />
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
-				<TableRemoveButton isCompact={isCompact} onClick={handleRemove} />
+			<TableCell
+				variant="end"
+				innerClassName={tw`items-start xl:items-center justify-end text-theme-secondary-text my-3`}
+				isCompact={isCompact}
+			>
+				<TableRemoveButton isCompact={isCompact} onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
 			</TableCell>
 		</TableRow>
 	);
