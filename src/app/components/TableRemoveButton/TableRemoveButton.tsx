@@ -37,7 +37,7 @@ export const TableRemoveButton = ({
 				onClick={handleClick}
 				{...properties}
 			>
-				<Icon name="Trash" />
+				<Icon name="Trash" size="lg" />
 			</Button>
 		);
 	}
