@@ -65,5 +65,5 @@ main {
 }
 
 .with-x-padding > table > tbody > tr:not(:last-child) td:last-child::after {
-	@apply content-[''] w-6 block bg-theme-background h-full absolute right-0
+	@apply content-[''] w-6 block bg-theme-background h-px absolute right-0
 }
