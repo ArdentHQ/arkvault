@@ -972,7 +972,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
                       >
                         <span>
                           52
@@ -981,7 +981,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-ml-0.5 shrink-0 css-1i0wxh3"
@@ -1054,7 +1054,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
                       >
                         <div>
                           <div
@@ -1092,7 +1092,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1135,20 +1135,20 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="w-40"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
+                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Unselected
+                              Current
                             </div>
                           </button>
                         </div>
@@ -1271,7 +1271,7 @@ exports[`Votes > should filter current delegates 1`] = `
                             Votes
                           </div>
                           <div
-                            class="css-7rfz36"
+                            class="css-auqdnt"
                             data-testid="DelegateTable__footer--vote"
                             disabled=""
                           >
@@ -1279,7 +1279,7 @@ exports[`Votes > should filter current delegates 1`] = `
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                1
+                                0
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -1321,7 +1321,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           class="hidden lg:block"
                         >
                           <div
-                            class="ring-theme-background duration-100 css-gdymhi"
+                            class="ring-theme-background duration-100 css-15k66tv"
                             disabled=""
                           >
                             <div
@@ -1466,7 +1466,7 @@ exports[`Votes > should filter current delegates 1`] = `
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                1/1
+                                0/1
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -2549,7 +2549,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl font-bold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl font-bold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
                       >
                         <span>
                           2
@@ -2558,7 +2558,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-bold border-t-2 border-b-2 border-transparent h-12 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-ml-0.5 shrink-0 css-1i0wxh3"
@@ -2631,7 +2631,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
                       >
                         <div>
                           <div
@@ -2673,7 +2673,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-12"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-12"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -2716,20 +2716,20 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="w-40"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Current
+                              Unselected
                             </div>
                           </button>
                         </div>
@@ -3335,14 +3335,14 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             Unvotes
                           </div>
                           <div
-                            class="css-auqdnt"
+                            class="css-7rfz36"
                             data-testid="DelegateTable__footer--unvote"
                           >
                             <div
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                0
+                                1
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -3381,7 +3381,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           class="hidden lg:block"
                         >
                           <div
-                            class="ring-theme-background duration-100 css-15k66tv"
+                            class="ring-theme-background duration-100 css-gdymhi"
                           >
                             <div
                               class="css-1i4b0eq"
@@ -3431,7 +3431,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                0/1
+                                1/1
                               </div>
                               <div
                                 class="hidden pl-2 md:block lg:hidden"
@@ -3513,9 +3513,8 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="css-fl4fi0"
                         data-testid="DelegateTable__continue-button"
-                        disabled=""
                         type="button"
                       >
                         <div
