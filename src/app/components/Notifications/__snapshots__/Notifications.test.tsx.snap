@@ -130,7 +130,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -213,10 +213,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-jp7m6o"
+                          class="rounded px-1.5 css-1sv81tv"
                           color="danger-bg"
                         >
                           <div
@@ -243,7 +243,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -323,10 +323,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
@@ -353,7 +353,7 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -433,10 +433,10 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
@@ -682,7 +682,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -765,10 +765,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-jp7m6o"
+                          class="rounded px-1.5 css-1sv81tv"
                           color="danger-bg"
                         >
                           <div
@@ -795,7 +795,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -875,10 +875,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
@@ -905,7 +905,7 @@ exports[`Notifications > should render with plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -985,10 +985,10 @@ exports[`Notifications > should render with plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
@@ -1146,7 +1146,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1229,10 +1229,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-jp7m6o"
+                          class="rounded px-1.5 css-1sv81tv"
                           color="danger-bg"
                         >
                           <div
@@ -1259,7 +1259,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1339,10 +1339,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
@@ -1369,7 +1369,7 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                       class="w-3/5"
                     >
                       <div
-                        class="flex space-x-3 css-5gvahk"
+                        class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl flex space-x-3"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1449,10 +1449,10 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-2etg0c"
+                          class="rounded px-1.5 css-givenh"
                           color="success-bg"
                         >
                           <div
