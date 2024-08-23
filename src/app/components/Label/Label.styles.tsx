@@ -23,14 +23,14 @@ const getColor = (color?: ColorType, variant?: string) => {
 	const colors = {
 		danger: () => tw`text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400`,
 		"danger-bg": () =>
-			tw`text-[#A56D4C] bg-[#FBEED6] border border-transparent dark:text-[#F39B9B] dark:bg-transparent dark:border-[#AA6868]`,
+			tw`text-[#A56D4C] bg-[#FBEED6] dark:border dark:text-[#F39B9B] dark:bg-transparent dark:border-[#AA6868]`,
 		default: () => tw`text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700`,
 		neutral: () =>
 			tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`,
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
 		"success-bg": () =>
-			tw`bg-theme-success-100 text-theme-success-700 border border-transparent dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
+			tw`bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
