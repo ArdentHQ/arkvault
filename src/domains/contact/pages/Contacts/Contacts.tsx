@@ -157,7 +157,11 @@ export const Contacts: FC = () => {
 				return (
 					<Section>
 						<div className="w-full" data-testid="ContactList">
-							<Table columns={listColumns} data={filteredContacts} className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
+							<Table
+								columns={listColumns}
+								data={filteredContacts}
+								className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
+							>
 								{renderTableRow}
 							</Table>
 						</div>
