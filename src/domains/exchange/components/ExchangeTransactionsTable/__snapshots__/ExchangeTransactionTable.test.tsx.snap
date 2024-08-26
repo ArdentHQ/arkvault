@@ -6011,11 +6011,11 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -6031,7 +6031,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6090,7 +6090,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -6138,7 +6138,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6156,7 +6156,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -6168,7 +6168,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -6196,7 +6196,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"
@@ -6259,11 +6259,11 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -6279,7 +6279,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6338,7 +6338,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -6386,7 +6386,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6404,7 +6404,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -6416,7 +6416,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -6444,7 +6444,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"
@@ -6507,11 +6507,11 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -6527,7 +6527,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6586,7 +6586,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -6634,7 +6634,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6652,7 +6652,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -6664,7 +6664,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -6692,7 +6692,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"
@@ -6783,11 +6783,11 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -6803,7 +6803,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6862,7 +6862,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -6910,7 +6910,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -6928,7 +6928,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -6940,7 +6940,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -6968,7 +6968,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"
@@ -7031,11 +7031,11 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -7051,7 +7051,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -7110,7 +7110,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -7158,7 +7158,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -7176,7 +7176,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -7188,7 +7188,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -7216,7 +7216,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"
@@ -7279,11 +7279,11 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             >
               <td>
                 <div
-                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
-                  data-testid="TableRow__mobile"
+                  class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
                 >
                   <div
                     class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+                    data-testid="TableRow__mobile"
                   >
                     <div
                       class="text-sm font-semibold"
@@ -7299,7 +7299,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       class="flex flex-row items-center"
                     >
                       <span
-                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                        class="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -7358,7 +7358,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                       />
                       <button
                         class="cursor-pointer !p-0 css-1it5mhj"
-                        data-testid="TableRemoveButton--compact"
+                        data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
                         <div
@@ -7406,7 +7406,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Age
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <span
                           data-testid="TimeAgo"
@@ -7424,7 +7424,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         Exchange
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       />
                     </div>
                     <div
@@ -7436,7 +7436,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         From
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded px-1.5 css-b0kgb"
@@ -7464,7 +7464,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         To
                       </span>
                       <div
-                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                        class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                       >
                         <div
                           class="rounded pr-1.5 css-1xi6cb5"

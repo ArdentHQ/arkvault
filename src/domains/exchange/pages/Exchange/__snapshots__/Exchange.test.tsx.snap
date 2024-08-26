@@ -649,7 +649,7 @@ exports[`Exchange > should render empty 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6 md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -1315,7 +1315,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class=" css-ycib48"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6 md:px-10"
         >
           <div
             class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"
