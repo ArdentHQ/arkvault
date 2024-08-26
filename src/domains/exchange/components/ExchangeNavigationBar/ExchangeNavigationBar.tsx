@@ -29,10 +29,12 @@ export const ExchangeNavigationBar = ({
 
 	return (
 		<NavWrapper>
-			<div className="mx-auto flex items-center justify-between px-6 md:px-10 lg:container">
+			<div className="mx-auto flex items-center justify-between px-6 lg:container md:px-10">
 				<Tabs activeId={currentView} className="w-full" onChange={onChange}>
-					<TabList className="h-[3.25rem] w-full flex flex-row gap-6" noBackground>
-						<Tab tabId={ExchangeView.Exchanges} className="m-0 mr-6">{t("EXCHANGE.NAVIGATION.EXCHANGES")}</Tab>
+					<TabList className="flex h-[3.25rem] w-full flex-row gap-6" noBackground>
+						<Tab tabId={ExchangeView.Exchanges} className="m-0 mr-6">
+							{t("EXCHANGE.NAVIGATION.EXCHANGES")}
+						</Tab>
 
 						<Tab tabId={ExchangeView.Transactions} count={exchangeTransactionsCount} className="m-0">
 							{t("EXCHANGE.NAVIGATION.TRANSACTIONS")}

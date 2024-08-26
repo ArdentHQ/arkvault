@@ -3,7 +3,7 @@ import tw, { styled } from "twin.macro";
 
 import { TabContext, TabId, useTab } from "./useTab";
 import { useTheme } from "@/app/hooks";
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from "tailwind-merge";
 
 interface TabsProperties {
 	id?: string;
