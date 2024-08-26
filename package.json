@@ -93,6 +93,7 @@
 		"slick-carousel": "^1.8.1",
 		"socks-proxy-agent": "^7.0.0",
 		"string-hash": "^1.1.3",
+		"tailwind-merge": "^2.5.2",
 		"tippy.js": "^6.3.7",
 		"yup": "^1.4.0"
 	},
