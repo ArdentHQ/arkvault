@@ -61,6 +61,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 	onClick,
 }: NavigationBarLogoOnlyProperties) => {
 	const history = useHistory();
+	const { isXs } = useBreakpoint();
 
 	const defaultHandler = useCallback(() => {
 		history.push("/");
@@ -71,10 +72,10 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+				className="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
-				<Logo height={28} />
+				<Logo height={isXs ? 22 : 28} />
 			</button>
 
 			{title && <span className="text-lg uppercase">{title}</span>}
@@ -334,7 +335,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 						<BackButton disabled={isBackDisabled} />
 					</div>
 
-					<div className="flex flex-1 items-center px-8">
+					<div className="flex flex-1 items-center px-6 sm:px-8">
 						<NavigationBarLogo onClick={homeButtonHandler} />
 
 						{renderNavigationMenu()}
