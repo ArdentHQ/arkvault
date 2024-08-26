@@ -173,7 +173,8 @@ describe("NavigationBar", () => {
 
 		expect(container).toBeInTheDocument();
 		const button = screen.getByTestId("NavigationBarLogo--button");
-		const svg = within(button).getByRole("img");
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
 
 		expect(svg).toHaveAttribute("height", "22");
 	});
@@ -183,7 +184,9 @@ describe("NavigationBar", () => {
 
 		expect(container).toBeInTheDocument();
 		const button = screen.getByTestId("NavigationBarLogo--button");
-		const svg = within(button).getByRole("img"); // Assuming the SVG has a role of 'img'
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
 
 		expect(svg).toHaveAttribute("height", "28");
 	});
