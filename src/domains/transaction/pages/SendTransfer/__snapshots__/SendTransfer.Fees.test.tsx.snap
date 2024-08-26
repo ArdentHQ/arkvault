@@ -564,7 +564,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -1956,7 +1956,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"

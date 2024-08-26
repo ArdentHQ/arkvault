@@ -441,7 +441,7 @@ exports[`SendIpfs > should error if wrong mnemonic 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2782,7 +2782,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -4070,7 +4070,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -5360,7 +5360,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -6525,7 +6525,7 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -7511,7 +7511,7 @@ exports[`SendIpfs > should show error step and go back 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
