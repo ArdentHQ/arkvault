@@ -160,13 +160,13 @@ exports[`NavigationBar > should not render with title if variant is full 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -548,7 +548,7 @@ exports[`NavigationBar > should render as logo-only variant 1`] = `
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -741,13 +741,13 @@ exports[`NavigationBar > should render full variant when profile restored is fal
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -1279,13 +1279,13 @@ exports[`NavigationBar > should render full variant when profile restored is tru
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -1811,13 +1811,13 @@ exports[`NavigationBar > should render in lg 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -2343,13 +2343,13 @@ exports[`NavigationBar > should render in md 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -2875,13 +2875,13 @@ exports[`NavigationBar > should render in sm 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -3407,13 +3407,13 @@ exports[`NavigationBar > should render in small screen variant 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -3939,13 +3939,13 @@ exports[`NavigationBar > should render in xs 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -3954,7 +3954,7 @@ exports[`NavigationBar > should render in xs 1`] = `
             >
               <svg
                 fill="none"
-                height="28"
+                height="22"
                 viewBox="0 0 363 363"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -4285,7 +4285,7 @@ exports[`NavigationBar > should render in xs 1`] = `
               data-testid="UserMenu"
             >
               <div
-                class="shrink-0 css-1n9jllj"
+                class="shrink-0 css-1ha4taj"
                 data-testid="Avatar"
               >
                 <div
@@ -4471,13 +4471,13 @@ exports[`NavigationBar > should render with custom menu 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -5003,13 +5003,13 @@ exports[`NavigationBar > should render with shadow if there is a scroll 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-1 items-center px-8"
+        class="flex flex-1 items-center px-6 sm:px-8"
       >
         <div
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
@@ -5391,7 +5391,7 @@ exports[`NavigationBar > should render with title if variant is logo-only 1`] = 
           class="my-auto flex items-center"
         >
           <button
-            class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+            class="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
             data-testid="NavigationBarLogo--button"
             type="button"
           >
