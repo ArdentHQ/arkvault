@@ -6006,671 +6006,746 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      3
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        3
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      2
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        2
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      1
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        1
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -6703,671 +6778,746 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      3
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        3
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      2
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        2
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr
-              class="group css-155s9if"
+              class="group css-lss22o"
               data-testid="TableRow"
             >
-              <td
-                class="flex-col space-y-4 py-4"
-                data-testid="TableRow__mobile"
-              >
+              <td>
                 <div
-                  class="flex items-center justify-between space-x-4"
+                  class="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 cursor-pointer mb-3"
+                  data-testid="TableRow__mobile"
                 >
                   <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Tx ID
-                  </div>
-                  <button
-                    class="link font-semibold"
-                    type="button"
-                  >
-                    <span
-                      class="no-ligatures css-0"
-                      data-testid="TruncateMiddle"
-                    >
-                      1
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Recipient
-                  </div>
-                  <span
-                    class="font-semibold"
-                  />
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Timestamp
-                  </div>
-                  01.01.2021 12:00 AM
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    From
-                  </div>
-                  <div
-                    class="rounded px-1.5 css-183pbai"
-                    color="danger-bg"
+                    class="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="text-sm font-semibold"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
+                        class="no-ligatures text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        - 1 BTC
+                        1
                       </span>
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    To
-                  </div>
-                  <div
-                    class="rounded pr-1.5 css-bda8jt"
-                    color="success-bg"
-                  >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex flex-row items-center"
                     >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
+                      </span>
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
-                        data-testid="AmountLabel__hint"
+                        class="hidden sm:block"
                       >
                         <div
-                          class="dark:text-white css-15txs7d"
-                          height="10"
-                          width="10"
+                          class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                          type="vertical"
+                        />
+                      </div>
+                      <span
+                        class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
+                      >
+                        <div
+                          class="text-theme-warning-300 css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="hint-small"
-                            viewBox="0 0 10 10"
+                            id="clock"
+                            viewBox="0 0 20 20"
                             x="0"
                             xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
                             y="0"
                           >
-                            <path
-                              d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                            <g
                               fill="none"
                               stroke="currentColor"
                               stroke-linecap="round"
                               stroke-linejoin="round"
+                              stroke-miterlimit="10"
                               stroke-width="2"
-                            />
-                            <circle
-                              cx="4.5"
-                              cy="1"
-                              fill="currentColor"
-                              r="1"
-                            />
+                              transform="translate(1.5 1.5)"
+                            >
+                              <circle
+                                cx="8.5"
+                                cy="8.5"
+                                r="9"
+                              />
+                              <path
+                                d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                              />
+                            </g>
                           </svg>
                         </div>
-                      </div>
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 100 ARK
                       </span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <div
-                    class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-                  >
-                    Status
-                  </div>
-                  <span
-                    class="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200"
-                  >
-                    <span>
-                      New
-                    </span>
-                    <div
-                      class="text-theme-warning-300 css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-                <div
-                  class="flex items-center justify-between space-x-4"
-                >
-                  <button
-                    class="w-full cursor-pointer sm:ml-auto sm:w-auto css-15yk9k4"
-                    data-testid="TableRemoveButton"
-                    type="button"
-                  >
-                    <div
-                      class="flex items-center space-x-2"
-                    >
                       <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
+                        class="border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                        type="vertical"
+                      />
+                      <button
+                        class="cursor-pointer !p-0 css-1it5mhj"
+                        data-testid="TableRemoveButton--compact"
+                        type="button"
                       >
-                        <svg
-                          id="trash"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
+                        <div
+                          class="flex items-center space-x-2"
                         >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                          <div
+                            class="css-1i4b0eq"
+                            height="20"
+                            width="20"
                           >
-                            <path
-                              d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
-                            />
-                          </g>
-                        </svg>
+                            <svg
+                              id="trash"
+                              viewBox="0 0 20 20"
+                              x="0"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0"
+                            >
+                              <g
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                              >
+                                <path
+                                  d="M1 3.629h18M11.8 1H8c-.7 0-1.3.607-1.3 1.315h0v1.314H13V2.315C13 1.607 12.5 1 11.8 1h0zM8 14.449v-6.37M11.8 14.449v-6.37M15.7 17.787c-.1.707-.6 1.213-1.3 1.213H5.3c-.7 0-1.2-.506-1.3-1.213L2.9 3.629h14l-1.2 14.158z"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3"
+                  >
+                    <div
+                      class="flex w-36 flex-col gap-2 sm:hidden"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Age
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <span
+                          data-testid="TimeAgo"
+                        >
+                          A few seconds ago
+                        </span>
                       </div>
                     </div>
-                  </button>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        Exchange
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      />
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        From
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded px-1.5 css-b0kgb"
+                          color="danger-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              - 1 BTC
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="flex w-36 flex-col gap-2"
+                    >
+                      <span
+                        class="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                      >
+                        To
+                      </span>
+                      <div
+                        class="text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold text-sm"
+                      >
+                        <div
+                          class="rounded pr-1.5 css-1xi6cb5"
+                          color="success-bg"
+                        >
+                          <div
+                            class="flex space-x-1 items-center"
+                          >
+                            <div
+                              class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                              data-testid="AmountLabel__hint"
+                            >
+                              <div
+                                class="dark:text-white css-15txs7d"
+                                height="10"
+                                width="10"
+                              >
+                                <svg
+                                  id="hint-small"
+                                  viewBox="0 0 10 10"
+                                  x="0"
+                                  xml:space="preserve"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  y="0"
+                                >
+                                  <path
+                                    d="M7 9H5.503A.503.503 0 0 1 5 8.497V4.503A.503.503 0 0 0 4.497 4H3.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  />
+                                  <circle
+                                    cx="4.5"
+                                    cy="1"
+                                    fill="currentColor"
+                                    r="1"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <span
+                              class="whitespace-nowrap text-sm"
+                              data-testid="Amount"
+                            >
+                              + 100 ARK
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
             </tr>
