@@ -142,7 +142,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 					</div>
 
 					<div className="flex flex-row items-center">
-						<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 hidden sm:block">
+						<span className="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
 							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 						</span>
 						<div className="hidden sm:block">
