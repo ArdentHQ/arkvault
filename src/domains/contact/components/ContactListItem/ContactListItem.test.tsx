@@ -100,11 +100,14 @@ describe("ContactListItem", () => {
 	});
 
 	it("should show no wallets message", async () => {
-		const contactAddresses = contact.addresses().values().map(address => ({
-			address: address.address(),
-			coin: address.coin(),
-			network: address.network()
-		}));
+		const contactAddresses = contact
+			.addresses()
+			.values()
+			.map((address) => ({
+				address: address.address(),
+				coin: address.coin(),
+				network: address.network(),
+			}));
 
 		contact.addresses().create({
 			address: "AXtmcoxmKcuKHAivTRc2TJev48WkmnzPuC",
@@ -112,10 +115,9 @@ describe("ContactListItem", () => {
 			network: "invalid",
 		});
 
-		console.log(contact.addresses().all())
 		renderContactList({ options });
 
-		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
+		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button")[1]);
 
 		await expect(screen.findByText(translations.VALIDATION.NO_WALLETS)).resolves.toBeVisible();
 
