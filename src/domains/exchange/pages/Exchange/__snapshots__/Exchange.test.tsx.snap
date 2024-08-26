@@ -566,7 +566,7 @@ exports[`Exchange > should render empty 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -601,17 +601,17 @@ exports[`Exchange > should render empty 1`] = `
         class="css-h27fpz"
       >
         <div
-          class="mx-auto flex items-center justify-between px-10 lg:container"
+          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
         >
           <div
-            class="-mx-6 w-full"
+            class="w-full"
           >
             <div
-              class="h-18 w-full css-y2x3zz"
+              class="flex h-[3.25rem] w-full flex-row gap-6 css-o5113s"
             >
               <button
                 aria-selected="true"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 mr-6 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -624,7 +624,7 @@ exports[`Exchange > should render empty 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -646,10 +646,10 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </nav>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -1232,7 +1232,7 @@ exports[`Exchange > should render with exchanges 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -1267,17 +1267,17 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="css-h27fpz"
       >
         <div
-          class="mx-auto flex items-center justify-between px-10 lg:container"
+          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
         >
           <div
-            class="-mx-6 w-full"
+            class="w-full"
           >
             <div
-              class="h-18 w-full css-y2x3zz"
+              class="flex h-[3.25rem] w-full flex-row gap-6 css-o5113s"
             >
               <button
                 aria-selected="true"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 mr-6 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -1290,7 +1290,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -1312,13 +1312,13 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </nav>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6"
         >
           <div
-            class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"
+            class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
             data-testid="ExchangeGrid"
           >
             <div

@@ -923,7 +923,7 @@ exports[`Appearance Settings > should render appearance settings 1`] = `
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
