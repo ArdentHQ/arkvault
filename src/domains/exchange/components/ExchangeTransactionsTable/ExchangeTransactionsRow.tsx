@@ -159,7 +159,7 @@ export const ExchangeTransactionsRow = ({
 
 			<TableCell
 				className="hidden text-sm xl:table-cell"
-				innerClassName="items-start xl:items-center"
+				innerClassName="items-start xl:items-center font-semibold"
 				isCompact={isCompact}
 			>
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
