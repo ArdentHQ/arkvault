@@ -26,6 +26,7 @@ const AvatarWrapper = styled.div<Properties>`
 			sm: () => tw`w-8 h-8 text-sm`,
 			xl: () => tw`w-16 h-16 text-xl`,
 			xs: () => tw`w-5 h-5 text-sm`,
+			avatarMobile: () => tw`w-[25px] h-[25px] text-sm`,
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
