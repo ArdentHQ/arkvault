@@ -137,7 +137,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 			</ExchangeProvider>,
 		);
 
-		await waitFor(() => expect(container).toHaveTextContent("NA"));
+		await waitFor(() => expect(container).toHaveTextContent("N/A"));
 
 		expect(container).toMatchSnapshot();
 
