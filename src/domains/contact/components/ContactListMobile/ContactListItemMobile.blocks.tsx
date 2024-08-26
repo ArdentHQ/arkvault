@@ -51,7 +51,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 	const network = networkById(address.network());
 
 	return (
-		<div className="flex h-20 items-center justify-between overflow-hidden">
+		<div className="flex h-18 items-center justify-between overflow-hidden">
 			<div
 				className={cn(
 					"flex h-full flex-1 flex-col justify-center overflow-hidden rounded-l-xl px-6 dark:border-2 dark:border-r-0 dark:border-theme-secondary-800 dark:bg-theme-secondary-900",
@@ -61,19 +61,11 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 					},
 				)}
 			>
-				<div className="mb-2 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
+				<div className="mb-2 text-xs font-semibold text-theme-secondary-700 leading-[15px] dark:text-theme-secondary-700">
 					{network && networkDisplayName(network)}
 				</div>
-				<div className="flex items-center space-x-3 overflow-hidden">
-					<Avatar address={address.address()} size="xs" noShadow />
-
-					<Address address={address.address()} />
-
-					<Clipboard variant="icon" data={address.address()}>
-						<div className="text-theme-primary-300 dark:text-theme-secondary-700">
-							<Icon name="Copy" />
-						</div>
-					</Clipboard>
+				<div className="flex items-center overflow-hidden">
+					<Address address={address.address()} showCopyButton />
 				</div>
 			</div>
 			<Tooltip content={sendButtonTooltip}>

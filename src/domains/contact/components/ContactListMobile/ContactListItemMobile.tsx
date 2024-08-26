@@ -8,6 +8,7 @@ import { AvailableNetwork } from "@/domains/contact/pages/Contacts";
 import { AccordionContent, AccordionHeader, AccordionWrapper } from "@/app/components/Accordion";
 import { useAccordion } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
+import { twMerge } from "tailwind-merge";
 
 interface Properties {
 	profile: Contracts.IProfile;
@@ -43,9 +44,9 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 
 	return (
 		<AccordionWrapper>
-			<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick}>
+			<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick} className={twMerge("px-6", isExpanded ? "pt-4 pb-3" : "py-4")}>
 				<div className="flex w-0 flex-grow items-center justify-between space-x-3">
-					<span className="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					<span className="truncate leading-[20px] font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 						{contact.name()}
 					</span>
 
@@ -55,7 +56,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 							toggleContent={
 								<button
 									type="button"
-									className="flex text-theme-primary-300 dark:text-theme-secondary-500"
+									className="flex text-theme-gray-700 dark:text-theme-secondary-500"
 								>
 									<Icon name="EllipsisVerticalFilled" size="lg" />
 								</button>
@@ -70,7 +71,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 			</AccordionHeader>
 
 			{isExpanded && (
-				<AccordionContent>
+				<AccordionContent className="px-6 pb-4">
 					<div data-testid="ContactListItemMobile__addresses" className="w-full space-y-3">
 						{contact.addresses().values().map(renderAddress)}
 					</div>
