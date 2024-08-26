@@ -64,18 +64,22 @@ export const Contacts: FC = () => {
 			{
 				Header: t("COMMON.NAME"),
 				accessor: "name",
+				headerClassName: "no-border",
 				minimumWidth: true,
 			},
 			{
 				Header: t("COMMON.CRYPTOASSET"),
-				className: "justify-center",
+				className: "justify-start",
+				headerClassName: "no-border",
 				minimumWidth: true,
 			},
 			{
 				Header: t("COMMON.ADDRESS"),
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.COPY"),
+				headerClassName: "no-border",
 				minimumWidth: true,
 			},
 			{
@@ -153,7 +157,7 @@ export const Contacts: FC = () => {
 				return (
 					<Section>
 						<div className="w-full" data-testid="ContactList">
-							<Table columns={listColumns} data={filteredContacts}>
+							<Table columns={listColumns} data={filteredContacts} className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border">
 								{renderTableRow}
 							</Table>
 						</div>

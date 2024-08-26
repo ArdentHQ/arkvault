@@ -57,7 +57,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 									type="button"
 									className="flex text-theme-primary-300 dark:text-theme-secondary-500"
 								>
-									<Icon name="EllipsisVertical" />
+									<Icon name="EllipsisVerticalFilled" size="lg" />
 								</button>
 							}
 							options={options}

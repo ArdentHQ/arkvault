@@ -21,7 +21,7 @@ export const ContactListMobile: React.VFC<Properties> = ({
 	onAction,
 	onSend,
 }) => (
-	<div className="mt-8" data-testid="ContactListMobile">
+	<div className="mt-5" data-testid="ContactListMobile">
 		{contacts.map((contact) => (
 			<ContactListItemMobile
 				profile={profile}
