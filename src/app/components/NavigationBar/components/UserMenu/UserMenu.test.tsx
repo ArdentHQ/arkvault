@@ -41,7 +41,7 @@ describe("UserMenu", () => {
 	});
 
 	it("should render the avatar with 25px on mobile", () => {
-		const avatarImage = "<svg></svg>"
+		const avatarImage = "<svg></svg>";
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
 				<UserMenu avatarImage={avatarImage} onUserAction={vi.fn()} />
@@ -51,12 +51,12 @@ describe("UserMenu", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-		
+
 		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 25px");
 	});
 
 	it("should render the avatar with 44px on desktop", () => {
-		const avatarImage = "<svg></svg>"
+		const avatarImage = "<svg></svg>";
 		renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId">
 				<UserMenu avatarImage={avatarImage} onUserAction={vi.fn()} />
@@ -66,7 +66,7 @@ describe("UserMenu", () => {
 				route: `/profiles/${profile.id()}`,
 			},
 		);
-		
+
 		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 2.75rem"); /* same as 44px */
-	})
+	});
 });

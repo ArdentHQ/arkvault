@@ -72,7 +72,7 @@ const NavigationBarLogo: React.FC<NavigationBarLogoOnlyProperties> = ({
 			<button
 				data-testid="NavigationBarLogo--button"
 				type="button"
-				className="my-auto mr-2 sm:mr-4 flex h-8 w-8 sm:h-11 sm:w-11 cursor-pointer items-center justify-center rounded sm:rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+				className="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
 				onClick={() => (onClick ? onClick() : defaultHandler())}
 			>
 				<Logo height={isXs ? 22 : 28} />

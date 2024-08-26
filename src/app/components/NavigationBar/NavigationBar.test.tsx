@@ -170,11 +170,10 @@ describe("NavigationBar", () => {
 
 	it("should render logo with 22 pixels height on mobile", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "xs");
-		
 
 		expect(container).toBeInTheDocument();
 		const button = screen.getByTestId("NavigationBarLogo--button");
-		const svg = within(button).getByRole('img');
+		const svg = within(button).getByRole("img");
 
 		expect(svg).toHaveAttribute("height", "22");
 	});
@@ -184,7 +183,7 @@ describe("NavigationBar", () => {
 
 		expect(container).toBeInTheDocument();
 		const button = screen.getByTestId("NavigationBarLogo--button");
-		const svg = within(button).getByRole('img'); // Assuming the SVG has a role of 'img'
+		const svg = within(button).getByRole("img"); // Assuming the SVG has a role of 'img'
 
 		expect(svg).toHaveAttribute("height", "28");
 	});
