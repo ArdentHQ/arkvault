@@ -114,4 +114,17 @@ describe("ExchangeTransactionsRow", () => {
 
 		expect(onRemove).toHaveBeenCalledWith(exchangeTransaction);
 	});
+
+	it("should render N/A if no orderId", () => {
+		const stubDatWithNoId = { ...stubData, orderId: "" };
+		exchangeTransaction = profile.exchangeTransactions().create(stubDatWithNoId);
+
+		render(
+			<Wrapper>
+				<ExchangeTransactionsRow exchangeTransaction={exchangeTransaction} />
+			</Wrapper>,
+		);
+
+		expect(screen.getByText("N/A")).toBeInTheDocument();
+	});
 });

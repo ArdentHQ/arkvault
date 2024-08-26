@@ -124,6 +124,7 @@ export const ExchangeTransactionsRow = ({
 	onClick,
 	onRemove,
 }: ExchangeTransactionsRowProperties) => {
+	const { t } = useTranslation();
 	const handleRemove = (event: MouseEvent) => {
 		event.preventDefault();
 		event.stopPropagation();
@@ -144,11 +145,17 @@ export const ExchangeTransactionsRow = ({
 						className="h-[17px] w-full max-w-20 cursor-pointer"
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
-						<Address
-							address={exchangeTransaction.orderId()}
-							truncateOnTable
-							addressClass="text-theme-primary-600 text-sm"
-						/>
+						{exchangeTransaction.orderId() ? (
+							<Address
+								address={exchangeTransaction.orderId()}
+								truncateOnTable
+								addressClass="text-theme-primary-600 text-sm"
+							/>
+						) : (
+							<span className="text-sm font-semibold text-theme-secondary-500">
+								{t("COMMON.NOT_AVAILABLE")}
+							</span>
+						)}
 					</button>
 				</Tooltip>
 
