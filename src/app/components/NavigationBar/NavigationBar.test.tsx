@@ -173,14 +173,20 @@ describe("NavigationBar", () => {
 		
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("NavigationBarLogo--button").querySelector("svg")).toHaveAttribute("height", "22");
+		const button = screen.getByTestId("NavigationBarLogo--button");
+		const svg = within(button).getByRole('img');
+
+		expect(svg).toHaveAttribute("height", "22");
 	});
 
 	it("should render logo with 28 pixels height on desktop", () => {
 		const { container } = renderResponsiveWithRoute(<NavigationBar />, "lg");
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("NavigationBarLogo--button").querySelector("svg")).toHaveAttribute("height", "28");
+		const button = screen.getByTestId("NavigationBarLogo--button");
+		const svg = within(button).getByRole('img'); // Assuming the SVG has a role of 'img'
+
+		expect(svg).toHaveAttribute("height", "28");
 	});
 
 	it("should redirect to home by default on logo click", async () => {
