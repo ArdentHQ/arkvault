@@ -285,7 +285,7 @@ exports[`UpdateContact > should render responsive 1`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden p-0 css-1vadyxw"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
@@ -710,7 +710,7 @@ exports[`UpdateContact > should render responsive 2`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden p-0 css-1vadyxw"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
@@ -1179,7 +1179,7 @@ exports[`UpdateContact > should render responsive 3`] = `
                               ARK Devnet
                             </div>
                             <button
-                              class="!p-0 text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden css-1hei9vx"
+                              class="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden p-0 css-1vadyxw"
                               data-testid="contact-form__remove-address-btn-xs"
                               type="button"
                             >
