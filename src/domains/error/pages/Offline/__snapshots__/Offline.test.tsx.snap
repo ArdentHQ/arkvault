@@ -59,7 +59,7 @@ exports[`Offline > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex flex-1 flex-col justify-center !pt-0 text-center css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center !pt-0 text-center css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"

@@ -927,7 +927,7 @@ exports[`General Settings > should disable submit button when profile is not res
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -2925,7 +2925,7 @@ exports[`General Settings > should not update the uploaded avatar when removing 
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -4957,7 +4957,7 @@ exports[`General Settings > should render 1`] = `
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -6955,7 +6955,7 @@ exports[`General Settings > should show identicon when removing image if name is
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -8953,7 +8953,7 @@ exports[`General Settings > should update profile 1`] = `
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -10951,7 +10951,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
@@ -12948,7 +12948,7 @@ exports[`General Settings > should update the avatar when removing focus from na
             class="w-full"
           >
             <div
-              class="-mt-2 lg:mt-0 css-ycib48"
+              class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
                 class="mx-auto px-10 lg:container lg:px-12"
