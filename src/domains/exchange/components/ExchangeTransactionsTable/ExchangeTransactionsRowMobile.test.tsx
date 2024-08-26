@@ -92,7 +92,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
 
-		await userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRow__mobile")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(exchangeTransaction.provider(), exchangeTransaction.orderId());
 	});
@@ -108,7 +108,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 
 		expect(screen.getAllByTestId("TableRow__mobile")).toHaveLength(profile.exchangeTransactions().count());
 
-		await userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[1]);
+		await userEvent.click(within(screen.getAllByTestId("TableRow__mobile")[0]).getAllByRole("button")[0]);
 
 		expect(onRemove).toHaveBeenCalledWith(exchangeTransaction);
 	});
@@ -128,7 +128,7 @@ describe("ExchangeTransactionsRowMobile", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render NA if no orderId", async () => {
+	it("should render N/A if no orderId", async () => {
 		const exchangeTransactionSpy = vi.spyOn(exchangeTransaction, "orderId").mockImplementation(() => null);
 
 		const { container } = render(

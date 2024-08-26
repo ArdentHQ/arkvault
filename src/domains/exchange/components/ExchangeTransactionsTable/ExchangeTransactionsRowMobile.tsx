@@ -125,8 +125,8 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 
 	return (
 		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())} border={false}>
-			<MobileCard data-testid="TableRow__mobile" className="mb-3">
-				<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
+			<MobileCard className="mb-3">
+				<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black" data-testid="TableRow__mobile">
 					<div className="text-sm font-semibold">
 						{exchangeTransaction.orderId() ? (
 							<TruncateMiddle
@@ -150,7 +150,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 						</div>
 						<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
 						<Divider type="vertical" />
-						<TableRemoveButton className="cursor-pointer !p-0" isCompact={true} onClick={handleRemove} />
+						<TableRemoveButton className="cursor-pointer !p-0" isCompact={true} onClick={handleRemove} data-testid="TableRow__mobile-remove-button" />
 					</div>
 				</div>
 
