@@ -112,7 +112,6 @@ describe("ContactListItem", () => {
 			network: "invalid",
 		});
 
-		console.log(contact.addresses().all())
 		renderContactList({ options });
 
 		await userEvent.hover(screen.getAllByTestId('ContactListItem__send-button')[1]);
