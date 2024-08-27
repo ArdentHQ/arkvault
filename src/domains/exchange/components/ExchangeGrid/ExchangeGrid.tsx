@@ -37,7 +37,7 @@ export const ExchangeGrid = ({ exchanges, isLoading, onClick }: ExchangeGridProp
 	return (
 		<div
 			data-testid="ExchangeGrid"
-			className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:gap-5 md:grid-cols-3 xl:grid-cols-4"
+			className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-3 md:gap-5 xl:grid-cols-4"
 		>
 			{exchanges.map((exchange: Exchange) => (
 				<ExchangeCard key={exchange.slug} exchange={exchange} onClick={() => onClick(exchange.slug)} />
