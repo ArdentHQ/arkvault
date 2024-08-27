@@ -10,6 +10,7 @@ import {
 	screen,
 	mockProfileWithPublicAndTestNetworks,
 } from "@/utils/testing-library";
+import { translations } from "@/domains/contact/i18n";
 
 const options = [
 	{ label: "Option 1", value: "option_1" },
@@ -96,6 +97,31 @@ describe("ContactListItem", () => {
 		});
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should show no wallets message", async () => {
+		const contactAddresses = contact
+			.addresses()
+			.values()
+			.map((address) => ({
+				address: address.address(),
+				coin: address.coin(),
+				network: address.network(),
+			}));
+
+		contact.addresses().create({
+			address: "AXtmcoxmKcuKHAivTRc2TJev48WkmnzPuC",
+			coin: "INVALID",
+			network: "invalid",
+		});
+
+		renderContactList({ options });
+
+		await userEvent.hover(screen.getAllByTestId("ContactListItem__send-button")[1]);
+
+		await expect(screen.findByText(translations.VALIDATION.NO_WALLETS)).resolves.toBeVisible();
+
+		profile.contacts().update(contact.id(), { addresses: contactAddresses });
 	});
 
 	it("should render with multiple addresses", () => {

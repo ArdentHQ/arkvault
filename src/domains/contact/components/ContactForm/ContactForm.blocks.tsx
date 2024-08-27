@@ -1,20 +1,17 @@
-import cn from "classnames";
 import { Networks } from "@ardenthq/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { useBreakpoint } from "@/app/hooks";
+import { networkDisplayName } from "@/utils/network-utils";
 
 const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemove }) => {
+	const { t } = useTranslation();
+
 	const { env } = useEnvironmentContext();
-	const { isXs } = useBreakpoint();
 
 	const network = useMemo(
 		() =>
@@ -29,53 +26,55 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 	return (
 		<div
 			data-testid="contact-form__address-list-item"
-			className="flex items-center border-b border-dashed border-theme-secondary-300 py-1 last:border-b-0 last:pb-0 dark:border-theme-secondary-800 sm:py-4"
+			className="mt-2 flex items-center justify-between overflow-hidden rounded border border-theme-secondary-300 bg-white first:mt-0 last:pb-0 dark:border-theme-secondary-800 dark:bg-black sm:mt-0 sm:rounded-none sm:border-x-0 sm:border-b-0 sm:border-t sm:border-dashed sm:bg-transparent sm:py-3 dark:sm:bg-transparent"
 		>
-			<div className="mr-2 sm:mr-4">
-				{isXs ? (
-					<div className="flex items-center space-x-2">
-						<NetworkIcon network={network} size="xs" isCompact />
-						<Avatar address={address.address} size="xs" />
+			<div className="w-full min-w-0">
+				<div className="flex items-center justify-between bg-theme-secondary-100 px-4 py-3 dark:bg-theme-secondary-900 sm:bg-transparent sm:p-0 dark:sm:bg-transparent">
+					<div className="text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-2">
+						{networkDisplayName(network)}
 					</div>
-				) : (
-					<div className="flex items-center -space-x-1">
-						<NetworkIcon network={network} size="lg" />
-						<Avatar address={address.address} size="lg" />
+					<Button
+						data-testid="contact-form__remove-address-btn-xs"
+						size="icon"
+						sizeClassName="p-0"
+						icon="Trash"
+						iconSize="lg"
+						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
+						variant="transparent"
+						onClick={() => onRemove()}
+					/>
+				</div>
+				<div className="px-4 pb-4 pt-3 sm:p-0">
+					<div className="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden">
+						{t("COMMON.ADDRESS")}
 					</div>
-				)}
+					<span className="flex-1 truncate font-semibold">
+						<Address
+							address={address.address}
+							addressClass="text-sm leading-[17px] sm:text-base sm:leading-[20px]"
+						/>
+					</span>
+				</div>
 			</div>
-
-			<span className="flex-1 truncate font-semibold">
-				<Address address={address.address} />
-			</span>
 
 			<Button
 				data-testid="contact-form__remove-address-btn"
 				size="icon"
-				className={cn("flex items-center", isXs ? "text-theme-danger-400" : "flex items-center")}
-				variant={isXs ? "transparent" : "danger"}
+				className="!hidden items-center !p-3.5 sm:!flex"
+				variant="danger"
 				onClick={() => onRemove()}
-			>
-				<Icon name="Trash" />
-			</Button>
+				icon="Trash"
+			/>
 		</div>
 	);
 };
 
-export const AddressList: React.VFC<AddressListProperties> = ({ addresses, onRemove }) => {
-	const { t } = useTranslation();
-
-	return (
-		<div className="group">
-			<span className="inline-block text-sm font-semibold text-theme-secondary-text transition-colors duration-100 group-hover:text-theme-primary-600">
-				{t("CONTACTS.CONTACT_FORM.ADDRESSES")}
-			</span>
-
-			<div data-testid="contact-form__address-list">
-				{addresses.map((address, index) => (
-					<AddressListItem key={index} address={address} onRemove={() => onRemove(address)} />
-				))}
-			</div>
+export const AddressList: React.VFC<AddressListProperties> = ({ addresses, onRemove }) => (
+	<div className="group">
+		<div data-testid="contact-form__address-list">
+			{addresses.map((address, index) => (
+				<AddressListItem key={index} address={address} onRemove={() => onRemove(address)} />
+			))}
 		</div>
-	);
-};
+	</div>
+);

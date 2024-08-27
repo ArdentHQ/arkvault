@@ -414,4 +414,26 @@ describe("ContactForm", () => {
 			expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 		});
 	});
+
+	it("should remove an address in xs screen", async () => {
+		renderResponsive(
+			<ContactForm
+				onChange={onChange}
+				errors={{}}
+				profile={profile}
+				contact={contact}
+				onCancel={onCancel}
+				onSave={onSave}
+			/>,
+			"xs",
+		);
+
+		expect(screen.getAllByTestId(addressListID)).toHaveLength(contact.addresses().count());
+
+		await userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn-xs")[0]);
+
+		await waitFor(() => {
+			expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
+		});
+	});
 });

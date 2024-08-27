@@ -7,11 +7,11 @@ exports[`CreateContact > should render 1`] = `
     data-testid="Modal__overlay"
   >
     <div
-      class="css-1jzz0qm"
+      class="css-nyu9v6"
       tabindex="-1"
     >
       <div
-        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10"
+        class="relative flex min-h-full flex-col overflow-hidden bg-theme-background shadow-2xl sm:mb-0 md:h-auto md:rounded-2.5xl px-10 pb-24 pt-10 sm:pb-10 !p-6 sm:!p-8"
         data-testid="Modal__inner"
       >
         <div
@@ -58,7 +58,7 @@ exports[`CreateContact > should render 1`] = `
           class="relative flex flex-1 flex-col space-y-1.5"
         >
           <h2
-            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl"
+            class="mb-0 mt-1 text-lg font-bold md:pt-0 md:text-2xl !leading-[21px] sm:!leading-[29px]"
           >
             Add Contact
           </h2>
@@ -71,10 +71,10 @@ exports[`CreateContact > should render 1`] = `
               Specify details for the new Contact below.
             </div>
             <div
-              class="mt-8"
+              class="mt-4"
             >
               <form
-                class="space-y-5"
+                class="space-y-0"
                 data-testid="contact-form"
               >
                 <fieldset
@@ -105,7 +105,7 @@ exports[`CreateContact > should render 1`] = `
                   </div>
                 </fieldset>
                 <div
-                  class="css-1t71j9b"
+                  class="!-mx-4 !mt-4 !p-4 css-1t71j9b"
                 >
                   <fieldset
                     class="flex min-w-0 flex-col css-1bcidjh"
@@ -270,7 +270,7 @@ exports[`CreateContact > should render 1`] = `
                   </div>
                 </div>
                 <div
-                  class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t justify-end"
+                  class="flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 justify-end"
                 >
                   <div
                     class="css-j6ajdm"
