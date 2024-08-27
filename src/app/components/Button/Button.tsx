@@ -84,12 +84,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 		return (
 			<button
 				type={type}
-				// variant={variant}
 				ref={reference}
-				// responsiveVariant={responsiveVariant}
-				// showOn={showOn}
-				// roundedClassName={roundedClassName}
-				// sizeClassName={sizeClassName}
 				className={twMerge(initialStyles, sizeClassName, roundedClassName, className)}
 				{...properties}
 			>
