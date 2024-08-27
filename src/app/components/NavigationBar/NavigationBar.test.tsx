@@ -168,6 +168,29 @@ describe("NavigationBar", () => {
 		historySpy.mockRestore();
 	});
 
+	it("should render logo with 22 pixels height on mobile", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar />, "xs");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId("NavigationBarLogo--button");
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
+
+		expect(svg).toHaveAttribute("height", "22");
+	});
+
+	it("should render logo with 28 pixels height on desktop", () => {
+		const { container } = renderResponsiveWithRoute(<NavigationBar />, "lg");
+
+		expect(container).toBeInTheDocument();
+		const button = screen.getByTestId("NavigationBarLogo--button");
+
+		// eslint-disable-next-line testing-library/no-node-access
+		const svg = button.querySelector("svg");
+
+		expect(svg).toHaveAttribute("height", "28");
+	});
+
 	it("should redirect to home by default on logo click", async () => {
 		const { history } = render(<NavigationBar variant="logo-only" />);
 
