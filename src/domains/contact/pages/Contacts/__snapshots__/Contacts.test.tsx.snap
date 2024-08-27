@@ -597,7 +597,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   class="flex items-center text-theme-primary-200"
                 >
                   <div
-                    class="-my-2"
+                    class="relative -my-2"
                     data-testid="HeaderSearchBar"
                   >
                     <div
@@ -610,6 +610,11 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         <div
                           class="flex h-5 items-center gap-2"
                         >
+                          <span
+                            class="hidden md:block"
+                          >
+                            Search
+                          </span>
                           <div
                             class="css-1i4b0eq"
                             height="20"
@@ -658,11 +663,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               </defs>
                             </svg>
                           </div>
-                          <span
-                            class="hidden md:block"
-                          >
-                            Search
-                          </span>
                         </div>
                       </button>
                     </div>
@@ -699,11 +699,11 @@ exports[`Contacts > should render compact on md screen 1`] = `
           class="mx-auto px-10 lg:container"
         >
           <div
-            class="w-full"
+            class="mt-2 w-full"
             data-testid="ContactList"
           >
             <div
-              class="css-1m6rt2i"
+              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -715,7 +715,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     role="row"
                   >
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--0"
                       role="columnheader"
@@ -761,13 +761,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--1"
                       role="columnheader"
                     >
                       <div
-                        class="flex flex-inline align-top justify-center"
+                        class="flex flex-inline align-top justify-start"
                       >
                         <div
                           class=""
@@ -777,7 +777,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
                       colspan="1"
                       data-testid="table__th--2"
                       role="columnheader"
@@ -793,7 +793,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--3"
                       role="columnheader"
@@ -830,7 +830,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -838,7 +838,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -854,34 +854,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -892,20 +871,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                              title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -915,7 +880,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -941,7 +906,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -989,7 +954,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1000,6 +965,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -1017,41 +986,36 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -1064,7 +1028,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1072,7 +1036,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -1088,34 +1052,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -1126,20 +1069,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="40" cy="40" fill="rgb(255, 152, 0)"/><circle r="40" cx="0" cy="50" fill="rgb(255, 87, 34)"/><circle r="35" cx="100" cy="70" fill="rgb(76, 175, 80)"/></svg>"
-                              title="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -1149,7 +1078,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -1175,7 +1104,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1223,7 +1152,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1234,6 +1163,10 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -1251,41 +1184,36 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -1298,7 +1226,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1310,34 +1238,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -1348,20 +1255,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="45" cx="30" cy="50" fill="rgb(244, 67, 54)"/><circle r="35" cx="90" cy="60" fill="rgb(3, 169, 244)"/><circle r="40" cx="100" cy="30" fill="rgb(156, 39, 176)"/></svg>"
-                              title="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -1371,7 +1264,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -1397,7 +1290,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1445,7 +1338,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1473,41 +1366,36 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -1520,7 +1408,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1532,34 +1420,13 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -1570,20 +1437,6 @@ exports[`Contacts > should render compact on md screen 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
-                              title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -1593,7 +1446,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1619,7 +1472,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1667,7 +1520,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1695,41 +1548,36 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -2349,7 +2197,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   class="flex items-center text-theme-primary-200"
                 >
                   <div
-                    class="-my-2"
+                    class="relative -my-2"
                     data-testid="HeaderSearchBar"
                   >
                     <div
@@ -2362,6 +2210,11 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         <div
                           class="flex h-5 items-center gap-2"
                         >
+                          <span
+                            class="hidden md:block"
+                          >
+                            Search
+                          </span>
                           <div
                             class="css-1i4b0eq"
                             height="20"
@@ -2410,11 +2263,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               </defs>
                             </svg>
                           </div>
-                          <span
-                            class="hidden md:block"
-                          >
-                            Search
-                          </span>
                         </div>
                       </button>
                     </div>
@@ -2451,11 +2299,11 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           class="mx-auto px-10 lg:container"
         >
           <div
-            class="w-full"
+            class="mt-2 w-full"
             data-testid="ContactList"
           >
             <div
-              class="css-1m6rt2i"
+              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -2467,7 +2315,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     role="row"
                   >
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--0"
                       role="columnheader"
@@ -2513,13 +2361,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--1"
                       role="columnheader"
                     >
                       <div
-                        class="flex flex-inline align-top justify-center"
+                        class="flex flex-inline align-top justify-start"
                       >
                         <div
                           class=""
@@ -2529,7 +2377,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
                       colspan="1"
                       data-testid="table__th--2"
                       role="columnheader"
@@ -2545,7 +2393,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--3"
                       role="columnheader"
@@ -2582,7 +2430,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2590,7 +2438,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -2606,34 +2454,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -2644,20 +2471,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                              title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -2667,7 +2480,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -2693,7 +2506,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2741,7 +2554,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2752,6 +2565,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -2769,41 +2586,36 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -2816,7 +2628,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2824,7 +2636,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -2840,34 +2652,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -2878,20 +2669,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="40" cy="40" fill="rgb(255, 152, 0)"/><circle r="40" cx="0" cy="50" fill="rgb(255, 87, 34)"/><circle r="35" cx="100" cy="70" fill="rgb(76, 175, 80)"/></svg>"
-                              title="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -2901,7 +2678,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -2927,7 +2704,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2975,7 +2752,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2986,6 +2763,10 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -3003,41 +2784,36 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -3050,7 +2826,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3062,34 +2838,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -3100,20 +2855,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="45" cx="30" cy="50" fill="rgb(244, 67, 54)"/><circle r="35" cx="90" cy="60" fill="rgb(3, 169, 244)"/><circle r="40" cx="100" cy="30" fill="rgb(156, 39, 176)"/></svg>"
-                              title="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -3123,7 +2864,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -3149,7 +2890,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -3197,7 +2938,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -3225,41 +2966,36 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -3272,7 +3008,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     </td>
                   </tr>
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3284,34 +3020,13 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -3322,20 +3037,6 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
-                              title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -3345,7 +3046,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -3371,7 +3072,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -3419,7 +3120,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -3447,41 +3148,36 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -4079,7 +3775,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
             class="flex items-center text-theme-primary-200"
           >
             <div
-              class="-my-2"
+              class="relative -my-2"
               data-testid="HeaderSearchBar"
             >
               <div
@@ -4092,6 +3788,11 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   <div
                     class="flex h-5 items-center gap-2"
                   >
+                    <span
+                      class="hidden md:block"
+                    >
+                      Search
+                    </span>
                     <div
                       class="css-1i4b0eq"
                       height="20"
@@ -4140,11 +3841,6 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                         </defs>
                       </svg>
                     </div>
-                    <span
-                      class="hidden md:block"
-                    >
-                      Search
-                    </span>
                   </div>
                 </button>
               </div>
@@ -4192,14 +3888,14 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         </div>
       </section>
       <div
-        class="mt-8"
+        class="mt-4 sm:mt-6"
         data-testid="ContactListMobile"
       >
         <div
           class="css-fvpuky"
         >
           <div
-            class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
             data-testid="AccordionHeader"
           >
             <div
@@ -4209,7 +3905,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex w-0 flex-grow items-center justify-between space-x-3"
               >
                 <span
-                  class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   Brian
                 </span>
@@ -4223,45 +3919,40 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-500"
+                        class="flex text-theme-secondary-700"
                         type="button"
                       >
                         <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="ellipsis-vertical"
+                            fill="none"
                             viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
-                            y="0"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
                           </svg>
                         </div>
                       </button>
@@ -4312,7 +4003,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           class="css-fvpuky"
         >
           <div
-            class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+            class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
             data-testid="AccordionHeader"
           >
             <div
@@ -4322,7 +4013,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                 class="flex w-0 flex-grow items-center justify-between space-x-3"
               >
                 <span
-                  class="truncate text-lg font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
+                  class="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   Rok
                 </span>
@@ -4336,45 +4027,40 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="flex text-theme-primary-300 dark:text-theme-secondary-500"
+                        class="flex text-theme-secondary-700"
                         type="button"
                       >
                         <div
-                          class="css-v0ob3f"
-                          height="16"
-                          width="16"
+                          class="css-1i4b0eq"
+                          height="20"
+                          width="20"
                         >
                           <svg
-                            id="ellipsis-vertical"
+                            fill="none"
                             viewBox="0 0 20 20"
-                            x="0"
-                            xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg"
-                            y="0"
                           >
-                            <g
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <circle
-                                cx="10"
-                                cy="16.994"
-                                r="2.006"
-                              />
-                              <circle
-                                cx="10"
-                                cy="3"
-                                r="2"
-                              />
-                              <circle
-                                cx="10"
-                                cy="10"
-                                r="2"
-                              />
-                            </g>
+                            <circle
+                              cx="10.002"
+                              cy="2.99609"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 2.99609)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="9.99805"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 9.99805)"
+                            />
+                            <circle
+                              cx="10.002"
+                              cy="17"
+                              fill="currentColor"
+                              r="2"
+                              transform="rotate(90 10.002 17)"
+                            />
                           </svg>
                         </div>
                       </button>
@@ -5024,7 +4710,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   class="flex items-center text-theme-primary-200"
                 >
                   <div
-                    class="-my-2"
+                    class="relative -my-2"
                     data-testid="HeaderSearchBar"
                   >
                     <div
@@ -5037,6 +4723,11 @@ exports[`Contacts > should render with contacts 1`] = `
                         <div
                           class="flex h-5 items-center gap-2"
                         >
+                          <span
+                            class="hidden md:block"
+                          >
+                            Search
+                          </span>
                           <div
                             class="css-1i4b0eq"
                             height="20"
@@ -5085,11 +4776,6 @@ exports[`Contacts > should render with contacts 1`] = `
                               </defs>
                             </svg>
                           </div>
-                          <span
-                            class="hidden md:block"
-                          >
-                            Search
-                          </span>
                         </div>
                       </button>
                     </div>
@@ -5126,11 +4812,11 @@ exports[`Contacts > should render with contacts 1`] = `
           class="mx-auto px-10 lg:container"
         >
           <div
-            class="w-full"
+            class="mt-2 w-full"
             data-testid="ContactList"
           >
             <div
-              class="css-1m6rt2i"
+              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -5142,7 +4828,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     role="row"
                   >
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--0"
                       role="columnheader"
@@ -5188,13 +4874,13 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--1"
                       role="columnheader"
                     >
                       <div
-                        class="flex flex-inline align-top justify-center"
+                        class="flex flex-inline align-top justify-start"
                       >
                         <div
                           class=""
@@ -5204,7 +4890,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
                       colspan="1"
                       data-testid="table__th--2"
                       role="columnheader"
@@ -5220,7 +4906,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
                       colspan="1"
                       data-testid="table__th--3"
                       role="columnheader"
@@ -5257,7 +4943,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -5265,7 +4951,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -5281,34 +4967,13 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -5319,20 +4984,6 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(233, 30, 99)" width="100" height="100"/><circle r="50" cx="60" cy="40" fill="rgb(139, 195, 74)"/><circle r="45" cx="0" cy="30" fill="rgb(0, 188, 212)"/><circle r="40" cx="90" cy="50" fill="rgb(255, 193, 7)"/></svg>"
-                              title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -5342,7 +4993,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -5368,7 +5019,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5416,7 +5067,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5427,6 +5078,10 @@ exports[`Contacts > should render with contacts 1`] = `
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -5444,41 +5099,36 @@ exports[`Contacts > should render with contacts 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -5491,7 +5141,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -5499,7 +5149,7 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 whitespace-nowrap css-5gvahk"
                       >
                         <span
-                          class="font-semibold"
+                          class="text-sm font-semibold leading-[17px]"
                           data-testid="ContactListItem__name"
                         >
                           <span
@@ -5515,34 +5165,13 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -5553,20 +5182,6 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(244, 67, 54)" width="100" height="100"/><circle r="50" cx="40" cy="40" fill="rgb(255, 152, 0)"/><circle r="40" cx="0" cy="50" fill="rgb(255, 87, 34)"/><circle r="35" cx="100" cy="70" fill="rgb(76, 175, 80)"/></svg>"
-                              title="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -5576,7 +5191,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -5602,7 +5217,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5650,7 +5265,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5661,6 +5276,10 @@ exports[`Contacts > should render with contacts 1`] = `
                               </div>
                             </button>
                           </div>
+                          <div
+                            class="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800 css-1aie31u"
+                            type="vertical"
+                          />
                           <div
                             class="visible"
                           >
@@ -5678,41 +5297,36 @@ exports[`Contacts > should render with contacts 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -5725,7 +5339,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-epvetr"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-epvetr"
                     data-testid="TableRow"
                   >
                     <td>
@@ -5737,34 +5351,13 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -5775,20 +5368,6 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(255, 193, 7)" width="100" height="100"/><circle r="45" cx="30" cy="50" fill="rgb(244, 67, 54)"/><circle r="35" cx="90" cy="60" fill="rgb(3, 169, 244)"/><circle r="40" cx="100" cy="30" fill="rgb(156, 39, 176)"/></svg>"
-                              title="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -5798,7 +5377,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -5824,7 +5403,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5872,7 +5451,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5900,41 +5479,36 @@ exports[`Contacts > should render with contacts 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>
@@ -5947,7 +5521,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class=" css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
                     data-testid="TableRow"
                   >
                     <td>
@@ -5959,34 +5533,13 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="justify-center css-12appi5"
+                        class="css-12appi5"
                       >
-                        <div
-                          aria-label="ARK Devnet"
-                          class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
-                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text"
                         >
-                          <div
-                            class="css-1i4b0eq"
-                            data-testid="NetworkIcon__icon"
-                            height="20"
-                            width="20"
-                          >
-                            <svg
-                              id="ark"
-                              viewBox="0 0 36.3 30.6"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                                fill="currentColor"
-                              />
-                            </svg>
-                          </div>
-                        </div>
+                          ARK Devnet
+                        </span>
                       </div>
                     </td>
                     <td
@@ -5997,20 +5550,6 @@ exports[`Contacts > should render with contacts 1`] = `
                         class="space-x-4 css-12appi5"
                       >
                         <div
-                          class="shrink-0 css-1i0wxh3"
-                          data-testid="Avatar"
-                        >
-                          <div
-                            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                          >
-                            <img
-                              alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(3, 169, 244)" width="100" height="100"/><circle r="60" cx="50" cy="30" fill="rgb(139, 195, 74)"/><circle r="40" cx="20" cy="70" fill="rgb(244, 67, 54)"/><circle r="50" cx="0" cy="40" fill="rgb(255, 152, 0)"/></svg>"
-                              title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
-                            />
-                          </div>
-                        </div>
-                        <div
                           class="w-0 flex-1"
                         >
                           <div
@@ -6020,7 +5559,7 @@ exports[`Contacts > should render with contacts 1`] = `
                               class="relative grow text-left"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
                                 data-testid="Address__address"
                               >
                                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -6046,7 +5585,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -6094,7 +5633,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -6122,41 +5661,36 @@ exports[`Contacts > should render with contacts 1`] = `
                                     class="flex items-center space-x-2"
                                   >
                                     <div
-                                      class="css-1i4b0eq"
+                                      class="text-theme-secondary-700 css-1i4b0eq"
                                       height="20"
                                       width="20"
                                     >
                                       <svg
-                                        id="ellipsis-vertical"
+                                        fill="none"
                                         viewBox="0 0 20 20"
-                                        x="0"
-                                        xml:space="preserve"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        y="0"
                                       >
-                                        <g
-                                          fill="none"
-                                          stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="2"
-                                        >
-                                          <circle
-                                            cx="10"
-                                            cy="16.994"
-                                            r="2.006"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="3"
-                                            r="2"
-                                          />
-                                          <circle
-                                            cx="10"
-                                            cy="10"
-                                            r="2"
-                                          />
-                                        </g>
+                                        <circle
+                                          cx="10.002"
+                                          cy="2.99609"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 2.99609)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="9.99805"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 9.99805)"
+                                        />
+                                        <circle
+                                          cx="10.002"
+                                          cy="17"
+                                          fill="currentColor"
+                                          r="2"
+                                          transform="rotate(90 10.002 17)"
+                                        />
                                       </svg>
                                     </div>
                                   </div>

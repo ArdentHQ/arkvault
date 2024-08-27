@@ -50,7 +50,7 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 		}
 	}, [resetFields, handleQueryReset]);
 	return (
-		<div data-testid="HeaderSearchBar" className="-my-2" {...properties}>
+		<div data-testid="HeaderSearchBar" className="relative -my-2" {...properties}>
 			<ControlButton
 				isChanged={!!query}
 				noBorder={noToggleBorder}
@@ -58,8 +58,8 @@ export const HeaderSearchBar: FC<HeaderSearchBarProperties> = ({
 				type="button"
 			>
 				<div className="flex h-5 items-center gap-2">
-					<Icon name="MagnifyingGlassAlt" size="lg" />
 					<span className="hidden md:block">{label}</span>
+					<Icon name="MagnifyingGlassAlt" size="lg" />
 				</div>
 			</ControlButton>
 

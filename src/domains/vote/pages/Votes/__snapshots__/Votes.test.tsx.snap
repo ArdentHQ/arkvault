@@ -601,7 +601,7 @@ exports[`Votes > should filter current delegates 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -614,6 +614,11 @@ exports[`Votes > should filter current delegates 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -662,11 +667,6 @@ exports[`Votes > should filter current delegates 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -2169,7 +2169,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -2182,6 +2182,11 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -2230,11 +2235,6 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -4138,7 +4138,7 @@ exports[`Votes > should render 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -4151,6 +4151,11 @@ exports[`Votes > should render 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -4199,11 +4204,6 @@ exports[`Votes > should render 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -6044,7 +6044,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -6057,6 +6057,11 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -6105,11 +6110,6 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -8671,7 +8671,7 @@ exports[`Votes > should select a delegate 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -8684,6 +8684,11 @@ exports[`Votes > should select a delegate 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -8732,11 +8737,6 @@ exports[`Votes > should select a delegate 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -10573,7 +10573,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -10586,6 +10586,11 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -10634,11 +10639,6 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -11985,7 +11985,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -11998,6 +11998,11 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -12046,11 +12051,6 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -13397,7 +13397,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -13410,6 +13410,11 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -13458,11 +13463,6 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
@@ -14946,7 +14946,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                 class="flex items-center text-theme-primary-200"
               >
                 <div
-                  class="-my-2"
+                  class="relative -my-2"
                   data-testid="HeaderSearchBar"
                 >
                   <div
@@ -14959,6 +14959,11 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       <div
                         class="flex h-5 items-center gap-2"
                       >
+                        <span
+                          class="hidden md:block"
+                        >
+                          Search
+                        </span>
                         <div
                           class="css-1i4b0eq"
                           height="20"
@@ -15007,11 +15012,6 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             </defs>
                           </svg>
                         </div>
-                        <span
-                          class="hidden md:block"
-                        >
-                          Search
-                        </span>
                       </div>
                     </button>
                   </div>
