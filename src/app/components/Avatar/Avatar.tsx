@@ -21,6 +21,7 @@ const AvatarWrapper = styled.div<Properties>`
 
 	${({ size }) => {
 		const sizes = {
+			avatarMobile: () => tw`w-[25px] h-[25px] text-sm`,
 			default: () => tw`w-10 h-10`,
 			lg: () => tw`w-11 h-11 text-sm`,
 			sm: () => tw`w-8 h-8 text-sm`,

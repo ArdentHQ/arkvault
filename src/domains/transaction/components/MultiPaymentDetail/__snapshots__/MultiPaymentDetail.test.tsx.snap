@@ -272,7 +272,7 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1sv81tv"
+                    class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div
@@ -874,7 +874,7 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded pr-1.5 css-1sv81tv"
+                    class="rounded pr-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div
@@ -882,7 +882,7 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                     >
                       <div
                         aria-describedby="tippy-16"
-                        class="flex items-center justify-center bg-[#A56D4C] dark:bg-[#AA6868] text-white -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70 -ml-1.5 px-2"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1510,7 +1510,7 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1sv81tv"
+                    class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div

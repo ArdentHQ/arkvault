@@ -2,7 +2,20 @@ import { TwStyle } from "twin.macro";
 
 export type Color = "info" | "success" | "warning" | "danger" | "hint";
 
-export type Size = "3xs" | "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "icon";
+export type Size =
+	| "3xs"
+	| "2xs"
+	| "xs"
+	| "sm"
+	| "md"
+	| "lg"
+	| "xl"
+	| "2xl"
+	| "3xl"
+	| "4xl"
+	| "5xl"
+	| "icon"
+	| "avatarMobile";
 
 export type LayoutBreakpoint = "sm" | "md" | "lg" | "xl";
 

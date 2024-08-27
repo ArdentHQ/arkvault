@@ -1862,7 +1862,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1sv81tv"
+                    class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div
@@ -3336,7 +3336,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1sv81tv"
+                    class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div
@@ -5239,7 +5239,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1sv81tv"
+                    class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
                   >
                     <div

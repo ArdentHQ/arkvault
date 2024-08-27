@@ -23,7 +23,7 @@ const getColor = (color?: ColorType, variant?: string) => {
 	const colors = {
 		danger: () => tw`text-theme-danger-400 border-theme-danger-100 dark:border-theme-danger-400`,
 		"danger-bg": () =>
-			tw`text-[#A56D4C] bg-[#FBEED6] dark:border dark:text-[#F39B9B] dark:bg-transparent dark:border-[#AA6868]`,
+			tw`text-theme-danger-info-text bg-theme-danger-info-background dark:border dark:bg-transparent dark:border-theme-danger-info-border`,
 		default: () => tw`text-theme-warning-700 border-theme-danger-100 dark:border-theme-warning-700`,
 		neutral: () =>
 			tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`,

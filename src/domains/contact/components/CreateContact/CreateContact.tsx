@@ -36,11 +36,14 @@ export const CreateContact: React.VFC<CreateContactProperties> = ({ profile, onC
 	return (
 		<Modal
 			isOpen
+			size="3xl"
 			title={t("CONTACTS.MODAL_CREATE_CONTACT.TITLE")}
 			description={t("CONTACTS.MODAL_CREATE_CONTACT.DESCRIPTION")}
 			onClose={onClose}
+			contentClassName="!p-6 sm:!p-8"
+			titleClass="!leading-[21px] sm:!leading-[29px]"
 		>
-			<div className="mt-8">
+			<div className="mt-4">
 				<ContactForm
 					profile={profile}
 					onChange={handleChange}

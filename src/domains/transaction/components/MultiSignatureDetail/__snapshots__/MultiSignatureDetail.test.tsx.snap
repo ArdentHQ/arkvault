@@ -206,7 +206,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -790,7 +790,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -1374,7 +1374,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -1932,7 +1932,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -3449,7 +3449,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -4841,7 +4841,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div

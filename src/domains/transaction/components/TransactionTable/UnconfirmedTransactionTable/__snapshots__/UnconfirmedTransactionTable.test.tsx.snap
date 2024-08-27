@@ -196,7 +196,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -311,7 +311,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -531,7 +531,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -646,7 +646,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -774,7 +774,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="rounded px-1.5 css-1sv81tv"
+                  class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
                 >
                   <div
@@ -911,7 +911,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                   Amount
                 </div>
                 <div
-                  class="rounded px-1.5 css-1sv81tv"
+                  class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
                 >
                   <div
@@ -1131,7 +1131,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -1246,7 +1246,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
               >
                 <div
-                  class="rounded px-1.5 css-eif4cp"
+                  class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
                 >
                   <div
@@ -1374,7 +1374,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="rounded px-1.5 css-1sv81tv"
+                  class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
                 >
                   <div
@@ -1511,7 +1511,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                   Amount
                 </div>
                 <div
-                  class="rounded px-1.5 css-1sv81tv"
+                  class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
                 >
                   <div

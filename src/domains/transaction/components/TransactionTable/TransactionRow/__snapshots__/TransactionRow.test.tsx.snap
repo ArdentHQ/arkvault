@@ -192,7 +192,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-eif4cp"
+                class="rounded px-1.5 css-xqt0aw"
                 color="danger-bg"
               >
                 <div
@@ -439,7 +439,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <div
-              class="rounded px-1.5 css-eif4cp"
+              class="rounded px-1.5 css-xqt0aw"
               color="danger-bg"
             >
               <div
@@ -867,7 +867,7 @@ exports[`TransactionRow > should render responsive 1`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1083,7 +1083,7 @@ exports[`TransactionRow > should render responsive 2`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1529,7 +1529,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-eif4cp"
+                class="rounded px-1.5 css-xqt0aw"
                 color="danger-bg"
               >
                 <div

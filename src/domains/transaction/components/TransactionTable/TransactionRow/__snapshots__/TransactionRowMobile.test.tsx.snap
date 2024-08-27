@@ -157,7 +157,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div
@@ -356,7 +356,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div
@@ -573,7 +573,7 @@ exports[`TransactionRowMobile > should render 1`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -789,7 +789,7 @@ exports[`TransactionRowMobile > should render 2`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1847,7 +1847,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div
@@ -2051,7 +2051,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div

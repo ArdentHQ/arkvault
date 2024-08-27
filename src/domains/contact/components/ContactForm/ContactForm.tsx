@@ -116,6 +116,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 		<Form
 			data-testid="contact-form"
 			context={form}
+			className="space-y-0"
 			onSubmit={() =>
 				onSave({
 					addresses,
@@ -133,7 +134,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 				/>
 			</FormField>
 
-			<SubForm>
+			<SubForm className="!-mx-4 !mt-4 !p-4">
 				<FormField name="network">
 					<FormLabel>{t("CONTACTS.CONTACT_FORM.CRYPTOASSET")}</FormLabel>
 					<SelectNetworkDropdown
@@ -171,12 +172,12 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						{t("CONTACTS.CONTACT_FORM.ADD_ADDRESS")}
 					</Button>
 				</div>
+
+				{addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
 			</SubForm>
 
-			{addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
-
 			<div
-				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 sm:border-t ${
+				className={`flex w-full border-0 border-theme-secondary-300 dark:border-theme-secondary-800 ${
 					contact ? "justify-between" : "justify-end"
 				}`}
 			>

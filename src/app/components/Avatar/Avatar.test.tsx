@@ -40,7 +40,7 @@ describe("Avatar", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["xs", "sm", "lg", "xl"])("should render with size", (size) => {
+	it.each(["xs", "sm", "avatarMobile", "lg", "xl"])("should render with size", (size) => {
 		const { asFragment } = render(<Avatar address="abc" size={size as Size} />);
 
 		expect(screen.getByTestId("Avatar")).toBeInTheDocument();

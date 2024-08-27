@@ -167,13 +167,13 @@ exports[`Servers Settings > should render servers settings 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -1497,13 +1497,13 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -3789,13 +3789,13 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5943,13 +5943,13 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -5958,7 +5958,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               >
                 <svg
                   fill="none"
-                  height="28"
+                  height="22"
                   viewBox="0 0 363 363"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -6313,7 +6313,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
+                  class="shrink-0 css-1ha4taj"
                   data-testid="Avatar"
                 >
                   <div
@@ -7689,13 +7689,13 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -9981,13 +9981,13 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -9996,7 +9996,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               >
                 <svg
                   fill="none"
-                  height="28"
+                  height="22"
                   viewBox="0 0 363 363"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -10351,7 +10351,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
+                  class="shrink-0 css-1ha4taj"
                   data-testid="Avatar"
                 >
                   <div
@@ -11865,13 +11865,13 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -11880,7 +11880,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               >
                 <svg
                   fill="none"
-                  height="28"
+                  height="22"
                   viewBox="0 0 363 363"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -12235,7 +12235,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
+                  class="shrink-0 css-1ha4taj"
                   data-testid="Avatar"
                 >
                   <div
@@ -14002,13 +14002,13 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -16279,13 +16279,13 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -16294,7 +16294,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               >
                 <svg
                   fill="none"
-                  height="28"
+                  height="22"
                   viewBox="0 0 363 363"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -16649,7 +16649,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
+                  class="shrink-0 css-1ha4taj"
                   data-testid="Avatar"
                 >
                   <div
@@ -18148,13 +18148,13 @@ exports[`Servers Settings > with unreachable servers > should show status error 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >
@@ -18163,7 +18163,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               >
                 <svg
                   fill="none"
-                  height="28"
+                  height="22"
                   viewBox="0 0 363 363"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -18518,7 +18518,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                 data-testid="UserMenu"
               >
                 <div
-                  class="shrink-0 css-1n9jllj"
+                  class="shrink-0 css-1ha4taj"
                   data-testid="Avatar"
                 >
                   <div

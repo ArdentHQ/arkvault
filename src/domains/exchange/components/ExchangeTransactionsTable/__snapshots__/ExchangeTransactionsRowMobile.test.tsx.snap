@@ -178,7 +178,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -400,7 +400,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -622,7 +622,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -845,7 +845,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -880,7 +880,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                       class="flex space-x-1 items-center"
                     >
                       <div
-                        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white h-5 w-5"
+                        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
                         data-testid="AmountLabel__hint"
                       >
                         <div
@@ -1106,7 +1106,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -1333,7 +1333,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-b0kgb"
+                    class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
                   >
                     <div
@@ -1552,7 +1552,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-b0kgb"
+                class="rounded px-1.5 css-is8euj"
                 color="danger-bg"
               >
                 <div
@@ -1772,7 +1772,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-b0kgb"
+                class="rounded px-1.5 css-is8euj"
                 color="danger-bg"
               >
                 <div
