@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
 import { networkDisplayName } from "@/utils/network-utils";
 
