@@ -100,9 +100,11 @@ describe("Exchange", () => {
 		server.use(requestMock(exchangeBaseURL, { data: [] }));
 		profile.exchangeTransactions().create({ ...stubData, provider: "changelly" });
 
-		const mockTransactionOrderStatus = vi.spyOn(profile.exchangeTransactions().values().at(0), "provider").mockImplementation(() => {
-			throw new Error("Failed to fetch order status");
-		});
+		const mockTransactionOrderStatus = vi
+			.spyOn(profile.exchangeTransactions().values().at(0), "provider")
+			.mockImplementation(() => {
+				throw new Error("Failed to fetch order status");
+			});
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
