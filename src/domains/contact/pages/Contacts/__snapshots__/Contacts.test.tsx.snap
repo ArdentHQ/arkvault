@@ -906,7 +906,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1104,7 +1104,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1290,7 +1290,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -1472,7 +1472,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2506,7 +2506,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2704,7 +2704,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -2890,7 +2890,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -3072,7 +3072,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5019,7 +5019,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5217,7 +5217,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5403,7 +5403,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
@@ -5585,7 +5585,7 @@ exports[`Contacts > should render with contacts 1`] = `
                           type="button"
                         >
                           <div
-                            class="text-theme-secondary-700"
+                            class="text-theme-primary-400 dark:text-theme-secondary-600"
                           >
                             <div
                               class="css-v0ob3f"
