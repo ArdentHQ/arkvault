@@ -27,7 +27,15 @@ export const mainsailDevnetHandlers = [
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
+	...endpoints.map((endpoint) =>
+		rest.get(`https://dwallets-evm.mainsailhq.com/api${endpoint.path}`, (_, response, context) => {
+			return response(context.status(200), context.json(endpoint.data));
+		}),
+	),
 	rest.get("https://dwallets.mainsailhq.com/", (_, response, context) => {
+		return response(context.status(200), context.json({ data: "Hello World!" }));
+	}),
+	rest.get("https://dwallets-evm.mainsailhq.com/", (_, response, context) => {
 		return response(context.status(200), context.json({ data: "Hello World!" }));
 	}),
 	rest.get("https://dwallets.mainsailhq.com/api/wallets/:identifier", (request, response, context) => {
