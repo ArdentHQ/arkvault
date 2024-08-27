@@ -4,7 +4,6 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { NetworkOptionLabel } from "./SelectNetworkDropdown.blocks";
 import { Select, OptionProperties } from "@/app/components/SelectDropdown";
 import { networksAsOptions } from "@/utils/network-utils";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 interface SelectNetworkDropdownProperties {
 	networks?: Networks.Network[];
@@ -28,13 +27,6 @@ export const SelectNetworkDropdown = React.forwardRef<HTMLInputElement, SelectNe
 				renderLabel={(properties) => <NetworkOptionLabel network={findById(properties.value)} />}
 				onChange={(option?: OptionProperties) => onChange?.(findById(option?.value))}
 				ref={reference}
-				addons={{
-					start: {
-						content: selectedNetwork && (
-							<NetworkIcon network={selectedNetwork} showTooltip={false} isCompact />
-						),
-					},
-				}}
 			/>
 		);
 	},
