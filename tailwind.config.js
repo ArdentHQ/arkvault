@@ -138,6 +138,10 @@ module.exports = {
 			"theme-navy-700": "var(--theme-color-navy-700)",
 			"theme-navy-800": "var(--theme-color-navy-800)",
 			"theme-navy-900": "var(--theme-color-navy-900)",
+
+			"theme-danger-info-text": "var(--theme-danger-info-text)",
+			"theme-danger-info-background": "var(--theme-danger-info-background)",
+			"theme-danger-info-border": "var(--theme-danger-info-border)",
 		},
 		extend: {
 			lineHeight: {

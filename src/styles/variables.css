@@ -88,6 +88,10 @@
 
 	--theme-shadow-color: 0, 0, 0;
 
+	--theme-danger-info-text: #A56D4C;
+	--theme-danger-info-background: #FBEED6;
+	--theme-danger-info-border: #F6DFB5;
+
 	--theme-shadow-opacity-xs: 0.05;
 	--theme-shadow-opacity-sm: 0.05;
 	--theme-shadow-opacity-base-primary: 0.1;
@@ -125,6 +129,9 @@
 	--theme-scrollbar-hover-color: var(--theme-color-secondary-700);
 
 	--theme-shadow-color: 18, 18, 19;
+
+	--theme-danger-info-text: #F39B9B;
+	--theme-danger-info-border: #AA6868;
 
 	--theme-shadow-opacity-xs: 0.6;
 	--theme-shadow-opacity-sm: 0.6;
