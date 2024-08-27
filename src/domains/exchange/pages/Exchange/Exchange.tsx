@@ -169,7 +169,7 @@ export const Exchange = () => {
 					onChange={handleViewChange}
 				/>
 
-				<Section className="pt-2" innerClassName="px-6">
+				<Section className="pt-2" innerClassName="px-6 lg:px-10">
 					{renderContent()}
 				</Section>
 			</Page>
