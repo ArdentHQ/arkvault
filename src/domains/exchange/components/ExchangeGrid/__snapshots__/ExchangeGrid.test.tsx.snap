@@ -3,7 +3,7 @@
 exports[`ExchangeGrid > should render 1`] = `
 <DocumentFragment>
   <div
-    class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:gap-5 md:grid-cols-3 xl:grid-cols-4"
+    class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-3 md:gap-5 xl:grid-cols-4"
     data-testid="ExchangeGrid"
   >
     <div
@@ -16,7 +16,7 @@ exports[`ExchangeGrid > should render 1`] = `
           type="button"
         >
           <div
-            class="flex flex-col items-center md:flex-row gap-3"
+            class="flex flex-col items-center gap-3 md:flex-row"
           >
             <div
               class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
@@ -31,7 +31,7 @@ exports[`ExchangeGrid > should render 1`] = `
               class="flex flex-col truncate"
             >
               <div
-                class="truncate text-sm md:text-lg font-semibold link"
+                class="truncate text-sm font-semibold md:text-lg link"
               >
                 ChangeNOW
               </div>
