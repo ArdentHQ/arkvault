@@ -73,10 +73,14 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 						type="button"
 						disabled={sendIsDisabled}
 						onClick={onSend}
-						className={cn("flex h-full items-center justify-center px-3 bg-theme-primary-100 dark:bg-theme-secondary-900", {
-							"hover:text-white hover:bg-theme-primary-700 dark:hover:text-theme-secondary-200 dark:hover:bg-theme-secondary-800 dark:text-theme-secondary-600": !sendIsDisabled,
-							"text-theme-secondary-500 dark:text-theme-secondary-800": sendIsDisabled,
-						})}
+						className={cn(
+							"flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900",
+							{
+								"hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200":
+									!sendIsDisabled,
+								"text-theme-secondary-500 dark:text-theme-secondary-800": sendIsDisabled,
+							},
+						)}
 					>
 						<Icon size="lg" name="DoubleArrowRight" />
 					</button>
