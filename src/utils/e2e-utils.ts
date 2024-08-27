@@ -48,6 +48,8 @@ const pingServerUrls = new Set([
 	"https://ark-test.arkvault.io/api/wallets?limit=1&nonce=0",
 	"https://dwallets.mainsailhq.com/",
 	"https://dwallets.mainsailhq.com",
+	"https://dwallets-evm.mainsailhq.com/",
+	"https://dwallets-evm.mainsailhq.com",
 ]);
 
 const pingMusigServerUrls = new Set([
@@ -296,6 +298,16 @@ export const requestMocks = {
 		mockRequest("https://dwallets.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
 		mockRequest("https://dwallets.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
 		mockRequest("https://dwallets.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
+		// Mainsail devnet (evm)
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
+			"coins/mainsail/devnet/cryptoConfiguration",
+		),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/fees", "coins/mainsail/devnet/node-fees"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/syncing", "coins/mainsail/devnet/syncing"),
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
 	],
 	delegates: [
 		// devnet
@@ -311,6 +323,8 @@ export const requestMocks = {
 
 		// Mainsail Devnet
 		mockRequest("https://dwallets.mainsailhq.com/api/delegates", "coins/mainsail/devnet/delegates"),
+		// Mainsail Devnet (evm)
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/delegates", "coins/mainsail/devnet/delegates"),
 	],
 	exchange: [
 		mockRequest(
@@ -482,6 +496,39 @@ export const requestMocks = {
 
 		mockRequest(
 			"https://dwallets.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		// Mainsail Devnet (evm)
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=10&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			{ data: [], meta: {} },
+		),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+			transactionsFixture,
+		),
+
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
 			transactionsFixture,
 		),
 
