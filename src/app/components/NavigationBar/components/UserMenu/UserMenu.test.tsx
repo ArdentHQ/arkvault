@@ -3,7 +3,7 @@ import React from "react";
 
 import { Route } from "react-router-dom";
 import { UserMenu } from "@/app/components/NavigationBar/components/UserMenu/UserMenu";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsiveWithRoute, screen } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("UserMenu", () => {
@@ -38,5 +38,35 @@ describe("UserMenu", () => {
 		);
 
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render the avatar with 25px on mobile", () => {
+		const avatarImage = "<svg></svg>";
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId">
+				<UserMenu avatarImage={avatarImage} onUserAction={vi.fn()} />
+			</Route>,
+			"xs",
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 25px");
+	});
+
+	it("should render the avatar with 44px on desktop", () => {
+		const avatarImage = "<svg></svg>";
+		renderResponsiveWithRoute(
+			<Route path="/profiles/:profileId">
+				<UserMenu avatarImage={avatarImage} onUserAction={vi.fn()} />
+			</Route>,
+			"lg",
+			{
+				route: `/profiles/${profile.id()}`,
+			},
+		);
+
+		expect(screen.getByTestId("Avatar")).toHaveStyle("width: 2.75rem"); /* same as 44px */
 	});
 });
