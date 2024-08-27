@@ -44,13 +44,13 @@ exports[`Second Signature Registration > should register second signature 1`] = 
           </button>
         </div>
         <div
-          class="flex flex-1 items-center px-8"
+          class="flex flex-1 items-center px-6 sm:px-8"
         >
           <div
             class="my-auto flex items-center"
           >
             <button
-              class="my-auto mr-4 flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400"
+              class="my-auto mr-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-theme-primary-600 text-white outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 sm:mr-4 sm:h-11 sm:w-11 sm:rounded-xl"
               data-testid="NavigationBarLogo--button"
               type="button"
             >

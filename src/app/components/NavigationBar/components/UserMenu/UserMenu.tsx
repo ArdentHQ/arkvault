@@ -6,7 +6,7 @@ import { Avatar } from "@/app/components/Avatar";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem, UserMenuProperties } from "@/app/components/NavigationBar";
 import { getUserMenuActions } from "@/app/constants/navigation";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useBreakpoint } from "@/app/hooks";
 import { useConfiguration } from "@/app/contexts";
 
 export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, userInitials }) => {
@@ -17,6 +17,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 	const profile = useActiveProfile();
 
 	const { profileIsSyncingExchangeRates } = useConfiguration();
+	const { isXs } = useBreakpoint();
 
 	const renderAvatar = useCallback(
 		(isOpen: boolean) => (
@@ -24,7 +25,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 				className="relative cursor-pointer items-center justify-center rounded-full align-middle"
 				data-testid="UserMenu"
 			>
-				<Avatar size="lg" highlight={isOpen}>
+				<Avatar size={isXs ? "avatarMobile" : "lg"} highlight={isOpen}>
 					{avatarImage.endsWith("</svg>") ? (
 						<>
 							<img alt="Profile Avatar" src={`data:image/svg+xml;utf8,${avatarImage}`} />
@@ -35,7 +36,7 @@ export const UserMenu: FC<UserMenuProperties> = ({ onUserAction, avatarImage, us
 					) : (
 						<img
 							alt="Profile Avatar"
-							className="h-11 w-11 rounded-full bg-cover bg-center bg-no-repeat object-cover"
+							className="h-[25px] w-[25px] rounded-full bg-cover bg-center bg-no-repeat object-cover sm:h-11 sm:w-11"
 							src={avatarImage}
 						/>
 					)}
