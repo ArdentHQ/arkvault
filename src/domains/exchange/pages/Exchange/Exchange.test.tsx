@@ -96,6 +96,38 @@ describe("Exchange", () => {
 		profile.exchangeTransactions().flush();
 	});
 
+	it("should prevent from throwing if order status request fails", async () => {
+		server.use(requestMock(exchangeBaseURL, { data: [] }));
+		const exchangeTransaction = profile.exchangeTransactions().create({ ...stubData, provider: "changelly" });
+
+		const mockTransactionOrderStatus = vi.spyOn(profile.exchangeTransactions().values().at(0), "provider").mockImplementation(() => {
+			throw new Error("Failed to fetch order status");
+		});
+
+		const { container } = render(
+			<Route path="/profiles/:profileId/exchange">
+				<ExchangeProvider>
+					<Exchange />
+				</ExchangeProvider>
+			</Route>,
+			{
+				history,
+				route: exchangeURL,
+			},
+		);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
+		});
+
+		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
+
+		await waitFor(() => {
+			expect(screen.getByTestId("ExchangeGrid__empty-message")).toBeInTheDocument();
+		});
+
+	});
+
 	it("should render empty", async () => {
 		server.use(requestMock(exchangeBaseURL, { data: [] }));
 
