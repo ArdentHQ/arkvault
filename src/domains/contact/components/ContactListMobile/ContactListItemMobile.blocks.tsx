@@ -49,10 +49,10 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 	const network = networkById(address.network());
 
 	return (
-		<div className="flex h-18 items-center justify-between overflow-hidden">
+		<div className="flex h-18 items-center justify-between overflow-hidden rounded-xl dark:border-2 dark:border-theme-secondary-800">
 			<div
 				className={cn(
-					"flex h-full flex-1 flex-col justify-center overflow-hidden rounded-l-xl px-6 dark:border-2 dark:border-r-0 dark:border-theme-secondary-800 dark:bg-theme-secondary-900",
+					"flex h-full flex-1 flex-col justify-center overflow-hidden px-6 dark:bg-theme-secondary-900",
 					{
 						"bg-theme-primary-100": !sendIsDisabled,
 						"bg-theme-secondary-100": sendIsDisabled,
@@ -73,10 +73,9 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 						type="button"
 						disabled={sendIsDisabled}
 						onClick={onSend}
-						className={cn("flex h-full items-center justify-center rounded-r-xl px-3", {
-							"bg-theme-primary-600 text-white hover:bg-theme-primary-700": !sendIsDisabled,
-							"bg-theme-secondary-200 text-theme-secondary-500 dark:bg-theme-secondary-800 dark:text-theme-secondary-700":
-								sendIsDisabled,
+						className={cn("flex h-full items-center justify-center px-3 bg-theme-primary-100 dark:bg-theme-secondary-900", {
+							"hover:text-white hover:bg-theme-primary-700 dark:hover:text-theme-secondary-200 dark:hover:bg-theme-secondary-800 dark:text-theme-secondary-600": !sendIsDisabled,
+							"text-theme-secondary-500 dark:text-theme-secondary-800": sendIsDisabled,
 						})}
 					>
 						<Icon size="lg" name="DoubleArrowRight" />
