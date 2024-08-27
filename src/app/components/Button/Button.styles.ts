@@ -1,17 +1,11 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import {
-	ButtonVariant,
-	LayoutBreakpoint,
-	ResponsiveButtonVariant,
-	Size,
-	Theme,
-} from "@/types";
+import { ButtonVariant, LayoutBreakpoint, ResponsiveButtonVariant, Size, Theme } from "@/types";
 
 const getBaseStyle = (showOn?: LayoutBreakpoint, roundedClassName?: string) => {
 	const baseStyle: string[] = [
 		`relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
 		`focus:outline-none focus:ring-2 focus:ring-theme-primary-400`,
-		`disabled:cursor-not-allowed`
+		`disabled:cursor-not-allowed`,
 	];
 
 	if (!roundedClassName) {
