@@ -51,7 +51,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
     >
       <div
         aria-describedby="tippy-2"
-        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-theme-primary-700 dark:text-white h-5 w-5"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -126,7 +126,7 @@ exports[`AmountLabel > should render with hint 1`] = `
     >
       <div
         aria-describedby="tippy-1"
-        class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-theme-primary-700 dark:text-white -ml-1.5 px-2"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
         data-testid="AmountLabel__hint"
       >
         <div

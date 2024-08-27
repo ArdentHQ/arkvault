@@ -70,7 +70,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -108,7 +108,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -314,7 +314,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -352,7 +352,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -549,7 +549,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -587,7 +587,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -784,7 +784,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -806,7 +806,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                 class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -856,7 +856,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -886,7 +886,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
                 class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -1088,7 +1088,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1126,7 +1126,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1328,7 +1328,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1366,7 +1366,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1rgfvlu"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1568,7 +1568,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-ih2125"
+              class="rounded px-1.5 css-xqt0aw"
               color="danger-bg"
             >
               <div
@@ -1606,7 +1606,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-ih2125"
+              class="rounded px-1.5 css-xqt0aw"
               color="danger-bg"
             >
               <div

@@ -882,7 +882,7 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                     >
                       <div
                         aria-describedby="tippy-16"
-                        class="flex items-center justify-center bg-theme-danger-info-border text-theme-danger-info-text dark:text-white -ml-1.5 px-2"
+                        class="flex items-center justify-center bg-theme-danger-info-border text-theme-danger-info-text dark:text-white/70 -ml-1.5 px-2"
                         data-testid="AmountLabel__hint"
                       >
                         <div

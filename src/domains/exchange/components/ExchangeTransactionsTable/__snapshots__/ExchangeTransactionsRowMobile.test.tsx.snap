@@ -63,7 +63,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -269,7 +269,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -466,7 +466,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -663,7 +663,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -694,7 +694,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                 class="flex space-x-1 items-stretch"
               >
                 <div
-                  class="flex items-center justify-center bg-theme-success-500 dark:bg-theme-success-700 text-white -ml-1.5 px-2"
+                  class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
                   data-testid="AmountLabel__hint"
                 >
                   <div
@@ -895,7 +895,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -1097,7 +1097,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
               From
             </div>
             <div
-              class="rounded px-1.5 css-2jxf7m"
+              class="rounded px-1.5 css-autge5"
               color="danger-bg"
             >
               <div
@@ -1291,7 +1291,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
           From
         </div>
         <div
-          class="rounded px-1.5 css-2jxf7m"
+          class="rounded px-1.5 css-autge5"
           color="danger-bg"
         >
           <div
@@ -1486,7 +1486,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
           From
         </div>
         <div
-          class="rounded px-1.5 css-2jxf7m"
+          class="rounded px-1.5 css-autge5"
           color="danger-bg"
         >
           <div
