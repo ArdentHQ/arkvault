@@ -35,11 +35,11 @@ interface AmountLabelProperties {
 
 export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint, size }) => {
 	let labelColor = "success-bg";
-	let hintClassName = "bg-theme-success-500 dark:bg-theme-success-700 text-white";
+	let hintClassName = "bg-theme-success-500 dark:bg-theme-success-700 text-theme-primary-700 dark:text-white";
 
 	if (isNegative) {
 		labelColor = "danger-bg";
-		hintClassName = "bg-[#A56D4C] dark:bg-[#AA6868] text-white";
+		hintClassName = "bg-theme-danger-info-border text-theme-danger-info-text dark:text-white";
 	}
 
 	if (value === 0) {
