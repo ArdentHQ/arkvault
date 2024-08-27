@@ -44,9 +44,13 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 
 	return (
 		<AccordionWrapper>
-			<AccordionHeader isExpanded={isExpanded} onClick={handleHeaderClick} className={twMerge("px-6", isExpanded ? "pt-4 pb-3" : "py-4")}>
+			<AccordionHeader
+				isExpanded={isExpanded}
+				onClick={handleHeaderClick}
+				className={twMerge("px-6", isExpanded ? "pb-3 pt-4" : "py-4")}
+			>
 				<div className="flex w-0 flex-grow items-center justify-between space-x-3">
-					<span className="truncate leading-[20px] font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
+					<span className="truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
 						{contact.name()}
 					</span>
 
@@ -54,10 +58,7 @@ export const ContactListItemMobile: React.VFC<Properties> = ({
 						<Dropdown
 							dropdownClass="mx-4 sm:mx-0"
 							toggleContent={
-								<button
-									type="button"
-									className="flex text-theme-gray-700 dark:text-theme-secondary-500"
-								>
+								<button type="button" className="flex text-theme-secondary-700">
 									<Icon name="EllipsisVerticalFilled" size="lg" />
 								</button>
 							}

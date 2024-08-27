@@ -61,7 +61,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 					},
 				)}
 			>
-				<div className="mb-2 text-xs font-semibold text-theme-secondary-700 leading-[15px] dark:text-theme-secondary-700">
+				<div className="mb-2 text-xs font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-700">
 					{network && networkDisplayName(network)}
 				</div>
 				<div className="flex items-center overflow-hidden">

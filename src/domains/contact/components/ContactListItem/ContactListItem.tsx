@@ -4,12 +4,11 @@ import { useTranslation } from "react-i18next";
 
 import cn from "classnames";
 import {
+	ContactListItemAddressProperties,
 	ContactListItemOption,
 	ContactListItemProperties,
-	ContactListItemAddressProperties,
 } from "./ContactListItem.contracts";
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
@@ -38,29 +37,12 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	const { t } = useTranslation();
 
 	const renderName = useCallback(() => {
-		const name = (
+		return (
 			<span className="text-sm font-semibold leading-[17px]" data-testid="ContactListItem__name">
 				<TruncateEnd text={item.name()} maxChars={22} />
 			</span>
 		);
-
-		if (isCompact) {
-			return name;
-		}
-
-		return (
-			<>
-				<Avatar data-testid="ContactListItem__user--avatar" size="lg" noShadow>
-					<img src={`data:image/svg+xml;utf8,${item.avatar()}`} title={item.name()} alt={item.name()} />
-					<span className="absolute text-sm font-semibold text-theme-background">
-						{item.name().slice(0, 2).toUpperCase()}
-					</span>
-				</Avatar>
-
-				{name}
-			</>
-		);
-	}, [isCompact, item]);
+	}, [item]);
 
 	const borderClasses = () =>
 		isLast ? "" : "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
@@ -117,7 +99,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center" isCompact={isCompact}>
 				<Clipboard variant="icon" data={address.address()}>
-					<div className="text-theme-primary-400 dark:text-theme-secondary-700">
+					<div className="text-theme-secondary-700">
 						<Icon name="Copy" />
 					</div>
 				</Clipboard>
@@ -162,7 +144,11 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 										"text-theme-primary-300 hover:text-theme-primary-600": isCompact,
 									})}
 								>
-									<Icon name="EllipsisVerticalFilled" size="lg" />
+									<Icon
+										name="EllipsisVerticalFilled"
+										size="lg"
+										className="text-theme-secondary-700"
+									/>
 								</Button>
 							}
 							options={options}

@@ -156,7 +156,7 @@ export const Contacts: FC = () => {
 			if (isMdAndAbove) {
 				return (
 					<Section>
-						<div className="w-full mt-2" data-testid="ContactList">
+						<div className="mt-2 w-full" data-testid="ContactList">
 							<Table
 								columns={listColumns}
 								data={filteredContacts}

@@ -93,7 +93,11 @@ export const AccordionHeader: React.VFC<AccordionHeaderProperties> = ({
 };
 
 export const AccordionContent: React.VFC<AccordionContentProperties> = ({ children, className, ...properties }) => (
-	<div data-testid="AccordionContent" className={twMerge("px-8 pb-6 md:px-4 md:pb-0 md:pt-6", className)} {...properties}>
+	<div
+		data-testid="AccordionContent"
+		className={twMerge("px-8 pb-6 md:px-4 md:pb-0 md:pt-6", className)}
+		{...properties}
+	>
 		{children}
 	</div>
 );
