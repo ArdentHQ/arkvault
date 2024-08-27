@@ -441,7 +441,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2024,7 +2024,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -4239,7 +4239,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -6790,7 +6790,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -8059,7 +8059,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -9880,7 +9880,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -11149,7 +11149,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -12418,7 +12418,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"

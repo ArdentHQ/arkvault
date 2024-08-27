@@ -144,7 +144,7 @@ exports[`Header > should render with title suffix 1`] = `
 exports[`PageHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"

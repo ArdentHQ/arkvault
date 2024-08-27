@@ -561,7 +561,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -693,7 +693,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         </div>
       </div>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2313,7 +2313,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2445,7 +2445,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         </div>
       </div>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -4988,7 +4988,7 @@ exports[`Contacts > should render with contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -5120,7 +5120,7 @@ exports[`Contacts > should render with contacts 1`] = `
         </div>
       </div>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -6740,7 +6740,7 @@ exports[`Contacts > should render without contacts 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+        class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -6789,7 +6789,7 @@ exports[`Contacts > should render without contacts 1`] = `
         </div>
       </div>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
