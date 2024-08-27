@@ -1296,7 +1296,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -2688,7 +2688,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div

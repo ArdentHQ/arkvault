@@ -1173,7 +1173,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -1523,7 +1523,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="rounded px-1.5 css-eif4cp"
+                                      class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
                                     >
                                       <div
@@ -7522,7 +7522,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -8791,7 +8791,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -9141,7 +9141,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="rounded px-1.5 css-eif4cp"
+                                      class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
                                     >
                                       <div
@@ -9256,7 +9256,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="rounded px-1.5 css-eif4cp"
+                                      class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
                                     >
                                       <div
@@ -10612,7 +10612,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -11881,7 +11881,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
@@ -13150,7 +13150,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded px-1.5 css-1sv81tv"
+                            class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
                           >
                             <div
