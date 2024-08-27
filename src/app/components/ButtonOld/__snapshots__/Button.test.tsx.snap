@@ -1,0 +1,365 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > should render 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render a large one 1`] = `
+<div>
+  <button
+    class="css-zwdx25"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render a small one 1`] = `
+<div>
+  <button
+    class="css-11obbc3"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render an icon 1`] = `
+<div>
+  <button
+    class="css-3b1lp4"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as danger button 1`] = `
+<div>
+  <button
+    class="css-15yk9k4"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as info button 1`] = `
+<div>
+  <button
+    class="css-ieez7y"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as primary button 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as reverse button 1`] = `
+<div>
+  <button
+    class="css-1j9j5h6"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as secondary button 1`] = `
+<div>
+  <button
+    class="css-6419sw"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as transparent button 1`] = `
+<div>
+  <button
+    class="css-i9zlwr"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render as warning button 1`] = `
+<div>
+  <button
+    class="css-sbyv6u"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button > should render if disabled 1`] = `
+<DocumentFragment>
+  <button
+    class="css-qrwjsp"
+    data-testid="Button"
+    disabled=""
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      Click
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button > should render loading with icon 1`] = `
+<div>
+  <button
+    class="css-3b1lp4"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="invisible flex items-center space-x-2"
+        >
+          <div
+            class="css-v0ob3f"
+            height="16"
+            width="16"
+          />
+        </span>
+        <div
+          class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+        >
+          <div
+            class="css-1nn240v"
+          />
+        </div>
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button > should render with icon and custom icon size 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="css-1i4b0eq"
+        height="20"
+        width="20"
+      >
+        <svg
+          id="plus"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M1 10h18M10 1v18"
+            />
+          </g>
+        </svg>
+      </div>
+      Click Me
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button > should render with icon on the left side 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg
+          id="plus"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M1 10h18M10 1v18"
+            />
+          </g>
+        </svg>
+      </div>
+      Click Me
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button > should render with icon on the right side 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      Click Me
+      <div
+        class="css-v0ob3f"
+        height="16"
+        width="16"
+      >
+        <svg
+          id="plus"
+          viewBox="0 0 20 20"
+          x="0"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          >
+            <path
+              d="M1 10h18M10 1v18"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button > should render with loading state enabled 1`] = `
+<div>
+  <button
+    class="css-fl4fi0"
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span
+          class="invisible flex items-center space-x-2"
+        >
+          Click Me
+        </span>
+        <div
+          class="absolute left-0 top-0 flex h-full w-full items-center justify-center"
+        >
+          <div
+            class="css-1nn240v"
+          />
+        </div>
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Button > should render with theme 1`] = `
+<DocumentFragment>
+  <button
+    class="css-1rfc421"
+    data-testid="Button"
+    disabled=""
+    type="button"
+  >
+    <div
+      class="flex items-center space-x-2"
+    >
+      Click
+    </div>
+  </button>
+</DocumentFragment>
+`;

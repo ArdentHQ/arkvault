@@ -1,11 +1,10 @@
 import React from "react";
+import { styled } from "twin.macro";
 
 import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
 import { ButtonVariant, ResponsiveButtonVariant, LayoutBreakpoint, Size, Theme } from "@/types";
-import {twMerge} from "tailwind-merge";
-import {useTheme} from "@/app/hooks";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;
@@ -21,6 +20,8 @@ type ButtonProperties = {
 	showOn?: LayoutBreakpoint;
 	isCompact?: boolean;
 } & React.ButtonHTMLAttributes<any>;
+
+const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 	(
@@ -68,33 +69,22 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			);
 		};
 
-		const { theme } = useTheme();
-
-		const initialStyles = getStyles({
-			responsiveVariant,
-			roundedClassName,
-			showOn,
-			sizeClassName,
-			theme,
-			variant,
-		})
-
-		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
+		const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
 
 		return (
-			<button
+			<StyledButton
 				type={type}
-				// variant={variant}
+				variant={variant}
 				ref={reference}
-				// responsiveVariant={responsiveVariant}
-				// showOn={showOn}
-				// roundedClassName={roundedClassName}
-				// sizeClassName={sizeClassName}
-				className={twMerge(initialStyles, sizeClassName, roundedClassName, className)}
+				responsiveVariant={responsiveVariant}
+				showOn={showOn}
+				roundedClassName={roundedClassName}
+				sizeClassName={sizeClassName}
+				className={getClassName()}
 				{...properties}
 			>
 				<div className="flex items-center space-x-2">{renderContent()}</div>
-			</button>
+			</StyledButton>
 		);
 	},
 );
