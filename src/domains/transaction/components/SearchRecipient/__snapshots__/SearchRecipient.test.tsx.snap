@@ -193,7 +193,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -206,6 +206,11 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -254,11 +259,6 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -615,7 +615,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -628,6 +628,11 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -676,11 +681,6 @@ exports[`SearchRecipient > should render a modal 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1035,7 +1035,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1048,6 +1048,11 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1096,11 +1101,6 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1455,7 +1455,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1468,6 +1468,11 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1516,11 +1521,6 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -2096,7 +2096,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -2109,6 +2109,11 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -2157,11 +2162,6 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -2737,7 +2737,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -2750,6 +2750,11 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -2798,11 +2803,6 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3078,7 +3078,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3091,6 +3091,11 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3139,11 +3144,6 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3498,7 +3498,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3511,6 +3511,11 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3559,11 +3564,6 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -4286,7 +4286,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -4299,6 +4299,11 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -4347,11 +4352,6 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
