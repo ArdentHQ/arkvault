@@ -38,12 +38,12 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 						data-testid="contact-form__remove-address-btn-xs"
 						size="icon"
 						sizeClassName="p-0"
+						icon="Trash"
+						iconSize="lg"
 						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
 						variant="transparent"
 						onClick={() => onRemove()}
-					>
-						<Icon name="Trash" size="lg" />
-					</Button>
+					/>
 				</div>
 				<div className="px-4 pb-4 pt-3 sm:p-0">
 					<div className="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden">
@@ -64,9 +64,8 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 				className="!hidden items-center !p-3.5 sm:!flex"
 				variant="danger"
 				onClick={() => onRemove()}
-			>
-				<Icon name="Trash" />
-			</Button>
+				icon="Trash"
+			/>
 		</div>
 	);
 };
