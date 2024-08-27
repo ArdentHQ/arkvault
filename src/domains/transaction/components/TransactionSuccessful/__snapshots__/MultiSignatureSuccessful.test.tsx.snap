@@ -1000,7 +1000,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -1870,7 +1870,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -2697,7 +2697,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div
@@ -3541,7 +3541,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -4368,7 +4368,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               <div
-                class="rounded px-1.5 css-1sv81tv"
+                class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
               >
                 <div
@@ -5212,7 +5212,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -5902,7 +5902,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
@@ -6592,7 +6592,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             class="flex items-center font-semibold"
           >
             <div
-              class="rounded px-1.5 css-1sv81tv"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
             >
               <div
