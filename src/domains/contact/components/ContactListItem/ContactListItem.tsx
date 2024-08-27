@@ -36,13 +36,14 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 	const { t } = useTranslation();
 
-	const renderName = useCallback(() => {
-		return (
+	const renderName = useCallback(
+		() => (
 			<span className="text-sm font-semibold leading-[17px]" data-testid="ContactListItem__name">
 				<TruncateEnd text={item.name()} maxChars={22} />
 			</span>
-		);
-	}, [item]);
+		),
+		[item],
+	);
 
 	const borderClasses = () =>
 		isLast ? "" : "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
