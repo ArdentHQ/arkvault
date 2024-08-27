@@ -193,7 +193,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -206,6 +206,11 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -254,11 +259,6 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -621,7 +621,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -634,6 +634,11 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -682,11 +687,6 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1049,7 +1049,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1062,6 +1062,11 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1110,11 +1115,6 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1475,7 +1475,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1488,6 +1488,11 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1536,11 +1541,6 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -2845,7 +2845,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -2858,6 +2858,11 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -2906,11 +2911,6 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3191,7 +3191,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3204,6 +3204,11 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3252,11 +3257,6 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3617,7 +3617,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3630,6 +3630,11 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3678,11 +3683,6 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -4091,7 +4091,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -4104,6 +4104,11 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -4152,11 +4157,6 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -4593,7 +4593,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -4606,6 +4606,11 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -4654,11 +4659,6 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -5095,7 +5095,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -5108,6 +5108,11 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -5156,11 +5161,6 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -5595,7 +5595,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -5608,6 +5608,11 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -5656,11 +5661,6 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -7039,7 +7039,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7052,6 +7052,11 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -7100,11 +7105,6 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -7445,7 +7445,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7458,6 +7458,11 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -7506,11 +7511,6 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -7945,7 +7945,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7958,6 +7958,11 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -8006,11 +8011,6 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
