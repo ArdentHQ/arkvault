@@ -300,7 +300,10 @@ export const requestMocks = {
 		mockRequest("https://dwallets.mainsailhq.com/api/peers", "coins/mainsail/devnet/peers"),
 		// Mainsail devnet (evm)
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -500,7 +503,10 @@ export const requestMocks = {
 		),
 
 		// Mainsail Devnet (evm)
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions/fees",
+			"coins/mainsail/devnet/transaction-fees",
+		),
 
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=10&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
