@@ -13,7 +13,7 @@ exports[`ExchangeCard > should render 1`] = `
         type="button"
       >
         <div
-          class="flex flex-col items-center space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+          class="flex flex-col items-center md:flex-row gap-3"
         >
           <div
             class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
@@ -28,7 +28,7 @@ exports[`ExchangeCard > should render 1`] = `
             class="flex flex-col truncate"
           >
             <div
-              class="truncate text-lg font-semibold link"
+              class="truncate text-sm md:text-lg font-semibold link"
             >
               ChangeNOW
             </div>
@@ -56,7 +56,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
         type="button"
       >
         <div
-          class="flex flex-col items-center space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+          class="flex flex-col items-center md:flex-row gap-3"
         >
           <div
             class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
@@ -71,7 +71,7 @@ exports[`ExchangeCard > should render when the exchange is not active 1`] = `
             class="flex flex-col truncate"
           >
             <div
-              class="truncate text-lg font-semibold text-theme-primary-100 dark:text-theme-secondary-800"
+              class="truncate text-sm md:text-lg font-semibold text-theme-primary-100 dark:text-theme-secondary-800"
             >
               ChangeNOW
             </div>
