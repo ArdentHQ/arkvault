@@ -2,7 +2,7 @@
 import {
 	ButtonVariant,
 	LayoutBreakpoint,
-	ResponsiveButtonVariant, ResponsiveButtonVariantStyles,
+	ResponsiveButtonVariant,
 	Size,
 	Theme,
 } from "@/types";
@@ -32,18 +32,6 @@ const getBaseStyle = (showOn?: LayoutBreakpoint, roundedClassName?: string) => {
 	}
 
 	return baseStyle;
-};
-
-const getResponsiveVariant = (
-	responsiveStyles: ResponsiveButtonVariantStyles,
-	breakpoint?: LayoutBreakpoint,
-	defaultStyle?: string,
-) => {
-	if (breakpoint !== undefined) {
-		return responsiveStyles[breakpoint];
-	}
-
-	return defaultStyle;
 };
 
 const getVariant = (
@@ -82,34 +70,17 @@ const getVariant = (
 			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500
 			focus:ring-theme-danger-300
 		`,
-		"danger-icon": (breakpoint?: LayoutBreakpoint) => {
-			const responsive: {
-				[key in LayoutBreakpoint]?: string;
-			} = {
-				md: `
-					md:text-theme-danger-400 md:bg-transparent
-					md:dark:(text-theme-danger-400 bg-transparent)
-					md:hover:(text-theme-danger-500 bg-transparent dark:text-theme-danger-500 dark:bg-transparent)
-					md:focus:ring-theme-danger-300
-				`,
-			};
-
-			return getResponsiveVariant(
-				responsive,
-				breakpoint,
-				`
+		"danger-icon": () => `
 				text-theme-danger-400 bg-transparent
 				dark:text-theme-danger-400 dark:bg-transparent
-				hover:(text-theme-danger-500 bg-transparent)
+				hover:text-theme-danger-500 hover:bg-transparent
 				focus:ring-theme-danger-300
 			`,
-			);
-		},
 		default: () => `border-none`,
 		info: () => `
 			bg-theme-info-100 text-theme-info-600
-			dark:(bg-theme-info-600 text-white)
-			hover:(bg-theme-info-700 text-white)
+			dark:bg-theme-info-600 dark:text-white
+			hover:bg-theme-info-700 hover:text-white
 			focus:ring-theme-info-300
 		`,
 		primary: () => `text-white bg-theme-primary-600 hover:bg-theme-primary-700`,
@@ -125,8 +96,8 @@ const getVariant = (
 				`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
-			dark:(bg-theme-warning-600 text-white)
-			hover:(bg-theme-warning-700 text-white)
+			dark:bg-theme-warning-600 dark:text-white
+			hover:bg-theme-warning-700 hover:text-white
 			focus:ring-theme-warning-300
 		`,
 	};
@@ -141,7 +112,7 @@ const getVariant = (
 			continue;
 		}
 
-		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants](breakpoint);
+		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants]();
 		variantStyle.push(breakpointVariantStyle);
 	}
 
