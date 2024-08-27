@@ -6,11 +6,11 @@ exports[`Transactions > should fetch more transactions 1`] = `
     class="mb-8 hidden md:block"
   >
     <div
-      class="h-15 w-full css-1c7zzpv"
+      class="h-15 w-full css-rw43kq"
     >
       <button
         aria-selected="true"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -23,7 +23,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -36,7 +36,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"
@@ -14470,11 +14470,11 @@ exports[`Transactions > should hide view more button when there are no next page
     class="mb-8 hidden md:block"
   >
     <div
-      class="h-15 w-full css-1c7zzpv"
+      class="h-15 w-full css-rw43kq"
     >
       <button
         aria-selected="true"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -14487,7 +14487,7 @@ exports[`Transactions > should hide view more button when there are no next page
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -14500,7 +14500,7 @@ exports[`Transactions > should hide view more button when there are no next page
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"
@@ -21911,11 +21911,11 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     class="mb-8 hidden md:block"
   >
     <div
-      class="h-15 w-full css-1c7zzpv"
+      class="h-15 w-full css-rw43kq"
     >
       <button
         aria-selected="true"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-all"
         role="tab"
@@ -21928,7 +21928,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-received"
         role="tab"
@@ -21941,7 +21941,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-sent"
         role="tab"
