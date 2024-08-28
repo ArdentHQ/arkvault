@@ -14451,7 +14451,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
     </div>
   </div>
   <button
-    class="mb-5 mt-10 w-full css-6419sw"
+    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white mb-5 mt-10 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >
@@ -21892,7 +21892,7 @@ exports[`Transactions > should hide view more button when there are no next page
     </div>
   </div>
   <button
-    class="mb-5 mt-10 w-full css-6419sw"
+    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white mb-5 mt-10 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >
@@ -29333,7 +29333,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
     </div>
   </div>
   <button
-    class="mb-5 mt-10 w-full css-6419sw"
+    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white mb-5 mt-10 w-full"
     data-testid="transactions__fetch-more-button"
     type="button"
   >

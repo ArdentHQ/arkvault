@@ -83,7 +83,7 @@ exports[`Add Participant item > should render 1`] = `
         class="w-full sm:w-auto"
       >
         <button
-          class="w-full sm:w-auto css-15yk9k4"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:w-auto"
           data-testid="AddParticipantItem--deleteButton"
           type="button"
         >
