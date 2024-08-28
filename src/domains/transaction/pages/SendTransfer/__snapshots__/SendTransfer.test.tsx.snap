@@ -1559,7 +1559,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           </div>
                         </button>
                         <button
-                          class="css-fl4fi0"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -2230,7 +2230,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-qrwjsp"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -4466,7 +4466,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   </div>
                 </button>
                 <button
-                  class="css-qrwjsp"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="StepNavigation__continue-button"
                   disabled=""
                   type="button"
@@ -9292,7 +9292,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           </div>
                         </button>
                         <button
-                          class="css-fl4fi0"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
