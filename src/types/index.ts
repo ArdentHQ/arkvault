@@ -1,5 +1,3 @@
-import { TwStyle } from "twin.macro";
-
 export type Color = "info" | "success" | "warning" | "danger" | "hint";
 
 export type Size =
@@ -56,5 +54,5 @@ export interface TransactionFees {
 	isDynamic?: boolean;
 }
 export type ResponsiveButtonVariantStyles = {
-	[key in LayoutBreakpoint]?: TwStyle;
+	[key in LayoutBreakpoint]?: string;
 };

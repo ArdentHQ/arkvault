@@ -245,7 +245,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-4 w-full"
         type="button"
       >
         <div
@@ -336,7 +336,7 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -633,7 +633,7 @@ exports[`Add Participant > should fail to find 1`] = `
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-4 w-full"
         type="button"
       >
         <div
@@ -724,7 +724,7 @@ exports[`Add Participant > should fail to find 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -1042,7 +1042,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-4 w-full"
         type="button"
       >
         <div
@@ -1122,7 +1122,7 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -1419,7 +1419,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-4 w-full"
         type="button"
       >
         <div
@@ -1510,7 +1510,7 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -1807,7 +1807,7 @@ exports[`Add Participant > should handle exception on find and show address not 
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-6419sw"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-4 w-full"
         type="button"
       >
         <div
@@ -1898,7 +1898,7 @@ exports[`Add Participant > should handle exception on find and show address not 
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -2095,7 +2095,7 @@ exports[`Add Participant > should render custom participants 1`] = `
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-qrwjsp"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
         disabled=""
         type="button"
       >
@@ -2176,7 +2176,7 @@ exports[`Add Participant > should render custom participants 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-15yk9k4"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             type="button"
           >
@@ -2372,7 +2372,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
         </div>
       </fieldset>
       <button
-        class="my-4 w-full css-qrwjsp"
+        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-4 w-full"
         disabled=""
         type="button"
       >
@@ -2464,7 +2464,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             disabled=""
             type="button"
@@ -2593,7 +2593,7 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
           class="w-full sm:w-auto"
         >
           <button
-            class="w-full sm:w-auto css-15yk9k4"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:w-auto"
             data-testid="AddParticipantItem--deleteButton"
             type="button"
           >

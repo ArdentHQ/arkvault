@@ -248,7 +248,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex items-center ml-auto flex-grow sm:flex-grow-0 css-15yk9k4"
+                  class="px-5 py-3 space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex items-center ml-auto flex-grow sm:flex-grow-0"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -709,7 +709,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 >
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -757,7 +757,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -1052,7 +1052,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-grow"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1088,7 +1088,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-15yk9k4"
+                  class="px-5 py-3 space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex items-center"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -1531,7 +1531,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -1568,7 +1568,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -1616,7 +1616,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -1922,7 +1922,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 flex-grow"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -1958,7 +1958,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-15yk9k4"
+                  class="px-5 py-3 space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex items-center"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -2412,7 +2412,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -2449,7 +2449,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -2497,7 +2497,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -2803,7 +2803,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 flex-grow"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -2839,7 +2839,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-15yk9k4"
+                  class="px-5 py-3 space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex items-center"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -3293,7 +3293,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -3330,7 +3330,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -3378,7 +3378,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -4939,7 +4939,7 @@ exports[`Signed Transaction Table > should render different status > should show
                 class="flex items-center justify-between space-x-4"
               >
                 <button
-                  class="flex-grow css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-grow"
                   data-testid="TransactionRow__sign"
                   type="button"
                 >
@@ -4975,7 +4975,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </div>
                 </button>
                 <button
-                  class="flex items-center css-15yk9k4"
+                  class="px-5 py-3 space-x-3 text-base relative justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex items-center"
                   data-testid="SignedTransactionRowMobile--remove"
                   type="button"
                 >
@@ -5428,7 +5428,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -5465,7 +5465,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -5513,7 +5513,7 @@ exports[`Signed Transaction Table > should render different status > should show
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -6971,7 +6971,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -7008,7 +7008,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -7056,7 +7056,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -7514,7 +7514,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                 >
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -7562,7 +7562,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -8618,7 +8618,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -8655,7 +8655,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   </button>
                   <div>
                     <button
-                      class="css-15yk9k4"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                       data-testid="TableRemoveButton"
                       type="button"
                     >
@@ -8703,7 +8703,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700 css-1vly8o8"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white px-2 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
                         type="button"
                       >
                         <div
@@ -9160,7 +9160,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="hidden space-x-3 xl:flex"
                 >
                   <button
-                    class="text-theme-primary-600 hover:text-theme-primary-700 undefined css-13bs0gg"
+                    class="px-3 py-2 space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700 undefined"
                     data-testid="TransactionRow__sign"
                     type="button"
                   >
@@ -9197,7 +9197,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   </button>
                   <div>
                     <button
-                      class="css-1it5mhj"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent"
                       data-testid="TableRemoveButton--compact"
                       type="button"
                     >
@@ -9245,7 +9245,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                       data-testid="dropdown__toggle"
                     >
                       <button
-                        class="px-2 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none px-2 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                         type="button"
                       >
                         <div

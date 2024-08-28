@@ -4,21 +4,21 @@ import { useTranslation } from "react-i18next";
 
 import cn from "classnames";
 import {
+	ContactListItemAddressProperties,
 	ContactListItemOption,
 	ContactListItemProperties,
-	ContactListItemAddressProperties,
 } from "./ContactListItem.contracts";
 import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { TruncateEnd } from "@/app/components/TruncateEnd";
 import { useNetworks } from "@/app/hooks";
+import { networkDisplayName } from "@/utils/network-utils";
+import { Divider } from "@/app/components/Divider";
 
 const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	profile,
@@ -36,30 +36,14 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 
 	const { t } = useTranslation();
 
-	const renderName = useCallback(() => {
-		const name = (
-			<span className="font-semibold" data-testid="ContactListItem__name">
+	const renderName = useCallback(
+		() => (
+			<span className="text-sm font-semibold leading-[17px]" data-testid="ContactListItem__name">
 				<TruncateEnd text={item.name()} maxChars={22} />
 			</span>
-		);
-
-		if (isCompact) {
-			return name;
-		}
-
-		return (
-			<>
-				<Avatar data-testid="ContactListItem__user--avatar" size="lg" noShadow>
-					<img src={`data:image/svg+xml;utf8,${item.avatar()}`} title={item.name()} alt={item.name()} />
-					<span className="absolute text-sm font-semibold text-theme-background">
-						{item.name().slice(0, 2).toUpperCase()}
-					</span>
-				</Avatar>
-
-				{name}
-			</>
-		);
-	}, [isCompact, item]);
+		),
+		[item],
+	);
 
 	const borderClasses = () =>
 		isLast ? "" : "border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800";
@@ -88,13 +72,19 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	}, [hasBalance, profileAvailableNetworks]);
 
 	return (
-		<TableRow key={`${address.address()}-${index}`} border={isLast}>
+		<TableRow
+			key={`${address.address()}-${index}`}
+			border={isLast}
+			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+		>
 			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap" isCompact={isCompact}>
 				{index === 0 && renderName()}
 			</TableCell>
 
-			<TableCell className={borderClasses()} innerClassName="justify-center" isCompact={isCompact}>
-				<NetworkIcon network={network} size="lg" noShadow isCompact={isCompact} />
+			<TableCell className={borderClasses()} isCompact={isCompact}>
+				<span className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text">
+					{networkDisplayName(network)}
+				</span>
 			</TableCell>
 
 			<TableCell
@@ -103,16 +93,14 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 				innerClassName="space-x-4"
 				isCompact={isCompact}
 			>
-				<Avatar address={address.address()} size={isCompact ? "xs" : "lg"} noShadow />
-
 				<div className="w-0 flex-1">
-					<Address address={address.address()} truncateOnTable />
+					<Address address={address.address()} truncateOnTable addressClass="text-sm leading-[17px]" />
 				</div>
 			</TableCell>
 
 			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center" isCompact={isCompact}>
 				<Clipboard variant="icon" data={address.address()}>
-					<div className="text-theme-primary-300 dark:text-theme-secondary-700">
+					<div className="text-theme-primary-400 dark:text-theme-secondary-600">
 						<Icon name="Copy" />
 					</div>
 				</Clipboard>
@@ -126,7 +114,8 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 								size={isCompact ? "icon" : undefined}
 								variant={isCompact ? "transparent" : "secondary"}
 								className={cn({
-									"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
+									"text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700":
+										isCompact,
 								})}
 								data-testid="ContactListItem__send-button"
 								onClick={() => onSend(address)}
@@ -136,6 +125,13 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 							</Button>
 						</div>
 					</Tooltip>
+
+					{index === 0 && (
+						<Divider
+							type="vertical"
+							className="height-[17px] !m-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+						/>
+					)}
 
 					<div className={index === 0 ? "visible" : "invisible"}>
 						<Dropdown
@@ -149,7 +145,11 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 										"text-theme-primary-300 hover:text-theme-primary-600": isCompact,
 									})}
 								>
-									<Icon name="EllipsisVertical" size="lg" />
+									<Icon
+										name="EllipsisVerticalFilled"
+										size="lg"
+										className="text-theme-secondary-700"
+									/>
 								</Button>
 							}
 							options={options}

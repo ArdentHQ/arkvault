@@ -289,7 +289,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -301,7 +301,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
         </button>
       </div>
       <button
-        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -347,7 +347,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -715,7 +715,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -727,7 +727,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
         </button>
       </div>
       <button
-        class="my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+        class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none my-auto ml-3 bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
         data-testid="WalletHeader__locked-balance-button"
         type="button"
       >
@@ -773,7 +773,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1070,7 +1070,7 @@ exports[`WalletHeader > should render 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1092,7 +1092,7 @@ exports[`WalletHeader > should render 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1395,7 +1395,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -1417,7 +1417,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -1739,7 +1739,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-1rfc421"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-800 disabled:text-theme-secondary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           disabled=""
           type="button"
@@ -1762,7 +1762,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -2091,7 +2091,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2113,7 +2113,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -2442,7 +2442,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2464,7 +2464,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -2822,7 +2822,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -2844,7 +2844,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div
@@ -3111,7 +3111,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       </div>
       <div>
         <button
-          class="bg-theme-dark-500 my-auto ml-3 css-fl4fi0"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 my-auto ml-3"
           data-testid="WalletHeader__send-button"
           type="button"
         >
@@ -3133,7 +3133,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
             data-testid="dropdown__toggle"
           >
             <button
-              class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
               type="button"
             >
               <div

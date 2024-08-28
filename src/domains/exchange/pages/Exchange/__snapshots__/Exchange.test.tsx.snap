@@ -13,7 +13,7 @@ exports[`Exchange > should render empty 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -54,7 +54,7 @@ exports[`Exchange > should render empty 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -91,7 +91,7 @@ exports[`Exchange > should render empty 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -303,7 +303,7 @@ exports[`Exchange > should render empty 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -356,7 +356,7 @@ exports[`Exchange > should render empty 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -415,7 +415,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -463,7 +463,7 @@ exports[`Exchange > should render empty 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -566,7 +566,7 @@ exports[`Exchange > should render empty 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -601,17 +601,17 @@ exports[`Exchange > should render empty 1`] = `
         class="css-h27fpz"
       >
         <div
-          class="mx-auto flex items-center justify-between px-10 lg:container"
+          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
         >
           <div
-            class="-mx-6 w-full"
+            class="w-full"
           >
             <div
-              class="h-18 w-full css-y2x3zz"
+              class="flex h-[3.25rem] w-full flex-row gap-6 css-o5113s"
             >
               <button
                 aria-selected="true"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 mr-6 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -624,7 +624,7 @@ exports[`Exchange > should render empty 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -646,10 +646,10 @@ exports[`Exchange > should render empty 1`] = `
         </div>
       </nav>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6 lg:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -679,7 +679,7 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -720,7 +720,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -757,7 +757,7 @@ exports[`Exchange > should render with exchanges 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -969,7 +969,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1022,7 +1022,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1081,7 +1081,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -1129,7 +1129,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -1232,7 +1232,7 @@ exports[`Exchange > should render with exchanges 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -1267,17 +1267,17 @@ exports[`Exchange > should render with exchanges 1`] = `
         class="css-h27fpz"
       >
         <div
-          class="mx-auto flex items-center justify-between px-10 lg:container"
+          class="mx-auto flex items-center justify-between px-6 lg:container md:px-10"
         >
           <div
-            class="-mx-6 w-full"
+            class="w-full"
           >
             <div
-              class="h-18 w-full css-y2x3zz"
+              class="flex h-[3.25rem] w-full flex-row gap-6 css-o5113s"
             >
               <button
                 aria-selected="true"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 mr-6 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-EXCHANGES"
                 role="tab"
@@ -1290,7 +1290,7 @@ exports[`Exchange > should render with exchanges 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="ring-focus css-0 tab-button"
+                class="ring-focus m-0 css-0 tab-button"
                 data-ring-focus-margin="-mx-3"
                 data-testid="tabs__tab-button-TRANSACTIONS"
                 role="tab"
@@ -1312,13 +1312,13 @@ exports[`Exchange > should render with exchanges 1`] = `
         </div>
       </nav>
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 pt-2 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-10 lg:container px-6 lg:px-10"
         >
           <div
-            class="grid w-full grid-cols-2 gap-4.5 sm:grid-cols-3"
+            class="grid w-full grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-3 md:gap-5 xl:grid-cols-4"
             data-testid="ExchangeGrid"
           >
             <div
@@ -1331,7 +1331,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex flex-col items-center space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+                    class="flex flex-col items-center gap-3 md:flex-row"
                   >
                     <div
                       class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
@@ -1346,7 +1346,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="flex flex-col truncate"
                     >
                       <div
-                        class="truncate text-lg font-semibold link"
+                        class="truncate text-sm font-semibold md:text-lg link"
                       >
                         ChangeNOW
                       </div>
@@ -1368,7 +1368,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                   type="button"
                 >
                   <div
-                    class="flex flex-col items-center space-y-3 md:flex-row md:space-x-3 md:space-y-0"
+                    class="flex flex-col items-center gap-3 md:flex-row"
                   >
                     <div
                       class="h-11 w-11 shrink-0 overflow-hidden rounded-lg"
@@ -1383,7 +1383,7 @@ exports[`Exchange > should render with exchanges 1`] = `
                       class="flex flex-col truncate"
                     >
                       <div
-                        class="truncate text-lg font-semibold link"
+                        class="truncate text-sm font-semibold md:text-lg link"
                       >
                         Changelly
                       </div>

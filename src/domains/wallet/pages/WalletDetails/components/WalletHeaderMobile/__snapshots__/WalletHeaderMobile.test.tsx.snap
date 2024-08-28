@@ -198,7 +198,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
     class="mt-6 flex items-center space-x-3"
   >
     <button
-      class="bg-theme-dark-500 my-auto flex-1 css-fl4fi0"
+      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white hover:bg-theme-primary-700 bg-theme-dark-500 my-auto flex-1"
       data-testid="WalletHeaderMobile__send-button"
       type="button"
     >
@@ -219,7 +219,7 @@ exports[`WalletHeaderMobile > should render 1`] = `
           data-testid="dropdown__toggle"
         >
           <button
-            class="bg-theme-secondary-800 text-white hover:bg-theme-primary-700 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none bg-theme-secondary-800 text-white hover:bg-theme-primary-700"
             type="button"
           >
             <div

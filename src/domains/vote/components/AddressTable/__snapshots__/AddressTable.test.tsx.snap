@@ -3,7 +3,7 @@
 exports[`AddressTable > should render 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -434,7 +434,7 @@ exports[`AddressTable > should render 1`] = `
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -460,7 +460,7 @@ exports[`AddressTable > should render 1`] = `
 exports[`AddressTable > should render when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -848,7 +848,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -874,7 +874,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
 exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -1227,7 +1227,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >

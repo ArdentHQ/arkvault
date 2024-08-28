@@ -18,7 +18,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -193,7 +193,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -206,6 +206,11 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -254,11 +259,6 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -329,7 +329,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -401,7 +401,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -446,7 +446,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -621,7 +621,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -634,6 +634,11 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -682,11 +687,6 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -757,7 +757,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -829,7 +829,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -874,7 +874,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1049,7 +1049,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1062,6 +1062,11 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1110,11 +1115,6 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1184,7 +1184,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
-                              class="text-theme-primary-reverse-600 -mr-3 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-reverse-600 -mr-3"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -1255,7 +1255,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -1300,7 +1300,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -1475,7 +1475,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -1488,6 +1488,11 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -1536,11 +1541,6 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -1611,7 +1611,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -1683,7 +1683,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -1728,7 +1728,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2042,7 +2042,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2356,7 +2356,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2670,7 +2670,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -2845,7 +2845,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -2858,6 +2858,11 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -2906,11 +2911,6 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -2970,7 +2970,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-qrwjsp"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -3016,7 +3016,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3191,7 +3191,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3204,6 +3204,11 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3252,11 +3257,6 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3326,7 +3326,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
                           >
                             <button
-                              class="text-theme-primary-reverse-600 css-1j9j5h6"
+                              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300 text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -3397,7 +3397,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3442,7 +3442,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -3617,7 +3617,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -3630,6 +3630,11 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -3678,11 +3683,6 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -3753,7 +3753,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -3825,7 +3825,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -3870,7 +3870,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4091,7 +4091,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -4104,6 +4104,11 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -4152,11 +4157,6 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -4241,7 +4241,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -4327,7 +4327,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4372,7 +4372,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -4593,7 +4593,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -4606,6 +4606,11 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -4654,11 +4659,6 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -4743,7 +4743,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -4829,7 +4829,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -4874,7 +4874,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5095,7 +5095,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -5108,6 +5108,11 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -5156,11 +5161,6 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -5244,7 +5244,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
-                              class="text-theme-primary-reverse-600 -mr-3 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-reverse-600 -mr-3"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -5329,7 +5329,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-1hei9vx"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -5374,7 +5374,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -5595,7 +5595,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -5608,6 +5608,11 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -5656,11 +5661,6 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -5745,7 +5745,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -5831,7 +5831,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -5876,7 +5876,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6190,7 +6190,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6504,7 +6504,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -6818,7 +6818,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7039,7 +7039,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7052,6 +7052,11 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -7100,11 +7105,6 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -7178,7 +7178,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 -mr-3 css-5e9bdv"
+                                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 -mr-3"
                                 data-testid="SearchWalletListItem__select-0"
                                 disabled=""
                                 type="button"
@@ -7224,7 +7224,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7445,7 +7445,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7458,6 +7458,11 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -7506,11 +7511,6 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -7594,7 +7594,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
                           >
                             <button
-                              class="text-theme-primary-reverse-600 css-1j9j5h6"
+                              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300 text-theme-primary-reverse-600"
                               data-testid="SearchWalletListItem__selected-0"
                               type="button"
                             >
@@ -7679,7 +7679,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
@@ -7724,7 +7724,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
           class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
         >
           <button
-            class="h-8 w-8 css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
             data-testid="Modal__close-button"
             type="button"
           >
@@ -7945,7 +7945,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                               class=""
                             >
                               <div
-                                class="-my-2"
+                                class="relative -my-2"
                                 data-testid="HeaderSearchBar"
                               >
                                 <div
@@ -7958,6 +7958,11 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                     <div
                                       class="flex h-5 items-center gap-2"
                                     >
+                                      <span
+                                        class="hidden md:block"
+                                      >
+                                        Search
+                                      </span>
                                       <div
                                         class="css-1i4b0eq"
                                         height="20"
@@ -8006,11 +8011,6 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                           </defs>
                                         </svg>
                                       </div>
-                                      <span
-                                        class="hidden md:block"
-                                      >
-                                        Search
-                                      </span>
                                     </div>
                                   </button>
                                 </div>
@@ -8095,7 +8095,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-0"
                                 type="button"
                               >
@@ -8181,7 +8181,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           >
                             <div>
                               <button
-                                class="text-theme-primary-600 css-6419sw"
+                                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-theme-primary-600"
                                 data-testid="SearchWalletListItem__select-1"
                                 type="button"
                               >
