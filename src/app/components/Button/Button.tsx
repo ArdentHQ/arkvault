@@ -38,6 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			size,
 			theme,
 			isCompact,
+			disabled,
 			className,
 			...properties
 		}: ButtonProperties,
@@ -71,6 +72,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 		};
 
 		const initialStyles = getStyles({
+			disabled,
 			isCompact,
 			responsiveVariant,
 			roundedClassName,
@@ -78,7 +80,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			size,
 			sizeClassName,
 			theme,
-			variant,
+			variant
 		});
 
 		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
@@ -87,6 +89,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			<button
 				type={type}
 				ref={reference}
+				disabled={disabled}
 				className={twMerge(initialStyles, sizeClassName, roundedClassName, className)}
 				{...properties}
 			>
