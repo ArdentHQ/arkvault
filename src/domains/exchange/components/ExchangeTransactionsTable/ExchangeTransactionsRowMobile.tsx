@@ -44,6 +44,7 @@ const ExchangeTransactionRowAmount: React.VFC<ExchangeTransactionRowAmountProper
 			ticker={data.ticker}
 			isCompact={false}
 			isNegative={type === "sent"}
+			size="sm"
 		/>
 	);
 };
@@ -90,7 +91,7 @@ const ExchangeTransactionsRowStatus: React.VFC<ExchangeTransactionsRowStatusProp
 		}
 
 		return {
-			color: "text-theme-secondary-500 dark:text-theme-secondary-700",
+			color: "text-theme-warning-300",
 			name: "Clock",
 		};
 	};
@@ -135,7 +136,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
 			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
 				<RowWrapper>
-					<RowLabel>{t("COMMON.ID")}</RowLabel>
+					<RowLabel>{t("COMMON.TX_ID")}</RowLabel>
 
 					{exchangeTransaction.orderId() ? (
 						<button
@@ -188,7 +189,7 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 
 				<RowWrapper>
 					<TableRemoveButton
-						className="w-full sm:ml-auto sm:w-auto"
+						className="w-full cursor-pointer sm:ml-auto sm:w-auto"
 						isCompact={false}
 						onClick={handleRemove}
 					/>

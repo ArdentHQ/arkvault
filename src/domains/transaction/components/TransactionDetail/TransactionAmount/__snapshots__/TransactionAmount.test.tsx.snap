@@ -19,14 +19,14 @@ exports[`TransactionAmount > should render currency amount 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK
@@ -88,14 +88,14 @@ exports[`TransactionAmount > should render in lg 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK
@@ -157,14 +157,14 @@ exports[`TransactionAmount > should render in md 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK
@@ -229,14 +229,14 @@ exports[`TransactionAmount > should render in sm 1`] = `
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           <div
-            class="css-1v19423"
-            color="success"
+            class="rounded px-1.5 css-givenh"
+            color="success-bg"
           >
             <div
               class="flex space-x-1 items-stretch"
             >
               <span
-                class="whitespace-nowrap"
+                class="whitespace-nowrap text-sm"
                 data-testid="Amount"
               >
                 + 1 DARK
@@ -269,14 +269,14 @@ exports[`TransactionAmount > should render in xl 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK
@@ -341,14 +341,14 @@ exports[`TransactionAmount > should render in xs 1`] = `
           class="md:theme-text flex w-full justify-end text-theme-secondary-700 dark:text-theme-secondary-500"
         >
           <div
-            class="css-1v19423"
-            color="success"
+            class="rounded px-1.5 css-givenh"
+            color="success-bg"
           >
             <div
               class="flex space-x-1 items-stretch"
             >
               <span
-                class="whitespace-nowrap"
+                class="whitespace-nowrap text-sm"
                 data-testid="Amount"
               >
                 + 1 DARK
@@ -381,14 +381,14 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK
@@ -450,14 +450,14 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
         class="flex items-center font-semibold"
       >
         <div
-          class="css-1v19423"
-          color="success"
+          class="rounded px-1.5 css-givenh"
+          color="success-bg"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               + 1 DARK

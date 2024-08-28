@@ -172,7 +172,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-5gvahk"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -184,7 +184,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -196,7 +196,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-t4jv3s"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -256,7 +256,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-5gvahk"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -268,7 +268,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -280,7 +280,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-t4jv3s"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -340,7 +340,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-5gvahk"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -352,7 +352,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -364,7 +364,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-t4jv3s"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -421,7 +421,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
             >
               <td>
                 <div
-                  class="css-5gvahk"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
                 >
                   <span
                     class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -433,7 +433,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="css-12appi5"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                 >
                   <time
                     class="text-theme-secondary-700"
@@ -445,7 +445,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="justify-end css-t4jv3s"
+                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                 >
                   <div
                     class="flex items-center"
@@ -513,14 +513,14 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Total Amount
         </p>
         <div
-          class="css-6qumvg"
+          class="rounded px-1.5 css-6qumvg"
           color="neutral"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               0 DARK
@@ -538,14 +538,14 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="css-6qumvg"
+          class="rounded px-1.5 css-6qumvg"
           color="neutral"
         >
           <div
             class="flex space-x-1 items-stretch"
           >
             <span
-              class="whitespace-nowrap"
+              class="whitespace-nowrap text-sm"
               data-testid="Amount"
             >
               0 DARK

@@ -1173,14 +1173,14 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK
@@ -1464,7 +1464,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1475,7 +1475,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-12appi5"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1520,17 +1520,17 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-t4jv3s"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="css-41vn9a"
-                                      color="danger"
+                                      class="rounded px-1.5 css-xqt0aw"
+                                      color="danger-bg"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
                                       >
                                         <span
-                                          class="whitespace-nowrap"
+                                          class="whitespace-nowrap text-sm"
                                           data-testid="Amount"
                                         >
                                           - 1 DARK
@@ -7522,14 +7522,14 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK
@@ -8791,14 +8791,14 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK
@@ -9082,7 +9082,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9093,7 +9093,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-12appi5"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <div
                                       class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -9138,17 +9138,17 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-t4jv3s"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="css-41vn9a"
-                                      color="danger"
+                                      class="rounded px-1.5 css-xqt0aw"
+                                      color="danger-bg"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
                                       >
                                         <span
-                                          class="whitespace-nowrap"
+                                          class="whitespace-nowrap text-sm"
                                           data-testid="Amount"
                                         >
                                           - 1 DARK
@@ -9164,7 +9164,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="space-x-3 text-theme-secondary-500 whitespace-nowrap css-5gvahk"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9175,7 +9175,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="space-x-4 css-12appi5"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                                   >
                                     <span
                                       class="flex h-5 w-5 items-center justify-center text-theme-text dark:text-theme-secondary-600"
@@ -9253,17 +9253,17 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="justify-end css-t4jv3s"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                                   >
                                     <div
-                                      class="css-41vn9a"
-                                      color="danger"
+                                      class="rounded px-1.5 css-xqt0aw"
+                                      color="danger-bg"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
                                       >
                                         <span
-                                          class="whitespace-nowrap"
+                                          class="whitespace-nowrap text-sm"
                                           data-testid="Amount"
                                         >
                                           - 1 DARK
@@ -10612,14 +10612,14 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK
@@ -11881,14 +11881,14 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK
@@ -13150,14 +13150,14 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="css-148b4hi"
-                            color="danger"
+                            class="rounded px-1.5 css-1pbju28"
+                            color="danger-bg"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 - 400,000 DARK

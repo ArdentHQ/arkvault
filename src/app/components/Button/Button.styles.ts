@@ -20,7 +20,7 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			return `disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700`;
 		}
 
-		if (variant === "danger-icon" && isCompact) {
+		if (variant === "secondary-icon" && isCompact) {
 			return `disabled:bg-none disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700`;
 		}
 
@@ -44,12 +44,6 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500
 			focus:ring-theme-danger-300
 		`,
-		"danger-icon": () => `
-				text-theme-danger-400 bg-transparent
-				dark:text-theme-danger-400 dark:bg-transparent
-				hover:text-theme-danger-500 hover:bg-transparent
-				focus:ring-theme-danger-300
-			`,
 		default: () => `border-none`,
 		info: () => `
 			bg-theme-info-100 text-theme-info-600
@@ -68,6 +62,8 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 					bg-theme-primary-100 text-theme-primary-600
 					hover:bg-theme-primary-700 hover:text-white
 				`,
+		"secondary-icon": () => `text-theme-secondary-700 bg-transparent
+		dark:text-theme-secondary-600 dark:bg-transparent`,
 		warning: () => `
 			bg-theme-warning-100 text-theme-warning-700
 			dark:bg-theme-warning-600 dark:text-white

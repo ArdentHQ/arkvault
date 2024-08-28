@@ -1,7 +1,6 @@
 import React from "react";
-import { styled } from "twin.macro";
-
 import { getStyles } from "./TableCell.styles";
+import { twMerge } from "tailwind-merge";
 
 type TableCellProperties = {
 	variant?: "start" | "middle" | "end";
@@ -12,7 +11,7 @@ type TableCellProperties = {
 	children: React.ReactNode;
 } & Omit<React.HTMLProps<any>, "size">;
 
-const TableCellInnerWrapper = styled.div<TableCellProperties>(getStyles);
+const TableCellInnerWrapper = ({ ...props }) => <div {...props} />;
 
 export const TableCell = ({
 	variant = "middle",
@@ -24,7 +23,7 @@ export const TableCell = ({
 	...properties
 }: TableCellProperties) => (
 	<td className={className} {...properties}>
-		<TableCellInnerWrapper variant={variant} size={size} className={innerClassName} isCompact={isCompact}>
+		<TableCellInnerWrapper className={twMerge(getStyles({ isCompact, size, variant }), innerClassName)}>
 			{children}
 		</TableCellInnerWrapper>
 	</td>

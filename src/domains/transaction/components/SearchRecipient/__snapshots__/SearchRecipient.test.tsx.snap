@@ -277,7 +277,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -311,7 +311,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -323,7 +323,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -345,7 +345,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -379,7 +379,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -391,7 +391,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -699,7 +699,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -733,7 +733,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -745,7 +745,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -767,7 +767,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -801,7 +801,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -813,7 +813,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -1119,7 +1119,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1153,7 +1153,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1165,7 +1165,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -1187,7 +1187,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1221,7 +1221,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1233,7 +1233,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -1539,7 +1539,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1573,7 +1573,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -1585,7 +1585,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-reverse-600 -mr-3"
@@ -2180,7 +2180,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2214,7 +2214,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -2226,7 +2226,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-reverse-600 -mr-3"
@@ -2821,7 +2821,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2844,7 +2844,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -2856,7 +2856,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -3162,7 +3162,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3196,7 +3196,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3208,7 +3208,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-reverse-600 -mr-3"
@@ -3230,7 +3230,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3264,7 +3264,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3276,7 +3276,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -3582,7 +3582,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3616,7 +3616,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3628,7 +3628,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-reverse-600 -mr-3"
@@ -3650,7 +3650,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-5gvahk"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3684,7 +3684,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="css-12appi5"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -3696,7 +3696,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
                         </td>
                         <td>
                           <div
-                            class="justify-end css-t4jv3s"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm font-semibold text-theme-primary-600 -mr-3"
@@ -4370,7 +4370,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-rjc6e4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4404,7 +4404,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                         </td>
                         <td>
                           <div
-                            class="css-o5w6qc"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -4416,7 +4416,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                         </td>
                         <td>
                           <div
-                            class="justify-end css-160cp05"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="px-5 py-3 space-x-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300 text-sm font-semibold text-theme-primary-reverse-600"
@@ -4438,7 +4438,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                       >
                         <td>
                           <div
-                            class="space-x-4 pl-4 css-rjc6e4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl space-x-4 pl-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4472,7 +4472,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                         </td>
                         <td>
                           <div
-                            class="css-o5w6qc"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5"
                           >
                             <span
                               class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -4484,7 +4484,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
                         </td>
                         <td>
                           <div
-                            class="justify-end css-160cp05"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
                           >
                             <button
                               class="px-5 py-3 space-x-3 relative items-center inline-flex justify-center text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 hover:bg-theme-primary-700 hover:text-white text-sm font-semibold text-theme-primary-600"

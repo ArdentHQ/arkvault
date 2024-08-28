@@ -767,14 +767,14 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-148b4hi"
-              color="danger"
+              class="rounded px-1.5 css-1pbju28"
+              color="danger-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   - 100 DARK
