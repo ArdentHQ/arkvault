@@ -6638,7 +6638,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -13296,7 +13296,7 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -21097,7 +21097,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -28898,7 +28898,7 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -29267,7 +29267,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -29454,7 +29454,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -29641,7 +29641,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -30046,7 +30046,7 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -30414,7 +30414,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-15yk9k4"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -30601,7 +30601,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -30788,7 +30788,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -31193,7 +31193,7 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -31561,7 +31561,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -31748,7 +31748,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -31935,7 +31935,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -32340,7 +32340,7 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -32708,7 +32708,7 @@ exports[`DelegateTable > should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -32895,7 +32895,7 @@ exports[`DelegateTable > should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -33082,7 +33082,7 @@ exports[`DelegateTable > should render 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -33489,7 +33489,7 @@ exports[`DelegateTable > should render 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -33957,7 +33957,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -34191,7 +34191,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -34425,7 +34425,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -34852,7 +34852,7 @@ exports[`DelegateTable > should render vote amount column 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -35221,7 +35221,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -35408,7 +35408,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -35595,7 +35595,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -36000,7 +36000,7 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -36368,7 +36368,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-15yk9k4"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -36555,7 +36555,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -36743,7 +36743,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                 >
                   <span>
                     <button
-                      class="css-qrwjsp"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                       data-testid="DelegateRow__toggle-2"
                       disabled=""
                       type="button"
@@ -37148,7 +37148,7 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -37516,7 +37516,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -37703,7 +37703,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -37890,7 +37890,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -38295,7 +38295,7 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -39164,7 +39164,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -39351,7 +39351,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -39538,7 +39538,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -39945,7 +39945,7 @@ exports[`DelegateTable > should render with subtitle 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -40411,7 +40411,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -40645,7 +40645,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -40879,7 +40879,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -41306,7 +41306,7 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -41675,7 +41675,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -41862,7 +41862,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -42049,7 +42049,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -42456,7 +42456,7 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -42825,7 +42825,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-15yk9k4"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -43012,7 +43012,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -43200,7 +43200,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                 >
                   <span>
                     <button
-                      class="css-qrwjsp"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                       data-testid="DelegateRow__toggle-2"
                       disabled=""
                       type="button"
@@ -43605,7 +43605,7 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -43973,7 +43973,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -44160,7 +44160,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -44347,7 +44347,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -44754,7 +44754,7 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -45220,7 +45220,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -45454,7 +45454,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -45688,7 +45688,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -46115,7 +46115,7 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -46484,7 +46484,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-15yk9k4"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -46671,7 +46671,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -46858,7 +46858,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-1j9j5h6"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 text-theme-primary-reverse-600 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -47261,7 +47261,7 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="DelegateTable__continue-button"
                 type="button"
               >
@@ -47629,7 +47629,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -47816,7 +47816,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -48003,7 +48003,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -48410,7 +48410,7 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"
@@ -48779,7 +48779,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="DelegateRow__toggle-0"
                     type="button"
                   >
@@ -48966,7 +48966,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-1"
                     type="button"
                   >
@@ -49153,7 +49153,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                   class="-mr-0.5"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="DelegateRow__toggle-2"
                     type="button"
                   >
@@ -49560,7 +49560,7 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
               data-testid="DelegateTable__continue--wrapper"
             >
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="DelegateTable__continue-button"
                 disabled=""
                 type="button"

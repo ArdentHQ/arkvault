@@ -21,7 +21,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -61,7 +61,7 @@ exports[`Votes > should filter current delegates 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -98,7 +98,7 @@ exports[`Votes > should filter current delegates 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -307,7 +307,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -360,7 +360,7 @@ exports[`Votes > should filter current delegates 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -419,7 +419,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -466,7 +466,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1141,7 +1141,7 @@ exports[`Votes > should filter current delegates 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -1548,7 +1548,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                         data-testid="DelegateTable__continue-button"
                         disabled=""
                         type="button"
@@ -1589,7 +1589,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1629,7 +1629,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1666,7 +1666,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1875,7 +1875,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1928,7 +1928,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1987,7 +1987,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -2034,7 +2034,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -2722,7 +2722,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -2915,7 +2915,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -3108,7 +3108,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -3513,7 +3513,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                         data-testid="DelegateTable__continue-button"
                         disabled=""
                         type="button"
@@ -3558,7 +3558,7 @@ exports[`Votes > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3598,7 +3598,7 @@ exports[`Votes > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3635,7 +3635,7 @@ exports[`Votes > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -3844,7 +3844,7 @@ exports[`Votes > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3897,7 +3897,7 @@ exports[`Votes > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -3956,7 +3956,7 @@ exports[`Votes > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -4003,7 +4003,7 @@ exports[`Votes > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4630,7 +4630,7 @@ exports[`Votes > should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -4823,7 +4823,7 @@ exports[`Votes > should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -5016,7 +5016,7 @@ exports[`Votes > should render 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -5423,7 +5423,7 @@ exports[`Votes > should render 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                         data-testid="DelegateTable__continue-button"
                         disabled=""
                         type="button"
@@ -5464,7 +5464,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -5504,7 +5504,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -5541,7 +5541,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -5750,7 +5750,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -5803,7 +5803,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -5862,7 +5862,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -5909,7 +5909,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -6536,7 +6536,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -6729,7 +6729,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -6922,7 +6922,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -7329,7 +7329,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-qrwjsp"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                         data-testid="DelegateTable__continue-button"
                         disabled=""
                         type="button"
@@ -7366,7 +7366,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -7407,7 +7407,7 @@ exports[`Votes > should render with no wallets 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -7444,7 +7444,7 @@ exports[`Votes > should render with no wallets 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -7655,7 +7655,7 @@ exports[`Votes > should render with no wallets 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -7708,7 +7708,7 @@ exports[`Votes > should render with no wallets 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -7760,7 +7760,7 @@ exports[`Votes > should render with no wallets 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -7808,7 +7808,7 @@ exports[`Votes > should render with no wallets 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -7977,7 +7977,7 @@ exports[`Votes > should render with no wallets 1`] = `
                   class="-m-3 flex w-full items-center space-x-3 sm:w-auto"
                 >
                   <button
-                    class="w-full sm:w-auto css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white w-full sm:w-auto"
                     type="button"
                   >
                     <div
@@ -8022,7 +8022,7 @@ exports[`Votes > should render with no wallets 1`] = `
                     </div>
                   </button>
                   <button
-                    class="w-full sm:w-auto css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 w-full sm:w-auto"
                     type="button"
                   >
                     <div
@@ -8091,7 +8091,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -8131,7 +8131,7 @@ exports[`Votes > should select a delegate 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -8168,7 +8168,7 @@ exports[`Votes > should select a delegate 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -8377,7 +8377,7 @@ exports[`Votes > should select a delegate 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -8430,7 +8430,7 @@ exports[`Votes > should select a delegate 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -8489,7 +8489,7 @@ exports[`Votes > should select a delegate 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -8536,7 +8536,7 @@ exports[`Votes > should select a delegate 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -9163,7 +9163,7 @@ exports[`Votes > should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -9356,7 +9356,7 @@ exports[`Votes > should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -9549,7 +9549,7 @@ exports[`Votes > should select a delegate 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -9954,7 +9954,7 @@ exports[`Votes > should select a delegate 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                         data-testid="DelegateTable__continue-button"
                         type="button"
                       >
@@ -9992,7 +9992,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -10032,7 +10032,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -10069,7 +10069,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -10279,7 +10279,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -10332,7 +10332,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -10391,7 +10391,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -10438,7 +10438,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -11404,7 +11404,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -11444,7 +11444,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -11481,7 +11481,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -11691,7 +11691,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -11744,7 +11744,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -11803,7 +11803,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -11850,7 +11850,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -12816,7 +12816,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -12856,7 +12856,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -12893,7 +12893,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -13103,7 +13103,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -13156,7 +13156,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -13215,7 +13215,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -13262,7 +13262,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -14045,7 +14045,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       >
                         <div>
                           <button
-                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
+                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="AddressRow__select-0"
                             disabled=""
                             type="button"
@@ -14185,7 +14185,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       >
                         <div>
                           <button
-                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="AddressRow__select-1"
                             type="button"
                           >
@@ -14324,7 +14324,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       >
                         <div>
                           <button
-                            class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="AddressRow__select-2"
                             type="button"
                           >
@@ -14366,7 +14366,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -14406,7 +14406,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -14443,7 +14443,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -14652,7 +14652,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -14705,7 +14705,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -14764,7 +14764,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -14811,7 +14811,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -15499,7 +15499,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-danger-400 hover:text-theme-danger-500 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-danger-400 hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
@@ -15692,7 +15692,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-1"
                             type="button"
                           >
@@ -15885,7 +15885,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                           class="-mr-0.5"
                         >
                           <button
-                            class="-mr-3 relative text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                            class="p-3 items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 relative text-theme-primary-600 hover:text-theme-primary-700"
                             data-testid="DelegateRow__toggle-2"
                             type="button"
                           >
@@ -16290,7 +16290,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="css-fl4fi0"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                         data-testid="DelegateTable__continue-button"
                         type="button"
                       >

@@ -196,7 +196,7 @@ exports[`AddressRowMobile > should render for a multisignature wallet 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -407,7 +407,7 @@ exports[`AddressRowMobile > should render in 375 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -619,7 +619,7 @@ exports[`AddressRowMobile > should render in 420 screen width 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -831,7 +831,7 @@ exports[`AddressRowMobile > should render when the maximum votes is greater than
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1042,7 +1042,7 @@ exports[`AddressRowMobile > should render when the wallet has many votes 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1253,7 +1253,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1377,7 +1377,7 @@ exports[`AddressRowMobile > should render when wallet hasn't voted 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-1"
                 type="button"
               >
@@ -1588,7 +1588,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -1701,7 +1701,7 @@ exports[`AddressRowMobile > should render when wallet not found for votes 1`] = 
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-1772sn1"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-1"
                 disabled=""
                 type="button"
@@ -1831,7 +1831,7 @@ exports[`AddressRowMobile > should render when wallet not loaded 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -2042,7 +2042,7 @@ exports[`AddressRowMobile > should render with active delegate 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -2253,7 +2253,7 @@ exports[`AddressRowMobile > should render with resigned delegate 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
@@ -2465,7 +2465,7 @@ exports[`AddressRowMobile > should render with standby delegate 1`] = `
                 </div>
               </div>
               <button
-                class="px-5 py-6 rounded-none css-6vay55"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-5 py-6 rounded-none"
                 data-testid="AddressRowMobile__select-0"
                 type="button"
               >
