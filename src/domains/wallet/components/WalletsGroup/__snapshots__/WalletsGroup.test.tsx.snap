@@ -83,7 +83,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
         >
           <div>
             <button
-              class="css-wqh5n3"
+              class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white hidden md:inline-flex"
               data-testid="WalletControls__import-ledger"
               type="button"
             >
@@ -122,7 +122,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </button>
           </div>
           <button
-            class="css-6419sw"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
             data-testid="WalletControls__import-wallet"
             type="button"
           >
@@ -168,7 +168,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
             </div>
           </button>
           <button
-            class="css-fl4fi0"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
             data-testid="WalletControls__create-wallet"
             type="button"
           >
@@ -3298,7 +3298,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     >
                       <div>
                         <button
-                          class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                           data-testid="WalletListItem__send-button"
                           type="button"
                         >
@@ -3320,7 +3320,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                             data-testid="dropdown__toggle"
                           >
                             <button
-                              class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                               type="button"
                             >
                               <div
