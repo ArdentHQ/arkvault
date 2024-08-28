@@ -14,12 +14,7 @@ const getBaseStyle = (roundedClassName?: string) => {
 	return baseStyle;
 };
 
-const getVariant = (
-	variant?: ButtonVariant,
-	theme?: Theme,
-	disabled?: boolean,
-	isCompact?: boolean,
-) => {
+const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, isCompact?: boolean) => {
 	if (disabled) {
 		if (variant === "transparent") {
 			return `disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700`;
@@ -117,8 +112,4 @@ export const getStyles = ({
 	disabled?: boolean;
 	roundedClassName?: string;
 	isCompact?: boolean;
-}) => [
-	getSize(size, sizeClassName),
-	getBaseStyle(roundedClassName),
-	getVariant(variant, theme, disabled, isCompact),
-];
+}) => [getSize(size, sizeClassName), getBaseStyle(roundedClassName), getVariant(variant, theme, disabled, isCompact)];
