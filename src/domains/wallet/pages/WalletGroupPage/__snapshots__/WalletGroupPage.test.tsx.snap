@@ -566,7 +566,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"

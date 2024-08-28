@@ -3,7 +3,7 @@
 exports[`AddressTable > should render 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -460,7 +460,7 @@ exports[`AddressTable > should render 1`] = `
 exports[`AddressTable > should render when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -874,7 +874,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
 exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
