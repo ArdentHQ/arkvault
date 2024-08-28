@@ -3639,7 +3639,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
+          class="css-9z53t5"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -4386,7 +4386,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should show error step
                         class="relative"
                       >
                         <button
-                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
+                          class="css-9z53t5"
                           data-testid="clipboard-button__wrapper"
                           type="button"
                         >
