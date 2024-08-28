@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 import { ButtonVariant, LayoutBreakpoint, ResponsiveButtonVariant, Size, Theme } from "@/types";
 
 const getBaseStyle = (showOn?: LayoutBreakpoint, roundedClassName?: string) => {

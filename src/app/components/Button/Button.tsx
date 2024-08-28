@@ -36,6 +36,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			showOn,
 			roundedClassName,
 			sizeClassName,
+			size,
+			theme,
+			isCompact,
 			className,
 			...properties
 		}: ButtonProperties,
@@ -68,12 +71,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			);
 		};
 
-		const { theme } = useTheme();
-
 		const initialStyles = getStyles({
+			isCompact,
 			responsiveVariant,
 			roundedClassName,
 			showOn,
+			size,
 			sizeClassName,
 			theme,
 			variant,
