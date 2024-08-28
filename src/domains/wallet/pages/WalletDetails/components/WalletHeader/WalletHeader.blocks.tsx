@@ -293,7 +293,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 							!wallet.hasSyncedWithNetwork() ||
 							!isLedgerWalletCompatible(wallet)
 						}
-						className="bg-theme-dark-500 my-auto ml-3"
+						className="my-auto ml-3"
 						theme="dark"
 						onClick={handleSend}
 					>

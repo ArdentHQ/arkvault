@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 import { Address } from "@/app/components/Address";
 import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
 import { networkDisplayName } from "@/utils/network-utils";
 
@@ -37,12 +38,12 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 						data-testid="contact-form__remove-address-btn-xs"
 						size="icon"
 						sizeClassName="p-0"
-						icon="Trash"
-						iconSize="lg"
 						className="text-theme-secondary-700 dark:text-theme-secondary-500 sm:!hidden"
 						variant="transparent"
 						onClick={() => onRemove()}
-					/>
+					>
+						<Icon name="Trash" size="lg" />
+					</Button>
 				</div>
 				<div className="px-4 pb-4 pt-3 sm:p-0">
 					<div className="mb-2 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:hidden">
@@ -63,8 +64,9 @@ const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemo
 				className="!hidden items-center !p-3.5 sm:!flex"
 				variant="danger"
 				onClick={() => onRemove()}
-				icon="Trash"
-			/>
+			>
+				<Icon name="Trash" />
+			</Button>
 		</div>
 	);
 };

@@ -180,7 +180,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -233,7 +233,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -292,7 +292,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -339,7 +339,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -441,7 +441,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -1249,7 +1249,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                 class="css-j6ajdm"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -1277,7 +1277,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                     class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
                   >
                     <button
-                      class="h-8 w-8 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
                       data-testid="Modal__close-button"
                       type="button"
                     >
@@ -1548,7 +1548,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                         class="css-j6ajdm"
                       >
                         <button
-                          class="css-6419sw"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -1559,7 +1559,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                           </div>
                         </button>
                         <button
-                          class="css-fl4fi0"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -1763,7 +1763,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1816,7 +1816,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1875,7 +1875,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1922,7 +1922,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -2024,7 +2024,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2219,7 +2219,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -2230,7 +2230,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-qrwjsp"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="StepNavigation__send-button"
                   disabled=""
                   type="submit"
@@ -3692,7 +3692,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3732,7 +3732,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3769,7 +3769,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -3978,7 +3978,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4031,7 +4031,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4090,7 +4090,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -4137,7 +4137,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4239,7 +4239,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -4455,7 +4455,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-button"
                   type="button"
                 >
@@ -4466,7 +4466,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
                   </div>
                 </button>
                 <button
-                  class="css-qrwjsp"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                   data-testid="StepNavigation__continue-button"
                   disabled=""
                   type="button"
@@ -6243,7 +6243,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -6283,7 +6283,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -6320,7 +6320,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -6529,7 +6529,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -6582,7 +6582,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -6641,7 +6641,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -6688,7 +6688,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -6790,7 +6790,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -7598,7 +7598,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -7798,7 +7798,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -7851,7 +7851,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -7910,7 +7910,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -7957,7 +7957,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -8059,7 +8059,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -8867,7 +8867,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                 class="css-j6ajdm"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -8895,7 +8895,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                     class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
                   >
                     <button
-                      class="h-8 w-8 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
                       data-testid="Modal__close-button"
                       type="button"
                     >
@@ -9281,7 +9281,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                         class="css-j6ajdm"
                       >
                         <button
-                          class="css-6419sw"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                           data-testid="ConfirmSendTransaction__cancel"
                           type="button"
                         >
@@ -9292,7 +9292,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                           </div>
                         </button>
                         <button
-                          class="css-fl4fi0"
+                          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                           data-testid="ConfirmSendTransaction__confirm"
                           type="submit"
                         >
@@ -9333,7 +9333,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -9373,7 +9373,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -9410,7 +9410,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -9619,7 +9619,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -9672,7 +9672,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -9731,7 +9731,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -9778,7 +9778,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -9880,7 +9880,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -10688,7 +10688,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -10888,7 +10888,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -10941,7 +10941,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -11000,7 +11000,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -11047,7 +11047,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -11149,7 +11149,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -11957,7 +11957,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >
@@ -12157,7 +12157,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -12210,7 +12210,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -12269,7 +12269,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -12316,7 +12316,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -12418,7 +12418,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -13226,7 +13226,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="StepNavigation__back-to-wallet-button"
                   type="button"
                 >

@@ -3,7 +3,7 @@
 exports[`HeaderSearchBar > should render 1`] = `
 <DocumentFragment>
   <div
-    class="-my-2"
+    class="relative -my-2"
     data-testid="HeaderSearchBar"
   >
     <div
@@ -16,6 +16,11 @@ exports[`HeaderSearchBar > should render 1`] = `
         <div
           class="flex h-5 items-center gap-2"
         >
+          <span
+            class="hidden md:block"
+          >
+            Search
+          </span>
           <div
             class="css-1i4b0eq"
             height="20"
@@ -64,11 +69,6 @@ exports[`HeaderSearchBar > should render 1`] = `
               </defs>
             </svg>
           </div>
-          <span
-            class="hidden md:block"
-          >
-            Search
-          </span>
         </div>
       </button>
     </div>

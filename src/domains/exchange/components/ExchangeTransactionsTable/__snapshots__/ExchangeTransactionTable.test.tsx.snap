@@ -561,7 +561,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -856,7 +856,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -1151,7 +1151,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -1758,7 +1758,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-mg9xs0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2053,7 +2053,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-mg9xs0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2348,7 +2348,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-mg9xs0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
                     data-testid="TableRemoveButton--compact"
                     type="button"
                   >
@@ -2955,7 +2955,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -3250,7 +3250,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -3545,7 +3545,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -4152,7 +4152,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -4447,7 +4447,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -4742,7 +4742,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -5349,7 +5349,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -5644,7 +5644,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -5939,7 +5939,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
-                    class="css-1wnjsvv"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
                     data-testid="TableRemoveButton"
                     type="button"
                   >
@@ -6089,7 +6089,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6337,7 +6337,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6585,7 +6585,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -6861,7 +6861,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -7109,7 +7109,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
@@ -7357,7 +7357,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
                         type="vertical"
                       />
                       <button
-                        class="cursor-pointer !p-0 css-1it5mhj"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent cursor-pointer !p-0"
                         data-testid="TableRow__mobile-remove-button"
                         type="button"
                       >
