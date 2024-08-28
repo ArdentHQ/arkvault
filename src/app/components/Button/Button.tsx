@@ -4,8 +4,8 @@ import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
 import { ButtonVariant, ResponsiveButtonVariant, LayoutBreakpoint, Size, Theme } from "@/types";
-import {twMerge} from "tailwind-merge";
-import {useTheme} from "@/app/hooks";
+import { twMerge } from "tailwind-merge";
+import { useTheme } from "@/app/hooks";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;
@@ -77,7 +77,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			sizeClassName,
 			theme,
 			variant,
-		})
+		});
 
 		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
 
