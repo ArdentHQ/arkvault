@@ -80,7 +80,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			size,
 			sizeClassName,
 			theme,
-			variant
+			variant,
 		});
 
 		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
