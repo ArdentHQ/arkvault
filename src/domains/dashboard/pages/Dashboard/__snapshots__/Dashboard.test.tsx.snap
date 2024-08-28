@@ -13,7 +13,7 @@ exports[`Dashboard > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,7 +53,7 @@ exports[`Dashboard > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,7 +90,7 @@ exports[`Dashboard > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -301,7 +301,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -354,7 +354,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -413,7 +413,7 @@ exports[`Dashboard > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -460,7 +460,7 @@ exports[`Dashboard > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -648,7 +648,7 @@ exports[`Dashboard > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="css-wqh5n3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white hidden md:inline-flex"
                       data-testid="WalletControls__import-ledger"
                       type="button"
                     >
@@ -687,7 +687,7 @@ exports[`Dashboard > should render 1`] = `
                     </button>
                   </div>
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -733,7 +733,7 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >

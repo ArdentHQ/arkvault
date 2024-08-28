@@ -17,7 +17,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -58,7 +58,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -95,7 +95,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -305,7 +305,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -358,7 +358,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -417,7 +417,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -465,7 +465,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -863,7 +863,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                   class="css-145pihz"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="CreateWallet__back-button"
                     type="button"
                   >
@@ -874,7 +874,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"
@@ -913,7 +913,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -953,7 +953,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -990,7 +990,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1199,7 +1199,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1252,7 +1252,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -1311,7 +1311,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -1358,7 +1358,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -1748,7 +1748,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                             </div>
                           </div>
                           <button
-                            class="css-6419sw"
+                            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                             data-testid="CreateWallet__edit-alias"
                             type="button"
                           >
@@ -1789,7 +1789,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
                   class="css-145pihz"
                 >
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="CreateWallet__finish-button"
                     type="submit"
                   >
@@ -1827,7 +1827,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -1868,7 +1868,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1905,7 +1905,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -2115,7 +2115,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -2168,7 +2168,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2227,7 +2227,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -2275,7 +2275,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -2673,7 +2673,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                   class="css-145pihz"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="CreateWallet__back-button"
                     type="button"
                   >
@@ -2684,7 +2684,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"
@@ -2725,7 +2725,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -2766,7 +2766,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -2803,7 +2803,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -3013,7 +3013,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3066,7 +3066,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -3125,7 +3125,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -3173,7 +3173,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -3571,7 +3571,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                   class="css-145pihz"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="CreateWallet__back-button"
                     type="button"
                   >
@@ -3582,7 +3582,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"
@@ -3623,7 +3623,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3663,7 +3663,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3700,7 +3700,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -3909,7 +3909,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3962,7 +3962,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4021,7 +4021,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -4068,7 +4068,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4465,7 +4465,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                   class="css-145pihz"
                 >
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="CreateWallet__back-button"
                     type="button"
                   >
@@ -4476,7 +4476,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"
@@ -4515,7 +4515,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--receive"
           disabled=""
           type="button"
@@ -4556,7 +4556,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -4593,7 +4593,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
           type="vertical"
         />
         <button
-          class="cursor-not-allowed text-theme-secondary-500 css-5e9bdv"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 cursor-not-allowed text-theme-secondary-500"
           data-testid="NavigationBar__buttons__mobile--send"
           disabled=""
           type="button"
@@ -4803,7 +4803,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4856,7 +4856,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4915,7 +4915,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--receive"
                     disabled=""
                     type="button"
@@ -4963,7 +4963,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700"
                     data-testid="NavigationBar__buttons--send"
                     disabled=""
                     type="button"
@@ -5413,7 +5413,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                   class="css-145pihz"
                 >
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__back-button"
                     disabled=""
                     type="button"
@@ -5425,7 +5425,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
                     </div>
                   </button>
                   <button
-                    class="css-qrwjsp"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                     data-testid="CreateWallet__continue-button"
                     disabled=""
                     type="button"

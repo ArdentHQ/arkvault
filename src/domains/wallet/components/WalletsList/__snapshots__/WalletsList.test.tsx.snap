@@ -445,7 +445,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 >
                   <div>
                     <button
-                      class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -467,7 +467,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -684,7 +684,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 >
                   <div>
                     <button
-                      class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -706,7 +706,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -1163,7 +1163,7 @@ exports[`WalletsList > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -1185,7 +1185,7 @@ exports[`WalletsList > should render 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -1387,7 +1387,7 @@ exports[`WalletsList > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                       data-testid="WalletListItem__send-button"
                       type="button"
                     >
@@ -1409,7 +1409,7 @@ exports[`WalletsList > should render 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -1823,7 +1823,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="justify-end text-theme-secondary-text css-opqlbz"
                 >
                   <button
-                    class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -1839,7 +1839,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-5e9bdv"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -1997,7 +1997,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="justify-end text-theme-secondary-text css-opqlbz"
                 >
                   <button
-                    class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -2013,7 +2013,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-5e9bdv"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -2171,7 +2171,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="justify-end text-theme-secondary-text css-opqlbz"
                 >
                   <button
-                    class="ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-5e9bdv"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -2187,7 +2187,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600 css-5e9bdv"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >

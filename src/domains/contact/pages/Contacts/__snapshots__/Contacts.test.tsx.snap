@@ -13,7 +13,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,7 +53,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,7 +90,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -300,7 +300,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -353,7 +353,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -412,7 +412,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -459,7 +459,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -677,7 +677,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -954,7 +954,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -979,7 +979,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -1152,7 +1152,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1177,7 +1177,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -1338,7 +1338,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1359,7 +1359,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -1520,7 +1520,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -1541,7 +1541,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -1613,7 +1613,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1653,7 +1653,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1690,7 +1690,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -1900,7 +1900,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -1953,7 +1953,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2012,7 +2012,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -2059,7 +2059,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -2277,7 +2277,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -2554,7 +2554,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2579,7 +2579,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -2752,7 +2752,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2777,7 +2777,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -2938,7 +2938,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -2959,7 +2959,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -3120,7 +3120,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -3141,7 +3141,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -3213,7 +3213,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -3253,7 +3253,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -3290,7 +3290,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -3500,7 +3500,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -3553,7 +3553,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -3612,7 +3612,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -3659,7 +3659,7 @@ exports[`Contacts > should render responsive with contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4126,7 +4126,7 @@ exports[`Contacts > should render with contacts 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -4166,7 +4166,7 @@ exports[`Contacts > should render with contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -4203,7 +4203,7 @@ exports[`Contacts > should render with contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -4413,7 +4413,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -4466,7 +4466,7 @@ exports[`Contacts > should render with contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -4525,7 +4525,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -4572,7 +4572,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -4790,7 +4790,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   </span>
                 </div>
                 <button
-                  class="ml-6 css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >
@@ -5067,7 +5067,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5092,7 +5092,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -5265,7 +5265,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5290,7 +5290,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -5451,7 +5451,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5472,7 +5472,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -5633,7 +5633,7 @@ exports[`Contacts > should render with contacts 1`] = `
                             data-testid="ContactListItem__send-button-wrapper"
                           >
                             <button
-                              class="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
                               data-testid="ContactListItem__send-button"
                               type="button"
                             >
@@ -5654,7 +5654,7 @@ exports[`Contacts > should render with contacts 1`] = `
                                 data-testid="dropdown__toggle"
                               >
                                 <button
-                                  class="text-theme-primary-300 hover:text-theme-primary-600 css-1hei9vx"
+                                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-300 hover:text-theme-primary-600"
                                   type="button"
                                 >
                                   <div
@@ -5726,7 +5726,7 @@ exports[`Contacts > should render without contacts 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -5766,7 +5766,7 @@ exports[`Contacts > should render without contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -5803,7 +5803,7 @@ exports[`Contacts > should render without contacts 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -6013,7 +6013,7 @@ exports[`Contacts > should render without contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -6066,7 +6066,7 @@ exports[`Contacts > should render without contacts 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -6125,7 +6125,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -6172,7 +6172,7 @@ exports[`Contacts > should render without contacts 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -6307,7 +6307,7 @@ exports[`Contacts > should render without contacts 1`] = `
                 class="items-top flex justify-end"
               >
                 <button
-                  class="ml-6 css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 ml-6"
                   data-testid="contacts__add-contact-btn"
                   type="button"
                 >

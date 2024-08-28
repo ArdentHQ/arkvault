@@ -163,7 +163,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -360,7 +360,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -557,7 +557,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -789,7 +789,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -991,7 +991,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1193,7 +1193,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
             class="flex items-center justify-between space-x-4"
           >
             <button
-              class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1382,7 +1382,7 @@ exports[`ExchangeTransactionsRowMobile > should render NA if no orderId 1`] = `
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
           data-testid="TableRemoveButton"
           type="button"
         >
@@ -1577,7 +1577,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
         class="flex items-center justify-between space-x-4"
       >
         <button
-          class="w-full sm:ml-auto sm:w-auto css-15yk9k4"
+          class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 w-full sm:ml-auto sm:w-auto"
           data-testid="TableRemoveButton"
           type="button"
         >

@@ -709,7 +709,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
                   </span>
                 </div>
                 <button
-                  class="ml-auto css-1rgy3m"
+                  class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
                   data-testid="ExchangeForm__swap-button"
                   disabled=""
                   type="button"
@@ -1029,7 +1029,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
           class="css-145pihz"
         >
           <button
-            class="css-6419sw"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
             data-testid="ExchangeForm__back-button"
             type="button"
           >
@@ -1040,7 +1040,7 @@ exports[`ExchangeForm > should render exchange form 1`] = `
             </div>
           </button>
           <button
-            class="css-qrwjsp"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
             data-testid="ExchangeForm__continue-button"
             disabled=""
             type="button"
@@ -1696,7 +1696,7 @@ exports[`ExchangeForm > should render exchange form with id of finished order 1`
           class="css-145pihz"
         >
           <button
-            class="css-fl4fi0"
+            class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
             data-testid="ExchangeForm__finish-button"
             type="button"
           >
@@ -2275,7 +2275,7 @@ exports[`FormStep > should render 1`] = `
           </span>
         </div>
         <button
-          class="ml-auto css-1rgy3m"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 ml-auto"
           data-testid="ExchangeForm__swap-button"
           disabled=""
           type="button"

@@ -540,7 +540,7 @@ exports[`Welcome > should change route to create profile 1`] = `
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -1249,7 +1249,7 @@ exports[`Welcome > should navigate to previous page with correct password 1`] = 
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -1958,7 +1958,7 @@ exports[`Welcome > should navigate to profile dashboard 1`] = `
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -2667,7 +2667,7 @@ exports[`Welcome > should navigate to profile dashboard with correct password 1`
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -3376,7 +3376,7 @@ exports[`Welcome > should navigate to profile settings from profile card menu 1`
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4085,7 +4085,7 @@ exports[`Welcome > should navigate to profile settings with correct password 1`]
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -4700,7 +4700,7 @@ exports[`Welcome > should not select profile on wrong last location 1`] = `
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -5409,7 +5409,7 @@ exports[`Welcome > should render with profiles 1`] = `
                       </div>
                     </div>
                     <button
-                      class="mt-3 css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700 mt-3"
                       data-testid="CreateProfile"
                       type="button"
                     >
@@ -5902,7 +5902,7 @@ exports[`Welcome > should render without profiles 1`] = `
                       data-testid="ProfileList"
                     />
                     <button
-                      class="css-fl4fi0"
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                       data-testid="CreateProfile"
                       type="button"
                     >
