@@ -81,7 +81,7 @@ exports[`ContactListItem > should render 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -129,7 +129,7 @@ exports[`ContactListItem > should render 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -154,7 +154,7 @@ exports[`ContactListItem > should render 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -288,7 +288,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -336,7 +336,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -361,7 +361,7 @@ exports[`ContactListItem > should render as delegate 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -495,7 +495,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -543,7 +543,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -568,7 +568,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -681,7 +681,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -729,7 +729,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -750,7 +750,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -863,7 +863,7 @@ exports[`ContactListItem > should render options 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -911,7 +911,7 @@ exports[`ContactListItem > should render options 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -932,7 +932,7 @@ exports[`ContactListItem > should render options 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -1066,7 +1066,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1114,7 +1114,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1139,7 +1139,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -1252,7 +1252,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1300,7 +1300,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1321,7 +1321,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
@@ -1434,7 +1434,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
               type="button"
             >
               <div
-                class="text-theme-secondary-700"
+                class="text-theme-primary-400 dark:text-theme-secondary-600"
               >
                 <div
                   class="css-v0ob3f"
@@ -1482,7 +1482,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 data-testid="ContactListItem__send-button-wrapper"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="ContactListItem__send-button"
                   type="button"
                 >
@@ -1503,7 +1503,7 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                     data-testid="dropdown__toggle"
                   >
                     <button
-                      class="flex-1 css-1vly8o8"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white flex-1"
                       type="button"
                     >
                       <div
