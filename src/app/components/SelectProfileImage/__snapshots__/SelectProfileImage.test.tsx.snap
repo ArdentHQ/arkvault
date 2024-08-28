@@ -63,7 +63,7 @@ exports[`SelectProfileImage > should handle upload file 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+            class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -168,7 +168,7 @@ exports[`SelectProfileImage > should not allow to upload an invalid file image 1
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+            class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -273,7 +273,7 @@ exports[`SelectProfileImage > should not allow to upload when user aborted a req
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+            class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -378,7 +378,7 @@ exports[`SelectProfileImage > should not handle upload file 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+            class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
@@ -443,7 +443,7 @@ exports[`SelectProfileImage > should render 1`] = `
             class="css-1vxhzvl"
           >
             <button
-              class="css-6419sw"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
               data-testid="SelectProfileImage__upload-button"
               type="button"
             >
@@ -614,7 +614,7 @@ exports[`SelectProfileImage > should render without value svg 1`] = `
           class="absolute -right-2 -top-2 z-20"
         >
           <button
-            class="flex h-5 w-5 items-center justify-center p-0 css-qemr9e"
+            class="relative font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 flex h-5 w-5 items-center justify-center p-0"
             data-testid="SelectProfileImage__remove-button"
             type="button"
           >
