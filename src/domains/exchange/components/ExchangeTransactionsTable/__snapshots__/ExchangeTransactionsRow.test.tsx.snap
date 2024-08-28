@@ -237,7 +237,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -508,7 +508,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -779,7 +779,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1085,7 +1085,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1361,7 +1361,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1637,7 +1637,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="justify-end text-theme-secondary-text css-160cp05"
           >
             <button
-              class="css-15yk9k4"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300"
               data-testid="TableRemoveButton"
               type="button"
             >
@@ -1900,7 +1900,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="justify-end text-theme-secondary-text css-t4jv3s"
           >
             <button
-              class="css-evohxk"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded text-theme-danger-400 bg-transparent dark:text-theme-danger-400 dark:bg-transparent hover:text-theme-danger-500 hover:bg-transparent focus:ring-theme-danger-300"
               data-testid="TableRemoveButton--compact"
               type="button"
             >
