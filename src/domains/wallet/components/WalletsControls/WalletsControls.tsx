@@ -105,7 +105,7 @@ export const WalletsControls = React.memo(
 								disabled={!isLedgerTransportSupported()}
 								onClick={onImportLedgerWallet}
 								variant="secondary"
-								showOn="md"
+								className="hidden md:inline-flex"
 								data-testid="WalletControls__import-ledger"
 							>
 								<div className="flex items-center space-x-2">

@@ -3,12 +3,11 @@ import React from "react";
 import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
-import { ButtonVariant, ResponsiveButtonVariant, LayoutBreakpoint, Size, Theme } from "@/types";
+import { ButtonVariant, Size, Theme } from "@/types";
 import { twMerge } from "tailwind-merge";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;
-	responsiveVariant?: ResponsiveButtonVariant;
 	theme?: Theme;
 	size?: Size;
 	roundedClassName?: string;
@@ -17,7 +16,6 @@ type ButtonProperties = {
 	icon?: string;
 	iconSize?: Size;
 	iconPosition?: "left" | "right";
-	showOn?: LayoutBreakpoint;
 	isCompact?: boolean;
 } & React.ButtonHTMLAttributes<any>;
 
@@ -25,14 +23,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 	(
 		{
 			variant = "primary",
-			responsiveVariant,
 			children,
 			icon,
 			isLoading,
 			iconSize,
 			iconPosition = "left",
 			type = "button",
-			showOn,
 			roundedClassName,
 			sizeClassName,
 			size,
@@ -74,9 +70,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 		const initialStyles = getStyles({
 			disabled,
 			isCompact,
-			responsiveVariant,
 			roundedClassName,
-			showOn,
 			size,
 			sizeClassName,
 			theme,

@@ -1,8 +1,8 @@
-import { ButtonVariant, LayoutBreakpoint, ResponsiveButtonVariant, Size, Theme } from "@/types";
+import { ButtonVariant, Size, Theme } from "@/types";
 
-const getBaseStyle = (showOn?: LayoutBreakpoint, roundedClassName?: string) => {
+const getBaseStyle = (roundedClassName?: string) => {
 	const baseStyle: string[] = [
-		`relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
+		`relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none`,
 		`focus:outline-none focus:ring-2 focus:ring-theme-primary-400`,
 		`disabled:cursor-not-allowed`,
 	];
@@ -11,25 +11,11 @@ const getBaseStyle = (showOn?: LayoutBreakpoint, roundedClassName?: string) => {
 		baseStyle.push(`rounded`);
 	}
 
-	const display: Record<LayoutBreakpoint, string> = {
-		lg: `hidden lg:inline-flex`,
-		md: `hidden md:inline-flex`,
-		sm: `hidden sm:inline-flex`,
-		xl: `hidden xl:inline-flex`,
-	};
-
-	if (showOn === undefined) {
-		baseStyle.push(`inline-flex`);
-	} else {
-		baseStyle.push(display[showOn]);
-	}
-
 	return baseStyle;
 };
 
 const getVariant = (
 	variant?: ButtonVariant,
-	responsiveVariant?: ResponsiveButtonVariant,
 	theme?: Theme,
 	disabled?: boolean,
 	isCompact?: boolean,
@@ -96,20 +82,7 @@ const getVariant = (
 	};
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-	const variantStyle = [(variants[variant as keyof typeof variants] || variants.default)()];
-
-	for (const breakpoint of ["sm", "md", "lg", "xl"] as LayoutBreakpoint[]) {
-		const breakpointVariant = responsiveVariant === undefined ? undefined : responsiveVariant[breakpoint];
-
-		if (breakpointVariant === undefined) {
-			continue;
-		}
-
-		const breakpointVariantStyle = variants[breakpointVariant as keyof typeof variants]();
-		variantStyle.push(breakpointVariantStyle);
-	}
-
-	return variantStyle;
+	return [(variants[variant as keyof typeof variants] || variants.default)()];
 };
 
 const getSize = (size?: Size, sizeClassName?: string) => {
@@ -130,26 +103,22 @@ const getSize = (size?: Size, sizeClassName?: string) => {
 
 export const getStyles = ({
 	variant,
-	responsiveVariant,
 	theme,
 	size,
 	disabled,
-	showOn,
 	roundedClassName,
 	sizeClassName,
 	isCompact,
 }: {
 	variant?: ButtonVariant;
-	responsiveVariant?: ResponsiveButtonVariant;
 	theme?: Theme;
 	size?: Size;
 	sizeClassName?: string;
 	disabled?: boolean;
-	showOn?: LayoutBreakpoint;
 	roundedClassName?: string;
 	isCompact?: boolean;
 }) => [
 	getSize(size, sizeClassName),
-	getBaseStyle(showOn, roundedClassName),
-	getVariant(variant, responsiveVariant, theme, disabled, isCompact),
+	getBaseStyle(roundedClassName),
+	getVariant(variant, theme, disabled, isCompact),
 ];
