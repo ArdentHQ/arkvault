@@ -86,6 +86,15 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
+			},
+			{
+				data: {},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
 				url: "https://dwallets-evm.mainsailhq.com/api/transactions/9c5614d2f4e060f52c1dc8effd837bf13db0ce5ae4232cb24217300a74cdbceb",
 			},
 			{

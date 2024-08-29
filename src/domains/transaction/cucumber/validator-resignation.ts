@@ -52,15 +52,24 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
+			},
+			{
+				data: {},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
 				url: "https://dwallets-evm.mainsailhq.com/api/transactions/f92c362054c2f559f990da1c48082ca96304b1e2162ca65078db4412ee3a7dc2",
 			},
 			{
 				data: {},
 			},
 		),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr", {
+		mockRequest("https://dwallets-evm.mainsailhq.com/api/wallets/0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C", {
 			data: {
-				address: "DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
+				address: "0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
 				publicKey: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
 				balance: "37390000000",
 				nonce: "6",
