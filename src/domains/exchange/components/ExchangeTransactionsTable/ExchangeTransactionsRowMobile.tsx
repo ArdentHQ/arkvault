@@ -11,7 +11,8 @@ import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
 import { Divider } from "@/app/components/Divider";
 import { TimeAgo } from "@/app/components/TimeAgo";
-import { MobileCard, MobileSection } from "@/app/components/MobileCard";
+import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
+import { MobileCard } from '@/app/components/MobileCard';
 
 interface ExchangeTransactionProviderProperties {
 	slug: string;
