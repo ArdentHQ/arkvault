@@ -15,30 +15,22 @@ const endpoints = [
 ];
 
 const wallets = [
-	"DHBDV6VHRBaFWaEAkmBNMfp4ANKHrkpPKf",
-	"DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC",
-	"DMBQSFvk8L5z3JGd8Crn3omfqXNaeFLk2H",
-	"DGx4j6pRe7BmQBHBTZzN7uHf4LQgurW7Ub",
+	"0xdE983E8d323d045fde918B535eA43e1672a9B4ea",
+	"0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
+	"0xC46C85b3Dc856cdD23ac864a38be2E12090e7715",
+	"0x57Dc55AED392F634d6bea6E6A89718de7f5fA7e0",
 ];
 
 export const mainsailDevnetHandlers = [
-	...endpoints.map((endpoint) =>
-		rest.get(`https://dwallets.mainsailhq.com/api${endpoint.path}`, (_, response, context) => {
-			return response(context.status(200), context.json(endpoint.data));
-		}),
-	),
 	...endpoints.map((endpoint) =>
 		rest.get(`https://dwallets-evm.mainsailhq.com/api${endpoint.path}`, (_, response, context) => {
 			return response(context.status(200), context.json(endpoint.data));
 		}),
 	),
-	rest.get("https://dwallets.mainsailhq.com/", (_, response, context) => {
-		return response(context.status(200), context.json({ data: "Hello World!" }));
-	}),
 	rest.get("https://dwallets-evm.mainsailhq.com/", (_, response, context) => {
 		return response(context.status(200), context.json({ data: "Hello World!" }));
 	}),
-	rest.get("https://dwallets.mainsailhq.com/api/wallets/:identifier", (request, response, context) => {
+	rest.get("https://dwallets-evm.mainsailhq.com/api/wallets/:identifier", (request, response, context) => {
 		const identifier = request.params.identifier as string;
 
 		if (wallets.includes(identifier)) {

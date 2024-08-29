@@ -740,7 +740,7 @@ describe("Registration", () => {
 		beforeEach(() => {
 			server.use(
 				requestMock(
-					"https://ark-test-musig.arkvault.io/api/wallets/DHBDV6VHRBaFWaEAkmBNMfp4ANKHrkpPKf",
+					"https://ark-test-musig.arkvault.io/api/wallets/0xdE983E8d323d045fde918B535eA43e1672a9B4ea",
 					walletFixture,
 				),
 				requestMock(
