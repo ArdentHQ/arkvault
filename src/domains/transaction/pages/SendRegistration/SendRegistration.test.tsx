@@ -766,7 +766,9 @@ describe("Registration", () => {
 
 		it.each([withKeyboard, "without keyboard"])("should register username for mainsail %s", async (inputMethod) => {
 			// Emulate not found username
-			server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(
+				requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+			);
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
@@ -866,7 +868,9 @@ describe("Registration", () => {
 			});
 
 			// Emulate not found username
-			server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(
+				requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+			);
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
