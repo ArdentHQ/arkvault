@@ -7,10 +7,12 @@ import { AmountLabel } from "@/app/components/Amount";
 import { Icon } from "@/app/components/Icon";
 import { TableRow } from "@/app/components/Table";
 import { TableRemoveButton } from "@/app/components/TableRemoveButton";
-import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { TruncateMiddle } from "@/app/components/TruncateMiddle";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
+import { Divider } from "@/app/components/Divider";
+import { TimeAgo } from "@/app/components/TimeAgo";
+import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
+import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 
 interface ExchangeTransactionProviderProperties {
 	slug: string;
@@ -42,7 +44,7 @@ const ExchangeTransactionRowAmount: React.VFC<ExchangeTransactionRowAmountProper
 			hint={isPending ? t("EXCHANGE.EXPECTED_AMOUNT_HINT") : undefined}
 			value={data.amount}
 			ticker={data.ticker}
-			isCompact={false}
+			isCompact={true}
 			isNegative={type === "sent"}
 			size="sm"
 		/>
@@ -53,58 +55,50 @@ interface ExchangeTransactionsRowStatusProperties {
 	status: Contracts.ExchangeTransactionStatus;
 }
 
-const ExchangeTransactionsRowStatus: React.VFC<ExchangeTransactionsRowStatusProperties> = ({
-	status,
-}: ExchangeTransactionsRowStatusProperties) => {
-	const { t } = useTranslation();
+const getIcon = (status: Contracts.ExchangeTransactionStatus) => {
+	if (status === Contracts.ExchangeTransactionStatus.Finished) {
+		return {
+			color: "text-theme-success-600",
+			name: "CircleCheckMark",
+		};
+	}
 
-	const getIcon = (status: Contracts.ExchangeTransactionStatus) => {
-		if (status === Contracts.ExchangeTransactionStatus.Finished) {
-			return {
-				color: "text-theme-success-600",
-				name: "CircleCheckMark",
-			};
-		}
+	if (status === Contracts.ExchangeTransactionStatus.Expired) {
+		return {
+			color: "text-theme-danger-400",
+			name: "ClockError",
+		};
+	}
 
-		if (status === Contracts.ExchangeTransactionStatus.Expired) {
-			return {
-				color: "text-theme-danger-400",
-				name: "ClockError",
-			};
-		}
-
-		if (
-			status === Contracts.ExchangeTransactionStatus.Refunded ||
-			status === Contracts.ExchangeTransactionStatus.Verifying
-		) {
-			return {
-				color: "text-theme-warning-300",
-				name: "CircleExclamationMark",
-			};
-		}
-
-		if (status === Contracts.ExchangeTransactionStatus.Failed) {
-			return {
-				color: "text-theme-danger-400",
-				name: "CircleCross",
-			};
-		}
-
+	if (
+		status === Contracts.ExchangeTransactionStatus.Refunded ||
+		status === Contracts.ExchangeTransactionStatus.Verifying
+	) {
 		return {
 			color: "text-theme-warning-300",
-			name: "Clock",
+			name: "CircleExclamationMark",
 		};
+	}
+
+	if (status === Contracts.ExchangeTransactionStatus.Failed) {
+		return {
+			color: "text-theme-danger-400",
+			name: "CircleCross",
+		};
+	}
+
+	return {
+		color: "text-theme-warning-300",
+		name: "Clock",
 	};
+};
 
+const ExchangeTransactionsRowStatusIcon: React.VFC<ExchangeTransactionsRowStatusProperties> = ({
+	status,
+}: ExchangeTransactionsRowStatusProperties) => {
 	const { name, color } = getIcon(status);
-
-	const transactionStatus = (
-		Contracts.ExchangeTransactionStatus[status] as keyof typeof Contracts.ExchangeTransactionStatus
-	).toUpperCase();
-
 	return (
 		<span className="flex items-center space-x-2 text-theme-secondary-700 dark:text-theme-secondary-200">
-			<span>{t(`EXCHANGE.STATUS.${transactionStatus}`)}</span>
 			<Icon name={name} size="lg" className={color} />
 		</span>
 	);
@@ -121,8 +115,6 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 	onClick,
 	onRemove,
 }) => {
-	const timeFormat = useTimeFormat();
-
 	const { t } = useTranslation();
 
 	const handleRemove = (event: MouseEvent) => {
@@ -133,67 +125,69 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 	};
 
 	return (
-		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
-			<td data-testid="TableRow__mobile" className="flex-col space-y-4 py-4">
-				<RowWrapper>
-					<RowLabel>{t("COMMON.TX_ID")}</RowLabel>
+		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())} border={false}>
+			<td>
+				<MobileCard className="mb-3">
+					<div
+						className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+						data-testid="TableRow__mobile"
+					>
+						<div className="text-sm font-semibold">
+							{exchangeTransaction.orderId() ? (
+								<TruncateMiddle
+									className="text-theme-primary-600"
+									text={exchangeTransaction.orderId()}
+									maxChars={14}
+								/>
+							) : (
+								<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
+									{t("COMMON.NOT_AVAILABLE")}
+								</span>
+							)}
+						</div>
 
-					{exchangeTransaction.orderId() ? (
-						<button
-							type="button"
-							className="link font-semibold"
-							onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
-						>
-							<TruncateMiddle text={exchangeTransaction.orderId()} />
-						</button>
-					) : (
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-200">NA</span>
-					)}
-				</RowWrapper>
+						<div className="flex flex-row items-center">
+							<span className="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
+								<TimeAgo
+									date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()}
+								/>
+							</span>
+							<div className="hidden sm:block">
+								<Divider type="vertical" />
+							</div>
+							<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
+							<Divider type="vertical" />
+							<TableRemoveButton
+								className="cursor-pointer !p-0"
+								isCompact={true}
+								onClick={handleRemove}
+								data-testid="TableRow__mobile-remove-button"
+							/>
+						</div>
+					</div>
 
-				<RowWrapper>
-					<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3">
+						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">
+							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
+						</MobileSection>
 
-					<span className="font-semibold">
-						<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
-					</span>
-				</RowWrapper>
+						<MobileSection title={t("COMMON.EXCHANGE")}>
+							<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
+						</MobileSection>
 
-				<RowWrapper>
-					<RowLabel>{t("COMMON.TIMESTAMP")}</RowLabel>
+						<MobileSection title={t("COMMON.FROM")}>
+							<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
+						</MobileSection>
 
-					{DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).format(timeFormat)}
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.FROM")}</RowLabel>
-
-					<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.TO")}</RowLabel>
-
-					<ExchangeTransactionRowAmount
-						type="received"
-						data={exchangeTransaction.output()}
-						isPending={exchangeTransaction.isPending()}
-					/>
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.STATUS")}</RowLabel>
-
-					<ExchangeTransactionsRowStatus status={exchangeTransaction.status()} />
-				</RowWrapper>
-
-				<RowWrapper>
-					<TableRemoveButton
-						className="w-full cursor-pointer sm:ml-auto sm:w-auto"
-						isCompact={false}
-						onClick={handleRemove}
-					/>
-				</RowWrapper>
+						<MobileSection title={t("COMMON.TO")}>
+							<ExchangeTransactionRowAmount
+								type="received"
+								data={exchangeTransaction.output()}
+								isPending={exchangeTransaction.isPending()}
+							/>
+						</MobileSection>
+					</div>
+				</MobileCard>
 			</td>
 		</TableRow>
 	);
