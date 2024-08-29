@@ -7,57 +7,13 @@ exports[`WalletHeader > should handle locked balance 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -70,7 +26,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -158,10 +114,10 @@ exports[`WalletHeader > should handle locked balance 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -228,11 +184,11 @@ exports[`WalletHeader > should handle locked balance 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -258,7 +214,7 @@ exports[`WalletHeader > should handle locked balance 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -408,57 +364,13 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -496,7 +408,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -584,10 +496,10 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -654,11 +566,11 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -684,7 +596,7 @@ exports[`WalletHeader > should handle locked balance when is ledger 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -834,57 +746,13 @@ exports[`WalletHeader > should render 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -897,7 +765,7 @@ exports[`WalletHeader > should render 1`] = `
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -985,10 +853,10 @@ exports[`WalletHeader > should render 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1009,11 +877,11 @@ exports[`WalletHeader > should render 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1039,7 +907,7 @@ exports[`WalletHeader > should render 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1153,57 +1021,13 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -1216,7 +1040,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -1304,10 +1128,10 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1334,11 +1158,11 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1364,7 +1188,7 @@ exports[`WalletHeader > should render amount for wallet in live network 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1478,57 +1302,13 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -1566,7 +1346,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -1654,10 +1434,10 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -1678,11 +1458,11 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -1708,7 +1488,7 @@ exports[`WalletHeader > should render with incompatible ledger wallet 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -1823,57 +1603,13 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -1886,7 +1622,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -1974,10 +1710,10 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2030,11 +1766,11 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2060,7 +1796,7 @@ exports[`WalletHeader > should show currency delta (-5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2174,57 +1910,13 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -2237,7 +1929,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -2325,10 +2017,10 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2381,11 +2073,11 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2411,7 +2103,7 @@ exports[`WalletHeader > should show currency delta (5%) 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2525,57 +2217,13 @@ exports[`WalletHeader > should show modifiers 1`] = `
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -2649,7 +2297,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -2737,10 +2385,10 @@ exports[`WalletHeader > should show modifiers 1`] = `
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -2761,11 +2409,11 @@ exports[`WalletHeader > should show modifiers 1`] = `
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -2791,7 +2439,7 @@ exports[`WalletHeader > should show modifiers 1`] = `
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
@@ -2905,57 +2553,13 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
     data-testid="WalletHeader"
   >
     <div
-      class="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12"
+      class="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6"
     >
       <div
-        class="flex -space-x-1"
+        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0"
       >
         <div
-          aria-label="ARK Devnet"
-          class="border-theme-secondary-700 text-theme-secondary-text ring-theme-background duration-100 css-qrfosa"
-          data-testid="NetworkIcon-ARK-ark.devnet"
-        >
-          <div
-            class="css-1i4b0eq"
-            data-testid="NetworkIcon__icon"
-            height="20"
-            width="20"
-          >
-            <svg
-              id="ark"
-              viewBox="0 0 36.3 30.6"
-              x="0"
-              xml:space="preserve"
-              xmlns="http://www.w3.org/2000/svg"
-              y="0"
-            >
-              <path
-                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="ring-theme-secondary-900 shrink-0 css-19i3ei6"
-          data-testid="Avatar"
-        >
-          <div
-            class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-          >
-            <img
-              alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-              src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-              title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4"
-      >
-        <div
-          class="flex items-center space-x-2 text-theme-secondary-text"
+          class="flex items-center space-x-2 text-theme-secondary-text lg:gap-2"
         >
           <span
             class="text-sm font-semibold"
@@ -2968,7 +2572,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           />
         </div>
         <div
-          class="flex w-full items-center space-x-5"
+          class="flex w-full items-center space-x-4"
         >
           <span
             class="min-w-0"
@@ -3026,10 +2630,10 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
       class="my-6 self-stretch border-t border-theme-secondary-800 lg:my-0 lg:border-r"
     />
     <div
-      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-12"
+      class="h-13 flex w-full items-center lg:w-1/2 lg:pl-6"
     >
       <div
-        class="mr-auto flex flex-col"
+        class="mr-auto flex flex-col lg:gap-2"
       >
         <div
           class="flex items-center text-sm font-semibold text-theme-secondary-text"
@@ -3050,11 +2654,11 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
         </div>
       </div>
       <div
-        class="my-auto flex items-center space-x-3"
+        class="flex items-center justify-center gap-3"
       >
         <button
           aria-busy="false"
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__refresh"
           type="button"
         >
@@ -3080,7 +2684,7 @@ exports[`WalletHeader > should use empty string in clipboard copy if publickey i
           </div>
         </button>
         <button
-          class="css-5zyt1"
+          class="css-1tz7btt"
           data-testid="WalletHeader__star-button"
           type="button"
         >
