@@ -29,17 +29,21 @@ const FooterContent = ({ label, value, iconName, disabled, className }: FooterCo
 				<div className="flex items-center justify-start md:justify-end">
 					<div>{value}</div>
 
-					{iconName && <div className="hidden pl-2 md:block lg:hidden">
-						<Icon name={iconName} className="shrink-0" size="lg" />
-					</div>}
+					{iconName && (
+						<div className="hidden pl-2 md:block lg:hidden">
+							<Icon name={iconName} className="shrink-0" size="lg" />
+						</div>
+					)}
 				</div>
 			</TextWrapper>
 		</div>
-		{iconName && <div className="hidden lg:block">
-			<Circle disabled={disabled} size="lg" noShadow>
-				<Icon name={iconName} size="lg" />
-			</Circle>
-		</div>}
+		{iconName && (
+			<div className="hidden lg:block">
+				<Circle disabled={disabled} size="lg" noShadow>
+					<Icon name={iconName} size="lg" />
+				</Circle>
+			</div>
+		)}
 	</div>
 );
 
