@@ -1,0 +1,29 @@
+{
+   "data":{
+      "address":"0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C",
+      "publicKey":"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+      "balance":"2358490566037485768140601",
+      "nonce":"11",
+      "attributes":{
+         "vote":"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+         "nonce":"11",
+         "balance":"2358490566037485768140601",
+         "username":"genesis_1",
+         "publicKey":"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+         "validatorRank":53,
+         "validatorApproval":1.89,
+         "validatorLastBlock":{
+            "id":"3389decdcebbd02f543325d0e018aa95f0b008b2bbb01ef272df5f609fbfd669",
+            "height":19404,
+            "timestamp":1724927240746
+         },
+         "validatorPublicKey":"8a0836e15156b95cab8fbfb756cd2a5ce27909cc23752691b991831dfcd3c4a15be1e7b883566d0d5c4f068adcc1c588",
+         "validatorForgedFees":"0",
+         "validatorForgedTotal":"0",
+         "validatorVoteBalance":"2358490566037485778956596",
+         "validatorForgedRewards":"0",
+         "validatorProducedBlocks":367
+      },
+      "updated_at":"19451"
+   }
+}
