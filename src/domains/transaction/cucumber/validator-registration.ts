@@ -61,7 +61,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://dwallets.mainsailhq.com/tx/api/transactions",
+				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
 			},
 			{
 				data: {
@@ -75,7 +75,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/wallets/?attributes.validatorPublicKey=84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2",
+				url: "https://dwallets-evm.mainsailhq.com/api/wallets/?attributes.validatorPublicKey=84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2",
 			},
 			{
 				meta: {
@@ -86,7 +86,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/transactions/9c5614d2f4e060f52c1dc8effd837bf13db0ce5ae4232cb24217300a74cdbceb",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions/9c5614d2f4e060f52c1dc8effd837bf13db0ce5ae4232cb24217300a74cdbceb",
 			},
 			{
 				data: {},

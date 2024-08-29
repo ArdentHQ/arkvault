@@ -5,9 +5,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable max-lines */
+import React from "react";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Observer } from "@ledgerhq/hw-transport";
-import React from "react";
 import { Route } from "react-router-dom";
 import { Signatories } from "@ardenthq/sdk";
 import { createHashHistory } from "history";
@@ -765,7 +766,7 @@ describe("Registration", () => {
 
 		it.each([withKeyboard, "without keyboard"])("should register username for mainsail %s", async (inputMethod) => {
 			// Emulate not found username
-			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
@@ -865,7 +866,7 @@ describe("Registration", () => {
 			});
 
 			// Emulate not found username
-			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
@@ -955,7 +956,7 @@ describe("Registration", () => {
 			}));
 
 			// Emulate public key hasn't used
-			server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
+			server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
 
 			const nanoXTransportMock = mockNanoXTransport();
 			await renderPage(profile, wallet, "delegateRegistration");
@@ -1039,7 +1040,7 @@ describe("Registration", () => {
 
 				// Emulate not found username
 				server.use(
-					requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+					requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
 				);
 
 				const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);

@@ -52,7 +52,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/wallets/test_username",
+				url: "https://dwallets-evm.mainsailhq.com/api/wallets/test_username",
 			},
 			{
 				data: {},
@@ -62,7 +62,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "POST",
-				url: "https://dwallets.mainsailhq.com/tx/api/transactions",
+				url: "https://dwallets-evm.mainsailhq.com/tx/api/transactions",
 			},
 			{
 				data: {
@@ -76,7 +76,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/transactions/9fe946a99190e93ddb7d5defc183db8f65502b89957f6f4d9ae05fd394cbd01f",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions/9fe946a99190e93ddb7d5defc183db8f65502b89957f6f4d9ae05fd394cbd01f",
 			},
 			{
 				data: {},
@@ -118,7 +118,7 @@ cucumber(
 		mockRequest(
 			{
 				method: "GET",
-				url: "https://dwallets.mainsailhq.com/api/wallets/occupied_username",
+				url: "https://dwallets-evm.mainsailhq.com/api/wallets/occupied_username",
 			},
 			{
 				data: {},
