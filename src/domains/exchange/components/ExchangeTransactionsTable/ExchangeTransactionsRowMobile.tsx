@@ -126,65 +126,67 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 
 	return (
 		<TableRow onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())} border={false}>
-			<MobileCard className="mb-3">
-				<div
-					className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
-					data-testid="TableRow__mobile"
-				>
-					<div className="text-sm font-semibold">
-						{exchangeTransaction.orderId() ? (
-							<TruncateMiddle
-								className="text-theme-primary-600"
-								text={exchangeTransaction.orderId()}
-								maxChars={14}
-							/>
-						) : (
-							<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
-								{t("COMMON.NOT_AVAILABLE")}
-							</span>
-						)}
-					</div>
-
-					<div className="flex flex-row items-center">
-						<span className="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
-							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
-						</span>
-						<div className="hidden sm:block">
-							<Divider type="vertical" />
+			<td>
+				<MobileCard className="mb-3">
+					<div
+						className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
+						data-testid="TableRow__mobile"
+					>
+						<div className="text-sm font-semibold">
+							{exchangeTransaction.orderId() ? (
+								<TruncateMiddle
+									className="text-theme-primary-600"
+									text={exchangeTransaction.orderId()}
+									maxChars={14}
+								/>
+							) : (
+								<span className="text-theme-secondary-700 dark:text-theme-secondary-200">
+									{t("COMMON.NOT_AVAILABLE")}
+								</span>
+							)}
 						</div>
-						<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
-						<Divider type="vertical" />
-						<TableRemoveButton
-							className="cursor-pointer !p-0"
-							isCompact={true}
-							onClick={handleRemove}
-							data-testid="TableRow__mobile-remove-button"
-						/>
+
+						<div className="flex flex-row items-center">
+							<span className="hidden text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:block">
+								<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
+							</span>
+							<div className="hidden sm:block">
+								<Divider type="vertical" />
+							</div>
+							<ExchangeTransactionsRowStatusIcon status={exchangeTransaction.status()} />
+							<Divider type="vertical" />
+							<TableRemoveButton
+								className="cursor-pointer !p-0"
+								isCompact={true}
+								onClick={handleRemove}
+								data-testid="TableRow__mobile-remove-button"
+							/>
+						</div>
 					</div>
-				</div>
 
-				<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3">
-					<MobileSection title={t("COMMON.AGE")} className="sm:hidden">
-						<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
-					</MobileSection>
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-3">
+						<MobileSection title={t("COMMON.AGE")} className="sm:hidden">
+							<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
+						</MobileSection>
 
-					<MobileSection title={t("COMMON.EXCHANGE")}>
-						<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
-					</MobileSection>
+						<MobileSection title={t("COMMON.EXCHANGE")}>
+							<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
+						</MobileSection>
 
-					<MobileSection title={t("COMMON.FROM")}>
-						<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
-					</MobileSection>
+						<MobileSection title={t("COMMON.FROM")}>
+							<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
+						</MobileSection>
 
-					<MobileSection title={t("COMMON.TO")}>
-						<ExchangeTransactionRowAmount
-							type="received"
-							data={exchangeTransaction.output()}
-							isPending={exchangeTransaction.isPending()}
-						/>
-					</MobileSection>
-				</div>
-			</MobileCard>
+						<MobileSection title={t("COMMON.TO")}>
+							<ExchangeTransactionRowAmount
+								type="received"
+								data={exchangeTransaction.output()}
+								isPending={exchangeTransaction.isPending()}
+							/>
+						</MobileSection>
+					</div>
+				</MobileCard>
+			</td>
 		</TableRow>
 	);
 };
