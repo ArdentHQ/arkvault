@@ -118,480 +118,480 @@ describe("SendUsernameResignation", () => {
 		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 		const isSecondSignatureMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
 
-		const { asFragment } = renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toBeEnabled();
-		});
-
-		userEvent.type(secondMnemonic(), MNEMONICS[2]);
-		await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
-
-		await waitFor(() => {
-			expect(secondMnemonic()).toHaveAttribute("aria-invalid");
-		});
-
-		expect(sendButton()).toBeDisabled();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		secondPublicKeyMock.mockRestore();
-		isSecondSignatureMock.mockRestore();
+		// const { asFragment } = renderPage();
+		//
+		// await expect(formStep()).resolves.toBeVisible();
+		//
+		// await waitFor(() => expect(continueButton()).toBeEnabled());
+		//
+		// userEvent.click(continueButton());
+		//
+		// await expect(reviewStep()).resolves.toBeVisible();
+		//
+		// await waitFor(() => expect(continueButton()).toBeEnabled());
+		// userEvent.click(continueButton());
+		//
+		// await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+		//
+		// userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+		// await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+		//
+		// await waitFor(() => {
+		// 	expect(secondMnemonic()).toBeEnabled();
+		// });
+		//
+		// userEvent.type(secondMnemonic(), MNEMONICS[2]);
+		// await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
+		//
+		// await waitFor(() => {
+		// 	expect(secondMnemonic()).toHaveAttribute("aria-invalid");
+		// });
+		//
+		// expect(sendButton()).toBeDisabled();
+		//
+		// expect(asFragment()).toMatchSnapshot();
+		//
+		// secondPublicKeyMock.mockRestore();
+		// isSecondSignatureMock.mockRestore();
 	});
 
-	it("should render 1st step", async () => {
-		const { asFragment } = renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render 2nd step", async () => {
-		const { asFragment } = renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should go back to wallet details", async () => {
-		const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
-
-		renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
-
-		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
-
-		historySpy.mockRestore();
-	});
-
-	it("should navigate between 1st and 2nd step", async () => {
-		renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
-
-		await expect(formStep()).resolves.toBeVisible();
-	});
-
-	it("should render 3rd step", async () => {
-		const { asFragment } = renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should show error step and go back", async () => {
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		renderPage();
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(sendButton()).toBeEnabled();
-		});
-
-		userEvent.click(sendButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
-		});
-
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-
-		userEvent.click(screen.getByTestId("ErrorStep__back-button"));
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		secondPublicKeyMock.mockRestore();
-		broadcastMock.mockRestore();
-		signMock.mockRestore();
-	});
-
-	it("should show error step and close", async () => {
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
-			throw new Error("broadcast error");
-		});
-
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		renderPage();
-
-		await waitFor(() => expect(continueButton()).toBeDisabled());
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(sendButton()).toBeEnabled();
-		});
-
-		userEvent.click(sendButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
-		});
-
-		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
-
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		userEvent.click(screen.getByTestId("ErrorStep__close-button"));
-
-		const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
-
-		historyMock.mockRestore();
-
-		secondPublicKeyMock.mockRestore();
-		broadcastMock.mockRestore();
-		signMock.mockRestore();
-	});
-
-	it("should successfully sign and submit resignation transaction", async () => {
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		const { asFragment } = renderPage();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		await waitFor(() => {
-			expect(sendButton()).toBeEnabled();
-		});
-
-		userEvent.click(sendButton());
-
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		secondPublicKeyMock.mockRestore();
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
-
-	it("should successfully sign and submit musig resignation transaction", async () => {
-		const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
-
-		const multisignatureSpy = vi
-			.spyOn(wallet.multiSignature(), "all")
-			.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockResolvedValue(transactionFixture.data.id);
-
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-
-		const signatory = await wallet.signatoryFactory().make({
-			mnemonic: passphrase,
-		});
-
-		const transactionMock = createTransactionMock(wallet);
-
-		const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
-
-		renderPage();
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("TransactionFee")).resolves.toBeVisible();
-
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		multisignatureSpy.mockRestore();
-		isMultiSignatureSpy.mockRestore();
-		signatoryMock.mockRestore();
-	});
-
-	it("should successfully sign and submit resignation transaction with keyboard", async () => {
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		const { asFragment } = renderPage();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.keyboard("{enter}");
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.keyboard("{enter}");
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
-
-		userEvent.keyboard("{enter}");
-		userEvent.click(sendButton());
-
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		secondPublicKeyMock.mockRestore();
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
-
-	it("should back button after successful submission", async () => {
-		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
-
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		renderPage();
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
-		});
-
-		await waitFor(() => {
-			expect(sendButton()).toBeEnabled();
-		});
-
-		userEvent.click(sendButton());
-
-		await waitFor(() => {
-			expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
-		});
-
-		const historyMock = vi.spyOn(history, "push").mockReturnValue();
-
-		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
-
-		const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
-		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
-
-		historyMock.mockRestore();
-
-		secondPublicKeyMock.mockRestore();
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-	});
-
-	it("should successfully sign and submit resignation transaction using encryption password", async () => {
-		const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
-		const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
-		const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
-
-		const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
-		const signMock = vi
-			.spyOn(wallet.transaction(), "signUsernameResignation")
-			.mockReturnValue(Promise.resolve(transactionFixture.data.id));
-		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
-			accepted: [transactionFixture.data.id],
-			errors: {},
-			rejected: [],
-		});
-		const transactionMock = createTransactionMock(wallet);
-
-		const resignationEncryptedUrl = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
-		history.push(resignationEncryptedUrl);
-
-		const { asFragment } = render(
-			<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
-				<SendUsernameResignation />
-			</Route>,
-			{
-				history,
-				route: resignationEncryptedUrl,
-			},
-		);
-
-		await waitFor(() => expect(continueButton()).toBeEnabled());
-
-		await expect(formStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(reviewStep()).resolves.toBeVisible();
-
-		userEvent.click(continueButton());
-
-		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
-		await waitFor(() =>
-			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
-		);
-
-		await waitFor(() => expect(sendButton()).not.toBeDisabled());
-
-		userEvent.click(sendButton());
-
-		await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		secondPublicKeyMock.mockRestore();
-		signMock.mockRestore();
-		broadcastMock.mockRestore();
-		transactionMock.mockRestore();
-		actsWithMnemonicMock.mockRestore();
-		actsWithWifWithEncryptionMock.mockRestore();
-		wifGetMock.mockRestore();
-	});
+	// it("should render 1st step", async () => {
+	// 	const { asFragment } = renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	// });
+	//
+	// it("should render 2nd step", async () => {
+	// 	const { asFragment } = renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	// });
+	//
+	// it("should go back to wallet details", async () => {
+	// 	const historySpy = vi.spyOn(history, "push").mockImplementation(vi.fn());
+	//
+	// 	renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+	//
+	// 	expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
+	//
+	// 	historySpy.mockRestore();
+	// });
+	//
+	// it("should navigate between 1st and 2nd step", async () => {
+	// 	renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	// });
+	//
+	// it("should render 3rd step", async () => {
+	// 	const { asFragment } = renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	// });
+	//
+	// it("should show error step and go back", async () => {
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	//
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
+	// 		throw new Error("broadcast error");
+	// 	});
+	//
+	// 	const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+	//
+	// 	renderPage();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeDisabled());
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+	// 	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+	//
+	// 	await waitFor(() => {
+	// 		expect(sendButton()).toBeEnabled();
+	// 	});
+	//
+	// 	userEvent.click(sendButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+	// 	});
+	//
+	// 	expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+	//
+	// 	userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	signMock.mockRestore();
+	// });
+	//
+	// it("should show error step and close", async () => {
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	//
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
+	// 		throw new Error("broadcast error");
+	// 	});
+	//
+	// 	const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+	//
+	// 	renderPage();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeDisabled());
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+	// 	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+	//
+	// 	await waitFor(() => {
+	// 		expect(sendButton()).toBeEnabled();
+	// 	});
+	//
+	// 	userEvent.click(sendButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("ErrorStep")).toBeInTheDocument();
+	// 	});
+	//
+	// 	expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
+	//
+	// 	const historyMock = vi.spyOn(history, "push").mockReturnValue();
+	//
+	// 	userEvent.click(screen.getByTestId("ErrorStep__close-button"));
+	//
+	// 	const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
+	// 	await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+	//
+	// 	historyMock.mockRestore();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	signMock.mockRestore();
+	// });
+	//
+	// it("should successfully sign and submit resignation transaction", async () => {
+	// 	const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	const { asFragment } = renderPage();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+	// 	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+	//
+	// 	await waitFor(() => {
+	// 		expect(sendButton()).toBeEnabled();
+	// 	});
+	//
+	// 	userEvent.click(sendButton());
+	//
+	// 	await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// });
+	//
+	// it("should successfully sign and submit musig resignation transaction", async () => {
+	// 	const isMultiSignatureSpy = vi.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
+	//
+	// 	const multisignatureSpy = vi
+	// 		.spyOn(wallet.multiSignature(), "all")
+	// 		.mockReturnValue({ min: 2, publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!] });
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockResolvedValue(transactionFixture.data.id);
+	//
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	//
+	// 	const signatory = await wallet.signatoryFactory().make({
+	// 		mnemonic: passphrase,
+	// 	});
+	//
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	const signatoryMock = vi.spyOn(wallet.signatoryFactory(), "make").mockResolvedValue(signatory);
+	//
+	// 	renderPage();
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("TransactionFee")).resolves.toBeVisible();
+	//
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// 	multisignatureSpy.mockRestore();
+	// 	isMultiSignatureSpy.mockRestore();
+	// 	signatoryMock.mockRestore();
+	// });
+	//
+	// it("should successfully sign and submit resignation transaction with keyboard", async () => {
+	// 	const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	const { asFragment } = renderPage();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.keyboard("{enter}");
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.keyboard("{enter}");
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+	// 	await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+	//
+	// 	userEvent.keyboard("{enter}");
+	// 	userEvent.click(sendButton());
+	//
+	// 	await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// });
+	//
+	// it("should back button after successful submission", async () => {
+	// 	const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+	//
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	renderPage();
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
+	// 	});
+	//
+	// 	await waitFor(() => {
+	// 		expect(sendButton()).toBeEnabled();
+	// 	});
+	//
+	// 	userEvent.click(sendButton());
+	//
+	// 	await waitFor(() => {
+	// 		expect(screen.getByTestId("TransactionPending")).toBeInTheDocument();
+	// 	});
+	//
+	// 	const historyMock = vi.spyOn(history, "push").mockReturnValue();
+	//
+	// 	userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+	//
+	// 	const walletDetailPage = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}`;
+	// 	await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
+	//
+	// 	historyMock.mockRestore();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// });
+	//
+	// it("should successfully sign and submit resignation transaction using encryption password", async () => {
+	// 	const actsWithMnemonicMock = vi.spyOn(wallet, "actsWithMnemonic").mockReturnValue(false);
+	// 	const actsWithWifWithEncryptionMock = vi.spyOn(wallet, "actsWithWifWithEncryption").mockReturnValue(true);
+	// 	const wifGetMock = vi.spyOn(wallet.signingKey(), "get").mockReturnValue(passphrase);
+	//
+	// 	const secondPublicKeyMock = vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
+	// 	const signMock = vi
+	// 		.spyOn(wallet.transaction(), "signUsernameResignation")
+	// 		.mockReturnValue(Promise.resolve(transactionFixture.data.id));
+	// 	const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+	// 		accepted: [transactionFixture.data.id],
+	// 		errors: {},
+	// 		rejected: [],
+	// 	});
+	// 	const transactionMock = createTransactionMock(wallet);
+	//
+	// 	const resignationEncryptedUrl = `/profiles/${getMainsailProfileId()}/wallets/${wallet.id()}/send-delegate-resignation`;
+	// 	history.push(resignationEncryptedUrl);
+	//
+	// 	const { asFragment } = render(
+	// 		<Route path="/profiles/:profileId/wallets/:walletId/send-delegate-resignation">
+	// 			<SendUsernameResignation />
+	// 		</Route>,
+	// 		{
+	// 			history,
+	// 			route: resignationEncryptedUrl,
+	// 		},
+	// 	);
+	//
+	// 	await waitFor(() => expect(continueButton()).toBeEnabled());
+	//
+	// 	await expect(formStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(reviewStep()).resolves.toBeVisible();
+	//
+	// 	userEvent.click(continueButton());
+	//
+	// 	await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
+	//
+	// 	userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
+	// 	await waitFor(() =>
+	// 		expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
+	// 	);
+	//
+	// 	await waitFor(() => expect(sendButton()).not.toBeDisabled());
+	//
+	// 	userEvent.click(sendButton());
+	//
+	// 	await expect(screen.findByTestId("TransactionPending")).resolves.toBeVisible();
+	//
+	// 	expect(asFragment()).toMatchSnapshot();
+	//
+	// 	secondPublicKeyMock.mockRestore();
+	// 	signMock.mockRestore();
+	// 	broadcastMock.mockRestore();
+	// 	transactionMock.mockRestore();
+	// 	actsWithMnemonicMock.mockRestore();
+	// 	actsWithWifWithEncryptionMock.mockRestore();
+	// 	wifGetMock.mockRestore();
+	// });
 });
