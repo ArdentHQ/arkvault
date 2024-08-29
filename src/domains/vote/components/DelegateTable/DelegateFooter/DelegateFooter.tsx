@@ -22,7 +22,7 @@ interface FooterContentProperties {
 }
 
 const FooterContent = ({ label, value, iconName, disabled, className }: FooterContentProperties) => (
-	<div className={cn("flex space-x-3 px-6", className)}>
+	<div className={cn("flex space-x-3 first:pl-6 pl-4 pr-4 last:pr-6", className)}>
 		<div className="flex flex-col justify-between sm:text-right">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${iconName?.toLocaleLowerCase()}`}>
@@ -114,7 +114,7 @@ export const DelegateFooter = ({
 			data-testid="DelegateTable__footer"
 		>
 			<div className="mx-auto px-8 lg:container md:px-10">
-				<div className="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0">
+				<div className="flex flex-col space-y-3 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0">
 					<div className="flex flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x">
 						<div className={cn("flex flex-grow overflow-x-auto", { "pr-5": requiresStakeAmount })}>
 							<div
@@ -128,8 +128,8 @@ export const DelegateFooter = ({
 										<Address
 											address={selectedWallet.address()}
 											walletName={selectedWallet.alias()}
-											addressClass="leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
-											walletNameClass="leading-5 text-theme-text"
+											addressClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700"
+											walletNameClass="text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
 										/>
 									</div>
 								</div>
@@ -152,7 +152,7 @@ export const DelegateFooter = ({
 							</div>
 						)}
 					</div>
-					<div className="flex h-full border-t border-theme-secondary-300 pt-2 dark:border-theme-secondary-800 sm:border-l sm:border-t-0 sm:pt-0 md:border-l-0">
+					<div className="flex h-full border-t border-theme-secondary-300 pt-3 dark:border-theme-secondary-800 sm:border-l sm:border-t-0 sm:pt-0 md:border-l-0">
 						<div className="-ml-6 flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:ml-0">
 							<FooterContent
 								disabled={selectedVotes.length === 0}

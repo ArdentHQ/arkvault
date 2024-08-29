@@ -5,7 +5,7 @@ import { Circle } from "@/app/components/Circle";
 const disabledColor = tw`text-theme-secondary-500 dark:text-theme-secondary-700`;
 
 export const LabelWrapper = styled.div`
-	${tw`text-sm leading-[17px] text-theme-secondary-700`};
+	${tw`text-xs sm:text-sm leading-[17px] text-theme-secondary-700`};
 `;
 
 export const TextWrapper = styled.div<{ disabled?: boolean }>`
