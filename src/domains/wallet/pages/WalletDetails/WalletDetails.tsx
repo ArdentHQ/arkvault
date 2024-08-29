@@ -123,7 +123,7 @@ export const WalletDetails = () => {
 
 				{!isXs && (
 					<Section
-						className={cn("first:pt-8 last:pb-8 !pb-8", {
+						className={cn("!pb-8 first:pt-8 last:pb-8", {
 							"border-b border-transparent dark:border-theme-secondary-800": !networkAllowsVoting,
 						})}
 						innerClassName="px-6 sm:px-10"
