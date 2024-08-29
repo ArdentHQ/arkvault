@@ -5,6 +5,7 @@ import { createHashHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { SendUsernameResignation } from "./SendUsernameResignation";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
@@ -18,7 +19,6 @@ import {
 	MNEMONICS_MAINSAIL as MNEMONICS,
 } from "@/utils/testing-library";
 import * as useFeesHook from "@/app/hooks/use-fees";
-import { BigNumber } from "@ardenthq/sdk-helpers";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;
@@ -87,12 +87,14 @@ describe("SendUsernameResignation", () => {
 			}),
 		);
 
-		vi.spyOn(wallet, "publicKey").mockReturnValue("03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc")
-		vi.spyOn(wallet, "username").mockReturnValue("genesis_1")
-		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make('100000'))
-		vi.spyOn(wallet, "nonce").mockReturnValue(BigNumber.make('10'))
-		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false)
-		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false)
+		vi.spyOn(wallet, "publicKey").mockReturnValue(
+			"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+		);
+		vi.spyOn(wallet, "username").mockReturnValue("genesis_1");
+		vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("100000"));
+		vi.spyOn(wallet, "nonce").mockReturnValue(BigNumber.make("10"));
+		vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+		vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
 		await wallet.synchroniser().identity();
 

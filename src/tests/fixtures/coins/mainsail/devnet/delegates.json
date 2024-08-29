@@ -1,1446 +1,1446 @@
 {
-    "meta": {
-        "totalCountIsEstimate": true,
-        "count": 53,
-        "first": "/delegates?limit=100&page=1",
-        "last": "/delegates?limit=100&page=1",
-        "next": null,
-        "pageCount": 1,
-        "previous": null,
-        "self": "/delegates?limit=100&page=1",
-        "totalCount": 53
-    },
-    "data": [
-        {
-            "address": "0xBE47E4E73DC8c82f0fF2f5BFa8900aA57624144B",
-            "publicKey": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
-            "balance": "2358490566037835849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
-                "nonce": "3",
-                "balance": "2358490566037835849056603",
-                "username": "genesis_3",
-                "publicKey": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
-                "validatorRank": 1,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "53013b7b64b2f7016ce091d340e354a8578034e60460cbeddd4f4054c25798bb",
-                    "height": 20411,
-                    "timestamp": 1724935664670
-                },
-                "validatorPublicKey": "a058709acee67dd7c005f3b301ad201def1a764fca5dfd632c2c0a8280182075e34379ce604908ef9729e930fc97262d",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037835849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20411"
-        },
-        {
-            "address": "0x57Dc55AED392F634d6bea6E6A89718de7f5fA7e0",
-            "publicKey": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
-            "balance": "2358490566037785859056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
-                "nonce": "3",
-                "balance": "2358490566037785859056603",
-                "username": "genesis_7",
-                "publicKey": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
-                "validatorRank": 2,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "2037a988379d2737e79d272bc0ddfeb29224bb32c4b5dad130b3ff5341995a34",
-                    "height": 20403,
-                    "timestamp": 1724935591814
-                },
-                "validatorPublicKey": "a6a368a94a0de1fe4c5490a9b18d6384f4d6812e8c00aa79ff4c214361ed235905a214960f5a079f38bb065a2e4a57ea",
-                "validatorForgedFees": "10000000",
-                "validatorForgedTotal": "10000000",
-                "validatorVoteBalance": "2358490566037785859056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x373012E575CFD07dCd1139AEb3D71188677039be",
-            "publicKey": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
-            "balance": "2358490566037735869056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
-                "nonce": "3",
-                "balance": "2358490566037735869056603",
-                "username": "genesis_21",
-                "publicKey": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
-                "validatorRank": 3,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "ea265f85fbebd6714d66aa50c14f40d8e5213f719c35ae5451198a407f67608d",
-                    "height": 20404,
-                    "timestamp": 1724935599814
-                },
-                "validatorPublicKey": "aa61bcc95a4a64d0aac80ae9177d007a01c1fca641b1ccfb4ccf8902d4d471cd91d07e0a195ec93b6c79cd67fa8b5a07",
-                "validatorForgedFees": "20000000",
-                "validatorForgedTotal": "20000000",
-                "validatorVoteBalance": "2358490566037735869056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x38f3f308e63Ae213633d71ed6f4A89d4Ee7C386e",
-            "publicKey": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
-            "balance": "2358490566037735859056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
-                "nonce": "3",
-                "balance": "2358490566037735859056603",
-                "username": "genesis_37",
-                "publicKey": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
-                "validatorRank": 4,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "b098105d72cc86d5c4ff54421290e3de690deff5474231541d1112b100225c99",
-                    "height": 20375,
-                    "timestamp": 1724935358954
-                },
-                "validatorPublicKey": "b339112bc9b4542ab0c1e95eebc2b87ddf9f65daf3ac84b3c9005c4ab2c6968906561b1e30508de3d6b531e1718549cd",
-                "validatorForgedFees": "10000000",
-                "validatorForgedTotal": "10000000",
-                "validatorVoteBalance": "2358490566037735859056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x2a74550fC2e741118182B7ab020DC0B7Ed01e1db",
-            "publicKey": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
-            "balance": "2358490566037735859056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
-                "nonce": "3",
-                "balance": "2358490566037735859056603",
-                "username": "genesis_50",
-                "publicKey": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
-                "validatorRank": 5,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "ff6a13c4d093bc263f4192279c06c20a66fba6f5a70a83ff64e6bba51af517f0",
-                    "height": 20398,
-                    "timestamp": 1724935551814
-                },
-                "validatorPublicKey": "9309ad5df3747c2fd525a8612982bc994a24ec114b726d7ca630dbe1cfd2ee3450eb51d152c4e4c9e1b638731de23310",
-                "validatorForgedFees": "10000000",
-                "validatorForgedTotal": "10000000",
-                "validatorVoteBalance": "2358490566037735859056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xb78843D7a0F237AA83911a9834Bf410C1b4c1CDe",
-            "publicKey": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
-            "balance": "2358490566037735859056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
-                "nonce": "3",
-                "balance": "2358490566037735859056603",
-                "username": "genesis_43",
-                "publicKey": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
-                "validatorRank": 6,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "2da69e7a3cadf1aeb9851e37b6e152bc3812e44681473fdb37e9632dd9d38f98",
-                    "height": 20380,
-                    "timestamp": 1724935398954
-                },
-                "validatorPublicKey": "87a8a52a8b6a68d303bd7cf451583645a3c651067bf2f738c4d156945370400e1e6272f3dc0151aaeeb9fe28ef69889e",
-                "validatorForgedFees": "10000000",
-                "validatorForgedTotal": "10000000",
-                "validatorVoteBalance": "2358490566037735859056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
-            "publicKey": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
-            "balance": "2358490566037735859056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
-                "nonce": "3",
-                "balance": "2358490566037735859056603",
-                "username": "genesis_53",
-                "publicKey": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
-                "validatorRank": 7,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "6eec9eabfb84df2633c62bf4c9880f3c0cd3a2172d6bac9aa7fff9e58396caf2",
-                    "height": 19292,
-                    "timestamp": 1724926280575
-                },
-                "validatorPublicKey": "abc5daa62f4daddcf4651d91dfa1a2e403302931ee77211db29527b612959efea2110b5afc6ca4475558187148b54a60",
-                "validatorForgedFees": "10000000",
-                "validatorForgedTotal": "10000000",
-                "validatorVoteBalance": "2358490566037735859056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 364
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x2F61f2118fd6Fa819Cf1695642c14145a4539F9a",
-            "publicKey": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
-            "balance": "2358490566037735849056608",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
-                "nonce": "3",
-                "balance": "2358490566037735849056608",
-                "username": "genesis_48",
-                "publicKey": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
-                "validatorRank": 8,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "fafae74af05b15b7bf2052aa787eb7fb8b1111a46782224a05d40940d63de90c",
-                    "height": 20416,
-                    "timestamp": 1724935713756
-                },
-                "validatorPublicKey": "ae2a4513692f6d62ed1d60c1b82f202804cfeff2e93defc1fbe87c8a605fd006b0f7d97c6ebadb874007de616cc3e3e9",
-                "validatorForgedFees": "5",
-                "validatorForgedTotal": "5",
-                "validatorVoteBalance": "2358490566037735849056608",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20416"
-        },
-        {
-            "address": "0x218A779dcAC83b284a4417A75128c3c881156bAE",
-            "publicKey": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_14",
-                "publicKey": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
-                "validatorRank": 9,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "ddedc16a0fbdf271c50ff517db54baab89233964acddec6a2877ab461e75d6f3",
-                    "height": 20431,
-                    "timestamp": 1724935833756
-                },
-                "validatorPublicKey": "b62620a509751fc7ffb565780c77ca6825cf1862d8ffe015464b2ebc24ce55ed71af74a64814097aacb1731caa46ff4b",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20431"
-        },
-        {
-            "address": "0x522CbD1C22529a27ba4BFDBf4b6f037F71b2AC77",
-            "publicKey": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_28",
-                "publicKey": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
-                "validatorRank": 10,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "3282dd893fe5d63aa588863916d7cb7f8798a635aa0e035e8721728907005fc0",
-                    "height": 20391,
-                    "timestamp": 1724935486954
-                },
-                "validatorPublicKey": "8e5d17e0e88a7669b68d45e09f8710a208c267b8d7c48596f61d9bf4c661ce4141c37f349345d3a932da89a1a049ddaa",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x09C94A51cb63b4b70A9Dbf190543c371741D13Fd",
-            "publicKey": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_42",
-                "publicKey": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
-                "validatorRank": 11,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "7f0207bd7916c0f6e910c13fabac65d9d19fdff2d0833368575bcc1fdc8d976f",
-                    "height": 20364,
-                    "timestamp": 1724935262065
-                },
-                "validatorPublicKey": "8ba871d2ba2ddd65fdd24e559d5d27424bdfc5be6a1d1d5bc946068f3e24bfecc66d4e1f0bde3a7aeb8a29564e63e139",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xa1440fda0dc509B428E0C954893Ac3ec21dDb146",
-            "publicKey": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_5",
-                "publicKey": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
-                "validatorRank": 12,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "375e9c8c9da22bab3f77cdad1639a4f568aee6e199d926c3b509174c97421351",
-                    "height": 20429,
-                    "timestamp": 1724935817756
-                },
-                "validatorPublicKey": "98a376cb676c9a5576e2ba042110dda8d5cac8aff57b316f4e1fd221316b9d523a6b38cf413bde6d1c7ff90b62e0def4",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 388
-            },
-            "updated_at": "20429"
-        },
-        {
-            "address": "0xD07c4ccd83cff5b6B6e9e29181824c0a2Df1139c",
-            "publicKey": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_6",
-                "publicKey": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
-                "validatorRank": 13,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "a85f4ed9ec0e5ff778c585ab5590874813d1ca23450e0df04cc5fc12dca7fe8a",
-                    "height": 20379,
-                    "timestamp": 1724935390954
-                },
-                "validatorPublicKey": "b5300e91d2c40c0ec46ff541ce33b705a961d727370f0c0238f50897e3f8aaa55fb52d5902cdd62b82277738a94d50cf",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x989eb5C243Ac348fed0a32704a6a767Ceab26065",
-            "publicKey": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_24",
-                "publicKey": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
-                "validatorRank": 14,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "4ae0aaaea3352ce857c9793f7955f6ed7c2454a435864844fdb2d8c556cd6154",
-                    "height": 20365,
-                    "timestamp": 1724935270065
-                },
-                "validatorPublicKey": "aaa5c3860a2e2d2170b8dab16a333cadb6b4816fc71a570079d616db2d004f3307efbb920ddf9d3f1e0129e74c1f7ba3",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x59b7882d257D7C1C5e82f61F09DfAec7d9bF97d7",
-            "publicKey": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_31",
-                "publicKey": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
-                "validatorRank": 15,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "45b88cbee7122fd6be772f32f5f4c68fd09fade9aa96b94932f8dc428d62638d",
-                    "height": 20417,
-                    "timestamp": 1724935721756
-                },
-                "validatorPublicKey": "92caf44ab5ce5e1d8c78455400372588563e28df80b5776a04851fbf03a0b67ee9d318f06bd05f7bf10e2f640bc9fa18",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20417"
-        },
-        {
-            "address": "0xEbc20236953408F61356AE616ce3fD3c46EBF2Db",
-            "publicKey": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_19",
-                "publicKey": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
-                "validatorRank": 16,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "32a9e6523962f961defa50ca03ef8052bf50b9ff0ba7316ca6d1e0489800a5f7",
-                    "height": 20432,
-                    "timestamp": 1724935841756
-                },
-                "validatorPublicKey": "922286e1480c5ef4286476b799fd49882c8b0fc54b0e8a0d5138dcaa3d86d6d81bd373e5c61defd31dff059232cb569c",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20432"
-        },
-        {
-            "address": "0x07CDD5CB29a70ad52ba6F4ad9fb94d397a26486e",
-            "publicKey": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_4",
-                "publicKey": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
-                "validatorRank": 17,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "d91a573bcc84528ea3caf7d5dc1bd17ef7ad53709c9eb3e14e6f01f73d03c465",
-                    "height": 20409,
-                    "timestamp": 1724935639814
-                },
-                "validatorPublicKey": "b4ff268381b76fe4a156d859ae63e7cc2a3a13fa3a473996f6a896101198b4aacb7d253c31b10bc56e9882b279320eb7",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20409"
-        },
-        {
-            "address": "0x95b4Cf480fC2C1e90A3Aee36B5DC1D8A0C623b87",
-            "publicKey": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_18",
-                "publicKey": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
-                "validatorRank": 18,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "70049538f73d3a18eef583b712af59e30cf85336a53bd0728828825ac205b0cf",
-                    "height": 20356,
-                    "timestamp": 1724935198065
-                },
-                "validatorPublicKey": "9156e05ef8d542f7a93f53eb51407d95ac8e163d5155b97befaa33d283ceec95dada9c74b4bc9128b3ae97f3756ca060",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
-            "publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_23",
-                "publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
-                "validatorRank": 19,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "dd9f5041457d822622a0d0efb22ffa0beb041c6442756a1a372dea772418c667",
-                    "height": 20414,
-                    "timestamp": 1724935697756
-                },
-                "validatorPublicKey": "8a2654afc229f199a45611f52ea3e077d387733d7ffed460ba6fcac51a71ac82d33288264749b2724e8ab8ba85ab9968",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 389
-            },
-            "updated_at": "20414"
-        },
-        {
-            "address": "0x54e64501796D3040a826628490B5Ea755B56E965",
-            "publicKey": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_38",
-                "publicKey": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
-                "validatorRank": 20,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "e9d59dde3c72a9c2704bda4306a7f63a866b0508db390b14c06fa353ced67ad5",
-                    "height": 20406,
-                    "timestamp": 1724935615814
-                },
-                "validatorPublicKey": "a45d5b16714a55ac48089a4a9443ce38b732e84664566de441a0e703186455fb8fddb8532f99d6fb2443660fe0e76b77",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 388
-            },
-            "updated_at": "20406"
-        },
-        {
-            "address": "0x56F925416Ef2725646442D5E0150088bd7202aCd",
-            "publicKey": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_10",
-                "publicKey": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
-                "validatorRank": 21,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "5df874bce2dc540662f9e18e31f43f95f2fea81be994ad1a4bc87c7a825b893b",
-                    "height": 20420,
-                    "timestamp": 1724935745756
-                },
-                "validatorPublicKey": "b8bdf1dc386689a9f3bad8b41d7c00f77030839b73a3237ed4035ab89b35002410b9bcb301e3394fd77764e4794edf65",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20420"
-        },
-        {
-            "address": "0x07Ac3E438719be72a9e2591bB6015F10E8Af2468",
-            "publicKey": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_41",
-                "publicKey": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
-                "validatorRank": 22,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "871122a301ad4f0c695fb1497e699e69846cfbea9fdfd3147a5f509ca70f96a0",
-                    "height": 20407,
-                    "timestamp": 1724935623814
-                },
-                "validatorPublicKey": "8ed23a6889cfa6c58ec9fdd916677f5fa226268b1ee81603a70be7263c77ad621816225a8523460939522c5ab1580f94",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20407"
-        },
-        {
-            "address": "0x6762BAAaE8374748793c77225FFb6a444a9D5de9",
-            "publicKey": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_26",
-                "publicKey": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
-                "validatorRank": 23,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "3e3e64c1155c62871d2ec5f81eb5d08c1a74f6ffc8c4df993bd5bb5a34c94207",
-                    "height": 20395,
-                    "timestamp": 1724935527814
-                },
-                "validatorPublicKey": "87b4b3f66caf02230c448469e9811fe7d4d077c98747507460786ba89b4e140eecdbfe0ac21e14cc92b4da914071cb17",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x3FCe699F036325B142e5568992EaA020ee15518B",
-            "publicKey": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_36",
-                "publicKey": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
-                "validatorRank": 24,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "526e27927cf87945f85f296a94c81e14ffcb43d884163e92bb7fa15d1ab1b9d1",
-                    "height": 20359,
-                    "timestamp": 1724935222065
-                },
-                "validatorPublicKey": "af276ab35b3dd5d1c911c7e1396dae24519f7f9c25240e15325d705e61fd8b9cc2175bf1507b2f5a5210bd053d7a8aa6",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x69aD988298FB856adD785070781aaE6370cf0093",
-            "publicKey": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_44",
-                "publicKey": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
-                "validatorRank": 25,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "426848d7c2713e96ea5472ddee7c3859dda3032f09c2de61e5eee9d44d8473c0",
-                    "height": 20367,
-                    "timestamp": 1724935286065
-                },
-                "validatorPublicKey": "95e766b01acc717706d9cde51e2501c960fe8f39d342517f02b48fd75515cb10bb28a00510f06a26f434a29cd2ba37e1",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x137c59f371a7049159ef19a72f908773Ade219b1",
-            "publicKey": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_32",
-                "publicKey": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
-                "validatorRank": 26,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "156d58f001ac1e78e7bb3f6e64e04dbcdb607a3dd1047bd5f5c37e7391c200e5",
-                    "height": 20427,
-                    "timestamp": 1724935801756
-                },
-                "validatorPublicKey": "b3d708887ce4011308d262a1800d5e009e000e04f09bd3770350b1c0132beefd87c41c52d7800fce1e2f6cc8289a9c2d",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20427"
-        },
-        {
-            "address": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
-            "publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_49",
-                "publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
-                "validatorRank": 27,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "fa5b98665ea021d79f4918684d5263dfb221fbc454aa30a8c514a6b3521d79af",
-                    "height": 20421,
-                    "timestamp": 1724935753756
-                },
-                "validatorPublicKey": "8093139580a4035a93e7d49aa28c49c1fa852df8ef006f312435050359025e0d519c5511d3aa879a827337c12a89a3f8",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20421"
-        },
-        {
-            "address": "0x9df2D2396BcEB5B0D3d5b4D1fF53E1373d776CBB",
-            "publicKey": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_17",
-                "publicKey": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
-                "validatorRank": 28,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "285c0de2aee2f6f892787f243b504ca1bc22e41850f4288cd72bc09de1f5e950",
-                    "height": 20428,
-                    "timestamp": 1724935809756
-                },
-                "validatorPublicKey": "8135433db3d55f2dea9fd407ea1ae24a7e07dd22c8a754031f951a29c29199aa6fbc6ca0774ca963a0051eb0fb26b28c",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20428"
-        },
-        {
-            "address": "0x7762598E3e3203FAC062D2588e70950CF19F918B",
-            "publicKey": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_33",
-                "publicKey": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
-                "validatorRank": 29,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "9c2f48872ef0c7ffc8dfdb87359fc230c7af3dcddff4a75b7559c808aee07b68",
-                    "height": 20412,
-                    "timestamp": 1724935672670
-                },
-                "validatorPublicKey": "b259bbe5897e40d3a71dd691d4d8ebcc304881564e715efbbbca6be8e8657e545842150d8a698870fa6a509ef718b3e1",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20412"
-        },
-        {
-            "address": "0x21c61c9E608df7ad6fD8730a0CEBe37A83B9F365",
-            "publicKey": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_11",
-                "publicKey": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
-                "validatorRank": 30,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "a1fa0a5f2afa7d0efba3fb7bdaeded51fb0b95801dbbc40621e3bf938834a984",
-                    "height": 20410,
-                    "timestamp": 1724935656670
-                },
-                "validatorPublicKey": "a380143f5ef0b5f474135ae7c7e715eaff5824ff713a046a22add009edaaf7d04f4bc2238aad737e2e87edc58ed4fb53",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20410"
-        },
-        {
-            "address": "0x3F8eCbF08078F22038235F9834540A960E99085b",
-            "publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_34",
-                "publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
-                "validatorRank": 31,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "4698e440d2ed48b2e9191d565ef17f65c2d35b2b2b306c1a06020803b11e5309",
-                    "height": 20377,
-                    "timestamp": 1724935374954
-                },
-                "validatorPublicKey": "b41881c3ad67ab36dabf74ac9271f10fa315c5b281313c14e3143103a3f5f43ca6abf50e3c7bd0271e12631fdb4640dc",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xC46C85b3Dc856cdD23ac864a38be2E12090e7715",
-            "publicKey": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_16",
-                "publicKey": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
-                "validatorRank": 32,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "b09b008bf053e027c2923330ac0e9b3e077e68019cce2e232972207d8ffda5d0",
-                    "height": 20430,
-                    "timestamp": 1724935825756
-                },
-                "validatorPublicKey": "a590daad2c88699ce48bd0bf978f70cdd82c5bb2b6284e56511fca0fbd5657bfa2e42e4a4b20c6c3d1735473f39852c9",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20430"
-        },
-        {
-            "address": "0x44083669cf29374D548b71c558EBD1e2F5DCC4De",
-            "publicKey": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_52",
-                "publicKey": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
-                "validatorRank": 33,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "0962bb81e41cfbddefbabc5cf7af0ce27f96edfb48e6adcbfc65400e7bac4e6a",
-                    "height": 19244,
-                    "timestamp": 1724925896575
-                },
-                "validatorPublicKey": "8dfc3ec76e11c9403527854f8ee5d551a4bb81b6caac312d92c82d02cab2c98a089ca0ced7042d415e177aeb3716715f",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 364
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x1e9c31895Da0F14d7c0f73F1BC0567631cb0fF01",
-            "publicKey": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_25",
-                "publicKey": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
-                "validatorRank": 34,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "e817bb3ec162a4fd8114e81d0daca6b0bf30eedce9f15fcfdd78389cbdd0322d",
-                    "height": 20408,
-                    "timestamp": 1724935631814
-                },
-                "validatorPublicKey": "a3e6dd53d3d6820ce1ff607e5cc60beca98aedbfb5bc6f64f0cf9585c15f955cb76d3e48193fafd2834f8fa8f5650cae",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20408"
-        },
-        {
-            "address": "0xDF419379AD91b59005e438fB47deE4D610B997a5",
-            "publicKey": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_15",
-                "publicKey": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
-                "validatorRank": 35,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "aa0b5642474ee348e4e881f5d007882179c155685bc400c31066eef814f92538",
-                    "height": 20396,
-                    "timestamp": 1724935535814
-                },
-                "validatorPublicKey": "8a11dfb163a1cc01568a8ded5b36bbf189885d1df96e1a36b17d3e29038dc74ec41c9d0f3d69bf5d9a83bd98eb212538",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xB34415Af3A8127596b94f86efdb6AdaE2E9dF45e",
-            "publicKey": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_30",
-                "publicKey": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
-                "validatorRank": 36,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "8edffc5669e375cee39c49202e5cba65a4098708d6000e303b79ac9e2ccbe4af",
-                    "height": 20361,
-                    "timestamp": 1724935238065
-                },
-                "validatorPublicKey": "8edaf2f10ca6888f6a2bcc3e2bc8255f82d134469cfb2209fc4cffb4a3ab256f5dcf0580d04c91af5c07e487ffb6158f",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xC3bBE9B1CeE1ff85Ad72b87414B0E9B7F2366763",
-            "publicKey": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_13",
-                "publicKey": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
-                "validatorRank": 37,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "53e3cb20476569075dc03096160b590f6a6811f0a927960fb7933fcd1a904aae",
-                    "height": 20415,
-                    "timestamp": 1724935705756
-                },
-                "validatorPublicKey": "848a73c1c9be7733138c0bef8ea5f091130facc89c141490282d7c095f8b54e0a44e06b1cae516e8e9e4c560461d160d",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 388
-            },
-            "updated_at": "20415"
-        },
-        {
-            "address": "0xA64d324eBc9E95d763A45B77bdAa0546d0D37DC8",
-            "publicKey": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_22",
-                "publicKey": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
-                "validatorRank": 38,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "59cba1101fab2b3f16972b50a6377bbd0c0fd4f2a4f91b89d1c3871e82c7ec84",
-                    "height": 20418,
-                    "timestamp": 1724935729756
-                },
-                "validatorPublicKey": "a7bf828ea379e2147d9692bd1576891583ed5444887d67f0270c7f12a25091f4dd746a18f9ad542464abcdc662252309",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20418"
-        },
-        {
-            "address": "0x7e1372c9B66F434A22c429C600835894cE33641b",
-            "publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_12",
-                "publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
-                "validatorRank": 39,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "5236db92b88b3f0f854b9d1878cfda7dc60a3794ee0cd1e52dfb4c2669d68a08",
-                    "height": 20422,
-                    "timestamp": 1724935761756
-                },
-                "validatorPublicKey": "8721636e8eec6651422de9eb6915bd0cdb46b59f4796e473088ed5b33b767ce3461d678df12dd80d16d9f878f3a9bd89",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20422"
-        },
-        {
-            "address": "0xA71dAdA10295c14854B5FBc6D28eFd170e8470B4",
-            "publicKey": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_9",
-                "publicKey": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
-                "validatorRank": 40,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "d35e0762525f51fefb28f294eb82796b7ce3a2ab1a06c4116832e50bb833ed58",
-                    "height": 20388,
-                    "timestamp": 1724935462954
-                },
-                "validatorPublicKey": "b257540df9d345d60017d6e170b7c63c55cb7b64f90e8ad742dd8a3256f9732c2d12aa6cfb5505f65f00d6008e829a07",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x1C45E829a6a0d5AfB01f9FB0F394D0D8aA2f4fae",
-            "publicKey": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_29",
-                "publicKey": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
-                "validatorRank": 41,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "bd163eed6d4a4aed30368b611f1c55fc31785c1b4d7c3f236b6dbe909335edb1",
-                    "height": 20413,
-                    "timestamp": 1724935689756
-                },
-                "validatorPublicKey": "ac7b8bfbfae20363bf775cf09fa3ff7bcfbedbaed917d77a4dc95062d4467810725093b11ff7fc5a0423b2a28565cc79",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 389
-            },
-            "updated_at": "20413"
-        },
-        {
-            "address": "0x7AF9d8582F439ECC9d83c84a425DFbA422bc7a84",
-            "publicKey": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_40",
-                "publicKey": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
-                "validatorRank": 42,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "83e70739bea75c5ec4ca0fc2c6b34e187d50430cf7ac6e5a8b95c23c17647a17",
-                    "height": 20405,
-                    "timestamp": 1724935607814
-                },
-                "validatorPublicKey": "b6ce18e6d4a21fdf469a45c5299ae7e20b64f4bb2d077aa7bb0d315f844dbfeefb262064e49516f1d0d1dc9260fd0edd",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x4041C30B708da49227856c005a656F55fe44eF1C",
-            "publicKey": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_51",
-                "publicKey": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
-                "validatorRank": 43,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "bdc9772b6d5d9850755a7f5a6780fdafaf583beed283bdd6c90f8a26b845a1a1",
-                    "height": 20376,
-                    "timestamp": 1724935366954
-                },
-                "validatorPublicKey": "ae294666a41610acc1a35c94372b4c573978d7cb76014aa41e7aa6829e27414d8003a2d7196009aa9e7ad5fac4d23231",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xFb0Af483A0a4FdE23EA71aDBE2ea2D4301828E4B",
-            "publicKey": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_20",
-                "publicKey": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
-                "validatorRank": 44,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "6eb07aa0c20c5e3006baf9aa76520d84a40d129374ac7e6cb02e5dcfce81f03a",
-                    "height": 20424,
-                    "timestamp": 1724935777756
-                },
-                "validatorPublicKey": "9904ec6be10f56db0f1a4d4bd6f00332af21ac7a83ac0ecc6e95df12c89dfd139773bf1066216d9244840775a030d95a",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20424"
-        },
-        {
-            "address": "0x9fF98D41d6a06062e9566c0d0d8A0BB92D5baD6F",
-            "publicKey": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_39",
-                "publicKey": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
-                "validatorRank": 45,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "2d1f4257286c9525679db669a4074ebdf40e3bf7dcdecd09d058656e71df7ca2",
-                    "height": 20423,
-                    "timestamp": 1724935769756
-                },
-                "validatorPublicKey": "9132e38bb6fa3f18c9a3797acdb128ecb982f056275b8454f5c6200592dc6424904b9503775c8f4d2cbff12cd3bcabe2",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20423"
-        },
-        {
-            "address": "0xBA595868ce9F740Cba0e39de124ca33fb5Ed92fE",
-            "publicKey": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_35",
-                "publicKey": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
-                "validatorRank": 46,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "333176bf16e77b8f6df102b0b6fb3841ebf0e92870c875467d2e2fc4ff90e759",
-                    "height": 20419,
-                    "timestamp": 1724935737756
-                },
-                "validatorPublicKey": "8767aad179f0ed0e109b31e2c57821de1a84581a949923eedd8834cbe5dbf3ef0117ffc4135d96c60e076277b52423fb",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20419"
-        },
-        {
-            "address": "0xB8Be76b31E402a2D89294Aa107056484Bef94362",
-            "publicKey": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_47",
-                "publicKey": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
-                "validatorRank": 47,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "0557e6832482d0f566af26f71251f4dc297d5135654a387f08d4b0ddaa24a980",
-                    "height": 20433,
-                    "timestamp": 1724935849756
-                },
-                "validatorPublicKey": "9572d4dacfb9f44314f1091abb4c58b7d9a3c4af00d57de16c3d54f1a5e4d7c45712624842a9dc8303d8ae9db434a27c",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20433"
-        },
-        {
-            "address": "0x677fdAE653661CC73295728746E3653351d50887",
-            "publicKey": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_8",
-                "publicKey": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
-                "validatorRank": 48,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "350b869372248324cbcab723ed46415a8d4747d1b428e31ccafcf3a9e1bb7aaf",
-                    "height": 20372,
-                    "timestamp": 1724935334954
-                },
-                "validatorPublicKey": "916a6dae3e0eb5c0f34fb640e250e06ba83ae4f80244fff56f386fd6404271720150d38c5d63e9486e9052fa1818cd59",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xa732C81De8a23d1aa2422463Fe7489b2cBCb48c4",
-            "publicKey": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_27",
-                "publicKey": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
-                "validatorRank": 49,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "e06b97340de989d6e327605dc2fcb6882b7dfb5be0832c32df405e9bc4d5e8e2",
-                    "height": 20370,
-                    "timestamp": 1724935318954
-                },
-                "validatorPublicKey": "8c820e9c8ceaa403ddc6bba99dde7be6e0fe5bd1945c5dab4355a635728d6d649c5274fb8bac8a5584229d0ca7b9d8ea",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 387
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xFf44bE17e48C35D0bcB6f64b36cddbea45B17817",
-            "publicKey": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_45",
-                "publicKey": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
-                "validatorRank": 50,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "fdc61727504127a1fa8cd47eb7c7ca0a02145c16e70d62c236f05a99d45f31a8",
-                    "height": 20426,
-                    "timestamp": 1724935793756
-                },
-                "validatorPublicKey": "87f1a4066c513325adfc2431b510d9ee1c7b56788ae256272228d89e6cd143d36aedf923c51712cc12359c75986f6823",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20426"
-        },
-        {
-            "address": "0x7228d1eE0Fa9AC810Aa02072bFdde6A172258051",
-            "publicKey": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_46",
-                "publicKey": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
-                "validatorRank": 51,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "f849f82fdceaf87f72e7cd8b2b7b18e893d70adb436c2e71578000693f48152e",
-                    "height": 20394,
-                    "timestamp": 1724935519814
-                },
-                "validatorPublicKey": "a6346192db9d40984037fe2275d91fa7c5fc55550fcc9c177e01c2689e5b41d5cd8ab6b96a55a027bd3c2991dee5babe",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 386
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe",
-            "publicKey": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
-            "balance": "2358490566037735849056603",
-            "nonce": "3",
-            "attributes": {
-                "vote": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
-                "nonce": "3",
-                "balance": "2358490566037735849056603",
-                "username": "genesis_2",
-                "publicKey": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
-                "validatorRank": 52,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "cc769f83013d87478198a05846fe3b1b6484c82342036258f36757c5d2f17765",
-                    "height": 20378,
-                    "timestamp": 1724935382954
-                },
-                "validatorPublicKey": "a6dc6f406b2bbd1ab93d0a2d903b1952a7f6e753bcc18c109646d392a2e4414f38ff25f2ed23d8191cd3e60521a32ec2",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037735849056603",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 385
-            },
-            "updated_at": "20405"
-        },
-        {
-            "address": "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
-            "publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-            "balance": "2358490566037485768140601",
-            "nonce": "11",
-            "attributes": {
-                "vote": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-                "nonce": "11",
-                "balance": "2358490566037485768140601",
-                "username": "genesis_1",
-                "publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-                "validatorRank": 53,
-                "validatorApproval": 1.89,
-                "validatorLastBlock": {
-                    "id": "1300aa88f0aeb249eb11942121abe0695e0d384d870bb1a9af194f895b010e4d",
-                    "height": 20425,
-                    "timestamp": 1724935785756
-                },
-                "validatorPublicKey": "8a0836e15156b95cab8fbfb756cd2a5ce27909cc23752691b991831dfcd3c4a15be1e7b883566d0d5c4f068adcc1c588",
-                "validatorForgedFees": "0",
-                "validatorForgedTotal": "0",
-                "validatorVoteBalance": "2358490566037485778956596",
-                "validatorForgedRewards": "0",
-                "validatorProducedBlocks": 388
-            },
-            "updated_at": "20425"
-        }
-    ]
+	"meta": {
+		"totalCountIsEstimate": true,
+		"count": 53,
+		"first": "/delegates?limit=100&page=1",
+		"last": "/delegates?limit=100&page=1",
+		"next": null,
+		"pageCount": 1,
+		"previous": null,
+		"self": "/delegates?limit=100&page=1",
+		"totalCount": 53
+	},
+	"data": [
+		{
+			"address": "0xBE47E4E73DC8c82f0fF2f5BFa8900aA57624144B",
+			"publicKey": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
+			"balance": "2358490566037835849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
+				"nonce": "3",
+				"balance": "2358490566037835849056603",
+				"username": "genesis_3",
+				"publicKey": "0344f117129787f5f36c40c33f0aa62310f45f00a94361efa3e178e402f539af98",
+				"validatorRank": 1,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "53013b7b64b2f7016ce091d340e354a8578034e60460cbeddd4f4054c25798bb",
+					"height": 20411,
+					"timestamp": 1724935664670
+				},
+				"validatorPublicKey": "a058709acee67dd7c005f3b301ad201def1a764fca5dfd632c2c0a8280182075e34379ce604908ef9729e930fc97262d",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037835849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20411"
+		},
+		{
+			"address": "0x57Dc55AED392F634d6bea6E6A89718de7f5fA7e0",
+			"publicKey": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
+			"balance": "2358490566037785859056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
+				"nonce": "3",
+				"balance": "2358490566037785859056603",
+				"username": "genesis_7",
+				"publicKey": "0272f6dbecafa9a09f747b8116fd0c4207c3a34575da8d97087e6cd8d5f5f53d6a",
+				"validatorRank": 2,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "2037a988379d2737e79d272bc0ddfeb29224bb32c4b5dad130b3ff5341995a34",
+					"height": 20403,
+					"timestamp": 1724935591814
+				},
+				"validatorPublicKey": "a6a368a94a0de1fe4c5490a9b18d6384f4d6812e8c00aa79ff4c214361ed235905a214960f5a079f38bb065a2e4a57ea",
+				"validatorForgedFees": "10000000",
+				"validatorForgedTotal": "10000000",
+				"validatorVoteBalance": "2358490566037785859056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x373012E575CFD07dCd1139AEb3D71188677039be",
+			"publicKey": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
+			"balance": "2358490566037735869056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
+				"nonce": "3",
+				"balance": "2358490566037735869056603",
+				"username": "genesis_21",
+				"publicKey": "02b6d4a02e6d4e7e8d5190005e3450bb1d993af563c5229b2ca06c29143f318d07",
+				"validatorRank": 3,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "ea265f85fbebd6714d66aa50c14f40d8e5213f719c35ae5451198a407f67608d",
+					"height": 20404,
+					"timestamp": 1724935599814
+				},
+				"validatorPublicKey": "aa61bcc95a4a64d0aac80ae9177d007a01c1fca641b1ccfb4ccf8902d4d471cd91d07e0a195ec93b6c79cd67fa8b5a07",
+				"validatorForgedFees": "20000000",
+				"validatorForgedTotal": "20000000",
+				"validatorVoteBalance": "2358490566037735869056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x38f3f308e63Ae213633d71ed6f4A89d4Ee7C386e",
+			"publicKey": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
+			"balance": "2358490566037735859056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
+				"nonce": "3",
+				"balance": "2358490566037735859056603",
+				"username": "genesis_37",
+				"publicKey": "02872e746de4310161781ce49eddfd9ec492a9cf3a9bf0c5571af7eb2e175c2d2c",
+				"validatorRank": 4,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "b098105d72cc86d5c4ff54421290e3de690deff5474231541d1112b100225c99",
+					"height": 20375,
+					"timestamp": 1724935358954
+				},
+				"validatorPublicKey": "b339112bc9b4542ab0c1e95eebc2b87ddf9f65daf3ac84b3c9005c4ab2c6968906561b1e30508de3d6b531e1718549cd",
+				"validatorForgedFees": "10000000",
+				"validatorForgedTotal": "10000000",
+				"validatorVoteBalance": "2358490566037735859056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x2a74550fC2e741118182B7ab020DC0B7Ed01e1db",
+			"publicKey": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
+			"balance": "2358490566037735859056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
+				"nonce": "3",
+				"balance": "2358490566037735859056603",
+				"username": "genesis_50",
+				"publicKey": "02c9484c9b92f8f92416f9850510c5137fab47b0daeebf2169f334214b61ac6eae",
+				"validatorRank": 5,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "ff6a13c4d093bc263f4192279c06c20a66fba6f5a70a83ff64e6bba51af517f0",
+					"height": 20398,
+					"timestamp": 1724935551814
+				},
+				"validatorPublicKey": "9309ad5df3747c2fd525a8612982bc994a24ec114b726d7ca630dbe1cfd2ee3450eb51d152c4e4c9e1b638731de23310",
+				"validatorForgedFees": "10000000",
+				"validatorForgedTotal": "10000000",
+				"validatorVoteBalance": "2358490566037735859056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xb78843D7a0F237AA83911a9834Bf410C1b4c1CDe",
+			"publicKey": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
+			"balance": "2358490566037735859056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
+				"nonce": "3",
+				"balance": "2358490566037735859056603",
+				"username": "genesis_43",
+				"publicKey": "03286e698f3336b420a286e0832579cfda88ae2b5b872eeb0f8c32917642bd835d",
+				"validatorRank": 6,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "2da69e7a3cadf1aeb9851e37b6e152bc3812e44681473fdb37e9632dd9d38f98",
+					"height": 20380,
+					"timestamp": 1724935398954
+				},
+				"validatorPublicKey": "87a8a52a8b6a68d303bd7cf451583645a3c651067bf2f738c4d156945370400e1e6272f3dc0151aaeeb9fe28ef69889e",
+				"validatorForgedFees": "10000000",
+				"validatorForgedTotal": "10000000",
+				"validatorVoteBalance": "2358490566037735859056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x1Bf9cf8a006a5279ca81Ea9D3F6aC2D41e1353e2",
+			"publicKey": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
+			"balance": "2358490566037735859056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
+				"nonce": "3",
+				"balance": "2358490566037735859056603",
+				"username": "genesis_53",
+				"publicKey": "03a8fce7db7ab62be3024d5cd9e8ca6c7b6768933c3b815fcc8d06e106b795262e",
+				"validatorRank": 7,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "6eec9eabfb84df2633c62bf4c9880f3c0cd3a2172d6bac9aa7fff9e58396caf2",
+					"height": 19292,
+					"timestamp": 1724926280575
+				},
+				"validatorPublicKey": "abc5daa62f4daddcf4651d91dfa1a2e403302931ee77211db29527b612959efea2110b5afc6ca4475558187148b54a60",
+				"validatorForgedFees": "10000000",
+				"validatorForgedTotal": "10000000",
+				"validatorVoteBalance": "2358490566037735859056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 364
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x2F61f2118fd6Fa819Cf1695642c14145a4539F9a",
+			"publicKey": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
+			"balance": "2358490566037735849056608",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
+				"nonce": "3",
+				"balance": "2358490566037735849056608",
+				"username": "genesis_48",
+				"publicKey": "03b423fef8eb3859cd4122c2a9d184c29568685f01e11601fcf8b59ba06e81f4a0",
+				"validatorRank": 8,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "fafae74af05b15b7bf2052aa787eb7fb8b1111a46782224a05d40940d63de90c",
+					"height": 20416,
+					"timestamp": 1724935713756
+				},
+				"validatorPublicKey": "ae2a4513692f6d62ed1d60c1b82f202804cfeff2e93defc1fbe87c8a605fd006b0f7d97c6ebadb874007de616cc3e3e9",
+				"validatorForgedFees": "5",
+				"validatorForgedTotal": "5",
+				"validatorVoteBalance": "2358490566037735849056608",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20416"
+		},
+		{
+			"address": "0x218A779dcAC83b284a4417A75128c3c881156bAE",
+			"publicKey": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_14",
+				"publicKey": "0204b4c02886108b1a1006371fb5313ab4eb3d6a7d375070d956a59ea87f818e77",
+				"validatorRank": 9,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "ddedc16a0fbdf271c50ff517db54baab89233964acddec6a2877ab461e75d6f3",
+					"height": 20431,
+					"timestamp": 1724935833756
+				},
+				"validatorPublicKey": "b62620a509751fc7ffb565780c77ca6825cf1862d8ffe015464b2ebc24ce55ed71af74a64814097aacb1731caa46ff4b",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20431"
+		},
+		{
+			"address": "0x522CbD1C22529a27ba4BFDBf4b6f037F71b2AC77",
+			"publicKey": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_28",
+				"publicKey": "0205c38eecba963b935c88f9d785b58930f74cb9bfccb45e857c9ad98ba50e2997",
+				"validatorRank": 10,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "3282dd893fe5d63aa588863916d7cb7f8798a635aa0e035e8721728907005fc0",
+					"height": 20391,
+					"timestamp": 1724935486954
+				},
+				"validatorPublicKey": "8e5d17e0e88a7669b68d45e09f8710a208c267b8d7c48596f61d9bf4c661ce4141c37f349345d3a932da89a1a049ddaa",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x09C94A51cb63b4b70A9Dbf190543c371741D13Fd",
+			"publicKey": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_42",
+				"publicKey": "0210dcee3ee798258e1e92cc27c886da7cd4d94bda6a33e60876836e935aab6462",
+				"validatorRank": 11,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "7f0207bd7916c0f6e910c13fabac65d9d19fdff2d0833368575bcc1fdc8d976f",
+					"height": 20364,
+					"timestamp": 1724935262065
+				},
+				"validatorPublicKey": "8ba871d2ba2ddd65fdd24e559d5d27424bdfc5be6a1d1d5bc946068f3e24bfecc66d4e1f0bde3a7aeb8a29564e63e139",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xa1440fda0dc509B428E0C954893Ac3ec21dDb146",
+			"publicKey": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_5",
+				"publicKey": "0216accc59f9d143ed562853a28558ed835d3e484d36dd53290a4f7c2752f57c88",
+				"validatorRank": 12,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "375e9c8c9da22bab3f77cdad1639a4f568aee6e199d926c3b509174c97421351",
+					"height": 20429,
+					"timestamp": 1724935817756
+				},
+				"validatorPublicKey": "98a376cb676c9a5576e2ba042110dda8d5cac8aff57b316f4e1fd221316b9d523a6b38cf413bde6d1c7ff90b62e0def4",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 388
+			},
+			"updated_at": "20429"
+		},
+		{
+			"address": "0xD07c4ccd83cff5b6B6e9e29181824c0a2Df1139c",
+			"publicKey": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_6",
+				"publicKey": "022a90a50c444195c35b852460c7d2be0312290bd5a1695d7a57a9554bcb34d0d7",
+				"validatorRank": 13,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "a85f4ed9ec0e5ff778c585ab5590874813d1ca23450e0df04cc5fc12dca7fe8a",
+					"height": 20379,
+					"timestamp": 1724935390954
+				},
+				"validatorPublicKey": "b5300e91d2c40c0ec46ff541ce33b705a961d727370f0c0238f50897e3f8aaa55fb52d5902cdd62b82277738a94d50cf",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x989eb5C243Ac348fed0a32704a6a767Ceab26065",
+			"publicKey": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_24",
+				"publicKey": "022c94738794b9a25dd8e5db2a86a888463a05553d5522e840f5c9e254ae93355e",
+				"validatorRank": 14,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "4ae0aaaea3352ce857c9793f7955f6ed7c2454a435864844fdb2d8c556cd6154",
+					"height": 20365,
+					"timestamp": 1724935270065
+				},
+				"validatorPublicKey": "aaa5c3860a2e2d2170b8dab16a333cadb6b4816fc71a570079d616db2d004f3307efbb920ddf9d3f1e0129e74c1f7ba3",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x59b7882d257D7C1C5e82f61F09DfAec7d9bF97d7",
+			"publicKey": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_31",
+				"publicKey": "025381d4205f87df9387ecb0957573ab2f0bce47d880cddbdb3423b15dea6b4775",
+				"validatorRank": 15,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "45b88cbee7122fd6be772f32f5f4c68fd09fade9aa96b94932f8dc428d62638d",
+					"height": 20417,
+					"timestamp": 1724935721756
+				},
+				"validatorPublicKey": "92caf44ab5ce5e1d8c78455400372588563e28df80b5776a04851fbf03a0b67ee9d318f06bd05f7bf10e2f640bc9fa18",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20417"
+		},
+		{
+			"address": "0xEbc20236953408F61356AE616ce3fD3c46EBF2Db",
+			"publicKey": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_19",
+				"publicKey": "0270d7400c6262ea35dadbb2f71d6e871dc48c3f1869fb68e03f9a0179b530226c",
+				"validatorRank": 16,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "32a9e6523962f961defa50ca03ef8052bf50b9ff0ba7316ca6d1e0489800a5f7",
+					"height": 20432,
+					"timestamp": 1724935841756
+				},
+				"validatorPublicKey": "922286e1480c5ef4286476b799fd49882c8b0fc54b0e8a0d5138dcaa3d86d6d81bd373e5c61defd31dff059232cb569c",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20432"
+		},
+		{
+			"address": "0x07CDD5CB29a70ad52ba6F4ad9fb94d397a26486e",
+			"publicKey": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_4",
+				"publicKey": "0276669e64188c2a0044665eb0ed3b501563c19b27fb2b902b7fe23d705522211c",
+				"validatorRank": 17,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "d91a573bcc84528ea3caf7d5dc1bd17ef7ad53709c9eb3e14e6f01f73d03c465",
+					"height": 20409,
+					"timestamp": 1724935639814
+				},
+				"validatorPublicKey": "b4ff268381b76fe4a156d859ae63e7cc2a3a13fa3a473996f6a896101198b4aacb7d253c31b10bc56e9882b279320eb7",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20409"
+		},
+		{
+			"address": "0x95b4Cf480fC2C1e90A3Aee36B5DC1D8A0C623b87",
+			"publicKey": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_18",
+				"publicKey": "027f920f4e3f012fe05ccf0b73e7973bddbe0778c8eeedf06e8c82d7c16d450686",
+				"validatorRank": 18,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "70049538f73d3a18eef583b712af59e30cf85336a53bd0728828825ac205b0cf",
+					"height": 20356,
+					"timestamp": 1724935198065
+				},
+				"validatorPublicKey": "9156e05ef8d542f7a93f53eb51407d95ac8e163d5155b97befaa33d283ceec95dada9c74b4bc9128b3ae97f3756ca060",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xC2402c93F00C67B10a11d78CE5c57B3D8D1FC2da",
+			"publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_23",
+				"publicKey": "02874e789117a42947e442aac6a43a02fdab283973a1aae76ea8ddc31cd299bebe",
+				"validatorRank": 19,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "dd9f5041457d822622a0d0efb22ffa0beb041c6442756a1a372dea772418c667",
+					"height": 20414,
+					"timestamp": 1724935697756
+				},
+				"validatorPublicKey": "8a2654afc229f199a45611f52ea3e077d387733d7ffed460ba6fcac51a71ac82d33288264749b2724e8ab8ba85ab9968",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 389
+			},
+			"updated_at": "20414"
+		},
+		{
+			"address": "0x54e64501796D3040a826628490B5Ea755B56E965",
+			"publicKey": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_38",
+				"publicKey": "0288ea329a06e1a983b9ce0cb34ab35664ead0a174b3a13090899d09b5aa064b81",
+				"validatorRank": 20,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "e9d59dde3c72a9c2704bda4306a7f63a866b0508db390b14c06fa353ced67ad5",
+					"height": 20406,
+					"timestamp": 1724935615814
+				},
+				"validatorPublicKey": "a45d5b16714a55ac48089a4a9443ce38b732e84664566de441a0e703186455fb8fddb8532f99d6fb2443660fe0e76b77",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 388
+			},
+			"updated_at": "20406"
+		},
+		{
+			"address": "0x56F925416Ef2725646442D5E0150088bd7202aCd",
+			"publicKey": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_10",
+				"publicKey": "02905643df1fffd9c11d6fd35864802f87729a2727b5e2d24e32dd4835e955dcf3",
+				"validatorRank": 21,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "5df874bce2dc540662f9e18e31f43f95f2fea81be994ad1a4bc87c7a825b893b",
+					"height": 20420,
+					"timestamp": 1724935745756
+				},
+				"validatorPublicKey": "b8bdf1dc386689a9f3bad8b41d7c00f77030839b73a3237ed4035ab89b35002410b9bcb301e3394fd77764e4794edf65",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20420"
+		},
+		{
+			"address": "0x07Ac3E438719be72a9e2591bB6015F10E8Af2468",
+			"publicKey": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_41",
+				"publicKey": "02911cdc7c36dc733cb866d3d70f79a0e8c7586764ec1d4467688c51b02038f135",
+				"validatorRank": 22,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "871122a301ad4f0c695fb1497e699e69846cfbea9fdfd3147a5f509ca70f96a0",
+					"height": 20407,
+					"timestamp": 1724935623814
+				},
+				"validatorPublicKey": "8ed23a6889cfa6c58ec9fdd916677f5fa226268b1ee81603a70be7263c77ad621816225a8523460939522c5ab1580f94",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20407"
+		},
+		{
+			"address": "0x6762BAAaE8374748793c77225FFb6a444a9D5de9",
+			"publicKey": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_26",
+				"publicKey": "02ab5bebf52333bdad0d3d75e6b5b1f602adf7b8af6faa87c23b2e121318f95542",
+				"validatorRank": 23,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "3e3e64c1155c62871d2ec5f81eb5d08c1a74f6ffc8c4df993bd5bb5a34c94207",
+					"height": 20395,
+					"timestamp": 1724935527814
+				},
+				"validatorPublicKey": "87b4b3f66caf02230c448469e9811fe7d4d077c98747507460786ba89b4e140eecdbfe0ac21e14cc92b4da914071cb17",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x3FCe699F036325B142e5568992EaA020ee15518B",
+			"publicKey": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_36",
+				"publicKey": "02ba352eab5ddfd1a19f5681162b1550b035003ed01bd83cd173f48dbb8ebb2907",
+				"validatorRank": 24,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "526e27927cf87945f85f296a94c81e14ffcb43d884163e92bb7fa15d1ab1b9d1",
+					"height": 20359,
+					"timestamp": 1724935222065
+				},
+				"validatorPublicKey": "af276ab35b3dd5d1c911c7e1396dae24519f7f9c25240e15325d705e61fd8b9cc2175bf1507b2f5a5210bd053d7a8aa6",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x69aD988298FB856adD785070781aaE6370cf0093",
+			"publicKey": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_44",
+				"publicKey": "02da652d03f195fd2adb9e6290b8916f78a16daee4bc3d0a2c03b7f6c6651d1a29",
+				"validatorRank": 25,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "426848d7c2713e96ea5472ddee7c3859dda3032f09c2de61e5eee9d44d8473c0",
+					"height": 20367,
+					"timestamp": 1724935286065
+				},
+				"validatorPublicKey": "95e766b01acc717706d9cde51e2501c960fe8f39d342517f02b48fd75515cb10bb28a00510f06a26f434a29cd2ba37e1",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x137c59f371a7049159ef19a72f908773Ade219b1",
+			"publicKey": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_32",
+				"publicKey": "02f50270f25c600d3411d4ad2d98065a413e08e5f891a079210bb8e35c982236aa",
+				"validatorRank": 26,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "156d58f001ac1e78e7bb3f6e64e04dbcdb607a3dd1047bd5f5c37e7391c200e5",
+					"height": 20427,
+					"timestamp": 1724935801756
+				},
+				"validatorPublicKey": "b3d708887ce4011308d262a1800d5e009e000e04f09bd3770350b1c0132beefd87c41c52d7800fce1e2f6cc8289a9c2d",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20427"
+		},
+		{
+			"address": "0x03BC306C369A55c0336EB003bB07F29E5c150F36",
+			"publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_49",
+				"publicKey": "02fa786b53f66e64118d394dc17ff4c40aa134660eef33aeec22b320570fa4ba28",
+				"validatorRank": 27,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "fa5b98665ea021d79f4918684d5263dfb221fbc454aa30a8c514a6b3521d79af",
+					"height": 20421,
+					"timestamp": 1724935753756
+				},
+				"validatorPublicKey": "8093139580a4035a93e7d49aa28c49c1fa852df8ef006f312435050359025e0d519c5511d3aa879a827337c12a89a3f8",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20421"
+		},
+		{
+			"address": "0x9df2D2396BcEB5B0D3d5b4D1fF53E1373d776CBB",
+			"publicKey": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_17",
+				"publicKey": "03022fe77444e68de32ac034a0dc628a8b3d362784fa37e09e035e932c6a16e439",
+				"validatorRank": 28,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "285c0de2aee2f6f892787f243b504ca1bc22e41850f4288cd72bc09de1f5e950",
+					"height": 20428,
+					"timestamp": 1724935809756
+				},
+				"validatorPublicKey": "8135433db3d55f2dea9fd407ea1ae24a7e07dd22c8a754031f951a29c29199aa6fbc6ca0774ca963a0051eb0fb26b28c",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20428"
+		},
+		{
+			"address": "0x7762598E3e3203FAC062D2588e70950CF19F918B",
+			"publicKey": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_33",
+				"publicKey": "030565e9b148a12ed2c500dd9acd7d7b97bd37723804181c7e492ed4f49aae26f6",
+				"validatorRank": 29,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "9c2f48872ef0c7ffc8dfdb87359fc230c7af3dcddff4a75b7559c808aee07b68",
+					"height": 20412,
+					"timestamp": 1724935672670
+				},
+				"validatorPublicKey": "b259bbe5897e40d3a71dd691d4d8ebcc304881564e715efbbbca6be8e8657e545842150d8a698870fa6a509ef718b3e1",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20412"
+		},
+		{
+			"address": "0x21c61c9E608df7ad6fD8730a0CEBe37A83B9F365",
+			"publicKey": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_11",
+				"publicKey": "0306eac6dc8d83f3cd9135dd350b023a9561cad2d884037ee757613ddc6f48ee2c",
+				"validatorRank": 30,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "a1fa0a5f2afa7d0efba3fb7bdaeded51fb0b95801dbbc40621e3bf938834a984",
+					"height": 20410,
+					"timestamp": 1724935656670
+				},
+				"validatorPublicKey": "a380143f5ef0b5f474135ae7c7e715eaff5824ff713a046a22add009edaaf7d04f4bc2238aad737e2e87edc58ed4fb53",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20410"
+		},
+		{
+			"address": "0x3F8eCbF08078F22038235F9834540A960E99085b",
+			"publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_34",
+				"publicKey": "030cc854a680d4065304bd49928cdf80154e69f3d43fdf28b0c4b2e46d87a9630c",
+				"validatorRank": 31,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "4698e440d2ed48b2e9191d565ef17f65c2d35b2b2b306c1a06020803b11e5309",
+					"height": 20377,
+					"timestamp": 1724935374954
+				},
+				"validatorPublicKey": "b41881c3ad67ab36dabf74ac9271f10fa315c5b281313c14e3143103a3f5f43ca6abf50e3c7bd0271e12631fdb4640dc",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xC46C85b3Dc856cdD23ac864a38be2E12090e7715",
+			"publicKey": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_16",
+				"publicKey": "03150a599c9f8df707f3433fe8d6d53bda646de0054cc82cb22ba375cb9bd1f096",
+				"validatorRank": 32,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "b09b008bf053e027c2923330ac0e9b3e077e68019cce2e232972207d8ffda5d0",
+					"height": 20430,
+					"timestamp": 1724935825756
+				},
+				"validatorPublicKey": "a590daad2c88699ce48bd0bf978f70cdd82c5bb2b6284e56511fca0fbd5657bfa2e42e4a4b20c6c3d1735473f39852c9",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20430"
+		},
+		{
+			"address": "0x44083669cf29374D548b71c558EBD1e2F5DCC4De",
+			"publicKey": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_52",
+				"publicKey": "031ffedcfcb902b7a1cf22961a803c154d2038cb34f3096c2fd8cc102985fcc579",
+				"validatorRank": 33,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "0962bb81e41cfbddefbabc5cf7af0ce27f96edfb48e6adcbfc65400e7bac4e6a",
+					"height": 19244,
+					"timestamp": 1724925896575
+				},
+				"validatorPublicKey": "8dfc3ec76e11c9403527854f8ee5d551a4bb81b6caac312d92c82d02cab2c98a089ca0ced7042d415e177aeb3716715f",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 364
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x1e9c31895Da0F14d7c0f73F1BC0567631cb0fF01",
+			"publicKey": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_25",
+				"publicKey": "034cc5de0e7d78bd56706e787c8f1f7c1029eb404c8296d0ee40379d1f0529975f",
+				"validatorRank": 34,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "e817bb3ec162a4fd8114e81d0daca6b0bf30eedce9f15fcfdd78389cbdd0322d",
+					"height": 20408,
+					"timestamp": 1724935631814
+				},
+				"validatorPublicKey": "a3e6dd53d3d6820ce1ff607e5cc60beca98aedbfb5bc6f64f0cf9585c15f955cb76d3e48193fafd2834f8fa8f5650cae",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20408"
+		},
+		{
+			"address": "0xDF419379AD91b59005e438fB47deE4D610B997a5",
+			"publicKey": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_15",
+				"publicKey": "035334916d9adeae7ddf937fe9a72488206dc73d3deabaa82419bced7a4bdb7e09",
+				"validatorRank": 35,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "aa0b5642474ee348e4e881f5d007882179c155685bc400c31066eef814f92538",
+					"height": 20396,
+					"timestamp": 1724935535814
+				},
+				"validatorPublicKey": "8a11dfb163a1cc01568a8ded5b36bbf189885d1df96e1a36b17d3e29038dc74ec41c9d0f3d69bf5d9a83bd98eb212538",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xB34415Af3A8127596b94f86efdb6AdaE2E9dF45e",
+			"publicKey": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_30",
+				"publicKey": "03636080960d7998b2baf3385fe8bea9bb05940aceb7a778b4a231a9cd47005cd9",
+				"validatorRank": 36,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "8edffc5669e375cee39c49202e5cba65a4098708d6000e303b79ac9e2ccbe4af",
+					"height": 20361,
+					"timestamp": 1724935238065
+				},
+				"validatorPublicKey": "8edaf2f10ca6888f6a2bcc3e2bc8255f82d134469cfb2209fc4cffb4a3ab256f5dcf0580d04c91af5c07e487ffb6158f",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xC3bBE9B1CeE1ff85Ad72b87414B0E9B7F2366763",
+			"publicKey": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_13",
+				"publicKey": "0370049512c71549a5cd8bb6a2e33fd85729f74bb1070c7e9dcc0b3708c6d35177",
+				"validatorRank": 37,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "53e3cb20476569075dc03096160b590f6a6811f0a927960fb7933fcd1a904aae",
+					"height": 20415,
+					"timestamp": 1724935705756
+				},
+				"validatorPublicKey": "848a73c1c9be7733138c0bef8ea5f091130facc89c141490282d7c095f8b54e0a44e06b1cae516e8e9e4c560461d160d",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 388
+			},
+			"updated_at": "20415"
+		},
+		{
+			"address": "0xA64d324eBc9E95d763A45B77bdAa0546d0D37DC8",
+			"publicKey": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_22",
+				"publicKey": "0375e624da5204a6b1181673d9027b534269a7bdf288bc6067c675f8d144cf8698",
+				"validatorRank": 38,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "59cba1101fab2b3f16972b50a6377bbd0c0fd4f2a4f91b89d1c3871e82c7ec84",
+					"height": 20418,
+					"timestamp": 1724935729756
+				},
+				"validatorPublicKey": "a7bf828ea379e2147d9692bd1576891583ed5444887d67f0270c7f12a25091f4dd746a18f9ad542464abcdc662252309",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20418"
+		},
+		{
+			"address": "0x7e1372c9B66F434A22c429C600835894cE33641b",
+			"publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_12",
+				"publicKey": "038297916c825d2e09ffe03de2c67a15803472fc92569240fa8fbf457502d7400d",
+				"validatorRank": 39,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "5236db92b88b3f0f854b9d1878cfda7dc60a3794ee0cd1e52dfb4c2669d68a08",
+					"height": 20422,
+					"timestamp": 1724935761756
+				},
+				"validatorPublicKey": "8721636e8eec6651422de9eb6915bd0cdb46b59f4796e473088ed5b33b767ce3461d678df12dd80d16d9f878f3a9bd89",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20422"
+		},
+		{
+			"address": "0xA71dAdA10295c14854B5FBc6D28eFd170e8470B4",
+			"publicKey": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_9",
+				"publicKey": "0391efef50e718683588e44f10e0bbcc19469da24de83d46ab8d2e488febffa8d6",
+				"validatorRank": 40,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "d35e0762525f51fefb28f294eb82796b7ce3a2ab1a06c4116832e50bb833ed58",
+					"height": 20388,
+					"timestamp": 1724935462954
+				},
+				"validatorPublicKey": "b257540df9d345d60017d6e170b7c63c55cb7b64f90e8ad742dd8a3256f9732c2d12aa6cfb5505f65f00d6008e829a07",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x1C45E829a6a0d5AfB01f9FB0F394D0D8aA2f4fae",
+			"publicKey": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_29",
+				"publicKey": "03931feebc4cc63b508d991e21023564e612072cf026fd0f9f2dd091a064d544c1",
+				"validatorRank": 41,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "bd163eed6d4a4aed30368b611f1c55fc31785c1b4d7c3f236b6dbe909335edb1",
+					"height": 20413,
+					"timestamp": 1724935689756
+				},
+				"validatorPublicKey": "ac7b8bfbfae20363bf775cf09fa3ff7bcfbedbaed917d77a4dc95062d4467810725093b11ff7fc5a0423b2a28565cc79",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 389
+			},
+			"updated_at": "20413"
+		},
+		{
+			"address": "0x7AF9d8582F439ECC9d83c84a425DFbA422bc7a84",
+			"publicKey": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_40",
+				"publicKey": "03a9927b2d4e5481abffb44c3362fafe54a295057224909d6cc9d8674a7a2ad2c6",
+				"validatorRank": 42,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "83e70739bea75c5ec4ca0fc2c6b34e187d50430cf7ac6e5a8b95c23c17647a17",
+					"height": 20405,
+					"timestamp": 1724935607814
+				},
+				"validatorPublicKey": "b6ce18e6d4a21fdf469a45c5299ae7e20b64f4bb2d077aa7bb0d315f844dbfeefb262064e49516f1d0d1dc9260fd0edd",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x4041C30B708da49227856c005a656F55fe44eF1C",
+			"publicKey": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_51",
+				"publicKey": "03aafd6b0c134c77c3b4f571e7d29d800254c6a28586dc104a0d01aeebad11b370",
+				"validatorRank": 43,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "bdc9772b6d5d9850755a7f5a6780fdafaf583beed283bdd6c90f8a26b845a1a1",
+					"height": 20376,
+					"timestamp": 1724935366954
+				},
+				"validatorPublicKey": "ae294666a41610acc1a35c94372b4c573978d7cb76014aa41e7aa6829e27414d8003a2d7196009aa9e7ad5fac4d23231",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xFb0Af483A0a4FdE23EA71aDBE2ea2D4301828E4B",
+			"publicKey": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_20",
+				"publicKey": "03be3616815c3a5115c229279b9e2e0c755c9a105a973e7cba68921996c177057b",
+				"validatorRank": 44,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "6eb07aa0c20c5e3006baf9aa76520d84a40d129374ac7e6cb02e5dcfce81f03a",
+					"height": 20424,
+					"timestamp": 1724935777756
+				},
+				"validatorPublicKey": "9904ec6be10f56db0f1a4d4bd6f00332af21ac7a83ac0ecc6e95df12c89dfd139773bf1066216d9244840775a030d95a",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20424"
+		},
+		{
+			"address": "0x9fF98D41d6a06062e9566c0d0d8A0BB92D5baD6F",
+			"publicKey": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_39",
+				"publicKey": "03ce47f02c036685ac897e7dd4e931ff83a52238e94a769e23b4b13c44ac558d3f",
+				"validatorRank": 45,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "2d1f4257286c9525679db669a4074ebdf40e3bf7dcdecd09d058656e71df7ca2",
+					"height": 20423,
+					"timestamp": 1724935769756
+				},
+				"validatorPublicKey": "9132e38bb6fa3f18c9a3797acdb128ecb982f056275b8454f5c6200592dc6424904b9503775c8f4d2cbff12cd3bcabe2",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20423"
+		},
+		{
+			"address": "0xBA595868ce9F740Cba0e39de124ca33fb5Ed92fE",
+			"publicKey": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_35",
+				"publicKey": "03d878ed802a26f299c1492e5a5db7615a45bfa05cc703881d7f28286ce8bb96a4",
+				"validatorRank": 46,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "333176bf16e77b8f6df102b0b6fb3841ebf0e92870c875467d2e2fc4ff90e759",
+					"height": 20419,
+					"timestamp": 1724935737756
+				},
+				"validatorPublicKey": "8767aad179f0ed0e109b31e2c57821de1a84581a949923eedd8834cbe5dbf3ef0117ffc4135d96c60e076277b52423fb",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20419"
+		},
+		{
+			"address": "0xB8Be76b31E402a2D89294Aa107056484Bef94362",
+			"publicKey": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_47",
+				"publicKey": "03daae3f4b6d486e9fdcd5c8698b31b13b6b8aacb0c89a936cece79d443a3f5e9e",
+				"validatorRank": 47,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "0557e6832482d0f566af26f71251f4dc297d5135654a387f08d4b0ddaa24a980",
+					"height": 20433,
+					"timestamp": 1724935849756
+				},
+				"validatorPublicKey": "9572d4dacfb9f44314f1091abb4c58b7d9a3c4af00d57de16c3d54f1a5e4d7c45712624842a9dc8303d8ae9db434a27c",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20433"
+		},
+		{
+			"address": "0x677fdAE653661CC73295728746E3653351d50887",
+			"publicKey": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_8",
+				"publicKey": "03eae68ae44161c755ef212bfcbc476a773dec1c023100a31bd775e09c4e430893",
+				"validatorRank": 48,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "350b869372248324cbcab723ed46415a8d4747d1b428e31ccafcf3a9e1bb7aaf",
+					"height": 20372,
+					"timestamp": 1724935334954
+				},
+				"validatorPublicKey": "916a6dae3e0eb5c0f34fb640e250e06ba83ae4f80244fff56f386fd6404271720150d38c5d63e9486e9052fa1818cd59",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xa732C81De8a23d1aa2422463Fe7489b2cBCb48c4",
+			"publicKey": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_27",
+				"publicKey": "03f3f6d09101d6fd97cc5b987707442c14cb4b990b097852f265ef41631ae4c7d5",
+				"validatorRank": 49,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "e06b97340de989d6e327605dc2fcb6882b7dfb5be0832c32df405e9bc4d5e8e2",
+					"height": 20370,
+					"timestamp": 1724935318954
+				},
+				"validatorPublicKey": "8c820e9c8ceaa403ddc6bba99dde7be6e0fe5bd1945c5dab4355a635728d6d649c5274fb8bac8a5584229d0ca7b9d8ea",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 387
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xFf44bE17e48C35D0bcB6f64b36cddbea45B17817",
+			"publicKey": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_45",
+				"publicKey": "03fb05022616e0c7d1f16a7d1afbdd7d2b63b0c78062120e93343e6dcbfcc2cf05",
+				"validatorRank": 50,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "fdc61727504127a1fa8cd47eb7c7ca0a02145c16e70d62c236f05a99d45f31a8",
+					"height": 20426,
+					"timestamp": 1724935793756
+				},
+				"validatorPublicKey": "87f1a4066c513325adfc2431b510d9ee1c7b56788ae256272228d89e6cd143d36aedf923c51712cc12359c75986f6823",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20426"
+		},
+		{
+			"address": "0x7228d1eE0Fa9AC810Aa02072bFdde6A172258051",
+			"publicKey": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_46",
+				"publicKey": "03fd950438c08bec76fbf6c0fb5698c556f008c8d03247d9e21e35f82e9329024c",
+				"validatorRank": 51,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "f849f82fdceaf87f72e7cd8b2b7b18e893d70adb436c2e71578000693f48152e",
+					"height": 20394,
+					"timestamp": 1724935519814
+				},
+				"validatorPublicKey": "a6346192db9d40984037fe2275d91fa7c5fc55550fcc9c177e01c2689e5b41d5cd8ab6b96a55a027bd3c2991dee5babe",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 386
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0x12361f0Bd5f95C3Ea8BF34af48F5484b811B5CCe",
+			"publicKey": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
+			"balance": "2358490566037735849056603",
+			"nonce": "3",
+			"attributes": {
+				"vote": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
+				"nonce": "3",
+				"balance": "2358490566037735849056603",
+				"username": "genesis_2",
+				"publicKey": "03ff2e9b086a5137c8425b5cfcb0d65720270030a50a16f6ab237c5876c9b2323a",
+				"validatorRank": 52,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "cc769f83013d87478198a05846fe3b1b6484c82342036258f36757c5d2f17765",
+					"height": 20378,
+					"timestamp": 1724935382954
+				},
+				"validatorPublicKey": "a6dc6f406b2bbd1ab93d0a2d903b1952a7f6e753bcc18c109646d392a2e4414f38ff25f2ed23d8191cd3e60521a32ec2",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037735849056603",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 385
+			},
+			"updated_at": "20405"
+		},
+		{
+			"address": "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
+			"publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+			"balance": "2358490566037485768140601",
+			"nonce": "11",
+			"attributes": {
+				"vote": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+				"nonce": "11",
+				"balance": "2358490566037485768140601",
+				"username": "genesis_1",
+				"publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+				"validatorRank": 53,
+				"validatorApproval": 1.89,
+				"validatorLastBlock": {
+					"id": "1300aa88f0aeb249eb11942121abe0695e0d384d870bb1a9af194f895b010e4d",
+					"height": 20425,
+					"timestamp": 1724935785756
+				},
+				"validatorPublicKey": "8a0836e15156b95cab8fbfb756cd2a5ce27909cc23752691b991831dfcd3c4a15be1e7b883566d0d5c4f068adcc1c588",
+				"validatorForgedFees": "0",
+				"validatorForgedTotal": "0",
+				"validatorVoteBalance": "2358490566037485778956596",
+				"validatorForgedRewards": "0",
+				"validatorProducedBlocks": 388
+			},
+			"updated_at": "20425"
+		}
+	]
 }

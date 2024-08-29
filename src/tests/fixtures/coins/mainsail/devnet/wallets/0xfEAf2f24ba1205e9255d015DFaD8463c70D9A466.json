@@ -1,29 +1,29 @@
 {
-    "data": {
-        "address": "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
-        "publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-        "balance": "2358490566037485768140601",
-        "nonce": "11",
-        "attributes": {
-            "vote": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-            "nonce": "11",
-            "balance": "2358490566037485768140601",
-            "username": "genesis_1",
-            "publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
-            "validatorRank": 53,
-            "validatorApproval": 1.89,
-            "validatorLastBlock": {
-                "id": "1300aa88f0aeb249eb11942121abe0695e0d384d870bb1a9af194f895b010e4d",
-                "height": 20425,
-                "timestamp": 1724935785756
-            },
-            "validatorPublicKey": "8a0836e15156b95cab8fbfb756cd2a5ce27909cc23752691b991831dfcd3c4a15be1e7b883566d0d5c4f068adcc1c588",
-            "validatorForgedFees": "0",
-            "validatorForgedTotal": "0",
-            "validatorVoteBalance": "2358490566037485778956596",
-            "validatorForgedRewards": "0",
-            "validatorProducedBlocks": 388
-        },
-        "updated_at": "20425"
-    }
+	"data": {
+		"address": "0xfEAf2f24ba1205e9255d015DFaD8463c70D9A466",
+		"publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+		"balance": "2358490566037485768140601",
+		"nonce": "11",
+		"attributes": {
+			"vote": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+			"nonce": "11",
+			"balance": "2358490566037485768140601",
+			"username": "genesis_1",
+			"publicKey": "03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+			"validatorRank": 53,
+			"validatorApproval": 1.89,
+			"validatorLastBlock": {
+				"id": "1300aa88f0aeb249eb11942121abe0695e0d384d870bb1a9af194f895b010e4d",
+				"height": 20425,
+				"timestamp": 1724935785756
+			},
+			"validatorPublicKey": "8a0836e15156b95cab8fbfb756cd2a5ce27909cc23752691b991831dfcd3c4a15be1e7b883566d0d5c4f068adcc1c588",
+			"validatorForgedFees": "0",
+			"validatorForgedTotal": "0",
+			"validatorVoteBalance": "2358490566037485778956596",
+			"validatorForgedRewards": "0",
+			"validatorProducedBlocks": 388
+		},
+		"updated_at": "20425"
+	}
 }

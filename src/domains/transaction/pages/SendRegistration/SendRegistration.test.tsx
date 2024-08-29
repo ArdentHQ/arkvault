@@ -730,12 +730,14 @@ describe("Registration", () => {
 			await profile.sync();
 
 			wallet = profile.wallets().first();
-			vi.spyOn(wallet, "publicKey").mockReturnValue("03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc")
-			vi.spyOn(wallet, "username").mockReturnValue(undefined)
-			vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make('100000'))
-			vi.spyOn(wallet, "nonce").mockReturnValue(BigNumber.make('10'))
-			vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false)
-			vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false)
+			vi.spyOn(wallet, "publicKey").mockReturnValue(
+				"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+			);
+			vi.spyOn(wallet, "username").mockReturnValue(undefined);
+			vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("100000"));
+			vi.spyOn(wallet, "nonce").mockReturnValue(BigNumber.make("10"));
+			vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+			vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
 			await wallet.synchroniser().identity();
 

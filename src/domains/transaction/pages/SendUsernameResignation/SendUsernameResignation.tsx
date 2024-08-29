@@ -35,7 +35,7 @@ export const SendUsernameResignation = () => {
 
 	const { formState, getValues, register, errors } = form;
 	const { isValid, isSubmitting } = formState;
-	console.log({ errors })
+	console.log({ errors });
 
 	const { common } = useValidation();
 
