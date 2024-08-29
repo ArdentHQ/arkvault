@@ -1,6 +1,6 @@
+import React from "react";
 import { constantCase } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "@/app/components/Icon";
