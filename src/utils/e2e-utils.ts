@@ -288,7 +288,10 @@ export const requestMocks = {
 
 		// Mainsail devnet
 		mockRequest("https://dwallets-evm.mainsailhq.com/api/blockchain", "coins/mainsail/devnet/blockchain"),
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/node/configuration", "coins/mainsail/devnet/configuration"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/node/configuration",
+			"coins/mainsail/devnet/configuration",
+		),
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/node/configuration/crypto",
 			"coins/mainsail/devnet/cryptoConfiguration",
@@ -453,7 +456,10 @@ export const requestMocks = {
 		mockRequest("https://ark-live.arkvault.io/api/transactions/fees", "coins/ark/mainnet/transaction-fees"),
 
 		// Mainsail Devnet
-		mockRequest("https://dwallets-evm.mainsailhq.com/api/transactions/fees", "coins/mainsail/devnet/transaction-fees"),
+		mockRequest(
+			"https://dwallets-evm.mainsailhq.com/api/transactions/fees",
+			"coins/mainsail/devnet/transaction-fees",
+		),
 
 		mockRequest(
 			"https://dwallets-evm.mainsailhq.com/api/transactions?limit=10&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
