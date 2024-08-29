@@ -187,11 +187,18 @@ export const DelegateRow = ({
 	};
 
 	return (
-		<TableRow key={delegate.address()} className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
+		<TableRow
+			key={delegate.address()}
+			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+		>
 			<TableCell
 				variant="start"
 				isCompact={isCompact}
-				innerClassName={cn("ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent", rowColor, { "h-10": isCompact })}
+				innerClassName={cn(
+					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent",
+					rowColor,
+					{ "h-10": isCompact },
+				)}
 			>
 				<span>{delegate.rank()}</span>
 			</TableCell>
@@ -246,9 +253,13 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]", rowColor, {
-					"h-10": isCompact,
-				})}
+				innerClassName={cn(
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
+					rowColor,
+					{
+						"h-10": isCompact,
+					},
+				)}
 				isCompact={isCompact}
 			>
 				<Link

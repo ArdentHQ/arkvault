@@ -105,5 +105,12 @@ export const VotesHeader = ({
 		return t("VOTE.VOTES_PAGE.TITLE");
 	}, [t, isMdAndAbove, isSelectDelegateStep]);
 
-	return <PageHeader title={headerTitle} subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")} extra={headerExtra()} border />;
+	return (
+		<PageHeader
+			title={headerTitle}
+			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
+			extra={headerExtra()}
+			border
+		/>
+	);
 };
