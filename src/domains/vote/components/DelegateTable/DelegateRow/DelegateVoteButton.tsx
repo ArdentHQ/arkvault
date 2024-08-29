@@ -21,7 +21,7 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 		size="icon"
 		variant="transparent"
 		disabled={disabled}
-		className={cn("-mr-3 text-sm leading-[17px]", compactClassName)}
+		className={cn("-mr-3 py-0 text-sm", compactClassName)}
 		onClick={onClick}
 		data-testid={`DelegateRow__toggle-${index}`}
 	>

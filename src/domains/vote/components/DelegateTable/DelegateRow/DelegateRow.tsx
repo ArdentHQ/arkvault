@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { DelegateVoteButton } from "./DelegateVoteButton";
-import { Avatar } from "@/app/components/Avatar";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -95,7 +94,7 @@ export const DelegateRow = ({
 		}
 
 		if (isSelectedVote) {
-			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-primary-reverse-600";
+			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600";
 		}
 	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
 
@@ -188,7 +187,7 @@ export const DelegateRow = ({
 	};
 
 	return (
-		<TableRow key={delegate.address()} className="relative">
+		<TableRow key={delegate.address()} className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800">
 			<TableCell
 				variant="start"
 				isCompact={isCompact}
@@ -286,7 +285,7 @@ export const DelegateRow = ({
 				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
 				isCompact={isCompact}
 			>
-				<div className="-mr-0.5">{renderButton()}</div>
+				<div className="-mr-0.5 leading-[17px]">{renderButton()}</div>
 			</TableCell>
 		</TableRow>
 	);
