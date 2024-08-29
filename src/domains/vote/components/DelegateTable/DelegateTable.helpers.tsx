@@ -20,20 +20,21 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 					</>
 				),
 				accessor: "rank",
+				headerClassName: "no-border",
 				minimumWidth: true,
 			},
 			{
 				Header: t("VOTE.DELEGATE_TABLE.NAME"),
 				accessor: (delegate) => isLoading || delegate.username(),
 				className: "justify-start",
-				headerClassName: "w-3/4 sm:w-auto",
+				headerClassName: "w-3/4 sm:w-auto, no-border",
 			},
 			{
 				Header: t("COMMON.STATUS"),
 				accessor: "status",
 				className: "justify-center",
 				disableSortBy: true,
-				headerClassName: "hidden sm:table-cell",
+				headerClassName: "hidden sm:table-cell no-border",
 				minimumWidth: true,
 			},
 			{
@@ -41,7 +42,7 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 				accessor: (delegate) => isLoading || delegate.explorerLink(),
 				className: "justify-center",
 				disableSortBy: true,
-				headerClassName: "hidden sm:table-cell",
+				headerClassName: "hidden sm:table-cell no-border",
 				minimumWidth: true,
 			},
 		];
@@ -65,15 +66,16 @@ export const useDelegateTableColumns = ({ network, isLoading }: DelegateTableCol
 				accessor: () => "voteAmount",
 				className: "justify-end",
 				disableSortBy: true,
+				headerClassName: "no-border",
 				id: "voteAmount",
 			} as Column<Contracts.IReadOnlyWallet>);
 		}
 
 		templateColumns.push({
-			Header: t("VOTE.DELEGATE_TABLE.VOTE"),
 			accessor: () => "onSelect",
 			className: "justify-end",
 			disableSortBy: true,
+			headerClassName: "no-border",
 			id: "onSelect",
 		});
 

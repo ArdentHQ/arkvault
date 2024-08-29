@@ -95,7 +95,7 @@ export const DelegateRow = ({
 		}
 
 		if (isSelectedVote) {
-			return "bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600";
+			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-primary-reverse-600";
 		}
 	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
 
@@ -188,25 +188,24 @@ export const DelegateRow = ({
 	};
 
 	return (
-		<TableRow key={delegate.address()}>
+		<TableRow key={delegate.address()} className="relative">
 			<TableCell
 				variant="start"
 				isCompact={isCompact}
-				innerClassName={cn("font-bold border-2 border-r-0 border-transparent", rowColor, { "h-12": isCompact })}
+				innerClassName={cn("ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent", rowColor, { "h-10": isCompact })}
 			>
 				<span>{delegate.rank()}</span>
 			</TableCell>
 
 			<TableCell
 				innerClassName={cn(
-					"font-bold border-t-2 border-b-2 border-transparent",
-					{ "h-12 space-x-3": isCompact },
+					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
+					{ "h-10 space-x-3": isCompact },
 					{ "space-x-4": !isCompact },
 					rowColor,
 				)}
 				isCompact={isCompact}
 			>
-				<Avatar size={isCompact ? "xs" : "lg"} className="-ml-0.5" address={delegate.address()} noShadow />
 				<div className="relative grow">
 					<span className="absolute flex w-full items-center">
 						<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
@@ -228,19 +227,19 @@ export const DelegateRow = ({
 				className="hidden sm:table-cell"
 				isCompact={isCompact}
 				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-12": isCompact,
+					"h-10": isCompact,
 				})}
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
 						<div>
-							<Icon name="StatusOk" className="text-theme-success-500" size="lg" />
+							<Icon name="StatusOk" className="text-theme-navy-600" size="md" />
 						</div>
 					</Tooltip>
 				) : (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION")}>
 						<div>
-							<Icon name="StatusStandby" className="text-theme-warning-500" size="lg" />
+							<Icon name="StatusStandby" className="text-theme-warning-500" size="md" />
 						</div>
 					</Tooltip>
 				)}
@@ -248,18 +247,18 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-12": isCompact,
+				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]", rowColor, {
+					"h-10": isCompact,
 				})}
 				isCompact={isCompact}
 			>
 				<Link
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-					showExternalIcon={false}
 					isExternal
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<Icon name="ArrowExternal" />
+					<span className="pr-2">View</span>
 				</Link>
 			</TableCell>
 
@@ -284,7 +283,7 @@ export const DelegateRow = ({
 			<TableCell
 				variant="end"
 				className="w-40"
-				innerClassName={cn("justify-end border-2 border-l-0 border-transparent", rowColor)}
+				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
 				isCompact={isCompact}
 			>
 				<div className="-mr-0.5">{renderButton()}</div>

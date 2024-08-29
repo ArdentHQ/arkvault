@@ -236,11 +236,9 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 	return (
 		<div data-testid="DelegateTable">
-			<h2 className="mb-6 hidden text-lg font-bold md:block">{t("VOTE.DELEGATE_TABLE.TITLE")}</h2>
-
 			{!!subtitle && subtitle}
 
-			<Table columns={columns} data={tableData} rowsPerPage={delegatesPerPage} currentPage={currentPage}>
+			<Table className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border" columns={columns} data={tableData} rowsPerPage={delegatesPerPage} currentPage={currentPage}>
 				{renderTableRow}
 			</Table>
 

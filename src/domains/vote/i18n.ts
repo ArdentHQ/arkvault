@@ -4,7 +4,7 @@ export const translations = {
 		COMMISSION_BY_PERIOD: "Commission ({{period}})",
 		DELEGATES_NOT_FOUND: "Delegates not found",
 		MIN: "Min.",
-		NAME: "Delegate Name",
+		NAME: "Validated Name",
 		PAYOUT_INTERVAL: "Payout",
 		TITLE: "Select a Delegate",
 		TOOLTIP: {
