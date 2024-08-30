@@ -788,7 +788,7 @@ exports[`Votes > should filter current delegates 1`] = `
             data-testid="DelegateTable"
           >
             <div
-              class="with-x-padding -mt-3 sm:mt-0 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border css-1m6rt2i"
+              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -2066,7 +2066,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
               </div>
             </div>
             <div
-              class="with-x-padding -mt-3 sm:mt-0 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border css-1m6rt2i"
+              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -3584,7 +3584,7 @@ exports[`Votes > should render 1`] = `
             data-testid="DelegateTable"
           >
             <div
-              class="with-x-padding -mt-3 sm:mt-0 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border css-1m6rt2i"
+              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
               role="table"
             >
               <table
@@ -5099,7 +5099,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
             data-testid="DelegateTable"
           >
             <div
-              class="with-x-padding -mt-3 sm:mt-0 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border css-1m6rt2i"
+              class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
               role="table"
             >
               <table
