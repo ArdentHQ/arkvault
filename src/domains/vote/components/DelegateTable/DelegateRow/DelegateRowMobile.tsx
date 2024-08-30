@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {DelegateRowSkeleton} from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowSkeleton";
 import {Link} from "@/app/components/Link";
 import { DelegateRowProperties, useDelegateRow } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRow";
+import {DelegateRowMobileSkeleton} from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobileSkeleton";
 
 export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 	const { t } = useTranslation();
@@ -12,7 +12,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 	const { renderButton } = useDelegateRow({...properties, isCompact: true});
 
 	if (isLoading) {
-		return <DelegateRowSkeleton  />;
+		return <DelegateRowMobileSkeleton  />;
 	}
 
 	return (
