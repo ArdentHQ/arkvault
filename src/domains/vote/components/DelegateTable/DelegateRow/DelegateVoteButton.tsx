@@ -21,7 +21,7 @@ const CompactButton = ({ index, disabled, compactClassName, onClick, children }:
 		size="icon"
 		variant="transparent"
 		disabled={disabled}
-		className={cn("-mr-3 py-0 text-sm", compactClassName)}
+		className={cn("-mr-3 py-3 w-full rounded-none sm:rounded sm:w-auto sm:py-0 text-sm", compactClassName)}
 		onClick={onClick}
 		data-testid={`DelegateRow__toggle-${index}`}
 	>
@@ -43,7 +43,7 @@ export const DelegateVoteButton = ({
 	if (disabled) {
 		return (
 			<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.MAX_VOTES")} className={cn({ "-mr-3": isCompact })}>
-				<span>
+				<span className="w-full sm:w-auto">
 					{isCompact ? (
 						<CompactButton disabled index={index} compactClassName={cn("relative", compactClassName)}>
 							{children}

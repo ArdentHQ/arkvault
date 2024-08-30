@@ -191,12 +191,10 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 			}
 
-			if (isXs) {
-				return <DelegateRowMobile index={index} delegate={delegate} isLoading={showSkeleton}/>
-			}
+			const View = isXs ? DelegateRowMobile : DelegateRow;
 
 			return (
-				<DelegateRow
+				<View
 					index={index}
 					delegate={delegate}
 					selectedUnvotes={selectedUnvotes}

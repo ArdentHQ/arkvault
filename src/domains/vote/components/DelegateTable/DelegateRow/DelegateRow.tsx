@@ -13,7 +13,7 @@ import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
 
-interface DelegateRowProperties {
+export interface DelegateRowProperties {
 	index: number;
 	delegate: Contracts.IReadOnlyWallet;
 	selectedUnvotes: VoteDelegateProperties[];
@@ -29,22 +29,22 @@ interface DelegateRowProperties {
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-export const DelegateRow = ({
+type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading"|"availableBalance"|"setAvailableBalance">
+
+export const useDelegateRow = ({
 	index,
 	voted,
 	delegate,
 	selectedUnvotes,
 	selectedVotes,
 	isVoteDisabled = false,
-	isLoading = false,
 	isCompact,
 	selectedWallet,
-	availableBalance,
-	setAvailableBalance,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: DelegateRowProperties) => {
+}: UseDelegateRowProperties )=> {
 	const { t } = useTranslation();
+
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
 	const isSelectedUnvote = useMemo(
@@ -98,10 +98,6 @@ export const DelegateRow = ({
 		}
 	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
 
-	if (isLoading) {
-		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} isCompact={isCompact} />;
-	}
-
 	const renderButton = () => {
 		if (isChanged) {
 			return (
@@ -129,7 +125,7 @@ export const DelegateRow = ({
 					<DelegateVoteButton
 						index={index}
 						variant="danger"
-						compactClassName="text-theme-danger-400 hover:text-theme-danger-500"
+						compactClassName="bg-theme-danger-100 sm:bg-transparent text-theme-danger-400 hover:text-theme-danger-500"
 						isCompact={isCompact}
 						onClick={() => toggleUnvotesSelected?.(delegate.address())}
 					>
@@ -142,7 +138,7 @@ export const DelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="primary"
-					compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
+					compactClassName="bg-theme-navy-200 sm:bg-transparent text-theme-primary-600 hover:text-theme-primary-700"
 					isCompact={isCompact}
 					onClick={() => toggleUnvotesSelected?.(delegate.address())}
 				>
@@ -164,7 +160,7 @@ export const DelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="reverse"
-					compactClassName="text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
+					compactClassName="bg-theme-success-100 sm:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
 					isCompact={isCompact}
 					onClick={() => toggleVotesSelected?.(delegate.address())}
 				>
@@ -177,7 +173,7 @@ export const DelegateRow = ({
 			<DelegateVoteButton
 				index={index}
 				variant="secondary"
-				compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
+				compactClassName="bg-theme-navy-100 sm:bg-transparent text-theme-primary-600 hover:text-theme-primary-700"
 				isCompact={isCompact}
 				onClick={() => toggleVotesSelected?.(delegate.address())}
 			>
@@ -185,6 +181,51 @@ export const DelegateRow = ({
 			</DelegateVoteButton>
 		);
 	};
+
+	return {
+		isActive,
+		isChanged,
+		isSelectedUnvote,
+		isSelectedVote,
+		renderButton,
+		requiresStakeAmount,
+		rowColor,
+	}
+}
+
+export const DelegateRow = ({
+	index,
+	voted,
+	delegate,
+	selectedUnvotes,
+	selectedVotes,
+	isVoteDisabled = false,
+	isLoading = false,
+	isCompact,
+	selectedWallet,
+	availableBalance,
+	setAvailableBalance,
+	toggleUnvotesSelected,
+	toggleVotesSelected,
+}: DelegateRowProperties) => {
+	const { t } = useTranslation();
+
+	const {requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
+		delegate,
+		index,
+		isCompact,
+		isVoteDisabled,
+		selectedUnvotes,
+		selectedVotes,
+		selectedWallet,
+		toggleUnvotesSelected,
+		toggleVotesSelected,
+		voted,
+	});
+
+	if (isLoading) {
+		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} isCompact={isCompact} />;
+	}
 
 	return (
 		<TableRow
