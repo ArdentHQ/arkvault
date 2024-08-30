@@ -197,7 +197,7 @@ export const DelegateRow = ({
 				innerClassName={cn(
 					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent",
 					rowColor,
-					{ "h-10": isCompact },
+					{ "h-11": isCompact },
 				)}
 			>
 				<span>{delegate.rank()}</span>
@@ -206,26 +206,16 @@ export const DelegateRow = ({
 			<TableCell
 				innerClassName={cn(
 					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
-					{ "h-10 space-x-3": isCompact },
+					{ "h-11 space-x-3": isCompact },
 					{ "space-x-4": !isCompact },
 					rowColor,
 				)}
 				isCompact={isCompact}
 			>
-				<div className="relative grow">
-					<span className="absolute flex w-full items-center">
-						<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
-						<Link
-							className="ml-2 block sm:hidden"
-							to={delegate.explorerLink()}
-							tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-							showExternalIcon={false}
-							isExternal
-						>
-							<Icon name="ArrowExternal" />
-						</Link>
-					</span>
-					<span>&nbsp;</span>
+				<div className="relative grow h-[17px]">
+					<div className="absolute flex w-full items-center">
+						<div className="truncate"> {delegate.username()} </div>
+					</div>
 				</div>
 			</TableCell>
 
@@ -233,7 +223,7 @@ export const DelegateRow = ({
 				className="hidden sm:table-cell"
 				isCompact={isCompact}
 				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-10": isCompact,
+					"h-11": isCompact,
 				})}
 			>
 				{isActive ? (
@@ -257,7 +247,7 @@ export const DelegateRow = ({
 					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
 					rowColor,
 					{
-						"h-10": isCompact,
+						"h-11": isCompact,
 					},
 				)}
 				isCompact={isCompact}
@@ -268,7 +258,7 @@ export const DelegateRow = ({
 					isExternal
 					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<span className="pr-2">View</span>
+					<span className="pr-2">{ t("COMMON.VIEW") }</span>
 				</Link>
 			</TableCell>
 

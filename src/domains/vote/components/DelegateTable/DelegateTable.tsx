@@ -10,6 +10,7 @@ import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
+import { DelegateRowMobile } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobile";
 
 export const DelegateTable: FC<DelegateTableProperties> = ({
 	delegates,
@@ -190,6 +191,10 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 			}
 
+			if (isXs) {
+				return <DelegateRowMobile index={index} delegate={delegate} isLoading={showSkeleton}/>
+			}
+
 			return (
 				<DelegateRow
 					index={index}
@@ -221,6 +226,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,
+			isXs
 		],
 	);
 
@@ -244,6 +250,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				data={tableData}
 				rowsPerPage={delegatesPerPage}
 				currentPage={currentPage}
+				hideHeader={isXs}
 			>
 				{renderTableRow}
 			</Table>
