@@ -224,7 +224,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,
-			isXs
+			isXs,
 		],
 	);
 

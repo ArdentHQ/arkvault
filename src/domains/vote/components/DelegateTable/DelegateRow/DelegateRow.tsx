@@ -29,7 +29,7 @@ export interface DelegateRowProperties {
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading"|"availableBalance"|"setAvailableBalance">
+type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
 
 export const useDelegateRow = ({
 	index,
@@ -42,7 +42,7 @@ export const useDelegateRow = ({
 	selectedWallet,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: UseDelegateRowProperties )=> {
+}: UseDelegateRowProperties) => {
 	const { t } = useTranslation();
 
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
@@ -220,8 +220,8 @@ export const useDelegateRow = ({
 		renderButton,
 		requiresStakeAmount,
 		rowColor,
-	}
-}
+	};
+};
 
 export const DelegateRow = ({
 	index,
@@ -240,7 +240,7 @@ export const DelegateRow = ({
 }: DelegateRowProperties) => {
 	const { t } = useTranslation();
 
-	const {requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
+	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
 		delegate,
 		index,
 		isCompact,
@@ -283,7 +283,7 @@ export const DelegateRow = ({
 				)}
 				isCompact={isCompact}
 			>
-				<div className="relative grow h-[17px]">
+				<div className="relative h-[17px] grow">
 					<div className="absolute flex w-full items-center">
 						<div className="truncate"> {delegate.username()} </div>
 					</div>
@@ -329,7 +329,7 @@ export const DelegateRow = ({
 					isExternal
 					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<span className="pr-2">{ t("COMMON.VIEW") }</span>
+					<span className="pr-2">{t("COMMON.VIEW")}</span>
 				</Link>
 			</TableCell>
 
