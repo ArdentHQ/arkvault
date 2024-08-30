@@ -10,6 +10,8 @@ import { LedgerData } from "@/app/contexts/Ledger";
 import { assertWallet } from "@/utils/assertions";
 import { useBreakpoint } from "@/app/hooks";
 import { AmountWrapper } from "./LedgerScanStep.blocks";
+import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
+import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 
 export const SectionHeaderMobile = ({ title }: { title: string }) => (
 	<div
@@ -153,10 +155,7 @@ export const ImportedLedgerMobileItem = ({
 	const { t } = useTranslation();
 
 	return (
-		<div
-			className="w-full overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900"
-			data-testid="LedgerMobileItem__wrapper"
-		>
+		<MobileCard data-testid="LedgerMobileItem__wrapper">
 			<div className="flex h-11 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
 				<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
 					{name}
@@ -166,28 +165,19 @@ export const ImportedLedgerMobileItem = ({
 			</div>
 
 			<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-2.5">
-				<div className="flex w-36 flex-col gap-2">
-					<span className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500">
-						{t("COMMON.ADDRESS")}
-					</span>
+				<MobileSection title={t("COMMON.ADDRESS")}>
 					<Address
 						address={address}
 						showCopyButton
 						addressClass="text-theme-secondary-900 text-sm font-semibold dark:text-theme-secondary-200"
 					/>
-				</div>
-				<div className="flex flex-col gap-2">
-					<span
-						className="text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-						data-testid="LedgerMobileItem__network"
-					>
-						{t("COMMON.VALUE")} ({coin})
-					</span>
+				</MobileSection>
+				<MobileSection title={`${t("COMMON.VALUE")} (${coin})`} data-testid="LedgerMobileItem__network">
 					<AmountWrapper isLoading={false}>
 						<Amount value={balance!} ticker={coin} />
 					</AmountWrapper>
-				</div>
+				</MobileSection>
 			</div>
-		</div>
+		</MobileCard>
 	);
 };
