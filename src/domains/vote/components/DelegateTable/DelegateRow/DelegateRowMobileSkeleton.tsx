@@ -8,7 +8,7 @@ export const DelegateRowMobileSkeleton = () => {
 
 	return (
 		<tr data-testid="DelegateRowMobileSkeleton">
-			<td  className="pt-3">
+			<td className="pt-3">
 				<div className="overflow-hidden w-full rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-between">

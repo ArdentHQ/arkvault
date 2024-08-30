@@ -243,7 +243,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			{!!subtitle && subtitle}
 
 			<Table
-				className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border"
+				className="with-x-padding -mt-3 sm:mt-0 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:border"
 				columns={columns}
 				data={tableData}
 				rowsPerPage={delegatesPerPage}
