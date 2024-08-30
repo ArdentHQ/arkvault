@@ -3,14 +3,14 @@
 exports[`DelegateFooter > should render 1`] = `
 <DocumentFragment>
   <div
-    class="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4 lg:py-8"
+    class="fixed inset-x-0 bottom-0 mb-14 h-auto w-screen bg-theme-background py-3 shadow-footer-smooth dark:bg-black dark:shadow-footer-smooth-dark sm:mb-0 md:py-4"
     data-testid="DelegateTable__footer"
   >
     <div
       class="mx-auto px-8 lg:container md:px-10"
     >
       <div
-        class="flex flex-col space-y-2 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
+        class="flex flex-col space-y-3 font-semibold sm:h-11 sm:flex-row sm:space-x-3 sm:space-y-0"
       >
         <div
           class="flex flex-grow divide-theme-secondary-300 overflow-x-auto dark:divide-theme-secondary-800 sm:mr-auto sm:divide-x"
@@ -19,28 +19,10 @@ exports[`DelegateFooter > should render 1`] = `
             class="flex flex-grow overflow-x-auto"
           >
             <div
-              class="mr-3 hidden lg:block"
-            >
-              <div
-                class="shrink-0 css-1px82g5"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
               class="flex h-full flex-grow flex-col justify-between overflow-x-auto"
             >
               <div
-                class="hidden sm:block css-1c0kjui"
+                class="hidden sm:block css-teg3sp"
               >
                 Address
               </div>
@@ -48,31 +30,13 @@ exports[`DelegateFooter > should render 1`] = `
                 class="flex h-5 items-center overflow-hidden lg:h-auto lg:space-y-2"
               >
                 <div
-                  class="flex pr-3 lg:hidden"
-                >
-                  <div
-                    class="shrink-0 css-1i0wxh3"
-                    data-testid="Avatar"
-                  >
-                    <div
-                      class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                    >
-                      <img
-                        alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                        title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
                   class="lg:text flex w-full overflow-x-auto xl:-mt-px"
                 >
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                   >
                     <span
-                      class="font-semibold text-base lg:text-lg !leading-tighter text-theme-text"
+                      class="font-semibold text-base text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-text"
                       data-testid="Address__alias"
                     >
                       <span
@@ -83,7 +47,7 @@ exports[`DelegateFooter > should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="no-ligatures min-w-0 overflow-hidden lg:text-lg !leading-tighter text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -95,25 +59,25 @@ exports[`DelegateFooter > should render 1`] = `
           </div>
         </div>
         <div
-          class="flex h-full border-t border-theme-secondary-300 pt-2 dark:border-theme-secondary-800 sm:border-l sm:border-t-0 sm:pt-0 md:border-l-0"
+          class="flex h-full border-t border-theme-secondary-300 pt-3 dark:border-theme-secondary-800 sm:border-l sm:border-t-0 sm:pt-0 md:border-l-0"
         >
           <div
             class="-ml-6 flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:ml-0"
           >
             <div
-              class="flex space-x-3 px-6"
+              class="flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6"
             >
               <div
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-1c0kjui"
+                  class="css-teg3sp"
                 >
                   Votes
                 </div>
                 <div
-                  class="css-auqdnt"
-                  data-testid="DelegateTable__footer--vote"
+                  class="css-14p20u5"
+                  data-testid="DelegateTable__footer--undefined"
                   disabled=""
                 >
                   <div
@@ -122,95 +86,24 @@ exports[`DelegateFooter > should render 1`] = `
                     <div>
                       0
                     </div>
-                    <div
-                      class="hidden pl-2 md:block lg:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="vote"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                            />
-                            <path
-                              d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="hidden lg:block"
-              >
-                <div
-                  class="ring-theme-background duration-100 css-15k66tv"
-                  disabled=""
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="vote"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                        />
-                        <path
-                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                        />
-                      </g>
-                    </svg>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="flex space-x-3 px-6"
+              class="flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6"
             >
               <div
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-1c0kjui"
+                  class="css-teg3sp"
                 >
                   Unvotes
                 </div>
                 <div
-                  class="css-auqdnt"
-                  data-testid="DelegateTable__footer--unvote"
+                  class="css-14p20u5"
+                  data-testid="DelegateTable__footer--undefined"
                   disabled=""
                 >
                   <div
@@ -219,89 +112,24 @@ exports[`DelegateFooter > should render 1`] = `
                     <div>
                       0
                     </div>
-                    <div
-                      class="hidden pl-2 md:block lg:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="unvote"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="hidden lg:block"
-              >
-                <div
-                  class="ring-theme-background duration-100 css-15k66tv"
-                  disabled=""
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="unvote"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                        />
-                      </g>
-                    </svg>
                   </div>
                 </div>
               </div>
             </div>
             <div
-              class="flex space-x-3 px-6 hidden md:flex"
+              class="flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6 hidden md:flex"
             >
               <div
                 class="flex flex-col justify-between sm:text-right"
               >
                 <div
-                  class="css-1c0kjui"
+                  class="css-teg3sp"
                 >
                   Total
                 </div>
                 <div
-                  class="css-7rfz36"
-                  data-testid="DelegateTable__footer--votecombination"
+                  class="css-1supm6x"
+                  data-testid="DelegateTable__footer--undefined"
                 >
                   <div
                     class="flex items-center justify-start md:justify-end"
@@ -309,76 +137,6 @@ exports[`DelegateFooter > should render 1`] = `
                     <div>
                       0/1
                     </div>
-                    <div
-                      class="hidden pl-2 md:block lg:hidden"
-                    >
-                      <div
-                        class="shrink-0 css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="vote-combination"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M5.65 14.24l8.7-8.7M12.15 14.86l2.6-2.7M14.85 14.86l-2.6-2.7M5.15 7.14l.7 1.1c.1.2.2.2.4.1h0l.1-.1 2.4-3.1"
-                            />
-                            <path
-                              d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="hidden lg:block"
-              >
-                <div
-                  class="ring-theme-background duration-100 css-gdymhi"
-                >
-                  <div
-                    class="css-1i4b0eq"
-                    height="20"
-                    width="20"
-                  >
-                    <svg
-                      id="vote-combination"
-                      viewBox="0 0 20 20"
-                      x="0"
-                      xml:space="preserve"
-                      xmlns="http://www.w3.org/2000/svg"
-                      y="0"
-                    >
-                      <g
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M5.65 14.24l8.7-8.7M12.15 14.86l2.6-2.7M14.85 14.86l-2.6-2.7M5.15 7.14l.7 1.1c.1.2.2.2.4.1h0l.1-.1 2.4-3.1"
-                        />
-                        <path
-                          d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                        />
-                      </g>
-                    </svg>
                   </div>
                 </div>
               </div>
