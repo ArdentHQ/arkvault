@@ -125,7 +125,12 @@ export const useDelegateRow = ({
 					<DelegateVoteButton
 						index={index}
 						variant="danger"
-						compactClassName="bg-theme-danger-100 sm:bg-transparent text-theme-danger-400 hover:text-theme-danger-500"
+						compactClassName={`
+							bg-theme-danger-100 sm:bg-transparent
+							dark:bg-theme-danger-400 dark:sm:bg-transparent
+							text-theme-danger-400 hover:text-theme-danger-500
+							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
+					`}
 						isCompact={isCompact}
 						onClick={() => toggleUnvotesSelected?.(delegate.address())}
 					>
@@ -138,7 +143,12 @@ export const useDelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="primary"
-					compactClassName="bg-theme-navy-200 sm:bg-transparent text-theme-primary-600 hover:text-theme-primary-700"
+					compactClassName={`
+						bg-theme-navy-200 sm:bg-transparent
+						dark:bg-theme-navy-800 dark:sm:bg-transparent
+						text-theme-primary-600 hover:text-theme-primary-700
+						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+					`}
 					isCompact={isCompact}
 					onClick={() => toggleUnvotesSelected?.(delegate.address())}
 				>
@@ -149,7 +159,17 @@ export const useDelegateRow = ({
 
 		if (isVoteDisabled && !isSelectedVote) {
 			return (
-				<DelegateVoteButton index={index} disabled compactClassName="text-black" isCompact={isCompact}>
+				<DelegateVoteButton
+					index={index}
+					disabled
+					compactClassName={`
+						bg-theme-secondary-100 sm:bg-transparent
+						dark:bg-theme-secondary-800 dark:sm:bg-transparent
+						text-black
+						dark:text-theme-secondary-800 dark:sm:text-theme-black
+					`}
+					isCompact={isCompact}
+				>
 					{t("COMMON.SELECT")}
 				</DelegateVoteButton>
 			);
@@ -160,7 +180,12 @@ export const useDelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="reverse"
-					compactClassName="bg-theme-success-100 sm:bg-transparent text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
+					compactClassName={`
+						bg-theme-success-100 sm:bg-transparent
+						dark:bg-theme-success-600 dark:sm:bg-transparent
+						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
+						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
+					`}
 					isCompact={isCompact}
 					onClick={() => toggleVotesSelected?.(delegate.address())}
 				>
@@ -173,7 +198,12 @@ export const useDelegateRow = ({
 			<DelegateVoteButton
 				index={index}
 				variant="secondary"
-				compactClassName="bg-theme-navy-100 sm:bg-transparent text-theme-primary-600 hover:text-theme-primary-700"
+				compactClassName={`
+					bg-theme-navy-100 sm:bg-transparent
+					dark:bg-theme-secondary-800 dark:sm:bg-transparent
+					text-theme-primary-600 hover:text-theme-primary-700
+					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+				`}
 				isCompact={isCompact}
 				onClick={() => toggleVotesSelected?.(delegate.address())}
 			>

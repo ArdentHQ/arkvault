@@ -21,7 +21,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 				<div className="overflow-hidden rounded-xl border border-theme-secondary-300 dark:border-theme-secondary-800">
 					<div className="overflow-hidden border-b border-theme-secondary-300 p-4 dark:border-theme-secondary-800">
 						<div className="flex items-center justify-start space-x-3 overflow-hidden">
-							<div className="flex space-x-3 flex-1 font-semibold overflow-hidden">
+							<div className="flex space-x-3 flex-1 text-sm leading-[17px] font-semibold overflow-hidden">
 								<span>{delegate.rank()}</span>
 								<div className="relative w-full">
 									<div className="absolute flex w-full items-center">
@@ -34,7 +34,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 								to={delegate.explorerLink()}
 								tooltip={t("COMMON.OPEN_IN_EXPLORER")}
 								isExternal
-								className="[&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
+								className="text-sm leading-[17px] [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 							>
 								<span className="pr-2">{ t("COMMON.VIEW") }</span>
 							</Link>
