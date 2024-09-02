@@ -45,4 +45,27 @@ describe("DelegateRowMobile", () => {
 
 		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
 	});
+
+	it("should render mobile skeleton while loading", () => {
+		render(
+			<table>
+				<tbody>
+				<DelegateRowMobile
+					index={0}
+					delegate={delegate}
+					selectedVotes={[]}
+					selectedUnvotes={[]}
+					isLoading={true}
+					availableBalance={wallet.balance()}
+					setAvailableBalance={vi.fn()}
+					toggleUnvotesSelected={vi.fn()}
+					toggleVotesSelected={vi.fn()}
+					selectedWallet={wallet}
+				/>
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getAllByTestId("DelegateRowMobileSkeleton")[0]).toBeInTheDocument();
+	});
 });
