@@ -28,17 +28,17 @@ describe("DelegateRowMobile", () => {
 		render(
 			<table>
 				<tbody>
-				<DelegateRowMobile
-					index={0}
-					delegate={delegate}
-					selectedVotes={[]}
-					selectedUnvotes={[]}
-					availableBalance={wallet.balance()}
-					setAvailableBalance={vi.fn()}
-					toggleUnvotesSelected={vi.fn()}
-					toggleVotesSelected={vi.fn()}
-					selectedWallet={wallet}
-				/>
+					<DelegateRowMobile
+						index={0}
+						delegate={delegate}
+						selectedVotes={[]}
+						selectedUnvotes={[]}
+						availableBalance={wallet.balance()}
+						setAvailableBalance={vi.fn()}
+						toggleUnvotesSelected={vi.fn()}
+						toggleVotesSelected={vi.fn()}
+						selectedWallet={wallet}
+					/>
 				</tbody>
 			</table>,
 		);
