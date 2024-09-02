@@ -7,7 +7,7 @@ import { VoteDelegateProperties } from "./DelegateTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import {env, getDefaultProfileId, render, renderResponsive, screen, waitFor} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
