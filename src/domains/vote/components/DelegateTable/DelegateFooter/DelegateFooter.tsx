@@ -16,34 +16,20 @@ import { useNavigationContext } from "@/app/contexts";
 interface FooterContentProperties {
 	label: string;
 	value: string | number;
-	iconName?: string;
 	disabled?: boolean;
 	className?: string;
 }
 
-const FooterContent = ({ label, value, iconName, disabled, className }: FooterContentProperties) => (
+const FooterContent = ({ label, value, disabled, className }: FooterContentProperties) => (
 	<div className={cn("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
 		<div className="flex flex-col justify-between sm:text-right">
 			<LabelWrapper>{label}</LabelWrapper>
 			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${label.toLocaleLowerCase()}`}>
 				<div className="flex items-center justify-start md:justify-end">
 					<div>{value}</div>
-
-					{iconName && (
-						<div className="hidden pl-2 md:block lg:hidden">
-							<Icon name={iconName} className="shrink-0" size="lg" />
-						</div>
-					)}
 				</div>
 			</TextWrapper>
 		</div>
-		{iconName && (
-			<div className="hidden lg:block">
-				<Circle disabled={disabled} size="lg" noShadow>
-					<Icon name={iconName} size="lg" />
-				</Circle>
-			</div>
-		)}
 	</div>
 );
 
