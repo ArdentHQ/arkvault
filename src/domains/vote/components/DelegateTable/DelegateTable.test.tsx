@@ -7,7 +7,7 @@ import { VoteDelegateProperties } from "./DelegateTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import {env, getDefaultProfileId, render, renderResponsive, screen, waitFor} from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -66,6 +66,22 @@ describe("DelegateTable", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render mobile view in XS screen", () => {
+		renderResponsive(
+			<DelegateTable
+				delegates={delegates}
+				votes={[]}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+			"xs"
+		);
+
+		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
 	});
 
 	it("should render vote amount column", () => {
