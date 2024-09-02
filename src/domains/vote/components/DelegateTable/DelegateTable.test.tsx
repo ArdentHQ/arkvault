@@ -78,7 +78,7 @@ describe("DelegateTable", () => {
 				selectedWallet={wallet}
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
-			"xs"
+			"xs",
 		);
 
 		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
