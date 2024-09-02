@@ -15,7 +15,7 @@ import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
-import {createHashHistory} from "history";
+import { createHashHistory } from "history";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -355,7 +355,7 @@ describe("AddressRowMobile", () => {
 	it("should redirect to wallet details page", async () => {
 		const history = createHashHistory();
 
-		const  { container } = render(
+		const { container } = render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={vi.fn()} />
 			</AddressWrapper>,
@@ -372,7 +372,6 @@ describe("AddressRowMobile", () => {
 
 		await userEvent.click(containerDiv);
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
-
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {
