@@ -17,8 +17,8 @@ let votes: Contracts.VoteRegistryItem[];
 
 const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
-const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvote");
-const footerVotes = () => screen.getByTestId("DelegateTable__footer--vote");
+const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
+const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
 describe("DelegateTable", () => {
 	beforeAll(() => {

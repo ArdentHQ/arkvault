@@ -25,7 +25,7 @@ const FooterContent = ({ label, value, iconName, disabled, className }: FooterCo
 	<div className={cn("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
 		<div className="flex flex-col justify-between sm:text-right">
 			<LabelWrapper>{label}</LabelWrapper>
-			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${iconName?.toLocaleLowerCase()}`}>
+			<TextWrapper disabled={disabled} data-testid={`DelegateTable__footer--${label.toLocaleLowerCase()}`}>
 				<div className="flex items-center justify-start md:justify-end">
 					<div>{value}</div>
 
