@@ -8,7 +8,6 @@ import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFoo
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { useNavigationContext } from "@/app/contexts";
