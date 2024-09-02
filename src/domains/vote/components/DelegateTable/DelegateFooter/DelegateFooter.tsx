@@ -18,6 +18,7 @@ interface FooterContentProperties {
 	disabled?: boolean;
 	className?: string;
 }
+
 const FooterContent = ({ label, value, disabled, className }: FooterContentProperties) => (
 	<div className={cn("flex space-x-3 pl-4 pr-4 first:pl-6 last:pr-6", className)}>
 		<div className="flex flex-col justify-between sm:text-right">
