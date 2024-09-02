@@ -2007,6 +2007,67 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
             data-testid="DelegateTable"
           >
             <div
+              class="flex flex-col overflow-hidden rounded-xl mb-4"
+            >
+              <div
+                class="css-rzhg83"
+              >
+                <div
+                  class="css-v0ob3f"
+                  height="16"
+                  width="16"
+                >
+                  <svg
+                    id="circle-exclamation-mark"
+                    viewBox="0 0 20 20"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 10.5v-5"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M10 14h0"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <span>
+                  Warning
+                </span>
+              </div>
+              <div
+                class="css-trjt6n"
+              >
+                <div
+                  data-testid="Votes__resigned-vote"
+                >
+                  "
+                  <strong>
+                    arkx
+                  </strong>
+                  ", the Delegate you are voting for has resigned. Press continue to unvote or select a new Delegate below.
+                </div>
+              </div>
+            </div>
+            <div
               class="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border css-1m6rt2i"
               role="table"
             >
@@ -2178,7 +2239,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <span>
                           2
@@ -2187,7 +2248,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                     </td>
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 space-x-3"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 space-x-3 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="relative h-[17px] grow"
@@ -2208,7 +2269,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <div>
                           <div
@@ -2250,7 +2311,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <a
                           class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
@@ -2299,20 +2360,20 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="w-40"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
                         >
                           <button
-                            class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-full rounded-none py-3 text-sm leading-[17px] sm:w-auto sm:rounded sm:py-0 relative bg-theme-navy-100 sm:bg-transparent dark:bg-theme-secondary-800 dark:sm:bg-transparent text-theme-primary-600 hover:text-theme-primary-700 dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700"
+                            class="p-3 items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed border-none -mr-3 w-full rounded-none py-3 text-sm leading-[17px] sm:w-auto sm:rounded sm:py-0 relative bg-theme-danger-100 sm:bg-transparent dark:bg-theme-danger-400 dark:sm:bg-transparent text-theme-danger-400 hover:text-theme-danger-500 dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500"
                             data-testid="DelegateRow__toggle-0"
                             type="button"
                           >
                             <div
                               class="flex items-center space-x-2"
                             >
-                              Select
+                              Unselected
                             </div>
                           </button>
                         </div>
@@ -2719,15 +2780,14 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             Unvotes
                           </div>
                           <div
-                            class="css-14p20u5"
+                            class="css-1supm6x"
                             data-testid="DelegateTable__footer--unvotes"
-                            disabled=""
                           >
                             <div
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                0
+                                1
                               </div>
                             </div>
                           </div>
@@ -2752,7 +2812,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                               class="flex items-center justify-start md:justify-end"
                             >
                               <div>
-                                0/1
+                                1/1
                               </div>
                             </div>
                           </div>
