@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { DefaultTReturn, TOptions } from "i18next";
-import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
+import { LabelWrapper, TextWrapper } from "./DelegateFooter.styles";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
