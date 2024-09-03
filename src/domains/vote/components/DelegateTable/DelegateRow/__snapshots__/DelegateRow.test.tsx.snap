@@ -10,7 +10,7 @@ exports[`DelegateRow > should emit action on select button 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
           >
             <span />
           </div>
@@ -122,10 +122,10 @@ exports[`DelegateRow > should emit action on select button 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -160,7 +160,7 @@ exports[`DelegateRow > should render 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
           >
             <span />
           </div>
@@ -272,10 +272,10 @@ exports[`DelegateRow > should render 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -310,7 +310,7 @@ exports[`DelegateRow > should render changed style when network requires vote am
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <span />
           </div>
@@ -467,10 +467,10 @@ exports[`DelegateRow > should render changed style when network requires vote am
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-warning-50 dark:bg-theme-background dark:border-theme-warning-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -505,7 +505,7 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <span />
           </div>
@@ -617,10 +617,10 @@ exports[`DelegateRow > should render the selected delegate 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -655,7 +655,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
           >
             <span />
           </div>
@@ -767,10 +767,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -796,7 +796,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
           >
             <span />
           </div>
@@ -908,10 +908,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -937,7 +937,7 @@ exports[`DelegateRow > should render the selected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
           >
             <span />
           </div>
@@ -1049,10 +1049,10 @@ exports[`DelegateRow > should render the selected vote 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1092,7 +1092,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <span />
           </div>
@@ -1204,10 +1204,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1233,7 +1233,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
           >
             <span />
           </div>
@@ -1345,10 +1345,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1374,7 +1374,7 @@ exports[`DelegateRow > should render the selected vote 2`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
           >
             <span />
           </div>
@@ -1486,10 +1486,10 @@ exports[`DelegateRow > should render the selected vote 2`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1529,7 +1529,7 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <span />
           </div>
@@ -1641,10 +1641,10 @@ exports[`DelegateRow > should render the unselected vote 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
           >
             <div
               class="-mr-0.5 leading-[17px]"
@@ -1679,7 +1679,7 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent"
           >
             <span />
           </div>
@@ -1838,10 +1838,10 @@ exports[`DelegateRow > should render when network requires vote amount 1`] = `
           </div>
         </td>
         <td
-          class="w-40"
+          class="w-30 min-w-32"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
           >
             <div
               class="-mr-0.5 leading-[17px]"

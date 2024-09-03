@@ -870,7 +870,7 @@ exports[`Votes > should filter current delegates 1`] = `
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -961,7 +961,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
                       >
                         <span>
                           52
@@ -1075,10 +1075,10 @@ exports[`Votes > should filter current delegates 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -2148,7 +2148,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -2239,7 +2239,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <span>
                           2
@@ -2357,10 +2357,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -2386,7 +2386,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           3
@@ -2504,10 +2504,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -2533,7 +2533,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           12
@@ -2651,10 +2651,10 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -3666,7 +3666,7 @@ exports[`Votes > should render 1`] = `
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -3757,7 +3757,7 @@ exports[`Votes > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           2
@@ -3875,10 +3875,10 @@ exports[`Votes > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -3904,7 +3904,7 @@ exports[`Votes > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           3
@@ -4022,10 +4022,10 @@ exports[`Votes > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -4051,7 +4051,7 @@ exports[`Votes > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           12
@@ -4169,10 +4169,10 @@ exports[`Votes > should render 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -5181,7 +5181,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -5272,7 +5272,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           2
@@ -5390,10 +5390,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -5419,7 +5419,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           3
@@ -5537,10 +5537,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -5566,7 +5566,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           12
@@ -5684,10 +5684,10 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -7417,7 +7417,7 @@ exports[`Votes > should select a delegate 1`] = `
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -7508,7 +7508,7 @@ exports[`Votes > should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <span>
                           2
@@ -7626,10 +7626,10 @@ exports[`Votes > should select a delegate 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -7655,7 +7655,7 @@ exports[`Votes > should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           3
@@ -7773,10 +7773,10 @@ exports[`Votes > should select a delegate 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -7802,7 +7802,7 @@ exports[`Votes > should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           12
@@ -7920,10 +7920,10 @@ exports[`Votes > should select a delegate 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -12078,7 +12078,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
                       >
                         <div
                           class="w-40 flex-1"
@@ -12180,7 +12180,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="pr-6"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
                       >
                         <div>
                           <button
@@ -12207,7 +12207,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
                       >
                         <div
                           class="w-40 flex-1"
@@ -12320,7 +12320,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="pr-6"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
                       >
                         <div>
                           <button
@@ -12346,7 +12346,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       data-testid="AddressRow__wallet"
                     >
                       <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
                       >
                         <div
                           class="w-40 flex-1"
@@ -12459,7 +12459,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       class="pr-6"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
                       >
                         <div>
                           <button
@@ -13363,7 +13363,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                         <div
                           class=""
                         >
-                          Validated Name
+                          Delegate Name
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -13454,7 +13454,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
                       >
                         <span>
                           2
@@ -13572,10 +13572,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -13601,7 +13601,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           3
@@ -13719,10 +13719,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"
@@ -13748,7 +13748,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l-xl ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11"
                       >
                         <span>
                           12
@@ -13866,10 +13866,10 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       </div>
                     </td>
                     <td
-                      class="w-40"
+                      class="w-30 min-w-32"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r-xl justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-r justify-end pr-3 mr-3 border-2 border-l-0 border-transparent"
                       >
                         <div
                           class="-mr-0.5 leading-[17px]"

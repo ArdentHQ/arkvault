@@ -12,7 +12,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -256,7 +256,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -291,7 +291,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -571,7 +571,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -606,7 +606,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -850,7 +850,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -886,7 +886,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1130,7 +1130,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -1165,7 +1165,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1409,7 +1409,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -1444,7 +1444,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1688,7 +1688,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -1714,7 +1714,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1827,7 +1827,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -1862,7 +1862,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2106,7 +2106,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -2132,7 +2132,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2234,7 +2234,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -2270,7 +2270,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2512,7 +2512,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -2547,7 +2547,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2719,7 +2719,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -2754,7 +2754,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2971,7 +2971,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -3006,7 +3006,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -3223,7 +3223,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -3258,7 +3258,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3430,7 +3430,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -3465,7 +3465,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3682,7 +3682,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -3717,7 +3717,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-3"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3934,7 +3934,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -3969,7 +3969,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -4213,7 +4213,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
@@ -4248,7 +4248,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -4491,7 +4491,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
