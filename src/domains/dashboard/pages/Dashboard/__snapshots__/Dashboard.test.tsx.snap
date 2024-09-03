@@ -1520,7 +1520,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1726,7 +1726,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1743,7 +1743,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1949,7 +1949,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1966,7 +1966,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -2172,7 +2172,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -2189,7 +2189,7 @@ exports[`Dashboard > should render 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -2395,7 +2395,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
