@@ -8,6 +8,7 @@ import { DetailLabel, DetailLabelText, DetailWrapper } from "@/app/components/De
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { VoteRegistryItem } from "@ardenthq/sdk-profiles/distribution/esm/vote-registry.contract";
+import {ThemeIcon} from "@/app/components/Icon";
 
 function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]) {
 	if (votes.length > 0 && unvotes.length > 0) {
@@ -33,15 +34,24 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 	const voteCategory = getVoteCategory(votes, unvotes);
 
+	const categoryLabels = {
+		"swap":  t("TRANSACTION.TRANSACTION_TYPES.VOTE_COMBINATION"),
+		"unvote":  t("TRANSACTION.TRANSACTION_TYPES.UNVOTE"),
+		"vote":  t("TRANSACTION.TRANSACTION_TYPES.VOTE"),
+	}
+
 	return (
-		<section data-testid="SendVote__review-step" className="space-y-4">
+		<section data-testid="SendVote__review-step" className="space-y-3 sm:space-y-4">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
 
 			<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-				<div className="flex w-full justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+				<div className="flex w-full justify-between gap-4 items-center space-x-2 sm:justify-start sm:space-x-0">
 					<DetailLabelText className="sm:min-w-28">{t("COMMON.FROM")}</DetailLabelText>
 					<Address
 						address={wallet.address()}
@@ -55,9 +65,13 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="space-y-3 sm:space-y-0">
-					<div className="flex w-full justify-between gap-4 sm:justify-start">
+					<div className="flex w-full justify-between items-center gap-4 sm:justify-start">
 						<DetailLabelText className="sm:min-w-28">{t("COMMON.CATEGORY")}</DetailLabelText>
-						<div>{voteCategory}</div>
+						<div className="flex items-center px-1 py-[3px] bg-theme-secondary-200 dark:bg-transparent dark:border dark:border-theme-secondary-800 rounded">
+							<span className="text-theme-secondary-700 dark:text-theme-secondary-500 text-[12px] leading-[15px] font-semibold">
+								{categoryLabels[voteCategory]}
+							</span>
+						</div>
 					</div>
 
 					<div className="hidden sm:block">
@@ -66,7 +80,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 					{voteCategory === "swap" && (
 						<>
-							<div className="flex w-full justify-between gap-4 sm:justify-start">
+							<div className="flex w-full justify-between items-center gap-4 sm:justify-start">
 								<DetailLabelText className="flex-shrink-0 sm:min-w-28">
 									{t("COMMON.OLD_DELEGATE")}
 								</DetailLabelText>
@@ -79,7 +93,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 								<Divider dashed />
 							</div>
 
-							<div className="flex w-full justify-between gap-4 sm:justify-start">
+							<div className="flex w-full justify-between items-center gap-4 sm:justify-start">
 								<DetailLabelText className="flex-shrink-0 sm:min-w-28">
 									{t("COMMON.NEW_DELEGATE")}
 								</DetailLabelText>
@@ -91,7 +105,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 					)}
 
 					{voteCategory !== "swap" && (
-						<div className="flex w-full gap-4">
+						<div className="flex w-full justify-between items-center gap-4 sm:justify-start">
 							<DetailLabelText className="sm:min-w-28">{t("COMMON.DELEGATE")}</DetailLabelText>
 							<div className="no-ligatures text-md font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
 								{voteCategory === "vote" ? votes[0].wallet?.username() : unvotes[0].wallet?.username()}
