@@ -76,7 +76,7 @@ export const ContactListItemMobileAddress: React.VFC<ContactListItemMobileAddres
 						className={cn(
 							"flex h-full items-center justify-center bg-theme-primary-100 px-3 dark:bg-theme-secondary-900",
 							{
-								"hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200":
+								"text-theme-navy-600 hover:bg-theme-primary-700 hover:text-white dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-800 dark:hover:text-theme-secondary-200":
 									!sendIsDisabled,
 								"text-theme-secondary-500 dark:text-theme-secondary-800": sendIsDisabled,
 							},
