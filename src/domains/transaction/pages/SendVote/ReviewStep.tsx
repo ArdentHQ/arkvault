@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { StepHeader } from "@/app/components/StepHeader";
