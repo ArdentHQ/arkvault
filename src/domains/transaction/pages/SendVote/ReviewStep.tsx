@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
-import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
-import { VoteList } from "@/domains/vote/components/VoteList";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailLabel, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
