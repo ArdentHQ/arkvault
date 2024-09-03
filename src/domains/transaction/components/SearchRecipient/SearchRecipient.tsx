@@ -61,7 +61,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 
 	return (
 		<TableRow key={recipient.id} border className="relative">
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-4">
+			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-6">
 				<Address
 					walletName={recipient.alias}
 					address={recipient.address}
