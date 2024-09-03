@@ -12,29 +12,29 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       '@ardenthq/sdk':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-ark':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-cryptography':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-helpers':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-intl':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-ledger':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@ardenthq/sdk-mainsail':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.1
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18(encoding@0.1.13)
       '@ardenthq/sdk-profiles':
-        specifier: ^2.0.0-alpha.18
-        version: 2.0.0-beta.15
+        specifier: 2.0.0-alpha.18
+        version: 2.0.0-alpha.18
       '@emotion/cache':
         specifier: ^11.10.5
         version: 11.10.5
@@ -382,6 +382,9 @@ packages:
   '@adobe/css-tools@4.2.0':
     resolution: {integrity: sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==}
 
+  '@adraffy/ens-normalize@1.10.1':
+    resolution: {integrity: sha512-96Z2IP3mYmF1Xg2cDm8f1gWGf/HUVedQ3FMifV4kG/PQ4yEP51xDtRAEfhVNt5f/uzpNkZHwWQuUcu6D6K+Ekw==}
+
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
@@ -404,56 +407,40 @@ packages:
     resolution: {integrity: sha512-0Ld6SSNEzb/TeOZ0YUDAa+vFyk65LprU+wiLjWDwhqpaDtUkJZ9MBM4alagfJ5665SN+DM7Dti2QxqKX+Y8S2w==}
     engines: {node: '>=14.16'}
 
-  '@ardenthq/sdk-ark@2.0.0-beta.15':
-    resolution: {integrity: sha512-RGCnRym6u+/8Yct8ttP+XZrYIYNH+T7lrcLgPC/h8uJG+RPfhTrCXDQylRiLkXgg0mlmzgY5RfvfCp4iWjFL/g==}
+  '@ardenthq/sdk-ark@2.0.0-alpha.18':
+    resolution: {integrity: sha512-+GAcMjmtSdmprtZbYbH8fKa9EP9HuyiPKZjElawMKoGV3XWkUoivfSfIbdQw5U/lzuUUwattFMJrxL9gwzMOYA==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-cryptography@2.0.0-beta.1':
-    resolution: {integrity: sha512-qS8LPmls0tuoEQWorkV0JFtB4FhWNQq9bLJzkim5u0GKJfXfGbVWx0C/BCBz9ZeIvBy4MK2yq/DQuBxIh9NmBQ==}
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.18':
+    resolution: {integrity: sha512-GYpDR0fE7lNJ6mMMz7vKG4km3WdWmso/KfYIX4N8CVI15//0P3lylcOzboAu+F8EGyX4JkfEntcUZXDcmVO64Q==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-cryptography@2.0.0-beta.15':
-    resolution: {integrity: sha512-zNH6jxFHQVn3F7JxUz5sCgjeo0/77EvVvIRnJBxtkX+/DD1zaRluaflKtQGAtl9bai6QlNCfmnu+oGtdA54dIg==}
+  '@ardenthq/sdk-helpers@2.0.0-alpha.18':
+    resolution: {integrity: sha512-oJUiohf1effax1kW16mMetTFssLo6rsj4Ro/9/eLsYtP0oWKfqumkPtuAZjA2mRf9GvcG7XNDld+DABfHOUCUg==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-helpers@2.0.0-beta.1':
-    resolution: {integrity: sha512-wjEZWdThgPD//C0PKCVYZMC/Fulj7WcWyEEw4uqAGs2X9YAdwPIhtg3jYg+Pqpr6Dy2+lHFUtwOnWyg8Oa0yLA==}
+  '@ardenthq/sdk-intl@2.0.0-alpha.18':
+    resolution: {integrity: sha512-DnehQBYWTU0TGEFX+5ZNRwq9qGpouuLD0cWTEIB6gfyUXiRNA7w2ekKj5HUB7TWnXLuoShGIB9dP1Z7JItyU4Q==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-helpers@2.0.0-beta.15':
-    resolution: {integrity: sha512-1GlCv7eXrOEzdzgz15Yp8ykvdieYkeY6sUqs7faIqZIN8NmvH7dH6+mHgw5ZkxS0Q2Wr9116IX6dIsOZtIkk2g==}
+  '@ardenthq/sdk-ledger@2.0.0-alpha.18':
+    resolution: {integrity: sha512-K5jYTyxVEn238fQDx/tulVIhX3eXZKMEf8GqTFv8rNuyDiZ2JOcYNlJx+38ZO/35MTEZD7mI30CCJPQTQiuxfw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-intl@2.0.0-beta.1':
-    resolution: {integrity: sha512-YLsK6/q8APj2krSuv/dU6kMxz6A5PD+DNiyGYNq1I1jtBwqrrx+ZH0y61XjL8ibHQtH8V40sAeaMbFFHQdy9hg==}
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.18':
+    resolution: {integrity: sha512-V4t4NNF+J368Bvyqiee39l/GkzMSNiOhNXDAD+7tF+dgTqgIkmPO+DKUW317+jnzE+yO7LeGxXpRqfqntTUhEQ==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-intl@2.0.0-beta.15':
-    resolution: {integrity: sha512-O5HM+3d24rb5l9A2WBjHDfzd5BraOq0qgAps7k43AWDFaRD29gZ2/4YGSARuNOm7CcEQcOVLVANos0wxwrNdhg==}
+  '@ardenthq/sdk-markets@2.0.0-alpha.18':
+    resolution: {integrity: sha512-kdAuRB7NbvLH8qfRzbD7I48W8a8fJJOyapOhiy4tLM0VnRfDuSmP8BUTw7Qnc0u1JygL9D/y2dA/ZV0vymYHqw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-ledger@2.0.0-beta.15':
-    resolution: {integrity: sha512-8zwQ9cYl3wEH3OnUdgRdVRehvY09yiZXEcpdB3Hl7/P4tM5+gjzoLvCsRIUcavn/M8Yq5+AYni8e31ctnqHO4Q==}
+  '@ardenthq/sdk-profiles@2.0.0-alpha.18':
+    resolution: {integrity: sha512-4cY4guTPg6VT9+k3MPNABM5EHDotkoch1ZTbELv6HIpCGmxpLtDJ3u1O6Zmo4TUy5AD+icLJNdF95NmByn6EDw==}
     engines: {node: '>=16.0.0'}
 
-  '@ardenthq/sdk-mainsail@2.0.0-beta.1':
-    resolution: {integrity: sha512-7BYZw5nHTqfqJyJE5iLk+s9KSzdJUWbbbuP/9M7U89HiaGVgcAjDB/LrSzomZpS5BdXfR6yVUxpAKddDrzDbvg==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-markets@2.0.0-beta.15':
-    resolution: {integrity: sha512-n0iFpg5SKLctWVCt0TkyfG8wyachVCYTGCnszyHglYYnC9v2Ah4yBGov7koW1gJchSlXnzDDfMi0cPPjaA++bg==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk-profiles@2.0.0-beta.15':
-    resolution: {integrity: sha512-QZAyJZvpGrckZxWbOE3kdbMDWXNOrbC8TZCHzGH5MyggaSQNDR/i64LHK3P4h19K/dUS8JaJXFvRjLXlNyyg5Q==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk@2.0.0-beta.1':
-    resolution: {integrity: sha512-IGhfDYE4e4l0VBOxKi5Fh7dFEVc+yGKx6l5NmzE5MNEakb+fVpjTjsH1o4AuwLfyhAY3Tp6o37L6f/0csD07mg==}
-    engines: {node: '>=16.0.0'}
-
-  '@ardenthq/sdk@2.0.0-beta.15':
-    resolution: {integrity: sha512-zBLpeGTqHLyzmDtmsYpmo5HoWLFPdLGhP2D4Tg+gZzeypd8jHzMy3E5+ofrZT0zdhFzJcR5g7hjCTt+MAQlRLg==}
+  '@ardenthq/sdk@2.0.0-alpha.18':
+    resolution: {integrity: sha512-l87yXpQDQ/tjpOo2NxHc8V+q+Dk1eK5G9j5WjmKzYSHcd5YdW5Cy/mRNlC218Jh1W45aGwuaZwD+SiBuh5Z9lQ==}
     engines: {node: '>=16.0.0'}
 
   '@arkecosystem/ledger-transport@2.0.0':
@@ -1801,6 +1788,24 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
+  '@chainsafe/bls-hd-key@0.3.0':
+    resolution: {integrity: sha512-LsYYnfBEEmqGFPDm8hQN3Kc+v9wPFnhn+CToD403KEynUiUSHKLAf5B6UCY5eooShDOcaGCUgAUhIw1CmpEf3Q==}
+
+  '@chainsafe/bls-keygen@0.4.0':
+    resolution: {integrity: sha512-wqtuj4G/sWpIugJW1mb/nSTwcTuZKqB3DS3ANUIOn7pva8EB6LfxgIL34o4qk3lti/8Mdxqtqc2n4xRszrNdzA==}
+
+  '@chainsafe/bls@7.1.3':
+    resolution: {integrity: sha512-d21eYdWxDSb63n7nB+viD+3U4yJW8huiKRibJyh8X7btPLoXkvtmDf7geYyHVbKfLDgbuHkc+b48pfPQkUTLxA==}
+    engines: {node: '>=14.8.0'}
+    peerDependencies:
+      '@chainsafe/blst': ^0.2.4
+    peerDependenciesMeta:
+      '@chainsafe/blst':
+        optional: true
+
+  '@chainsafe/blst@0.2.11':
+    resolution: {integrity: sha512-URyOLq5GtxBoxibOnd2pgLydCy0UZzbiIIBcsRAvGxAsRzjZL04TsQfwRkz5aphU3a1ebeRoMmI/HHyMCiFSQg==}
+
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -2095,6 +2100,9 @@ packages:
     resolution: {integrity: sha512-UBHDBNPJR0vUldeRfyJmy7XuoLRTjDVMT5RMg+/rqV5izrYbL3Txfuz2ftuTUUQJ82QMu9AOc7hdWHrlbYHQ9A==}
     engines: {node: '>=12'}
 
+  '@gar/promisify@1.1.3':
+    resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
+
   '@hapi/accept@6.0.3':
     resolution: {integrity: sha512-p72f9k56EuF0n3MwlBNThyVE5PXX40g+aQh+C/xbKrfzahM2Oispv3AXmOIU51t3j77zay1qrX7IIziZXspMlw==}
 
@@ -2376,80 +2384,108 @@ packages:
   '@ledgerhq/logs@6.12.0':
     resolution: {integrity: sha512-ExDoj1QV5eC6TEbMdLUMMk9cfvNKhhv5gXol4SmULRVCx/3iyCPhJ74nsb3S0Vb+/f+XujBEj3vQn5+cwS0fNA==}
 
-  '@mainsail/container@0.0.1-alpha.13':
-    resolution: {integrity: sha512-AegZybe7gZd7KxZCdOy2kOZUIRzVrQoNAQjMTYUZNJjw6LKgtfTyvsSwzYogab6P3A1p5KsML/6+NL9NAAjKNw==}
+  '@mainsail/container@0.0.1-evm.2':
+    resolution: {integrity: sha512-HzSqP3JUAdRGkRX6u9HG1hxtPQOOJ9iFJC1RLRSII+C3eMM3ZA/mlvmwJ7QXwjhlnv3yWzZkzrRSpsvA7GRd+w==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/contracts@0.0.1-alpha.13':
-    resolution: {integrity: sha512-qQ4iX+KpKsr2SYhS22c4pTJLldYritgsYYMVAnya+A2Fdh9MdsrGNUSDaz05Gw40trdO2E5rJNXa3nLxPa2atw==}
+  '@mainsail/contracts@0.0.1-evm.2':
+    resolution: {integrity: sha512-XKYFU+Z+db+NwpXqD3JoFbXXnDq2588J+GygjwJuKk4Mxm2p1cqFVO+990PSFrv1srCCY4KxH1QtQnr5n7/e7w==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-address-base58@0.0.1-alpha.13':
-    resolution: {integrity: sha512-RA4W+OaSycgWaQ9QfU2wzOkio0x6+oo3jJNqueJMq5CdlfhF8jHfSz7Co9wCzd75PL12gvWgiRd0SNeXPX1uMw==}
+  '@mainsail/crypto-address-keccak256@0.0.1-evm.2':
+    resolution: {integrity: sha512-ELVBp4/WU2dbvgc6mXHROG+rz13YILMJsmlZhklluA76qvIUmx/kRqX3xOLv8QfJEfybcmMWo4JlcviT0ApFaw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-config@0.0.1-alpha.13':
-    resolution: {integrity: sha512-ilJxa86Eda+iWUuXhgGKgfGturzoDwztramgVoMAOctVT9XQ3S7eUg4Sh0mK9JzBW2HoIlxi4YonjOHkQvo3Xg==}
+  '@mainsail/crypto-config@0.0.1-evm.2':
+    resolution: {integrity: sha512-g2qfI7zN8fREErpd82qFTnn+zBLw7HQsDts1hc7FuRKxVcnXsj+v0tcOkGGhbI1XFjOUU8UixqdbLgG+vnR9Ig==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-hash-bcrypto@0.0.1-alpha.13':
-    resolution: {integrity: sha512-22h61MgjyWRC32DSNuHPxgcwCugdYNJMG/colwdzpjGnPPh32ZaFXrm1X7+A2/qiLlfKbW10kE5mntxli6Sx3g==}
+  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.2':
+    resolution: {integrity: sha512-oYZtQc3Pl7UF/S6baLhnQu8yBL+oOZeCoDggDexOvY6pHAauYtCO+h9OR2nY2OJyKV7/kJgrVQokZYkWwRjOeg==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-key-pair-ecdsa@0.0.1-alpha.13':
-    resolution: {integrity: sha512-MeUbfa2m9s0nXENZS/nW58dqiU9f4XROVvcnAZsq+HNx5x3HbS9t2wQGKbIcsB9aaTxTRy8xjZhlmEbLmQYyGA==}
+  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.2':
+    resolution: {integrity: sha512-GBsm4/HwUbgkY6ChztMCUR72k0Pe55Sxd7m49gnCaSmfK0IYirfPtxEj0+bEdJOzxLNZidAQ7Zea8veGIe0TZg==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-signature-schnorr-secp256k1@0.0.1-alpha.13':
-    resolution: {integrity: sha512-j6y1pSSXJhshASbfRcG0S0PHwCXRU9KB0HlNDhbqFFfE8X5CVDKnc/czQh7nVnNQKg6l7aTXn/c7GHFr9SklOA==}
+  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.2':
+    resolution: {integrity: sha512-C+NK/JFnaXDv/UOxVDhGlPSXj0RagBhS5XmXPhpGQ0v/3LWcaBsJa/imLCGG3BYH5Bgf245GOfopX5EbPy2X1A==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-multi-payment@0.0.1-alpha.13':
-    resolution: {integrity: sha512-hL/d8ulfdQwFQic9ifsifiP2PE3nrVuIOEz5J1YlvKx3NOAm5Q8RE7Gaw9mrYL3nHiDTa4A2ewR8phLHRN+FYg==}
+  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.2':
+    resolution: {integrity: sha512-KEE5XifmTUjg5Ds6pJOfdLtMDJqpHxtVTfj3csGM52CkKK0Kp1cEw/t1vUDVIM7k0XYFlOy9SE8x2A13Dfl3kQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-transfer@0.0.1-alpha.13':
-    resolution: {integrity: sha512-+Wyr7wDRtreO5c+E16CCvl6RsV2YVYnHJaVX9DgiXll7hrQ5kcb/KBfLt6b6TFMbNM9QkVKDgRAI+5+PdT5JUw==}
+  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.2':
+    resolution: {integrity: sha512-Rc1fCkCFBvBINZZmfdEHG8XPtmOKyn1gF+kJDSiD7gbp6tQnNQqyECCwKjFcLQz2ssFQwL2pOpKF0MEUn5IH2w==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-validator-registration@0.0.1-alpha.13':
-    resolution: {integrity: sha512-95IS9YIxi/K5EcKHoZhjGjABk70Rn0FPqLmS02NAgxCapbWsnO/Y5U5OzCh933zIBkitaOJZrwfjskQjPSLvIQ==}
+  '@mainsail/crypto-signature-schnorr@0.0.1-evm.2':
+    resolution: {integrity: sha512-3culGgmyAQl+4ODM7LFud3Ha+O5FiuoTXIi5WWCqTmaN0cSw/zY0SDtYp/I71lvQFOzXfKF3Bch4mt4IeNhbbA==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction-vote@0.0.1-alpha.13':
-    resolution: {integrity: sha512-pJmYltv456u1EeCtozvQbNnpUw+N8oeE7KgPLqu/4CCdA6qULZm7lEJxH3JcmIcUIY83CXj/l2oGEO4IbcMAfA==}
+  '@mainsail/crypto-transaction-multi-payment@0.0.1-evm.2':
+    resolution: {integrity: sha512-Oh4camLsOBBn/eCrALfA36cwPJh8KU5R8DU5e9arYbNwTdZk0DPzBvsNfaHP7pPJIKR+3ic4JjwMmZxGo+URZw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-transaction@0.0.1-alpha.13':
-    resolution: {integrity: sha512-zsDFAU7hLc7SPDDphKXPglrFszz1qYUJ4WY2WdcgaTxdiYp+o+JjXx6dgDBBobOD+Km/5CJE4bZTpgXOiBDRng==}
+  '@mainsail/crypto-transaction-multi-signature-registration@0.0.1-evm.2':
+    resolution: {integrity: sha512-PB2vislGRmlMr/NV/hR7d92AihLCVyNSAQPYe8VUqzYm+kh0YJQpeMGMImMhsHiA7IPqYeSvGMUKyd8tt82d6g==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/crypto-validation@0.0.1-alpha.13':
-    resolution: {integrity: sha512-yZ6fRNB5G/pSiIowxSufG5xIqt6oQXTj5bAQXmkgH6cvEo8+67rgE9LwvDqqTavoFWx9ulzOUZaORKnfBY/RpQ==}
+  '@mainsail/crypto-transaction-transfer@0.0.1-evm.2':
+    resolution: {integrity: sha512-Y3nvie1h2uU1hz6SdgSdKNvYgaHyojtmy1a1dK6escPEP3i8WCuvSkdtBzfe+lO4VZOgGOToMFJG/FPoX+jRcw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/fees-static@0.0.1-alpha.13':
-    resolution: {integrity: sha512-43OsI+FL0Nk+PwurZy5vrxW/Jecv8hFq+KB7eMYkfRgGZzjzBlREsfsfzQ0Wulis7Y2RAfnd4osrhs1MEvDh6g==}
+  '@mainsail/crypto-transaction-username-registration@0.0.1-evm.2':
+    resolution: {integrity: sha512-l37450TPPECQj7t6vt27F07EQzZep5PR6CE6Y6FUwNFSlV+c9EhkexHiLQjHB0Hk7CcJ0VpApkAAir70OG36AA==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/fees@0.0.1-alpha.13':
-    resolution: {integrity: sha512-0HifY/9Nc07w0E8npBONC5RlnB32And+xyPBn4/O/2ziwkgDUsZNx2fDCJaQ6h3FmtKo49sEHYUgWKMqmDfCUA==}
+  '@mainsail/crypto-transaction-username-resignation@0.0.1-evm.2':
+    resolution: {integrity: sha512-25/MtJBTLehuZYc7gIYLzU5eblvXwHcTnCF/OBZ0hDT2h7pc7kLcMbTkc1t/6VBpGi3x8Xn8ZemLyIGd5dIsqg==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/kernel@0.0.1-alpha.13':
-    resolution: {integrity: sha512-bqfOIIivEA+pOXLCwemEcFFNnWlkbk5KgVuPlhCOQnpltNHhaC/KkkfpJsLN1CW1oRKC8H/KEJ3G/boJ3RJTsA==}
+  '@mainsail/crypto-transaction-validator-registration@0.0.1-evm.2':
+    resolution: {integrity: sha512-H4CbRng6p/m0CiExcZBVAPWekg4nj2W2GjWKjytmtZeO8YsHKPCTGZFe2rH5q+WNvgdN4cmTgl0+3D+CjEpiKQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/transactions@0.0.1-alpha.13':
-    resolution: {integrity: sha512-EZ7LC7gaMiVOZqs5BLmKJPcxOWYK7wybkl0RYlfGJkgw2UjlUgPmqvpEzroT0uMAU2Deh03rVDFtggiHGbG3sw==}
+  '@mainsail/crypto-transaction-validator-resignation@0.0.1-evm.2':
+    resolution: {integrity: sha512-e9MiT303r67ez5krR7+6t+a33chAXN4NjED+dPgCJ1fdXvN3upJyXc10vdHJr5MuGx6NrH3mLCxMH7Pc1rlzLw==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/utils@0.0.1-alpha.13':
-    resolution: {integrity: sha512-VcZnVZ6oVoFAqIwI2qVVO6kuWMrX0SjGxCoPCpvVSKGwlkeav/xF3jeKy0m9kZKYHKJD48Q/eYbaGPxHTRucgA==}
+  '@mainsail/crypto-transaction-vote@0.0.1-evm.2':
+    resolution: {integrity: sha512-IvvATMzBJkmE/NKVI1rIl71jB1/JOIMe2fQeSdOJx/6PTzZXjWVlEufZ+QB7wYqtI/OIeEo6FHpU0scfeqPABQ==}
     engines: {node: '>=20.x'}
 
-  '@mainsail/validation@0.0.1-alpha.13':
-    resolution: {integrity: sha512-GBr1t7Dq6QQa92OU2Bh7STuV5H0p9aKOCBZv0NV9a7gwofsHFsOQhRLqosD+Ukt/YvC5u2m1PH1ScEsCZOspQA==}
+  '@mainsail/crypto-transaction@0.0.1-evm.2':
+    resolution: {integrity: sha512-CxjaAlkCcb0E3DuMHoEwFzTjQoVnWGrjXkYHu2vYX3NsabSmsM9LdTyrHSL4uf6+VH5gR3QU9S8ym1fGD0g38Q==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/crypto-validation@0.0.1-evm.2':
+    resolution: {integrity: sha512-dtC1ZUdfIQEX4ieoM4bov90wAHXXa3YUIfdI2MLQTVxQXCVhYYym8oxo8cByetVuEZjeaCuKG6mZmEBWax9ZFg==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/fees-static@0.0.1-evm.2':
+    resolution: {integrity: sha512-SMA8XXKiYz4gg45pMJyYzGEry+mrbZ0uUjcz/XWJzaEwvtDo3ySe9fyDwe/y7tlH/EUJbQFzu4BOK2o+yeVBfw==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/fees@0.0.1-evm.2':
+    resolution: {integrity: sha512-KW4mUAeZVh6cuSVr0fkUd4C15JdUB3C2hGfSUco34cAgH0Z/75YnUg5Rdpv3h1KqX4ApcY7fymS/XplrmlytYA==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/kernel@0.0.1-evm.2':
+    resolution: {integrity: sha512-pvTQdSjqjF3ZZOL18ELI9suNESlFLvJxj1C0qLVz6AkLIBcs/S1ZAn/AfaAIsef66lUIPwQGX7rmPS6XXBJG0g==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/transactions@0.0.1-evm.2':
+    resolution: {integrity: sha512-Dd6NewMqWO1ujaDdnk58OHL13XuOrpfdpfmy3DJTEsRRPmAkwd5neX3fFQWsEZab92YAxq+lPDBgLlfKlgcz7g==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/utils@0.0.1-evm.2':
+    resolution: {integrity: sha512-/hH3xL3twpOUSIw0qg4MtpYxoPwtGVYzaifyFPIFwlSsRAiKmzNnfNfqnPB6fXaCDM8kAjClpQvfq6npYEA35w==}
+    engines: {node: '>=20.x'}
+
+  '@mainsail/validation@0.0.1-evm.2':
+    resolution: {integrity: sha512-Unp0DdIkbO90TC17LXq73AUH8qpt3p+/kvhzVmlzXZtkQIYf0SLR8Cz9LAPsaVMtqn5K86jV9koyquabNHzdhQ==}
     engines: {node: '>=20.x'}
 
   '@miherlosev/esm@3.2.26':
@@ -2464,9 +2500,20 @@ packages:
     resolution: {integrity: sha512-4LVGt03RobMH/7ZrbHqRxQrS9cc2uh+iNKSj8UWr8M26A2i793ju+csaB5zaqYltqJmA2jUq4VeYfKmVqvsXQg==}
     engines: {node: '>=14'}
 
+  '@noble/curves@1.2.0':
+    resolution: {integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw==}
+
   '@noble/hashes@0.5.9':
     resolution: {integrity: sha512-7lN1Qh6d8DUGmfN36XRsbN/WcGIPNtTGhkw26vWId/DlCIGsYJJootTtPGghTLcn/AaXPx2Q0b3cacrwXa7OVw==}
     deprecated: Upgrade to v1.0.0 or higher for audited package
+
+  '@noble/hashes@1.3.2':
+    resolution: {integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ==}
+    engines: {node: '>= 16'}
+
+  '@noble/hashes@1.4.0':
+    resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
+    engines: {node: '>= 16'}
 
   '@noble/hashes@1.5.0':
     resolution: {integrity: sha512-1j6kQFb7QRru7eKN3ZDvRcP13rugwdxZqCjbiAVZfIJwgj2A65UmT4TgARXGlXgnRkORLTDTrO19ZErt7+QXgA==}
@@ -2486,6 +2533,14 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@npmcli/fs@1.1.1':
+    resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
+
+  '@npmcli/move-file@1.1.2':
+    resolution: {integrity: sha512-1SUf/Cg2GzGDyaf15aR9St9TWlb+XvbZXWpDx8YKs7MLzMH/BCeopv+y9vzrzgkfykCGuWOlSu3mZhj2+FQcrg==}
+    engines: {node: '>=10'}
+    deprecated: This functionality has been moved to @npmcli/fs
 
   '@open-draft/until@1.0.3':
     resolution: {integrity: sha512-Aq58f5HiWdyDlFffbbSjAlv596h/cOnt2DO1w3DOC7OJ5EHs0hd/nycJfiu9RJbT6Yk6F1knnRRXNSpxoIVZ9Q==}
@@ -2537,6 +2592,12 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
+
+  '@scure/base@1.1.7':
+    resolution: {integrity: sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g==}
+
+  '@scure/bip39@1.3.0':
+    resolution: {integrity: sha512-disdg7gHuTDZtY+ZdkmLpPCk7fxZSu3gBiEGuoC1XYxv9cGx3Z6cpTggCgW6odSOOIXCiDjuGejW+aJKCY/pIQ==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -2677,6 +2738,10 @@ packages:
       react: '>=16.8'
       react-dom: '>=16.8'
 
+  '@tootallnate/once@1.1.2':
+    resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
+    engines: {node: '>= 6'}
+
   '@tootallnate/once@2.0.0':
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
@@ -2783,6 +2848,9 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
+  '@types/node@18.15.13':
+    resolution: {integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q==}
+
   '@types/node@20.14.9':
     resolution: {integrity: sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==}
 
@@ -2845,6 +2913,9 @@ packages:
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
+
+  '@types/tar@6.1.13':
+    resolution: {integrity: sha512-IznnlmU5f4WcGTh2ltRu/Ijpmk8wiWXfF0VA4s+HPjHZgvFggk1YaIkbo5krX/zUCzWF8N/l4+W/LNxnvAJ8nw==}
 
   '@types/testing-library__jest-dom@5.14.5':
     resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
@@ -2986,6 +3057,9 @@ packages:
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
 
+  abbrev@1.1.1:
+    resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
+
   acorn-hammerhead@0.6.1:
     resolution: {integrity: sha512-ZWG/nXPvFiveXhJq/PxuS+4LI1BqtEOviGXWjlTvI+64kwzaddYNaE0UzLorTX7kyxrFtxjJ4w1LmKN5yEzOCg==}
 
@@ -3016,9 +3090,16 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  aes-js@4.0.0-beta.5:
+    resolution: {integrity: sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==}
+
   agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
+
+  agentkeepalive@4.5.0:
+    resolution: {integrity: sha512-5GG/5IbQQpC9FpkRGsSvZI5QYeSCzlJHdpBQntCsuTOxhKD8lqKhrleg2Yi7yvMIf82Ycmmqln9U8V9qwEiJew==}
+    engines: {node: '>= 8.0.0'}
 
   aggregate-error@3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
@@ -3093,6 +3174,14 @@ packages:
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
+
+  aproba@2.0.0:
+    resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
+
+  are-we-there-yet@3.0.1:
+    resolution: {integrity: sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==}
+    engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -3337,6 +3426,13 @@ packages:
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
 
+  bls-eth-wasm@0.4.8:
+    resolution: {integrity: sha512-ye7+G6KFLb3i9xSrLASAoYqOUK5WLB6XA5DD8Sh0UQpZ3T999ylsYbFdoOJpmvTDuBuMi23Vy8Jm0pn/GF01CA==}
+
+  bls12-381-keygen@0.2.4:
+    resolution: {integrity: sha512-vkJlc6ZRPtGI6Lu1bm8lTIVOq/MXe70b75LNZIohWbzw/kEDX0HXZCzoBbW1QxdAoGS9rZY40nchQ+KUPdDdEQ==}
+    deprecated: 'Switch to micro-key-producer: the package has been merged into it'
+
   bn.js@4.12.0:
     resolution: {integrity: sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==}
 
@@ -3399,16 +3495,8 @@ packages:
   bser@2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
 
-  bsert@0.0.13:
-    resolution: {integrity: sha512-gYzSj8I2lDTKvl4aRSYs2CZIpeJugq7RjGhLRG+Jl//gEW5B2u1MKB6exVCL09FqYj6JRQAAgRwQHMOWvr7A8A==}
-    engines: {node: '>=8.0.0'}
-
   bson-objectid@1.3.1:
     resolution: {integrity: sha512-eQBNQXsisEAXlwiSy8zRNZdW2xDBJaEVkTPbodYR9hGxxtE548Qq7ilYOd8WAQ86xF7NRUdiWSQ1pa/TkKiE2A==}
-
-  bstring@0.3.9:
-    resolution: {integrity: sha512-D95flI7SXL+UsQi9mW+hH+AK2AFfafIJi+3GbbyTAWMe2FqwR9keBxsjGiGd/JM+77Y9WsC+M4EhZVNVcym9jw==}
-    engines: {node: '>=8.0.0'}
 
   buffer-equal-constant-time@1.0.1:
     resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
@@ -3433,6 +3521,10 @@ packages:
 
   bytesish@0.4.4:
     resolution: {integrity: sha512-i4uu6M4zuMUiyfZN4RU2+i9+peJh//pXhd9x1oSe1LBkZ3LEbCoygu8W0bXTukU1Jme2txKuotpCZRaC3FLxcQ==}
+
+  cacache@15.3.0:
+    resolution: {integrity: sha512-VVdYzXEn+cnbXpFgWs5hTT7OScegHVmLhJIR8Ufqk3iFD6A6j5iSX1KuBTfNEv4tdJWE2PzA6IVFtcLC7fN9wQ==}
+    engines: {node: '>= 10'}
 
   cache-base@1.0.1:
     resolution: {integrity: sha512-AKcdTnFSWATd5/GCPRxr2ChwIJ85CeyrEyjRHlKxQ56d4XJMGym0uAiKn0xbLOGOl3+yRpOTi484dVCEc5AUzQ==}
@@ -3529,6 +3621,10 @@ packages:
   chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
+
+  chownr@2.0.0:
+    resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
+    engines: {node: '>=10'}
 
   chrome-remote-interface@0.32.2:
     resolution: {integrity: sha512-3UbFKtEmqApehPQnqdblcggx7KveQphEMKQmdJZsOguE9ylw2N2/9Z7arO7xS55+DBJ/hyP8RrayLt4MMdJvQg==}
@@ -3639,6 +3735,10 @@ packages:
   color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
 
+  color-support@1.1.3:
+    resolution: {integrity: sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==}
+    hasBin: true
+
   color@3.2.1:
     resolution: {integrity: sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==}
 
@@ -3692,6 +3792,9 @@ packages:
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+
+  console-control-strings@1.1.0:
+    resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
 
   convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
@@ -3962,6 +4065,9 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
+  delegates@1.0.0:
+    resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
+
   dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
@@ -4098,9 +4204,16 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
+  env-paths@2.2.1:
+    resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
+    engines: {node: '>=6'}
+
   env-paths@3.0.0:
     resolution: {integrity: sha512-dtJUTepzMW3Lm/NPxRf3wP4642UWhjL2sQxc+ym2YMj1m/H2zDNQOlezafzkHwn6sMstjHTwG6iQQsctDW/b1A==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  err-code@2.0.3:
+    resolution: {integrity: sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA==}
 
   error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
@@ -4473,6 +4586,10 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
+  ethers@6.13.2:
+    resolution: {integrity: sha512-9VkriTTed+/27BGuY1s0hf441kqwHJ1wtN2edksEtiRvXx+soxRX3iSXTfFqq2+YwrOqbDoTHjIhQnjJRlzKmg==}
+    engines: {node: '>=14.0.0'}
+
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
@@ -4649,6 +4766,10 @@ packages:
     resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
     engines: {node: '>=10'}
 
+  fs-minipass@2.1.0:
+    resolution: {integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==}
+    engines: {node: '>= 8'}
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -4678,6 +4799,11 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  gauge@4.0.4:
+    resolution: {integrity: sha512-f9m+BEN5jkg6a0fZjleidjN51VE1X+mPFQ2DJ0uv1V39oCLCbsGe6yjbBnp7eK7z/+GAon99a3nHuqbuuthyPg==}
+    engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -4873,6 +4999,9 @@ packages:
     resolution: {integrity: sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==}
     engines: {node: '>= 0.4'}
 
+  has-unicode@2.0.1:
+    resolution: {integrity: sha512-8Rf9Y83NBReMnx0gFzA8JImQACstCYWUplepDa9xprwwtmgEZUF0h/i5xSA625zB/I37EtrswSST6OXxwaaIJQ==}
+
   has-value@0.3.1:
     resolution: {integrity: sha512-gpG936j8/MzaeID5Yif+577c17TxaDmhuyVgSwtnL/q8UUTySg8Mecb+8Cf1otgLoD7DDH75axp86ER7LFsf3Q==}
     engines: {node: '>=0.10.0'}
@@ -4954,6 +5083,10 @@ packages:
   http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
 
+  http-proxy-agent@4.0.1:
+    resolution: {integrity: sha512-k0zdNgqWTGA6aeIRVpvfVob4fL52dTfaehylg0Y4UvSySvOq/Y+BOyPrgpUrA7HylqvU8vIZGsRuXmspskV0Tg==}
+    engines: {node: '>= 6'}
+
   http-proxy-agent@5.0.0:
     resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}
     engines: {node: '>= 6'}
@@ -4983,6 +5116,9 @@ packages:
 
   humanize-duration@3.32.1:
     resolution: {integrity: sha512-inh5wue5XdfObhu/IGEMiA1nUXigSGcaKNemcbLRKa7jXYGDZXr3LoT9pTIzq2hPEbld7w/qv9h+ikWGz8fL1g==}
+
+  humanize-ms@1.2.1:
+    resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
 
   hyphenate-style-name@1.0.4:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
@@ -5048,6 +5184,9 @@ packages:
   indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
+
+  infer-owner@1.0.4:
+    resolution: {integrity: sha512-IClj+Xz94+d7irH5qRyfJonOdfTzuDaifE6ZPWfx0N0+/ATZCbuTPq2prFl526urkQd90WyUKIh1DfBQ2hMz9A==}
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -5241,6 +5380,9 @@ packages:
   is-jquery-obj@0.1.1:
     resolution: {integrity: sha512-18toSebUVF7y717dgw/Dzn6djOCqrkiDp3MhB8P6TdKyCVkbD1ZwE7Uz8Hwx6hUPTvKjbyYH9ncXT4ts4qLaSA==}
     deprecated: The is-jquery-obj package has reached end-of-life and will not receive further updates.
+
+  is-lambda@1.0.1:
+    resolution: {integrity: sha512-z7CMFGNrENq5iFB9Bqo64Xk6Y9sg+epq1myIcdHaGnbMTYOxvzsEtdYqQUylB7LxfkvgrrjP32T6Ywciio9UIQ==}
 
   is-module@1.0.0:
     resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
@@ -5892,6 +6034,10 @@ packages:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
     engines: {node: '>=10'}
 
+  make-fetch-happen@9.1.0:
+    resolution: {integrity: sha512-+zopwDy7DNknmwPQplem5lAZX/eCOzSvSNNcSKm5eVwTkOBzoktEfXsa9L23J/GIRhxRsaxzkPEhrJEpE2F4Gg==}
+    engines: {node: '>= 10'}
+
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
 
@@ -5996,13 +6142,45 @@ packages:
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
+  minipass-collect@1.0.2:
+    resolution: {integrity: sha512-6T6lH0H8OG9kITm/Jm6tdooIbogG9e0tLgpY6mphXSm/A9u8Nq1ryBG+Qspiub9LjWlBPsPS3tWQ/Botq4FdxA==}
+    engines: {node: '>= 8'}
+
+  minipass-fetch@1.4.1:
+    resolution: {integrity: sha512-CGH1eblLq26Y15+Azk7ey4xh0J/XfJfrCox5LDJiKqI2Q2iwOLOKrlmIaODiSQS8d18jalF6y2K2ePUm0CmShw==}
+    engines: {node: '>=8'}
+
+  minipass-flush@1.0.5:
+    resolution: {integrity: sha512-JmQSYYpPUqX5Jyn1mXaRwOda1uQ8HP5KAT/oDSLCzt1BYRhQU0/hDtsB1ufZfEEzMZ9aAVmsBw8+FWsIXlClWw==}
+    engines: {node: '>= 8'}
+
+  minipass-pipeline@1.2.4:
+    resolution: {integrity: sha512-xuIq7cIOt09RPRJ19gdi4b+RiNvDFYe5JH+ggNvBqGqpQXcru3PcRmOZuHBKWK1Txf9+cQ+HMVN4d6z46LZP7A==}
+    engines: {node: '>=8'}
+
+  minipass-sized@1.0.3:
+    resolution: {integrity: sha512-MbkQQ2CTiBMlA2Dm/5cY+9SWFEN8pzzOXi6rlM5Xxq0Yqbda5ZQy9sU75a673FE9ZK0Zsbr6Y5iP6u9nktfg2g==}
+    engines: {node: '>=8'}
+
+  minipass@3.3.6:
+    resolution: {integrity: sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==}
+    engines: {node: '>=8'}
+
   minipass@4.2.8:
     resolution: {integrity: sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==}
+    engines: {node: '>=8'}
+
+  minipass@5.0.0:
+    resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
 
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  minizlib@2.1.2:
+    resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==}
+    engines: {node: '>= 8'}
 
   mixin-deep@1.3.2:
     resolution: {integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==}
@@ -6010,6 +6188,11 @@ packages:
 
   mkdirp@0.5.6:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
+    hasBin: true
+
+  mkdirp@1.0.4:
+    resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
+    engines: {node: '>=10'}
     hasBin: true
 
   mkdirp@2.1.6:
@@ -6069,9 +6252,6 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nan@2.20.0:
-    resolution: {integrity: sha512-bk3gXBZDGILuuo/6sKtr0DQmSThYHLtNCdSdXk9YkxD/jK6X2vmCyyXBBxyqZ4XcnzTyYEAThfX3DCEnLf6igw==}
-
   nanoclone@0.2.1:
     resolution: {integrity: sha512-wynEP02LmIbLpcYw8uBKpcfF6dmg2vcpKqxeH5UcoKEYdExslsdUA4ugFauuaeYdTB76ez6gJW8XAZ6CgkXYxA==}
 
@@ -6094,6 +6274,10 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  negotiator@0.6.3:
+    resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
+    engines: {node: '>= 0.6'}
 
   newtype-ts@0.3.5:
     resolution: {integrity: sha512-v83UEQMlVR75yf1OUdoSFssjitxzjZlqBAjiGQ4WJaML8Jdc68LJ+BaSAXUmKY4bNzp7hygkKLYTsDi14PxI2g==}
@@ -6152,6 +6336,11 @@ packages:
     resolution: {integrity: sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==}
     hasBin: true
 
+  node-gyp@8.4.1:
+    resolution: {integrity: sha512-olTJRgUtAb/hOXG0E93wZDs5YiJlgbXxTwQAFHyNlRsXQnYzUaF2aGgujZbw+hR8aF4ZG/rST57bWMWD16jr9w==}
+    engines: {node: '>= 10.12.0'}
+    hasBin: true
+
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
 
@@ -6160,6 +6349,11 @@ packages:
 
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
+
+  nopt@5.0.0:
+    resolution: {integrity: sha512-Tbj67rffqceeLpcRXrT7vKAN8CwfPeIBgM7E6iBkmKLV7bEMwpGgYLGv0jACUsECaa/vuxP0IjEont6umdMgtQ==}
+    engines: {node: '>=6'}
+    hasBin: true
 
   normalize-exception@3.0.0:
     resolution: {integrity: sha512-SMZtWSLjls45KBgwvS2jWyXLtOI9j90JyQ6tJstl91Gti4W7QwZyF/nWwlFRz/Cx4Gy70DAtLT0EzXYXcPJJUw==}
@@ -6179,6 +6373,11 @@ packages:
   npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
+
+  npmlog@6.0.2:
+    resolution: {integrity: sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==}
+    engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
+    deprecated: This package is no longer supported.
 
   nsfw@2.2.4:
     resolution: {integrity: sha512-sTRNa7VYAiy5ARP8etIBfkIfxU0METW40UinDnv0epQMe1pzj285HdXKRKkdrV3rRzMNcuNZn2foTNszV0x+OA==}
@@ -6317,6 +6516,10 @@ packages:
   p-map@3.0.0:
     resolution: {integrity: sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==}
     engines: {node: '>=8'}
+
+  p-map@4.0.0:
+    resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==}
+    engines: {node: '>=10'}
 
   p-queue@7.4.1:
     resolution: {integrity: sha512-vRpMXmIkYF2/1hLBKisKeVYJZ8S2tZ0zEAmIJgdVKP2nq0nh4qCdf8bgw+ZgKrkh71AOCaqzwbJJk1WtdcF3VA==}
@@ -6640,6 +6843,18 @@ packages:
   progress@2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
+
+  promise-inflight@1.0.1:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+
+  promise-retry@2.0.1:
+    resolution: {integrity: sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==}
+    engines: {node: '>=10'}
 
   promisify-event@1.0.0:
     resolution: {integrity: sha512-mshw5LiFmdtphcuUGKyd3t6zmmgIVxrdZ8v4R1INAXHvMemUsDCqIUeq5QUIqqDfed8ZZ6uhov1PqhrdBvHOIA==}
@@ -7042,6 +7257,10 @@ packages:
     resolution: {integrity: sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==}
     engines: {node: '>=0.12'}
 
+  retry@0.12.0:
+    resolution: {integrity: sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow==}
+    engines: {node: '>= 4'}
+
   retry@0.13.1:
     resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
     engines: {node: '>= 4'}
@@ -7278,6 +7497,10 @@ packages:
     resolution: {integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==}
     engines: {node: '>=0.10.0'}
 
+  socks-proxy-agent@6.2.1:
+    resolution: {integrity: sha512-a6KW9G+6B3nWZ1yB8G7pJwL3ggLy1uTzKAgCb7ttblwqdz9fMGJUuTy3uFzEP48FAs9FLILlmzDlE2JJhVQaXQ==}
+    engines: {node: '>= 10'}
+
   socks-proxy-agent@7.0.0:
     resolution: {integrity: sha512-Fgl0YPZ902wEsAyiQ+idGd1A7rSFx/ayC1CQVMw5P+EQx2V0SgpGtf6OKFhVjPflPUl9YMmEOnmfjCdMUsygww==}
     engines: {node: '>= 10'}
@@ -7354,6 +7577,10 @@ packages:
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
+  ssri@8.0.1:
+    resolution: {integrity: sha512-97qShzy1AiyxvPNIkLWoGua7xoQzzPjQ0HAH4B0rWKo7SZ6USuPcrUiAFrws0UH8RrbWmgq3LMTObhPIHbbBeQ==}
+    engines: {node: '>= 8'}
 
   stack-utils@2.0.6:
     resolution: {integrity: sha512-XlkWvfIm6RmsWtNJx+uqtKLS8eqFbxUg0ZzLXqY0caEy9l7hruX8IpiDnjsLavoBgqCCR71TqWO8MaXYheJ3RQ==}
@@ -7524,6 +7751,10 @@ packages:
     resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
+
+  tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
+    engines: {node: '>=10'}
 
   temp-dir@2.0.0:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
@@ -7713,6 +7944,9 @@ packages:
   tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
 
+  tslib@2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+
   tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
 
@@ -7840,6 +8074,12 @@ packages:
   union-value@1.0.1:
     resolution: {integrity: sha512-tJfXmxMeWYnczCVs7XAEvIV7ieppALdyepWMkHkwciRpZraG/xwT+s2JN8+pr1+8jCRf80FFzvr+MpQeeoF4Xg==}
     engines: {node: '>=0.10.0'}
+
+  unique-filename@1.1.1:
+    resolution: {integrity: sha512-Vmp0jIp2ln35UTXuryvjzkjGdRyf9b2lTXuSYUiPmzRcl3FDtYqAwOnTJkAngD9SWhnoJzDbTKwaOrZ+STtxNQ==}
+
+  unique-slug@2.0.2:
+    resolution: {integrity: sha512-zoWr9ObaxALD3DOPfjPSqxt4fnZiWblxHIgeWqW8x7UqDzEtHEQLzji2cuJYQFCU6KmoJikOYAZlrTHHebjx2w==}
 
   unique-string@2.0.0:
     resolution: {integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==}
@@ -8167,6 +8407,9 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
+  wide-align@1.1.5:
+    resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
+
   wif@4.0.0:
     resolution: {integrity: sha512-kADznC+4AFJNXpT8rLhbsfI7EmAcorc5nWvAdKUchGmwXEBD3n55q0/GZ3DBmc6auAvuTSsr/utiKizuXdNYOQ==}
 
@@ -8268,6 +8511,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
@@ -8337,6 +8592,8 @@ snapshots:
 
   '@adobe/css-tools@4.2.0': {}
 
+  '@adraffy/ens-normalize@1.10.1': {}
+
   '@alloc/quick-lru@5.2.0': {}
 
   '@ampproject/remapping@2.2.1':
@@ -8358,12 +8615,12 @@ snapshots:
 
   '@ardenthq/arkvault-url@1.2.0': {}
 
-  '@ardenthq/sdk-ark@2.0.0-beta.15':
+  '@ardenthq/sdk-ark@2.0.0-alpha.18':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.15
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.15
-      '@ardenthq/sdk-helpers': 2.0.0-beta.15
-      '@ardenthq/sdk-intl': 2.0.0-beta.15
+      '@ardenthq/sdk': 2.0.0-alpha.18
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.18
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.18
+      '@ardenthq/sdk-intl': 2.0.0-alpha.18
       '@arkecosystem/ledger-transport': 2.0.0
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
@@ -8377,7 +8634,7 @@ snapshots:
       lodash.set: 4.3.2
       node-dotify: 1.1.0
 
-  '@ardenthq/sdk-cryptography@2.0.0-beta.1':
+  '@ardenthq/sdk-cryptography@2.0.0-alpha.18':
     dependencies:
       '@noble/hashes': 0.5.9
       '@noble/secp256k1': 1.7.1
@@ -8395,25 +8652,7 @@ snapshots:
       typeforce: 1.18.0
       uuid: 8.3.2
 
-  '@ardenthq/sdk-cryptography@2.0.0-beta.15':
-    dependencies:
-      '@noble/hashes': 0.5.9
-      '@noble/secp256k1': 1.7.1
-      bcryptjs: 2.4.3
-      bigi: 1.4.2
-      bn.js: 5.2.1
-      create-hmac: 1.1.7
-      create-xpub: 2.1.0
-      crypto-js: 4.2.0
-      elliptic: 6.5.7
-      hdkey: 2.1.0
-      micro-base: 0.10.2
-      micro-bip39: 0.1.3
-      secp256k1: 4.0.3
-      typeforce: 1.18.0
-      uuid: 8.3.2
-
-  '@ardenthq/sdk-helpers@2.0.0-beta.1':
+  '@ardenthq/sdk-helpers@2.0.0-alpha.18':
     dependencies:
       '@hapi/bourne': 2.1.0
       bad-words: 3.0.4
@@ -8427,60 +8666,48 @@ snapshots:
       qrcode: 1.5.4
       query-string: 7.1.3
 
-  '@ardenthq/sdk-helpers@2.0.0-beta.15':
-    dependencies:
-      '@hapi/bourne': 2.1.0
-      bad-words: 3.0.4
-      big.js: 6.2.1
-      censorify-it: 3.0.2
-      deepmerge: 4.3.1
-      dot-prop: 6.0.1
-      fast-copy: 2.1.7
-      fast-deep-equal: 3.1.3
-      joi: 17.13.3
-      qrcode: 1.5.4
-      query-string: 7.1.3
-
-  '@ardenthq/sdk-intl@2.0.0-beta.1':
-    dependencies:
-      dayjs: 1.10.7
-      dinero.js: 1.9.1
-
-  '@ardenthq/sdk-intl@2.0.0-beta.15':
+  '@ardenthq/sdk-intl@2.0.0-alpha.18':
     dependencies:
       dayjs: 1.11.13
       dinero.js: 1.9.1
 
-  '@ardenthq/sdk-ledger@2.0.0-beta.15':
+  '@ardenthq/sdk-ledger@2.0.0-alpha.18':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.15
+      '@ardenthq/sdk': 2.0.0-alpha.18
       '@ledgerhq/hw-transport-webhid': 6.29.2
       '@ledgerhq/hw-transport-webusb': 6.29.2
       platform: 1.3.6
 
-  '@ardenthq/sdk-mainsail@2.0.0-beta.1':
+  '@ardenthq/sdk-mainsail@2.0.0-alpha.18(encoding@0.1.13)':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.1
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.1
-      '@ardenthq/sdk-helpers': 2.0.0-beta.1
-      '@ardenthq/sdk-intl': 2.0.0-beta.1
+      '@ardenthq/sdk': 2.0.0-alpha.18
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.18
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.18
+      '@ardenthq/sdk-intl': 2.0.0-alpha.18
       '@arkecosystem/ledger-transport': 2.0.0
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-address-base58': 0.0.1-alpha.13
-      '@mainsail/crypto-config': 0.0.1-alpha.13
-      '@mainsail/crypto-hash-bcrypto': 0.0.1-alpha.13
-      '@mainsail/crypto-key-pair-ecdsa': 0.0.1-alpha.13
-      '@mainsail/crypto-signature-schnorr-secp256k1': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction-multi-payment': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction-transfer': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction-vote': 0.0.1-alpha.13
-      '@mainsail/crypto-validation': 0.0.1-alpha.13
-      '@mainsail/fees': 0.0.1-alpha.13
-      '@mainsail/fees-static': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/validation': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-address-keccak256': 0.0.1-evm.2
+      '@mainsail/crypto-config': 0.0.1-evm.2
+      '@mainsail/crypto-consensus-bls12-381': 0.0.1-evm.2(encoding@0.1.13)
+      '@mainsail/crypto-hash-bcrypto': 0.0.1-evm.2
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.2(encoding@0.1.13)
+      '@mainsail/crypto-key-pair-ecdsa': 0.0.1-evm.2
+      '@mainsail/crypto-signature-schnorr': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-multi-payment': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-multi-signature-registration': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-transfer': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-username-registration': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-username-resignation': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-validator-resignation': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-vote': 0.0.1-evm.2
+      '@mainsail/crypto-validation': 0.0.1-evm.2
+      '@mainsail/fees': 0.0.1-evm.2
+      '@mainsail/fees-static': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/validation': 0.0.1-evm.2
       ajv: 6.12.6
       ajv-keywords: 3.4.1(ajv@6.12.6)
       bip39: 3.0.4
@@ -8492,20 +8719,24 @@ snapshots:
       lodash.set: 4.3.2
       node-dotify: 1.1.0
     transitivePeerDependencies:
+      - bluebird
+      - bufferutil
+      - encoding
       - supports-color
+      - utf-8-validate
 
-  '@ardenthq/sdk-markets@2.0.0-beta.15':
+  '@ardenthq/sdk-markets@2.0.0-alpha.18':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.15
-      '@ardenthq/sdk-intl': 2.0.0-beta.15
+      '@ardenthq/sdk': 2.0.0-alpha.18
+      '@ardenthq/sdk-intl': 2.0.0-alpha.18
 
-  '@ardenthq/sdk-profiles@2.0.0-beta.15':
+  '@ardenthq/sdk-profiles@2.0.0-alpha.18':
     dependencies:
-      '@ardenthq/sdk': 2.0.0-beta.15
-      '@ardenthq/sdk-cryptography': 2.0.0-beta.15
-      '@ardenthq/sdk-helpers': 2.0.0-beta.15
-      '@ardenthq/sdk-intl': 2.0.0-beta.15
-      '@ardenthq/sdk-markets': 2.0.0-beta.15
+      '@ardenthq/sdk': 2.0.0-alpha.18
+      '@ardenthq/sdk-cryptography': 2.0.0-alpha.18
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.18
+      '@ardenthq/sdk-intl': 2.0.0-alpha.18
+      '@ardenthq/sdk-markets': 2.0.0-alpha.18
       '@vechain/picasso': 2.1.1
       joi: 17.13.3
       localforage: 1.10.0
@@ -8515,27 +8746,10 @@ snapshots:
       semver: 7.6.2
       type-fest: 2.19.0
 
-  '@ardenthq/sdk@2.0.0-beta.1':
+  '@ardenthq/sdk@2.0.0-alpha.18':
     dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-beta.1
-      '@ardenthq/sdk-intl': 2.0.0-beta.1
-      bad-words: 3.0.4
-      bent: 7.3.12
-      bip39: 3.0.4
-      censorify-it: 3.0.2
-      dayjs: 1.10.7
-      joi: 17.13.3
-      node-emoji: 1.11.0
-      query-string: 7.1.3
-      type-fest: 2.19.0
-      url-format-lax: 2.0.0
-      url-parse-lax: 5.0.0
-      uuid: 8.3.2
-
-  '@ardenthq/sdk@2.0.0-beta.15':
-    dependencies:
-      '@ardenthq/sdk-helpers': 2.0.0-beta.15
-      '@ardenthq/sdk-intl': 2.0.0-beta.15
+      '@ardenthq/sdk-helpers': 2.0.0-alpha.18
+      '@ardenthq/sdk-intl': 2.0.0-alpha.18
       bad-words: 3.0.4
       bent: 7.3.12
       bip39: 3.1.0
@@ -10386,6 +10600,33 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
+  '@chainsafe/bls-hd-key@0.3.0':
+    dependencies:
+      '@noble/hashes': 1.5.0
+
+  '@chainsafe/bls-keygen@0.4.0':
+    dependencies:
+      '@chainsafe/bls-hd-key': 0.3.0
+      '@noble/hashes': 1.5.0
+      '@scure/bip39': 1.3.0
+
+  '@chainsafe/bls@7.1.3(@chainsafe/blst@0.2.11(encoding@0.1.13))':
+    dependencies:
+      '@chainsafe/bls-keygen': 0.4.0
+      bls-eth-wasm: 0.4.8
+    optionalDependencies:
+      '@chainsafe/blst': 0.2.11(encoding@0.1.13)
+
+  '@chainsafe/blst@0.2.11(encoding@0.1.13)':
+    dependencies:
+      '@types/tar': 6.1.13
+      node-fetch: 2.7.0(encoding@0.1.13)
+      node-gyp: 8.4.1
+    transitivePeerDependencies:
+      - bluebird
+      - encoding
+      - supports-color
+
   '@colors/colors@1.5.0':
     optional: true
 
@@ -10689,6 +10930,8 @@ snapshots:
       simple-sha1: 3.1.0
     transitivePeerDependencies:
       - encoding
+
+  '@gar/promisify@1.1.3': {}
 
   '@hapi/accept@6.0.3':
     dependencies:
@@ -11179,164 +11422,292 @@ snapshots:
 
   '@ledgerhq/logs@6.12.0': {}
 
-  '@mainsail/container@0.0.1-alpha.13':
+  '@mainsail/container@0.0.1-evm.2':
     dependencies:
       inversify: 6.0.2
       reflect-metadata: 0.2.1
 
-  '@mainsail/contracts@0.0.1-alpha.13':
+  '@mainsail/contracts@0.0.1-evm.2':
     dependencies:
       '@hapi/hapi': 21.3.6
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/utils': 0.0.1-evm.2
       ajv: 8.12.0
       dayjs: 1.11.10
       inversify: 6.0.2
       reflect-metadata: 0.2.1
       type-fest: 4.12.0
-
-  '@mainsail/crypto-address-base58@0.0.1-alpha.13':
-    dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
-      bcrypto: 5.5.2
-      bstring: 0.3.9
     transitivePeerDependencies:
-      - supports-color
+      - bufferutil
+      - utf-8-validate
 
-  '@mainsail/crypto-config@0.0.1-alpha.13':
+  '@mainsail/crypto-address-keccak256@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+      ethers: 6.13.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-config@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
       deepmerge: 4.3.1
       lodash.clone: 4.5.0
       lodash.get: 4.4.2
       lodash.set: 4.3.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-hash-bcrypto@0.0.1-alpha.13':
+  '@mainsail/crypto-consensus-bls12-381@0.0.1-evm.2(encoding@0.1.13)':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.2(encoding@0.1.13)
+      '@mainsail/crypto-signature-bls12-381': 0.0.1-evm.2(encoding@0.1.13)
+      '@mainsail/kernel': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bluebird
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-hash-bcrypto@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
       bcrypto: 5.5.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-key-pair-ecdsa@0.0.1-alpha.13':
+  '@mainsail/crypto-key-pair-bls12-381@0.0.1-evm.2(encoding@0.1.13)':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@chainsafe/bls': 7.1.3(@chainsafe/blst@0.2.11(encoding@0.1.13))
+      '@chainsafe/blst': 0.2.11(encoding@0.1.13)
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+      '@scure/bip39': 1.3.0
+      bls12-381-keygen: 0.2.4
+      wif: 4.0.0
+    transitivePeerDependencies:
+      - bluebird
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-key-pair-ecdsa@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       bcrypto: 5.5.2
       wif: 4.0.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-signature-schnorr-secp256k1@0.0.1-alpha.13':
+  '@mainsail/crypto-signature-bls12-381@0.0.1-evm.2(encoding@0.1.13)':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-key-pair-bls12-381': 0.0.1-evm.2(encoding@0.1.13)
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bluebird
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-signature-schnorr@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       bcrypto: 5.5.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-transaction-multi-payment@0.0.1-alpha.13':
+  '@mainsail/crypto-transaction-multi-payment@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/transactions': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       ajv: 8.12.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-transaction-transfer@0.0.1-alpha.13':
+  '@mainsail/crypto-transaction-multi-signature-registration@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/transactions': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-transaction-validator-registration@0.0.1-alpha.13':
+  '@mainsail/crypto-transaction-transfer@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/transactions': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-transaction-vote@0.0.1-alpha.13':
+  '@mainsail/crypto-transaction-username-registration@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction-validator-registration': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/transactions': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-transaction-username-resignation@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-username-registration': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-transaction-validator-registration@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-transaction-validator-resignation@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@mainsail/crypto-transaction-vote@0.0.1-evm.2':
+    dependencies:
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/crypto-transaction-validator-registration': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/transactions': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       ajv: 8.12.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-transaction@0.0.1-alpha.13':
+  '@mainsail/crypto-transaction@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       ajv: 8.12.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/crypto-validation@0.0.1-alpha.13':
+  '@mainsail/crypto-validation@0.0.1-evm.2':
     dependencies:
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       ajv: 8.12.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/fees-static@0.0.1-alpha.13':
+  '@mainsail/fees-static@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/fees': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/fees': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/fees@0.0.1-alpha.13':
+  '@mainsail/fees@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/kernel@0.0.1-alpha.13':
+  '@mainsail/kernel@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
       chalk: 5.3.0
       cron: 3.1.6
       date-fns: 3.4.0
@@ -11351,37 +11722,47 @@ snapshots:
       nsfw: 2.2.4
       semver: 7.6.0
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/transactions@0.0.1-alpha.13':
+  '@mainsail/transactions@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/crypto-transaction': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
-      '@mainsail/utils': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/crypto-transaction': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
+      '@mainsail/utils': 0.0.1-evm.2
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
-  '@mainsail/utils@0.0.1-alpha.13':
+  '@mainsail/utils@0.0.1-evm.2':
     dependencies:
       '@hapi/bourne': 3.0.0
       deepmerge: 4.3.1
+      ethers: 6.13.2
       fast-copy: 3.0.2
       fast-deep-equal: 3.1.3
       fast-sort: 3.4.1
       type-fest: 4.12.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
-  '@mainsail/validation@0.0.1-alpha.13':
+  '@mainsail/validation@0.0.1-evm.2':
     dependencies:
-      '@mainsail/container': 0.0.1-alpha.13
-      '@mainsail/contracts': 0.0.1-alpha.13
-      '@mainsail/kernel': 0.0.1-alpha.13
+      '@mainsail/container': 0.0.1-evm.2
+      '@mainsail/contracts': 0.0.1-evm.2
+      '@mainsail/kernel': 0.0.1-evm.2
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       ajv-keywords: 5.1.0(ajv@8.12.0)
     transitivePeerDependencies:
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   '@miherlosev/esm@3.2.26': {}
 
@@ -11403,7 +11784,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@noble/curves@1.2.0':
+    dependencies:
+      '@noble/hashes': 1.3.2
+
   '@noble/hashes@0.5.9': {}
+
+  '@noble/hashes@1.3.2': {}
+
+  '@noble/hashes@1.4.0': {}
 
   '@noble/hashes@1.5.0': {}
 
@@ -11420,6 +11809,16 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+
+  '@npmcli/fs@1.1.1':
+    dependencies:
+      '@gar/promisify': 1.1.3
+      semver: 7.6.2
+
+  '@npmcli/move-file@1.1.2':
+    dependencies:
+      mkdirp: 1.0.4
+      rimraf: 3.0.2
 
   '@open-draft/until@1.0.3': {}
 
@@ -11471,6 +11870,13 @@ snapshots:
       picomatch: 2.3.1
     optionalDependencies:
       rollup: 3.19.1
+
+  '@scure/base@1.1.7': {}
+
+  '@scure/bip39@1.3.0':
+    dependencies:
+      '@noble/hashes': 1.4.0
+      '@scure/base': 1.1.7
 
   '@sideway/address@4.1.5':
     dependencies:
@@ -11623,6 +12029,8 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
       tippy.js: 6.3.7
 
+  '@tootallnate/once@1.1.2': {}
+
   '@tootallnate/once@2.0.0': {}
 
   '@types/aria-query@5.0.1': {}
@@ -11728,6 +12136,8 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
+  '@types/node@18.15.13': {}
+
   '@types/node@20.14.9':
     dependencies:
       undici-types: 5.26.5
@@ -11804,6 +12214,11 @@ snapshots:
   '@types/stack-utils@2.0.1': {}
 
   '@types/stack-utils@2.0.3': {}
+
+  '@types/tar@6.1.13':
+    dependencies:
+      '@types/node': 20.14.9
+      minipass: 4.2.8
 
   '@types/testing-library__jest-dom@5.14.5':
     dependencies:
@@ -12008,6 +12423,8 @@ snapshots:
 
   abab@2.0.6: {}
 
+  abbrev@1.1.1: {}
+
   acorn-hammerhead@0.6.1:
     dependencies:
       '@types/estree': 0.0.46
@@ -12034,11 +12451,17 @@ snapshots:
 
   acorn@8.12.0: {}
 
+  aes-js@4.0.0-beta.5: {}
+
   agent-base@6.0.2:
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
+
+  agentkeepalive@4.5.0:
+    dependencies:
+      humanize-ms: 1.2.1
 
   aggregate-error@3.1.0:
     dependencies:
@@ -12109,6 +12532,13 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+
+  aproba@2.0.0: {}
+
+  are-we-there-yet@3.0.1:
+    dependencies:
+      delegates: 1.0.0
+      readable-stream: 3.6.2
 
   arg@5.0.2: {}
 
@@ -12429,6 +12859,12 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
+  bls-eth-wasm@0.4.8: {}
+
+  bls12-381-keygen@0.2.4:
+    dependencies:
+      '@noble/hashes': 1.4.0
+
   bn.js@4.12.0: {}
 
   bn.js@5.2.1: {}
@@ -12502,15 +12938,7 @@ snapshots:
     dependencies:
       node-int64: 0.4.0
 
-  bsert@0.0.13: {}
-
   bson-objectid@1.3.1: {}
-
-  bstring@0.3.9:
-    dependencies:
-      bsert: 0.0.13
-      loady: 0.0.5
-      nan: 2.20.0
 
   buffer-equal-constant-time@1.0.1: {}
 
@@ -12528,6 +12956,29 @@ snapshots:
   bytes@3.1.2: {}
 
   bytesish@0.4.4: {}
+
+  cacache@15.3.0:
+    dependencies:
+      '@npmcli/fs': 1.1.1
+      '@npmcli/move-file': 1.1.2
+      chownr: 2.0.0
+      fs-minipass: 2.1.0
+      glob: 7.2.3
+      infer-owner: 1.0.4
+      lru-cache: 6.0.0
+      minipass: 3.3.6
+      minipass-collect: 1.0.2
+      minipass-flush: 1.0.5
+      minipass-pipeline: 1.2.4
+      mkdirp: 1.0.4
+      p-map: 4.0.0
+      promise-inflight: 1.0.1
+      rimraf: 3.0.2
+      ssri: 8.0.1
+      tar: 6.2.1
+      unique-filename: 1.1.1
+    transitivePeerDependencies:
+      - bluebird
 
   cache-base@1.0.1:
     dependencies:
@@ -12656,6 +13107,8 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
+  chownr@2.0.0: {}
+
   chrome-remote-interface@0.32.2:
     dependencies:
       commander: 2.11.0
@@ -12756,6 +13209,8 @@ snapshots:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
 
+  color-support@1.1.3: {}
+
   color@3.2.1:
     dependencies:
       color-convert: 1.9.3
@@ -12793,6 +13248,8 @@ snapshots:
   compute-scroll-into-view@1.0.20: {}
 
   concat-map@0.0.1: {}
+
+  console-control-strings@1.1.0: {}
 
   convert-source-map@1.9.0: {}
 
@@ -13069,6 +13526,8 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
+  delegates@1.0.0: {}
+
   dequal@2.0.3: {}
 
   des.js@1.1.0:
@@ -13189,7 +13648,11 @@ snapshots:
 
   entities@4.5.0: {}
 
+  env-paths@2.2.1: {}
+
   env-paths@3.0.0: {}
+
+  err-code@2.0.3: {}
 
   error-ex@1.3.2:
     dependencies:
@@ -13674,6 +14137,19 @@ snapshots:
 
   esutils@2.0.3: {}
 
+  ethers@6.13.2:
+    dependencies:
+      '@adraffy/ens-normalize': 1.10.1
+      '@noble/curves': 1.2.0
+      '@noble/hashes': 1.3.2
+      '@types/node': 18.15.13
+      aes-js: 4.0.0-beta.5
+      tslib: 2.4.0
+      ws: 8.17.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   eventemitter3@5.0.1: {}
 
   events@3.3.0: {}
@@ -13893,6 +14369,10 @@ snapshots:
       jsonfile: 6.1.0
       universalify: 2.0.1
 
+  fs-minipass@2.1.0:
+    dependencies:
+      minipass: 3.3.6
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.2:
@@ -13920,6 +14400,17 @@ snapshots:
       functions-have-names: 1.2.3
 
   functions-have-names@1.2.3: {}
+
+  gauge@4.0.4:
+    dependencies:
+      aproba: 2.0.0
+      color-support: 1.1.3
+      console-control-strings: 1.1.0
+      has-unicode: 2.0.1
+      signal-exit: 3.0.7
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wide-align: 1.1.5
 
   gensync@1.0.0-beta.2: {}
 
@@ -14140,6 +14631,8 @@ snapshots:
     dependencies:
       has-symbols: 1.0.3
 
+  has-unicode@2.0.1: {}
+
   has-value@0.3.1:
     dependencies:
       get-value: 2.0.6
@@ -14238,6 +14731,14 @@ snapshots:
 
   http-cache-semantics@4.1.1: {}
 
+  http-proxy-agent@4.0.1:
+    dependencies:
+      '@tootallnate/once': 1.1.2
+      agent-base: 6.0.2
+      debug: 4.3.5
+    transitivePeerDependencies:
+      - supports-color
+
   http-proxy-agent@5.0.0:
     dependencies:
       '@tootallnate/once': 2.0.0
@@ -14269,6 +14770,10 @@ snapshots:
   human-signals@2.1.0: {}
 
   humanize-duration@3.32.1: {}
+
+  humanize-ms@1.2.1:
+    dependencies:
+      ms: 2.1.3
 
   hyphenate-style-name@1.0.4: {}
 
@@ -14323,6 +14828,8 @@ snapshots:
       repeating: 1.1.3
 
   indent-string@4.0.0: {}
+
+  infer-owner@1.0.4: {}
 
   inflight@1.0.6:
     dependencies:
@@ -14514,6 +15021,8 @@ snapshots:
   is-interactive@1.0.0: {}
 
   is-jquery-obj@0.1.1: {}
+
+  is-lambda@1.0.1: {}
 
   is-module@1.0.0: {}
 
@@ -15380,6 +15889,28 @@ snapshots:
     dependencies:
       semver: 7.6.0
 
+  make-fetch-happen@9.1.0:
+    dependencies:
+      agentkeepalive: 4.5.0
+      cacache: 15.3.0
+      http-cache-semantics: 4.1.1
+      http-proxy-agent: 4.0.1
+      https-proxy-agent: 5.0.1
+      is-lambda: 1.0.1
+      lru-cache: 6.0.0
+      minipass: 3.3.6
+      minipass-collect: 1.0.2
+      minipass-fetch: 1.4.1
+      minipass-flush: 1.0.5
+      minipass-pipeline: 1.2.4
+      negotiator: 0.6.3
+      promise-retry: 2.0.1
+      socks-proxy-agent: 6.2.1
+      ssri: 8.0.1
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+
   makeerror@1.0.12:
     dependencies:
       tmpl: 1.0.5
@@ -15473,9 +16004,44 @@ snapshots:
 
   minimist@1.2.8: {}
 
+  minipass-collect@1.0.2:
+    dependencies:
+      minipass: 3.3.6
+
+  minipass-fetch@1.4.1:
+    dependencies:
+      minipass: 3.3.6
+      minipass-sized: 1.0.3
+      minizlib: 2.1.2
+    optionalDependencies:
+      encoding: 0.1.13
+
+  minipass-flush@1.0.5:
+    dependencies:
+      minipass: 3.3.6
+
+  minipass-pipeline@1.2.4:
+    dependencies:
+      minipass: 3.3.6
+
+  minipass-sized@1.0.3:
+    dependencies:
+      minipass: 3.3.6
+
+  minipass@3.3.6:
+    dependencies:
+      yallist: 4.0.0
+
   minipass@4.2.8: {}
 
+  minipass@5.0.0: {}
+
   minipass@7.1.2: {}
+
+  minizlib@2.1.2:
+    dependencies:
+      minipass: 3.3.6
+      yallist: 4.0.0
 
   mixin-deep@1.3.2:
     dependencies:
@@ -15485,6 +16051,8 @@ snapshots:
   mkdirp@0.5.6:
     dependencies:
       minimist: 1.2.8
+
+  mkdirp@1.0.4: {}
 
   mkdirp@2.1.6: {}
 
@@ -15545,8 +16113,6 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nan@2.20.0: {}
-
   nanoclone@0.2.1: {}
 
   nanoid@3.3.6: {}
@@ -15572,6 +16138,8 @@ snapshots:
   natural-compare-lite@1.4.0: {}
 
   natural-compare@1.4.0: {}
+
+  negotiator@0.6.3: {}
 
   newtype-ts@0.3.5(fp-ts@2.16.6)(monocle-ts@2.3.13(fp-ts@2.16.6)):
     dependencies:
@@ -15619,11 +16187,31 @@ snapshots:
 
   node-gyp-build@4.8.2: {}
 
+  node-gyp@8.4.1:
+    dependencies:
+      env-paths: 2.2.1
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      make-fetch-happen: 9.1.0
+      nopt: 5.0.0
+      npmlog: 6.0.2
+      rimraf: 3.0.2
+      semver: 7.6.2
+      tar: 6.2.1
+      which: 2.0.2
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
+
   node-int64@0.4.0: {}
 
   node-releases@2.0.13: {}
 
   node-releases@2.0.14: {}
+
+  nopt@5.0.0:
+    dependencies:
+      abbrev: 1.1.1
 
   normalize-exception@3.0.0:
     dependencies:
@@ -15644,6 +16232,13 @@ snapshots:
   npm-run-path@4.0.1:
     dependencies:
       path-key: 3.1.1
+
+  npmlog@6.0.2:
+    dependencies:
+      are-we-there-yet: 3.0.1
+      console-control-strings: 1.1.0
+      gauge: 4.0.4
+      set-blocking: 2.0.0
 
   nsfw@2.2.4:
     dependencies:
@@ -15791,6 +16386,10 @@ snapshots:
   p-map@1.2.0: {}
 
   p-map@3.0.0:
+    dependencies:
+      aggregate-error: 3.1.0
+
+  p-map@4.0.0:
     dependencies:
       aggregate-error: 3.1.0
 
@@ -16015,6 +16614,13 @@ snapshots:
   process@0.11.10: {}
 
   progress@2.0.3: {}
+
+  promise-inflight@1.0.1: {}
+
+  promise-retry@2.0.1:
+    dependencies:
+      err-code: 2.0.3
+      retry: 0.12.0
 
   promisify-event@1.0.0:
     dependencies:
@@ -16438,6 +17044,8 @@ snapshots:
 
   ret@0.1.15: {}
 
+  retry@0.12.0: {}
+
   retry@0.13.1: {}
 
   reusify@1.0.4: {}
@@ -16683,6 +17291,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  socks-proxy-agent@6.2.1:
+    dependencies:
+      agent-base: 6.0.2
+      debug: 4.3.5
+      socks: 2.7.1
+    transitivePeerDependencies:
+      - supports-color
+
   socks-proxy-agent@7.0.0:
     dependencies:
       agent-base: 6.0.2
@@ -16757,6 +17373,10 @@ snapshots:
       extend-shallow: 3.0.2
 
   sprintf-js@1.0.3: {}
+
+  ssri@8.0.1:
+    dependencies:
+      minipass: 3.3.6
 
   stack-utils@2.0.6:
     dependencies:
@@ -17007,6 +17627,15 @@ snapshots:
       sucrase: 3.34.0
     transitivePeerDependencies:
       - ts-node
+
+  tar@6.2.1:
+    dependencies:
+      chownr: 2.0.0
+      fs-minipass: 2.1.0
+      minipass: 5.0.0
+      minizlib: 2.1.2
+      mkdirp: 1.0.4
+      yallist: 4.0.0
 
   temp-dir@2.0.0: {}
 
@@ -17348,6 +17977,8 @@ snapshots:
 
   tslib@1.14.1: {}
 
+  tslib@2.4.0: {}
+
   tslib@2.6.1: {}
 
   tsutils@3.21.0(typescript@5.0.4):
@@ -17494,6 +18125,14 @@ snapshots:
       get-value: 2.0.6
       is-extendable: 0.1.1
       set-value: 2.0.1
+
+  unique-filename@1.1.1:
+    dependencies:
+      unique-slug: 2.0.2
+
+  unique-slug@2.0.2:
+    dependencies:
+      imurmurhash: 0.1.4
 
   unique-string@2.0.0:
     dependencies:
@@ -17818,6 +18457,10 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
+  wide-align@1.1.5:
+    dependencies:
+      string-width: 4.2.3
+
   wif@4.0.0:
     dependencies:
       bs58check: 3.0.1
@@ -17967,6 +18610,8 @@ snapshots:
   ws@7.5.10: {}
 
   ws@8.13.0: {}
+
+  ws@8.17.1: {}
 
   xml-name-validator@4.0.0: {}
 
