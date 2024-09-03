@@ -19,6 +19,7 @@ import { Balance, ReceiverItemMobile } from "@/app/components/WalletListItem/Wal
 import { Tooltip } from "@/app/components/Tooltip";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 const SearchWalletListItem = ({
 	index,
@@ -67,7 +68,7 @@ const SearchWalletListItem = ({
 	};
 
 	return (
-		<TableRow>
+		<TableRow className="relative">
 			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4" className="w-full">
 				<Address walletName={alias} address={wallet.address()} truncateOnTable />
 			</TableCell>
@@ -299,11 +300,12 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					/>
 				)}
 
-				<div className="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+				<TableWrapper>
 					<Table
 						columns={columns}
 						data={filteredWallets as Contracts.IReadWriteWallet[]}
 						hideHeader={useResponsive}
+						className="with-x-padding"
 					>
 						{renderTableRow}
 					</Table>
@@ -315,7 +317,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						/>
 					)}
-				</div>
+				</TableWrapper>
 			</div>
 		</Modal>
 	);
