@@ -353,7 +353,7 @@ export const DelegateRow = ({
 
 			<TableCell
 				variant="end"
-				className="min-w-32 w-30"
+				className="w-30 min-w-32"
 				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
 				isCompact={isCompact}
 			>
