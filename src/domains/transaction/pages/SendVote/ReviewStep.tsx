@@ -83,7 +83,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 						<>
 							<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 								<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.OLD_DELEGATE")}</DetailTitle>
-								<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
+								<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 									{unvotes[0].wallet?.username()}
 								</div>
 							</div>
@@ -94,7 +94,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 							<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 								<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.NEW_DELEGATE")}</DetailTitle>
-								<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
+								<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 									{votes[0].wallet?.username()}
 								</div>
 							</div>
@@ -104,7 +104,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 					{voteCategory !== "swap" && (
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.DELEGATE")}</DetailTitle>
-							<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
+							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{voteCategory === "vote" ? votes[0].wallet?.username() : unvotes[0].wallet?.username()}
 							</div>
 						</div>

@@ -57,7 +57,7 @@ export const SuccessStep = ({
 					</div>
 
 					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
-						<DetailTitle> { t("COMMON.BALANCE") }</DetailTitle>
+						<DetailTitle> {t("COMMON.BALANCE")}</DetailTitle>
 						<div className="font-semibold">
 							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
 						</div>
@@ -66,7 +66,7 @@ export const SuccessStep = ({
 
 				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
-						<DetailTitle> { t("COMMON.NAME") }</DetailTitle>
+						<DetailTitle> {t("COMMON.NAME")}</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
 							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
 								{" "}
