@@ -1,4 +1,5 @@
 import { generatePath } from "react-router";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
