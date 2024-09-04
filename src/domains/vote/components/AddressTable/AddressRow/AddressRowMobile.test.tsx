@@ -16,6 +16,7 @@ import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } fr
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
 import { createHashHistory } from "history";
+import { within } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -355,7 +356,7 @@ describe("AddressRowMobile", () => {
 	it("should redirect to wallet details page", async () => {
 		const history = createHashHistory();
 
-		const { container } = render(
+		render(
 			<AddressWrapper>
 				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={vi.fn()} />
 			</AddressWrapper>,
@@ -367,8 +368,7 @@ describe("AddressRowMobile", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		// eslint-disable-next-line testing-library/no-container
-		const containerDiv = container.querySelector("tr td > div") as HTMLDivElement;
+		const containerDiv = within(screen.getByRole('row')).getByRole('cell').querySelector('div') as HTMLDivElement
 
 		await userEvent.click(containerDiv);
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
