@@ -212,7 +212,8 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const isProfileRestored = profile.status().isRestored();
 
-	const navigationMenu = useMemo(() => getNavigationMenu(t), [t]);
+	const navigationMenu = useMemo(() => getNavigationMenu(profile, t), [profile, t]);
+
 	const handleSelectMenuItem = useCallback(
 		({ value }: DropdownOption) => {
 			history.push(String(value));

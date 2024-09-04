@@ -1,18 +1,20 @@
 import { generatePath } from "react-router";
+import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
 import { isE2E, isUnit } from "@/utils/test-helpers";
+import { hasOnlyMainsailNetwork } from "@/utils/network-utils";
 
-export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
+export const getNavigationMenu = (profile: Contacts.IProfile, t: TFunction): NavigationBarMenuItem[] => [
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
 		title: t("COMMON.PORTFOLIO"),
 	},
 	/* istanbul ignore next -- @preserve */
-	...(isUnit() || isE2E() ? [{
+	...((!hasOnlyMainsailNetwork(profile) ?? isUnit() ?? isE2E()) ? [{
 		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 		title: t("COMMON.EXCHANGE"),
 	}] : []),

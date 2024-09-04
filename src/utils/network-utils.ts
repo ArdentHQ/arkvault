@@ -140,16 +140,16 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network?.coinName();
+		let label = network.coinName();
 
-		if (network?.isTest() && !isCustomNetwork(network)) {
+		if (network.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
 		}
 
 		return {
-			isTestNetwork: network?.isTest(),
+			isTestNetwork: network.isTest(),
 			label,
-			value: network?.id(),
+			value: network.id(),
 		};
 	});
 };
@@ -170,6 +170,11 @@ export const findNetworkFromSearchParameters = (profile: Contracts.IProfile, sea
 export const hasNetworksWithLedgerSupport = (profile: Contracts.IProfile) => {
 	const enabledNetworks = profileAllEnabledNetworks(profile);
 	return enabledNetworks.some((network) => network.allowsLedger());
+};
+
+export const hasOnlyMainsailNetwork = (profile: Contracts.IProfile) => {
+	const enabledNetworks = profileAllEnabledNetworks(profile);
+	return enabledNetworks.filter((network) => isMainsailNetwork(network)).length === enabledNetworks.length;
 };
 
 export const isMainsailNetwork = (network?: Networks.Network): boolean => {
