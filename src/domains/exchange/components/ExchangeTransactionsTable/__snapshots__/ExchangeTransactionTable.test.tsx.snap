@@ -6,7 +6,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -1203,7 +1203,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -2400,7 +2400,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -3597,7 +3597,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -4794,7 +4794,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -5991,7 +5991,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -6763,7 +6763,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div

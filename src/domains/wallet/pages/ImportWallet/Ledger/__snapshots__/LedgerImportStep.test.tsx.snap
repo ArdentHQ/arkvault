@@ -452,373 +452,372 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         </div>
       </div>
       <div
-        class="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+        class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 md:border-b-0"
+        data-testid="TableWrapper"
       >
-        <div>
-          <div
-            class="css-1m6rt2i"
-            role="table"
+        <div
+          class="with-x-padding css-1m6rt2i"
+          role="table"
+        >
+          <table
+            cellpadding="0"
+            class="w-full table-auto"
           >
-            <table
-              cellpadding="0"
-              class="w-full table-auto"
-            >
-              <thead>
-                <tr
-                  role="row"
-                >
-                  <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
-                    colspan="1"
-                    data-testid="table__th--0"
-                    role="columnheader"
-                    style="cursor: pointer;"
-                    title="Toggle SortBy"
-                  >
-                    <div
-                      class="flex flex-inline align-top"
-                    >
-                      <div
-                        class=""
-                      >
-                        Address
-                      </div>
-                      <div
-                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                      >
-                        <div
-                          class="transition-transform rotate-180 css-15txs7d"
-                          height="10"
-                          role="img"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </th>
-                  <th
-                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
-                    colspan="1"
-                    data-testid="table__th--1"
-                    role="columnheader"
-                    style="cursor: pointer;"
-                    title="Toggle SortBy"
-                  >
-                    <div
-                      class="flex flex-inline align-top justify-end flex-row-reverse"
-                    >
-                      <div
-                        class=""
-                      >
-                        Edit Name
-                      </div>
-                      <div
-                        class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                      >
-                        <div
-                          class="transition-transform rotate-180 css-15txs7d"
-                          height="10"
-                          role="img"
-                          width="10"
-                        >
-                          <svg
-                            id="chevron-down-small"
-                            viewBox="0 0 10 10"
-                            x="0"
-                            xml:space="preserve"
-                            xmlns="http://www.w3.org/2000/svg"
-                            y="0"
-                          >
-                            <path
-                              d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody
-                role="rowgroup"
+            <thead>
+              <tr
+                role="row"
               >
-                <tr
-                  class=" css-16ynu5g"
-                  data-testid="TableRow"
+                <th
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  colspan="1"
+                  data-testid="table__th--0"
+                  role="columnheader"
+                  style="cursor: pointer;"
+                  title="Toggle SortBy"
                 >
-                  <td>
+                  <div
+                    class="flex flex-inline align-top"
+                  >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
+                      class=""
+                    >
+                      Address
+                    </div>
+                    <div
+                      class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                     >
                       <div
-                        class="flex flex-1 flex-col py-2"
+                        class="transition-transform rotate-180 css-15txs7d"
+                        height="10"
+                        role="img"
+                        width="10"
                       >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
                         >
-                          <span
-                            class="font-semibold text-base text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures css-9nx3be"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Devnet #3
-                            </span>
-                          </span>
-                          <div
-                            class="relative grow text-left"
-                          >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
-                          <button
-                            class="ring-focus relative focus:outline-none"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="clipboard-icon__wrapper"
-                            type="button"
-                          >
-                            <div
-                              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </button>
-                        </div>
-                        <div>
-                          <span
-                            class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-                            data-testid="Amount"
-                          >
-                            0 DARK
-                          </span>
-                        </div>
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
                       </div>
                     </div>
-                  </td>
-                  <td>
+                  </div>
+                </th>
+                <th
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  colspan="1"
+                  data-testid="table__th--1"
+                  role="columnheader"
+                  style="cursor: pointer;"
+                  title="Toggle SortBy"
+                >
+                  <div
+                    class="flex flex-inline align-top justify-end flex-row-reverse"
+                  >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
+                      class=""
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
-                        data-testid="LedgerImportStep__edit-alias"
-                        type="button"
+                      Edit Name
+                    </div>
+                    <div
+                      class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                    >
+                      <div
+                        class="transition-transform rotate-180 css-15txs7d"
+                        height="10"
+                        role="img"
+                        width="10"
                       >
+                        <svg
+                          id="chevron-down-small"
+                          viewBox="0 0 10 10"
+                          x="0"
+                          xml:space="preserve"
+                          xmlns="http://www.w3.org/2000/svg"
+                          y="0"
+                        >
+                          <path
+                            d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              role="rowgroup"
+            >
+              <tr
+                class="relative css-16ynu5g"
+                data-testid="TableRow"
+              >
+                <td>
+                  <div
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
+                  >
+                    <div
+                      class="flex flex-1 flex-col py-2"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures css-9nx3be"
+                            data-testid="TruncateEnd"
+                          >
+                            ARK Devnet #3
+                          </span>
+                        </span>
                         <div
-                          class="flex items-center space-x-2"
+                          class="relative grow text-left"
+                        >
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
+                          >
+                            DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                          </span>
+                          <span>
+                             
+                          </span>
+                        </div>
+                        <button
+                          class="ring-focus relative focus:outline-none"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
                         >
                           <div
-                            class="css-1cn0px"
-                            height="14"
-                            width="14"
+                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
-                              id="pencil"
+                              id="copy"
                               viewBox="0 0 20 20"
                               x="0"
                               xml:space="preserve"
                               xmlns="http://www.w3.org/2000/svg"
                               y="0"
                             >
-                              <path
-                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                              <g
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
-                              />
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
                             </svg>
                           </div>
-                        </div>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr
-                  class=" css-16ynu5g"
-                  data-testid="TableRow"
-                >
-                  <td>
-                    <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
-                    >
-                      <div
-                        class="flex flex-1 flex-col py-2"
-                      >
-                        <div
-                          class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                        </button>
+                      </div>
+                      <div>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          data-testid="Amount"
                         >
-                          <span
-                            class="font-semibold text-base text-theme-text"
-                            data-testid="Address__alias"
-                          >
-                            <span
-                              class="no-ligatures css-9nx3be"
-                              data-testid="TruncateEnd"
-                            >
-                              ARK Devnet #4
-                            </span>
-                          </span>
-                          <div
-                            class="relative grow text-left"
-                          >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
-                          <button
-                            class="ring-focus relative focus:outline-none"
-                            data-ring-focus-margin="-m-1"
-                            data-testid="clipboard-icon__wrapper"
-                            type="button"
-                          >
-                            <div
-                              class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                              height="16"
-                              width="16"
-                            >
-                              <svg
-                                id="copy"
-                                viewBox="0 0 20 20"
-                                x="0"
-                                xml:space="preserve"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0"
-                              >
-                                <g
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                  />
-                                  <path
-                                    d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                  />
-                                </g>
-                              </svg>
-                            </div>
-                          </button>
-                        </div>
-                        <div>
-                          <span
-                            class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
-                            data-testid="Amount"
-                          >
-                            0 DARK
-                          </span>
-                        </div>
+                          0 DARK
+                        </span>
                       </div>
                     </div>
-                  </td>
-                  <td>
-                    <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
+                  >
+                    <button
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
+                      data-testid="LedgerImportStep__edit-alias"
+                      type="button"
                     >
-                      <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
-                        data-testid="LedgerImportStep__edit-alias"
-                        type="button"
+                      <div
+                        class="flex items-center space-x-2"
                       >
                         <div
-                          class="flex items-center space-x-2"
+                          class="css-1cn0px"
+                          height="14"
+                          width="14"
+                        >
+                          <svg
+                            id="pencil"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="relative css-16ynu5g"
+                data-testid="TableRow"
+              >
+                <td>
+                  <div
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
+                  >
+                    <div
+                      class="flex flex-1 flex-col py-2"
+                    >
+                      <div
+                        class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                      >
+                        <span
+                          class="font-semibold text-base text-theme-text"
+                          data-testid="Address__alias"
+                        >
+                          <span
+                            class="no-ligatures css-9nx3be"
+                            data-testid="TruncateEnd"
+                          >
+                            ARK Devnet #4
+                          </span>
+                        </span>
+                        <div
+                          class="relative grow text-left"
+                        >
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                            data-testid="Address__address"
+                          >
+                            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+                          </span>
+                          <span>
+                             
+                          </span>
+                        </div>
+                        <button
+                          class="ring-focus relative focus:outline-none"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
                         >
                           <div
-                            class="css-1cn0px"
-                            height="14"
-                            width="14"
+                            class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                            height="16"
+                            width="16"
                           >
                             <svg
-                              id="pencil"
+                              id="copy"
                               viewBox="0 0 20 20"
                               x="0"
                               xml:space="preserve"
                               xmlns="http://www.w3.org/2000/svg"
                               y="0"
                             >
-                              <path
-                                d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                              <g
                                 fill="none"
                                 stroke="currentColor"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
-                              />
+                              >
+                                <path
+                                  d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                />
+                                <path
+                                  d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                />
+                              </g>
                             </svg>
                           </div>
-                        </div>
-                      </button>
+                        </button>
+                      </div>
+                      <div>
+                        <span
+                          class="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                          data-testid="Amount"
+                        >
+                          0 DARK
+                        </span>
+                      </div>
                     </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                  </div>
+                </td>
+                <td>
+                  <div
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
+                  >
+                    <button
+                      class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
+                      data-testid="LedgerImportStep__edit-alias"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="css-1cn0px"
+                          height="14"
+                          width="14"
+                        >
+                          <svg
+                            id="pencil"
+                            viewBox="0 0 20 20"
+                            x="0"
+                            xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg"
+                            y="0"
+                          >
+                            <path
+                              d="M5.92 18.297L1 19l.703-4.72L14.054 1.828c1.105-1.104 2.913-1.104 4.118 0 1.104 1.105 1.104 2.913 0 4.118L5.92 18.297z"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

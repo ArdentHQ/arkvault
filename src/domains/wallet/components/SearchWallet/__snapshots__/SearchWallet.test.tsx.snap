@@ -74,10 +74,11 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -272,7 +273,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -344,7 +345,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -502,10 +503,11 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -700,7 +702,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -772,7 +774,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -930,10 +932,11 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1128,7 +1131,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -1198,7 +1201,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -1356,10 +1359,11 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -1554,7 +1558,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -1626,7 +1630,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -1894,10 +1898,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2208,10 +2213,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2522,10 +2528,11 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2726,10 +2733,11 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -2924,7 +2932,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -3072,10 +3080,11 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -3270,7 +3279,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -3340,7 +3349,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -3498,10 +3507,11 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -3696,7 +3706,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -3768,7 +3778,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -3926,10 +3936,11 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -4170,7 +4181,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -4256,7 +4267,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -4428,10 +4439,11 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -4672,7 +4684,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -4758,7 +4770,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -4930,10 +4942,11 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -5174,7 +5187,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -5258,7 +5271,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -5430,10 +5443,11 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -5674,7 +5688,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -5760,7 +5774,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -6042,10 +6056,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -6356,10 +6371,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -6670,10 +6686,11 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 </div>
               </div>
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -6874,10 +6891,11 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -7118,7 +7136,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -7280,10 +7298,11 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -7524,7 +7543,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -7608,7 +7627,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -7780,10 +7799,11 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
               class="mt-4"
             >
               <div
-                class="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800"
+                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                data-testid="TableWrapper"
               >
                 <div
-                  class="css-1m6rt2i"
+                  class="with-x-padding css-1m6rt2i"
                   role="table"
                 >
                   <table
@@ -8024,7 +8044,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       role="rowgroup"
                     >
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
@@ -8110,7 +8130,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                       </tr>
                       <tr
-                        class=" css-16ynu5g"
+                        class="relative css-16ynu5g"
                         data-testid="TableRow"
                       >
                         <td
