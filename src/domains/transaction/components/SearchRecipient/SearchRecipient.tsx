@@ -20,6 +20,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { HeaderSearchInput } from "@/app/components/Header/HeaderSearchInput";
 import { RecipientItemMobile } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	index,
@@ -59,8 +60,8 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	};
 
 	return (
-		<TableRow key={recipient.id} border>
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-4">
+		<TableRow key={recipient.id} border className="relative">
+			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-6">
 				<Address
 					walletName={recipient.alias}
 					address={recipient.address}
@@ -226,11 +227,12 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					/>
 				)}
 
-				<div className="rounded-xl border border-b-[5px] border-transparent md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
+				<TableWrapper>
 					<Table
 						columns={columns}
 						data={filteredRecipients as RecipientProperties[]}
 						hideHeader={useResponsive}
+						className="with-x-padding"
 					>
 						{renderTableRow}
 					</Table>
@@ -242,7 +244,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 							subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
 						/>
 					)}
-				</div>
+				</TableWrapper>
 			</div>
 		</Modal>
 	);
