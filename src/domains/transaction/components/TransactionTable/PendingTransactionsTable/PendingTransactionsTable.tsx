@@ -33,6 +33,7 @@ export const PendingTransactions = ({
 
 	const renderTableRow = useCallback(
 		(transaction: PendingTransaction) => {
+			/* NOTE: Pending transfer refers to the status of the transaction pending validation in the chain and not related to musig wallet */
 			if (transaction.isPendingTransfer) {
 				if (useResponsive) {
 					return (
@@ -90,7 +91,12 @@ export const PendingTransactions = ({
 			<h2 className="mb-3 text-2xl font-bold">{t("WALLETS.PAGE_WALLET_DETAILS.PENDING_TRANSACTIONS")}</h2>
 
 			<TableWrapper>
-				<Table columns={columns} data={pendingTransactions} hideHeader={useResponsive} className="with-x-padding">
+				<Table
+					columns={columns}
+					data={pendingTransactions}
+					hideHeader={useResponsive}
+					className="with-x-padding"
+				>
 					{renderTableRow}
 				</Table>
 			</TableWrapper>
