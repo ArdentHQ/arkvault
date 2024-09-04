@@ -784,7 +784,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -2001,7 +2001,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -3580,7 +3580,7 @@ exports[`Votes > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -5095,7 +5095,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -7331,7 +7331,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -13216,7 +13216,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
