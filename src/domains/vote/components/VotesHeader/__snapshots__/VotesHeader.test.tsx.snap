@@ -8,7 +8,7 @@ exports[`VotesHeader > should render a different title if on select delegate ste
     <h1
       class="mb-0 text-lg"
     >
-      Select a Delegate
+      Select Delegate
     </h1>
     <div
       class="flex items-center text-theme-primary-200"
