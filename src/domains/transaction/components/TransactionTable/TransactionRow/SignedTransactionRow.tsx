@@ -162,7 +162,7 @@ export const SignedTransactionRow = ({
 				</Label>
 				<span className="text-sm">
 					<TruncateMiddle
-						className="cursor-pointer text-theme-primary-600 font-semibold"
+						className="cursor-pointer font-semibold text-theme-primary-600"
 						text={recipient || ""}
 						maxChars={14}
 						data-testId="TransactionRowRecipientLabel"
