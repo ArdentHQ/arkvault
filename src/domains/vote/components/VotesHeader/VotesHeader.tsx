@@ -98,12 +98,19 @@ export const VotesHeader = ({
 	};
 
 	const headerTitle = useMemo(() => {
-		if (!isMdAndAbove && isSelectDelegateStep) {
+		if (isSelectDelegateStep) {
 			return t("VOTE.DELEGATE_TABLE.TITLE");
 		}
 
 		return t("VOTE.VOTES_PAGE.TITLE");
 	}, [t, isMdAndAbove, isSelectDelegateStep]);
 
-	return <PageHeader title={headerTitle} subtitle={t("VOTE.VOTES_PAGE.SUBTITLE")} extra={headerExtra()} border />;
+	return (
+		<PageHeader
+			title={headerTitle}
+			subtitle={isSelectDelegateStep ? undefined : t("VOTE.VOTES_PAGE.SUBTITLE")}
+			extra={headerExtra()}
+			border
+		/>
+	);
 };

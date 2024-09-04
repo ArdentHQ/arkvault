@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { DelegateVoteButton } from "./DelegateVoteButton";
-import { Avatar } from "@/app/components/Avatar";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -14,7 +13,7 @@ import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
 import { Tooltip } from "@/app/components/Tooltip";
 
-interface DelegateRowProperties {
+export interface DelegateRowProperties {
 	index: number;
 	delegate: Contracts.IReadOnlyWallet;
 	selectedUnvotes: VoteDelegateProperties[];
@@ -30,22 +29,22 @@ interface DelegateRowProperties {
 	toggleVotesSelected: (address: string, voteAmount?: number) => void;
 }
 
-export const DelegateRow = ({
+type UseDelegateRowProperties = Omit<DelegateRowProperties, "isLoading" | "availableBalance" | "setAvailableBalance">;
+
+export const useDelegateRow = ({
 	index,
 	voted,
 	delegate,
 	selectedUnvotes,
 	selectedVotes,
 	isVoteDisabled = false,
-	isLoading = false,
 	isCompact,
 	selectedWallet,
-	availableBalance,
-	setAvailableBalance,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
-}: DelegateRowProperties) => {
+}: UseDelegateRowProperties) => {
 	const { t } = useTranslation();
+
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
 	const isSelectedUnvote = useMemo(
@@ -95,13 +94,9 @@ export const DelegateRow = ({
 		}
 
 		if (isSelectedVote) {
-			return "bg-theme-primary-reverse-50 dark:bg-theme-background dark:border-theme-primary-reverse-600";
+			return "bg-theme-success-100 dark:bg-theme-background dark:border-theme-success-600";
 		}
 	}, [isChanged, voted, isSelectedVote, isSelectedUnvote]);
-
-	if (isLoading) {
-		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} isCompact={isCompact} />;
-	}
 
 	const renderButton = () => {
 		if (isChanged) {
@@ -130,7 +125,12 @@ export const DelegateRow = ({
 					<DelegateVoteButton
 						index={index}
 						variant="danger"
-						compactClassName="text-theme-danger-400 hover:text-theme-danger-500"
+						compactClassName={`
+							bg-theme-danger-100 sm:bg-transparent
+							dark:bg-theme-danger-400 dark:sm:bg-transparent
+							text-theme-danger-400 hover:text-theme-danger-500
+							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
+					`}
 						isCompact={isCompact}
 						onClick={() => toggleUnvotesSelected?.(delegate.address())}
 					>
@@ -143,7 +143,12 @@ export const DelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="primary"
-					compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
+					compactClassName={`
+						bg-theme-navy-200 sm:bg-transparent
+						dark:bg-theme-navy-800 dark:sm:bg-transparent
+						text-theme-primary-600 hover:text-theme-primary-700
+						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+					`}
 					isCompact={isCompact}
 					onClick={() => toggleUnvotesSelected?.(delegate.address())}
 				>
@@ -154,7 +159,17 @@ export const DelegateRow = ({
 
 		if (isVoteDisabled && !isSelectedVote) {
 			return (
-				<DelegateVoteButton index={index} disabled compactClassName="text-black" isCompact={isCompact}>
+				<DelegateVoteButton
+					index={index}
+					disabled
+					compactClassName={`
+						bg-theme-secondary-100 sm:bg-transparent
+						dark:bg-theme-secondary-800 dark:sm:bg-transparent
+						text-black
+						dark:text-theme-secondary-800 dark:sm:text-theme-black
+					`}
+					isCompact={isCompact}
+				>
 					{t("COMMON.SELECT")}
 				</DelegateVoteButton>
 			);
@@ -165,7 +180,12 @@ export const DelegateRow = ({
 				<DelegateVoteButton
 					index={index}
 					variant="reverse"
-					compactClassName="text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700"
+					compactClassName={`
+						bg-theme-success-100 sm:bg-transparent
+						dark:bg-theme-success-600 dark:sm:bg-transparent
+						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
+						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
+					`}
 					isCompact={isCompact}
 					onClick={() => toggleVotesSelected?.(delegate.address())}
 				>
@@ -178,7 +198,12 @@ export const DelegateRow = ({
 			<DelegateVoteButton
 				index={index}
 				variant="secondary"
-				compactClassName="text-theme-primary-600 hover:text-theme-primary-700"
+				compactClassName={`
+					bg-theme-navy-100 sm:bg-transparent
+					dark:bg-theme-secondary-800 dark:sm:bg-transparent
+					text-theme-primary-600 hover:text-theme-primary-700
+					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
+				`}
 				isCompact={isCompact}
 				onClick={() => toggleVotesSelected?.(delegate.address())}
 			>
@@ -187,40 +212,81 @@ export const DelegateRow = ({
 		);
 	};
 
+	return {
+		isActive,
+		isChanged,
+		isSelectedUnvote,
+		isSelectedVote,
+		renderButton,
+		requiresStakeAmount,
+		rowColor,
+	};
+};
+
+export const DelegateRow = ({
+	index,
+	voted,
+	delegate,
+	selectedUnvotes,
+	selectedVotes,
+	isVoteDisabled = false,
+	isLoading = false,
+	isCompact,
+	selectedWallet,
+	availableBalance,
+	setAvailableBalance,
+	toggleUnvotesSelected,
+	toggleVotesSelected,
+}: DelegateRowProperties) => {
+	const { t } = useTranslation();
+
+	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
+		delegate,
+		index,
+		isCompact,
+		isVoteDisabled,
+		selectedUnvotes,
+		selectedVotes,
+		selectedWallet,
+		toggleUnvotesSelected,
+		toggleVotesSelected,
+		voted,
+	});
+
+	if (isLoading) {
+		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} isCompact={isCompact} />;
+	}
+
 	return (
-		<TableRow key={delegate.address()}>
+		<TableRow
+			key={delegate.address()}
+			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
+		>
 			<TableCell
 				variant="start"
 				isCompact={isCompact}
-				innerClassName={cn("font-bold border-2 border-r-0 border-transparent", rowColor, { "h-12": isCompact })}
+				innerClassName={cn(
+					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent",
+					rowColor,
+					{ "h-11": isCompact },
+				)}
 			>
 				<span>{delegate.rank()}</span>
 			</TableCell>
 
 			<TableCell
 				innerClassName={cn(
-					"font-bold border-t-2 border-b-2 border-transparent",
-					{ "h-12 space-x-3": isCompact },
+					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
+					{ "h-11 space-x-3": isCompact },
 					{ "space-x-4": !isCompact },
 					rowColor,
 				)}
 				isCompact={isCompact}
 			>
-				<Avatar size={isCompact ? "xs" : "lg"} className="-ml-0.5" address={delegate.address()} noShadow />
-				<div className="relative grow">
-					<span className="absolute flex w-full items-center">
-						<div className="overflow-hidden text-ellipsis">{delegate.username()}</div>
-						<Link
-							className="ml-2 block sm:hidden"
-							to={delegate.explorerLink()}
-							tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-							showExternalIcon={false}
-							isExternal
-						>
-							<Icon name="ArrowExternal" />
-						</Link>
-					</span>
-					<span>&nbsp;</span>
+				<div className="relative h-[17px] grow">
+					<div className="absolute flex w-full items-center">
+						<div className="truncate"> {delegate.username()} </div>
+					</div>
 				</div>
 			</TableCell>
 
@@ -228,19 +294,19 @@ export const DelegateRow = ({
 				className="hidden sm:table-cell"
 				isCompact={isCompact}
 				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-12": isCompact,
+					"h-11": isCompact,
 				})}
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
 						<div>
-							<Icon name="StatusOk" className="text-theme-success-500" size="lg" />
+							<Icon name="StatusOk" className="text-theme-navy-600" size="md" />
 						</div>
 					</Tooltip>
 				) : (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_STANDY_POSITION")}>
 						<div>
-							<Icon name="StatusStandby" className="text-theme-warning-500" size="lg" />
+							<Icon name="StatusStandby" className="text-theme-warning-500" size="md" />
 						</div>
 					</Tooltip>
 				)}
@@ -248,18 +314,22 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-12": isCompact,
-				})}
+				innerClassName={cn(
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
+					rowColor,
+					{
+						"h-11": isCompact,
+					},
+				)}
 				isCompact={isCompact}
 			>
 				<Link
 					to={delegate.explorerLink()}
 					tooltip={t("COMMON.OPEN_IN_EXPLORER")}
-					showExternalIcon={false}
 					isExternal
+					className="w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700"
 				>
-					<Icon name="ArrowExternal" />
+					<span className="pr-2">{t("COMMON.VIEW")}</span>
 				</Link>
 			</TableCell>
 
@@ -283,11 +353,11 @@ export const DelegateRow = ({
 
 			<TableCell
 				variant="end"
-				className="w-40"
-				innerClassName={cn("justify-end border-2 border-l-0 border-transparent", rowColor)}
+				className="w-30 min-w-32"
+				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
 				isCompact={isCompact}
 			>
-				<div className="-mr-0.5">{renderButton()}</div>
+				<div className="-mr-0.5 leading-[17px]">{renderButton()}</div>
 			</TableCell>
 		</TableRow>
 	);
