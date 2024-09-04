@@ -58,3 +58,9 @@ export const DetailWrapper = ({
 		</div>
 	</div>
 );
+
+export const DetailTitle = ({ children, className }: { children: ReactNode, className?: string }): ReactNode => (
+	<div className={twMerge("no-ligatures text-sm sm:text-base w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5", className)}>
+		{children}
+	</div>
+);

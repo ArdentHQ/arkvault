@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SendVoteStepProperties } from "./SendVote.contracts";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { StepHeader } from "@/app/components/StepHeader";
-import { DetailLabel, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { VoteRegistryItem } from "@ardenthq/sdk-profiles/distribution/esm/vote-registry.contract";
@@ -52,11 +52,12 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 			<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 				<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-					<DetailLabelText className="sm:min-w-28">{t("COMMON.FROM")}</DetailLabelText>
+					<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.FROM")}</DetailTitle>
 					<Address
 						address={wallet.address()}
 						walletName={wallet.alias()}
-						walletNameClass="text-theme-text"
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
 						wrapperClass="justify-end sm:justify-start"
 						showCopyButton
 					/>
@@ -66,7 +67,7 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="space-y-3 sm:space-y-0">
 					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-						<DetailLabelText className="sm:min-w-28">{t("COMMON.CATEGORY")}</DetailLabelText>
+						<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.CATEGORY")}</DetailTitle>
 						<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 							<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
 								{categoryLabels[voteCategory]}
@@ -81,10 +82,8 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 					{voteCategory === "swap" && (
 						<>
 							<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-								<DetailLabelText className="flex-shrink-0 sm:min-w-28">
-									{t("COMMON.OLD_DELEGATE")}
-								</DetailLabelText>
-								<div className="no-ligatures text-md font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
+								<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.OLD_DELEGATE")}</DetailTitle>
+								<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
 									{unvotes[0].wallet?.username()}
 								</div>
 							</div>
@@ -94,10 +93,8 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 							</div>
 
 							<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-								<DetailLabelText className="flex-shrink-0 sm:min-w-28">
-									{t("COMMON.NEW_DELEGATE")}
-								</DetailLabelText>
-								<div className="no-ligatures text-md truncate font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
+								<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.NEW_DELEGATE")}</DetailTitle>
+								<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
 									{votes[0].wallet?.username()}
 								</div>
 							</div>
@@ -106,8 +103,8 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 
 					{voteCategory !== "swap" && (
 						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailLabelText className="sm:min-w-28">{t("COMMON.DELEGATE")}</DetailLabelText>
-							<div className="no-ligatures text-md font-semibold leading-[20px] text-theme-secondary-900 dark:text-theme-secondary-200">
+							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.DELEGATE")}</DetailTitle>
+							<div className="no-ligatures text-sm leading-[17px] sm:text-base truncate font-semibold sm:leading-5 text-theme-secondary-900 dark:text-theme-secondary-200">
 								{voteCategory === "vote" ? votes[0].wallet?.username() : unvotes[0].wallet?.username()}
 							</div>
 						</div>

@@ -1,5 +1,5 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { ReactNode } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Amount } from "@/app/components/Amount";
@@ -9,7 +9,7 @@ import { Icon } from "@/app/components/Icon";
 import { assertWallet } from "@/utils/assertions";
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
-import { DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 export const SuccessStep = ({
 	importedWallet,
@@ -43,7 +43,7 @@ export const SuccessStep = ({
 			<div className="mt-4 space-y-4">
 				<DetailWrapper label={t("COMMON.IMPORTED")}>
 					<div className="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start">
-						<DetailTitle title="Address" />
+						<DetailTitle> {t("COMMON.ADDRESS")} </DetailTitle>
 						<Address
 							address={importedWallet.address()}
 							addressClass="leading-[17px] sm:leading-5"
@@ -57,7 +57,7 @@ export const SuccessStep = ({
 					</div>
 
 					<div className="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5">
-						<DetailTitle title="Balance " />
+						<DetailTitle> { t("COMMON.BALANCE") }</DetailTitle>
 						<div className="font-semibold">
 							<Amount value={importedWallet.balance()} ticker={network.ticker()} />
 						</div>
@@ -66,7 +66,7 @@ export const SuccessStep = ({
 
 				<DetailWrapper label={t("WALLETS.WALLET_NAME")}>
 					<div className="flex w-full items-center justify-between sm:justify-start">
-						<DetailTitle title="Name" />
+						<DetailTitle> { t("COMMON.NAME") }</DetailTitle>
 						<div className="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5">
 							<div className="max-w-[calc(100%_-_80px)] flex-shrink-0 truncate sm:max-w-none">
 								{" "}
@@ -96,9 +96,3 @@ export const SuccessStep = ({
 		</section>
 	);
 };
-
-const DetailTitle = ({ title }: { title: string }): ReactNode => (
-	<div className="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5">
-		{title}
-	</div>
-);
