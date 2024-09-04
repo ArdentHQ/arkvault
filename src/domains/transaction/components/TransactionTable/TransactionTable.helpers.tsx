@@ -54,7 +54,7 @@ export const useTransactionTableColumns = (exchangeCurrency?: string) => {
 	}, [t, exchangeCurrency]);
 };
 
-export const usePendingTransactionTableColumns = ({coin} : {coin:string}) => {
+export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
 	const { t } = useTranslation();
 
 	return useMemo<Column<PendingTransaction>[]>(
@@ -66,7 +66,6 @@ export const usePendingTransactionTableColumns = ({coin} : {coin:string}) => {
 			{
 				Header: t("COMMON.AGE"),
 				accessor: () => "timestamp",
-				cellWidth: "w-20",
 				headerClassName: "hidden xl:table-cell no-border",
 				sortDescFirst: true,
 			},
@@ -77,8 +76,8 @@ export const usePendingTransactionTableColumns = ({coin} : {coin:string}) => {
 			},
 			{
 				Header: t("COMMON.ADDRESSING"),
-				cellWidth: "w-32",
-				headerClassName: "no-border"
+				cellWidth: "min-w-32",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.STATUS"),
@@ -90,18 +89,13 @@ export const usePendingTransactionTableColumns = ({coin} : {coin:string}) => {
 				Header: `${t("COMMON.AMOUNT")} (${coin})`,
 				accessor: () => "amount",
 				className: "justify-end",
-				innerClassName: "justify-end",
 				headerClassName: "no-border",
 			},
 			{
-				Header: `${t("COMMON.FEE")} (${coin})`,
-				className: "justify-end hidden lg:table-cell xl:hidden",
-				headerClassName: "hidden lg:table-cell no-border",
-			},
-			{
 				Header: t("COMMON.FIAT_VALUE"),
-				className: "justify-end hidden xl:table-cell",
-				headerClassName: "hidden lg:table-cell no-border",
+				accessor: () => "fiatValue",
+				className: "justify-end",
+				headerClassName: "no-border hidden lg:table-cell",
 			},
 			{
 				Header: t("COMMON.ACTION"),
