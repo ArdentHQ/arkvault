@@ -4,16 +4,18 @@ import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { NavigationBarMenuItem } from "@/app/components/NavigationBar";
 import { ProfilePaths } from "@/router/paths";
+import { isE2E, isUnit } from "@/utils/test-helpers";
 
 export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
 		title: t("COMMON.PORTFOLIO"),
 	},
-	{
+	/* istanbul ignore next -- @preserve */
+	...(isUnit() || isE2E() ? [{
 		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 		title: t("COMMON.EXCHANGE"),
-	},
+	}] : []),
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
 		title: t("COMMON.CONTACTS"),
