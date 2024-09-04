@@ -56,7 +56,7 @@ export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 			const isAwaitingOurSignature = wallet.transaction().isAwaitingOurSignature(existingTransaction.id());
 			const isAwaitingOtherSignatures = wallet.transaction().isAwaitingOtherSignatures(existingTransaction.id());
 			const isPendingTransfer =
-				(!hasBeenSigned || isAwaitingConfirmation);
+				!existingTransaction.usesMultiSignature() && (hasBeenSigned || isAwaitingConfirmation);
 
 			// @ts-ignore
 			pending.push({
