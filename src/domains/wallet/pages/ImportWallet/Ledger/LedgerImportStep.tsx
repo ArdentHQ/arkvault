@@ -15,6 +15,7 @@ import { ImportedLedgerMobileItem, SectionHeaderMobile, SingleImport } from "./L
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { Column } from "react-table";
 import { AmountWrapper } from "./LedgerScanStep.blocks";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 const MultipleImport = ({
 	network,
@@ -57,7 +58,7 @@ const MultipleImport = ({
 			assertWallet(importedWallet);
 
 			return (
-				<TableRow>
+				<TableRow className="relative">
 					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
 						<div className="flex flex-1 flex-col py-2">
 							<Address
@@ -116,13 +117,11 @@ const MultipleImport = ({
 					})}
 				</div>
 			) : (
-				<div className="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
-					<div>
-						<Table columns={columns} data={data}>
-							{renderTableRow}
-						</Table>
-					</div>
-				</div>
+				<TableWrapper className="md:border-b-0">
+					<Table columns={columns} data={data} className="with-x-padding">
+						{renderTableRow}
+					</Table>
+				</TableWrapper>
 			)}
 		</div>
 	);

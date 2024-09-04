@@ -87,7 +87,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		(wallet: LedgerData) => {
 			if (showSkeleton) {
 				return (
-					<TableRow>
+					<TableRow className="relative">
 						<TableCell variant="start" isCompact={isCompact}>
 							<Skeleton height={20} width={20} />
 						</TableCell>
@@ -105,7 +105,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			}
 
 			return (
-				<TableRow isSelected={isSelected(wallet.path)}>
+				<TableRow isSelected={isSelected(wallet.path)} className="relative">
 					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
 						<Checkbox
 							checked={isSelected(wallet.path)}
@@ -140,7 +140,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 		<div>
 			<div className="hidden rounded-xl border border-transparent sm:block md:border-theme-secondary-300 dark:md:border-theme-secondary-800">
 				<div>
-					<Table columns={columns} data={showAll ? data : data.slice(0, 6)}>
+					<Table columns={columns} data={showAll ? data : data.slice(0, 6)} className="with-x-padding">
 						{renderTableRow}
 					</Table>
 				</div>
