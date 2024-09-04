@@ -404,7 +404,7 @@ describe("Votes", () => {
 		await userEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -428,7 +428,7 @@ describe("Votes", () => {
 		await userEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
 
 		walletVoteMock.mockRestore();
 	});
@@ -504,7 +504,7 @@ describe("Votes", () => {
 		await userEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
+		expect(screen.getByTestId("DelegateTable__footer--total")).toHaveTextContent("1/1");
 
 		await waitFor(() =>
 			expect(onProfileSyncError).toHaveBeenCalledWith([expect.any(String)], expect.any(Function)),
