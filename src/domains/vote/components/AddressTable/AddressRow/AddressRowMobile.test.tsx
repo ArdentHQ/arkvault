@@ -368,7 +368,7 @@ describe("AddressRowMobile", () => {
 
 		const historySpy = vi.spyOn(history, "push");
 
-		const containerDiv = within(screen.getByRole('row')).getByRole('cell').querySelector('div') as HTMLDivElement
+		const containerDiv = within(screen.getByRole("row")).getByRole("cell").querySelector("div") as HTMLDivElement;
 
 		await userEvent.click(containerDiv);
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
