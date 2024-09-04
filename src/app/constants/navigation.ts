@@ -8,13 +8,13 @@ import { ProfilePaths } from "@/router/paths";
 import { isE2E, isUnit } from "@/utils/test-helpers";
 import { hasOnlyMainsailNetwork } from "@/utils/network-utils";
 
-export const getNavigationMenu = (profile: Contacts.IProfile, t: TFunction): NavigationBarMenuItem[] => [
+export const getNavigationMenu = (profile: Contracts.IProfile, t: TFunction): NavigationBarMenuItem[] => [
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Dashboard, { profileId }),
 		title: t("COMMON.PORTFOLIO"),
 	},
 	/* istanbul ignore next -- @preserve */
-	...((!hasOnlyMainsailNetwork(profile) ?? isUnit() ?? isE2E()) ? [{
+	...(isUnit() ?? isE2E() ?? !hasOnlyMainsailNetwork(profile) ? [{
 		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
 		title: t("COMMON.EXCHANGE"),
 	}] : []),
