@@ -12,7 +12,6 @@ interface DelegateRowSkeletonProperties {
 
 export const DelegateRowSkeleton = ({ requiresStakeAmount, isCompact }: DelegateRowSkeletonProperties) => {
 	const nameWidth = useRandomNumber(120, 150);
-	const circleSize = isCompact ? 20 : 44;
 
 	return (
 		<TableRow data-testid="DelegateRowSkeleton">
@@ -24,8 +23,6 @@ export const DelegateRowSkeleton = ({ requiresStakeAmount, isCompact }: Delegate
 				innerClassName={cn({ "h-12 space-x-3": isCompact }, { "space-x-4": !isCompact })}
 				isCompact={isCompact}
 			>
-				<Skeleton className="align-top" circle height={circleSize} width={circleSize} />
-
 				<Skeleton height={16} width={nameWidth} />
 			</TableCell>
 

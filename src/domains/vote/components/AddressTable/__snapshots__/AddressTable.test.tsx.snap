@@ -239,7 +239,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -430,7 +430,7 @@ exports[`AddressTable > should render 1`] = `
                   class="pr-6"
                 >
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -680,7 +680,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -844,7 +844,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="pr-6"
                 >
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button
@@ -1110,7 +1110,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l-xl cursor-pointer group transition duration-300 space-x-4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -1223,7 +1223,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="pr-6"
                 >
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end !pr-0"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button

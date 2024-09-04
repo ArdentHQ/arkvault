@@ -310,7 +310,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -558,7 +558,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -605,7 +605,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -853,7 +853,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -900,7 +900,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -1148,7 +1148,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -1507,7 +1507,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -1755,7 +1755,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
@@ -1802,7 +1802,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -2050,7 +2050,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
@@ -2097,7 +2097,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -2345,7 +2345,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
@@ -2704,7 +2704,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -2952,7 +2952,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -2999,7 +2999,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -3247,7 +3247,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -3294,7 +3294,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -3542,7 +3542,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -3901,7 +3901,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -4149,7 +4149,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -4196,7 +4196,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -4444,7 +4444,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -4491,7 +4491,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -4739,7 +4739,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -5098,7 +5098,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -5346,7 +5346,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -5393,7 +5393,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -5641,7 +5641,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
@@ -5688,7 +5688,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l-xl flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
                 >
                   <button
                     class="h-[17px] w-full max-w-20 cursor-pointer"
@@ -5936,7 +5936,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
                 >
                   <button
                     class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
