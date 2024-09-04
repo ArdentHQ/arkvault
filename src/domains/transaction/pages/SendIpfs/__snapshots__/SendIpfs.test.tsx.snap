@@ -1222,7 +1222,7 @@ exports[`SendIpfs > should render review step 1`] = `
               <span
                 class="css-1rmjubp"
               >
-                Transaction Amount
+                Transaction(s) Amount
               </span>
               <span
                 class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -1741,7 +1741,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               <span>
                 Multisignature Address
               </span>
-               
+
               <div
                 class="css-v0ob3f"
                 height="16"
@@ -2175,7 +2175,7 @@ exports[`SendIpfs > should render summary step 1`] = `
               class="whitespace-nowrap"
             >
               <span>
-                2 
+                2
               </span>
               <span
                 class="whitespace text-theme-secondary-700"
