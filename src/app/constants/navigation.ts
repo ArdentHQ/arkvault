@@ -1,5 +1,4 @@
 import { generatePath } from "react-router";
-import { Contracts } from "@ardenthq/sdk-profiles";
 
 import { TFunction } from "@/app/i18n/react-i18next.contracts";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -14,10 +13,14 @@ export const getNavigationMenu = (profile: Contacts.IProfile, t: TFunction): Nav
 		title: t("COMMON.PORTFOLIO"),
 	},
 	/* istanbul ignore next -- @preserve */
-	...((!hasOnlyMainsailNetwork(profile) ?? isUnit() ?? isE2E()) ? [{
-		mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
-		title: t("COMMON.EXCHANGE"),
-	}] : []),
+	...(!hasOnlyMainsailNetwork(profile) ?? isUnit() ?? isE2E()
+		? [
+				{
+					mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
+					title: t("COMMON.EXCHANGE"),
+				},
+		  ]
+		: []),
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
 		title: t("COMMON.CONTACTS"),
