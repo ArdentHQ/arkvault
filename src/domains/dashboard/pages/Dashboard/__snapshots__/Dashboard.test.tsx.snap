@@ -565,7 +565,7 @@ exports[`Dashboard > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="-mx-8 -mt-8 flex items-center justify-between border-b border-theme-secondary-300 bg-theme-secondary-100 px-8 py-4 dark:border-theme-secondary-800 dark:bg-black sm:mx-0 sm:mb-6 sm:mt-0 sm:border-b-0 sm:bg-transparent sm:px-0 sm:py-0 sm:dark:bg-transparent"
@@ -1330,7 +1330,7 @@ exports[`Dashboard > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 mt-4 md:mt-0 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <h2
             class="mb-6 text-2xl font-bold"

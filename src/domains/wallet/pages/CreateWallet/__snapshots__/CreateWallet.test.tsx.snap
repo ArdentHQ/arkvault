@@ -571,7 +571,7 @@ exports[`CreateWallet > should create a wallet 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1463,7 +1463,7 @@ exports[`CreateWallet > should create a wallet 2`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -2381,7 +2381,7 @@ exports[`CreateWallet > should create a wallet with encryption 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -3279,7 +3279,7 @@ exports[`CreateWallet > should remove pending wallet if not submitted 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -4173,7 +4173,7 @@ exports[`CreateWallet > should show an error message for duplicate name 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -5069,7 +5069,7 @@ exports[`CreateWallet > should show an error message if wallet generation failed
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-6 md:px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
