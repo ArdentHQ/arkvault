@@ -6,7 +6,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -22,7 +22,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -38,7 +38,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -84,7 +84,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -130,7 +130,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border lg:hidden"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border lg:hidden"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -176,7 +176,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -222,7 +222,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -268,7 +268,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -284,7 +284,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -310,10 +310,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -360,7 +360,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -605,10 +605,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -655,7 +655,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -900,10 +900,10 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -950,7 +950,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -1203,7 +1203,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -1219,7 +1219,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -1235,7 +1235,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -1281,7 +1281,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -1327,7 +1327,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border lg:hidden"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border lg:hidden"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -1373,7 +1373,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -1419,7 +1419,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -1465,7 +1465,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -1481,7 +1481,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -1507,10 +1507,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -1557,7 +1557,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -1802,10 +1802,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -1852,7 +1852,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -2097,10 +2097,10 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -2147,7 +2147,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -2400,7 +2400,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -2416,7 +2416,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -2432,7 +2432,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -2478,7 +2478,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -2524,7 +2524,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border lg:hidden"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border lg:hidden"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -2570,7 +2570,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -2616,7 +2616,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -2662,7 +2662,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -2678,7 +2678,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -2704,10 +2704,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -2754,7 +2754,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -2999,10 +2999,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -3049,7 +3049,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -3294,10 +3294,10 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -3344,7 +3344,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -3597,7 +3597,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -3613,7 +3613,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -3629,7 +3629,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -3675,7 +3675,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -3721,7 +3721,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border lg:hidden"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border lg:hidden"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -3767,7 +3767,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -3813,7 +3813,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -3859,7 +3859,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -3875,7 +3875,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -3901,10 +3901,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -3951,7 +3951,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -4196,10 +4196,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -4246,7 +4246,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -4491,10 +4491,10 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -4541,7 +4541,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -4794,7 +4794,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -4810,7 +4810,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -4826,7 +4826,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -4872,7 +4872,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -4918,7 +4918,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border lg:hidden"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border lg:hidden"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -4964,7 +4964,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -5010,7 +5010,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border hidden lg:table-cell"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -5056,7 +5056,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-24 min-w-24"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-24 min-w-24"
                 colspan="1"
                 data-testid="table__th--6"
                 role="columnheader"
@@ -5072,7 +5072,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
                 colspan="1"
                 data-testid="table__th--7"
                 role="columnheader"
@@ -5098,10 +5098,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -5148,7 +5148,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -5393,10 +5393,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -5443,7 +5443,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -5688,10 +5688,10 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             >
               <td>
                 <div
-                  class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="h-[17px] w-full max-w-20 cursor-pointer"
+                    class="cursor-pointer w-20 truncate h-[17px]"
                     type="button"
                   >
                     <div
@@ -5738,7 +5738,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
                 />
               </td>
               <td
@@ -5991,7 +5991,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -6006,7 +6006,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>
@@ -6254,7 +6254,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>
@@ -6502,7 +6502,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>
@@ -6763,7 +6763,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
     data-testid="ExchangeTransactionsTable"
   >
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -6778,7 +6778,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>
@@ -7026,7 +7026,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>
@@ -7274,7 +7274,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-lss22o"
+              class="group css-9fdtr0"
               data-testid="TableRow"
             >
               <td>

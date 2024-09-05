@@ -5,7 +5,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -236,7 +236,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -458,7 +458,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -680,7 +680,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -937,7 +937,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -1164,7 +1164,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-lss22o"
+        class="group css-9fdtr0"
         data-testid="TableRow"
       >
         <td>
@@ -1389,7 +1389,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 <div>
   <tr
-    class="group css-lss22o"
+    class="group css-9fdtr0"
     data-testid="TableRow"
   >
     <td>
@@ -1606,7 +1606,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
 exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] = `
 <div>
   <tr
-    class="group css-lss22o"
+    class="group css-9fdtr0"
     data-testid="TableRow"
   >
     <td>
