@@ -444,7 +444,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -2027,7 +2027,7 @@ exports[`SendTransfer > should error if wrong mnemonic 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -4242,7 +4242,7 @@ exports[`SendTransfer > should render network selection without selected wallet 
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -6793,7 +6793,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -8062,7 +8062,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -9883,7 +9883,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -11152,7 +11152,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"
@@ -12421,7 +12421,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 md:px-10 lg:container"
         >
           <form
             class="mx-auto max-w-34"

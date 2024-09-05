@@ -66,7 +66,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
           class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
         >
           <div
-            class="mx-auto px-10 lg:container"
+            class="mx-auto px-6 md:px-10 lg:container"
           >
             <div
               class="mx-auto flex w-full max-w-xs justify-center"
@@ -392,7 +392,7 @@ exports[`ApplicationError > should render without error message 1`] = `
           class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
         >
           <div
-            class="mx-auto px-10 lg:container"
+            class="mx-auto px-6 md:px-10 lg:container"
           >
             <div
               class="mx-auto flex w-full max-w-xs justify-center"
