@@ -152,7 +152,7 @@ exports[`LedgerReview > should render for unvote and vote transaction 1`] = `
             <span
               class="css-1rmjubp"
             >
-              Transaction Amount
+              Transaction(s) Amount
             </span>
             <span
               class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -318,7 +318,7 @@ exports[`LedgerReview > should render for unvote transaction 1`] = `
             <span
               class="css-1rmjubp"
             >
-              Transaction Amount
+              Transaction(s) Amount
             </span>
             <span
               class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -484,7 +484,7 @@ exports[`LedgerReview > should render for vote transaction 1`] = `
             <span
               class="css-1rmjubp"
             >
-              Transaction Amount
+              Transaction(s) Amount
             </span>
             <span
               class="whitespace-nowrap text-md mt-1 font-semibold"
