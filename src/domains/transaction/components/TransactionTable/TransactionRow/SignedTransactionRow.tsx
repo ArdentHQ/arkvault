@@ -135,6 +135,7 @@ export const SignedTransactionRow = ({
 							text={transaction.id()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
+							data-testId="TransactionRow__transaction-id"
 						/>
 					</span>
 					<span className="text-xs text-theme-secondary-700 xl:hidden">
