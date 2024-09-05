@@ -323,7 +323,7 @@ describe("Network utils", () => {
 	it("should determine whether the user uses only mainsail network", () => {
 		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		expect(hasOnlyMainsailNetwork(profile)).toBe(false)
+		expect(hasOnlyMainsailNetwork(profile)).toBe(false);
 
 		restoreMock();
 	});
