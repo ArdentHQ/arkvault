@@ -16,7 +16,7 @@ exports[`PageSkeleton > should render without profile 1`] = `
           class="relative flex h-21"
         >
           <div
-            class="flex flex-1 px-10"
+            class="flex flex-1 px-6 md:px-10"
           >
             <div
               class="my-auto flex items-center"
