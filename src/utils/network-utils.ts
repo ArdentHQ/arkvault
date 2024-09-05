@@ -140,16 +140,16 @@ export const networksAsOptions = (networks?: Networks.Network[]) => {
 	}
 
 	return networks.map((network) => {
-		let label = network.coinName();
+		let label = network?.coinName();
 
-		if (network.isTest() && !isCustomNetwork(network)) {
+		if (network?.isTest() && !isCustomNetwork(network)) {
 			label = `${label} ${network.name()}`;
 		}
 
 		return {
-			isTestNetwork: network.isTest(),
+			isTestNetwork: network?.isTest(),
 			label,
-			value: network.id(),
+			value: network?.id(),
 		};
 	});
 };
