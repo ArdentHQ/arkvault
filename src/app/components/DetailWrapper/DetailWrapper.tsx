@@ -1,15 +1,26 @@
 import cn from "classnames";
 import React, { ReactElement, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 type LabelMinWidth = "auto" | "sm" | "md";
 
-export const DetailLabelText = ({ children, minWidth }: { children: ReactNode; minWidth?: LabelMinWidth }) => (
+export const DetailLabelText = ({
+	children,
+	minWidth,
+	className,
+}: {
+	children: ReactNode;
+	minWidth?: LabelMinWidth;
+	className?: string;
+}) => (
 	<div
 		data-testid="DetailLabelText"
-		className={cn("no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500", {
-			"min-w-16": minWidth === "sm",
-			"min-w-36": minWidth === "md",
-		})}
+		className={twMerge(
+			"no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500",
+			minWidth === "sm" && "min-w-16",
+			minWidth === "md" && "min-w-36",
+			className,
+		)}
 	>
 		{children}
 	</div>
@@ -45,5 +56,16 @@ export const DetailWrapper = ({
 		>
 			{children}
 		</div>
+	</div>
+);
+
+export const DetailTitle = ({ children, className }: { children: ReactNode; className?: string }): ReactNode => (
+	<div
+		className={twMerge(
+			"no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5",
+			className,
+		)}
+	>
+		{children}
 	</div>
 );

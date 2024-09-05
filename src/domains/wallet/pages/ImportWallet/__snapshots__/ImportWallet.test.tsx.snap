@@ -3356,9 +3356,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Address
+               Address 
             </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
@@ -3419,9 +3419,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Balance 
+               Balance
             </div>
             <div
               class="font-semibold"
@@ -3457,9 +3457,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Name
+               Name
             </div>
             <div
               class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
@@ -3620,9 +3620,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Address
+               Address 
             </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
@@ -3683,9 +3683,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Balance 
+               Balance
             </div>
             <div
               class="font-semibold"
@@ -3721,9 +3721,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Name
+               Name
             </div>
             <div
               class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
