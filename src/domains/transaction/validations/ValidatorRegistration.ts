@@ -39,8 +39,8 @@ export const validatorRegistration = (t: any) => ({
 
 const publicKeyExists = async (network: Networks.Network, publicKey: string) => {
 	const endpoints = {
-		"mainsail.devnet": "https://dwallets.mainsailhq.com/api/wallets/",
-		"mainsail.mainnet": "https://wallets.mainsailhq.com/api/wallets/",
+		"mainsail.devnet": "https://dwallets-evm.mainsailhq.com/api/wallets/",
+		"mainsail.mainnet": "https://wallets-evm.mainsailhq.com/api/wallets/",
 	};
 
 	if (publicKey.length === 0) {

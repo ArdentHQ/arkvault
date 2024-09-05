@@ -5,9 +5,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable max-lines */
+import React from "react";
+import { BigNumber } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { Observer } from "@ledgerhq/hw-transport";
-import React from "react";
 import { Route } from "react-router-dom";
 import { Signatories } from "@ardenthq/sdk";
 import { createHashHistory } from "history";
@@ -730,6 +731,14 @@ describe("Registration", () => {
 			await profile.sync();
 
 			wallet = profile.wallets().first();
+			vi.spyOn(wallet, "publicKey").mockReturnValue(
+				"03f25455408f9a7e6c6a056b121e68fbda98f3511d22e9ef27b0ebaf1ef9e4eabc",
+			);
+			vi.spyOn(wallet, "username").mockReturnValue(undefined);
+			vi.spyOn(wallet, "balance").mockReturnValue(BigNumber.make("100000"));
+			vi.spyOn(wallet, "nonce").mockReturnValue(BigNumber.make("10"));
+			vi.spyOn(wallet, "isMultiSignature").mockReturnValue(false);
+			vi.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
 
 			await wallet.synchroniser().identity();
 
@@ -740,7 +749,7 @@ describe("Registration", () => {
 		beforeEach(() => {
 			server.use(
 				requestMock(
-					"https://ark-test-musig.arkvault.io/api/wallets/DHBDV6VHRBaFWaEAkmBNMfp4ANKHrkpPKf",
+					"https://ark-test-musig.arkvault.io/api/wallets/0xdE983E8d323d045fde918B535eA43e1672a9B4ea",
 					walletFixture,
 				),
 				requestMock(
@@ -757,7 +766,9 @@ describe("Registration", () => {
 
 		it.each([withKeyboard, "without keyboard"])("should register username for mainsail %s", async (inputMethod) => {
 			// Emulate not found username
-			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(
+				requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+			);
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
@@ -857,7 +868,9 @@ describe("Registration", () => {
 			});
 
 			// Emulate not found username
-			server.use(requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }));
+			server.use(
+				requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+			);
 
 			const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);
 
@@ -947,7 +960,7 @@ describe("Registration", () => {
 			}));
 
 			// Emulate public key hasn't used
-			server.use(requestMock(`https://dwallets.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
+			server.use(requestMock(`https://dwallets-evm.mainsailhq.com/api/wallets*`, { meta: { count: 0 } }));
 
 			const nanoXTransportMock = mockNanoXTransport();
 			await renderPage(profile, wallet, "delegateRegistration");
@@ -1031,7 +1044,7 @@ describe("Registration", () => {
 
 				// Emulate not found username
 				server.use(
-					requestMock("https://dwallets.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
+					requestMock("https://dwallets-evm.mainsailhq.com/api/wallets/test_username", {}, { status: 404 }),
 				);
 
 				const envAvailableNetworksMock = vi.spyOn(env, "availableNetworks").mockReturnValue([wallet.network()]);

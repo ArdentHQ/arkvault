@@ -727,10 +727,21 @@ exports[`SendUsernameResignation > should render 1st step 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                genesis_1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC
+                              0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C
                             </span>
                           </div>
                         </div>
@@ -747,9 +758,9 @@ exports[`SendUsernameResignation > should render 1st step 1`] = `
                           class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                         >
                           <img
-                            alt="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
-                            title="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
+                            alt="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                            title="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
                           />
                         </div>
                       </div>
@@ -770,7 +781,9 @@ exports[`SendUsernameResignation > should render 1st step 1`] = `
                       </div>
                       <div
                         class="flex items-center font-semibold"
-                      />
+                      >
+                        genesis_1
+                      </div>
                     </div>
                   </div>
                   <div
@@ -1651,10 +1664,21 @@ exports[`SendUsernameResignation > should render 2nd step 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              class="font-semibold text-base text-theme-text"
+                              data-testid="Address__alias"
+                            >
+                              <span
+                                class="no-ligatures css-u3jrna"
+                                data-testid="TruncateEnd"
+                              >
+                                genesis_1
+                              </span>
+                            </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
-                              DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC
+                              0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C
                             </span>
                           </div>
                         </div>
@@ -1671,9 +1695,9 @@ exports[`SendUsernameResignation > should render 2nd step 1`] = `
                           class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                         >
                           <img
-                            alt="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
-                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
-                            title="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
+                            alt="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
+                            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                            title="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
                           />
                         </div>
                       </div>
@@ -1694,7 +1718,9 @@ exports[`SendUsernameResignation > should render 2nd step 1`] = `
                       </div>
                       <div
                         class="flex items-center font-semibold"
-                      />
+                      >
+                        genesis_1
+                      </div>
                     </div>
                   </div>
                   <div
@@ -4324,10 +4350,21 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  genesis_1
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC
+                                0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C
                               </span>
                             </div>
                           </div>
@@ -4344,9 +4381,9 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
-                              title="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
+                              alt="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
                             />
                           </div>
                         </div>
@@ -5391,10 +5428,21 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  genesis_1
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC
+                                0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C
                               </span>
                             </div>
                           </div>
@@ -5411,9 +5459,9 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
-                              title="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
+                              alt="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
                             />
                           </div>
                         </div>
@@ -6333,10 +6381,21 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                class="font-semibold text-base text-theme-text"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-u3jrna"
+                                  data-testid="TruncateEnd"
+                                >
+                                  genesis_1
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
-                                DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC
+                                0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C
                               </span>
                             </div>
                           </div>
@@ -6353,9 +6412,9 @@ exports[`SendUsernameResignation > should successfully sign and submit resignati
                             class="inline-flex h-full w-full items-center justify-center overflow-hidden rounded-full align-middle"
                           >
                             <img
-                              alt="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
-                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(63, 81, 181)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"30\\" cy=\\"30\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"35\\" cx=\\"10\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(244, 67, 54)\\"/></svg>"
-                              title="DFqZg28fz9hE6YAAYSKphSPnks5adBTfvC"
+                              alt="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 87, 34)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"10\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"35\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(63, 81, 181)\\"/><circle r=\\"55\\" cx=\\"70\\" cy=\\"50\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                              title="0x46d187b6DA0c862664c7a4c1a8E3fD664cf98e0C"
                             />
                           </div>
                         </div>
