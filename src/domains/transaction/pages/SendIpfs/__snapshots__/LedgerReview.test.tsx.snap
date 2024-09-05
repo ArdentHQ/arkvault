@@ -82,7 +82,7 @@ exports[`IpfsLedgerReview > should render 1`] = `
             <span
               class="css-1rmjubp"
             >
-              Transaction Amount
+              Transaction(s) Amount
             </span>
             <span
               class="whitespace-nowrap text-md mt-1 font-semibold"

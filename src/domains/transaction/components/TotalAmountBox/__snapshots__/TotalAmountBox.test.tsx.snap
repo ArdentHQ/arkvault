@@ -17,7 +17,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 1`] =
           <span
             class="css-1rmjubp"
           >
-            Transaction Amount
+            Transaction(s) Amount
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -113,7 +113,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 2`] =
           <span
             class="css-1rmjubp"
           >
-            Transaction Amount
+            Transaction(s) Amount
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -209,7 +209,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 3`] =
           <span
             class="css-1rmjubp"
           >
-            Transaction Amount
+            Transaction(s) Amount
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -305,7 +305,7 @@ exports[`TotalAmountBox > should render with amount of 0.1 and fee of 0.01 4`] =
           <span
             class="css-1rmjubp"
           >
-            Transaction Amount
+            Transaction(s) Amount
           </span>
           <span
             class="whitespace-nowrap text-md mt-1 font-semibold"

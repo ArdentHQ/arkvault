@@ -5219,7 +5219,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -5692,7 +5692,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -6143,7 +6143,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
