@@ -12,7 +12,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -27,7 +27,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -320,7 +320,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -564,7 +564,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-3 xl:min-h-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -734,7 +734,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -810,7 +810,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -825,7 +825,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -1120,7 +1120,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -1364,7 +1364,7 @@ exports[`Signed Transaction Table > should render different status > should show
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-3 xl:min-h-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -1533,7 +1533,7 @@ exports[`Signed Transaction Table > should render different status > should show
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -1617,7 +1617,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -1632,7 +1632,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -1927,7 +1927,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -1942,7 +1942,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -2130,488 +2130,6 @@ exports[`Signed Transaction Table > should render different status > should show
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table > should render different status > should show as unvote 2`] = `
-<DocumentFragment>
-  <div
-    class="relative"
-    data-testid="PendingTransactions"
-  >
-    <h2
-      class="mb-3 text-2xl font-bold"
-    >
-      Pending Transactions
-    </h2>
-    <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
-      data-testid="TableWrapper"
-    >
-      <div
-        class="with-x-padding css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <thead>
-            <tr
-              role="row"
-            >
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
-                colspan="1"
-                data-testid="table__th--0"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Tx ID
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
-                colspan="1"
-                data-testid="table__th--1"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Age
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                  >
-                    <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-16 min-w-16"
-                colspan="1"
-                data-testid="table__th--2"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Type
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border min-w-32 min-min-w-32"
-                colspan="1"
-                data-testid="table__th--3"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Addressing
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-1"
-                colspan="1"
-                data-testid="table__th--4"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top justify-center"
-                >
-                  <div
-                    class=""
-                  >
-                    Status
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
-                colspan="1"
-                data-testid="table__th--5"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Amount (ARK)
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
-                colspan="1"
-                data-testid="table__th--6"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Fiat Value
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
-                colspan="1"
-                data-testid="table__th--7"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top hidden"
-                >
-                  <div
-                    class=""
-                  >
-                    Action
-                  </div>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              class="group css-155s9if"
-              data-testid="TableRow"
-            >
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
-                >
-                  <span
-                    class="text-theme-secondary-300 dark:text-theme-secondary-800"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="magnifying-glass-id"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M19 17l-3.172-3.172"
-                          />
-                          <circle
-                            cx="13"
-                            cy="11"
-                            r="4"
-                          />
-                        </g>
-                        <path
-                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 text-theme-secondary-text"
-                >
-                  <span
-                    data-testid="TransactionRow__timestamp"
-                  >
-                    01.07.2020 12:00 AM
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-4"
-                >
-                  <div
-                    class="flex items-center -space-x-1"
-                    data-testid="TransactionRowMode"
-                  >
-                    <div
-                      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
-                      data-testid="TransactionRowRecipientIcon"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="unvote"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M5.35 14.6l9.2-9.2M14.65 14.6l-9.2-9.2M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="font-semibold text-theme-text"
-                    data-testid="TransactionRowRecipientLabel"
-                  >
-                    Unvote
-                  </span>
-                </div>
-              </td>
-              <td
-                class="w-16"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center truncate"
-                >
-                  <span
-                    class="p-1 text-theme-warning-300"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
-                >
-                  <div
-                    class="rounded px-1.5 css-givenh"
-                    color="success-bg"
-                  >
-                    <div
-                      class="flex space-x-1 items-stretch"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 0.1 DARK
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                class="text-theme-secondary-500"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
-                >
-                  Waiting...
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Signed Transaction Table > should render different status > should show as vote 1`] = `
 <DocumentFragment>
   <div
@@ -2624,7 +2142,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -2639,7 +2157,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -2830,491 +2348,6 @@ exports[`Signed Transaction Table > should render different status > should show
 </DocumentFragment>
 `;
 
-exports[`Signed Transaction Table > should render different status > should show as vote 2`] = `
-<DocumentFragment>
-  <div
-    class="relative"
-    data-testid="PendingTransactions"
-  >
-    <h2
-      class="mb-3 text-2xl font-bold"
-    >
-      Pending Transactions
-    </h2>
-    <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
-      data-testid="TableWrapper"
-    >
-      <div
-        class="with-x-padding css-1m6rt2i"
-        role="table"
-      >
-        <table
-          cellpadding="0"
-          class="w-full table-auto"
-        >
-          <thead>
-            <tr
-              role="row"
-            >
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
-                colspan="1"
-                data-testid="table__th--0"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Tx ID
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
-                colspan="1"
-                data-testid="table__th--1"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Age
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                  >
-                    <div
-                      class="transition-transform css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-16 min-w-16"
-                colspan="1"
-                data-testid="table__th--2"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Type
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border min-w-32 min-min-w-32"
-                colspan="1"
-                data-testid="table__th--3"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top"
-                >
-                  <div
-                    class=""
-                  >
-                    Addressing
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-1"
-                colspan="1"
-                data-testid="table__th--4"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top justify-center"
-                >
-                  <div
-                    class=""
-                  >
-                    Status
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
-                colspan="1"
-                data-testid="table__th--5"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Amount (ARK)
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
-                colspan="1"
-                data-testid="table__th--6"
-                role="columnheader"
-                style="cursor: pointer;"
-                title="Toggle SortBy"
-              >
-                <div
-                  class="flex flex-inline align-top justify-end flex-row-reverse"
-                >
-                  <div
-                    class=""
-                  >
-                    Fiat Value
-                  </div>
-                  <div
-                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                  >
-                    <div
-                      class="transition-transform rotate-180 css-15txs7d"
-                      height="10"
-                      role="img"
-                      width="10"
-                    >
-                      <svg
-                        id="chevron-down-small"
-                        viewBox="0 0 10 10"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <path
-                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
-                colspan="1"
-                data-testid="table__th--7"
-                role="columnheader"
-              >
-                <div
-                  class="flex flex-inline align-top hidden"
-                >
-                  <div
-                    class=""
-                  >
-                    Action
-                  </div>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody
-            role="rowgroup"
-          >
-            <tr
-              class="group css-155s9if"
-              data-testid="TableRow"
-            >
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
-                >
-                  <span
-                    class="text-theme-secondary-300 dark:text-theme-secondary-800"
-                  >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
-                    >
-                      <svg
-                        id="magnifying-glass-id"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M19 17l-3.172-3.172"
-                          />
-                          <circle
-                            cx="13"
-                            cy="11"
-                            r="4"
-                          />
-                        </g>
-                        <path
-                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-              </td>
-              <td
-                class="hidden lg:table-cell"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 text-theme-secondary-text"
-                >
-                  <span
-                    data-testid="TransactionRow__timestamp"
-                  >
-                    01.07.2020 12:00 AM
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-4"
-                >
-                  <div
-                    class="flex items-center -space-x-1"
-                    data-testid="TransactionRowMode"
-                  >
-                    <div
-                      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="border-theme-text text-theme-text dark:border-theme-secondary-600 dark:text-theme-secondary-600 ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black ring-theme-background duration-100 css-1nqcsx"
-                      data-testid="TransactionRowRecipientIcon"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="vote"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M7 9.404l2.1 3.182c.2.298.4.398.7.398s.6-.1.8-.299l6.7-9.05"
-                            />
-                            <path
-                              d="M19 12.337v4.077C19 17.807 17.9 19 16.5 19H3.6C2.2 18.9 1 17.906 1 16.414V3.486C1 2.094 2.1 1 3.5 1h6.8"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    class="font-semibold text-theme-text"
-                    data-testid="TransactionRowRecipientLabel"
-                  >
-                    Vote
-                  </span>
-                </div>
-              </td>
-              <td
-                class="w-16"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center truncate"
-                >
-                  <span
-                    class="p-1 text-theme-warning-300"
-                  >
-                    <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
-                    >
-                      <svg
-                        id="clock"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-miterlimit="10"
-                          stroke-width="2"
-                          transform="translate(1.5 1.5)"
-                        >
-                          <circle
-                            cx="8.5"
-                            cy="8.5"
-                            r="9"
-                          />
-                          <path
-                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
-                          />
-                        </g>
-                      </svg>
-                    </div>
-                  </span>
-                </div>
-              </td>
-              <td>
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
-                >
-                  <div
-                    class="rounded px-1.5 css-givenh"
-                    color="success-bg"
-                  >
-                    <div
-                      class="flex space-x-1 items-stretch"
-                    >
-                      <span
-                        class="whitespace-nowrap text-sm"
-                        data-testid="Amount"
-                      >
-                        + 0.1 DARK
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                class="text-theme-secondary-500"
-              >
-                <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
-                >
-                  Waiting...
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Signed Transaction Table > should render different status > should show unconfirmed multiSignature transactions 1`] = `
 <DocumentFragment>
   <div
@@ -3327,7 +2360,7 @@ exports[`Signed Transaction Table > should render different status > should show
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -3342,7 +2375,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -3636,7 +2669,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -3651,7 +2684,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -3838,7 +2871,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -4077,153 +3110,98 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group relative css-1kskd5s"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
-                  <span
-                    class="text-theme-secondary-300 dark:text-theme-secondary-800"
+                  <div
+                    class="flex flex-col gap-1 font-semibold"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                    <span
+                      class="text-sm"
                     >
-                      <svg
-                        id="magnifying-glass-id"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <span
+                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M19 17l-3.172-3.172"
-                          />
-                          <circle
-                            cx="13"
-                            cy="11"
-                            r="4"
-                          />
-                        </g>
-                        <path
-                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </span>
+                        287a5…7d89b
+                      </span>
+                    </span>
+                    <span
+                      class="text-xs text-theme-secondary-700 xl:hidden"
+                    >
+                      <span
+                        data-testid="TimeAgo"
+                      >
+                        A few seconds ago
+                      </span>
+                    </span>
+                  </div>
                 </div>
               </td>
               <td
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 text-theme-secondary-text"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    data-testid="TransactionRow__timestamp"
+                    data-testid="TimeAgo"
                   >
-                    01.07.2020 12:00 AM
+                    A few seconds ago
                   </span>
                 </div>
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-4"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="flex items-center -space-x-1"
-                    data-testid="TransactionRowMode"
+                    class="rounded p-1 css-sycbru"
+                    color="secondary"
                   >
-                    <div
-                      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                    Transfer
                   </div>
                 </div>
               </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-tubsez"
+                    color="danger-bg"
+                  >
+                    To
+                  </div>
+                  <span
+                    class="text-sm"
+                  >
+                    <span
+                      class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
+                      data-testid="PendingTransactionRowRecipientLabel"
+                    >
+                      D8rr7…6YUYD
+                    </span>
+                  </span>
+                </div>
+              </td>
               <td
-                class="w-16"
+                class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center truncate"
+                  class="px-3 transition-colors duration-100 min-h-17.5 items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    class="p-1 text-theme-warning-300"
+                    class="text-theme-secondary-700"
                   >
                     <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
                     >
                       <svg
                         id="clock"
@@ -4258,32 +3236,64 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-1.5 css-givenh"
-                    color="success-bg"
+                    class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="rounded px-1.5 css-xqt0aw"
+                      color="danger-bg"
+                    >
+                      <div
+                        class="flex space-x-1 items-center"
+                      >
+                        <span
+                          class="whitespace-nowrap text-sm"
+                          data-testid="Amount"
+                        >
+                          - 1.1 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
+                        class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        + 1.1 DARK
+                        0 BTC
                       </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
               </td>
               <td
-                class="text-theme-secondary-500"
+                class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
-                  Waiting...
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="text-sm text-theme-secondary-500"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-row items-center"
+                  >
+                    Waiting...
+                  </div>
                 </div>
               </td>
             </tr>
@@ -4307,7 +3317,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -4546,153 +3556,98 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group relative css-1kskd5s"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
-                  <span
-                    class="text-theme-secondary-300 dark:text-theme-secondary-800"
+                  <div
+                    class="flex flex-col gap-1 font-semibold"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                    <span
+                      class="text-sm"
                     >
-                      <svg
-                        id="magnifying-glass-id"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <span
+                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M19 17l-3.172-3.172"
-                          />
-                          <circle
-                            cx="13"
-                            cy="11"
-                            r="4"
-                          />
-                        </g>
-                        <path
-                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </span>
+                        287a5…7d89b
+                      </span>
+                    </span>
+                    <span
+                      class="text-xs text-theme-secondary-700 xl:hidden"
+                    >
+                      <span
+                        data-testid="TimeAgo"
+                      >
+                        A few seconds ago
+                      </span>
+                    </span>
+                  </div>
                 </div>
               </td>
               <td
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
+                  class="flex px-3 transition-colors duration-100 min-h-11 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    data-testid="TransactionRow__timestamp"
+                    data-testid="TimeAgo"
                   >
-                    01.07.2020 12:00 AM
+                    A few seconds ago
                   </span>
                 </div>
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+                  class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="flex items-center space-x-2"
-                    data-testid="TransactionRowMode"
+                    class="rounded p-1 css-sycbru"
+                    color="secondary"
                   >
-                    <span
-                      class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </span>
-                    <div
-                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                    Transfer
                   </div>
                 </div>
               </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-tubsez"
+                    color="danger-bg"
+                  >
+                    To
+                  </div>
+                  <span
+                    class="text-sm"
+                  >
+                    <span
+                      class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
+                      data-testid="PendingTransactionRowRecipientLabel"
+                    >
+                      D8rr7…6YUYD
+                    </span>
+                  </span>
+                </div>
+              </td>
               <td
-                class="w-16"
+                class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center truncate"
+                  class="px-3 transition-colors duration-100 min-h-11 items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    class="p-1 text-theme-warning-300"
+                    class="text-theme-secondary-700"
                   >
                     <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
                     >
                       <svg
                         id="clock"
@@ -4727,32 +3682,64 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-1.5 css-1jspzfx"
-                    color="success-bg"
+                    class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex space-x-1 items-center"
+                      class="rounded px-1.5 css-xqt0aw"
+                      color="danger-bg"
+                    >
+                      <div
+                        class="flex space-x-1 items-center"
+                      >
+                        <span
+                          class="whitespace-nowrap text-sm"
+                          data-testid="Amount"
+                        >
+                          - 1.1 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
+                        class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        + 1.1 DARK
+                        0 BTC
                       </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
               </td>
               <td
-                class="text-theme-secondary-500"
+                class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
-                  Waiting...
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="text-sm text-theme-secondary-500"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-row items-center"
+                  >
+                    Waiting...
+                  </div>
                 </div>
               </td>
             </tr>
@@ -4776,7 +3763,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -5020,7 +4007,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-3 xl:min-h-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -5178,7 +4165,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -5254,7 +4241,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -5493,153 +4480,98 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group relative css-1kskd5s"
               data-testid="TableRow"
             >
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
-                  <span
-                    class="text-theme-secondary-300 dark:text-theme-secondary-800"
+                  <div
+                    class="flex flex-col gap-1 font-semibold"
                   >
-                    <div
-                      class="css-v0ob3f"
-                      height="16"
-                      width="16"
+                    <span
+                      class="text-sm"
                     >
-                      <svg
-                        id="magnifying-glass-id"
-                        viewBox="0 0 20 20"
-                        x="0"
-                        xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg"
-                        y="0"
+                      <span
+                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
                       >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M19 17l-3.172-3.172"
-                          />
-                          <circle
-                            cx="13"
-                            cy="11"
-                            r="4"
-                          />
-                        </g>
-                        <path
-                          d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                          fill="currentColor"
-                        />
-                        <path
-                          d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                  </span>
+                        287a5…7d89b
+                      </span>
+                    </span>
+                    <span
+                      class="text-xs text-theme-secondary-700 xl:hidden"
+                    >
+                      <span
+                        data-testid="TimeAgo"
+                      >
+                        A few seconds ago
+                      </span>
+                    </span>
+                  </div>
                 </div>
               </td>
               <td
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 text-theme-secondary-text"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    data-testid="TransactionRow__timestamp"
+                    data-testid="TimeAgo"
                   >
-                    01.07.2020 12:00 AM
+                    A few seconds ago
                   </span>
                 </div>
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-4"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="flex items-center -space-x-1"
-                    data-testid="TransactionRowMode"
+                    class="rounded p-1 css-sycbru"
+                    color="secondary"
                   >
-                    <div
-                      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
-                    >
-                      <div
-                        class="css-1i4b0eq"
-                        height="20"
-                        width="20"
-                      >
-                        <svg
-                          id="received"
-                          viewBox="0 0 20 20"
-                          x="0"
-                          xml:space="preserve"
-                          xmlns="http://www.w3.org/2000/svg"
-                          y="0"
-                        >
-                          <g
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                          >
-                            <path
-                              d="M8 5V1M12 1v10h3.404c.248 0 .39.281.244.481l-5.41 7.398a.296.296 0 0 1-.476 0l-5.41-7.398A.303.303 0 0 1 4.596 11H8V9"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
-                      data-testid="Avatar"
-                    >
-                      <div
-                        class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                      >
-                        <img
-                          alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                          src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                          title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-                  >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
-                    >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                    Transfer
                   </div>
                 </div>
               </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-tubsez"
+                    color="danger-bg"
+                  >
+                    To
+                  </div>
+                  <span
+                    class="text-sm"
+                  >
+                    <span
+                      class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
+                      data-testid="PendingTransactionRowRecipientLabel"
+                    >
+                      D8rr7…6YUYD
+                    </span>
+                  </span>
+                </div>
+              </td>
               <td
-                class="w-16"
+                class="hidden w-16 lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center truncate"
+                  class="px-3 transition-colors duration-100 min-h-17.5 items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
                 >
                   <span
-                    class="p-1 text-theme-warning-300"
+                    class="text-theme-secondary-700"
                   >
                     <div
-                      class="css-1i4b0eq"
-                      height="20"
-                      width="20"
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
                     >
                       <svg
                         id="clock"
@@ -5674,32 +4606,64 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               </td>
               <td>
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-1.5 css-givenh"
-                    color="success-bg"
+                    class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="rounded px-1.5 css-xqt0aw"
+                      color="danger-bg"
+                    >
+                      <div
+                        class="flex space-x-1 items-center"
+                      >
+                        <span
+                          class="whitespace-nowrap text-sm"
+                          data-testid="Amount"
+                        >
+                          - 1.1 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
                     >
                       <span
-                        class="whitespace-nowrap text-sm"
+                        class="whitespace-nowrap"
                         data-testid="Amount"
                       >
-                        + 1.1 DARK
+                        0 BTC
                       </span>
-                    </div>
+                    </span>
                   </div>
                 </div>
               </td>
               <td
-                class="text-theme-secondary-500"
+                class="hidden lg:table-cell"
               >
                 <div
-                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
-                  Waiting...
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="text-sm text-theme-secondary-500"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-row items-center"
+                  >
+                    Waiting...
+                  </div>
                 </div>
               </td>
             </tr>
@@ -5723,7 +4687,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -5738,7 +4702,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
             role="rowgroup"
           >
             <tr
-              class="group css-155s9if"
+              class="group css-1kskd5s"
               data-testid="TableRow__mobile"
             >
               <td
@@ -5925,7 +4889,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -6169,7 +5133,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-3 xl:min-h-0"
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -6327,7 +5291,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
@@ -6411,7 +5375,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
       Pending Transactions
     </h2>
     <div
-      class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
       data-testid="TableWrapper"
     >
       <div
@@ -6655,7 +5619,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             >
               <td>
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-3 xl:min-h-0"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
                 >
                   <div
                     class="flex flex-col gap-1 font-semibold"
@@ -6813,7 +5777,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
               </td>
               <td>
                 <div
-                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
+                  class="flex px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:min-h-0"
                 >
                   <div
                     class="flex flex-row items-center"
