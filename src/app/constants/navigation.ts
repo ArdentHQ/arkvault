@@ -14,13 +14,13 @@ export const getNavigationMenu = (profile: Contracts.IProfile, t: TFunction): Na
 		title: t("COMMON.PORTFOLIO"),
 	},
 	/* istanbul ignore next -- @preserve */
-	...(isUnit() ?? isE2E() ?? !hasOnlyMainsailNetwork(profile)
+	...([isUnit(), isE2E(), !hasOnlyMainsailNetwork(profile)].some(Boolean)
 		? [
-				{
-					mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
-					title: t("COMMON.EXCHANGE"),
-				},
-		  ]
+			{
+				mountPath: (profileId) => generatePath(ProfilePaths.Exchange, { profileId }),
+				title: t("COMMON.EXCHANGE"),
+			},
+		]
 		: []),
 	{
 		mountPath: (profileId) => generatePath(ProfilePaths.Contacts, { profileId }),
