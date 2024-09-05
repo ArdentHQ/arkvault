@@ -10,6 +10,7 @@ import { Table } from "@/app/components/Table";
 import { Pagination } from "@/app/components/Pagination";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { useBreakpoint } from "@/app/hooks";
+import { DelegateRowMobile } from "@/domains/vote/components/DelegateTable/DelegateRow/DelegateRowMobile";
 
 export const DelegateTable: FC<DelegateTableProperties> = ({
 	delegates,
@@ -190,8 +191,10 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				voted = votes.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 			}
 
+			const View = isXs ? DelegateRowMobile : DelegateRow;
+
 			return (
-				<DelegateRow
+				<View
 					index={index}
 					delegate={delegate}
 					selectedUnvotes={selectedUnvotes}
@@ -221,6 +224,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,
+			isXs,
 		],
 	);
 
@@ -236,11 +240,16 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 	return (
 		<div data-testid="DelegateTable">
-			<h2 className="mb-6 hidden text-lg font-bold md:block">{t("VOTE.DELEGATE_TABLE.TITLE")}</h2>
-
 			{!!subtitle && subtitle}
 
-			<Table columns={columns} data={tableData} rowsPerPage={delegatesPerPage} currentPage={currentPage}>
+			<Table
+				className="with-x-padding -mt-3 overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 sm:mt-0 sm:border"
+				columns={columns}
+				data={tableData}
+				rowsPerPage={delegatesPerPage}
+				currentPage={currentPage}
+				hideHeader={isXs}
+			>
 				{renderTableRow}
 			</Table>
 

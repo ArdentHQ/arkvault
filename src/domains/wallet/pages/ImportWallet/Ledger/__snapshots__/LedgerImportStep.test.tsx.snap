@@ -570,7 +570,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               >
                 <td>
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -652,7 +652,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
@@ -696,7 +696,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               >
                 <td>
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl justify-center"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l justify-center"
                   >
                     <div
                       class="flex flex-1 flex-col py-2"
@@ -778,7 +778,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
                 <td>
                   <div
-                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end font-semibold"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end font-semibold"
                   >
                     <button
                       class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"

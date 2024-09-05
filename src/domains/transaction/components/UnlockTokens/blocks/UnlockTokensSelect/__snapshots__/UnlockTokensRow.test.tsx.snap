@@ -10,7 +10,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -34,7 +34,7 @@ exports[`UnlockTokensRow > should render with isReady = false 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
               class="flex items-center"
@@ -100,7 +100,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <span
               class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
@@ -124,7 +124,7 @@ exports[`UnlockTokensRow > should render with isReady = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <div
               class="flex items-center"

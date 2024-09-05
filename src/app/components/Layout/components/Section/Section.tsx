@@ -51,6 +51,6 @@ export const Section = ({
 			className,
 		)}
 	>
-		<div className={twMerge("mx-auto px-6 md:px-10 lg:container", innerClassName)}>{children}</div>
+		<div className={twMerge("mx-auto px-6 lg:container md:px-10", innerClassName)}>{children}</div>
 	</SectionWrapper>
 );

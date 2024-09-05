@@ -3125,7 +3125,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                     data-testid="TableCell_Starred"
                   >
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l-xl space-x-3"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                     >
                       <div
                         class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
@@ -3294,7 +3294,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                   </td>
                   <td>
                     <div
-                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r-xl justify-end text-theme-secondary-text"
+                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
                     >
                       <div>
                         <button

@@ -2738,7 +2738,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -2897,7 +2897,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -2988,7 +2988,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3194,7 +3194,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -3285,7 +3285,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -3464,7 +3464,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -4976,7 +4976,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5107,7 +5107,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5198,7 +5198,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5376,7 +5376,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -5467,7 +5467,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -5618,7 +5618,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -8930,7 +8930,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9089,7 +9089,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9180,7 +9180,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9386,7 +9386,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -9477,7 +9477,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -9656,7 +9656,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -15237,7 +15237,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -15393,7 +15393,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -15484,7 +15484,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -15687,7 +15687,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"
@@ -15778,7 +15778,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                 >
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl py-3 border-2 border-r-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l py-3 border-2 border-r-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 w-full items-center space-x-3"
@@ -15954,7 +15954,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                   </td>
                                   <td>
                                     <div
-                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl py-3 border-2 border-l-0 border-transparent"
+                                      class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r py-3 border-2 border-l-0 border-transparent"
                                     >
                                       <div
                                         class="flex h-11 items-center"

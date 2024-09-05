@@ -195,7 +195,10 @@ export const AddressRowMobile = ({ index, wallet, onSelect }: AddressRowMobilePr
 							variant="secondary"
 							sizeClassName="px-5 py-6"
 							roundedClassName="rounded-none"
-							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
+							onClick={(e) => {
+								e.stopPropagation();
+								onSelect?.(wallet.address(), wallet.networkId());
+							}}
 							data-testid={`AddressRowMobile__select-${index}`}
 						>
 							{t("COMMON.VOTE")}
