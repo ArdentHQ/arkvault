@@ -6,7 +6,7 @@ export const translations = {
 		MIN: "Min.",
 		NAME: "Delegate Name",
 		PAYOUT_INTERVAL: "Payout",
-		TITLE: "Select a Delegate",
+		TITLE: "Select Delegate",
 		TOOLTIP: {
 			DELEGATE_IN_FORGING_POSITION: "Delegate in forging position",
 			DELEGATE_IN_STANDY_POSITION: "Delegate in standby position",

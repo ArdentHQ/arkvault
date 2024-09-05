@@ -2657,7 +2657,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should render 2nd step
                             <span
                               class="css-1rmjubp"
                             >
-                              Transaction Amount
+                              Transaction(s) Amount
                             </span>
                             <span
                               class="whitespace-nowrap text-md mt-1 font-semibold"

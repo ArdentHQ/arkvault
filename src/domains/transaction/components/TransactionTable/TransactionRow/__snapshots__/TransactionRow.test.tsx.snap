@@ -10,7 +10,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -213,7 +213,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden xl:block"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -239,7 +239,7 @@ exports[`TransactionRow > should render 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -459,7 +459,7 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <span
               class="whitespace-nowrap text-theme-secondary-text"
@@ -485,7 +485,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
           >
             <span
               aria-busy="true"
@@ -652,7 +652,7 @@ exports[`TransactionRow > should render compact skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
           >
             <span
               class="flex items-center space-x-1"
@@ -1134,7 +1134,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <span
               aria-busy="true"
@@ -1297,7 +1297,7 @@ exports[`TransactionRow > should render skeleton 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <span
               class="flex items-center space-x-1"
@@ -1347,7 +1347,7 @@ exports[`TransactionRow > should render with currency 1`] = `
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
           >
             <a
               class="ring-focus group inline-block css-7nwwrh"
@@ -1550,7 +1550,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden xl:block"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
           >
             <span
               class="whitespace-nowrap"

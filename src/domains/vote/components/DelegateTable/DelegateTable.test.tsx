@@ -7,7 +7,7 @@ import { VoteDelegateProperties } from "./DelegateTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, renderResponsive, screen, waitFor } from "@/utils/testing-library";
 
 let useRandomNumberSpy: vi.SpyInstance;
 
@@ -17,8 +17,8 @@ let votes: Contracts.VoteRegistryItem[];
 
 const pressingContinueButton = async () => await userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
-const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvote");
-const footerVotes = () => screen.getByTestId("DelegateTable__footer--vote");
+const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvotes");
+const footerVotes = () => screen.getByTestId("DelegateTable__footer--votes");
 
 describe("DelegateTable", () => {
 	beforeAll(() => {
@@ -66,6 +66,22 @@ describe("DelegateTable", () => {
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render mobile view in XS screen", () => {
+		renderResponsive(
+			<DelegateTable
+				delegates={delegates}
+				votes={[]}
+				voteDelegates={[]}
+				unvoteDelegates={[]}
+				selectedWallet={wallet}
+				maxVotes={wallet.network().maximumVotesPerTransaction()}
+			/>,
+			"xs",
+		);
+
+		expect(screen.getAllByTestId("DelegateRowMobile")[0]).toBeInTheDocument();
 	});
 
 	it("should render vote amount column", () => {

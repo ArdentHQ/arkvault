@@ -280,7 +280,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -326,7 +326,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -352,7 +352,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -398,7 +398,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -709,7 +709,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -755,7 +755,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -781,7 +781,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -827,7 +827,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -1138,7 +1138,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1184,7 +1184,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-reverse-600 -mr-3"
@@ -1208,7 +1208,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1254,7 +1254,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -1565,7 +1565,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1611,7 +1611,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -1637,7 +1637,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -1683,7 +1683,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -2939,7 +2939,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -2974,7 +2974,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -3286,7 +3286,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3332,7 +3332,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <button
                               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300 text-theme-primary-reverse-600"
@@ -3356,7 +3356,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3402,7 +3402,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -3713,7 +3713,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3759,7 +3759,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -3785,7 +3785,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -3831,7 +3831,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -4188,7 +4188,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4248,7 +4248,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -4274,7 +4274,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4334,7 +4334,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -4691,7 +4691,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4751,7 +4751,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -4777,7 +4777,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -4837,7 +4837,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -5194,7 +5194,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5254,7 +5254,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <button
                               class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-reverse-600 -mr-3"
@@ -5278,7 +5278,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5338,7 +5338,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -5695,7 +5695,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5755,7 +5755,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -5781,7 +5781,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -5841,7 +5841,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -7143,7 +7143,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7192,7 +7192,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -7550,7 +7550,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7610,7 +7610,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <button
                               class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-primary-reverse-100 dark:bg-theme-primary-reverse-600 dark:text-white hover:bg-theme-primary-reverse-700 hover:text-white focus:ring-theme-primary-reverse-300 text-theme-primary-reverse-600"
@@ -7634,7 +7634,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -7694,7 +7694,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -8051,7 +8051,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8111,7 +8111,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button
@@ -8137,7 +8137,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           class="w-full"
                         >
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl space-x-4"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l space-x-4"
                           >
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
@@ -8197,7 +8197,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                         <td>
                           <div
-                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
                           >
                             <div>
                               <button

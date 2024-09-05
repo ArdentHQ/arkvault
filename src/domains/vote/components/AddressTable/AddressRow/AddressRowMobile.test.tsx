@@ -15,6 +15,8 @@ import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
+import { createHashHistory } from "history";
+import { within } from "@testing-library/react";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -349,6 +351,27 @@ describe("AddressRowMobile", () => {
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());
 		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should redirect to wallet details page", async () => {
+		const history = createHashHistory();
+
+		render(
+			<AddressWrapper>
+				<AddressRowMobile index={0} maxVotes={1} wallet={wallet} onSelect={vi.fn()} />
+			</AddressWrapper>,
+			{
+				history,
+				route: `/profiles/${profile.id()}/votes`,
+			},
+		);
+
+		const historySpy = vi.spyOn(history, "push");
+
+		const containerDiv = within(screen.getByRole("row")).getByRole("cell").querySelector("div") as HTMLDivElement;
+
+		await userEvent.click(containerDiv);
+		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 	});
 
 	it("should render when the maximum votes is greater than 1", () => {

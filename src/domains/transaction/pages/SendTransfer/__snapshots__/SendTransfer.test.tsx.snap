@@ -1464,7 +1464,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -1520,7 +1520,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"
@@ -5219,7 +5219,7 @@ exports[`SendTransfer > should render review step 1`] = `
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -5692,7 +5692,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -6143,7 +6143,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                 <span
                   class="css-1rmjubp"
                 >
-                  Transaction Amount
+                  Transaction(s) Amount
                 </span>
                 <span
                   class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -9082,7 +9082,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9138,7 +9138,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"
@@ -9164,7 +9164,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               >
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-3 text-theme-secondary-500 whitespace-nowrap"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-3 text-theme-secondary-500 whitespace-nowrap"
                                   >
                                     <span
                                       data-testid="TimeAgo"
@@ -9253,7 +9253,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                                 <td>
                                   <div
-                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                   >
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"

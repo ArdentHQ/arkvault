@@ -835,7 +835,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -945,7 +945,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1033,7 +1033,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -1143,7 +1143,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1231,7 +1231,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -1329,7 +1329,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -1413,7 +1413,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -1511,7 +1511,7 @@ exports[`Contacts > should render compact on md screen 1`] = `
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2435,7 +2435,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -2545,7 +2545,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2633,7 +2633,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -2743,7 +2743,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -2831,7 +2831,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -2929,7 +2929,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -3013,7 +3013,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -3111,7 +3111,7 @@ exports[`Contacts > should render compact on md screen if uses expanded tables 1
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -4948,7 +4948,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -5058,7 +5058,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5146,7 +5146,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       >
                         <span
                           class="text-sm font-semibold leading-[17px]"
@@ -5256,7 +5256,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5344,7 +5344,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -5442,7 +5442,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
@@ -5526,7 +5526,7 @@ exports[`Contacts > should render with contacts 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl space-x-4 whitespace-nowrap"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l space-x-4 whitespace-nowrap"
                       />
                     </td>
                     <td
@@ -5624,7 +5624,7 @@ exports[`Contacts > should render with contacts 1`] = `
                       class=""
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
                           class="flex items-center -mr-3"
