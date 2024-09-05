@@ -186,52 +186,55 @@ cucumber(
 	],
 );
 
-cucumber("@validatorRegistration-invalidPublicKey", {
-	...preSteps,
-	"When she enters an invalid public key": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
-		await t.typeText(Selector("[data-testid=Input__validator_public_key]"), "invalid-pub-key");
-	},
-	"Then an error is displayed on the name field": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-	},
-	"And the continue button is disabled": async (t: TestController) => {
-		await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
-	},
-
-}, [
-	mockRequest(
-		{
-			method: "GET",
-			url: "https://dwallets-evm.mainsailhq.com/api/wallets/0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
+cucumber(
+	"@validatorRegistration-invalidPublicKey",
+	{
+		...preSteps,
+		"When she enters an invalid public key": async (t: TestController) => {
+			await t.expect(Selector("[data-testid=Registration__form]").exists).ok();
+			await t.typeText(Selector("[data-testid=Input__validator_public_key]"), "invalid-pub-key");
 		},
-		Fixtures.Wallet,
-	),
-	mockRequest(
-		{
-			method: "GET",
-			url: "https://dwallets-evm.mainsailhq.com/api/wallets/?attributes.validatorPublicKey=84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2",
+		"Then an error is displayed on the name field": async (t: TestController) => {
+			await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 		},
-		{
-			meta: {
-				count: 0,
+		"And the continue button is disabled": async (t: TestController) => {
+			await t.expect(Selector("button").withText(translations.COMMON.CONTINUE).hasAttribute("disabled")).ok();
+		},
+	},
+	[
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/wallets/0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
 			},
-		},
-	),
-	mockRequest(
-		{
-			method: "GET",
-			url: "https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
-		},
-		Fixtures.Transactions,
-	),
-	mockRequest(
-		{
-			method: "GET",
-			url: "https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
-		},
-		{
-			data: {},
-		},
-	),
-]);
+			Fixtures.Wallet,
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/wallets/?attributes.validatorPublicKey=84c48b1f7388d582a042718c35d9f57dcb9c4314be8b44807a14f329a3bb3853796882756d32e8e11e034f1e7e072cc2",
+			},
+			{
+				meta: {
+					count: 0,
+				},
+			},
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions?limit=30&address=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
+			},
+			Fixtures.Transactions,
+		),
+		mockRequest(
+			{
+				method: "GET",
+				url: "https://dwallets-evm.mainsailhq.com/api/transactions?page=1&limit=20&senderId=0xDC0A21aF27FeB1b7e0f2e519288445c0510Cb23C",
+			},
+			{
+				data: {},
+			},
+		),
+	],
+);
