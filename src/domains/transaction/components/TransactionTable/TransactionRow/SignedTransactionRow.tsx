@@ -127,7 +127,7 @@ export const SignedTransactionRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" isCompact={isCompact} innerClassName="items-start my-3 xl:min-h-0">
+			<TableCell variant="start" isCompact={isCompact} innerClassName="items-start my-0 py-3 xl:min-h-0">
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
@@ -204,7 +204,7 @@ export const SignedTransactionRow = ({
 				<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0">
+			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0" variant="end">
 				<div className="flex flex-row items-center">
 					<SignButton
 						isCompact={isCompact}
