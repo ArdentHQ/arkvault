@@ -488,7 +488,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -702,7 +702,7 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -1323,7 +1323,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -1525,7 +1525,7 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -2193,7 +2193,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -2406,7 +2406,7 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -3074,7 +3074,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -3287,7 +3287,7 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -3837,7 +3837,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4049,7 +4049,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="text-theme-secondary-500"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
               >
                 Waiting...
               </div>
@@ -4465,7 +4465,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -4680,7 +4680,7 @@ exports[`Signed Transaction Table > should render different status > should show
               class="text-theme-secondary-500"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
               >
                 Waiting...
               </div>
@@ -5210,7 +5210,7 @@ exports[`Signed Transaction Table > should render different status > should show
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -5422,7 +5422,7 @@ exports[`Signed Transaction Table > should render different status > should show
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -5959,7 +5959,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6158,7 +6158,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="text-theme-secondary-500"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
               >
                 Waiting...
               </div>
@@ -6361,7 +6361,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6560,7 +6560,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
               class="text-theme-secondary-500"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
               >
                 Waiting...
               </div>
@@ -6763,7 +6763,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -6965,7 +6965,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -7305,7 +7305,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -7507,7 +7507,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -7811,7 +7811,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -8010,7 +8010,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
               class="text-theme-secondary-500"
             >
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
               >
                 Waiting...
               </div>
@@ -8410,7 +8410,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -8612,7 +8612,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
@@ -8952,7 +8952,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
           >
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l-xl"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
               >
                 <span
                   class="text-theme-secondary-300 dark:text-theme-secondary-800"
@@ -9154,7 +9154,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             </td>
             <td>
               <div
-                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r-xl justify-end space-x-2"
+                class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end space-x-2"
               >
                 <div
                   class="hidden space-x-3 xl:flex"
