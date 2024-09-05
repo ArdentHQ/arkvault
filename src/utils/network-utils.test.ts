@@ -15,6 +15,7 @@ import {
 	networkInitials,
 	networksAsOptions,
 	profileEnabledNetworkIds,
+	hasOnlyMainsailNetwork,
 } from "./network-utils";
 import { env, getDefaultProfileId, mockProfileWithPublicAndTestNetworks } from "@/utils/testing-library";
 import { UserCustomNetwork } from "@/domains/setting/pages/Servers/Servers.contracts";
@@ -317,5 +318,13 @@ describe("Network utils", () => {
 		it("determines if a network is a not a mainsail network if undefined", () => {
 			expect(isMainsailNetwork(undefined)).toBe(false);
 		});
+	});
+
+	it("should determine whether the user uses only mainsail network", () => {
+		const restoreMock = mockProfileWithPublicAndTestNetworks(profile);
+
+		expect(hasOnlyMainsailNetwork(profile)).toBe(false)
+
+		restoreMock();
 	});
 });
