@@ -981,7 +981,7 @@ exports[`Votes > should filter current delegates 1`] = `
                             <div
                               class="truncate"
                             >
-                               arkx
+                               arkx 
                             </div>
                           </div>
                         </div>
@@ -2259,7 +2259,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             <div
                               class="truncate"
                             >
-                               genesis_42
+                               genesis_42 
                             </div>
                           </div>
                         </div>
@@ -2406,7 +2406,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             <div
                               class="truncate"
                             >
-                               genesis_17
+                               genesis_17 
                             </div>
                           </div>
                         </div>
@@ -2553,7 +2553,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                             <div
                               class="truncate"
                             >
-                               itsanametoo
+                               itsanametoo 
                             </div>
                           </div>
                         </div>
@@ -3777,7 +3777,7 @@ exports[`Votes > should render 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_42
+                               genesis_42 
                             </div>
                           </div>
                         </div>
@@ -3924,7 +3924,7 @@ exports[`Votes > should render 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_17
+                               genesis_17 
                             </div>
                           </div>
                         </div>
@@ -4071,7 +4071,7 @@ exports[`Votes > should render 1`] = `
                             <div
                               class="truncate"
                             >
-                               itsanametoo
+                               itsanametoo 
                             </div>
                           </div>
                         </div>
@@ -5292,7 +5292,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             <div
                               class="truncate"
                             >
-                               genesis_42
+                               genesis_42 
                             </div>
                           </div>
                         </div>
@@ -5439,7 +5439,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             <div
                               class="truncate"
                             >
-                               genesis_17
+                               genesis_17 
                             </div>
                           </div>
                         </div>
@@ -5586,7 +5586,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                             <div
                               class="truncate"
                             >
-                               itsanametoo
+                               itsanametoo 
                             </div>
                           </div>
                         </div>
@@ -6492,11 +6492,11 @@ exports[`Votes > should render with no wallets 1`] = `
                 <span
                   class="text-center md:text-left"
                 >
-                  Your must first
+                  Your must first 
                   <strong>
                     Create
                   </strong>
-                   or
+                   or 
                   <strong>
                     Import
                   </strong>
@@ -7528,7 +7528,7 @@ exports[`Votes > should select a delegate 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_42
+                               genesis_42 
                             </div>
                           </div>
                         </div>
@@ -7675,7 +7675,7 @@ exports[`Votes > should select a delegate 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_17
+                               genesis_17 
                             </div>
                           </div>
                         </div>
@@ -7822,7 +7822,7 @@ exports[`Votes > should select a delegate 1`] = `
                             <div
                               class="truncate"
                             >
-                               itsanametoo
+                               itsanametoo 
                             </div>
                           </div>
                         </div>
@@ -13474,7 +13474,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_42
+                               genesis_42 
                             </div>
                           </div>
                         </div>
@@ -13621,7 +13621,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             <div
                               class="truncate"
                             >
-                               genesis_17
+                               genesis_17 
                             </div>
                           </div>
                         </div>
@@ -13768,7 +13768,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                             <div
                               class="truncate"
                             >
-                               itsanametoo
+                               itsanametoo 
                             </div>
                           </div>
                         </div>
