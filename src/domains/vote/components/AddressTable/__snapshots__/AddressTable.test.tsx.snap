@@ -3,15 +3,43 @@
 exports[`AddressTable > should render 1`] = `
 <DocumentFragment>
   <div
-    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+    class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0 css-9mualq"
   >
     <div
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="-mt-1 md:mt-2"
         data-testid="AddressTable"
       >
+        <div
+          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+        >
+          <div
+            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            data-testid="NetworkIcon__icon"
+            height="24"
+            width="24"
+          >
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h2
+            class="mb-0 text-lg font-semibold leading-[21px]"
+          >
+            ARK Devnet
+          </h2>
+        </div>
         <div
           class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
@@ -460,15 +488,43 @@ exports[`AddressTable > should render 1`] = `
 exports[`AddressTable > should render when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <div
-    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+    class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0 css-9mualq"
   >
     <div
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="-mt-1 md:mt-2"
         data-testid="AddressTable"
       >
+        <div
+          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+        >
+          <div
+            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            data-testid="NetworkIcon__icon"
+            height="24"
+            width="24"
+          >
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h2
+            class="mb-0 text-lg font-semibold leading-[21px]"
+          >
+            ARK Devnet
+          </h2>
+        </div>
         <div
           class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
@@ -874,15 +930,43 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
 exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
 <DocumentFragment>
   <div
-    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
+    class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0 css-9mualq"
   >
     <div
       class="mx-auto px-6 lg:container md:px-10"
     >
       <div
-        class="-mt-1 md:mt-2"
         data-testid="AddressTable"
       >
+        <div
+          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+        >
+          <div
+            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            data-testid="NetworkIcon__icon"
+            height="24"
+            width="24"
+          >
+            <svg
+              id="ark"
+              viewBox="0 0 36.3 30.6"
+              x="0"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              y="0"
+            >
+              <path
+                d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h2
+            class="mb-0 text-lg font-semibold leading-[21px]"
+          >
+            ARK Devnet
+          </h2>
+        </div>
         <div
           class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
           role="table"
