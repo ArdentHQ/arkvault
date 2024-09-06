@@ -10,7 +10,6 @@ import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
 import {networkDisplayName} from "@/utils/network-utils";
-import {NetworkIcon} from "@/domains/network/components/NetworkIcon";
 import {Icon} from "@/app/components/Icon";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
