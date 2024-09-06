@@ -19,6 +19,7 @@ import {
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { PendingTransferRow } from '@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow';
 
 const translations = buildTranslations();
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
@@ -657,6 +658,21 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should handle onClick on a pending transfer row hen the transaction id is clicked", async () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+
+		render(
+			<PendingTransferRow wallet={wallet} transaction={fixtures.transfer} onRowClick={onClick} isCompact={true} />,
+		)
+
+		await userEvent.click(screen.getByTestId("PendingTransactionRow__transaction-id"));
+
+		expect(onClick).toHaveBeenCalledWith(fixtures.transfer);
+
+		vi.restoreAllMocks();
+	})
+
 	it.each(["light", "dark"])("should set %s shadow color on mouse events", async (theme) => {
 		mockMultisignatures(wallet);
 		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
@@ -835,7 +851,7 @@ describe("Signed Transaction Table", () => {
 		isMultiSignatureReadyMock.mockRestore();
 	});
 
-	it("should handle the onRowClick function when the id is clicked", async (isCompact: boolean) => {
+	it("should handle the onRowClick function when the id is clicked on SignedTransactionRow", async (isCompact: boolean) => {
 		mockPendingTransfers(wallet);
 		const onClick = vi.fn();
 		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);

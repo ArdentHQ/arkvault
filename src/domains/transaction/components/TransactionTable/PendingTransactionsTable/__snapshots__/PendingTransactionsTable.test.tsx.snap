@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Signed Transaction Table > should handle the onRowClick function when the id is clicked 1`] = `
+exports[`Signed Transaction Table > should handle the onRowClick function when the id is clicked on SignedTransactionRow 1`] = `
 <DocumentFragment>
   <div
     class="relative"
@@ -4174,7 +4174,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
-                        data-testid="TruncateMiddle"
+                        data-testid="PendingTransactionRow__transaction-id"
                       >
                         e4229…37711
                       </span>
@@ -4836,7 +4836,7 @@ exports[`Signed Transaction Table > should render different status > should show
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
-                        data-testid="TruncateMiddle"
+                        data-testid="PendingTransactionRow__transaction-id"
                       >
                         09e50…b2002
                       </span>
@@ -6289,7 +6289,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
-                        data-testid="TruncateMiddle"
+                        data-testid="PendingTransactionRow__transaction-id"
                       >
                         287a5…7d89b
                       </span>
@@ -6735,7 +6735,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
-                        data-testid="TruncateMiddle"
+                        data-testid="PendingTransactionRow__transaction-id"
                       >
                         287a5…7d89b
                       </span>
@@ -8149,7 +8149,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                     >
                       <span
                         class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
-                        data-testid="TruncateMiddle"
+                        data-testid="PendingTransactionRow__transaction-id"
                       >
                         287a5…7d89b
                       </span>
