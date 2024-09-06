@@ -3420,6 +3420,450 @@ exports[`Signed Transaction Table > should render different status > should show
 </DocumentFragment>
 `;
 
+exports[`Signed Transaction Table > should render different status > should show as unvote 2`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-3 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      data-testid="TableWrapper"
+    >
+      <div
+        class="with-x-padding css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="w-full table-auto"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                colspan="1"
+                data-testid="table__th--0"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Tx ID
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
+                colspan="1"
+                data-testid="table__th--1"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Age
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                  >
+                    <div
+                      class="transition-transform css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-16 min-w-16"
+                colspan="1"
+                data-testid="table__th--2"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Type
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border min-w-32 min-min-w-32"
+                colspan="1"
+                data-testid="table__th--3"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Addressing
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-1"
+                colspan="1"
+                data-testid="table__th--4"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top justify-center"
+                >
+                  <div
+                    class=""
+                  >
+                    Status
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                colspan="1"
+                data-testid="table__th--5"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top justify-end flex-row-reverse"
+                >
+                  <div
+                    class=""
+                  >
+                    Amount (ARK)
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="transition-transform rotate-180 css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
+                colspan="1"
+                data-testid="table__th--6"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top justify-end flex-row-reverse"
+                >
+                  <div
+                    class=""
+                  >
+                    Fiat Value
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="transition-transform rotate-180 css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
+                colspan="1"
+                data-testid="table__th--7"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top hidden"
+                >
+                  <div
+                    class=""
+                  >
+                    Action
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class="group relative css-1kskd5s"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
+                >
+                  <div
+                    class="flex flex-col gap-1 font-semibold"
+                  >
+                    <span
+                      class="text-sm"
+                    >
+                      <span
+                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
+                      >
+                        e4229…37711
+                      </span>
+                    </span>
+                    <span
+                      class="text-xs text-theme-secondary-700 xl:hidden"
+                    >
+                      <span
+                        data-testid="TimeAgo"
+                      >
+                        A few seconds ago
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    data-testid="TimeAgo"
+                  >
+                    A few seconds ago
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-sycbru"
+                    color="secondary"
+                  >
+                    Unvote
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-tubsez"
+                    color="danger-bg"
+                  >
+                    To
+                  </div>
+                  <span
+                    class="text-sm"
+                  >
+                    <span
+                      class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
+                      data-testid="PendingTransactionRowRecipientLabel"
+                    />
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden w-16 lg:table-cell"
+              >
+                <div
+                  class="px-3 transition-colors duration-100 min-h-17.5 items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    class="text-theme-secondary-700"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-col items-end gap-1"
+                  >
+                    <div
+                      class="rounded px-1.5 css-xqt0aw"
+                      color="danger-bg"
+                    >
+                      <div
+                        class="flex space-x-1 items-center"
+                      >
+                        <span
+                          class="whitespace-nowrap text-sm"
+                          data-testid="Amount"
+                        >
+                          - 0.1 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="text-sm text-theme-secondary-500"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-row items-center"
+                  >
+                    Waiting...
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Signed Transaction Table > should render different status > should show as vote 1`] = `
 <DocumentFragment>
   <div
@@ -3627,6 +4071,450 @@ exports[`Signed Transaction Table > should render different status > should show
                   <span>
                     Waiting...
                   </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Signed Transaction Table > should render different status > should show as vote 2`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+    data-testid="PendingTransactions"
+  >
+    <h2
+      class="mb-3 text-2xl font-bold"
+    >
+      Pending Transactions
+    </h2>
+    <div
+      class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+      data-testid="TableWrapper"
+    >
+      <div
+        class="with-x-padding css-1m6rt2i"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="w-full table-auto"
+        >
+          <thead>
+            <tr
+              role="row"
+            >
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                colspan="1"
+                data-testid="table__th--0"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Tx ID
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border"
+                colspan="1"
+                data-testid="table__th--1"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Age
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                  >
+                    <div
+                      class="transition-transform css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-16 min-w-16"
+                colspan="1"
+                data-testid="table__th--2"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Type
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border min-w-32 min-min-w-32"
+                colspan="1"
+                data-testid="table__th--3"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div
+                    class=""
+                  >
+                    Addressing
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-1"
+                colspan="1"
+                data-testid="table__th--4"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top justify-center"
+                >
+                  <div
+                    class=""
+                  >
+                    Status
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                colspan="1"
+                data-testid="table__th--5"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top justify-end flex-row-reverse"
+                >
+                  <div
+                    class=""
+                  >
+                    Amount (ARK)
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="transition-transform rotate-180 css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border hidden lg:table-cell"
+                colspan="1"
+                data-testid="table__th--6"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top justify-end flex-row-reverse"
+                >
+                  <div
+                    class=""
+                  >
+                    Fiat Value
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="transition-transform rotate-180 css-15txs7d"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg
+                        id="chevron-down-small"
+                        viewBox="0 0 10 10"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <path
+                          d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
+                colspan="1"
+                data-testid="table__th--7"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top hidden"
+                >
+                  <div
+                    class=""
+                  >
+                    Action
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class="group relative css-1kskd5s"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
+                >
+                  <div
+                    class="flex flex-col gap-1 font-semibold"
+                  >
+                    <span
+                      class="text-sm"
+                    >
+                      <span
+                        class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                        data-testid="TruncateMiddle"
+                      >
+                        09e50…b2002
+                      </span>
+                    </span>
+                    <span
+                      class="text-xs text-theme-secondary-700 xl:hidden"
+                    >
+                      <span
+                        data-testid="TimeAgo"
+                      >
+                        A few seconds ago
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    data-testid="TimeAgo"
+                  >
+                    A few seconds ago
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-sycbru"
+                    color="secondary"
+                  >
+                    Vote
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="rounded p-1 css-tubsez"
+                    color="danger-bg"
+                  >
+                    To
+                  </div>
+                  <span
+                    class="text-sm"
+                  >
+                    <span
+                      class="no-ligatures cursor-pointer font-semibold text-theme-primary-600 css-0"
+                      data-testid="PendingTransactionRowRecipientLabel"
+                    />
+                  </span>
+                </div>
+              </td>
+              <td
+                class="hidden w-16 lg:table-cell"
+              >
+                <div
+                  class="px-3 transition-colors duration-100 min-h-17.5 items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    class="text-theme-secondary-700"
+                  >
+                    <div
+                      class="css-v0ob3f"
+                      height="16"
+                      width="16"
+                    >
+                      <svg
+                        id="clock"
+                        viewBox="0 0 20 20"
+                        x="0"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2"
+                          transform="translate(1.5 1.5)"
+                        >
+                          <circle
+                            cx="8.5"
+                            cy="8.5"
+                            r="9"
+                          />
+                          <path
+                            d="M8.5 8.5V5.2M8.5 8.5l3.9 3.9"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-col items-end gap-1"
+                  >
+                    <div
+                      class="rounded px-1.5 css-xqt0aw"
+                      color="danger-bg"
+                    >
+                      <div
+                        class="flex space-x-1 items-center"
+                      >
+                        <span
+                          class="whitespace-nowrap text-sm"
+                          data-testid="Amount"
+                        >
+                          - 0.1 DARK
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                    >
+                      <span
+                        class="whitespace-nowrap"
+                        data-testid="Amount"
+                      >
+                        0 BTC
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="hidden lg:table-cell"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                >
+                  <span
+                    class="whitespace-nowrap"
+                    data-testid="Amount"
+                  >
+                    0 BTC
+                  </span>
+                </div>
+              </td>
+              <td
+                class="text-sm text-theme-secondary-500"
+              >
+                <div
+                  class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:min-h-0 my-0 py-3"
+                >
+                  <div
+                    class="flex flex-row items-center"
+                  >
+                    Waiting...
+                  </div>
                 </div>
               </td>
             </tr>

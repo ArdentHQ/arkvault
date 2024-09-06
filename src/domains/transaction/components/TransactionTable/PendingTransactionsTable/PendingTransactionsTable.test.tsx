@@ -801,43 +801,6 @@ describe("Signed Transaction Table", () => {
 		isMultiSignatureReadyMock.mockRestore();
 	});
 
-	/* it("should call the onSign method from the responsive dropdown", async () => {
-		mockPendingTransfers(wallet);
-		const onSign = vi.fn();
-		const isMultiSignatureReadyMock = vi
-			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
-			.mockReturnValue(true);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-
-		renderResponsive(
-			<PendingTransactions
-				isCompact={false}
-				wallet={wallet}
-				pendingTransactions={pendingMultisignatureTransactions}
-				onClick={onSign}
-			/>,
-			"md",
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-
-		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
-
-		await userEvent.click(dropdown);
-
-		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--0"));
-
-		expect(onSign).toHaveBeenCalledTimes(1);
-
-		onSign.mockReset();
-
-		canBeSignedMock.mockReset();
-
-		isMultiSignatureReadyMock.mockRestore();
-	}); */
-
 	it("should handle the sign button on mobile", async () => {
 		mockPendingTransfers(wallet);
 		const onSign = vi.fn();
