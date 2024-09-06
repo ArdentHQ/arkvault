@@ -11855,7 +11855,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                 class="hidden items-center space-x-3 pb-3 pt-6 sm:flex"
               >
                 <div
-                  class="rounded-xl bg-theme-secondary-100 p-2.5 dark:bg-transparent dark:border-2 dark:border-theme-secondary-800 text-theme-navy-600 css-h1kfx5"
+                  class="rounded-xl bg-theme-secondary-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent css-h1kfx5"
                   data-testid="NetworkIcon__icon"
                   height="24"
                   width="24"
