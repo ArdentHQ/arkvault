@@ -33,6 +33,7 @@ export const PendingTransferRowMobile = ({
 						tooltip={transaction.id()}
 						showExternalIcon={false}
 						isExternal
+						data-testId="TransactionRow__transaction-id"
 					>
 						<TruncateMiddle text={transaction.id()} />
 					</Link>

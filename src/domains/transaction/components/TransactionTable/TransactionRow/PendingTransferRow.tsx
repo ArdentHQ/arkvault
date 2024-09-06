@@ -36,6 +36,7 @@ export const PendingTransferRow = ({
 							text={transaction.id()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
+							data-testId="PendingTransactionRow__transaction-id"
 						/>
 					</span>
 					<span className="text-xs text-theme-secondary-700 xl:hidden">
@@ -73,7 +74,7 @@ export const PendingTransferRow = ({
 				<span className="text-sm">
 					<TruncateMiddle
 						className="cursor-pointer font-semibold text-theme-primary-600"
-						text={transaction.recipient()}
+						text={transaction.recipient() || ""}
 						maxChars={14}
 						data-testId="PendingTransactionRowRecipientLabel"
 					/>

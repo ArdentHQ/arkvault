@@ -74,7 +74,7 @@ exports[`SearchRecipient > should call onAction when no address is selected 1`] 
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -497,7 +497,7 @@ exports[`SearchRecipient > should render a modal 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -918,7 +918,7 @@ exports[`SearchRecipient > should render a modal with custom title and descripti
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1339,7 +1339,7 @@ exports[`SearchRecipient > should render with contact on desktop 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1802,7 +1802,7 @@ exports[`SearchRecipient > should render with contact on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1982,7 +1982,7 @@ exports[`SearchRecipient > should render with my wallet on desktop 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2445,7 +2445,7 @@ exports[`SearchRecipient > should render with my wallet on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2625,7 +2625,7 @@ exports[`SearchRecipient > should render with no alias if the recipient address 
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2967,7 +2967,7 @@ exports[`SearchRecipient > should render with selected address 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3388,7 +3388,7 @@ exports[`SearchRecipient > should render with selected address on md screen 1`] 
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3919,7 +3919,7 @@ exports[`SearchRecipient > should render with selected address on mobile 1`] = `
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4178,7 +4178,7 @@ exports[`SearchRecipient > should render with selected address when no compact 1
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
