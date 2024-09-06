@@ -678,7 +678,7 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render N/A when a pending transfer has an unvalid timestamp", async () => {
+	it("should render N/A when a pending transfer has an unvalid timestamp", () => {
 		const onClick = vi.fn();
 		mockPendingTransfers(wallet);
 		vi.spyOn(fixtures.transfer, "timestamp").mockReturnValue(undefined);
