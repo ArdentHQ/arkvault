@@ -144,7 +144,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 			<div data-testid="AddressTable">
 				<div className="hidden items-center space-x-3 pb-3 pt-6 sm:flex">
 					<Icon
-						className="rounded-xl bg-theme-secondary-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
+						className="rounded-xl bg-theme-navy-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
 						data-testid="NetworkIcon__icon"
 						name={network.ticker()}
 						fallback={
