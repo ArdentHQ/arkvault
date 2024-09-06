@@ -15,11 +15,11 @@ import {
 	screen,
 	waitFor,
 	renderResponsive,
-	within,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
+import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 
 const translations = buildTranslations();
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
@@ -383,7 +383,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -407,7 +407,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		expect(document.querySelector("svg#double-arrow-right")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowToLabel")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -478,7 +478,7 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			expect(document.querySelectorAll("svg#pencil")).toHaveLength(2);
+			expect(document.querySelectorAll("svg#pencil")).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -500,7 +500,7 @@ describe("Signed Transaction Table", () => {
 			);
 
 			await waitFor(() =>
-				expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 				),
 			);
@@ -530,7 +530,7 @@ describe("Signed Transaction Table", () => {
 
 			// eslint-disable-next-line sonarjs/no-identical-functions
 			await waitFor(() =>
-				expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 				),
 			);
@@ -658,6 +658,63 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should handle onClick on a pending transfer row hen the transaction id is clicked", async () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+
+		render(
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		await userEvent.click(screen.getByTestId("PendingTransactionRow__transaction-id"));
+
+		expect(onClick).toHaveBeenCalledWith(fixtures.transfer);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render N/A when a pending transfer has an unvalid timestamp", () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+		vi.spyOn(fixtures.transfer, "timestamp").mockReturnValue(undefined);
+
+		render(
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		expect(screen.getAllByText("N/A")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render a valid timestamp when a pending transfer has a valid timestamp", () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+
+		render(
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		expect(screen.getAllByText("A few seconds ago")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	});
+
 	it.each(["light", "dark"])("should set %s shadow color on mouse events", async (theme) => {
 		mockMultisignatures(wallet);
 		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
@@ -692,7 +749,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -783,7 +840,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -799,82 +856,6 @@ describe("Signed Transaction Table", () => {
 		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
 
 		canBeSignedMock.mockReset();
-		isMultiSignatureReadyMock.mockRestore();
-	});
-
-	it("should open and close removal confirmation from the responsive dropdown", async () => {
-		mockPendingTransfers(wallet);
-		const onRemove = vi.fn();
-		const isMultiSignatureReadyMock = vi
-			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
-			.mockReturnValue(true);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-
-		renderResponsive(
-			<PendingTransactions
-				isCompact={false}
-				wallet={wallet}
-				pendingTransactions={pendingMultisignatureTransactions}
-				onRemove={onRemove}
-			/>,
-			"md",
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-
-		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
-
-		await userEvent.click(dropdown);
-
-		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--0"));
-
-		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		expect(cancelButton()).toBeInTheDocument();
-
-		await userEvent.click(cancelButton());
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		canBeSignedMock.mockReset();
-		isMultiSignatureReadyMock.mockRestore();
-	});
-
-	it("should call the onSign method from the responsive dropdown", async () => {
-		mockPendingTransfers(wallet);
-		const onSign = vi.fn();
-		const isMultiSignatureReadyMock = vi
-			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
-			.mockReturnValue(true);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
-
-		renderResponsive(
-			<PendingTransactions
-				isCompact={false}
-				wallet={wallet}
-				pendingTransactions={pendingMultisignatureTransactions}
-				onClick={onSign}
-			/>,
-			"md",
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-
-		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
-
-		await userEvent.click(dropdown);
-
-		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--0"));
-
-		expect(onSign).toHaveBeenCalledTimes(1);
-
-		onSign.mockReset();
-
-		canBeSignedMock.mockReset();
-
 		isMultiSignatureReadyMock.mockRestore();
 	});
 
@@ -910,5 +891,30 @@ describe("Signed Transaction Table", () => {
 		canBeSignedMock.mockReset();
 
 		isMultiSignatureReadyMock.mockRestore();
+	});
+
+	it("should handle the onRowClick function when the id is clicked on SignedTransactionRow", async (isCompact: boolean) => {
+		mockPendingTransfers(wallet);
+		const onClick = vi.fn();
+		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+		const awaitingMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+
+		const { asFragment } = render(
+			<PendingTransactions
+				wallet={wallet}
+				onClick={onClick}
+				pendingTransactions={pendingMultisignatureTransactions}
+				isCompact={isCompact}
+			/>,
+		);
+
+		await userEvent.click(screen.getAllByTestId("TransactionRow__transaction-id")[0]);
+
+		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
+		expect(asFragment()).toMatchSnapshot();
+
+		awaitingMock.mockReset();
+		canBeBroadcastedMock.mockReset();
+		vi.restoreAllMocks();
 	});
 });

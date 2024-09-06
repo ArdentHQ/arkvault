@@ -14,15 +14,13 @@ import { Button } from "@/app/components/Button";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useWalletActions, useWalletSync } from "@/domains/wallet/hooks";
 import { usePrevious, useWalletAlias } from "@/app/hooks";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { Avatar } from "@/app/components/Avatar";
 import { WalletIcons } from "@/app/components/WalletIcons";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
 import { isLedgerWalletCompatible } from "@/utils/wallet-utils";
 
 const WalletHeaderButton = styled.button`
-	${tw`inline-flex items-center justify-center w-8 h-8 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800)`}
+	${tw`inline-flex items-center justify-center w-4 h-4 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800) p-0`}
 `;
 
 const isUnlockBalanceButtonVisible = (wallet: Contracts.IReadWriteWallet) => {
@@ -51,20 +49,9 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 	});
 
 	return (
-		<div className="h-13 flex w-full flex-row-reverse items-center justify-between lg:w-1/2 lg:flex-row lg:pr-12">
-			<div className="flex -space-x-1">
-				<NetworkIcon
-					network={wallet.network()}
-					size="lg"
-					className="border-theme-secondary-700 text-theme-secondary-text"
-					noShadow
-					tooltipDarkTheme
-				/>
-				<Avatar size="lg" address={wallet.address()} shadowClassName="ring-theme-secondary-900" />
-			</div>
-
-			<div className="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:-mr-2 lg:ml-4">
-				<div className="flex items-center space-x-2 text-theme-secondary-text">
+		<div className="h-13 flex w-full flex-row items-center justify-between lg:w-fit lg:flex-row lg:pr-6">
+			<div className="-my-2 mr-4 flex w-full flex-col overflow-hidden py-2 lg:my-0 lg:mr-0 lg:py-0">
+				<div className="flex items-center space-x-2 text-theme-secondary-text lg:gap-2">
 					{!!alias && (
 						<span data-testid="WalletHeader__name" className="text-sm font-semibold">
 							{alias}
@@ -82,7 +69,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 					</div>
 				</div>
 
-				<div className="flex w-full items-center space-x-5">
+				<div className="flex w-full items-center space-x-4">
 					<span className="min-w-0" ref={ref}>
 						<TruncateMiddleDynamic
 							value={wallet.address()}
@@ -99,7 +86,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 							tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_ADDRESS")}
 							tooltipDarkTheme
 						>
-							<Icon name="Copy" className="hover:text-theme-secondary-500" />
+							<Icon name="Copy" size="md" className="hover:text-theme-secondary-500" />
 						</Clipboard>
 
 						{!!wallet.publicKey() && (
@@ -109,7 +96,7 @@ export const WalletAddress: VFC<WalletAddressProperties> = ({ profile, wallet })
 								tooltip={t("WALLETS.PAGE_WALLET_DETAILS.COPY_PUBLIC_KEY")}
 								tooltipDarkTheme
 							>
-								<Icon name="CopyKey" className="hover:text-theme-secondary-500" />
+								<Icon name="CopyKey" size="md" className="hover:text-theme-secondary-500" />
 							</Clipboard>
 						)}
 					</div>
@@ -146,7 +133,7 @@ export const WalletBalance: VFC<WalletBalanceProperties> = ({ profile, wallet, c
 	}, [wallet]);
 
 	return (
-		<div className="mr-auto flex flex-col">
+		<div className="mr-auto flex flex-col lg:gap-2">
 			<div className="flex items-center text-sm font-semibold text-theme-secondary-text">
 				<span>{t("COMMON.BALANCE")}:</span>
 
@@ -242,7 +229,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 
 	return (
 		<>
-			<div className="my-auto flex items-center space-x-3">
+			<div className="flex items-center justify-center gap-3">
 				<Tooltip
 					content={isSyncing ? t("WALLETS.UPDATING_WALLET_DATA") : t("WALLETS.UPDATE_WALLET_DATA")}
 					theme="dark"
@@ -293,7 +280,7 @@ export const WalletActions: VFC<WalletActionsProperties> = ({
 							!wallet.hasSyncedWithNetwork() ||
 							!isLedgerWalletCompatible(wallet)
 						}
-						className="bg-theme-dark-500 my-auto ml-3"
+						className="my-auto ml-3"
 						theme="dark"
 						onClick={handleSend}
 					>

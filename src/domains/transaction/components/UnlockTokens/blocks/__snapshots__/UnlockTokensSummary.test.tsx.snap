@@ -383,14 +383,14 @@ exports[`UnlockTokensSummary > should render 1`] = `
             class="flex items-center font-semibold"
           >
             <div
-              class="css-1v19423"
-              color="success"
+              class="rounded px-1.5 css-givenh"
+              color="success-bg"
             >
               <div
                 class="flex space-x-1 items-stretch"
               >
                 <span
-                  class="whitespace-nowrap"
+                  class="whitespace-nowrap text-sm"
                   data-testid="Amount"
                 >
                   + 100 ARK

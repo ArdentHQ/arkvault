@@ -4,11 +4,11 @@ exports[`Tabs > should react to use effect call 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-1c7zzpv"
+      class="css-rw43kq"
     >
       <button
         aria-selected="true"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -21,7 +21,7 @@ exports[`Tabs > should react to use effect call 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -46,11 +46,11 @@ exports[`Tabs > should render 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-1c7zzpv"
+      class="css-rw43kq"
     >
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -63,7 +63,7 @@ exports[`Tabs > should render 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -76,7 +76,7 @@ exports[`Tabs > should render 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
@@ -99,11 +99,11 @@ exports[`Tabs > should render wit counts 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-y2x3zz"
+      class="css-o5113s"
     >
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -122,7 +122,7 @@ exports[`Tabs > should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -141,7 +141,7 @@ exports[`Tabs > should render wit counts 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"
@@ -183,11 +183,11 @@ exports[`Tabs > should render with scroll 1`] = `
           class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
-            class="css-y2x3zz"
+            class="css-o5113s"
           >
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-1"
               role="tab"
@@ -200,7 +200,7 @@ exports[`Tabs > should render with scroll 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-2"
               role="tab"
@@ -213,7 +213,7 @@ exports[`Tabs > should render with scroll 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-3"
               role="tab"
@@ -252,11 +252,11 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
           class="relative z-0 mx-auto overflow-x-auto css-1g94s5z"
         >
           <div
-            class="css-y2x3zz"
+            class="css-o5113s"
           >
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-1"
               role="tab"
@@ -269,7 +269,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-2"
               role="tab"
@@ -282,7 +282,7 @@ exports[`Tabs > should render with scroll in dark mode 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="ring-focus css-0 tab-button"
+              class="ring-focus mx-6 css-0 tab-button"
               data-ring-focus-margin="-mx-3"
               data-testid="tabs__tab-button-3"
               role="tab"
@@ -308,11 +308,11 @@ exports[`Tabs > should render without background 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="css-y2x3zz"
+      class="css-o5113s"
     >
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-1"
         role="tab"
@@ -325,7 +325,7 @@ exports[`Tabs > should render without background 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-2"
         role="tab"
@@ -338,7 +338,7 @@ exports[`Tabs > should render without background 1`] = `
       </button>
       <button
         aria-selected="false"
-        class="ring-focus css-0 tab-button"
+        class="ring-focus mx-6 css-0 tab-button"
         data-ring-focus-margin="-mx-3"
         data-testid="tabs__tab-button-3"
         role="tab"

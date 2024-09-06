@@ -13,7 +13,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -180,14 +180,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -270,17 +270,17 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -293,14 +293,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -380,17 +380,17 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -403,14 +403,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -490,17 +490,17 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -538,7 +538,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
             class="absolute right-0 top-0 z-10 mr-4 mt-4 rounded bg-theme-primary-100 transition-all duration-100 ease-linear hover:bg-theme-primary-300 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 md:mr-8 md:mt-8"
           >
             <button
-              class="h-8 w-8 css-1hei9vx"
+              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none h-8 w-8"
               data-testid="Modal__close-button"
               type="button"
             >
@@ -726,14 +726,14 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                     class="flex items-center font-semibold"
                   >
                     <div
-                      class="css-148b4hi"
-                      color="danger"
+                      class="rounded px-1.5 css-1pbju28"
+                      color="danger-bg"
                     >
                       <div
                         class="flex space-x-1 items-stretch"
                       >
                         <span
-                          class="whitespace-nowrap"
+                          class="whitespace-nowrap text-sm"
                           data-testid="Amount"
                         >
                           - 1 DARK
@@ -1058,7 +1058,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -1225,14 +1225,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1315,17 +1315,17 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -1338,14 +1338,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1425,17 +1425,17 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -1448,14 +1448,14 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1535,17 +1535,17 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -1584,7 +1584,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -1751,14 +1751,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1841,17 +1841,17 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -1864,14 +1864,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -1951,17 +1951,17 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -1974,14 +1974,14 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2061,17 +2061,17 @@ exports[`Notifications > should render with transactions in md 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -2110,7 +2110,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -2277,7 +2277,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2344,14 +2344,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -2364,7 +2364,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2420,14 +2420,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -2440,7 +2440,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2496,14 +2496,14 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -2542,7 +2542,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -2709,14 +2709,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2799,17 +2799,17 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -2822,14 +2822,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -2909,17 +2909,17 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -2932,14 +2932,14 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
                                 class="w-3/5"
                               >
                                 <div
-                                  class="flex space-x-3 css-5gvahk"
+                                  class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
                                 >
                                   <div
                                     class="flex items-center space-x-2"
@@ -3019,17 +3019,17 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                               </td>
                               <td>
                                 <div
-                                  class="justify-end css-t4jv3s"
+                                  class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                                 >
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK
@@ -3068,7 +3068,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
           class="group css-c93wvv"
         >
           <button
-            class="css-1hei9vx"
+            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
             data-testid="NavigationBar__buttons--notifications"
             type="button"
           >
@@ -3242,7 +3242,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3309,14 +3309,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-148b4hi"
-                                    color="danger"
+                                    class="rounded px-1.5 css-1pbju28"
+                                    color="danger-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         - 1.28629325 DARK
@@ -3329,7 +3329,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3385,14 +3385,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 20 DARK
@@ -3405,7 +3405,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3461,14 +3461,14 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                     Amount
                                   </div>
                                   <div
-                                    class="css-1v19423"
-                                    color="success"
+                                    class="rounded px-1.5 css-givenh"
+                                    color="success-bg"
                                   >
                                     <div
                                       class="flex space-x-1 items-stretch"
                                     >
                                       <span
-                                        class="whitespace-nowrap"
+                                        class="whitespace-nowrap text-sm"
                                         data-testid="Amount"
                                       >
                                         + 0.0000001 DARK

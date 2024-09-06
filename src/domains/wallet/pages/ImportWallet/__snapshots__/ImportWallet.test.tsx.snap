@@ -1786,7 +1786,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -1826,7 +1826,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -1863,7 +1863,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -2072,7 +2072,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -2125,7 +2125,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -2184,7 +2184,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -2231,7 +2231,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -2333,7 +2333,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class="flex-1 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -2562,7 +2562,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                 class="css-145pihz"
               >
                 <button
-                  class="css-6419sw"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                   data-testid="Paginator__back-button"
                   type="button"
                 >
@@ -2573,7 +2573,7 @@ exports[`ImportWallet > should render as ledger import 1`] = `
                   </div>
                 </button>
                 <button
-                  class="css-fl4fi0"
+                  class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                   data-testid="Paginator__continue-button"
                   type="button"
                 >
@@ -3356,9 +3356,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Address
+               Address 
             </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
@@ -3419,9 +3419,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Balance 
+               Balance
             </div>
             <div
               class="font-semibold"
@@ -3457,9 +3457,9 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
             class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Name
+               Name
             </div>
             <div
               class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
@@ -3478,7 +3478,7 @@ exports[`ImportWallet > should render success step (lg) 1`] = `
                 />
               </div>
               <button
-                class="text-theme-navy-600 py-0 css-1vadyxw"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none py-0 text-theme-navy-600"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >
@@ -3620,9 +3620,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="mb-3 flex w-full items-center justify-between leading-5 sm:mb-0 sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Address
+               Address 
             </div>
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full !w-max sm:!w-full"
@@ -3683,9 +3683,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="flex w-full items-center justify-between leading-[17px] sm:justify-start sm:leading-5"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Balance 
+               Balance
             </div>
             <div
               class="font-semibold"
@@ -3721,9 +3721,9 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
             class="flex w-full items-center justify-between sm:justify-start"
           >
             <div
-              class="no-ligatures text-md w-20 flex-shrink-0 font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:leading-5"
+              class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
             >
-              Name
+               Name
             </div>
             <div
               class="flex w-full min-w-0 items-center justify-end font-semibold leading-[17px] sm:justify-between sm:leading-5"
@@ -3742,7 +3742,7 @@ exports[`ImportWallet > should render success step (xs) 1`] = `
                 />
               </div>
               <button
-                class="text-theme-navy-600 py-0 css-1vadyxw"
+                class="relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none py-0 text-theme-navy-600"
                 data-testid="ImportWallet__edit-alias"
                 type="button"
               >

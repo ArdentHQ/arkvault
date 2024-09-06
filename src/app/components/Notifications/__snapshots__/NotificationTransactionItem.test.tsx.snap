@@ -6,7 +6,7 @@ exports[`Notifications > should render in xs 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
@@ -62,14 +62,14 @@ exports[`Notifications > should render in xs 1`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -91,7 +91,7 @@ exports[`Notifications > should render in xs 2`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
@@ -147,14 +147,14 @@ exports[`Notifications > should render in xs 2`] = `
                 Amount
               </div>
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -176,14 +176,14 @@ exports[`Notifications > should render in xs 3`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-rjc6e4"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -263,17 +263,17 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="justify-end css-160cp05"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -295,14 +295,14 @@ exports[`Notifications > should render in xs 4`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-rjc6e4"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -382,17 +382,17 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="justify-end css-160cp05"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -414,14 +414,14 @@ exports[`Notifications > should render in xs 5`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-rjc6e4"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -501,17 +501,17 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="justify-end css-160cp05"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK
@@ -533,14 +533,14 @@ exports[`Notifications > should render notification item 1`] = `
     <tbody>
       <div>
         <tr
-          class="group css-155s9if"
+          class="group css-1kskd5s"
           data-testid="TableRow"
         >
           <td
             class="w-3/5"
           >
             <div
-              class="flex space-x-3 css-rjc6e4"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
             >
               <div
                 class="flex items-center -space-x-1"
@@ -620,17 +620,17 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="justify-end css-160cp05"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
             >
               <div
-                class="css-1v19423"
-                color="success"
+                class="rounded px-1.5 css-givenh"
+                color="success-bg"
               >
                 <div
                   class="flex space-x-1 items-stretch"
                 >
                   <span
-                    class="whitespace-nowrap"
+                    class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
                     + 20 DARK

@@ -63,7 +63,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="flex flex-1 flex-col justify-center text-center css-ycib48"
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
         >
           <div
             class="mx-auto px-10 lg:container"
@@ -295,7 +295,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 class="relative"
               >
                 <button
-                  class="css-6419sw"
+                  class="css-9z53t5"
                   data-testid="clipboard-button__wrapper"
                   type="button"
                 >
@@ -307,7 +307,7 @@ exports[`ApplicationError > should render with error message and reload 1`] = `
                 </button>
               </div>
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="ApplicationError__button--reload"
                 type="button"
               >
@@ -389,7 +389,7 @@ exports[`ApplicationError > should render without error message 1`] = `
         class="flex flex-1 flex-col"
       >
         <div
-          class="flex flex-1 flex-col justify-center text-center css-ycib48"
+          class="w-full py-4 first:pt-8 last:pb-8 flex flex-1 flex-col justify-center text-center css-9mualq"
         >
           <div
             class="mx-auto px-10 lg:container"
@@ -584,7 +584,7 @@ exports[`ApplicationError > should render without error message 1`] = `
               class="mx-auto mt-8 flex max-w-md items-center justify-center space-x-4"
             >
               <button
-                class="css-fl4fi0"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                 data-testid="ApplicationError__button--reload"
                 type="button"
               >

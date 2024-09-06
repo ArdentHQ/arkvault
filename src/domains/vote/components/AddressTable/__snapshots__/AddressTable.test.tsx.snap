@@ -3,7 +3,7 @@
 exports[`AddressTable > should render 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -25,7 +25,7 @@ exports[`AddressTable > should render 1`] = `
                 role="row"
               >
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-80 min-w-80"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-80 min-w-80"
                   colspan="1"
                   data-testid="table__th--0"
                   role="columnheader"
@@ -71,7 +71,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--1"
                   role="columnheader"
@@ -117,7 +117,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--2"
                   role="columnheader"
@@ -163,7 +163,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-20 min-w-20"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-20 min-w-20"
                   colspan="1"
                   data-testid="table__th--3"
                   role="columnheader"
@@ -179,7 +179,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-20 min-w-20"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-20 min-w-20"
                   colspan="1"
                   data-testid="table__th--4"
                   role="columnheader"
@@ -195,7 +195,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-30 min-w-30"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-30 min-w-30"
                   colspan="1"
                   data-testid="table__th--5"
                   role="columnheader"
@@ -211,7 +211,7 @@ exports[`AddressTable > should render 1`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                   colspan="1"
                   data-testid="table__th--6"
                   role="columnheader"
@@ -239,7 +239,7 @@ exports[`AddressTable > should render 1`] = `
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -308,7 +308,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -320,7 +320,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
@@ -369,7 +369,7 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -380,7 +380,7 @@ exports[`AddressTable > should render 1`] = `
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   >
                     <span>
                       <div
@@ -423,18 +423,18 @@ exports[`AddressTable > should render 1`] = `
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -460,7 +460,7 @@ exports[`AddressTable > should render 1`] = `
 exports[`AddressTable > should render when the maximum votes is greater than 1 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -482,7 +482,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 role="row"
               >
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-80 min-w-80"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-80 min-w-80"
                   colspan="1"
                   data-testid="table__th--0"
                   role="columnheader"
@@ -528,7 +528,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--1"
                   role="columnheader"
@@ -574,7 +574,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--2"
                   role="columnheader"
@@ -620,7 +620,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-20 min-w-20"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-20 min-w-20"
                   colspan="1"
                   data-testid="table__th--3"
                   role="columnheader"
@@ -636,7 +636,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-30 min-w-30"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-30 min-w-30"
                   colspan="1"
                   data-testid="table__th--4"
                   role="columnheader"
@@ -652,7 +652,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                   colspan="1"
                   data-testid="table__th--5"
                   role="columnheader"
@@ -680,7 +680,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -749,7 +749,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -761,7 +761,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <div
                       class="flex items-center space-x-3 overflow-hidden"
@@ -817,7 +817,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   >
                     <div
                       class="font-semibold text-theme-secondary-400"
@@ -837,18 +837,18 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >
@@ -874,7 +874,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
 exports[`AddressTable > should render with voting delegates and handle exception 1`] = `
 <DocumentFragment>
   <div
-    class=" css-ycib48"
+    class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -896,7 +896,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 role="row"
               >
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-80 min-w-80"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-80 min-w-80"
                   colspan="1"
                   data-testid="table__th--0"
                   role="columnheader"
@@ -942,7 +942,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--1"
                   role="columnheader"
@@ -988,7 +988,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-60 min-w-60"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-60 min-w-60"
                   colspan="1"
                   data-testid="table__th--2"
                   role="columnheader"
@@ -1034,7 +1034,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-20 min-w-20"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-20 min-w-20"
                   colspan="1"
                   data-testid="table__th--3"
                   role="columnheader"
@@ -1050,7 +1050,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border w-20 min-w-20"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-20 min-w-20"
                   colspan="1"
                   data-testid="table__th--4"
                   role="columnheader"
@@ -1066,7 +1066,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell no-border w-30 min-w-30"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-30 min-w-30"
                   colspan="1"
                   data-testid="table__th--5"
                   role="columnheader"
@@ -1082,7 +1082,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                   colspan="1"
                   data-testid="table__th--6"
                   role="columnheader"
@@ -1110,7 +1110,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   data-testid="AddressRow__wallet"
                 >
                   <div
-                    class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+                    class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
                   >
                     <div
                       class="w-40 flex-1"
@@ -1179,7 +1179,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden xl:table-cell"
                 >
                   <div
-                    class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                   >
                     <span
                       class="whitespace-nowrap"
@@ -1191,7 +1191,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                 </td>
                 <td>
                   <div
-                    class="font-semibold space-x-4 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
                   >
                     <span
                       class="text-theme-secondary-400"
@@ -1204,30 +1204,30 @@ exports[`AddressTable > should render with voting delegates and handle exception
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
                   />
                 </td>
                 <td>
                   <div
-                    class="justify-center css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
                   />
                 </td>
                 <td
                   class="hidden lg:table-cell"
                 >
                   <div
-                    class="justify-center space-x-2 css-o5w6qc"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
                   />
                 </td>
                 <td
                   class="pr-6"
                 >
                   <div
-                    class="justify-end !pr-0 css-160cp05"
+                    class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
                   >
                     <div>
                       <button
-                        class="css-6419sw"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                         data-testid="AddressRow__select-0"
                         type="button"
                       >

@@ -13,7 +13,7 @@ exports[`Dashboard > should render 1`] = `
         class="flex h-14 items-center justify-center space-x-4"
       >
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--receive"
           type="button"
         >
@@ -53,7 +53,7 @@ exports[`Dashboard > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--home"
           type="button"
         >
@@ -90,7 +90,7 @@ exports[`Dashboard > should render 1`] = `
           type="vertical"
         />
         <button
-          class="text-theme-secondary-700 dark:text-theme-secondary-600 css-1hei9vx"
+          class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-secondary-700 dark:text-theme-secondary-600"
           data-testid="NavigationBar__buttons__mobile--send"
           type="button"
         >
@@ -301,7 +301,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--server-status"
                       type="button"
                     >
@@ -354,7 +354,7 @@ exports[`Dashboard > should render 1`] = `
                     class="group css-c93wvv"
                   >
                     <button
-                      class="css-1hei9vx"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                       data-testid="NavigationBar__buttons--notifications"
                       type="button"
                     >
@@ -413,7 +413,7 @@ exports[`Dashboard > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--receive"
                     type="button"
                   >
@@ -460,7 +460,7 @@ exports[`Dashboard > should render 1`] = `
                   class="css-c93wvv"
                 >
                   <button
-                    class="css-1hei9vx"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none"
                     data-testid="NavigationBar__buttons--send"
                     type="button"
                   >
@@ -562,7 +562,7 @@ exports[`Dashboard > should render 1`] = `
       class="flex flex-1 flex-col"
     >
       <div
-        class=" css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -648,7 +648,7 @@ exports[`Dashboard > should render 1`] = `
                 >
                   <div>
                     <button
-                      class="css-wqh5n3"
+                      class="px-5 py-3 space-x-3 text-base relative items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white hidden md:inline-flex"
                       data-testid="WalletControls__import-ledger"
                       type="button"
                     >
@@ -687,7 +687,7 @@ exports[`Dashboard > should render 1`] = `
                     </button>
                   </div>
                   <button
-                    class="css-6419sw"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                     data-testid="WalletControls__import-wallet"
                     type="button"
                   >
@@ -733,7 +733,7 @@ exports[`Dashboard > should render 1`] = `
                     </div>
                   </button>
                   <button
-                    class="css-fl4fi0"
+                    class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
                     data-testid="WalletControls__create-wallet"
                     type="button"
                   >
@@ -1327,7 +1327,7 @@ exports[`Dashboard > should render 1`] = `
         </div>
       </div>
       <div
-        class="mt-4 md:mt-0 css-ycib48"
+        class="w-full py-4 first:pt-8 last:pb-8 mt-4 md:mt-0 css-9mualq"
       >
         <div
           class="mx-auto px-10 lg:container"
@@ -1354,7 +1354,7 @@ exports[`Dashboard > should render 1`] = `
                     role="row"
                   >
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-1"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1"
                       colspan="1"
                       data-testid="table__th--0"
                       role="columnheader"
@@ -1370,7 +1370,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden lg:table-cell w-50 min-w-50"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-50 min-w-50"
                       colspan="1"
                       data-testid="table__th--1"
                       role="columnheader"
@@ -1416,7 +1416,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                       colspan="1"
                       data-testid="table__th--2"
                       role="columnheader"
@@ -1432,7 +1432,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table w-96 min-w-96"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                       colspan="1"
                       data-testid="table__th--3"
                       role="columnheader"
@@ -1448,7 +1448,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                       colspan="1"
                       data-testid="table__th--4"
                       role="columnheader"
@@ -1494,7 +1494,7 @@ exports[`Dashboard > should render 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell w-28 min-w-28"
+                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell w-28 min-w-28"
                       colspan="1"
                       data-testid="table__th--5"
                       role="columnheader"
@@ -1515,12 +1515,12 @@ exports[`Dashboard > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group css-155s9if"
+                    class="group css-1kskd5s"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-5gvahk"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1583,7 +1583,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1595,7 +1595,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1664,7 +1664,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1698,21 +1698,21 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 400,000 DARK
@@ -1726,7 +1726,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1738,12 +1738,12 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-155s9if"
+                    class="group css-1kskd5s"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-5gvahk"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -1806,7 +1806,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -1818,7 +1818,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -1887,7 +1887,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -1921,21 +1921,21 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 400,000 DARK
@@ -1949,7 +1949,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -1961,12 +1961,12 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-155s9if"
+                    class="group css-1kskd5s"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-5gvahk"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -2029,7 +2029,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -2041,7 +2041,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -2110,7 +2110,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -2144,21 +2144,21 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 50,000 DARK
@@ -2172,7 +2172,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"
@@ -2184,12 +2184,12 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group css-155s9if"
+                    class="group css-1kskd5s"
                     data-testid="TableRow"
                   >
                     <td>
                       <div
-                        class="css-5gvahk"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
                       >
                         <a
                           class="ring-focus group inline-block css-7nwwrh"
@@ -2252,7 +2252,7 @@ exports[`Dashboard > should render 1`] = `
                       class="table-cell md:hidden lg:table-cell"
                     >
                       <div
-                        class="text-theme-secondary-text css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
                       >
                         <span
                           class="whitespace-nowrap"
@@ -2264,7 +2264,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="flex items-center space-x-2"
@@ -2333,7 +2333,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="space-x-4 css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
                       >
                         <div
                           class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
@@ -2367,21 +2367,21 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                     <td>
                       <div
-                        class="justify-end css-12appi5"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
                       >
                         <div
                           class="flex items-center"
                           data-testid="TransactionAmount__tooltip"
                         >
                           <div
-                            class="css-1q2kz5x"
-                            color="success"
+                            class="rounded px-1.5 css-1jspzfx"
+                            color="success-bg"
                           >
                             <div
                               class="flex space-x-1 items-center"
                             >
                               <span
-                                class="whitespace-nowrap"
+                                class="whitespace-nowrap text-sm"
                                 data-testid="Amount"
                               >
                                 + 50,000 DARK
@@ -2395,7 +2395,7 @@ exports[`Dashboard > should render 1`] = `
                       class="hidden xl:block"
                     >
                       <div
-                        class="justify-end css-t4jv3s"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <span
                           class="whitespace-nowrap text-theme-secondary-text"

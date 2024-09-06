@@ -30,7 +30,7 @@ export const TotalAmountBox = ({ ticker, ...properties }: Properties) => {
 			<div className="relative px-6 py-4 sm:py-5">
 				<div className="flex flex-col divide-y divide-theme-secondary-300 dark:divide-theme-secondary-800 sm:flex-row sm:divide-x sm:divide-y-0">
 					<div className="mb-4 flex flex-col justify-center px-4 text-center sm:mb-0 sm:w-1/2 sm:p-0 sm:text-left">
-						<AmountLabel>{t("TRANSACTION.TRANSACTION_AMOUNT")}</AmountLabel>
+						<AmountLabel>{t("TRANSACTION.TRANSACTIONS_AMOUNT")}</AmountLabel>
 						<Amount className="text-md mt-1 font-semibold" ticker={ticker} value={amount} />
 					</div>
 

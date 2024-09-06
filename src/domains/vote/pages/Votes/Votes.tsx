@@ -164,7 +164,7 @@ export const Votes: FC = () => {
 			)}
 
 			{isSelectDelegateStep && (
-				<Section innerClassName="lg:pb-28 md:pb-18 sm:pb-16 pb-18">
+				<Section innerClassName="lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18">
 					<DelegateTable
 						searchQuery={searchQuery}
 						delegates={filteredDelegates}
@@ -179,7 +179,7 @@ export const Votes: FC = () => {
 						isCompact={useCompactTables}
 						subtitle={
 							resignedDelegateVotes.length > 0 ? (
-								<Alert className="mb-6">
+								<Alert className="mb-4">
 									<div data-testid="Votes__resigned-vote">
 										<Trans
 											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"

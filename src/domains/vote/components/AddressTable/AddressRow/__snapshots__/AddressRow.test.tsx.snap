@@ -12,7 +12,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -81,7 +81,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -93,7 +93,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -142,7 +142,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -153,7 +153,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -196,7 +196,7 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -256,11 +256,11 @@ exports[`AddressRow > should emit action on select button 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -291,7 +291,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -360,7 +360,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -372,7 +372,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -421,7 +421,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -432,7 +432,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -475,7 +475,7 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -571,11 +571,11 @@ exports[`AddressRow > should render for a multisignature wallet 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -606,7 +606,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -675,7 +675,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -687,7 +687,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -736,7 +736,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -747,7 +747,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -790,7 +790,7 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -850,11 +850,11 @@ exports[`AddressRow > should render tooltip wallet when ledger and incompatible 
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="AddressRow__select-0"
                 disabled=""
                 type="button"
@@ -886,7 +886,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -955,7 +955,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -967,7 +967,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1016,7 +1016,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1027,7 +1027,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -1070,7 +1070,7 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1130,11 +1130,11 @@ exports[`AddressRow > should render when isCompact = false 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1165,7 +1165,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -1234,7 +1234,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1246,7 +1246,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1295,7 +1295,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1306,7 +1306,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
           >
             <span>
               <div
@@ -1349,7 +1349,7 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1409,11 +1409,11 @@ exports[`AddressRow > should render when isCompact = true 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-t4jv3s"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1444,7 +1444,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1513,7 +1513,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1525,7 +1525,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1574,7 +1574,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -1585,7 +1585,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -1628,7 +1628,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -1688,11 +1688,11 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -1714,7 +1714,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1783,7 +1783,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1795,7 +1795,7 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <span
               class="text-theme-secondary-400"
@@ -1808,30 +1808,30 @@ exports[`AddressRow > should render when wallet hasn't voted 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           />
         </td>
         <td
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-1"
                 type="button"
               >
@@ -1862,7 +1862,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -1931,7 +1931,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -1943,7 +1943,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -1992,7 +1992,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -2003,7 +2003,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -2046,7 +2046,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2106,11 +2106,11 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2132,7 +2132,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2190,7 +2190,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2202,7 +2202,7 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <span
               class="text-theme-secondary-400"
@@ -2215,30 +2215,30 @@ exports[`AddressRow > should render when wallet not found for votes 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           />
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           />
         </td>
         <td
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           />
         </td>
         <td
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-qrwjsp"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                 data-testid="AddressRow__select-1"
                 disabled=""
                 type="button"
@@ -2270,7 +2270,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2339,7 +2339,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2351,7 +2351,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2400,7 +2400,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #1
@@ -2409,7 +2409,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -2452,7 +2452,7 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2512,11 +2512,11 @@ exports[`AddressRow > should render with active delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2547,7 +2547,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2616,7 +2616,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2628,7 +2628,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <span
               class="text-theme-secondary-400"
@@ -2639,7 +2639,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2659,7 +2659,7 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2719,11 +2719,11 @@ exports[`AddressRow > should render with isCompact = false when the maximum vote
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -2754,7 +2754,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -2823,7 +2823,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -2835,7 +2835,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -2891,7 +2891,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -2911,7 +2911,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -2971,11 +2971,11 @@ exports[`AddressRow > should render with isCompact = false when the wallet has e
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3006,7 +3006,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -3075,7 +3075,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3087,7 +3087,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3143,7 +3143,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3163,7 +3163,7 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -3223,11 +3223,11 @@ exports[`AddressRow > should render with isCompact = false when the wallet has m
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3258,7 +3258,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3327,7 +3327,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3339,7 +3339,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="font-semibold space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
           >
             <span
               class="text-theme-secondary-400"
@@ -3350,7 +3350,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
         </td>
         <td>
           <div
-            class="justify-center css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3370,7 +3370,7 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -3430,11 +3430,11 @@ exports[`AddressRow > should render with isCompact = true when the maximum votes
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-t4jv3s"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3465,7 +3465,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3534,7 +3534,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3546,7 +3546,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="font-semibold space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3602,7 +3602,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
         </td>
         <td>
           <div
-            class="justify-center css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3622,7 +3622,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -3682,11 +3682,11 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ex
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-t4jv3s"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3717,7 +3717,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-3 css-5gvahk"
+            class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
           >
             <div
               class="w-40 flex-1"
@@ -3786,7 +3786,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -3798,7 +3798,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="font-semibold space-x-3 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -3854,7 +3854,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
         </td>
         <td>
           <div
-            class="justify-center css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
           >
             <div
               class="font-semibold text-theme-secondary-400"
@@ -3874,7 +3874,7 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-12appi5"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -3934,11 +3934,11 @@ exports[`AddressRow > should render with isCompact = true when the wallet has ma
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-t4jv3s"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="-mr-3 text-theme-primary-600 hover:text-theme-primary-700 css-1hei9vx"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -3969,7 +3969,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -4038,7 +4038,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -4050,7 +4050,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4099,7 +4099,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span
               class="text-theme-secondary-400"
@@ -4110,7 +4110,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -4153,7 +4153,7 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -4213,11 +4213,11 @@ exports[`AddressRow > should render with resigned delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >
@@ -4248,7 +4248,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           data-testid="AddressRow__wallet"
         >
           <div
-            class="cursor-pointer group transition duration-300 space-x-4 css-rjc6e4"
+            class="flex items-center px-3 my-1 min-h-17.5 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-4"
           >
             <div
               class="w-40 flex-1"
@@ -4317,7 +4317,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden xl:table-cell"
         >
           <div
-            class="justify-end font-semibold text-theme-secondary-text whitespace-nowrap css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
           >
             <span
               class="whitespace-nowrap"
@@ -4329,7 +4329,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="font-semibold space-x-4 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold space-x-4"
           >
             <div
               class="flex items-center space-x-3 overflow-hidden"
@@ -4378,7 +4378,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center font-semibold text-theme-secondary-text css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center font-semibold text-theme-secondary-text"
           >
             <span>
               #100
@@ -4387,7 +4387,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
         </td>
         <td>
           <div
-            class="justify-center css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center"
           >
             <span>
               <div
@@ -4431,7 +4431,7 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="justify-center space-x-2 css-o5w6qc"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center space-x-2"
           >
             <div
               class="inline-block p-1 text-theme-secondary-700"
@@ -4491,11 +4491,11 @@ exports[`AddressRow > should render with standby delegate 1`] = `
           class="pr-6"
         >
           <div
-            class="justify-end !pr-0 css-160cp05"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end !pr-0"
           >
             <div>
               <button
-                class="css-6419sw"
+                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white"
                 data-testid="AddressRow__select-0"
                 type="button"
               >

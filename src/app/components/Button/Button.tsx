@@ -1,14 +1,13 @@
 import React from "react";
-import { styled } from "twin.macro";
 
 import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
-import { ButtonVariant, ResponsiveButtonVariant, LayoutBreakpoint, Size, Theme } from "@/types";
+import { ButtonVariant, Size, Theme } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;
-	responsiveVariant?: ResponsiveButtonVariant;
 	theme?: Theme;
 	size?: Size;
 	roundedClassName?: string;
@@ -17,26 +16,25 @@ type ButtonProperties = {
 	icon?: string;
 	iconSize?: Size;
 	iconPosition?: "left" | "right";
-	showOn?: LayoutBreakpoint;
 	isCompact?: boolean;
 } & React.ButtonHTMLAttributes<any>;
-
-const StyledButton = styled.button<ButtonProperties>(getStyles);
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 	(
 		{
 			variant = "primary",
-			responsiveVariant,
 			children,
 			icon,
 			isLoading,
 			iconSize,
 			iconPosition = "left",
 			type = "button",
-			showOn,
 			roundedClassName,
 			sizeClassName,
+			size,
+			theme,
+			isCompact,
+			disabled,
 			className,
 			...properties
 		}: ButtonProperties,
@@ -69,22 +67,28 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProperties>(
 			);
 		};
 
-		const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
+		const initialStyles = getStyles({
+			disabled,
+			isCompact,
+			roundedClassName,
+			size,
+			sizeClassName,
+			theme,
+			variant,
+		});
+
+		// const getClassName = () => [className, sizeClassName, roundedClassName].filter(Boolean).join(" ") || undefined;
 
 		return (
-			<StyledButton
+			<button
 				type={type}
-				variant={variant}
 				ref={reference}
-				responsiveVariant={responsiveVariant}
-				showOn={showOn}
-				roundedClassName={roundedClassName}
-				sizeClassName={sizeClassName}
-				className={getClassName()}
+				disabled={disabled}
+				className={twMerge(initialStyles, sizeClassName, roundedClassName, className)}
 				{...properties}
 			>
 				<div className="flex items-center space-x-2">{renderContent()}</div>
-			</StyledButton>
+			</button>
 		);
 	},
 );

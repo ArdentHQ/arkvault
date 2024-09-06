@@ -8,13 +8,13 @@ exports[`VotesHeader > should render a different title if on select delegate ste
     <h1
       class="mb-0 text-lg"
     >
-      Select a Delegate
+      Select Delegate
     </h1>
     <div
       class="flex items-center text-theme-primary-200"
     >
       <div
-        class="-my-2"
+        class="relative -my-2"
         data-testid="HeaderSearchBar"
       >
         <div
@@ -27,6 +27,11 @@ exports[`VotesHeader > should render a different title if on select delegate ste
             <div
               class="flex h-5 items-center gap-2"
             >
+              <span
+                class="hidden md:block"
+              >
+                Search
+              </span>
               <div
                 class="css-1i4b0eq"
                 height="20"
@@ -75,11 +80,6 @@ exports[`VotesHeader > should render a different title if on select delegate ste
                   </defs>
                 </svg>
               </div>
-              <span
-                class="hidden md:block"
-              >
-                Search
-              </span>
             </div>
           </button>
         </div>
@@ -146,7 +146,7 @@ exports[`VotesHeader > should render a different title if on select delegate ste
 exports[`VotesHeader > should render responsive (md) 1`] = `
 <DocumentFragment>
   <div
-    class="border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-835596"
+    class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
   >
     <div
       class="mx-auto px-10 lg:container"
@@ -179,7 +179,7 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
             class="flex items-center text-theme-primary-200"
           >
             <div
-              class="-my-2"
+              class="relative -my-2"
               data-testid="HeaderSearchBar"
             >
               <div
@@ -192,6 +192,11 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
                   <div
                     class="flex h-5 items-center gap-2"
                   >
+                    <span
+                      class="hidden md:block"
+                    >
+                      Search
+                    </span>
                     <div
                       class="css-1i4b0eq"
                       height="20"
@@ -240,11 +245,6 @@ exports[`VotesHeader > should render responsive (md) 1`] = `
                         </defs>
                       </svg>
                     </div>
-                    <span
-                      class="hidden md:block"
-                    >
-                      Search
-                    </span>
                   </div>
                 </button>
               </div>
@@ -325,7 +325,7 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
       class="flex items-center text-theme-primary-200"
     >
       <div
-        class="-my-2"
+        class="relative -my-2"
         data-testid="HeaderSearchBar"
       >
         <div
@@ -338,6 +338,11 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
             <div
               class="flex h-5 items-center gap-2"
             >
+              <span
+                class="hidden md:block"
+              >
+                Search
+              </span>
               <div
                 class="css-1i4b0eq"
                 height="20"
@@ -386,11 +391,6 @@ exports[`VotesHeader > should render responsive (xs) 1`] = `
                   </defs>
                 </svg>
               </div>
-              <span
-                class="hidden md:block"
-              >
-                Search
-              </span>
             </div>
           </button>
         </div>

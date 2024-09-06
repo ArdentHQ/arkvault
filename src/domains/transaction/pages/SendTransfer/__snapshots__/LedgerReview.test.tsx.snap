@@ -174,7 +174,7 @@ exports[`TransferLedgerReview > should render 1`] = `
               <span
                 class="css-1rmjubp"
               >
-                Transaction Amount
+                Transaction(s) Amount
               </span>
               <span
                 class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -446,7 +446,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               <span
                 class="css-1rmjubp"
               >
-                Transaction Amount
+                Transaction(s) Amount
               </span>
               <span
                 class="whitespace-nowrap text-md mt-1 font-semibold"
@@ -725,7 +725,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               <span
                 class="css-1rmjubp"
               >
-                Transaction Amount
+                Transaction(s) Amount
               </span>
               <span
                 class="whitespace-nowrap text-md mt-1 font-semibold"

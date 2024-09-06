@@ -3,14 +3,14 @@
 exports[`AmountLabel > should render 1`] = `
 <DocumentFragment>
   <div
-    class="css-1v19423"
-    color="success"
+    class="rounded px-1.5 css-givenh"
+    color="success-bg"
   >
     <div
       class="flex space-x-1 items-stretch"
     >
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -23,14 +23,14 @@ exports[`AmountLabel > should render 1`] = `
 exports[`AmountLabel > should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q2kz5x"
-    color="success"
+    class="rounded px-1.5 css-1jspzfx"
+    color="success-bg"
   >
     <div
       class="flex space-x-1 items-center"
     >
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -43,15 +43,15 @@ exports[`AmountLabel > should render compact 1`] = `
 exports[`AmountLabel > should render compact with hint 1`] = `
 <DocumentFragment>
   <div
-    class="css-1q2kz5x"
-    color="success"
+    class="rounded pr-1.5 css-1jspzfx"
+    color="success-bg"
   >
     <div
       class="flex space-x-1 items-center"
     >
       <div
         aria-describedby="tippy-2"
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 h-5 w-5 rounded-full"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 h-5 w-5"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -85,7 +85,7 @@ exports[`AmountLabel > should render compact with hint 1`] = `
         </div>
       </div>
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -98,14 +98,14 @@ exports[`AmountLabel > should render compact with hint 1`] = `
 exports[`AmountLabel > should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="css-148b4hi"
-    color="danger"
+    class="rounded px-1.5 css-1pbju28"
+    color="danger-bg"
   >
     <div
       class="flex space-x-1 items-stretch"
     >
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         - 10 ARK
@@ -118,15 +118,15 @@ exports[`AmountLabel > should render negative 1`] = `
 exports[`AmountLabel > should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="css-1v19423"
-    color="success"
+    class="rounded pr-1.5 css-givenh"
+    color="success-bg"
   >
     <div
       class="flex space-x-1 items-stretch"
     >
       <div
         aria-describedby="tippy-1"
-        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-600 -ml-1.5 px-2"
+        class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
         data-testid="AmountLabel__hint"
       >
         <div
@@ -160,7 +160,7 @@ exports[`AmountLabel > should render with hint 1`] = `
         </div>
       </div>
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         + 10 ARK
@@ -173,14 +173,14 @@ exports[`AmountLabel > should render with hint 1`] = `
 exports[`AmountLabel > should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="css-vy12ck"
+    class="rounded px-1.5 css-vy12ck"
     color="neutral"
   >
     <div
       class="flex space-x-1 items-stretch"
     >
       <span
-        class="whitespace-nowrap"
+        class="whitespace-nowrap text-sm"
         data-testid="Amount"
       >
         0 ARK

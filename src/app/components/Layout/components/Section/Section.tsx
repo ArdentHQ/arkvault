@@ -1,6 +1,7 @@
 import cn from "classnames";
 import React from "react";
 import tw, { css, styled } from "twin.macro";
+import { twMerge } from "tailwind-merge";
 
 interface SectionProperties {
 	children: React.ReactNode;
@@ -12,8 +13,6 @@ interface SectionProperties {
 }
 
 const SectionWrapper = styled.div<{ backgroundClassName?: string; border?: boolean }>`
-	${tw`w-full py-4 first:pt-8 last:pb-8`};
-
 	${({ border }) =>
 		border && [
 			tw`border-b`,
@@ -46,8 +45,12 @@ export const Section = ({
 	<SectionWrapper
 		backgroundClassName={backgroundClassName}
 		border={border}
-		className={cn(className, backgroundClassName, { [borderClassName]: border, hasBorder: border })}
+		className={twMerge(
+			"w-full py-4 first:pt-8 last:pb-8",
+			cn(backgroundClassName, { [borderClassName]: border, hasBorder: border }),
+			className,
+		)}
 	>
-		<div className={cn("mx-auto px-10 lg:container", innerClassName)}>{children}</div>
+		<div className={twMerge("mx-auto px-10 lg:container", innerClassName)}>{children}</div>
 	</SectionWrapper>
 );
