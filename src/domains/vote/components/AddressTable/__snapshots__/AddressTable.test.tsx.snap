@@ -12,10 +12,10 @@ exports[`AddressTable > should render 1`] = `
         data-testid="AddressTable"
       >
         <div
-          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+          class="hidden items-center space-x-3 pb-3 pt-6 sm:flex"
         >
           <div
-            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            class="rounded-xl bg-theme-secondary-100 p-2.5 dark:bg-transparent dark:border-2 dark:border-theme-secondary-800 text-theme-navy-600 css-h1kfx5"
             data-testid="NetworkIcon__icon"
             height="24"
             width="24"
@@ -158,7 +158,7 @@ exports[`AddressTable > should render 1`] = `
                     <div
                       class=""
                     >
-                      Validated
+                      Delegate
                     </div>
                     <div
                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -497,10 +497,10 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
         data-testid="AddressTable"
       >
         <div
-          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+          class="hidden items-center space-x-3 pb-3 pt-6 sm:flex"
         >
           <div
-            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            class="rounded-xl bg-theme-secondary-100 p-2.5 dark:bg-transparent dark:border-2 dark:border-theme-secondary-800 text-theme-navy-600 css-h1kfx5"
             data-testid="NetworkIcon__icon"
             height="24"
             width="24"
@@ -643,7 +643,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
                     <div
                       class=""
                     >
-                      Validated
+                      Delegate
                     </div>
                     <div
                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
@@ -939,10 +939,10 @@ exports[`AddressTable > should render with voting delegates and handle exception
         data-testid="AddressTable"
       >
         <div
-          class="hidden sm:flex items-center space-x-3 pt-6 pb-3"
+          class="hidden items-center space-x-3 pb-3 pt-6 sm:flex"
         >
           <div
-            class="bg-theme-secondary-100 dark:bg-theme-secondary-800 rounded-xl p-2.5 css-h1kfx5"
+            class="rounded-xl bg-theme-secondary-100 p-2.5 dark:bg-transparent dark:border-2 dark:border-theme-secondary-800 text-theme-navy-600 css-h1kfx5"
             data-testid="NetworkIcon__icon"
             height="24"
             width="24"
@@ -1085,7 +1085,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
                     <div
                       class=""
                     >
-                      Validated
+                      Delegate
                     </div>
                     <div
                       class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
