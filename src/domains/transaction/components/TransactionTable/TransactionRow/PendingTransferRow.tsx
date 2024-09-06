@@ -68,7 +68,7 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-0 my-0 py-3" isCompact={isCompact}>
-				<Label color="danger-bg" size="xs" noBorder className="rounded p-1">
+				<Label color="danger-bg" size="xs" noBorder className="rounded py-1 px-[11px]">
 					{t("COMMON.TO")}
 				</Label>
 				<span className="text-sm">
