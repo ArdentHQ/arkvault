@@ -143,7 +143,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 	return (
 		<Section className="py-0 pt-0 first:pt-1 sm:first:pt-0">
 			<div data-testid="AddressTable">
-				<div className="hidden sm:flex items-center space-x-4 pt-6 pb-3">
+				<div className="hidden sm:flex items-center space-x-3 pt-6 pb-3">
 					<Icon
 						className="bg-theme-secondary-100 rounded-xl p-2.5"
 						data-testid="NetworkIcon__icon"
