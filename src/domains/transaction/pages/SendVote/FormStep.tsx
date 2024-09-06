@@ -6,10 +6,10 @@ import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
-import {DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
-import {Address} from "@/app/components/Address";
-import {ThemeIcon} from "@/app/components/Icon";
-import {VoteTransactionType} from "@/domains/transaction/components/VoteTransactionType";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Address } from "@/app/components/Address";
+import { ThemeIcon } from "@/app/components/Icon";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;

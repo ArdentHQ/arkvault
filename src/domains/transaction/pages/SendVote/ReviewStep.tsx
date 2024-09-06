@@ -7,7 +7,7 @@ import { StepHeader } from "@/app/components/StepHeader";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { ThemeIcon } from "@/app/components/Icon";
-import {VoteTransactionType} from "@/domains/transaction/components/VoteTransactionType";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 
 export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) => {
 	const { t } = useTranslation();
@@ -44,7 +44,6 @@ export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) =
 			</DetailWrapper>
 
 			<VoteTransactionType votes={votes} unvotes={unvotes} />
-
 
 			<div data-testid="DetailWrapper">
 				<DetailLabel>{t("COMMON.TRANSACTION_SUMMARY")}</DetailLabel>

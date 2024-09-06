@@ -1,13 +1,13 @@
-import {DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
-import {Divider} from "@/app/components/Divider";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Divider } from "@/app/components/Divider";
 import React from "react";
-import {Contracts} from "@ardenthq/sdk-profiles";
-import {useTranslation} from "react-i18next";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { useTranslation } from "react-i18next";
 
-type VoteRegistryItem = Contracts.VoteRegistryItem
+type VoteRegistryItem = Contracts.VoteRegistryItem;
 
 function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]) {
-	console.log(votes, unvotes)
+	console.log(votes, unvotes);
 	if (votes.length > 0 && unvotes.length > 0) {
 		return "swap";
 	}
@@ -19,7 +19,7 @@ function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[])
 	return "unvote";
 }
 
-export const VoteTransactionType = ({ unvotes, votes }: {unvotes: VoteRegistryItem[], votes: VoteRegistryItem[]}) => {
+export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryItem[]; votes: VoteRegistryItem[] }) => {
 	const { t } = useTranslation();
 
 	const voteCategory = getVoteCategory(votes, unvotes);
@@ -36,9 +36,9 @@ export const VoteTransactionType = ({ unvotes, votes }: {unvotes: VoteRegistryIt
 				<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
 					<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.CATEGORY")}</DetailTitle>
 					<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
-							<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
-								{categoryLabels[voteCategory]}
-							</span>
+						<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
+							{categoryLabels[voteCategory]}
+						</span>
 					</div>
 				</div>
 
@@ -78,5 +78,5 @@ export const VoteTransactionType = ({ unvotes, votes }: {unvotes: VoteRegistryIt
 				)}
 			</div>
 		</DetailWrapper>
-	)
-}
+	);
+};
