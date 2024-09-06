@@ -834,4 +834,29 @@ describe("Signed Transaction Table", () => {
 
 		isMultiSignatureReadyMock.mockRestore();
 	});
+
+	it("should handle the onRowClick function when the id is clicked", async (isCompact: boolean) => {
+		mockPendingTransfers(wallet);
+		const onClick = vi.fn();
+		const canBeBroadcastedMock = vi.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
+		const awaitingMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
+
+		const { asFragment } = render(
+			<PendingTransactions
+				wallet={wallet}
+				onClick={onClick}
+				pendingTransactions={pendingMultisignatureTransactions}
+				isCompact={isCompact}
+			/>,
+		);
+
+		await userEvent.click(screen.getAllByTestId("TransactionRow__transaction-id")[0]);
+
+		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
+		expect(asFragment()).toMatchSnapshot();
+
+		awaitingMock.mockReset();
+		canBeBroadcastedMock.mockReset();
+		vi.restoreAllMocks();
+	});
 });
