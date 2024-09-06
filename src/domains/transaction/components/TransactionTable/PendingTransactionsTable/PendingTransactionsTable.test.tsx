@@ -19,7 +19,7 @@ import {
 import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
-import { PendingTransferRow } from '@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow';
+import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 
 const translations = buildTranslations();
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
@@ -663,15 +663,20 @@ describe("Signed Transaction Table", () => {
 		mockPendingTransfers(wallet);
 
 		render(
-			<PendingTransferRow wallet={wallet} transaction={fixtures.transfer} onRowClick={onClick} isCompact={true} />,
-		)
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
 
 		await userEvent.click(screen.getByTestId("PendingTransactionRow__transaction-id"));
 
 		expect(onClick).toHaveBeenCalledWith(fixtures.transfer);
 
 		vi.restoreAllMocks();
-	})
+	});
 
 	it.each(["light", "dark"])("should set %s shadow color on mouse events", async (theme) => {
 		mockMultisignatures(wallet);
