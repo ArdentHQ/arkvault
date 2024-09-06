@@ -922,7 +922,7 @@ exports[`Servers Settings > should render servers settings 1`] = `
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -2252,7 +2252,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -4544,7 +4544,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -6698,7 +6698,7 @@ exports[`Servers Settings > with servers > should render customs servers in xs 1
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -8444,7 +8444,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -10736,7 +10736,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -12620,7 +12620,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -14757,7 +14757,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -17034,7 +17034,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"
@@ -18903,7 +18903,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
               class="w-full py-4 first:pt-8 last:pb-8 -mt-2 lg:mt-0 css-9mualq"
             >
               <div
-                class="mx-auto px-10 lg:container lg:px-12"
+                class="mx-auto px-6 lg:container md:px-10 lg:px-12"
               >
                 <div
                   class="flex items-end justify-between bg-theme-background"

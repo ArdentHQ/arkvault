@@ -6,7 +6,7 @@ exports[`AddressTable > should render 1`] = `
     class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
-      class="mx-auto px-10 lg:container"
+      class="mx-auto px-6 lg:container md:px-10"
     >
       <div
         class="-mt-1 md:mt-2"
@@ -463,7 +463,7 @@ exports[`AddressTable > should render when the maximum votes is greater than 1 1
     class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
-      class="mx-auto px-10 lg:container"
+      class="mx-auto px-6 lg:container md:px-10"
     >
       <div
         class="-mt-1 md:mt-2"
@@ -877,7 +877,7 @@ exports[`AddressTable > should render with voting delegates and handle exception
     class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
   >
     <div
-      class="mx-auto px-10 lg:container"
+      class="mx-auto px-6 lg:container md:px-10"
     >
       <div
         class="-mt-1 md:mt-2"
