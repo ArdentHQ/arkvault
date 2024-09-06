@@ -10,10 +10,10 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -60,7 +60,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -254,10 +254,10 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -304,7 +304,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -489,10 +489,10 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -539,7 +539,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -724,10 +724,10 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -774,7 +774,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -1028,10 +1028,10 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -1078,7 +1078,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -1268,10 +1268,10 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -1318,7 +1318,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
@@ -1508,10 +1508,10 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
       >
         <td>
           <div
-            class="px-3 transition-colors duration-100 pl-6 rounded-l flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
-              class="h-[17px] w-full max-w-20 cursor-pointer"
+              class="cursor-pointer w-20 truncate h-5"
               type="button"
             >
               <div
@@ -1558,7 +1558,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
