@@ -138,8 +138,7 @@ export const ExchangeTransactionsRow = ({
 				innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
 				variant="start"
 				isCompact={isCompact}
-			>	
-
+			>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button type="button" className="cursor-pointer w-20 truncate h-5" onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
 						{exchangeTransaction.orderId() ? (
@@ -147,7 +146,7 @@ export const ExchangeTransactionsRow = ({
 								address={exchangeTransaction.orderId()}
 								truncateOnTable
 								addressClass="text-theme-primary-600 text-sm"
-								/>
+							/>
 						) : (
 							<span className="text-sm font-semibold text-theme-secondary-500">
 								{t("COMMON.NOT_AVAILABLE")}
@@ -159,7 +158,6 @@ export const ExchangeTransactionsRow = ({
 				<div className="text-xs xl:hidden">
 					<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 				</div>
-					
 			</TableCell>
 
 			<TableCell
@@ -170,7 +168,10 @@ export const ExchangeTransactionsRow = ({
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1" isCompact={isCompact}>
+			<TableCell
+				innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+				isCompact={isCompact}
+			>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
