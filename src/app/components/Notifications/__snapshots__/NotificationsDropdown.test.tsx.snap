@@ -180,7 +180,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -293,7 +293,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -403,7 +403,7 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1225,7 +1225,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1338,7 +1338,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1448,7 +1448,7 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1751,7 +1751,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1864,7 +1864,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -1974,7 +1974,7 @@ exports[`Notifications > should render with transactions in md 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2277,7 +2277,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2364,7 +2364,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2440,7 +2440,7 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2709,7 +2709,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2822,7 +2822,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -2932,7 +2932,7 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3242,7 +3242,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                         >
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3329,7 +3329,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td
@@ -3405,7 +3405,7 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                           </div>
                           <div>
                             <tr
-                              class="group css-155s9if"
+                              class="group css-1kskd5s"
                               data-testid="TableRow"
                             >
                               <td

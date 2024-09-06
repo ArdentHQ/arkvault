@@ -186,7 +186,7 @@ export const WalletDetails = () => {
 					</Section>
 				)}
 
-				<Section className="flex-1">
+				<Section className="flex-1 pt-6">
 					{hasPendingTransactions && (
 						<div
 							className={cn("md:mb-8", {

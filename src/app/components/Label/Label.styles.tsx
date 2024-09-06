@@ -5,7 +5,15 @@ import { Size } from "@/types";
 
 const baseStyle = tw`inline-block font-semibold overflow-hidden`;
 
-export type ColorType = "primary" | "success" | "danger" | "warning" | "neutral" | "success-bg" | "danger-bg";
+export type ColorType =
+	| "primary"
+	| "success"
+	| "danger"
+	| "warning"
+	| "neutral"
+	| "success-bg"
+	| "danger-bg"
+	| "secondary";
 
 const getColor = (color?: ColorType, variant?: string) => {
 	if (variant === "solid") {
@@ -28,6 +36,8 @@ const getColor = (color?: ColorType, variant?: string) => {
 		neutral: () =>
 			tw`text-theme-secondary-900 border-theme-secondary-200 dark:text-theme-secondary-600 dark:border-theme-secondary-600`,
 		primary: () => tw`text-theme-primary-500 border-theme-primary-100 dark:border-theme-primary-500`,
+		secondary: () =>
+			tw`text-theme-secondary-700 bg-theme-secondary-200 border-theme-secondary-200 dark:border-theme-secondary-800 dark:text-theme-secondary-500 dark:bg-transparent`,
 		success: () => tw`text-theme-success-600 border-theme-success-200 dark:border-theme-success-600`,
 		"success-bg": () =>
 			tw`bg-theme-success-100 text-theme-success-700 dark:border dark:border-theme-success-700 dark:bg-transparent dark:text-theme-success-500`,
@@ -44,6 +54,10 @@ const getSize = (size?: Size) => {
 
 	if (size === "sm") {
 		return tw`text-sm`;
+	}
+
+	if (size === "xs") {
+		return tw`text-xs`;
 	}
 
 	return tw`text-base`;
