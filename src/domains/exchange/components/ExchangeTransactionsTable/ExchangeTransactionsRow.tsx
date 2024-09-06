@@ -141,7 +141,7 @@ export const ExchangeTransactionsRow = ({
 			>	
 
 				<Tooltip content={exchangeTransaction.orderId()}>
-					<button type="button" className="cursor-pointer w-20 truncate h-[17px]" onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
+					<button type="button" className="cursor-pointer w-20 truncate h-5" onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}>
 						{exchangeTransaction.orderId() ? (
 							<Address
 								address={exchangeTransaction.orderId()}
