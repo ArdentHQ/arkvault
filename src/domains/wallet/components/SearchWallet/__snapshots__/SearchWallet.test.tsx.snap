@@ -74,7 +74,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -90,7 +90,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -136,7 +136,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -182,7 +182,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -503,7 +503,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -519,7 +519,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -565,7 +565,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -611,7 +611,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -932,7 +932,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -948,7 +948,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -994,7 +994,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1040,7 +1040,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1359,7 +1359,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -1375,7 +1375,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -1421,7 +1421,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1467,7 +1467,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1898,7 +1898,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2213,7 +2213,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2528,7 +2528,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2733,7 +2733,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -2749,7 +2749,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2795,7 +2795,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2841,7 +2841,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3080,7 +3080,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3096,7 +3096,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3142,7 +3142,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3188,7 +3188,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3507,7 +3507,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3523,7 +3523,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3569,7 +3569,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3615,7 +3615,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3936,7 +3936,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -3952,7 +3952,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3998,7 +3998,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4044,7 +4044,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4090,7 +4090,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4439,7 +4439,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4455,7 +4455,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -4501,7 +4501,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4547,7 +4547,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4593,7 +4593,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4942,7 +4942,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -4958,7 +4958,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5004,7 +5004,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -5050,7 +5050,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -5096,7 +5096,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -5443,7 +5443,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -5459,7 +5459,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5505,7 +5505,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -5551,7 +5551,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -5597,7 +5597,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6056,7 +6056,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6371,7 +6371,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6686,7 +6686,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                 </div>
               </div>
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6891,7 +6891,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -6907,7 +6907,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6953,7 +6953,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6999,7 +6999,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7045,7 +7045,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -7298,7 +7298,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -7314,7 +7314,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -7360,7 +7360,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -7406,7 +7406,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7452,7 +7452,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -7799,7 +7799,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
               class="mt-4"
             >
               <div
-                class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
+                class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800"
                 data-testid="TableWrapper"
               >
                 <div
@@ -7815,7 +7815,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -7861,7 +7861,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -7907,7 +7907,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7953,7 +7953,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"

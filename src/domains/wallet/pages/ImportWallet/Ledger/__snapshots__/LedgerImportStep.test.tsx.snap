@@ -452,7 +452,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
         </div>
       </div>
       <div
-        class="hidden rounded-xl border-transparent outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 md:border-b-0"
+        class="hidden rounded-xl border-transparent pb-2 outline outline-1 outline-transparent sm:block md:border-b-[5px] md:border-b-theme-secondary-200 md:outline-theme-secondary-300 dark:md:border-theme-secondary-800 dark:md:outline-theme-secondary-800 md:border-b-0"
         data-testid="TableWrapper"
       >
         <div
@@ -468,7 +468,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 role="row"
               >
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                   colspan="1"
                   data-testid="table__th--0"
                   role="columnheader"
@@ -514,7 +514,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                   </div>
                 </th>
                 <th
-                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-table last:rounded-tr-table no-border"
+                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
                   colspan="1"
                   data-testid="table__th--1"
                   role="columnheader"
