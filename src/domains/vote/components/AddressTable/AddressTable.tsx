@@ -9,6 +9,8 @@ import { Section } from "@/app/components/Layout";
 import { Table } from "@/app/components/Table";
 import { useBreakpoint } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
+import { networkDisplayName } from "@/utils/network-utils";
+import { Icon } from "@/app/components/Icon";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
@@ -36,7 +38,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 				headerClassName: "hidden xl:table-cell no-border",
 			},
 			{
-				Header: t("COMMON.VALIDATED"),
+				Header: t("COMMON.DELEGATE"),
 				accessor: (wallet) => {
 					let votes: Contracts.VoteRegistryItem[];
 
@@ -138,8 +140,23 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 	);
 
 	return (
-		<Section>
-			<div data-testid="AddressTable" className="-mt-1 md:mt-2">
+		<Section className="py-0 pt-0 first:pt-1 sm:first:pt-0">
+			<div data-testid="AddressTable">
+				<div className="hidden items-center space-x-3 pb-3 pt-6 sm:flex">
+					<Icon
+						className="rounded-xl bg-theme-navy-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent"
+						data-testid="NetworkIcon__icon"
+						name={network.ticker()}
+						fallback={
+							<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
+								{networkDisplayName(network).slice(0, 2).toUpperCase()}
+							</span>
+						}
+						dimensions={[24, 24]}
+					/>
+					<h2 className="mb-0 text-lg font-semibold leading-[21px]">{networkDisplayName(network)}</h2>
+				</div>
+
 				<Table
 					className="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border"
 					columns={columns}
