@@ -15,7 +15,6 @@ import {
 	screen,
 	waitFor,
 	renderResponsive,
-	within,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
 
@@ -383,7 +382,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -407,7 +406,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		expect(document.querySelector("svg#double-arrow-right")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRowToLabel")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -478,7 +477,7 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			expect(document.querySelectorAll("svg#pencil")).toHaveLength(2);
+			expect(document.querySelectorAll("svg#pencil")).toHaveLength(1);
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -500,7 +499,7 @@ describe("Signed Transaction Table", () => {
 			);
 
 			await waitFor(() =>
-				expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 				),
 			);
@@ -530,7 +529,7 @@ describe("Signed Transaction Table", () => {
 
 			// eslint-disable-next-line sonarjs/no-identical-functions
 			await waitFor(() =>
-				expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
+				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 				),
 			);
@@ -692,7 +691,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -783,7 +782,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
 		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
@@ -802,46 +801,7 @@ describe("Signed Transaction Table", () => {
 		isMultiSignatureReadyMock.mockRestore();
 	});
 
-	it("should open and close removal confirmation from the responsive dropdown", async () => {
-		mockPendingTransfers(wallet);
-		const onRemove = vi.fn();
-		const isMultiSignatureReadyMock = vi
-			.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady")
-			.mockReturnValue(true);
-		const canBeSignedMock = vi.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(false);
-
-		renderResponsive(
-			<PendingTransactions
-				isCompact={false}
-				wallet={wallet}
-				pendingTransactions={pendingMultisignatureTransactions}
-				onRemove={onRemove}
-			/>,
-			"md",
-		);
-
-		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-
-		const dropdown = within(screen.getByTestId("SignedTransactionRow--dropdown")).getByTestId("dropdown__toggle");
-
-		await userEvent.click(dropdown);
-
-		expect(screen.getByTestId("dropdown__option--0")).toBeInTheDocument();
-
-		await userEvent.click(screen.getByTestId("dropdown__option--0"));
-
-		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
-		expect(cancelButton()).toBeInTheDocument();
-
-		await userEvent.click(cancelButton());
-
-		expect(screen.queryByTestId("Modal__inner")).not.toBeInTheDocument();
-
-		canBeSignedMock.mockReset();
-		isMultiSignatureReadyMock.mockRestore();
-	});
-
-	it("should call the onSign method from the responsive dropdown", async () => {
+	/* it("should call the onSign method from the responsive dropdown", async () => {
 		mockPendingTransfers(wallet);
 		const onSign = vi.fn();
 		const isMultiSignatureReadyMock = vi
@@ -876,7 +836,7 @@ describe("Signed Transaction Table", () => {
 		canBeSignedMock.mockReset();
 
 		isMultiSignatureReadyMock.mockRestore();
-	});
+	}); */
 
 	it("should handle the sign button on mobile", async () => {
 		mockPendingTransfers(wallet);

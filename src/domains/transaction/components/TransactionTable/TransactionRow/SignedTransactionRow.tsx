@@ -152,13 +152,19 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0">
-				<Label color="secondary" size="xs" noBorder className="rounded p-1">
+				<Label
+					color="secondary"
+					size="xs"
+					noBorder
+					className="rounded p-1"
+					data-testId="TransactionRowRecipientLabel"
+				>
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-0" isCompact={isCompact}>
-				<Label color="danger-bg" size="xs" noBorder className="rounded p-1">
+				<Label color="danger-bg" size="xs" noBorder className="rounded p-1" data-testId="TransactionRowToLabel">
 					{t("COMMON.TO")}
 				</Label>
 				<span className="text-sm">
