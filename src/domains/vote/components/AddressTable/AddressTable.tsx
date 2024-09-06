@@ -11,6 +11,7 @@ import { useBreakpoint } from "@/app/hooks";
 import { assertNetwork } from "@/utils/assertions";
 import {networkDisplayName} from "@/utils/network-utils";
 import {NetworkIcon} from "@/domains/network/components/NetworkIcon";
+import {Icon} from "@/app/components/Icon";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
 	const { t } = useTranslation();
@@ -143,13 +144,18 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 		<Section className="py-0 pt-0 first:pt-1 sm:first:pt-0">
 			<div data-testid="AddressTable">
 				<div className="hidden sm:flex items-center space-x-4 pt-6 pb-3">
-					<NetworkIcon size="lg" network={network}/>
-					<div className="flex space-x-2">
-						<h2 className="mb-0 text-lg font-bold">{networkDisplayName(network)}</h2>
-						<span className="text-lg font-bold text-theme-secondary-500 dark:text-theme-secondary-700">
-							{wallets.length}
-						</span>
-					</div>
+					<Icon
+						className="bg-theme-secondary-100 rounded-xl p-2.5"
+						data-testid="NetworkIcon__icon"
+						name={network.ticker()}
+						fallback={
+							<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
+								{networkDisplayName(network).slice(0, 2).toUpperCase()}
+							</span>
+						}
+						dimensions={[24, 24]}
+					/>
+					<h2 className="mb-0 text-lg font-semibold leading-[21px]">{networkDisplayName(network)}</h2>
 				</div>
 
 				<Table
