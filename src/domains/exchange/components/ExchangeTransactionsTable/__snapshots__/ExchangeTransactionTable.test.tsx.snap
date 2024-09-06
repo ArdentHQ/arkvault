@@ -313,7 +313,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -608,7 +608,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -903,7 +903,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -1510,7 +1510,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -1805,7 +1805,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -2100,7 +2100,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -2707,7 +2707,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3002,7 +3002,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3297,7 +3297,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -3904,7 +3904,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -4199,7 +4199,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -4494,7 +4494,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -5101,7 +5101,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -5396,7 +5396,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
@@ -5691,7 +5691,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                   class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
                 >
                   <button
-                    class="cursor-pointer w-20 truncate h-5"
+                    class="h-5 w-20 cursor-pointer truncate"
                     type="button"
                   >
                     <div
