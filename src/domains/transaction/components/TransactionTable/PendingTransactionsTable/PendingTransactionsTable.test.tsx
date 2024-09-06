@@ -713,7 +713,7 @@ describe("Signed Transaction Table", () => {
 		expect(screen.getAllByText("A few seconds ago")).toHaveLength(2);
 
 		vi.restoreAllMocks();
-	})
+	});
 
 	it.each(["light", "dark"])("should set %s shadow color on mouse events", async (theme) => {
 		mockMultisignatures(wallet);
