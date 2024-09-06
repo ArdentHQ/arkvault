@@ -678,6 +678,43 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should render N/A when a pending transfer has an unvalid timestamp", async () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+		vi.spyOn(fixtures.transfer, "timestamp").mockReturnValue(undefined);
+
+		render(
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		expect(screen.getAllByText("N/A")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render a valid timestamp when a pending transfer has a valid timestamp", () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+
+		render(
+			<PendingTransferRow
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		expect(screen.getAllByText("A few seconds ago")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	})
+
 	it.each(["light", "dark"])("should set %s shadow color on mouse events", async (theme) => {
 		mockMultisignatures(wallet);
 		vi.spyOn(themeUtils, "shouldUseDarkColors").mockImplementation(() => theme === "dark");
