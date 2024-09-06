@@ -35,7 +35,7 @@ export const VotingWallets = ({
 	}
 
 	return (
-		<div className="salam">
+		<div>
 			{Object.keys(walletsByCoin).map(
 				(coin, index) =>
 					walletsByCoin[coin].length > 0 && (
