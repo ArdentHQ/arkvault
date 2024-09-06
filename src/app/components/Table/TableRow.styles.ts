@@ -20,7 +20,7 @@ const getBorderStyles = (border?: boolean, dotted?: boolean) => {
 };
 
 const getHoverStyles = (isSelected?: boolean): SerializedStyles => css`
-	&:hover td > div {
+	&:hover td {
 		${isSelected ? tw`bg-theme-success-100 dark:bg-theme-success-900` : tw`bg-theme-secondary-100 dark:bg-black`}
 	}
 `;
