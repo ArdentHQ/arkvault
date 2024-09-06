@@ -164,7 +164,13 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell innerClassName="space-x-2 items-start xl:min-h-0" isCompact={isCompact}>
-				<Label color="danger-bg" size="xs" noBorder className="rounded py-1 px-[11px]" data-testId="TransactionRowToLabel">
+				<Label
+					color="danger-bg"
+					size="xs"
+					noBorder
+					className="rounded px-[11px] py-1"
+					data-testId="TransactionRowToLabel"
+				>
 					{t("COMMON.TO")}
 				</Label>
 				<span className="text-sm">
