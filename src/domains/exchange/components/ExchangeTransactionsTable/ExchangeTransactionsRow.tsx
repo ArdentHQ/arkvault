@@ -135,14 +135,14 @@ export const ExchangeTransactionsRow = ({
 	return (
 		<TableRow className="relative">
 			<TableCell
-				innerClassName="flex flex-col items-start xl:items-center gap-1 my-3 xl:my-0 min-h-fit xl:flex-row"
+				innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
 				variant="start"
 				isCompact={isCompact}
 			>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
-						className="h-[17px] w-full max-w-20 cursor-pointer"
+						className="h-5 w-20 cursor-pointer truncate"
 						onClick={() => onClick(exchangeTransaction.provider(), exchangeTransaction.orderId())}
 					>
 						{exchangeTransaction.orderId() ? (
@@ -172,7 +172,10 @@ export const ExchangeTransactionsRow = ({
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell innerClassName="font-semibold text-sm items-start xl:items-center" isCompact={isCompact}>
+			<TableCell
+				innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+				isCompact={isCompact}
+			>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
