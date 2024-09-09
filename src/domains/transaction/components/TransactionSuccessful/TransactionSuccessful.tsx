@@ -94,9 +94,11 @@ export const TransactionSuccessful = ({
 					/>
 				</TransactionDetailPadded>
 
-				<TransactionDetailPadded>
-					<TransactionType type={transaction.type()} />
-				</TransactionDetailPadded>
+				{!transaction.isVote() &&
+					<TransactionDetailPadded>
+						<TransactionType transaction={transaction} />
+					</TransactionDetailPadded>
+				}
 
 				{children}
 

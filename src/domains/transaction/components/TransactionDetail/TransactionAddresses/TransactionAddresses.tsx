@@ -36,9 +36,11 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 				/>
 			</div>
 
-			<div className="hidden h-8 w-full items-center md:flex">
-				<Divider dashed />
-			</div>
+			{recipients.length > 0 &&
+				<div className="hidden h-8 w-full items-center md:flex">
+					<Divider dashed />
+				</div>
+			}
 
 			{recipients.map((recipient, index) => (
 				<div className="mt-3 flex w-full md:mt-0" key={index}>

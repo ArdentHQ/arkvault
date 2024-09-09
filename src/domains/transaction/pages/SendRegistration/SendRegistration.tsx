@@ -6,7 +6,6 @@ import { useHistory, useParams } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import { SendRegistrationForm } from "./SendRegistration.contracts";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -27,6 +26,7 @@ import {
 	signSecondSignatureRegistration,
 } from "@/domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 export const SendRegistration = () => {
 	const history = useHistory();
@@ -279,9 +279,8 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<SummaryStep
+										<TransactionSuccessful
 											transaction={transaction}
-											registrationForm={registrationForm}
 											senderWallet={activeWallet}
 										/>
 									</TabPanel>
