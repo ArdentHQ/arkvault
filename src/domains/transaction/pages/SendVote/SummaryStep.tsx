@@ -12,7 +12,7 @@ type SummaryStepProperties = {
 export const SummaryStep = ({ wallet, transaction, unvotes, votes }: SummaryStepProperties) => (
 	<TransactionSuccessful transaction={transaction} senderWallet={wallet}>
 		<TransactionDetailPadded>
-			<VoteTransactionType votes={votes} unvotes={unvotes} currency={wallet.currency()} />
+			<VoteTransactionType votes={votes} unvotes={unvotes} />
 		</TransactionDetailPadded>
 	</TransactionSuccessful>
 );
