@@ -80,12 +80,11 @@ export const TransactionSuccessful = ({
 				}
 			/>
 
-
 			<div className="mt-8">
 				<TransactionId transaction={transaction} />
 			</div>
 
-			<div className="space-y-8 mt-6">
+			<div className="mt-6 space-y-8">
 				<TransactionDetailPadded>
 					<TransactionAddresses
 						senderWallet={senderWallet}
@@ -111,7 +110,10 @@ export const TransactionSuccessful = ({
 								className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
 							>
 								<Spinner color="warning-alt" size="sm" width={3} />
-								<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+								<Divider
+									type="vertical"
+									className="text-theme-warning-200 dark:text-theme-secondary-800"
+								/>
 								<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
 									{t("TRANSACTION.PENDING.STATUS_TEXT")}
 								</p>
@@ -128,7 +130,10 @@ export const TransactionSuccessful = ({
 									<p>{t("COMMON.ALERT.SUCCESS")}</p>
 								</div>
 
-								<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />
+								<Divider
+									type="vertical"
+									className="text-theme-success-200 dark:text-theme-secondary-800"
+								/>
 
 								<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
 									<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
