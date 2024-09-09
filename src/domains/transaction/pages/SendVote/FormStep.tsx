@@ -51,10 +51,10 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<div>
-				<DetailLabel>{t("TRANSACTION.SENDER")}</DetailLabel>
+			<FormField name="senderAddress">
+				<FormLabel label={t("TRANSACTION.SENDER")} />
 
-				<div data-testid="sender-address" className="sm:mt-2 p-3 sm:p-0">
+				<div data-testid="sender-address">
 					<SelectAddress
 						showWalletAvatar={false}
 						showUserIcon={!isWalletFieldDisabled}
@@ -70,12 +70,11 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
 						profile={profile}
 						onChange={(address: string) =>
-							setValue("senderAddress", address, {shouldDirty: true, shouldValidate: false})
+							setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false })
 						}
 					/>
 				</div>
-			</div>
-
+			</FormField>
 
 			<VoteTransactionType votes={votes} unvotes={unvotes}/>
 
