@@ -8,7 +8,7 @@ import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
 import { ThemeIcon } from "@/app/components/Icon";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
-import {SelectAddress} from "@/domains/profile/components/SelectAddress";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
 import { useFormContext } from "react-hook-form";
 
 type FormStepProperties = {
@@ -60,9 +60,9 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 						wallet={
 							wallet
 								? {
-									address: wallet.address(),
-									network: wallet.network(),
-								}
+										address: wallet.address(),
+										network: wallet.network(),
+									}
 								: undefined
 						}
 						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
@@ -74,12 +74,12 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 				</div>
 			</FormField>
 
-			<VoteTransactionType votes={votes} unvotes={unvotes}/>
+			<VoteTransactionType votes={votes} unvotes={unvotes} />
 
 			{showFeeInput && (
 				<FormField name="fee" className="flex-1">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")}/>
-					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile}/>
+					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
+					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile} />
 				</FormField>
 			)}
 		</section>
