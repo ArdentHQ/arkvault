@@ -26,23 +26,23 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 			<div className="flex w-full">
-				<DetailLabelText minWidth="sm">{t("COMMON.FROM")}</DetailLabelText>
+				<DetailLabelText minWidth="md">{t("COMMON.FROM")}</DetailLabelText>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
 					walletNameClass="text-theme-text"
 					showCopyButton
-					wrapperClass="sm:w-3/4"
+					wrapperClass="md:w-3/4"
 				/>
 			</div>
 
-			<div className="hidden h-8 w-full items-center sm:flex">
+			<div className="hidden h-8 w-full items-center md:flex">
 				<Divider dashed />
 			</div>
 
 			{recipients.map((recipient, index) => (
-				<div className="mt-3 flex w-full sm:mt-0" key={index}>
-					<DetailLabelText minWidth="sm">{t("COMMON.TO")}</DetailLabelText>
+				<div className="mt-3 flex w-full md:mt-0" key={index}>
+					<DetailLabelText minWidth="md">{t("COMMON.TO")}</DetailLabelText>
 					<Address
 						key={index}
 						address={recipient.address}

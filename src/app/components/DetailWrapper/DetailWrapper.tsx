@@ -18,7 +18,7 @@ export const DetailLabelText = ({
 		className={twMerge(
 			"no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500",
 			minWidth === "sm" && "min-w-16",
-			minWidth === "md" && "min-w-36",
+			minWidth === "md" && "min-w-24",
 			className,
 		)}
 	>
