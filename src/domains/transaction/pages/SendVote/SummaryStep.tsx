@@ -2,9 +2,8 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import React from "react";
 
 import { SendVoteStepProperties } from "./SendVote.contracts";
-import { TransactionFee, TransactionVotes } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailPadded, TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
-import { VoteTransactionType } from "../../components/VoteTransactionType";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 
 type SummaryStepProperties = {
 	transaction: DTO.ExtendedSignedTransactionData;
