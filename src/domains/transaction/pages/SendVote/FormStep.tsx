@@ -54,7 +54,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 			<FormField name="senderAddress">
 				<FormLabel label={t("TRANSACTION.SENDER")} />
 
-				<div data-testid="sender-address">
+				<div data-testid="sender-address" className="mb-3 sm:mb-0">
 					<SelectAddress
 						showWalletAvatar={false}
 						showUserIcon={!isWalletFieldDisabled}
