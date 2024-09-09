@@ -279,10 +279,7 @@ export const SendRegistration = () => {
 									</TabPanel>
 
 									<TabPanel tabId={stepCount}>
-										<TransactionSuccessful
-											transaction={transaction}
-											senderWallet={activeWallet}
-										/>
+										<TransactionSuccessful transaction={transaction} senderWallet={activeWallet} />
 									</TabPanel>
 								</>
 							)}
