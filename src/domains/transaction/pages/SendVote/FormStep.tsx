@@ -6,10 +6,12 @@ import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { StepHeader } from "@/app/components/StepHeader";
-import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import {DetailLabel, DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
 import { Address } from "@/app/components/Address";
 import { ThemeIcon } from "@/app/components/Icon";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
+import {SelectAddress} from "@/domains/profile/components/SelectAddress";
+import { useFormContext } from "react-hook-form";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;
@@ -17,7 +19,7 @@ type FormStepProperties = {
 	isWalletFieldDisabled?: boolean;
 } & Omit<SendVoteStepProperties, "wallet">;
 
-export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepProperties) => {
+export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFieldDisabled }: FormStepProperties) => {
 	const { t } = useTranslation();
 
 	const showFeeInput = useMemo(() => network.chargesZeroFees() === false, [wallet]);
@@ -36,6 +38,9 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepP
 		[unvotes, votes, wallet],
 	);
 
+	const { setValue } = useFormContext();
+	console.log(wallet?.address())
+
 	return (
 		<section data-testid="SendVote__form-step" className="space-y-3 sm:space-y-4">
 			<StepHeader
@@ -46,26 +51,37 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network }: FormStepP
 				subtitle={t("TRANSACTION.PAGE_VOTE.FORM_STEP.DESCRIPTION")}
 			/>
 
-			<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-				<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-					<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.FROM")}</DetailTitle>
-					<Address
-						address={wallet?.address()}
-						walletName={wallet?.alias()}
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-						wrapperClass="justify-end sm:justify-start"
-						showCopyButton
+			<div>
+				<DetailLabel>{t("TRANSACTION.SENDER")}</DetailLabel>
+
+				<div data-testid="sender-address" className="sm:mt-2 p-3 sm:p-0">
+					<SelectAddress
+						showWalletAvatar={false}
+						disabled={isWalletFieldDisabled !== false}
+						wallet={
+							wallet
+								? {
+									address: wallet.address(),
+									network: wallet.network(),
+								}
+								: undefined
+						}
+						wallets={profile.wallets().findByCoinWithNetwork(network.coin(), network.id())}
+						profile={profile}
+						onChange={(address: string) =>
+							setValue("senderAddress", address, {shouldDirty: true, shouldValidate: false})
+						}
 					/>
 				</div>
-			</DetailWrapper>
+			</div>
 
-			<VoteTransactionType votes={votes} unvotes={unvotes} />
+
+			<VoteTransactionType votes={votes} unvotes={unvotes}/>
 
 			{showFeeInput && (
 				<FormField name="fee" className="flex-1">
-					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")} />
-					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile} />
+					<FormLabel label={t("TRANSACTION.TRANSACTION_FEE")}/>
+					<FeeField type="vote" data={feeTransactionData} network={network} profile={profile}/>
 				</FormField>
 			)}
 		</section>

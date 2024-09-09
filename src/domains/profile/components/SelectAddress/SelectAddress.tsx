@@ -127,7 +127,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 						className={cn(
 							"absolute inset-y-0 left-14 flex items-center border border-transparent",
 							showUserIcon ? "right-13" : "right-4",
-							showWalletAvatar ? "left-14" : "left-4",
+							showWalletAvatar ? "left-14" : "left-6",
 							{
 								"right-13": !showUserIcon && isInvalidField,
 								"right-24": showUserIcon && isInvalidField,
@@ -138,6 +138,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					</span>
 
 					<Input
+						className="!bg-transparent"
 						data-testid="SelectAddress__input"
 						ref={reference}
 						value={selectedWallet?.address || ""}
