@@ -12,7 +12,6 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 
 	const { getLabel } = useTransactionTypes();
 
-
 	return (
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
@@ -23,7 +22,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 					</Label>
 				</div>
 
-				{[transaction.isDelegateRegistration(), transaction.isDelegateResignation()].some(Boolean) &&
+				{[transaction.isDelegateRegistration(), transaction.isDelegateResignation()].some(Boolean) && (
 					<>
 						<div className="hidden h-8 w-full items-center md:flex">
 							<Divider dashed />
@@ -34,7 +33,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 							<div> {transaction.username()} </div>
 						</div>
 					</>
-				}
+				)}
 			</DetailWrapper>
 		</div>
 	);
