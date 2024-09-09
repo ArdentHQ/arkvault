@@ -14,7 +14,7 @@ export const TransactionType = ({ type }: { type: string }) => {
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText minWidth="sm">{t("COMMON.CATEGORY")}</DetailLabelText>
+					<DetailLabelText minWidth="md">{t("COMMON.CATEGORY")}</DetailLabelText>
 					<Label color="neutral" size="xs">
 						{getLabel(type)}
 					</Label>

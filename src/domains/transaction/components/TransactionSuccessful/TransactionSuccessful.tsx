@@ -64,7 +64,7 @@ export const TransactionSuccessful = ({
 	const titleText = title ?? (isConfirmed ? t("TRANSACTION.SUCCESS.CONFIRMED") : t("TRANSACTION.PENDING.TITLE"));
 
 	return (
-		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"} className="space-y-8">
+		<section data-testid={isConfirmed ? "TransactionSuccessful" : "TransactionPending"}>
 			<StepHeader
 				title={titleText}
 				titleIcon={
@@ -80,57 +80,62 @@ export const TransactionSuccessful = ({
 				}
 			/>
 
-			<TransactionId transaction={transaction} />
 
-			<TransactionDetailPadded>
-				<TransactionAddresses
-					senderWallet={senderWallet}
-					recipients={recipients}
-					profile={senderWallet.profile()}
-				/>
-			</TransactionDetailPadded>
+			<div className="mt-8">
+				<TransactionId transaction={transaction} />
+			</div>
 
-			<TransactionDetailPadded>
-				<TransactionType type={transaction.type()} />
-			</TransactionDetailPadded>
+			<div className="space-y-8 mt-6">
+				<TransactionDetailPadded>
+					<TransactionAddresses
+						senderWallet={senderWallet}
+						recipients={recipients}
+						profile={senderWallet.profile()}
+					/>
+				</TransactionDetailPadded>
 
-			{children}
+				<TransactionDetailPadded>
+					<TransactionType type={transaction.type()} />
+				</TransactionDetailPadded>
 
-			<TransactionDetailPadded>
-				<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
-				<div className="mt-2">
-					{!isConfirmed && (
-						<div
-							data-testid="PendingConfirmationAlert"
-							className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
-						>
-							<Spinner color="warning-alt" size="sm" width={3} />
-							<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
-							<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-								{t("TRANSACTION.PENDING.STATUS_TEXT")}
-							</p>
-						</div>
-					)}
+				{children}
 
-					{isConfirmed && (
-						<div
-							data-testid="TransactionSuccessAlert"
-							className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-						>
-							<div className="flex items-center space-x-2 text-theme-success-600">
-								<Icon name="CheckmarkDouble" />
-								<p>{t("COMMON.ALERT.SUCCESS")}</p>
+				<TransactionDetailPadded>
+					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+					<div className="mt-2">
+						{!isConfirmed && (
+							<div
+								data-testid="PendingConfirmationAlert"
+								className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
+							>
+								<Spinner color="warning-alt" size="sm" width={3} />
+								<Divider type="vertical" className="text-theme-warning-200 dark:text-theme-secondary-800" />
+								<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
+									{t("TRANSACTION.PENDING.STATUS_TEXT")}
+								</p>
 							</div>
+						)}
 
-							<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />
+						{isConfirmed && (
+							<div
+								data-testid="TransactionSuccessAlert"
+								className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
+							>
+								<div className="flex items-center space-x-2 text-theme-success-600">
+									<Icon name="CheckmarkDouble" />
+									<p>{t("COMMON.ALERT.SUCCESS")}</p>
+								</div>
 
-							<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
-								<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
-							</p>
-						</div>
-					)}
-				</div>
-			</TransactionDetailPadded>
+								<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />
+
+								<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
+									<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
+								</p>
+							</div>
+						)}
+					</div>
+				</TransactionDetailPadded>
+			</div>
 		</section>
 	);
 };
