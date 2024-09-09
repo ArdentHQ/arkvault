@@ -571,7 +571,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -784,7 +784,7 @@ exports[`Votes > should filter current delegates 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -1840,7 +1840,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -2001,7 +2001,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -2824,8 +2824,9 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       data-testid="DelegateTable__continue--wrapper"
                     >
                       <button
-                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                        class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700"
                         data-testid="DelegateTable__continue-button"
+                        disabled=""
                         type="button"
                       >
                         <div
@@ -3418,7 +3419,7 @@ exports[`Votes > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -3579,7 +3580,7 @@ exports[`Votes > should render 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -4933,7 +4934,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -5094,7 +5095,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -6446,7 +6447,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -6478,7 +6479,7 @@ exports[`Votes > should render with no wallets 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="rounded-lg border-solid border-theme-secondary-300 text-center leading-5 text-theme-secondary-text dark:border-theme-secondary-800 sm:border sm:p-6"
@@ -7169,7 +7170,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -7330,7 +7331,7 @@ exports[`Votes > should select a delegate 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
@@ -8681,7 +8682,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -9027,7 +9028,7 @@ exports[`Votes > should select ledger option in the wallets display type 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -10093,7 +10094,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -10439,7 +10440,7 @@ exports[`Votes > should select starred option in the wallets display type 1`] = 
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex h-full flex-col justify-center bg-theme-background text-center mt-16"
@@ -11505,7 +11506,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -11840,644 +11841,674 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
-      >
+      <div>
         <div
-          class="mx-auto px-10 lg:container"
+          class="w-full last:pb-8 py-0 pt-0 first:pt-1 sm:first:pt-0 css-9mualq"
         >
           <div
-            class="-mt-1 md:mt-2"
-            data-testid="AddressTable"
+            class="mx-auto px-6 lg:container md:px-10"
           >
             <div
-              class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
-              role="table"
+              data-testid="AddressTable"
             >
-              <table
-                cellpadding="0"
-                class="w-full table-auto"
+              <div
+                class="hidden items-center space-x-3 pb-3 pt-6 sm:flex"
               >
-                <thead>
-                  <tr
-                    role="row"
-                  >
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-80 min-w-80"
-                      colspan="1"
-                      data-testid="table__th--0"
-                      role="columnheader"
-                      style="cursor: pointer;"
-                      title="Toggle SortBy"
-                    >
-                      <div
-                        class="flex flex-inline align-top"
-                      >
-                        <div
-                          class=""
-                        >
-                          Name
-                        </div>
-                        <div
-                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                        >
-                          <div
-                            class="transition-transform rotate-180 css-15txs7d"
-                            height="10"
-                            role="img"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border w-60 min-w-60"
-                      colspan="1"
-                      data-testid="table__th--1"
-                      role="columnheader"
-                      style="cursor: pointer;"
-                      title="Toggle SortBy"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-end flex-row-reverse"
-                      >
-                        <div
-                          class=""
-                        >
-                          Balance
-                        </div>
-                        <div
-                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
-                        >
-                          <div
-                            class="transition-transform rotate-180 css-15txs7d"
-                            height="10"
-                            role="img"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-60 min-w-60"
-                      colspan="1"
-                      data-testid="table__th--2"
-                      role="columnheader"
-                      style="cursor: pointer;"
-                      title="Toggle SortBy"
-                    >
-                      <div
-                        class="flex flex-inline align-top ml-15"
-                      >
-                        <div
-                          class=""
-                        >
-                          Validated
-                        </div>
-                        <div
-                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
-                        >
-                          <div
-                            class="transition-transform rotate-180 css-15txs7d"
-                            height="10"
-                            role="img"
-                            width="10"
-                          >
-                            <svg
-                              id="chevron-down-small"
-                              viewBox="0 0 10 10"
-                              x="0"
-                              xml:space="preserve"
-                              xmlns="http://www.w3.org/2000/svg"
-                              y="0"
-                            >
-                              <path
-                                d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-20 min-w-20"
-                      colspan="1"
-                      data-testid="table__th--3"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div
-                          class=""
-                        >
-                          Rank
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-20 min-w-20"
-                      colspan="1"
-                      data-testid="table__th--4"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div
-                          class=""
-                        >
-                          Status
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-30 min-w-30"
-                      colspan="1"
-                      data-testid="table__th--5"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top justify-center"
-                      >
-                        <div
-                          class=""
-                        >
-                          Info
-                        </div>
-                      </div>
-                    </th>
-                    <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
-                      colspan="1"
-                      data-testid="table__th--6"
-                      role="columnheader"
-                    >
-                      <div
-                        class="flex flex-inline align-top"
-                      >
-                        <div
-                          class=""
-                        >
-                           
-                        </div>
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody
-                  role="rowgroup"
+                <div
+                  class="rounded-xl bg-theme-navy-100 p-2.5 text-theme-navy-600 dark:border-2 dark:border-theme-secondary-800 dark:bg-transparent css-h1kfx5"
+                  data-testid="NetworkIcon__icon"
+                  height="24"
+                  width="24"
                 >
-                  <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
-                    data-testid="TableRow"
+                  <svg
+                    id="ark"
+                    viewBox="0 0 36.3 30.6"
+                    x="0"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    y="0"
                   >
-                    <td
-                      data-testid="AddressRow__wallet"
+                    <path
+                      d="M18.2 10.7L0 30.6 18.2 0l18.1 30.6-18.1-19.9zM10 24.2l2.9-3.2h10.6l2.9 3.2H10zm5-5.4l3.2-3.4 3.2 3.4H15z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <h2
+                  class="mb-0 text-lg font-semibold leading-[21px]"
+                >
+                  ARK Devnet
+                </h2>
+              </div>
+              <div
+                class="with-x-padding overflow-hidden rounded-xl border-theme-secondary-300 dark:border-theme-secondary-800 md:border css-1m6rt2i"
+                role="table"
+              >
+                <table
+                  cellpadding="0"
+                  class="w-full table-auto"
+                >
+                  <thead>
+                    <tr
+                      role="row"
                     >
-                      <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-80 min-w-80"
+                        colspan="1"
+                        data-testid="table__th--0"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
                       >
                         <div
-                          class="w-40 flex-1"
+                          class="flex flex-inline align-top"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class=""
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
-                            </span>
-                            <button
-                              class="ring-focus relative focus:outline-none"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                height="16"
-                                width="16"
-                              >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </button>
+                            Name
                           </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          0 DARK
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
-                      >
-                        <span
-                          class="text-theme-secondary-400"
-                        >
-                          N/A
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
-                      />
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
-                      />
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
-                      />
-                    </td>
-                    <td
-                      class="pr-6"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
-                      >
-                        <div>
-                          <button
-                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
-                            data-testid="AddressRow__select-0"
-                            disabled=""
-                            type="button"
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
                             >
-                              Vote
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
                             </div>
-                          </button>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
-                    data-testid="TableRow"
-                  >
-                    <td
-                      data-testid="AddressRow__wallet"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell no-border w-60 min-w-60"
+                        colspan="1"
+                        data-testid="table__th--1"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
                       >
                         <div
-                          class="w-40 flex-1"
+                          class="flex flex-inline align-top justify-end flex-row-reverse"
                         >
                           <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            class=""
                           >
-                            <span
-                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                              data-testid="Address__alias"
+                            Balance
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-60 min-w-60"
+                        colspan="1"
+                        data-testid="table__th--2"
+                        role="columnheader"
+                        style="cursor: pointer;"
+                        title="Toggle SortBy"
+                      >
+                        <div
+                          class="flex flex-inline align-top ml-15"
+                        >
+                          <div
+                            class=""
+                          >
+                            Delegate
+                          </div>
+                          <div
+                            class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                          >
+                            <div
+                              class="transition-transform rotate-180 css-15txs7d"
+                              height="10"
+                              role="img"
+                              width="10"
+                            >
+                              <svg
+                                id="chevron-down-small"
+                                viewBox="0 0 10 10"
+                                x="0"
+                                xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg"
+                                y="0"
+                              >
+                                <path
+                                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-20 min-w-20"
+                        colspan="1"
+                        data-testid="table__th--3"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-center"
+                        >
+                          <div
+                            class=""
+                          >
+                            Rank
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-20 min-w-20"
+                        colspan="1"
+                        data-testid="table__th--4"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-center"
+                        >
+                          <div
+                            class=""
+                          >
+                            Status
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell no-border w-30 min-w-30"
+                        colspan="1"
+                        data-testid="table__th--5"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top justify-center"
+                        >
+                          <div
+                            class=""
+                          >
+                            Info
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                        colspan="1"
+                        data-testid="table__th--6"
+                        role="columnheader"
+                      >
+                        <div
+                          class="flex flex-inline align-top"
+                        >
+                          <div
+                            class=""
+                          >
+                             
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    role="rowgroup"
+                  >
+                    <tr
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      data-testid="TableRow"
+                    >
+                      <td
+                        data-testid="AddressRow__wallet"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                        >
+                          <div
+                            class="w-40 flex-1"
+                          >
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                ARK Wallet 1
+                                DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
                               </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                            </span>
-                            <button
-                              class="ring-focus relative focus:outline-none"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
-                              type="button"
-                            >
-                              <div
-                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                height="16"
-                                width="16"
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
+                                <div
+                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                  height="16"
+                                  width="16"
                                 >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                  <svg
+                                    id="copy"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
                                   >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
-                              </div>
-                            </button>
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
-                      >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
-                        >
-                          33.75089801 DARK
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
-                      >
-                        <span
-                          class="text-theme-secondary-400"
-                        >
-                          N/A
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
-                      />
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
-                      />
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
-                      />
-                    </td>
-                    <td
-                      class="pr-6"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
-                      >
-                        <div>
-                          <button
-                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
-                            data-testid="AddressRow__select-1"
-                            type="button"
-                          >
-                            <div
-                              class="flex items-center space-x-2"
-                            >
-                              Vote
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
-                    data-testid="TableRow"
-                  >
-                    <td
-                      data-testid="AddressRow__wallet"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                      </td>
+                      <td
+                        class="hidden xl:table-cell"
                       >
                         <div
-                          class="w-40 flex-1"
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
                         >
-                          <div
-                            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="Amount"
                           >
-                            <span
-                              class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
-                              data-testid="Address__alias"
-                            >
-                              <span
-                                class="no-ligatures css-9nx3be"
-                                data-testid="TruncateEnd"
-                              >
-                                ARK Wallet 2
-                              </span>
-                            </span>
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
+                            0 DARK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                        >
+                          <span
+                            class="text-theme-secondary-400"
+                          >
+                            N/A
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
+                        />
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
+                        />
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                        />
+                      </td>
+                      <td
+                        class="pr-6"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                        >
+                          <div>
                             <button
-                              class="ring-focus relative focus:outline-none"
-                              data-ring-focus-margin="-m-1"
-                              data-testid="clipboard-icon__wrapper"
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              data-testid="AddressRow__select-0"
+                              disabled=""
                               type="button"
                             >
                               <div
-                                class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                height="16"
-                                width="16"
+                                class="flex items-center space-x-2"
                               >
-                                <svg
-                                  id="copy"
-                                  viewBox="0 0 20 20"
-                                  x="0"
-                                  xml:space="preserve"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  y="0"
-                                >
-                                  <g
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  >
-                                    <path
-                                      d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                    />
-                                    <path
-                                      d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                    />
-                                  </g>
-                                </svg>
+                                Vote
                               </div>
                             </button>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden xl:table-cell"
+                      </td>
+                    </tr>
+                    <tr
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      data-testid="TableRow"
                     >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                      <td
+                        data-testid="AddressRow__wallet"
                       >
-                        <span
-                          class="whitespace-nowrap"
-                          data-testid="Amount"
+                        <div
+                          class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
                         >
-                          57.68 DARK
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
-                      >
-                        <span
-                          class="text-theme-secondary-400"
-                        >
-                          N/A
-                        </span>
-                      </div>
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
-                      />
-                    </td>
-                    <td>
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
-                      />
-                    </td>
-                    <td
-                      class="hidden lg:table-cell"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
-                      />
-                    </td>
-                    <td
-                      class="pr-6"
-                    >
-                      <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
-                      >
-                        <div>
-                          <button
-                            class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
-                            data-testid="AddressRow__select-2"
-                            type="button"
+                          <div
+                            class="w-40 flex-1"
                           >
                             <div
-                              class="flex items-center space-x-2"
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              Vote
+                              <span
+                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-9nx3be"
+                                  data-testid="TruncateEnd"
+                                >
+                                  ARK Wallet 1
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                              </span>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                  height="16"
+                                  width="16"
+                                >
+                                  <svg
+                                    id="copy"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </button>
                             </div>
-                          </button>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      </td>
+                      <td
+                        class="hidden xl:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="Amount"
+                          >
+                            33.75089801 DARK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                        >
+                          <span
+                            class="text-theme-secondary-400"
+                          >
+                            N/A
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
+                        />
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
+                        />
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                        />
+                      </td>
+                      <td
+                        class="pr-6"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                        >
+                          <div>
+                            <button
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              data-testid="AddressRow__select-1"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                Vote
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      data-testid="TableRow"
+                    >
+                      <td
+                        data-testid="AddressRow__wallet"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 min-h-11 pl-6 rounded-l cursor-pointer group transition duration-300 space-x-3"
+                        >
+                          <div
+                            class="w-40 flex-1"
+                          >
+                            <div
+                              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                            >
+                              <span
+                                class="font-semibold text-base text-theme-primary-700 hover:border-current border-b border-transparent transition-[color,border-color] duration-[200ms,350ms] delay-[0s,100ms] leading-tight"
+                                data-testid="Address__alias"
+                              >
+                                <span
+                                  class="no-ligatures css-9nx3be"
+                                  data-testid="TruncateEnd"
+                                >
+                                  ARK Wallet 2
+                                </span>
+                              </span>
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                data-testid="Address__address"
+                              >
+                                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                              </span>
+                              <button
+                                class="ring-focus relative focus:outline-none"
+                                data-ring-focus-margin="-m-1"
+                                data-testid="clipboard-icon__wrapper"
+                                type="button"
+                              >
+                                <div
+                                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                  height="16"
+                                  width="16"
+                                >
+                                  <svg
+                                    id="copy"
+                                    viewBox="0 0 20 20"
+                                    x="0"
+                                    xml:space="preserve"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    y="0"
+                                  >
+                                    <g
+                                      fill="none"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                    >
+                                      <path
+                                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                      />
+                                      <path
+                                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                      />
+                                    </g>
+                                  </svg>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden xl:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end font-semibold text-theme-secondary-text whitespace-nowrap"
+                        >
+                          <span
+                            class="whitespace-nowrap"
+                            data-testid="Amount"
+                          >
+                            57.68 DARK
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold space-x-3"
+                        >
+                          <span
+                            class="text-theme-secondary-400"
+                          >
+                            N/A
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center font-semibold text-theme-secondary-text"
+                        />
+                      </td>
+                      <td>
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center"
+                        />
+                      </td>
+                      <td
+                        class="hidden lg:table-cell"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center space-x-2"
+                        />
+                      </td>
+                      <td
+                        class="pr-6"
+                      >
+                        <div
+                          class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end !pr-0"
+                        >
+                          <div>
+                            <button
+                              class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                              data-testid="AddressRow__select-2"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                Vote
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -13054,7 +13085,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder css-1wpbo18"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <div
             class="flex items-end justify-between bg-theme-background"
@@ -13215,7 +13246,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
+          class="mx-auto px-6 lg:container md:px-10 lg:pb-28 sm:pt-2 md:pb-18 sm:pb-16 pb-18"
         >
           <div
             data-testid="DelegateTable"
