@@ -222,7 +222,7 @@ export const Welcome = () => {
 	return (
 		<>
 			<Page navbarVariant="logo-only" pageTitle={t("COMMON.WELCOME")} title={<Trans i18nKey="COMMON.APP_NAME" />}>
-				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-20" innerClassName="w-full">
+				<Section className="-mt-5 flex flex-1 md:mt-0 xl:px-10" innerClassName="w-full lg:max-w-screen-xl">
 					<div className="flex flex-col gap-3 lg:flex-row">
 						<div
 							className={cn(

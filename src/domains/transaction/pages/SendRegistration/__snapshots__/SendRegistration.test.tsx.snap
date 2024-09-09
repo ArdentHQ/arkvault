@@ -575,7 +575,7 @@ exports[`Registration > should show error step and go back 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
@@ -1302,7 +1302,7 @@ exports[`Registration > should show mnemonic error 1`] = `
         class="w-full py-4 first:pt-8 last:pb-8 flex-1 css-9mualq"
       >
         <div
-          class="mx-auto px-10 lg:container"
+          class="mx-auto px-6 lg:container md:px-10"
         >
           <form
             class="mx-auto max-w-xl"
