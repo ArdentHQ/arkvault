@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
 function getVoteCategory(votes: VoteRegistryItem[], unvotes: VoteRegistryItem[]) {
-	console.log(votes, unvotes);
 	if (votes.length > 0 && unvotes.length > 0) {
 		return "swap";
 	}

@@ -39,7 +39,6 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 	);
 
 	const { setValue } = useFormContext();
-	console.log(wallet?.address())
 
 	return (
 		<section data-testid="SendVote__form-step" className="space-y-3 sm:space-y-4">
