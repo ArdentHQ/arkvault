@@ -57,6 +57,7 @@ export const FormStep = ({ unvotes, votes, wallet, profile, network, isWalletFie
 				<div data-testid="sender-address" className="sm:mt-2 p-3 sm:p-0">
 					<SelectAddress
 						showWalletAvatar={false}
+						showUserIcon={!isWalletFieldDisabled}
 						disabled={isWalletFieldDisabled !== false}
 						wallet={
 							wallet
