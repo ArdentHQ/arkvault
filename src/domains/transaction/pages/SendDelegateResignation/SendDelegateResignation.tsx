@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepNavigation } from "@/app/components/StepNavigation";
@@ -19,6 +18,7 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 enum Step {
 	FormStep = 1,
@@ -144,7 +144,7 @@ export const SendDelegateResignation = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.SummaryStep}>
-								<SummaryStep senderWallet={activeWallet} transaction={transaction} />
+								<TransactionSuccessful senderWallet={activeWallet} transaction={transaction} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.ErrorStep}>
