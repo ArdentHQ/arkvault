@@ -25,6 +25,7 @@ type SelectAddressProperties = {
 	showWalletName?: boolean;
 	showWalletAvatar?: boolean;
 	disableAction?: (wallet: Contracts.IReadWriteWallet) => boolean;
+	inputClassName?: string;
 	onChange?: (address: string) => void;
 } & Omit<React.InputHTMLAttributes<any>, "onChange">;
 
@@ -52,6 +53,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 			showWalletAvatar = true,
 			showUserIcon = true,
 			showWalletName = true,
+			inputClassName,
 			onChange,
 			title,
 			description,
@@ -138,7 +140,7 @@ export const SelectAddress = React.forwardRef<HTMLInputElement, SelectAddressPro
 					</span>
 
 					<Input
-						className="!bg-transparent"
+						className={inputClassName}
 						data-testid="SelectAddress__input"
 						ref={reference}
 						value={selectedWallet?.address || ""}
