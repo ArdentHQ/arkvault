@@ -47,7 +47,11 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText minWidth="md">{t("COMMON.HASH")}</DetailLabelText>
 							<div ref={ref} className="flex w-full">
-								<TruncateMiddleDynamic availableWidth={width} value={transaction.hash()} parentRef={ref} />
+								<TruncateMiddleDynamic
+									availableWidth={width}
+									value={transaction.hash()}
+									parentRef={ref}
+								/>
 							</div>
 						</div>
 					</div>
