@@ -83,6 +83,10 @@ describe("UnlockTokensModal", () => {
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
+			isVote: () => false,
+			isIpfs: () => false,
+			isDelegateRegistration: () => false,
+			isDelegateResignation: () => false,
 		} as any);
 	});
 
