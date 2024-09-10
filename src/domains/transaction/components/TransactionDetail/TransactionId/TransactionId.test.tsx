@@ -2,10 +2,10 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
-import { TransactionAddresses } from "./TransactionAddresses";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { translations } from "@/app/i18n/common/i18n";
 
-describe("TransactionAddresses", () => {
+describe("TransactionId", () => {
 	let profile: Contracts.IProfile;
 	let recipients: RecipientProperties[];
 
