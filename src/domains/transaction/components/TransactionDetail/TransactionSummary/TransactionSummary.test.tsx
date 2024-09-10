@@ -2,8 +2,8 @@ import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { RecipientProperties } from "./SearchRecipient.contracts";
 import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
-import { TransactionAddresses } from "./TransactionAddresses";
 import { translations } from "@/app/i18n/common/i18n";
+import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 
 describe("TransactionAddresses", () => {
 	let profile: Contracts.IProfile;
