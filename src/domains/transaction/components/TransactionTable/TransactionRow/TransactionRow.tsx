@@ -23,7 +23,7 @@ export const TransactionRow = memo(
 		profile,
 		...properties
 	}: TransactionRowProperties) => {
-		const { isXs, isSm, } = useBreakpoint();
+		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
 

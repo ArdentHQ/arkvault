@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import { MdAndAbove } from "@/app/components/Breakpoint";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
-import { useActiveProfile, } from "@/app/hooks";
+import { useActiveProfile } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { DeleteExchangeTransaction } from "@/domains/exchange/components/DeleteExchangeTransaction";
 import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";

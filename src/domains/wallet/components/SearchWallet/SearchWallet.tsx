@@ -153,7 +153,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm} = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
@@ -272,15 +272,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				/>
 			);
 		},
-		[
-			profile,
-			disableAction,
-			showConvertedValue,
-			showNetwork,
-			onSelectWallet,
-			selectedAddress,
-			useResponsive,
-		],
+		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, useResponsive],
 	);
 
 	return (

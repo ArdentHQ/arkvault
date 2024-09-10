@@ -22,7 +22,7 @@ export const Contacts: FC = () => {
 
 	const history = useHistory();
 
-	const { isMdAndAbove} = useBreakpoint();
+	const { isMdAndAbove } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 
