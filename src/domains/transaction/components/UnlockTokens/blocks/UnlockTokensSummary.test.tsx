@@ -8,8 +8,7 @@ import { getDefaultProfileId, render, env } from "@/utils/testing-library";
 const fixtureProfileId = getDefaultProfileId();
 
 describe("UnlockTokensSummary", () => {
-
-	it("should render", async  () => {
+	it("should render", async () => {
 		const profile = await env.profiles().create("empty");
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -28,7 +27,7 @@ describe("UnlockTokensSummary", () => {
 								isTest: () => true,
 								ticker: () => "DARK",
 							}),
-							profile: () => profile
+							profile: () => profile,
 						}),
 					}}
 				/>

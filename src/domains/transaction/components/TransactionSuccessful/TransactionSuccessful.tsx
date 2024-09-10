@@ -44,7 +44,7 @@ export const TransactionSuccessful = ({
 	senderWallet,
 	title,
 	children,
-	recipients = []
+	recipients = [],
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 

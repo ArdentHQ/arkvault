@@ -7,15 +7,20 @@ import { renderResponsive, render } from "@/utils/testing-library";
 
 describe("TransactionType", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
-
-
-		const { container } = renderResponsive(<TransactionType transaction={{
-			isDelegateRegistration: () => false,
-			isDelegateResignation: () => false,
-			isIpfs: () => false,
-			isVote: () => false,
-			type: () => "multiPayment"
-		} as DTO.ExtendedSignedTransactionData} />, breakpoint);
+		const { container } = renderResponsive(
+			<TransactionType
+				transaction={
+					{
+						isDelegateRegistration: () => false,
+						isDelegateResignation: () => false,
+						isIpfs: () => false,
+						isVote: () => false,
+						type: () => "multiPayment",
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+			breakpoint,
+		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.MULTI_PAYMENT);
 
@@ -23,15 +28,20 @@ describe("TransactionType", () => {
 	});
 
 	it("should render delegate registration", () => {
-
-		const { container } = render(<TransactionType transaction={{
-			isDelegateRegistration: () => true,
-			isDelegateResignation: () => false,
-			isIpfs: () => false,
-			isVote: () => false,
-			type: () => "delegateRegistration",
-			username: () => "delegate"
-		} as DTO.ExtendedSignedTransactionData} />);
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						isDelegateRegistration: () => true,
+						isDelegateResignation: () => false,
+						isIpfs: () => false,
+						isVote: () => false,
+						type: () => "delegateRegistration",
+						username: () => "delegate",
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_REGISTRATION);
 		expect(container).toHaveTextContent("delegate");
@@ -40,15 +50,20 @@ describe("TransactionType", () => {
 	});
 
 	it("should render delegate resignation", () => {
-
-		const { container } = render(<TransactionType transaction={{
-			isDelegateRegistration: () => false,
-			isDelegateResignation: () => true,
-			isIpfs: () => false,
-			isVote: () => false,
-			type: () => "delegateResignation",
-			username: () => "delegate"
-		} as DTO.ExtendedSignedTransactionData} />);
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						isDelegateRegistration: () => false,
+						isDelegateResignation: () => true,
+						isIpfs: () => false,
+						isVote: () => false,
+						type: () => "delegateResignation",
+						username: () => "delegate",
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_RESIGNATION);
 		expect(container).toHaveTextContent("delegate");
@@ -57,17 +72,22 @@ describe("TransactionType", () => {
 	});
 
 	it("should render ipfs", () => {
-
-		const hash = "QmVqNrDfr2dxzQUo4VN3zhG4NV78uYFmRpgSktWDc2eeh2"
-		const { container } = render(<TransactionType transaction={{
-			hash: () => hash,
-			isDelegateRegistration: () => false,
-			isDelegateResignation: () => false,
-			isIpfs: () => true,
-			isVote: () => false,
-			type: () => "delegateResignation",
-			username: () => "delegate"
-		} as DTO.ExtendedSignedTransactionData} />);
+		const hash = "QmVqNrDfr2dxzQUo4VN3zhG4NV78uYFmRpgSktWDc2eeh2";
+		const { container } = render(
+			<TransactionType
+				transaction={
+					{
+						hash: () => hash,
+						isDelegateRegistration: () => false,
+						isDelegateResignation: () => false,
+						isIpfs: () => true,
+						isVote: () => false,
+						type: () => "delegateResignation",
+						username: () => "delegate",
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
 
 		expect(container).toHaveTextContent(translations.TRANSACTION_TYPES.DELEGATE_RESIGNATION);
 		expect(container).toHaveTextContent(hash);

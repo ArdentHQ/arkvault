@@ -87,7 +87,7 @@ export const SendTransfer = () => {
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
-	const { recipients } = getValues()
+	const { recipients } = getValues();
 
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
