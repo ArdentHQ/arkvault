@@ -43,7 +43,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should render", async () => {
 		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -55,6 +55,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
@@ -87,7 +88,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		profile.wallets().push(wallet);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -99,6 +100,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
