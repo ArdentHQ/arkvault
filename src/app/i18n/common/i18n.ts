@@ -146,6 +146,7 @@ export const translations = {
 	FROM: "From",
 	GO_TO_PORTFOLIO: "Go to Portfolio",
 	GO_TO_WALLET: "Go to Wallet",
+	HASH: "Hash",
 	HEIGHT: "Height",
 	HERE: "here",
 	HIDE: "Hide",

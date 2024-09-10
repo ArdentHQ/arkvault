@@ -16,7 +16,7 @@ interface Properties {
 
 export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { t } = useTranslation();
-	const { ref } = useResizeDetector<HTMLElement>({ handleHeight: false });
+	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
@@ -28,7 +28,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 			</div>
 
 			<div ref={ref} className="w-full font-semibold sm:px-4">
-				<TruncateMiddleDynamic value={transaction.id()} offset={24} parentRef={ref} />
+				<TruncateMiddleDynamic value={transaction.id()} availableWidth={width} />
 			</div>
 
 			<div className="mt-4 flex space-x-2 sm:mr-4 sm:mt-0">
