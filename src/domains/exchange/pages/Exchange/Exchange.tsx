@@ -1,13 +1,13 @@
 import { upperFirst } from "@ardenthq/sdk-helpers";
 import { Contracts } from "@ardenthq/sdk-profiles";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { MdAndAbove } from "@/app/components/Breakpoint";
 import { Header } from "@/app/components/Header";
 import { Page, Section } from "@/app/components/Layout";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useActiveProfile, } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { DeleteExchangeTransaction } from "@/domains/exchange/components/DeleteExchangeTransaction";
 import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";
@@ -34,7 +34,6 @@ export const Exchange = () => {
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 
 	const [selectedExchangeTransaction, setSelectedExchangeTransaction] = useState<Contracts.IExchangeTransaction>();
-	const { isMd } = useBreakpoint();
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
 	const { checkOrderStatus, prepareParameters } = useOrderStatus();
 
@@ -121,7 +120,7 @@ export const Exchange = () => {
 			<>
 				<ExchangeTransactionsTable
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
-					isCompact={isMd}
+					isCompact={true}
 					onClick={(providerId: string, orderId: string) => {
 						history.push(
 							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,

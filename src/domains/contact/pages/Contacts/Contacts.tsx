@@ -22,7 +22,7 @@ export const Contacts: FC = () => {
 
 	const history = useHistory();
 
-	const { isMdAndAbove, isLgAndAbove } = useBreakpoint();
+	const { isMdAndAbove} = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 
@@ -132,10 +132,10 @@ export const Contacts: FC = () => {
 				availableNetworks={availableNetworks}
 				onSend={handleSend}
 				onAction={(action) => handleContactAction(action, contact)}
-				isCompact={!isLgAndAbove}
+				isCompact={true}
 			/>
 		),
-		[menuOptions, availableNetworks, handleSend, isLgAndAbove, handleContactAction],
+		[menuOptions, availableNetworks, handleSend, handleContactAction],
 	);
 
 	const renderContacts = () => {

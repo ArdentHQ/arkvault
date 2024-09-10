@@ -17,7 +17,7 @@ type Properties = {
 export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties }: Properties) => {
 	const { t } = useTranslation();
 	const { isXs, isSm } = useBreakpoint();
-	const isCompact = false;
+	const isCompact = true;
 
 	if (isXs || isSm) {
 		return (

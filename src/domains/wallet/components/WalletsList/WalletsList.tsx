@@ -45,7 +45,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const { isMdAndAbove } = useBreakpoint();
 	const { t } = useTranslation();
 	const { profileIsSyncing } = useConfiguration();
-	const isCompact = false
+	const isCompact = true;
 
 	const showSkeletons = profileIsSyncing && wallets.length === 0;
 

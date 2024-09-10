@@ -140,8 +140,8 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
-	const isCompact = !isLgAndAbove;
+	const { isXs, isSm, isLgAndAbove} = useBreakpoint();
+	const isCompact = true;
 
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 

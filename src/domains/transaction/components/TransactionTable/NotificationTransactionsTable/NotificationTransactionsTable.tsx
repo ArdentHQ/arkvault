@@ -20,7 +20,7 @@ export const NotificationTransactionsTable = ({
 }: NotificationTransactionsProperties) => {
 	const { t } = useTranslation();
 
-	const isCompact = false;
+	const isCompact = true;
 
 	if (isLoading) {
 		return <NotificationTransactionsSkeleton isCompact={isCompact} />;
