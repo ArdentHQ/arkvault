@@ -6,7 +6,7 @@ import { Table } from "@/app/components/Table";
 import { WalletListItem, WalletListItemProperties } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { WalletsListProperties } from "@/domains/wallet/components/WalletsList/WalletsList.contracts";
 import { Pagination } from "@/app/components/Pagination";
 import { Tooltip } from "@/app/components/Tooltip";
