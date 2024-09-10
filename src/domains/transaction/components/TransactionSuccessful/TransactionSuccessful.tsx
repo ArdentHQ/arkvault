@@ -24,6 +24,7 @@ interface TransactionSuccessfulProperties {
 	title?: string;
 	description?: string;
 	children?: React.ReactNode;
+	recipients?: RecipientItem[];
 }
 
 export const TransactionDetailPadded = ({ children }: { children: React.ReactNode }) => (
@@ -43,6 +44,7 @@ export const TransactionSuccessful = ({
 	senderWallet,
 	title,
 	children,
+	recipients = []
 }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 
@@ -50,8 +52,6 @@ export const TransactionSuccessful = ({
 		transactionId: transaction.id(),
 		wallet: senderWallet,
 	});
-	const { getValues } = useFormContext();
-	const { recipients } = getValues();
 
 	if (transaction.isMultiSignatureRegistration() || transaction.usesMultiSignature()) {
 		return (

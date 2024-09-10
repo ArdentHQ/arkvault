@@ -7,10 +7,11 @@ import { TransactionSummary } from "@/domains/transaction/components/Transaction
 interface SummaryStepProperties {
 	senderWallet: Contracts.IReadWriteWallet;
 	transaction: DTO.ExtendedSignedTransactionData;
+	recipients: RecipientItem[];
 }
 
-export const SummaryStep = ({ senderWallet, transaction }: SummaryStepProperties): JSX.Element => (
-	<TransactionSuccessful transaction={transaction} senderWallet={senderWallet}>
+export const SummaryStep = ({ senderWallet, transaction, recipients }: SummaryStepProperties): JSX.Element => (
+	<TransactionSuccessful transaction={transaction} senderWallet={senderWallet} recipients={recipients}>
 		<TransactionDetailPadded>
 			<TransactionSummary senderWallet={senderWallet} transaction={transaction} />
 		</TransactionDetailPadded>

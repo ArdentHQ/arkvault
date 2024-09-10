@@ -187,7 +187,7 @@ export const SendTransfer = () => {
 	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
-		const { network, senderAddress } = getValues();
+		const { network, senderAddress, recipients } = getValues();
 		assertNetwork(network);
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 
@@ -359,7 +359,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<SummaryStep transaction={transaction!} senderWallet={wallet!} />
+				<SummaryStep transaction={transaction!} senderWallet={wallet!} recipients={recipients} />
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>
