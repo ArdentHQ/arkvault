@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
@@ -8,7 +8,6 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { Address } from "@/app/components/Address";
 
 export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSignedTransactionData }) => {
 	const { t } = useTranslation();
