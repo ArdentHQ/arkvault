@@ -301,7 +301,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -314,7 +314,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -1097,7 +1097,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1110,7 +1110,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -1888,7 +1888,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -1901,7 +1901,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -2686,7 +2686,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -2699,7 +2699,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -3495,7 +3495,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -3508,7 +3508,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -4209,7 +4209,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                   >
                     Unvote
@@ -4221,7 +4221,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                   >
                     To
@@ -4871,7 +4871,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                   >
                     Vote
@@ -4883,7 +4883,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                   >
                     To
@@ -5624,7 +5624,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -5637,7 +5637,7 @@ exports[`Signed Transaction Table > should render different status > should show
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -6324,7 +6324,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -6336,7 +6336,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                   >
                     To
@@ -6770,7 +6770,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -6782,7 +6782,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
                   class="flex px-3 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                   >
                     To
@@ -7216,7 +7216,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -7229,7 +7229,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -7704,7 +7704,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -7717,7 +7717,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -8184,7 +8184,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   class="flex px-3 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                   >
                     Transfer
@@ -8196,7 +8196,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
                   class="flex px-3 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0 my-0 py-3"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                   >
                     To
@@ -8832,7 +8832,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -8845,7 +8845,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
@@ -9320,7 +9320,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded p-1 css-sycbru"
+                    class="rounded p-1 css-1dx994f"
                     color="secondary"
                     data-testid="TransactionRowRecipientLabel"
                   >
@@ -9333,7 +9333,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
                   class="flex px-3 my-1 transition-colors duration-100 min-h-11 space-x-2 items-start xl:min-h-0"
                 >
                   <div
-                    class="rounded px-[11px] py-1 css-tubsez"
+                    class="rounded px-[11px] py-1 css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowToLabel"
                   >
