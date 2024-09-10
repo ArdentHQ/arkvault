@@ -1,9 +1,9 @@
 import React from "react";
-import { Contracts, DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk-profiles";
 
 import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";
-import { queryElementForSvg, renderResponsive, render, env } from "@/utils/testing-library";
+import { renderResponsive, render } from "@/utils/testing-library";
 
 describe("TransactionType", () => {
 	it.each(["xs", "sm", "md", "lg", "xl"])("should render in %s", (breakpoint) => {
