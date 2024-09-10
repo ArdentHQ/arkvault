@@ -274,10 +274,7 @@ export const LedgerScanStep = ({
 
 	const { isLgAndAbove } = useBreakpoint();
 
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
+	const isCompact = !isLgAndAbove;
 
 	const { watch, register, unregister, setValue } = useFormContext();
 	const [network] = useState<Networks.Network>(() => watch("network"));

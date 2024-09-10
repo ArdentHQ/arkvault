@@ -128,7 +128,7 @@ export const Votes: FC = () => {
 
 	const isSelectDelegateStep = !!selectedAddress;
 
-	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
+	const useCompactTables = true;
 
 	return (
 		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>

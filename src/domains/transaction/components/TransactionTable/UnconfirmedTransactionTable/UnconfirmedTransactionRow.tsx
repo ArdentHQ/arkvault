@@ -17,7 +17,7 @@ type Properties = {
 export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties }: Properties) => {
 	const { t } = useTranslation();
 	const { isXs, isSm } = useBreakpoint();
-	const isCompact = !profile.appearance().get("useExpandedTables");
+	const isCompact = false;
 
 	if (isXs || isSm) {
 		return (

@@ -66,7 +66,6 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 			return accentColor as AccentColorType;
 		})(),
 		dashboardTransactionHistory: profile.appearance().get("dashboardTransactionHistory"),
-		useExpandedTables: profile.appearance().get("useExpandedTables"),
 		useNetworkWalletNames: profile.appearance().get("useNetworkWalletNames"),
 		viewingMode: profile.appearance().get("theme") as ViewingModeType,
 	}),
@@ -75,7 +74,6 @@ export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanc
 		profile
 			.settings()
 			.set(Contracts.ProfileSetting.DashboardTransactionHistory, values.dashboardTransactionHistory);
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, values.useExpandedTables);
 		profile.settings().set(Contracts.ProfileSetting.Theme, values.viewingMode);
 		profile.settings().set(Contracts.ProfileSetting.UseNetworkWalletNames, values.useNetworkWalletNames);
 	},

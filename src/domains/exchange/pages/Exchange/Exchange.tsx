@@ -106,11 +106,6 @@ export const Exchange = () => {
 		);
 	};
 
-	const isCompact = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || isMd,
-		[activeProfile, isMd],
-	);
-
 	const renderContent = () => {
 		if (currentView === ExchangeView.Exchanges) {
 			return (
@@ -126,7 +121,7 @@ export const Exchange = () => {
 			<>
 				<ExchangeTransactionsTable
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
-					isCompact={isCompact}
+					isCompact={isMd}
 					onClick={(providerId: string, orderId: string) => {
 						history.push(
 							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,

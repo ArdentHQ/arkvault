@@ -155,10 +155,6 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
 
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
@@ -271,7 +267,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					showNetwork={showNetwork}
 					onAction={onSelectWallet}
 					selectedAddress={selectedAddress}
-					isCompact={isCompact}
+					isCompact={!isLgAndAbove}
 					profile={profile}
 				/>
 			);
@@ -283,7 +279,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 			showNetwork,
 			onSelectWallet,
 			selectedAddress,
-			isCompact,
+			isLgAndAbove,
 			useResponsive,
 		],
 	);

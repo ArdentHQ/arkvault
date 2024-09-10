@@ -28,8 +28,8 @@ export const TransactionRow = memo(
 		const timeFormat = useTimeFormat();
 
 		const isCompact = useMemo(
-			() => !profile.appearance().get("useExpandedTables") || isSm || isXs || isMd,
-			[profile, isMd, isSm, isXs],
+			() => isSm || isXs || isMd,
+			[isMd, isSm, isXs],
 		);
 
 		if (isXs || isSm) {

@@ -43,10 +43,10 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	className,
 }) => {
 	const { isMdAndAbove } = useBreakpoint();
-	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const { profileIsSyncing } = useConfiguration();
-	const isCompact = !profile.appearance().get("useExpandedTables");
+	const isCompact = false
+
 	const showSkeletons = profileIsSyncing && wallets.length === 0;
 
 	const [currentPage, setCurrentPage] = useState(1);

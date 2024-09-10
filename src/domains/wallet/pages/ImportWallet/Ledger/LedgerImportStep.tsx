@@ -140,11 +140,6 @@ export const LedgerImportStep = ({
 
 	const { isLgAndAbove } = useBreakpoint();
 
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
-
 	const { watch } = useFormContext();
 
 	const [network] = useState(() => watch("network"));
@@ -171,7 +166,7 @@ export const LedgerImportStep = ({
 					profile={profile}
 					network={network}
 					onClickEditWalletName={onClickEditWalletName}
-					isCompact={isCompact}
+					isCompact={!isLgAndAbove}
 				/>
 			) : (
 				<SingleImport

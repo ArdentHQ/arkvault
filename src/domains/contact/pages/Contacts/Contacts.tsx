@@ -123,11 +123,6 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
-	const useCompactTables = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || !isLgAndAbove,
-		[activeProfile, isLgAndAbove],
-	);
-
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => (
 			<ContactListItem
@@ -137,10 +132,10 @@ export const Contacts: FC = () => {
 				availableNetworks={availableNetworks}
 				onSend={handleSend}
 				onAction={(action) => handleContactAction(action, contact)}
-				isCompact={useCompactTables}
+				isCompact={!isLgAndAbove}
 			/>
 		),
-		[menuOptions, availableNetworks, handleSend, useCompactTables, handleContactAction],
+		[menuOptions, availableNetworks, handleSend, isLgAndAbove, handleContactAction],
 	);
 
 	const renderContacts = () => {

@@ -64,10 +64,7 @@ export const WalletDetails = () => {
 		toasts.success(t("TRANSACTION.TRANSACTION_REMOVED"));
 	}, [syncPending, t]);
 
-	const useCompactTables = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || isMd,
-		[activeProfile, isMd],
-	);
+	const useCompactTables = isMd;
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 
