@@ -1002,6 +1002,7 @@ exports[`MultiSignatureSuccessful > should render in lg 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1872,6 +1873,7 @@ exports[`MultiSignatureSuccessful > should render in md 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -2699,6 +2701,7 @@ exports[`MultiSignatureSuccessful > should render in sm 1`] = `
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"
@@ -3543,6 +3546,7 @@ exports[`MultiSignatureSuccessful > should render in xl 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -4370,6 +4374,7 @@ exports[`MultiSignatureSuccessful > should render in xs 1`] = `
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"
@@ -5214,6 +5219,7 @@ exports[`MultiSignatureSuccessful > should render with delegate sender wallet 1`
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -5904,6 +5910,7 @@ exports[`MultiSignatureSuccessful > should render with ledger sender wallet 1`] 
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -6594,6 +6601,7 @@ exports[`MultiSignatureSuccessful > should render without generated address 1`] 
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"

@@ -101,6 +101,7 @@ exports[`UnlockTokensReview > should render 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
