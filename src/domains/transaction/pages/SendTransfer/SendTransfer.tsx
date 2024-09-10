@@ -87,6 +87,8 @@ export const SendTransfer = () => {
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
+	const { recipients } = getValues()
+
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
@@ -187,7 +189,7 @@ export const SendTransfer = () => {
 	const handleNext = async (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
-		const { network, senderAddress, recipients } = getValues();
+		const { network, senderAddress } = getValues();
 		assertNetwork(network);
 		const senderWallet = activeProfile.wallets().findByAddressWithNetwork(senderAddress, network.id());
 

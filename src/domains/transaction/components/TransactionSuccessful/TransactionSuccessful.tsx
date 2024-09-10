@@ -13,10 +13,10 @@ import {
 import { StepHeader } from "@/app/components/StepHeader";
 import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
-import { useFormContext } from "react-hook-form";
 import { DetailLabel } from "@/app/components/DetailWrapper";
 import { Divider } from "@/app/components/Divider";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

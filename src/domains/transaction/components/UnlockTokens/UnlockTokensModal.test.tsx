@@ -76,17 +76,17 @@ describe("UnlockTokensModal", () => {
 			fee: () => +transactionFixture.data.fee / 1e8,
 			id: () => transactionFixture.data.id,
 			isConfirmed: () => true,
+			isDelegateRegistration: () => false,
+			isDelegateResignation: () => false,
+			isIpfs: () => false,
 			isMultiSignatureRegistration: () => false,
 			isUnlockToken: () => true,
+			isVote: () => false,
 			sender: () => transactionFixture.data.sender,
 			timestamp: () => DateTime.make(),
 			type: () => "unlockToken",
 			usesMultiSignature: () => false,
 			wallet: () => wallet,
-			isVote: () => false,
-			isIpfs: () => false,
-			isDelegateRegistration: () => false,
-			isDelegateResignation: () => false,
 		} as any);
 	});
 

@@ -3,6 +3,7 @@ import React from "react";
 
 import { TransactionDetailPadded, TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 import { TransactionSummary } from "@/domains/transaction/components/TransactionDetail/TransactionSummary";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 interface SummaryStepProperties {
 	senderWallet: Contracts.IReadWriteWallet;
