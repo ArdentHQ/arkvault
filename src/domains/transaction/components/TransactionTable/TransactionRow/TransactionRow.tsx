@@ -27,8 +27,6 @@ export const TransactionRow = memo(
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
 
-		const isCompact = true;
-
 		if (isXs || isSm) {
 			return (
 				<TransactionRowMobile
@@ -42,12 +40,12 @@ export const TransactionRow = memo(
 		}
 
 		if (isLoading) {
-			return <TransactionRowSkeleton isCompact={isCompact} />;
+			return <TransactionRowSkeleton />;
 		}
 
 		return (
 			<TableRow onClick={onClick} className={className} {...properties}>
-				<TableCell variant="start" isCompact={isCompact}>
+				<TableCell variant="start">
 					<Link
 						to={transaction.explorerLink()}
 						tooltip={transaction.id()}
@@ -60,7 +58,6 @@ export const TransactionRow = memo(
 
 				<TableCell
 					innerClassName="text-theme-secondary-text"
-					isCompact={isCompact}
 					className="table-cell md:hidden lg:table-cell"
 				>
 					<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
@@ -68,24 +65,23 @@ export const TransactionRow = memo(
 					</span>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowSender transaction={transaction} profile={profile} isCompact={isCompact} />
+				<TableCell innerClassName="space-x-4">
+					<TransactionRowSender transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+				<TableCell innerClassName="space-x-4">
+					<TransactionRowRecipient transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="justify-end" isCompact={isCompact}>
+				<TableCell innerClassName="justify-end">
 					<TransactionRowAmount
 						transaction={transaction}
 						exchangeCurrency={exchangeCurrency}
 						exchangeTooltip
-						isCompact={isCompact}
 					/>
 				</TableCell>
 
-				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end" isCompact={isCompact}>
+				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end">
 					{!exchangeCurrency || transaction.wallet().network().isTest() ? (
 						<span
 							data-testid="TransactionRow__currency"

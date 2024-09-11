@@ -9,7 +9,6 @@ import { useBreakpoint, useWalletAlias } from "@/app/hooks";
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
-	isCompact: boolean;
 	labelClass?: string;
 	showTransactionMode?: boolean;
 }
@@ -17,7 +16,6 @@ interface Properties {
 export const TransactionRowSender = ({
 	transaction,
 	profile,
-	isCompact,
 	labelClass,
 	showTransactionMode = true,
 }: Properties) => {
@@ -37,7 +35,7 @@ export const TransactionRowSender = ({
 	return (
 		<>
 			{showTransactionMode && (
-				<TransactionRowMode transaction={transaction} transactionType="transfer" isCompact={isCompact} />
+				<TransactionRowMode transaction={transaction} transactionType="transfer" />
 			)}
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<Address

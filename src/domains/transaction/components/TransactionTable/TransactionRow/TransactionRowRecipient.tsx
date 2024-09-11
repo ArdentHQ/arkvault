@@ -9,11 +9,10 @@ import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
-	isCompact: boolean;
 	labelClass?: string;
 }
 
-export const TransactionRowRecipient = ({ transaction, profile, isCompact, labelClass }: Properties) => {
+export const TransactionRowRecipient = ({ transaction, profile, labelClass }: Properties) => {
 	const { getWalletAlias } = useWalletAlias();
 
 	const { alias } = useMemo(
@@ -31,7 +30,6 @@ export const TransactionRowRecipient = ({ transaction, profile, isCompact, label
 			<TransactionRowRecipientIcon
 				recipient={transaction.recipient()}
 				type={transaction.type()}
-				isCompact={isCompact}
 			/>
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
