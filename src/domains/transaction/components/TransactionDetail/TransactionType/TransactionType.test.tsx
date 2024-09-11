@@ -16,6 +16,7 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "multiPayment",
+						username: () => "delegate",
 						wallet: () => ({
 							username: () => "delegate"
 						})
@@ -40,6 +41,7 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "delegateRegistration",
+						username: () => "delegate",
 						wallet: () => ({
 							username: () => "delegate"
 						})
@@ -64,6 +66,7 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "delegateResignation",
+						username: () => "delegate",
 						wallet: () => ({
 							username: () => "delegate"
 						})
@@ -90,6 +93,7 @@ describe("TransactionType", () => {
 						isIpfs: () => true,
 						isVote: () => false,
 						type: () => "delegateResignation",
+						username: () => "delegate",
 						wallet: () => ({
 							username: () => "delegate"
 						})
