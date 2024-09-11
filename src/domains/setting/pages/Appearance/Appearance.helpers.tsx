@@ -42,15 +42,6 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 		},
 	];
 
-	if (!isXs && !isSm) {
-		options.push({
-			label: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.TITLE"),
-			labelAddon: <AppearanceToggle name="useExpandedTables" />,
-			labelDescription: t("SETTINGS.APPEARANCE.OPTIONS.EXPANDED_TABLES.DESCRIPTION"),
-			wrapperClass: "pt-6 sm:pb-6",
-		});
-	}
-
 	return options;
 };
 
