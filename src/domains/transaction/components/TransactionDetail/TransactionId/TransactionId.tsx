@@ -22,7 +22,10 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { openExternal } = useLink();
 
 	return (
-		<div className="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800">
+		<div
+			data-testid="TransactionId"
+			className="flex-row items-center sm:flex sm:rounded-lg sm:border sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
+		>
 			<div className="mb-2 whitespace-nowrap font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 sm:mb-0 sm:h-full sm:rounded-l-lg sm:bg-theme-secondary-200 sm:p-4 sm:dark:bg-black">
 				{t("TRANSACTION.TRANSACTION_ID")}
 			</div>
@@ -52,6 +55,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				</Clipboard>
 
 				<Button
+					data-testid="explorer-link"
 					icon="External"
 					variant="secondary"
 					size="icon"

@@ -1,41 +1,48 @@
 import React from "react";
-import { Contracts } from "@ardenthq/sdk-profiles";
-import { RecipientProperties } from "./SearchRecipient.contracts";
-import { env, getDefaultProfileId, screen, renderResponsive } from "@/utils/testing-library";
-import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
-import { translations } from "@/app/i18n/common/i18n";
+import { DTO } from "@ardenthq/sdk-profiles";
+import { screen, renderResponsive, render } from "@/utils/testing-library";
+import * as useLink from "@/app/hooks/use-link";
+import { TransactionId } from "./TransactionId";
+import userEvent from "@testing-library/user-event";
 
 describe("TransactionId", () => {
-	let profile: Contracts.IProfile;
-	let recipients: RecipientProperties[];
-
-	beforeAll(() => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		const wallets: Contracts.IReadWriteWallet[] = profile.wallets().values();
-
-		recipients = wallets.map((wallet) => ({
-			address: wallet.address(),
-			alias: wallet.alias(),
-			avatar: wallet.avatar(),
-			id: wallet.id(),
-			network: wallet.networkId(),
-			type: "wallet",
-		}));
-	});
-
 	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
 		renderResponsive(
-			<TransactionAddresses
-				senderWallet={profile.wallets().first()}
-				recipients={[recipients[1]]}
-				profile={profile}
+			<TransactionId
+				transaction={
+					{
+						explorerLink: () => "https://test.com",
+						id: () => "id",
+						isConfirmed: () => true,
+					} as DTO.ExtendedSignedTransactionData
+				}
 			/>,
 			breakpoint,
 		);
 
-		expect(screen.getByTestId("DetailWrapper")).toBeInTheDocument();
-		expect(screen.getByText(translations.FROM)).toBeInTheDocument();
-		expect(screen.getByText(translations.TO)).toBeInTheDocument();
-		expect(screen.getByText(recipients[1].address)).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionId")).toBeInTheDocument();
+	});
+
+	it("should open explorer link in external window", async () => {
+		const openExternalMock = vi.fn();
+		vi.spyOn(useLink, "useLink").mockReturnValue({ openExternal: openExternalMock });
+
+		render(
+			<TransactionId
+				transaction={
+					{
+						explorerLink: () => "https://test.com",
+						id: () => "id",
+						isConfirmed: () => false,
+					} as DTO.ExtendedSignedTransactionData
+				}
+			/>,
+		);
+
+		expect(screen.getByTestId("TransactionId")).toBeInTheDocument();
+		expect(screen.getByText("id")).toBeInTheDocument();
+
+		await userEvent.click(screen.getByTestId("explorer-link"));
+		expect(openExternalMock).toHaveBeenCalled();
 	});
 });
