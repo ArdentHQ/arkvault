@@ -9,15 +9,14 @@ import { Size } from "@/types";
 
 interface AmountLabelHintProperties {
 	className: string;
-	isCompact?: boolean;
 	tooltipContent?: string;
 }
 
-const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCompact, tooltipContent }) => (
+const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, tooltipContent }) => (
 	<Tooltip content={tooltipContent}>
 		<div
 			data-testid="AmountLabel__hint"
-			className={cn("flex items-center justify-center", className, isCompact ? "h-5 w-5" : "-ml-1.5 px-2")}
+			className={cn("flex items-center justify-center h-5 w-5", className)}
 		>
 			<Icon name="HintSmall" size="sm" className="dark:text-white" />
 		</div>
@@ -25,7 +24,6 @@ const AmountLabelHint: React.VFC<AmountLabelHintProperties> = ({ className, isCo
 );
 
 interface AmountLabelProperties {
-	isCompact?: boolean;
 	isNegative: boolean;
 	value: number;
 	ticker: string;
@@ -33,7 +31,7 @@ interface AmountLabelProperties {
 	size?: Size;
 }
 
-export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint, size }) => {
+export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isNegative, hint, size }) => {
 	let labelColor = "success-bg";
 	let hintClassName =
 		"bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700";
@@ -51,15 +49,15 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, i
 	return (
 		<Label
 			color={labelColor as any}
-			noBorder={isCompact}
+			noBorder={true}
 			className={cn("rounded", {
 				"pr-1.5": hint,
 				"px-1.5": !hint,
 			})}
 			size={size}
 		>
-			<div className={cn("flex space-x-1", isCompact ? "items-center" : "items-stretch")}>
-				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
+			<div className="flex space-x-1 items-center">
+				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} />}
 				<Amount
 					showSign={value !== 0}
 					ticker={ticker}

@@ -120,7 +120,6 @@ export const Exchange = () => {
 			<>
 				<ExchangeTransactionsTable
 					exchangeTransactions={activeProfile.exchangeTransactions().values()}
-					isCompact={true}
 					onClick={(providerId: string, orderId: string) => {
 						history.push(
 							`/profiles/${activeProfile.id()}/exchange/view?exchangeId=${providerId}&orderId=${orderId}`,

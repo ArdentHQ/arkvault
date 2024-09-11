@@ -32,12 +32,10 @@ interface ExchangeTransactionsRowStatusProperties {
 const ExchangeTransactionRowAmount = ({
 	type,
 	data,
-	isCompact,
 	isPending,
 }: {
 	type: string;
 	data: Contracts.ExchangeTransactionDetail;
-	isCompact: boolean;
 	isPending?: boolean;
 }) => {
 	const { t } = useTranslation();
@@ -48,7 +46,6 @@ const ExchangeTransactionRowAmount = ({
 				hint={isPending ? t("EXCHANGE.EXPECTED_AMOUNT_HINT") : undefined}
 				value={data.amount}
 				ticker={data.ticker}
-				isCompact={isCompact}
 				isNegative={type === "sent"}
 			/>
 		</>
@@ -113,14 +110,12 @@ const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusPrope
 
 interface ExchangeTransactionsRowProperties {
 	exchangeTransaction: Contracts.IExchangeTransaction;
-	isCompact: boolean;
 	onClick: (providerId: string, orderId: string) => void;
 	onRemove: (exchangeTransaction: Contracts.IExchangeTransaction) => void;
 }
 
 export const ExchangeTransactionsRow = ({
 	exchangeTransaction,
-	isCompact,
 	onClick,
 	onRemove,
 }: ExchangeTransactionsRowProperties) => {
@@ -137,7 +132,6 @@ export const ExchangeTransactionsRow = ({
 			<TableCell
 				innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
 				variant="start"
-				isCompact={isCompact}
 			>
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
@@ -167,14 +161,12 @@ export const ExchangeTransactionsRow = ({
 			<TableCell
 				className="hidden text-sm xl:table-cell"
 				innerClassName="items-start xl:items-center font-semibold"
-				isCompact={isCompact}
 			>
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
 			<TableCell
 				innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
-				isCompact={isCompact}
 			>
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
@@ -182,48 +174,42 @@ export const ExchangeTransactionsRow = ({
 			<TableCell
 				className="lg:hidden"
 				innerClassName="items-end flex flex-col gap-1.5 my-3 xl:my-0"
-				isCompact={isCompact}
 			>
-				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
+				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				<ExchangeTransactionRowAmount
 					type="received"
 					data={exchangeTransaction.output()}
 					isPending={exchangeTransaction.isPending()}
-					isCompact={isCompact}
 				/>
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
 				innerClassName="gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
-				isCompact={isCompact}
 			>
-				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} isCompact={isCompact} />
+				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 			</TableCell>
 
 			<TableCell
 				className="hidden lg:table-cell"
 				innerClassName="gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
-				isCompact={isCompact}
 			>
 				<ExchangeTransactionRowAmount
 					type="received"
 					data={exchangeTransaction.output()}
 					isPending={exchangeTransaction.isPending()}
-					isCompact={isCompact}
 				/>
 			</TableCell>
 
-			<TableCell innerClassName="justify-center items-start xl:items-center my-3 xl:my-0" isCompact={isCompact}>
+			<TableCell innerClassName="justify-center items-start xl:items-center my-3 xl:my-0">
 				<ExchangeTransactionsRowStatus status={exchangeTransaction.status()} />
 			</TableCell>
 
 			<TableCell
 				variant="end"
 				innerClassName="items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
-				isCompact={isCompact}
 			>
-				<TableRemoveButton isCompact={isCompact} onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
+				<TableRemoveButton onClick={handleRemove} css={tw`pt-0 xl:pt-3`} />
 			</TableCell>
 		</TableRow>
 	);
