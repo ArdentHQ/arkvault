@@ -51,11 +51,16 @@ vi.mock("@/utils/delay", () => ({
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
+		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => false,
+		isVote: () => false,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{
@@ -66,7 +71,10 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => transactionFixture.data.sender,
 		type: () => "transfer",
 		usesMultiSignature: () => false,
-	} as any);
+		isConfirmed: () => true,
+		isSent: () => true,
+		confirmations: () => 10,
+	} as DTO.ExtendedSignedTransactionData);
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
@@ -177,7 +185,7 @@ describe("SendTransfer", () => {
 		vi.spyOn(wallet.coin().ledger(), "getVersion").mockResolvedValue(minVersionList[wallet.network().coin()]);
 		resetProfileNetworksMock = mockProfileWithPublicAndTestNetworks(profile);
 
-		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue(true);
+		vi.spyOn(useConfirmedTransactionMock, "useConfirmedTransaction").mockReturnValue({ isConfirmed: true, confirmations: 10 });
 	});
 
 	afterEach(() => {
@@ -758,6 +766,7 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(sendButton()).not.toBeDisabled(), { interval: 10 });
 
+		// const expirationMock = vi.spyOn(wallet.coin().transaction(), "estimateExpiration").mockResolvedValue(undefined);
 		await userEvent.keyboard("{enter}");
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
