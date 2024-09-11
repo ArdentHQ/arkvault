@@ -42,6 +42,7 @@ import File from "./file.svg?react";
 import FileLines from "./file-lines.svg?react";
 import FrameKey from "./frame-key.svg?react";
 import FTX from "./ftx.svg?react";
+import Funnel from "./funnel.svg?react";
 import Globe from "./globe.svg?react";
 import GlobePointer from "./globe-pointer.svg?react";
 import Grid from "./grid.svg?react";
@@ -146,6 +147,7 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	FileLines,
 	Forbidden,
 	FrameKey,
+	Funnel,
 	Globe,
 	GlobePointer,
 	Grid,
