@@ -1063,7 +1063,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -1214,7 +1214,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -1287,7 +1286,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -1438,7 +1437,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -1511,7 +1509,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -1662,7 +1660,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -1735,7 +1732,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -1886,7 +1883,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -1959,7 +1955,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -2110,7 +2106,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -2183,7 +2178,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -2334,7 +2329,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -2407,7 +2401,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -2558,7 +2552,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -2631,7 +2624,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -2782,7 +2775,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -2855,7 +2847,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -3006,7 +2998,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -3079,7 +3070,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -3230,7 +3221,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -3303,7 +3293,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -3454,7 +3444,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -3527,7 +3516,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -3678,7 +3667,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -3751,7 +3739,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -3902,7 +3890,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -3975,7 +3962,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -4126,7 +4113,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
@@ -4199,7 +4185,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                           class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                         >
                           <div
-                            class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                            class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                           >
                             <div
                               class="flex shrink-0 items-center justify-center"
@@ -4350,7 +4336,6 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
                             </button>
                           </div>
                           <div
-                            class=""
                             data-testid="WalletListItem__more-button"
                           >
                             <div
