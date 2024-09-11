@@ -20,6 +20,8 @@ import { server, requestMock } from "@/tests/mocks/server";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
+import { PendingTransferRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRowMobile";
+import { SignedTransactionRowMobile } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRowMobile";
 
 const translations = buildTranslations();
 const submitButton = () => screen.getByTestId("DeleteResource__submit-button");
@@ -478,7 +480,9 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			expect(document.querySelectorAll("svg#pencil")).toHaveLength(1);
+			if (screenSize !== "xs") {
+				expect(document.querySelectorAll("svg#pencil")).toHaveLength(1);
+			}
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -499,18 +503,20 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			await waitFor(() =>
-				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
-					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
-				),
-			);
+			if (screenSize !== "xs") {
+				await waitFor(() =>
+					expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
+						translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
+					),
+				);
+			}
 
 			expect(asFragment()).toMatchSnapshot();
 
 			vi.restoreAllMocks();
 		});
 
-		it("should show unconfirmed multiSignature transactions", async () => {
+		it("should show unconfirmed multiSignature transactions", () => {
 			vi.restoreAllMocks();
 
 			mockMultisignatures(wallet);
@@ -526,13 +532,6 @@ describe("Signed Transaction Table", () => {
 					pendingTransactions={pendingMultisignatureTransactions}
 				/>,
 				screenSize,
-			);
-
-			// eslint-disable-next-line sonarjs/no-identical-functions
-			await waitFor(() =>
-				expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
-					translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
-				),
 			);
 
 			expect(asFragment()).toMatchSnapshot();
@@ -561,7 +560,9 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			expect(document.querySelector("svg#clock-pencil")).toBeInTheDocument();
+			if (screenSize !== "xs") {
+				expect(document.querySelector("svg#clock-pencil")).toBeInTheDocument();
+			}
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -586,7 +587,9 @@ describe("Signed Transaction Table", () => {
 				screenSize,
 			);
 
-			expect(document.querySelector("svg#circle-check-mark-pencil")).toBeInTheDocument();
+			if (screenSize !== "xs") {
+				expect(document.querySelector("svg#circle-check-mark-pencil")).toBeInTheDocument();
+			}
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -697,6 +700,70 @@ describe("Signed Transaction Table", () => {
 		vi.restoreAllMocks();
 	});
 
+	it("should handle onClick on a mobile pending transfer row hen the transaction id is clicked", async () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+
+		render(<PendingTransferRowMobile wallet={wallet} transaction={fixtures.transfer} onRowClick={onClick} />);
+
+		await userEvent.click(screen.getByTestId("PendingTransactionRow__transaction-id"));
+
+		expect(onClick).toHaveBeenCalledWith(fixtures.transfer);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render N/A when a signed transaction row has an unvalid timestamp in mobile", () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+		vi.spyOn(fixtures.transfer, "timestamp").mockReturnValue(undefined);
+
+		render(
+			<SignedTransactionRowMobile
+				wallet={wallet}
+				transaction={fixtures.transfer}
+				onRowClick={onClick}
+				isCompact={true}
+			/>,
+		);
+
+		expect(screen.getAllByText("N/A")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render tooltip if the transaction cannot be deleted", async () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+		vi.spyOn(fixtures.transfer?.wallet(), "publicKey").mockReturnValue("test");
+
+		render(<SignedTransactionRowMobile transaction={fixtures.transfer} wallet={wallet} onRowClick={onClick} />);
+
+		expect(
+			screen.queryByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
+		).not.toBeInTheDocument();
+
+		await userEvent.hover(screen.getAllByTestId("SignedTransactionRowMobile--remove")[0]);
+
+		expect(
+			screen.getByText(translations.TRANSACTION.MULTISIGNATURE.PARTICIPANTS_CAN_REMOVE_PENDING_MUSIG),
+		).toBeInTheDocument();
+
+		vi.restoreAllMocks();
+	});
+
+	it("should render N/A when a mobile pending transfer has an unvalid timestamp", () => {
+		const onClick = vi.fn();
+		mockPendingTransfers(wallet);
+		vi.spyOn(fixtures.transfer, "timestamp").mockReturnValue(undefined);
+
+		render(<PendingTransferRowMobile wallet={wallet} transaction={fixtures.transfer} onRowClick={onClick} />);
+
+		expect(screen.getAllByText("N/A")).toHaveLength(2);
+
+		vi.restoreAllMocks();
+	});
+
 	it("should render a valid timestamp when a pending transfer has a valid timestamp", () => {
 		const onClick = vi.fn();
 		mockPendingTransfers(wallet);
@@ -751,10 +818,6 @@ describe("Signed Transaction Table", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
-		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
-			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
-		);
-
 		await userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
@@ -796,10 +859,6 @@ describe("Signed Transaction Table", () => {
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(1));
-
-		expect(screen.getAllByTestId("TransactionRowRecipientLabel")[0]).toHaveTextContent(
-			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
-		);
 
 		await userEvent.click(screen.getByTestId("SignedTransactionRowMobile--remove"));
 

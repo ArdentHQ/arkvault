@@ -198,6 +198,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -313,6 +314,7 @@ exports[`Unconfirmed transaction table > should not render in lg 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -533,6 +535,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -648,6 +651,7 @@ exports[`Unconfirmed transaction table > should not render in md 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -776,6 +780,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 <div
                   class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
@@ -913,6 +918,7 @@ exports[`Unconfirmed transaction table > should not render in sm 1`] = `
                 <div
                   class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
@@ -1133,6 +1139,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -1248,6 +1255,7 @@ exports[`Unconfirmed transaction table > should not render in xl 1`] = `
                 <div
                   class="rounded px-1.5 css-xqt0aw"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-center"
@@ -1376,6 +1384,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 <div
                   class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-stretch"
@@ -1513,6 +1522,7 @@ exports[`Unconfirmed transaction table > should not render in xs 1`] = `
                 <div
                   class="rounded px-1.5 css-1pbju28"
                   color="danger-bg"
+                  data-testid="AmountLabel__wrapper"
                 >
                   <div
                     class="flex space-x-1 items-stretch"

@@ -846,7 +846,7 @@ exports[`WalletVote > multi vote networks > should render votes when all delegat
           class="flex items-center justify-end space-x-2"
         >
           <span
-            class="font-semibold text-theme-success-600"
+            class="font-semibold text-theme-primary-600"
           >
             All Active
           </span>
@@ -1556,7 +1556,7 @@ exports[`WalletVote > should render as all resigned 1`] = `
             </div>
           </span>
           <span
-            class="font-semibold text-theme-danger-600"
+            class="font-semibold text-theme-danger-400"
           >
             All Resigned
           </span>
@@ -2795,7 +2795,7 @@ exports[`WalletVote > single vote networks > should render a vote for an active 
           class="flex items-center justify-end space-x-2"
         >
           <span
-            class="font-semibold text-theme-success-600"
+            class="font-semibold text-theme-primary-600"
           >
             Active
           </span>

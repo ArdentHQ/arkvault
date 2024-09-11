@@ -17,6 +17,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
       <div
         class="rounded px-1.5 css-givenh"
         color="success-bg"
+        data-testid="AmountLabel__wrapper"
       >
         <div
           class="flex space-x-1 items-stretch"
@@ -42,6 +43,7 @@ exports[`UnlockTokensTotal > should render 1`] = `
       <div
         class="rounded px-1.5 css-1pbju28"
         color="danger-bg"
+        data-testid="AmountLabel__wrapper"
       >
         <div
           class="flex space-x-1 items-stretch"
@@ -131,6 +133,7 @@ exports[`UnlockTokensTotal > should render loading fee 1`] = `
       <div
         class="rounded px-1.5 css-givenh"
         color="success-bg"
+        data-testid="AmountLabel__wrapper"
       >
         <div
           class="flex space-x-1 items-stretch"

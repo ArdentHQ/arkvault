@@ -208,6 +208,7 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -792,6 +793,7 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -1376,6 +1378,7 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -1934,6 +1937,7 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -3451,6 +3455,7 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"
@@ -4843,6 +4848,7 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           <div
                             class="rounded px-1.5 css-1pbju28"
                             color="danger-bg"
+                            data-testid="AmountLabel__wrapper"
                           >
                             <div
                               class="flex space-x-1 items-stretch"

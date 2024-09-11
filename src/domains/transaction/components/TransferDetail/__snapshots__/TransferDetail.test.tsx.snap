@@ -199,6 +199,7 @@ exports[`TransferDetail > should render a modal 1`] = `
                   <div
                     class="rounded px-1.5 css-1pbju28"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
@@ -713,6 +714,7 @@ exports[`TransferDetail > should render as not is sent 1`] = `
                   <div
                     class="rounded px-1.5 css-givenh"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-stretch"
@@ -1230,6 +1232,7 @@ exports[`TransferDetail > should render with wallet alias 1`] = `
                   <div
                     class="rounded px-1.5 css-givenh"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-stretch"

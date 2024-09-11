@@ -6,6 +6,7 @@ import { Icon } from "@/app/components/Icon";
 import { Label } from "@/app/components/Label";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
+import { twMerge } from "tailwind-merge";
 
 interface AmountLabelHintProperties {
 	className: string;
@@ -31,9 +32,18 @@ interface AmountLabelProperties {
 	ticker: string;
 	hint?: string;
 	size?: Size;
+	className?: string;
 }
 
-export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, isCompact, isNegative, hint, size }) => {
+export const AmountLabel: React.VFC<AmountLabelProperties> = ({
+	value,
+	ticker,
+	isCompact,
+	isNegative,
+	hint,
+	size,
+	className,
+}) => {
 	let labelColor = "success-bg";
 	let hintClassName =
 		"bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700";
@@ -52,11 +62,15 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({ value, ticker, i
 		<Label
 			color={labelColor as any}
 			noBorder={isCompact}
-			className={cn("rounded", {
-				"pr-1.5": hint,
-				"px-1.5": !hint,
-			})}
+			className={twMerge(
+				cn("rounded", {
+					"pr-1.5": hint,
+					"px-1.5": !hint,
+				}),
+				className,
+			)}
 			size={size}
+			data-testid="AmountLabel__wrapper"
 		>
 			<div className={cn("flex space-x-1", isCompact ? "items-center" : "items-stretch")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}

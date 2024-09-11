@@ -72,6 +72,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -87,6 +88,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -110,6 +112,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -133,6 +136,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -316,6 +320,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -331,6 +336,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -354,6 +360,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -377,6 +384,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -551,6 +559,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -566,6 +575,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -589,6 +599,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -612,6 +623,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -786,6 +798,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -801,6 +814,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             <div
               class="rounded pr-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -858,6 +872,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -881,6 +896,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             <div
               class="rounded pr-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1090,6 +1106,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1105,6 +1122,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1128,6 +1146,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1151,6 +1170,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1330,6 +1350,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1345,6 +1366,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1368,6 +1390,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1391,6 +1414,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             <div
               class="rounded px-1.5 css-givenh"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1570,6 +1594,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             <div
               class="rounded px-1.5 css-xqt0aw"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-center"
@@ -1585,6 +1610,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             <div
               class="rounded px-1.5 css-1jspzfx"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-center"
@@ -1608,6 +1634,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             <div
               class="rounded px-1.5 css-xqt0aw"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-center"
@@ -1631,6 +1658,7 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             <div
               class="rounded px-1.5 css-1jspzfx"
               color="success-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-center"
