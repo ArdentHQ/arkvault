@@ -2,7 +2,6 @@ import { Networks } from "@ardenthq/sdk";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import cn from "classnames";
 import {
 	ContactListItemAddressProperties,
 	ContactListItemOption,
@@ -24,7 +23,6 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 	profile,
 	index,
 	isLast,
-	isCompact,
 	item,
 	address,
 	availableNetworks,
@@ -77,11 +75,11 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			border={isLast}
 			className="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800"
 		>
-			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap" isCompact={isCompact}>
+			<TableCell variant="start" innerClassName="space-x-4 whitespace-nowrap">
 				{index === 0 && renderName()}
 			</TableCell>
 
-			<TableCell className={borderClasses()} isCompact={isCompact}>
+			<TableCell className={borderClasses()}>
 				<span className="whitespace-nowrap text-sm font-semibold leading-[17px] text-theme-text">
 					{networkDisplayName(network)}
 				</span>
@@ -91,14 +89,13 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 				data-testid="ContactListItem__address"
 				className={borderClasses()}
 				innerClassName="space-x-4"
-				isCompact={isCompact}
 			>
 				<div className="w-0 flex-1">
 					<Address address={address.address()} truncateOnTable addressClass="text-sm leading-[17px]" />
 				</div>
 			</TableCell>
 
-			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center" isCompact={isCompact}>
+			<TableCell className={borderClasses()} innerClassName="space-x-4 justify-center">
 				<Clipboard variant="icon" data={address.address()}>
 					<div className="text-theme-primary-400 dark:text-theme-secondary-600">
 						<Icon name="Copy" />
@@ -106,17 +103,14 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 				</Clipboard>
 			</TableCell>
 
-			<TableCell variant="end" className={borderClasses()} innerClassName="justify-end" isCompact={isCompact}>
-				<div className={cn("flex items-center", { "space-x-2": !isCompact }, { "-mr-3": isCompact })}>
+			<TableCell variant="end" className={borderClasses()} innerClassName="justify-end">
+				<div className="flex items-center -mr-3">
 					<Tooltip content={sendButtonTooltip}>
 						<div data-testid="ContactListItem__send-button-wrapper">
 							<Button
-								size={isCompact ? "icon" : undefined}
-								variant={isCompact ? "transparent" : "secondary"}
-								className={cn({
-									"text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700":
-										isCompact,
-								})}
+								size="icon"
+								variant="transparent"
+								className="text-sm leading-[17px] text-theme-primary-600 hover:text-theme-primary-700"
 								data-testid="ContactListItem__send-button"
 								onClick={() => onSend(address)}
 								disabled={sendIsDisabled}
@@ -139,11 +133,8 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 							toggleContent={
 								<Button
 									size="icon"
-									variant={isCompact ? "transparent" : "secondary"}
-									className={cn({
-										"flex-1": !isCompact,
-										"text-theme-primary-300 hover:text-theme-primary-600": isCompact,
-									})}
+									variant="transparent"
+									className="text-theme-primary-300 hover:text-theme-primary-600"
 								>
 									<Icon
 										name="EllipsisVerticalFilled"

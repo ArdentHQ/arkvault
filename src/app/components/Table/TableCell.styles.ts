@@ -1,6 +1,4 @@
-const baseStyle = "flex items-center px-3 my-1 transition-colors duration-100";
-
-const getHeight = (isCompact: boolean) => (isCompact ? "min-h-11" : "min-h-17.5");
+const baseStyle = "flex items-center px-3 my-1 transition-colors duration-100 min-h-11";
 
 const getVariant = (variant: "start" | "middle" | "end", size?: "sm" | "base"): string | null => {
 	if (variant === "start") {
@@ -24,5 +22,5 @@ const getVariant = (variant: "start" | "middle" | "end", size?: "sm" | "base"): 
 	return "";
 };
 
-export const getStyles = ({ variant, isCompact, size }: any) =>
-	`${baseStyle} ${getHeight(isCompact)} ${getVariant(variant, size)}`;
+export const getStyles = ({ variant, size }: any) =>
+	`${baseStyle} ${getVariant(variant, size)}`;

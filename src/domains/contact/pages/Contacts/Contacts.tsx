@@ -132,7 +132,6 @@ export const Contacts: FC = () => {
 				availableNetworks={availableNetworks}
 				onSend={handleSend}
 				onAction={(action) => handleContactAction(action, contact)}
-				isCompact={true}
 			/>
 		),
 		[menuOptions, availableNetworks, handleSend, handleContactAction],
