@@ -6,7 +6,7 @@ import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-import { useBreakpoint } from "@/app/hooks";
+import { useActiveWallet, useBreakpoint } from "@/app/hooks";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,
@@ -18,7 +18,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	profile,
 }) => {
 	const { isXs, isSm } = useBreakpoint();
-	const columns = useTransactionTableColumns(exchangeCurrency);
+	const activeWallet = useActiveWallet();
+	const columns = useTransactionTableColumns({ coin: activeWallet.network().coinName() });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({
 			sortBy: [
@@ -49,6 +50,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
+				currency={activeWallet.network().coin()}
+				convertedBalance={activeWallet.convertedBalance()}
 			/>
 		),
 		[showSkeleton, onRowClick, exchangeCurrency, profile],
@@ -56,7 +59,13 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 
 	return (
 		<div data-testid="TransactionTable" className="relative">
-			<Table hideHeader={isSm || isXs || hideHeader} columns={columns} data={data} initialState={initialState}>
+			<Table
+				hideHeader={isSm || isXs || hideHeader}
+				columns={columns}
+				data={data}
+				initialState={initialState}
+				className="with-x-padding"
+			>
 				{renderTableRow}
 			</Table>
 		</div>
