@@ -36,17 +36,17 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://test.arkscan.io/transaction/${voteFixture.data.id}`,
 		fee: () => voteFixture.data.fee / 1e8,
 		id: () => voteFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => false,
+		isUnvote: () => true,
+		isVote: () => true,
 		recipient: () => voteFixture.data.recipient,
 		sender: () => voteFixture.data.sender,
 		type: () => "vote",
 		usesMultiSignature: () => false,
-		isDelegateResignation: () => false,
-		isDelegateRegistration: () => false,
-		isIpfs: () => false,
-		isVote: () => true,
-		isUnvote: () => true,
-		isConfirmed: () => true,
 	});
 
 const passphrase = getDefaultWalletMnemonic();

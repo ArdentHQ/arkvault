@@ -34,16 +34,16 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => +ipfsFixture.data.fee / 1e8,
 		hash: () => ipfsFixture.data.asset.ipfs,
 		id: () => ipfsFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => true,
 		isMultiSignatureRegistration: () => false,
+		isVote: () => false,
 		recipient: () => ipfsFixture.data.recipient,
 		sender: () => ipfsFixture.data.sender,
 		type: () => "ipfs",
 		usesMultiSignature: () => false,
-		isDelegateResignation: () => false,
-		isDelegateRegistration: () => false,
-		isIpfs: () => true,
-		isVote: () => false,
-		isConfirmed: () => true,
 	});
 
 let profile: Contracts.IProfile;

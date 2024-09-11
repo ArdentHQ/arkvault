@@ -35,14 +35,13 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
-		usesMultiSignature: () => false,
-		isDelegateResignation: () => false,
-		isDelegateRegistration: () => false,
-		isIpfs: () => false,
-		isVote: () => false,
-		isSent: () => true,
 		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isVote: () => false,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{
@@ -52,6 +51,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		],
 		sender: () => transactionFixture.data.sender,
 		type: () => "transfer",
+		usesMultiSignature: () => false,
 	} as any);
 
 let profile: Contracts.IProfile;
