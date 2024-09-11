@@ -5,7 +5,7 @@ import { useWalletAlias } from "@/app/hooks";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import cn from 'classnames';
+import cn from "classnames";
 
 const RowLabel = ({ isNegative = false }: { isNegative: boolean }) => {
 	const { t } = useTranslation();
@@ -15,7 +15,7 @@ const RowLabel = ({ isNegative = false }: { isNegative: boolean }) => {
 			color={isNegative ? "danger-bg" : "success-bg"}
 			size="xs"
 			noBorder
-			className="w-10 !flex items-center justify-center rounded py-[3px]"
+			className="!flex w-10 items-center justify-center rounded py-[3px]"
 		>
 			{isNegative ? t("COMMON.TO") : t("COMMON.FROM")}
 		</Label>
@@ -75,13 +75,18 @@ export const TransactionRowAddressing = ({
 	}
 
 	if (transaction?.isVoteCombination() || transaction?.isVote() || transaction?.isUnvote()) {
-
 		return (
 			<div className="flex flex-row gap-2">
 				<RowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
-					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">({delegates[transaction?.isVote() || transaction?.isVoteCombination() ? "votes" : "unvotes"][0]?.username()})</span>
+					<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+						(
+						{delegates[
+							transaction?.isVote() || transaction?.isVoteCombination() ? "votes" : "unvotes"
+						][0]?.username()}
+						)
+					</span>
 				</span>
 			</div>
 		);
@@ -90,13 +95,19 @@ export const TransactionRowAddressing = ({
 	return (
 		<div className="flex flex-row gap-2">
 			<RowLabel isNegative={isNegative} />
-            <div className="w-50">
-                <Address walletName={alias} address={transaction.sender()} truncateOnTable 
-                addressWrapperClass="w-20" addressClass={cn("pt-0.5", {
-                    "text-theme-secondary-700 dark:text-theme-secondary-200": alias,
-                    "text-theme-primary-600": !alias
-                })} size="sm" />
-            </div>
+			<div className="w-50">
+				<Address
+					walletName={alias}
+					address={transaction.sender()}
+					truncateOnTable
+					addressWrapperClass="w-20"
+					addressClass={cn("pt-0.5", {
+						"text-theme-primary-600": !alias,
+						"text-theme-secondary-700 dark:text-theme-secondary-200": alias,
+					})}
+					size="sm"
+				/>
+			</div>
 		</div>
 	);
 };
