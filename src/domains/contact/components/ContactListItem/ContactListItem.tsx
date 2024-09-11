@@ -85,11 +85,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 				</span>
 			</TableCell>
 
-			<TableCell
-				data-testid="ContactListItem__address"
-				className={borderClasses()}
-				innerClassName="space-x-4"
-			>
+			<TableCell data-testid="ContactListItem__address" className={borderClasses()} innerClassName="space-x-4">
 				<div className="w-0 flex-1">
 					<Address address={address.address()} truncateOnTable addressClass="text-sm leading-[17px]" />
 				</div>
@@ -104,7 +100,7 @@ const ContactListItemAddress: FC<ContactListItemAddressProperties> = ({
 			</TableCell>
 
 			<TableCell variant="end" className={borderClasses()} innerClassName="justify-end">
-				<div className="flex items-center -mr-3">
+				<div className="-mr-3 flex items-center">
 					<Tooltip content={sendButtonTooltip}>
 						<div data-testid="ContactListItem__send-button-wrapper">
 							<Button
