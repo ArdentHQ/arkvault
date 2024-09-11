@@ -13,6 +13,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 			{
 				Header: t("COMMON.TX_ID"),
 				headerClassName: "no-border",
+				noRoundedBorders: true,
 			},
 			{
 				Header: t("COMMON.AGE"),
@@ -45,6 +46,7 @@ export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 				accessor: () => "fiatValue",
 				className: "justify-end",
 				headerClassName: "no-border hidden lg:table-cell",
+				noRoundedBorders: true,
 			},
 		];
 
