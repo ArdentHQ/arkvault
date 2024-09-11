@@ -258,12 +258,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                           ARK Wallet 2
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -369,12 +373,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -480,12 +488,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -621,12 +633,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             ARK Wallet 2
                           </span>
                         </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
+                        <div
+                          data-testid="Address__address-container"
                         >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -683,12 +699,16 @@ exports[`Notifications > should open and close transaction details modal 1`] = `
                             ARK Wallet 2
                           </span>
                         </span>
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
+                        <div
+                          data-testid="Address__address-container"
                         >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1307,12 +1327,16 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                           ARK Wallet 2
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1418,12 +1442,16 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1529,12 +1557,16 @@ exports[`Notifications > should render with transactions in lg 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1836,12 +1868,16 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                           ARK Wallet 2
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1947,12 +1983,16 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -2058,12 +2098,16 @@ exports[`Notifications > should render with transactions in md 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -2321,12 +2365,16 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                             ARK Wallet 2
                                           </span>
                                         </span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div
@@ -2398,12 +2446,16 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                       >
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div
@@ -2475,12 +2527,16 @@ exports[`Notifications > should render with transactions in sm 1`] = `
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                       >
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div
@@ -2800,12 +2856,16 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                           ARK Wallet 2
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -2911,12 +2971,16 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -3022,12 +3086,16 @@ exports[`Notifications > should render with transactions in xl 1`] = `
                                           ARK Wallet 1
                                         </span>
                                       </span>
-                                      <span
-                                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                        data-testid="Address__address"
+                                      <div
+                                        data-testid="Address__address-container"
                                       >
-                                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                      </span>
+                                        <span
+                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          data-testid="Address__address"
+                                        >
+                                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -3292,12 +3360,16 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                             ARK Wallet 2
                                           </span>
                                         </span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div
@@ -3369,12 +3441,16 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                       >
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div
@@ -3446,12 +3522,16 @@ exports[`Notifications > should render with transactions in xs 1`] = `
                                       <div
                                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                                       >
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                     <div

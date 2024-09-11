@@ -29,12 +29,16 @@ exports[`Notifications > should render in xs 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -115,12 +119,16 @@ exports[`Notifications > should render in xs 2`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -253,12 +261,16 @@ exports[`Notifications > should render in xs 3`] = `
                       ARK Wallet 1
                     </span>
                   </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
+                  <div
+                    data-testid="Address__address-container"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -373,12 +385,16 @@ exports[`Notifications > should render in xs 4`] = `
                       ARK Wallet 1
                     </span>
                   </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
+                  <div
+                    data-testid="Address__address-container"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -493,12 +509,16 @@ exports[`Notifications > should render in xs 5`] = `
                       ARK Wallet 1
                     </span>
                   </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
+                  <div
+                    data-testid="Address__address-container"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -613,12 +633,16 @@ exports[`Notifications > should render notification item 1`] = `
                       ARK Wallet 1
                     </span>
                   </span>
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
+                  <div
+                    data-testid="Address__address-container"
                   >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      data-testid="Address__address"
+                    >
+                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

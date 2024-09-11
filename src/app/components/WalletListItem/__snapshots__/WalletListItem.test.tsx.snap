@@ -93,12 +93,16 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -424,12 +428,16 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               ARK Wallet 1
             </span>
           </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-            data-testid="Address__address"
+          <div
+            data-testid="Address__address-container"
           >
-            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-          </span>
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              data-testid="Address__address"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -630,12 +638,16 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1004,12 +1016,16 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1334,12 +1350,16 @@ exports[`WalletListItem > should render when isLargeScreen = false 1`] = `
               ARK Wallet 1
             </span>
           </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-            data-testid="Address__address"
+          <div
+            data-testid="Address__address-container"
           >
-            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-          </span>
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              data-testid="Address__address"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -1532,12 +1552,16 @@ exports[`WalletListItem > should render when isLargeScreen = false and wallet is
               ARK Wallet 1
             </span>
           </span>
-          <span
-            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-            data-testid="Address__address"
+          <div
+            data-testid="Address__address-container"
           >
-            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-          </span>
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              data-testid="Address__address"
+            >
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -1782,12 +1806,16 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2156,12 +2184,16 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2578,12 +2610,16 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -2952,12 +2988,16 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
