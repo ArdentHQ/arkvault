@@ -6,7 +6,7 @@ import { TransactionId } from "./TransactionId";
 import userEvent from "@testing-library/user-event";
 
 describe("TransactionId", () => {
-	it.each(["sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
+	it.each(["xs", "sm", "md", "lg"])("should render in %s", (breakpoint: string) => {
 		renderResponsive(
 			<TransactionId
 				transaction={
