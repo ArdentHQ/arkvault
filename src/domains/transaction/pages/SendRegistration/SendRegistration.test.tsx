@@ -81,11 +81,11 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		recipient: () => DelegateRegistrationFixture.data.recipient,
 		sender: () => DelegateRegistrationFixture.data.sender,
 		type: () => "delegateRegistration",
-		usesMultiSignature: () => false,
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		usesMultiSignature: () => false,
 		wallet: () => ({
 			username: () => DelegateRegistrationFixture.data.asset.delegate.username,
-		})
+		}),
 	});
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -115,11 +115,11 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
-		usesMultiSignature: () => false,
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
+		usesMultiSignature: () => false,
 		wallet: () => ({
 			username: () => DelegateRegistrationFixture.data.asset.delegate.username,
-		})
+		}),
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");

@@ -18,8 +18,8 @@ describe("TransactionType", () => {
 						type: () => "multiPayment",
 						username: () => "delegate",
 						wallet: () => ({
-							username: () => "delegate"
-						})
+							username: () => "delegate",
+						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -43,8 +43,8 @@ describe("TransactionType", () => {
 						type: () => "delegateRegistration",
 						username: () => "delegate",
 						wallet: () => ({
-							username: () => "delegate"
-						})
+							username: () => "delegate",
+						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -68,8 +68,8 @@ describe("TransactionType", () => {
 						type: () => "delegateResignation",
 						username: () => "delegate",
 						wallet: () => ({
-							username: () => "delegate"
-						})
+							username: () => "delegate",
+						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -95,8 +95,8 @@ describe("TransactionType", () => {
 						type: () => "delegateResignation",
 						username: () => "delegate",
 						wallet: () => ({
-							username: () => "delegate"
-						})
+							username: () => "delegate",
+						}),
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
