@@ -54,4 +54,19 @@ describe("AmountLabel", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 	});
+
+	it("should render with custom class names", () => {
+		render(
+			<AmountLabel
+				isCompact
+				isNegative={false}
+				value={10}
+				ticker="ARK"
+				hint="I am an hint"
+				className="custom-className"
+			/>,
+		);
+
+		expect(screen.getByTestId("AmountLabel__wrapper")).toHaveClass("custom-className");
+	});
 });

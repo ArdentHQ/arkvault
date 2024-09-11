@@ -82,7 +82,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 	const renderStatuses = () => {
 		if (activeCount === votes.length) {
 			return (
-				<span className="font-semibold text-theme-success-600">
+				<span className="font-semibold text-theme-primary-600">
 					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", {
 						count: activeCount,
 					})}
@@ -117,7 +117,7 @@ const DelegateStatus = ({ votes, activeDelegates }: DelegateStatusProperties) =>
 						})}
 					/>
 
-					<span className="font-semibold text-theme-danger-600">
+					<span className="font-semibold text-theme-danger-400">
 						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
 					</span>
 				</>

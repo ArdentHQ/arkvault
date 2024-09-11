@@ -60,7 +60,6 @@ export const PendingTransactions = ({
 					<SignedTransactionRowMobile
 						transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 						wallet={wallet}
-						onSign={onClick}
 						onRowClick={onClick}
 						onRemovePendingTransaction={setPendingRemovalTransaction}
 					/>
@@ -88,7 +87,9 @@ export const PendingTransactions = ({
 
 	return (
 		<div data-testid="PendingTransactions" className="relative">
-			<h2 className="mb-3 text-2xl font-bold">{t("WALLETS.PAGE_WALLET_DETAILS.PENDING_TRANSACTIONS")}</h2>
+			<h2 className="mb-3 hidden text-2xl font-bold md:block">
+				{t("WALLETS.PAGE_WALLET_DETAILS.PENDING_TRANSACTIONS")}
+			</h2>
 
 			<TableWrapper>
 				<Table
