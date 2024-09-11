@@ -1199,12 +1199,16 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1250,12 +1254,16 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2592,12 +2600,16 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2643,12 +2655,16 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>

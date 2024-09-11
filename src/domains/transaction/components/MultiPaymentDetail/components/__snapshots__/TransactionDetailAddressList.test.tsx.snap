@@ -78,12 +78,16 @@ exports[`TransactionDetailAddressList > should render addresses in xs 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                test-address1
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  test-address1
+                </span>
+              </div>
             </div>
           </div>
           <a
@@ -226,12 +230,16 @@ exports[`TransactionDetailAddressList > should render addresses in xs 2`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                test-address1
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  test-address1
+                </span>
+              </div>
             </div>
           </div>
           <a
@@ -371,12 +379,16 @@ exports[`TransactionDetailAddressList > should render addresses in xs 3`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              data-testid="Address__address-container"
             >
-              test-address1
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                test-address1
+              </span>
+            </div>
           </div>
         </div>
         <a
@@ -515,12 +527,16 @@ exports[`TransactionDetailAddressList > should render addresses in xs 4`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              data-testid="Address__address-container"
             >
-              test-address1
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                test-address1
+              </span>
+            </div>
           </div>
         </div>
         <a
@@ -659,12 +675,16 @@ exports[`TransactionDetailAddressList > should render addresses in xs 5`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-              data-testid="Address__address"
+            <div
+              data-testid="Address__address-container"
             >
-              test-address1
-            </span>
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
+              >
+                test-address1
+              </span>
+            </div>
           </div>
         </div>
         <a

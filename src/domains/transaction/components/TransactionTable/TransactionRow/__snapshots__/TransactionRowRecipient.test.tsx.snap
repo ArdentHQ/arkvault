@@ -33,12 +33,16 @@ exports[`TransactionRowRecipient > should render 1`] = `
           ARK Wallet 1
         </span>
       </span>
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-        data-testid="Address__address"
+      <div
+        data-testid="Address__address-container"
       >
-        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-      </span>
+        <span
+          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          data-testid="Address__address"
+        >
+          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -77,12 +81,16 @@ exports[`TransactionRowRecipient > should render compact 1`] = `
           ARK Wallet 1
         </span>
       </span>
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-        data-testid="Address__address"
+      <div
+        data-testid="Address__address-container"
       >
-        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-      </span>
+        <span
+          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+          data-testid="Address__address"
+        >
+          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>

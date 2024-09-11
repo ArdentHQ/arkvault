@@ -1076,12 +1076,16 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1127,12 +1131,16 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1347,7 +1355,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -1393,7 +1401,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -1409,7 +1417,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"
@@ -1509,12 +1517,16 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                             ARK Wallet 2
                                           </span>
                                         </span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -5049,48 +5061,52 @@ exports[`SendTransfer > should render review step 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -5124,48 +5140,52 @@ exports[`SendTransfer > should render review step 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -5477,48 +5497,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -5541,48 +5565,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -5597,48 +5625,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -5950,48 +5982,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
                   ARK Wallet 1
                 </span>
               </span>
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -6014,48 +6050,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -6070,48 +6110,52 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-              </span>
-              <button
-                class="ring-focus relative focus:outline-none"
-                data-ring-focus-margin="-m-1"
-                data-testid="clipboard-icon__wrapper"
-                type="button"
-              >
-                <div
-                  class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <svg
-                    id="copy"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                </span>
+                <button
+                  class="ring-focus relative focus:outline-none"
+                  data-ring-focus-margin="-m-1"
+                  data-testid="clipboard-icon__wrapper"
+                  type="button"
+                >
+                  <div
+                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                    height="16"
+                    width="16"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <svg
+                      id="copy"
+                      viewBox="0 0 20 20"
+                      x="0"
+                      xml:space="preserve"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
                     >
-                      <path
-                        d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                      />
-                      <path
-                        d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                        />
+                        <path
+                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -7427,12 +7471,16 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -7478,12 +7526,16 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -8697,12 +8749,16 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -8748,12 +8804,16 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -8968,7 +9028,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 role="row"
                               >
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--0"
                                   role="columnheader"
@@ -9014,7 +9074,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-96 min-w-96"
                                   colspan="1"
                                   data-testid="table__th--1"
                                   role="columnheader"
@@ -9030,7 +9090,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                   </div>
                                 </th>
                                 <th
-                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                                  class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                                   colspan="1"
                                   data-testid="table__th--2"
                                   role="columnheader"
@@ -9130,12 +9190,16 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                             ARK Wallet 2
                                           </span>
                                         </span>
-                                        <span
-                                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                          data-testid="Address__address"
+                                        <div
+                                          data-testid="Address__address-container"
                                         >
-                                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                        </span>
+                                          <span
+                                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                            data-testid="Address__address"
+                                          >
+                                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -10521,12 +10585,16 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -10572,12 +10640,16 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -11791,12 +11863,16 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -11842,12 +11918,16 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -13061,12 +13141,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -13112,12 +13196,16 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
