@@ -128,8 +128,6 @@ export const Votes: FC = () => {
 
 	const isSelectDelegateStep = !!selectedAddress;
 
-	const useCompactTables = true;
-
 	return (
 		<Page pageTitle={isSelectDelegateStep ? t("VOTE.DELEGATE_TABLE.TITLE") : t("VOTE.VOTES_PAGE.TITLE")}>
 			<VotesHeader
@@ -158,7 +156,6 @@ export const Votes: FC = () => {
 					showEmptyResults={hasEmptyResults}
 					walletsByCoin={filteredWalletsByCoin}
 					onSelectAddress={handleSelectAddress}
-					isCompact={useCompactTables}
 					profile={activeProfile}
 				/>
 			)}
@@ -176,7 +173,6 @@ export const Votes: FC = () => {
 						voteDelegates={voteDelegates}
 						selectedWallet={selectedWallet!}
 						onContinue={navigateToSendVote}
-						isCompact={useCompactTables}
 						subtitle={
 							resignedDelegateVotes.length > 0 ? (
 								<Alert className="mb-4">

@@ -22,7 +22,6 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	votes,
 	resignedDelegateVotes,
 	onContinue,
-	isCompact: isCompactOption,
 	subtitle,
 	searchQuery,
 }) => {
@@ -32,8 +31,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	const [selectedVotes, setSelectedVotes] = useState<VoteDelegateProperties[]>(voteDelegates);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
 	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
-	const { isXs, isSm, isMd } = useBreakpoint();
-	const isCompact = useMemo(() => isCompactOption || isXs || isSm || isMd, [isCompactOption, isXs, isSm, isMd]);
+	const { isXs} = useBreakpoint();
 
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
@@ -205,7 +203,6 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 					voted={voted}
 					isVoteDisabled={isVoteDisabled}
 					isLoading={showSkeleton}
-					isCompact={isCompact}
 					toggleUnvotesSelected={toggleUnvotesSelected}
 					toggleVotesSelected={toggleVotesSelected}
 				/>
@@ -220,7 +217,6 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			setAvailableBalance,
 			isVoteDisabled,
 			showSkeleton,
-			isCompact,
 			toggleUnvotesSelected,
 			toggleVotesSelected,
 			hasVotes,

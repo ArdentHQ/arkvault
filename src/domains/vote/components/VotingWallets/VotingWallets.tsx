@@ -9,7 +9,6 @@ interface VotingWalletsProperties {
 	showEmptyResults: boolean;
 	walletsByCoin: Record<string, Contracts.IReadWriteWallet[]>;
 	onSelectAddress: (address: string, network: string) => void;
-	isCompact?: boolean;
 	profile: Contracts.IProfile;
 }
 
@@ -17,7 +16,6 @@ export const VotingWallets = ({
 	showEmptyResults,
 	walletsByCoin,
 	onSelectAddress,
-	isCompact,
 	profile,
 }: VotingWalletsProperties) => {
 	const { t } = useTranslation();
@@ -43,7 +41,6 @@ export const VotingWallets = ({
 							key={index}
 							wallets={walletsByCoin[coin]}
 							onSelect={onSelectAddress}
-							isCompact={isCompact}
 							profile={profile}
 						/>
 					),

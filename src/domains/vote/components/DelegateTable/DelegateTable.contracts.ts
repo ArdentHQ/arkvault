@@ -12,7 +12,6 @@ export interface DelegateTableProperties {
 	votes: Contracts.VoteRegistryItem[];
 	resignedDelegateVotes?: Contracts.VoteRegistryItem[];
 	onContinue?: (unvotes: VoteDelegateProperties[], votes: VoteDelegateProperties[]) => void;
-	isCompact?: boolean;
 	subtitle?: React.ReactNode;
 	searchQuery?: string;
 }

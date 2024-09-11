@@ -12,7 +12,7 @@ import { assertNetwork } from "@/utils/assertions";
 import { networkDisplayName } from "@/utils/network-utils";
 import { Icon } from "@/app/components/Icon";
 
-export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false, profile }) => {
+export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, profile }) => {
 	const { t } = useTranslation();
 	const wallet = useMemo(() => wallets[0], [wallets]);
 	const maxVotes = wallet.network().maximumVotesPerWallet();
@@ -132,11 +132,10 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 					maxVotes={maxVotes}
 					wallet={wallet}
 					onSelect={onSelect}
-					isCompact={isCompact}
 				/>
 			);
 		},
-		[maxVotes, onSelect, isCompact, isSm, isXs],
+		[maxVotes, onSelect, isSm, isXs],
 	);
 
 	return (
@@ -148,7 +147,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, is
 						data-testid="NetworkIcon__icon"
 						name={network.ticker()}
 						fallback={
-							<span className={isCompact ? "inline-flex w-5 justify-center text-sm" : undefined}>
+							<span className="inline-flex w-5 justify-center text-sm">
 								{networkDisplayName(network).slice(0, 2).toUpperCase()}
 							</span>
 						}
