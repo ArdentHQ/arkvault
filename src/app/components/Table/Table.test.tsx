@@ -116,4 +116,35 @@ describe("Table", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("should not render rounded borders if noRoundedBorders is set", () => {
+		render(
+			<Table
+				columns={[
+					{
+						Header: "Header 1",
+						noRoundedBorders: true,
+					},
+				]}
+				data={data}
+			/>,
+		);
+
+		expect(screen.getByTestId("table__th--0")).not.toHaveClass("first:rounded-tl-xl");
+	});
+
+	it("should render rounded borders if noRoundedBorders is not set", () => {
+		render(
+			<Table
+				columns={[
+					{
+						Header: "Header 1",
+					},
+				]}
+				data={data}
+			/>,
+		);
+
+		expect(screen.getByTestId("table__th--0")).toHaveClass("first:rounded-tl-xl");
+	});
 });
