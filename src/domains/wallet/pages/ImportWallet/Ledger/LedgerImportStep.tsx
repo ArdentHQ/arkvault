@@ -22,13 +22,11 @@ const MultipleImport = ({
 	onClickEditWalletName,
 	profile,
 	wallets,
-	isCompact,
 }: {
 	network: Networks.Network;
 	onClickEditWalletName: (wallet: Contracts.IReadWriteWallet) => void;
 	profile: Contracts.IProfile;
 	wallets: LedgerData[];
-	isCompact: boolean;
 }) => {
 	const { t } = useTranslation();
 	const { isXs } = useBreakpoint();
@@ -59,7 +57,7 @@ const MultipleImport = ({
 
 			return (
 				<TableRow className="relative">
-					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
+					<TableCell variant="start" innerClassName="justify-center">
 						<div className="flex flex-1 flex-col py-2">
 							<Address
 								walletName={importedWallet.alias()}
@@ -77,7 +75,7 @@ const MultipleImport = ({
 						</div>
 					</TableCell>
 
-					<TableCell variant="end" innerClassName="justify-end font-semibold" isCompact={isCompact}>
+					<TableCell variant="end" innerClassName="justify-end font-semibold">
 						<Button
 							variant="secondary"
 							onClick={() => onClickEditWalletName(importedWallet)}
@@ -138,8 +136,6 @@ export const LedgerImportStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { isLgAndAbove } = useBreakpoint();
-
 	const { watch } = useFormContext();
 
 	const [network] = useState(() => watch("network"));
@@ -166,7 +162,6 @@ export const LedgerImportStep = ({
 					profile={profile}
 					network={network}
 					onClickEditWalletName={onClickEditWalletName}
-					isCompact={!isLgAndAbove}
 				/>
 			) : (
 				<SingleImport

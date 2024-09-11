@@ -52,7 +52,6 @@ export const PendingTransferRowMobile = ({
 					<ResponsiveAddressWrapper innerClassName="gap-2">
 						<BaseTransactionRowMode
 							className="flex items-center gap-x-2"
-							isCompact={true}
 							isSent={transaction.isSent()}
 							isReturn={transaction.isReturn()}
 							type={transaction.type()}

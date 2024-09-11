@@ -72,7 +72,6 @@ export const SignedTransactionRowMobile = ({
 					<ResponsiveAddressWrapper>
 						<BaseTransactionRowMode
 							className="flex items-center gap-x-2"
-							isCompact={true}
 							isSent={true}
 							type={transaction.type()}
 							address={recipient}
@@ -108,7 +107,6 @@ export const SignedTransactionRowMobile = ({
 				<RowWrapper>
 					<SignButton
 						className="flex-grow"
-						isCompact={false}
 						canBeSigned={canBeSigned}
 						isAwaitingFinalSignature={isAwaitingFinalSignature}
 						isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}

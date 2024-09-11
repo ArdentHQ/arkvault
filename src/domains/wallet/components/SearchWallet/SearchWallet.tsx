@@ -110,7 +110,6 @@ const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAdd
 						<Balance
 							className="text-sm text-white"
 							wallet={wallet}
-							isCompact={false}
 							isSynced={isSynced}
 							isLargeScreen={false}
 						/>
