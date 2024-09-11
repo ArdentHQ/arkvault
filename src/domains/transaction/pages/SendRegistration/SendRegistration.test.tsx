@@ -1,4 +1,3 @@
-
 import { Observer } from "@ledgerhq/hw-transport";
 import { Signatories } from "@ardenthq/sdk";
 import { Contracts } from "@ardenthq/sdk-profiles";
@@ -73,6 +72,7 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		explorerLink: () => `https://test.arkscan.io/transaction/${DelegateRegistrationFixture.data.id}`,
 		fee: () => +DelegateRegistrationFixture.data.fee / 1e8,
 		id: () => DelegateRegistrationFixture.data.id,
+		isConfirmed: () => true,
 		isDelegateRegistration: () => true,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
@@ -83,7 +83,6 @@ const createDelegateRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
 		type: () => "delegateRegistration",
 		username: () => DelegateRegistrationFixture.data.asset.delegate.username,
 		usesMultiSignature: () => false,
-		isConfirmed: () => true,
 	});
 
 const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -104,6 +103,7 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 			}
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
+		isConfirmed: () => true,
 		isDelegateRegistration: () => false,
 		isDelegateResignation: () => false,
 		isIpfs: () => false,
@@ -113,7 +113,6 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
-		isConfirmed: () => true,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");

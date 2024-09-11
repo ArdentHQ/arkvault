@@ -88,16 +88,16 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 			}
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => true,
+		isVote: () => false,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",
 		usesMultiSignature: () => false,
-		isDelegateResignation: () => false,
-		isDelegateRegistration: () => false,
-		isIpfs: () => false,
-		isVote: () => false,
-		isConfirmed: () => true,
 	} as any);
 
 const continueButton = () => screen.getByTestId("StepNavigation__continue-button");

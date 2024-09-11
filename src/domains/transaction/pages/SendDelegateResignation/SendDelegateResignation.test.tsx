@@ -54,6 +54,7 @@ const transactionResponse = {
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
+	isConfirmed: () => true,
 	isDelegateRegistration: () => false,
 	isDelegateResignation: () => false,
 	isIpfs: () => false,
@@ -63,7 +64,6 @@ const transactionResponse = {
 	sender: () => transactionFixture.data.sender,
 	type: () => "delegateResignation",
 	usesMultiSignature: () => false,
-	isConfirmed: () => true,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
