@@ -17,7 +17,6 @@ import { Skeleton } from "@/app/components/Skeleton";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
-import { useBreakpoint } from "@/app/hooks";
 import { LedgerCancelling } from "@/domains/wallet/pages/ImportWallet/Ledger/LedgerCancelling";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
@@ -30,7 +29,6 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 	selectedWallets,
 	toggleSelect,
 	toggleSelectAll,
-	isCompact,
 	isScanning,
 	isScanningMore,
 	isSelected,
@@ -88,16 +86,16 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 			if (showSkeleton) {
 				return (
 					<TableRow className="relative">
-						<TableCell variant="start" isCompact={isCompact}>
+						<TableCell variant="start">
 							<Skeleton height={20} width={20} />
 						</TableCell>
 
-						<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
-							<Skeleton circle height={isCompact ? 20 : 44} width={isCompact ? 20 : 44} />
+						<TableCell className="w-2/5" innerClassName="space-x-4">
+							<Skeleton circle height={20} width={20} />
 							<Skeleton height={16} width={120} />
 						</TableCell>
 
-						<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
+						<TableCell variant="end" innerClassName="justify-end">
 							<AmountWrapper isLoading={true} />
 						</TableCell>
 					</TableRow>
@@ -106,7 +104,7 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 
 			return (
 				<TableRow isSelected={isSelected(wallet.path)} className="relative">
-					<TableCell variant="start" innerClassName="justify-center" isCompact={isCompact}>
+					<TableCell variant="start" innerClassName="justify-center">
 						<Checkbox
 							checked={isSelected(wallet.path)}
 							onChange={() => toggleSelect(wallet.path)}
@@ -114,14 +112,14 @@ export const LedgerTable: FC<LedgerTableProperties> = ({
 						/>
 					</TableCell>
 
-					<TableCell className="w-2/5" innerClassName="space-x-4" isCompact={isCompact}>
+					<TableCell className="w-2/5" innerClassName="space-x-4">
 						<div className="flex w-32 flex-1">
 							<Address address={wallet.address} showCopyButton />
 						</div>
 						<span className="hidden">{wallet.path}</span>
 					</TableCell>
 
-					<TableCell variant="end" innerClassName="justify-end font-semibold" isCompact={isCompact}>
+					<TableCell variant="end" innerClassName="justify-end font-semibold">
 						<AmountWrapper isLoading={false}>
 							<Amount value={wallet.balance!} ticker={network.ticker()} />
 						</AmountWrapper>
@@ -272,10 +270,6 @@ export const LedgerScanStep = ({
 }) => {
 	const { t } = useTranslation();
 
-	const { isLgAndAbove } = useBreakpoint();
-
-	const isCompact = !isLgAndAbove;
-
 	const { watch, register, unregister, setValue } = useFormContext();
 	const [network] = useState<Networks.Network>(() => watch("network"));
 
@@ -380,7 +374,7 @@ export const LedgerScanStep = ({
 					<span data-testid="LedgerScanStep__error">{error}</span>
 				</Alert>
 			) : (
-				<LedgerTable network={network} isCompact={isCompact} {...ledgerScanner} scanMore={scanMore} />
+				<LedgerTable network={network} {...ledgerScanner} scanMore={scanMore} />
 			)}
 		</section>
 	);
