@@ -12,7 +12,7 @@ import { AccentColorType, ViewingModeType } from "@/app/hooks";
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
 
-	const options = [
+	return [
 		{
 			itemValueClass: "ml-5",
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
@@ -40,8 +40,6 @@ export const useAppearanceItems = (): ListDividedItemProperties[] => {
 			wrapperClass: "pt-6 sm:pb-6",
 		},
 	];
-
-	return options;
 };
 
 export const useAppearanceSettings = (profile: Contracts.IProfile): UseAppearanceSettings => ({
