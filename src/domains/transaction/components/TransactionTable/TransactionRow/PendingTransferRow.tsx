@@ -15,12 +15,10 @@ export const PendingTransferRow = ({
 	transaction,
 	onRowClick,
 	wallet,
-	isCompact,
 }: {
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	onRowClick?: (transaction: DTO.ExtendedConfirmedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
 }) => {
 	const { t } = useTranslation();
 	const { getLabel } = useTransactionTypes();
@@ -28,7 +26,7 @@ export const PendingTransferRow = ({
 
 	return (
 		<TableRow className="relative" onClick={() => onRowClick?.(transaction)}>
-			<TableCell variant="start" isCompact={isCompact} innerClassName="items-start my-0 py-3 xl:min-h-0">
+			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
@@ -52,7 +50,6 @@ export const PendingTransferRow = ({
 			<TableCell
 				className="hidden lg:table-cell"
 				innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
-				isCompact={isCompact}
 			>
 				{timeStamp ? (
 					<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
@@ -61,13 +58,13 @@ export const PendingTransferRow = ({
 				)}
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0 my-0 py-3">
+			<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
 				<Label color="secondary" size="xs" noBorder className="rounded p-1">
 					{getLabel(transaction.type())}
 				</Label>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-2 items-start xl:min-h-0 my-0 py-3" isCompact={isCompact}>
+			<TableCell innerClassName="space-x-2 items-start xl:min-h-0 my-0 py-3">
 				<Label color="danger-bg" size="xs" noBorder className="rounded px-[11px] py-1">
 					{t("COMMON.TO")}
 				</Label>
@@ -84,7 +81,6 @@ export const PendingTransferRow = ({
 			<TableCell
 				className="hidden w-16 lg:table-cell"
 				innerClassName="items-start justify-center truncate hidden lg:flex xl:min-h-0 my-0 py-3"
-				isCompact={isCompact}
 			>
 				<Tooltip content={t("TRANSACTION.MULTISIGNATURE.AWAITING_CONFIRMATIONS")}>
 					<span className="text-theme-secondary-700">
@@ -93,7 +89,7 @@ export const PendingTransferRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
+			<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 				<div className="flex flex-col items-end gap-1">
 					<AmountLabel
 						value={transaction.amount() + transaction.fee()}
@@ -108,7 +104,6 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell
-				isCompact={isCompact}
 				className="hidden lg:table-cell"
 				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
 			>
@@ -116,7 +111,6 @@ export const PendingTransferRow = ({
 			</TableCell>
 
 			<TableCell
-				isCompact={isCompact}
 				innerClassName="items-start xl:min-h-0 my-0 py-3"
 				className="text-sm text-theme-secondary-500"
 				variant="end"

@@ -28,7 +28,7 @@ export const WalletDetails = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
-	const { isXs, isMd } = useBreakpoint();
+	const { isXs} = useBreakpoint();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
@@ -63,8 +63,6 @@ export const WalletDetails = () => {
 		await syncPending();
 		toasts.success(t("TRANSACTION.TRANSACTION_REMOVED"));
 	}, [syncPending, t]);
-
-	const useCompactTables = isMd;
 
 	const [mobileActiveTab, setMobileActiveTab] = useState<TabId>("transactions");
 
@@ -192,7 +190,6 @@ export const WalletDetails = () => {
 						>
 							<PendingTransactions
 								profile={activeProfile}
-								isCompact={useCompactTables}
 								pendingTransactions={pendingTransactions}
 								wallet={activeWallet}
 								onPendingTransactionClick={setTransactionModalItem}
