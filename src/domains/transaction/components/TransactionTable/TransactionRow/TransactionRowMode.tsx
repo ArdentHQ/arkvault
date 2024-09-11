@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 
 import { BaseTransactionRowModeProperties, TransactionRowModeProperties } from "./TransactionRowMode.contracts";
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
-import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
