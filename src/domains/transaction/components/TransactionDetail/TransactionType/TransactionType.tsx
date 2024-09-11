@@ -25,7 +25,20 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 					</Label>
 				</div>
 
-				{[transaction.isDelegateRegistration(), transaction.isDelegateResignation()].some(Boolean) && (
+				{transaction.isDelegateRegistration() && (
+					<>
+						<div className="hidden h-8 w-full items-center md:flex">
+							<Divider dashed />
+						</div>
+
+						<div className="flex w-full justify-between sm:justify-start">
+							<DetailLabelText minWidth="md">{t("COMMON.DELEGATE")}</DetailLabelText>
+							<div> {transaction.username()} </div>
+						</div>
+					</>
+				)}
+
+				{transaction.isDelegateResignation() && (
 					<>
 						<div className="hidden h-8 w-full items-center md:flex">
 							<Divider dashed />
