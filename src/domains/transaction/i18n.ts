@@ -6,6 +6,7 @@ export const translations = {
 	ADD_LINK: "Add Link",
 	ADD_RECIPIENT: "Add Recipient",
 	ALL: "All",
+	ALL_HISTORY: "All History",
 	AMOUNT: "Amount",
 	AUTHENTICATION_STEP: {
 		DESCRIPTION_ENCRYPTION_PASSWORD: "Enter your encryption password to authenticate the transaction.",
