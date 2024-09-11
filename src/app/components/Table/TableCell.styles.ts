@@ -22,5 +22,4 @@ const getVariant = (variant: "start" | "middle" | "end", size?: "sm" | "base"): 
 	return "";
 };
 
-export const getStyles = ({ variant, size }: any) =>
-	`${baseStyle} ${getVariant(variant, size)}`;
+export const getStyles = ({ variant, size }: any) => `${baseStyle} ${getVariant(variant, size)}`;
