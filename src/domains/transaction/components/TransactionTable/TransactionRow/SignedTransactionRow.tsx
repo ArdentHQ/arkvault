@@ -218,11 +218,7 @@ export const SignedTransactionRow = ({
 						}
 					>
 						<div>
-							<TableRemoveButton
-								isDisabled={!canBeDeleted}
-								onClick={handleRemove}
-								className="m-0 p-0"
-							/>
+							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-0" />
 						</div>
 					</Tooltip>
 				</div>

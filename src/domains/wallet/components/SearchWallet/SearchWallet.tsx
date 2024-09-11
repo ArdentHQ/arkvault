@@ -40,7 +40,7 @@ const SearchWalletListItem = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className="text-theme-primary-reverse-600 -mr-3"
+					className="-mr-3 text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -55,7 +55,7 @@ const SearchWalletListItem = ({
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
 						size="icon"
 						variant="transparent"
-						className="text-theme-primary-600 -mr-3"
+						className="-mr-3 text-theme-primary-600"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}
@@ -76,10 +76,7 @@ const SearchWalletListItem = ({
 			</TableCell>
 
 			{showConvertedValue && (
-				<TableCell
-					innerClassName="text-theme-secondary-text justify-end"
-					className="hidden xl:table-cell"
-				>
+				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell">
 					<Amount value={wallet.convertedBalance()} ticker={exchangeCurrency} />
 				</TableCell>
 			)}

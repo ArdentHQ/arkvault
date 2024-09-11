@@ -126,14 +126,7 @@ export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, pr
 				return <AddressRowMobile index={index} maxVotes={maxVotes} wallet={wallet} onSelect={onSelect} />;
 			}
 
-			return (
-				<AddressRow
-					index={index}
-					maxVotes={maxVotes}
-					wallet={wallet}
-					onSelect={onSelect}
-				/>
-			);
+			return <AddressRow index={index} maxVotes={maxVotes} wallet={wallet} onSelect={onSelect} />;
 		},
 		[maxVotes, onSelect, isSm, isXs],
 	);

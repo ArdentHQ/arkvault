@@ -36,9 +36,7 @@ export const TransactionRowSkeleton = () => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end">
-				<span
-					className="flex h-7 items-center space-x-1"
-				>
+				<span className="flex h-7 items-center space-x-1">
 					<Skeleton height={16} width={amountWidth} />
 					<Skeleton height={16} width={35} />
 				</span>

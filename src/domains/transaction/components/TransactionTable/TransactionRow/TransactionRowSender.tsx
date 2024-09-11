@@ -13,12 +13,7 @@ interface Properties {
 	showTransactionMode?: boolean;
 }
 
-export const TransactionRowSender = ({
-	transaction,
-	profile,
-	labelClass,
-	showTransactionMode = true,
-}: Properties) => {
+export const TransactionRowSender = ({ transaction, profile, labelClass, showTransactionMode = true }: Properties) => {
 	const { isXs, isSm } = useBreakpoint();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -34,9 +29,7 @@ export const TransactionRowSender = ({
 
 	return (
 		<>
-			{showTransactionMode && (
-				<TransactionRowMode transaction={transaction} transactionType="transfer" />
-			)}
+			{showTransactionMode && <TransactionRowMode transaction={transaction} transactionType="transfer" />}
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<Address
 					walletName={alias}

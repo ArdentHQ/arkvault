@@ -37,7 +37,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 					size="icon"
 					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className="text-sm font-semibold text-theme-primary-reverse-600 -mr-3"
+					className="-mr-3 text-sm font-semibold text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -50,7 +50,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				size="icon"
 				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className="text-sm font-semibold text-theme-primary-600 -mr-3"
+				className="-mr-3 text-sm font-semibold text-theme-primary-600"
 			>
 				{t("COMMON.SELECT")}
 			</Button>

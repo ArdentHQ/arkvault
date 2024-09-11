@@ -41,11 +41,7 @@ export const BaseTransactionRowMode: VFC<BaseTransactionRowModeProperties> = ({
 	}, [isSent, isReturn, t, type]);
 
 	return (
-		<div
-			data-testid="TransactionRowMode"
-			className="flex items-center space-x-2"
-			{...properties}
-		>
+		<div data-testid="TransactionRowMode" className="flex items-center space-x-2" {...properties}>
 			<Tooltip content={tooltipContent}>
 				<span className={cn("flex h-5 w-5 items-center border-0", modeCircleStyle)}>
 					<Icon name={modeIconName} size="lg" />

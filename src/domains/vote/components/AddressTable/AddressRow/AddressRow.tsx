@@ -43,18 +43,13 @@ export const WalletAvatar = ({ wallet }: { wallet?: Contracts.IReadOnlyWallet })
 	return (
 		<Tooltip content={wallet.username()}>
 			<Link to={wallet.explorerLink()} isExternal className="flex">
-				<Avatar
-					className="ring-2 ring-theme-background"
-					size="xs"
-					address={wallet.address()}
-					noShadow={true}
-				/>
+				<Avatar className="ring-2 ring-theme-background" size="xs" address={wallet.address()} noShadow={true} />
 			</Link>
 		</Tooltip>
 	);
 };
 
-export const AddressRow = ({ index, maxVotes, wallet, onSelect, }: AddressRowProperties) => {
+export const AddressRow = ({ index, maxVotes, wallet, onSelect }: AddressRowProperties) => {
 	const { t } = useTranslation();
 	const { profileHasSyncedOnce, profileIsSyncingWallets } = useConfiguration();
 	const activeProfile = useActiveProfile();
@@ -208,11 +203,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, }: AddressRowPro
 				<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 			</TableCell>
 
-			<TableCell
-				innerClassName="font-semibold space-x-3"
-			>
-				{renderWalletVotes()}
-			</TableCell>
+			<TableCell innerClassName="font-semibold space-x-3">{renderWalletVotes()}</TableCell>
 
 			{maxVotes === 1 ? (
 				<>
@@ -236,10 +227,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, }: AddressRowPro
 				</TableCell>
 			)}
 
-			<TableCell
-				className="hidden lg:table-cell"
-				innerClassName="justify-center space-x-2"
-			>
+			<TableCell className="hidden lg:table-cell" innerClassName="justify-center space-x-2">
 				<WalletIcons wallet={wallet} exclude={["isKnown", "isSecondSignature", "isTestNetwork"]} />
 			</TableCell>
 
@@ -250,7 +238,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, }: AddressRowPro
 							size="icon"
 							disabled={isButtonDisabled}
 							variant="transparent"
-							className= "-mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+							className="-mr-3 text-theme-primary-600 hover:text-theme-primary-700"
 							onClick={() => onSelect?.(wallet.address(), wallet.networkId())}
 							data-testid={`AddressRow__select-${index}`}
 						>

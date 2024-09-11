@@ -11,11 +11,11 @@ export const NotificationTransactionSkeletonRow = () => {
 	const { isXs, isSm } = useBreakpoint();
 
 	const renderTransactionMode = () => (
-			<div className="flex items-center space-x-2">
-				<Skeleton circle height={20} width={20} />
-				<Skeleton circle height={20} width={20} />
-			</div>
-		);
+		<div className="flex items-center space-x-2">
+			<Skeleton circle height={20} width={20} />
+			<Skeleton circle height={20} width={20} />
+		</div>
+	);
 
 	if (isXs || isSm) {
 		return <NotificationTransactionItemMobileSkeleton />;
@@ -23,10 +23,7 @@ export const NotificationTransactionSkeletonRow = () => {
 
 	return (
 		<TableRow>
-			<TableCell
-				variant="start"
-				innerClassName="space-x-3"
-			>
+			<TableCell variant="start" innerClassName="space-x-3">
 				{renderTransactionMode()}
 
 				<Skeleton height={16} width={recipientWidth} />

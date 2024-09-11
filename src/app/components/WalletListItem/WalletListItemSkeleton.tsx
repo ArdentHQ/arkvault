@@ -12,9 +12,7 @@ export const WalletListItemSkeleton: React.VFC = () => {
 	return (
 		<TableRow>
 			<TableCell variant="start" size="sm" innerClassName="flex shrink-0">
-				<div
-					className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
-				>
+				<div className="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 					<Skeleton height={18} width={18} />
 				</div>
 			</TableCell>
@@ -36,17 +34,14 @@ export const WalletListItemSkeleton: React.VFC = () => {
 				<Skeleton height={16} width={100} />
 			</TableCell>
 
-			<TableCell
-				variant="end"
-				size="sm"
-				innerClassName="justify-end text-theme-secondary-text"
-			>
+			<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text">
 				<Button
 					size="icon"
 					data-testid="WalletHeader__send-button"
 					disabled={true}
 					variant="transparent"
-					className="-mr-3 text-theme-primary-600 hover:text-theme-primary-700">
+					className="-mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+				>
 					{t("COMMON.SEND")}
 				</Button>
 

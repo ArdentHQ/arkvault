@@ -36,11 +36,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 					<Info wallet={wallet} />
 					<Balance wallet={wallet} isSynced={isSynced} />
 					<Currency wallet={wallet} isSynced={isSynced} />
-					<ButtonsCell
-						wallet={wallet}
-						onSelectOption={handleSelectOption}
-						onSend={handleSend}
-					/>
+					<ButtonsCell wallet={wallet} onSelectOption={handleSelectOption} onSend={handleSend} />
 				</TableRow>
 				{activeModal && (
 					<tr>
