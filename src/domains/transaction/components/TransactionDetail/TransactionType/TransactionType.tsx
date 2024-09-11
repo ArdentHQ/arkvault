@@ -33,7 +33,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText minWidth="md">{t("COMMON.DELEGATE")}</DetailLabelText>
-							<div> {transaction.username()} </div>
+							<div> {transaction.wallet().username()} </div>
 						</div>
 					</>
 				)}
