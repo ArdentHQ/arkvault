@@ -44,10 +44,7 @@ export const NotificationTransactionItem = ({
 		<VisibilitySensor onChange={onVisibilityChange} scrollCheck delayedCall containment={containmentRef?.current}>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
 				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3">
-					<TransactionRowMode
-						transaction={transaction}
-						address={transaction.recipient()}
-					/>
+					<TransactionRowMode transaction={transaction} address={transaction.recipient()} />
 					<div className="w-20 flex-1">
 						<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 					</div>

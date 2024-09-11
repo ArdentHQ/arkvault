@@ -17,17 +17,11 @@ export const DelegateRowSkeleton = ({ requiresStakeAmount }: DelegateRowSkeleton
 				<Skeleton height={16} width={22} />
 			</TableCell>
 
-			<TableCell
-				innerClassName="h-12 space-x-3"
-			>
+			<TableCell innerClassName="h-12 space-x-3">
 				<Skeleton height={16} width={nameWidth} />
 			</TableCell>
 
-			<TableCell
-				variant="start"
-				innerClassName="justify-center"
-				className="hidden sm:table-cell"
-			>
+			<TableCell variant="start" innerClassName="justify-center" className="hidden sm:table-cell">
 				<Skeleton height={16} width={22} />
 			</TableCell>
 

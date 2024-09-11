@@ -129,10 +129,7 @@ export const ExchangeTransactionsRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell
-				innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
-				variant="start"
-			>
+			<TableCell innerClassName="items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1" variant="start">
 				<Tooltip content={exchangeTransaction.orderId()}>
 					<button
 						type="button"
@@ -165,16 +162,11 @@ export const ExchangeTransactionsRow = ({
 				<TimeAgo date={DateTime.fromUnix(exchangeTransaction.createdAt() / 1000).toISOString()} />
 			</TableCell>
 
-			<TableCell
-				innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
-			>
+			<TableCell innerClassName="font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1">
 				<ExchangeTransactionProvider slug={exchangeTransaction.provider()} />
 			</TableCell>
 
-			<TableCell
-				className="lg:hidden"
-				innerClassName="items-end flex flex-col gap-1.5 my-3 xl:my-0"
-			>
+			<TableCell className="lg:hidden" innerClassName="items-end flex flex-col gap-1.5 my-3 xl:my-0">
 				<ExchangeTransactionRowAmount type="sent" data={exchangeTransaction.input()} />
 				<ExchangeTransactionRowAmount
 					type="received"

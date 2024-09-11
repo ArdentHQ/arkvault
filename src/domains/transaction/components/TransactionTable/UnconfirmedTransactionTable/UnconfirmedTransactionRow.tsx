@@ -49,10 +49,7 @@ export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties 
 
 	return (
 		<TableRow {...properties}>
-			<TableCell
-				variant="start"
-				innerClassName="space-x-3 text-theme-secondary-500 whitespace-nowrap"
-			>
+			<TableCell variant="start" innerClassName="space-x-3 text-theme-secondary-500 whitespace-nowrap">
 				<TimeAgo date={transaction.timestamp()?.toString() as string} />
 			</TableCell>
 

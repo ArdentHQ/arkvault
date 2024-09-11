@@ -9,12 +9,7 @@ interface TableRemoveButtonProperties extends JSX.IntrinsicAttributes {
 	onClick: (event: MouseEvent) => void;
 }
 
-export const TableRemoveButton = ({
-	className,
-	isDisabled,
-	onClick,
-	...properties
-}: TableRemoveButtonProperties) => {
+export const TableRemoveButton = ({ className, isDisabled, onClick, ...properties }: TableRemoveButtonProperties) => {
 	const handleClick = (event: MouseEvent) => {
 		event.stopPropagation();
 		event.preventDefault();

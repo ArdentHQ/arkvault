@@ -28,7 +28,7 @@ export const WalletDetails = () => {
 
 	const history = useHistory();
 	const { t } = useTranslation();
-	const { isXs} = useBreakpoint();
+	const { isXs } = useBreakpoint();
 
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();

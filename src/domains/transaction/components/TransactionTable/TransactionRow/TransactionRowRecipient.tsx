@@ -27,10 +27,7 @@ export const TransactionRowRecipient = ({ transaction, profile, labelClass }: Pr
 
 	return (
 		<>
-			<TransactionRowRecipientIcon
-				recipient={transaction.recipient()}
-				type={transaction.type()}
-			/>
+			<TransactionRowRecipientIcon recipient={transaction.recipient()} type={transaction.type()} />
 			<div className={cn("w-0 flex-1", labelClass)}>
 				<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 			</div>

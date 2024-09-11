@@ -31,7 +31,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 	const [selectedVotes, setSelectedVotes] = useState<VoteDelegateProperties[]>(voteDelegates);
 	const [isVoteDisabled, setIsVoteDisabled] = useState(false);
 	const [availableBalance, setAvailableBalance] = useState(selectedWallet.balance());
-	const { isXs} = useBreakpoint();
+	const { isXs } = useBreakpoint();
 
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 

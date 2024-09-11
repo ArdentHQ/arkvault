@@ -143,12 +143,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 	const renderTableRow = useCallback(
 		(wallet: Contracts.IReadWriteWallet) =>
-			showSkeletons ? (
-				<WalletListItemSkeleton />
-			) : (
-				<WalletListItem wallet={wallet} />
-			),
-		[showSkeletons]
+			showSkeletons ? <WalletListItemSkeleton /> : <WalletListItem wallet={wallet} />,
+		[showSkeletons],
 	);
 
 	return (
@@ -171,11 +167,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 						{!isMdAndAbove && (
 							<div className="space-y-3">
 								{wallets.slice(0, itemsPerPage).map((wallet) => (
-									<WalletListItem
-										key={wallet.id()}
-										wallet={wallet}
-										isLargeScreen={false}
-									/>
+									<WalletListItem key={wallet.id()} wallet={wallet} isLargeScreen={false} />
 								))}
 							</div>
 						)}

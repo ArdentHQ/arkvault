@@ -9,7 +9,7 @@ interface Properties {
 	recipient?: string;
 }
 
-export const TransactionRowRecipientIcon = ({ type, recipient, }: Properties) => {
+export const TransactionRowRecipientIcon = ({ type, recipient }: Properties) => {
 	const { getIcon } = useTransactionTypes();
 
 	const shadowClasses =

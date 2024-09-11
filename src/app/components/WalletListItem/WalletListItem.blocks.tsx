@@ -54,15 +54,8 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	}
 
 	return (
-		<TableCell
-			variant="start"
-			size="sm"
-			innerClassName="space-x-3"
-			data-testid="TableCell_Starred"
-		>
-			<div
-				className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
-			>
+		<TableCell variant="start" size="sm" innerClassName="space-x-3" data-testid="TableCell_Starred">
+			<div className="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 				<Tooltip
 					content={
 						wallet.isStarred()
@@ -87,7 +80,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	);
 };
 
-export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet}) => {
+export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -98,11 +91,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet}) => {
 	});
 
 	return (
-		<TableCell
-			size="sm"
-			innerClassName="-ml-3 space-x-3"
-			data-testid="TableCell_Wallet"
-		>
+		<TableCell size="sm" innerClassName="-ml-3 space-x-3" data-testid="TableCell_Wallet">
 			<div className="flex shrink-0 items-center">
 				<Avatar
 					size="xs"
@@ -168,12 +157,7 @@ export const Info = ({ wallet, isLargeScreen = true, className }: InfoProperties
 	);
 };
 
-export const Balance: React.VFC<BalanceProperties> = ({
-	wallet,
-	isSynced,
-	isLargeScreen = true,
-	className,
-}) => {
+export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLargeScreen = true, className }) => {
 	const renderAmount = () => {
 		if (isSynced) {
 			return <Amount value={wallet.balance()} ticker={wallet.network().ticker()} className={className} />;
@@ -186,11 +170,7 @@ export const Balance: React.VFC<BalanceProperties> = ({
 		return renderAmount();
 	}
 
-	return (
-		<TableCell innerClassName="font-semibold justify-end">
-			{renderAmount()}
-		</TableCell>
-	);
+	return <TableCell innerClassName="font-semibold justify-end">{renderAmount()}</TableCell>;
 };
 
 export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLargeScreen = true }) => {
@@ -224,11 +204,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	}
 
 	return (
-		<TableCell
-			data-testid="CurrencyCell"
-			innerClassName="justify-end"
-			className="hidden lg:table-cell"
-		>
+		<TableCell data-testid="CurrencyCell" innerClassName="justify-end" className="hidden lg:table-cell">
 			{renderCurrency()}
 		</TableCell>
 	);
@@ -262,11 +238,7 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 	);
 };
 
-export const WalletItemExtraDetails = ({
-	wallet,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-}) => {
+export const WalletItemExtraDetails = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { handleToggleStar } = useWalletActions(wallet);
 
 	return (
@@ -282,20 +254,9 @@ export const WalletItemExtraDetails = ({
 	);
 };
 
-export const WalletItemBalance = ({
-	wallet,
-	isSynced,
-}: {
-	wallet: Contracts.IReadWriteWallet;
-	isSynced: boolean;
-}) => (
+export const WalletItemBalance = ({ wallet, isSynced }: { wallet: Contracts.IReadWriteWallet; isSynced: boolean }) => (
 	<>
-		<Balance
-			className="text-sm text-white"
-			wallet={wallet}
-			isSynced={isSynced}
-			isLargeScreen={false}
-		/>
+		<Balance className="text-sm text-white" wallet={wallet} isSynced={isSynced} isLargeScreen={false} />
 
 		<Currency wallet={wallet} isSynced={isSynced} isLargeScreen={false} />
 	</>
