@@ -28,16 +28,16 @@ const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, excha
 
 	return (
 		<TableRow>
-			<TableCell variant="start" innerClassName="space-x-3" isCompact>
+			<TableCell variant="start" innerClassName="space-x-3">
 				<div className={`h-5 w-1 rounded bg-theme-${color}`} />
 				<span className="font-semibold">{asset.label}</span>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end" isCompact>
+			<TableCell innerClassName="justify-end">
 				<Amount value={asset.amount} ticker={asset.label} className="font-semibold" />
 			</TableCell>
 
-			<TableCell innerClassName="justify-end" isCompact>
+			<TableCell innerClassName="justify-end">
 				<Amount
 					value={asset.convertedAmount}
 					ticker={exchangeCurrency}
@@ -45,7 +45,7 @@ const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, excha
 				/>
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact>
+			<TableCell variant="end" innerClassName="justify-end">
 				<span className="font-semibold text-theme-secondary-text">{formatPercentage(asset.percent)}</span>
 			</TableCell>
 		</TableRow>

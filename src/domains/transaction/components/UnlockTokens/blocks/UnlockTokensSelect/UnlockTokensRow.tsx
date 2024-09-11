@@ -21,7 +21,7 @@ export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, 
 
 	return (
 		<TableRow>
-			<TableCell variant="start" isCompact>
+			<TableCell variant="start">
 				<Amount
 					className="font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
 					value={item.amount.toHuman()}
@@ -29,13 +29,13 @@ export const UnlockTokensRow: FC<UnlockTokensRowProperties> = ({ loading, item, 
 				/>
 			</TableCell>
 
-			<TableCell isCompact>
+			<TableCell>
 				<time className="text-theme-secondary-700" dateTime={item.timestamp.toDate().toUTCString()}>
 					{date} {t("COMMON.AT")} {time} ({relativeTime})
 				</time>
 			</TableCell>
 
-			<TableCell variant="end" isCompact innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				{item.isReady ? (
 					<div className="flex items-center">
 						<div className="flex items-center">
