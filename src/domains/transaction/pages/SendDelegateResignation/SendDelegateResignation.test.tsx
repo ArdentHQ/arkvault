@@ -54,11 +54,16 @@ const transactionResponse = {
 	explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 	fee: () => +transactionFixture.data.fee / 1e8,
 	id: () => transactionFixture.data.id,
+	isDelegateRegistration: () => false,
+	isDelegateResignation: () => false,
+	isIpfs: () => false,
 	isMultiSignatureRegistration: () => false,
+	isVote: () => false,
 	recipient: () => transactionFixture.data.recipient,
 	sender: () => transactionFixture.data.sender,
 	type: () => "delegateResignation",
 	usesMultiSignature: () => false,
+	isConfirmed: () => true,
 };
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
@@ -502,7 +507,7 @@ describe("SendDelegateResignation", () => {
 			transactionMock.mockRestore();
 		});
 
-		it("should back button after successful submission", async () => {
+		it("should click back button after successful submission", async () => {
 			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
 
 			const secondPublicKeyMock = vi.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
@@ -529,7 +534,8 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
-			userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
+			await userEvent.clear(screen.getByTestId("AuthenticationStep__mnemonic"));
+			await userEvent.type(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
 			await waitFor(() => {
 				expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase);
@@ -543,7 +549,8 @@ describe("SendDelegateResignation", () => {
 				expect(secondMnemonic()).toBeEnabled();
 			});
 
-			userEvent.type(secondMnemonic(), MNEMONICS[1]);
+			await userEvent.clear(secondMnemonic());
+			await userEvent.type(secondMnemonic(), MNEMONICS[1]);
 
 			await waitFor(() => {
 				expect(secondMnemonic()).toHaveValue(MNEMONICS[1]);
