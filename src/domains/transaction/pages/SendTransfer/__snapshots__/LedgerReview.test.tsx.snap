@@ -26,13 +26,13 @@ exports[`TransferLedgerReview > should render 1`] = `
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
             data-testid="DetailLabelText"
           >
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"
@@ -88,14 +88,6 @@ exports[`TransferLedgerReview > should render 1`] = `
               </div>
             </button>
           </div>
-        </div>
-        <div
-          class="hidden h-8 w-full items-center sm:flex"
-        >
-          <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-            type="horizontal"
-          />
         </div>
       </div>
     </div>
@@ -281,13 +273,13 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
             data-testid="DetailLabelText"
           >
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"
@@ -343,14 +335,6 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
               </div>
             </button>
           </div>
-        </div>
-        <div
-          class="hidden h-8 w-full items-center sm:flex"
-        >
-          <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-            type="horizontal"
-          />
         </div>
       </div>
     </div>
@@ -553,13 +537,13 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-16"
+            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
             data-testid="DetailLabelText"
           >
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"
@@ -615,14 +599,6 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
               </div>
             </button>
           </div>
-        </div>
-        <div
-          class="hidden h-8 w-full items-center sm:flex"
-        >
-          <div
-            class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
-            type="horizontal"
-          />
         </div>
       </div>
     </div>

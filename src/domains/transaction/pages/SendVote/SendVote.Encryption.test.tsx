@@ -42,6 +42,11 @@ const createVoteTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		sender: () => voteFixture.data.sender,
 		type: () => "vote",
 		usesMultiSignature: () => false,
+		isDelegateResignation: () => false,
+		isDelegateRegistration: () => false,
+		isIpfs: () => false,
+		isVote: () => true,
+		isConfirmed: () => true,
 	});
 
 const passphrase = getDefaultWalletMnemonic();
