@@ -16,6 +16,9 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "multiPayment",
+						wallet: () => ({
+							username: () => "delegate"
+						})
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -37,7 +40,9 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "delegateRegistration",
-						username: () => "delegate",
+						wallet: () => ({
+							username: () => "delegate"
+						})
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -59,7 +64,9 @@ describe("TransactionType", () => {
 						isIpfs: () => false,
 						isVote: () => false,
 						type: () => "delegateResignation",
-						username: () => "delegate",
+						wallet: () => ({
+							username: () => "delegate"
+						})
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
@@ -83,7 +90,9 @@ describe("TransactionType", () => {
 						isIpfs: () => true,
 						isVote: () => false,
 						type: () => "delegateResignation",
-						username: () => "delegate",
+						wallet: () => ({
+							username: () => "delegate"
+						})
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,
