@@ -34,7 +34,7 @@ import { TruncateEnd } from "@/app/components/TruncateEnd";
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
 
-export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, isCompact, isLargeScreen = true }) => {
+export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, isLargeScreen = true }) => {
 	const { t } = useTranslation();
 
 	if (!isLargeScreen) {
@@ -57,15 +57,11 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 		<TableCell
 			variant="start"
 			size="sm"
-			innerClassName={isCompact ? "space-x-3" : "space-x-4"}
-			isCompact={isCompact}
+			innerClassName="space-x-3"
 			data-testid="TableCell_Starred"
 		>
 			<div
-				className={cn(
-					"flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800",
-					isCompact ? "h-5" : "h-11",
-				)}
+				className="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
 			>
 				<Tooltip
 					content={
@@ -91,7 +87,7 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	);
 };
 
-export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact }) => {
+export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet}) => {
 	const profile = useActiveProfile();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -104,13 +100,12 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact 
 	return (
 		<TableCell
 			size="sm"
-			innerClassName={cn("-ml-3", isCompact ? "space-x-3" : "space-x-4")}
-			isCompact={isCompact}
+			innerClassName="-ml-3 space-x-3"
 			data-testid="TableCell_Wallet"
 		>
 			<div className="flex shrink-0 items-center">
 				<Avatar
-					size={isCompact ? "xs" : "lg"}
+					size="xs"
 					address={wallet.address()}
 					shadowClassName="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black"
 				/>
@@ -130,7 +125,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, isCompact 
 	);
 };
 
-export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: InfoProperties) => {
+export const Info = ({ wallet, isLargeScreen = true, className }: InfoProperties) => {
 	const { t } = useTranslation();
 	const { syncPending, hasUnsignedPendingTransaction, isLoading } = useWalletTransactions(wallet);
 
@@ -167,7 +162,7 @@ export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: Inf
 	}
 
 	return (
-		<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle" isCompact={isCompact}>
+		<TableCell innerClassName="justify-center text-sm font-bold text-center align-middle">
 			{renderIcons()}
 		</TableCell>
 	);
@@ -175,7 +170,6 @@ export const Info = ({ isCompact, wallet, isLargeScreen = true, className }: Inf
 
 export const Balance: React.VFC<BalanceProperties> = ({
 	wallet,
-	isCompact,
 	isSynced,
 	isLargeScreen = true,
 	className,
@@ -193,13 +187,13 @@ export const Balance: React.VFC<BalanceProperties> = ({
 	}
 
 	return (
-		<TableCell innerClassName="font-semibold justify-end" isCompact={isCompact}>
+		<TableCell innerClassName="font-semibold justify-end">
 			{renderAmount()}
 		</TableCell>
 	);
 };
 
-export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isCompact, isLargeScreen = true }) => {
+export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLargeScreen = true }) => {
 	const { profileIsSyncingExchangeRates } = useConfiguration();
 	const { t } = useTranslation();
 
@@ -234,7 +228,6 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isCo
 			data-testid="CurrencyCell"
 			innerClassName="justify-end"
 			className="hidden lg:table-cell"
-			isCompact={isCompact}
 		>
 			{renderCurrency()}
 		</TableCell>
@@ -271,10 +264,8 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 
 export const WalletItemExtraDetails = ({
 	wallet,
-	isCompact,
 }: {
 	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
 }) => {
 	const { handleToggleStar } = useWalletActions(wallet);
 
@@ -282,35 +273,31 @@ export const WalletItemExtraDetails = ({
 		<>
 			<Info
 				className="border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
-				isCompact={isCompact}
 				wallet={wallet}
 				isLargeScreen={false}
 			/>
 
-			<Starred onToggleStar={handleToggleStar} isCompact={isCompact} wallet={wallet} isLargeScreen={false} />
+			<Starred onToggleStar={handleToggleStar} wallet={wallet} isLargeScreen={false} />
 		</>
 	);
 };
 
 export const WalletItemBalance = ({
 	wallet,
-	isCompact,
 	isSynced,
 }: {
 	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
 	isSynced: boolean;
 }) => (
 	<>
 		<Balance
 			className="text-sm text-white"
 			wallet={wallet}
-			isCompact={isCompact}
 			isSynced={isSynced}
 			isLargeScreen={false}
 		/>
 
-		<Currency wallet={wallet} isCompact={isCompact} isSynced={isSynced} isLargeScreen={false} />
+		<Currency wallet={wallet} isSynced={isSynced} isLargeScreen={false} />
 	</>
 );
 
@@ -482,7 +469,7 @@ export const ReceiverItemMobile: React.FC<ReceiverItemMobileProperties> = ({
 	);
 };
 
-export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompact, onSend, onSelectOption }) => {
+export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, onSelectOption }) => {
 	const { t } = useTranslation();
 	const { primaryOptions, secondaryOptions } = useWalletOptions(wallet);
 
@@ -496,35 +483,29 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, isCompac
 	}, []);
 
 	return (
-		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
+		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text">
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 				<div onClick={handleStopPropagation}>
 					<Button
 						data-testid="WalletListItem__send-button"
-						size={isCompact ? "icon" : undefined}
+						size="icon"
 						disabled={isButtonDisabled}
-						variant={isCompact ? "transparent" : "secondary"}
-						className={cn({
-							"my-auto": !isCompact,
-							"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
-						})}
+						variant="transparent"
+						className="text-theme-primary-600 hover:text-theme-primary-700"
 						onClick={onSend}
 					>
 						{t("COMMON.SEND")}
 					</Button>
 				</div>
 			</Tooltip>
-			<div data-testid="WalletListItem__more-button" className={cn({ "ml-3": !isCompact })}>
+			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					toggleContent={
 						<Button
-							variant={isCompact ? "transparent" : "secondary"}
+							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className={cn({
-								"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
-								"flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700": !isCompact,
-							})}
+							className="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
 						>
 							<Icon name="EllipsisVertical" size="lg" />
 						</Button>

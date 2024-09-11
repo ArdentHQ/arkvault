@@ -45,7 +45,6 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const { isMdAndAbove } = useBreakpoint();
 	const { t } = useTranslation();
 	const { profileIsSyncing } = useConfiguration();
-	const isCompact = true;
 
 	const showSkeletons = profileIsSyncing && wallets.length === 0;
 
@@ -145,11 +144,11 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	const renderTableRow = useCallback(
 		(wallet: Contracts.IReadWriteWallet) =>
 			showSkeletons ? (
-				<WalletListItemSkeleton isCompact={isCompact} />
+				<WalletListItemSkeleton />
 			) : (
-				<WalletListItem wallet={wallet} isCompact={isCompact} />
+				<WalletListItem wallet={wallet} />
 			),
-		[showSkeletons, isCompact],
+		[showSkeletons]
 	);
 
 	return (
@@ -175,7 +174,6 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 									<WalletListItem
 										key={wallet.id()}
 										wallet={wallet}
-										isCompact={isCompact}
 										isLargeScreen={false}
 									/>
 								))}
