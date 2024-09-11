@@ -276,7 +276,7 @@ describe("Exchange", () => {
 		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRemoveButton")).toHaveLength(profile.exchangeTransactions().count());
+		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(profile.exchangeTransactions().count());
 
 		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
