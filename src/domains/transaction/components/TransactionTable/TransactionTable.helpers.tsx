@@ -5,53 +5,51 @@ import { Column } from "react-table";
 
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 
-export const useTransactionTableColumns = (exchangeCurrency?: string) => {
+export const useTransactionTableColumns = ({ coin }: { coin?: string }) => {
 	const { t } = useTranslation();
 
 	return useMemo<Column<DTO.ExtendedConfirmedTransactionData>[]>(() => {
 		const templateColumns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
 			{
-				Header: t("COMMON.ID"),
-				minimumWidth: true,
+				Header: t("COMMON.TX_ID"),
+				headerClassName: "no-border",
 			},
 			{
-				Header: t("COMMON.DATE"),
+				Header: t("COMMON.AGE"),
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 				accessor: (transaction) => transaction.timestamp?.()?.toUNIX(),
-				cellWidth: "w-50",
-				headerClassName: "hidden lg:table-cell",
+				headerClassName: "hidden xl:table-cell no-border",
 				id: "date",
 				sortDescFirst: true,
 			},
 			{
-				Header: t("COMMON.SENDER"),
-				cellWidth: "w-96",
+				Header: t("COMMON.TYPE"),
+				cellWidth: "min-w-24",
+				headerClassName: "no-border",
 			},
 			{
-				Header: t("COMMON.RECIPIENT"),
-				cellWidth: "w-96",
+				Header: t("COMMON.ADDRESSING"),
+				cellWidth: "min-w-32",
+				headerClassName: "no-border",
 			},
 			{
-				Header: t("COMMON.AMOUNT"),
+				Header: `${t("COMMON.VALUE")} (${coin})`,
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 				accessor: (transaction) => transaction.total?.(),
 				className: "justify-end",
+				headerClassName: "no-border",
 				id: "amount",
-				sortDescFirst: true,
+			},
+			{
+				Header: t("COMMON.FIAT_VALUE"),
+				accessor: () => "fiatValue",
+				className: "justify-end",
+				headerClassName: "no-border hidden lg:table-cell",
 			},
 		];
 
-		if (exchangeCurrency) {
-			templateColumns.push({
-				Header: t("COMMON.CURRENCY"),
-				cellWidth: "w-28",
-				className: "justify-end float-right",
-				headerClassName: "hidden xl:table-cell",
-			});
-		}
-
 		return templateColumns;
-	}, [t, exchangeCurrency]);
+	}, [t, coin]);
 };
 
 export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) => {
@@ -86,7 +84,7 @@ export const usePendingTransactionTableColumns = ({ coin }: { coin: string }) =>
 				minimumWidth: true,
 			},
 			{
-				Header: `${t("COMMON.AMOUNT")} (${coin})`,
+				Header: `${t("COMMON.VALUE")} (${coin})`,
 				accessor: () => "amount",
 				className: "justify-end",
 				headerClassName: "no-border",
