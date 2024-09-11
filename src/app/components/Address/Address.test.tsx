@@ -101,5 +101,5 @@ describe("Formatted Address", () => {
 		);
 
 		expect(screen.getByTestId("Address__address-container")).toHaveClass("text-theme-primary-600");
-	})
+	});
 });
