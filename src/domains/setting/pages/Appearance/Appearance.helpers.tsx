@@ -7,11 +7,10 @@ import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
 import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
-import { AccentColorType, ViewingModeType, useBreakpoint } from "@/app/hooks";
+import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
 export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
-	const { isXs, isSm } = useBreakpoint();
 
 	const options = [
 		{
