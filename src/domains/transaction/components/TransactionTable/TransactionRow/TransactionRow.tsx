@@ -127,50 +127,6 @@ export const TransactionRow = memo(
 				>
 					<Amount value={convertedBalance} ticker={exchangeCurrency || ""} />
 				</TableCell>
-
-
-
-				{/* <TableCell
-					innerClassName="text-theme-secondary-text"
-					isCompact={isCompact}
-					className="table-cell md:hidden lg:table-cell"
-				>
-					<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
-						{transaction.timestamp()!.format(timeFormat)}
-					</span>
-				</TableCell>
-
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowSender transaction={transaction} profile={profile} isCompact={isCompact} />
-				</TableCell>
-
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
-				</TableCell>
-
-				<TableCell innerClassName="justify-end" isCompact={isCompact}>
-					<TransactionRowAmount
-						transaction={transaction}
-						exchangeCurrency={exchangeCurrency}
-						exchangeTooltip
-						isCompact={isCompact}
-					/>
-				</TableCell>
-
-				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end" isCompact={isCompact}>
-					{!exchangeCurrency || transaction.wallet().network().isTest() ? (
-						<span
-							data-testid="TransactionRow__currency"
-							className="whitespace-nowrap text-theme-secondary-text"
-						>
-							{t("COMMON.NOT_AVAILABLE")}
-						</span>
-					) : (
-						<span data-testid="TransactionRow__currency" className="whitespace-nowrap">
-							<TransactionRowAmount transaction={transaction} exchangeCurrency={exchangeCurrency} />
-						</span>
-					)}
-				</TableCell> */}
 			</TableRow>
 		);
 	},
