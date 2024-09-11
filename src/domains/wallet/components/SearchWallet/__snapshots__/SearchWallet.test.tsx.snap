@@ -90,7 +90,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -136,7 +136,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -182,7 +182,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -297,17 +297,21 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -369,17 +373,21 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -519,7 +527,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -565,7 +573,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -611,7 +619,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -726,17 +734,21 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -798,17 +810,21 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -948,7 +964,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -994,7 +1010,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1040,7 +1056,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1155,17 +1171,21 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1225,17 +1245,21 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1375,7 +1399,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -1421,7 +1445,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -1467,7 +1491,7 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -1582,17 +1606,21 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1654,17 +1682,21 @@ exports[`SearchWallet uses fiat value = false > should render expanded on > md s
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2749,7 +2781,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -2795,7 +2827,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -2841,7 +2873,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -2945,17 +2977,21 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3096,7 +3132,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3142,7 +3178,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3188,7 +3224,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3303,17 +3339,21 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3373,17 +3413,21 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3523,7 +3567,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3569,7 +3613,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -3615,7 +3659,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3730,17 +3774,21 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3802,17 +3850,21 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -3952,7 +4004,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -3998,7 +4050,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4044,7 +4096,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4090,7 +4142,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4205,17 +4257,21 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4291,17 +4347,21 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4455,7 +4515,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -4501,7 +4561,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -4547,7 +4607,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4593,7 +4653,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4708,17 +4768,21 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4794,17 +4858,21 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -4958,7 +5026,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5004,7 +5072,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -5050,7 +5118,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -5096,7 +5164,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -5211,17 +5279,21 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -5295,17 +5367,21 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -5459,7 +5535,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -5505,7 +5581,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -5551,7 +5627,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -5597,7 +5673,7 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -5712,17 +5788,21 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -5798,17 +5878,21 @@ exports[`SearchWallet uses fiat value = true > should render expanded on > md sc
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -6907,7 +6991,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -6953,7 +7037,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -6999,7 +7083,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7045,7 +7129,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -7149,17 +7233,21 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    FwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -7314,7 +7402,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -7360,7 +7448,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -7406,7 +7494,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7452,7 +7540,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -7567,17 +7655,21 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -7651,17 +7743,21 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -7815,7 +7911,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         role="row"
                       >
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--0"
                           role="columnheader"
@@ -7861,7 +7957,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--1"
                           role="columnheader"
@@ -7907,7 +8003,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden xl:table-cell"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7953,7 +8049,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -8068,17 +8164,21 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -8154,17 +8254,21 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                                 </span>
                               </span>
                               <div
-                                class="relative grow text-left"
+                                data-testid="Address__address-container"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
+                                <div
+                                  class="relative grow text-left"
                                 >
-                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                </span>
-                                <span>
-                                   
-                                </span>
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base absolute w-full"
+                                    data-testid="Address__address"
+                                  >
+                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                  </span>
+                                  <span>
+                                     
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>

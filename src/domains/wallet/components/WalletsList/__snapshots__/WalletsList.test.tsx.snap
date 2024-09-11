@@ -22,7 +22,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -70,7 +70,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -116,7 +116,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -132,7 +132,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -178,7 +178,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -224,7 +224,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -329,12 +329,16 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           ARK Wallet 2
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                        data-testid="Address__address"
+                      <div
+                        data-testid="Address__address-container"
                       >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                      </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -604,12 +608,16 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                        data-testid="Address__address"
+                      <div
+                        data-testid="Address__address-container"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                      </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -791,7 +799,7 @@ exports[`WalletsList > should render 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -839,7 +847,7 @@ exports[`WalletsList > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -885,7 +893,7 @@ exports[`WalletsList > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -901,7 +909,7 @@ exports[`WalletsList > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -947,7 +955,7 @@ exports[`WalletsList > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -993,7 +1001,7 @@ exports[`WalletsList > should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -1098,12 +1106,16 @@ exports[`WalletsList > should render 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                        data-testid="Address__address"
+                      <div
+                        data-testid="Address__address-container"
                       >
-                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                      </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1322,12 +1334,16 @@ exports[`WalletsList > should render 1`] = `
                           ARK Wallet 2
                         </span>
                       </span>
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                        data-testid="Address__address"
+                      <div
+                        data-testid="Address__address-container"
                       >
-                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                      </span>
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1494,7 +1510,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
               role="row"
             >
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-1 min-w-1"
                 colspan="1"
                 data-testid="table__th--0"
                 role="columnheader"
@@ -1542,7 +1558,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--1"
                 role="columnheader"
@@ -1588,7 +1604,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-36 min-w-36"
                 colspan="1"
                 data-testid="table__th--2"
                 role="columnheader"
@@ -1604,7 +1620,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl w-40 min-w-40"
                 colspan="1"
                 data-testid="table__th--3"
                 role="columnheader"
@@ -1650,7 +1666,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl hidden lg:table-cell w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden lg:table-cell first:rounded-tl-xl last:rounded-tr-xl w-32 min-w-32"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -1696,7 +1712,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl no-border w-1"
+                class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                 colspan="1"
                 data-testid="table__th--5"
                 role="columnheader"
@@ -2304,12 +2320,16 @@ exports[`WalletsList > should render responsive 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
             <div
@@ -2458,12 +2478,16 @@ exports[`WalletsList > should render responsive 1`] = `
                     ARK Wallet 2
                   </span>
                 </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                  </span>
+                </div>
               </div>
             </div>
             <div

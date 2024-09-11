@@ -146,12 +146,16 @@ exports[`SuccessStep > should render (lg) 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -167,12 +171,16 @@ exports[`SuccessStep > should render (lg) 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -434,12 +442,16 @@ exports[`SuccessStep > should render (xs) 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
+              <div
+                data-testid="Address__address-container"
               >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -455,12 +467,16 @@ exports[`SuccessStep > should render (xs) 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
+                <div
+                  data-testid="Address__address-container"
                 >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                    data-testid="Address__address"
+                  >
+                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                  </span>
+                </div>
               </div>
             </div>
           </div>
