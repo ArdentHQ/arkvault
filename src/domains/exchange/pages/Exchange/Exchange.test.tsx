@@ -9,14 +9,7 @@ import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { translations } from "@/domains/exchange/i18n";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-	within,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 let history: HashHistory;
