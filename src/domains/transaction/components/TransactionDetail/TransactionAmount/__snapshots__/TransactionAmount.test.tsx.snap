@@ -21,6 +21,7 @@ exports[`TransactionAmount > should render currency amount 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
@@ -90,6 +91,7 @@ exports[`TransactionAmount > should render in lg 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
@@ -159,6 +161,7 @@ exports[`TransactionAmount > should render in md 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
@@ -231,6 +234,7 @@ exports[`TransactionAmount > should render in sm 1`] = `
           <div
             class="rounded px-1.5 css-givenh"
             color="success-bg"
+            data-testid="AmountLabel__wrapper"
           >
             <div
               class="flex space-x-1 items-stretch"
@@ -271,6 +275,7 @@ exports[`TransactionAmount > should render in xl 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
@@ -343,6 +348,7 @@ exports[`TransactionAmount > should render in xs 1`] = `
           <div
             class="rounded px-1.5 css-givenh"
             color="success-bg"
+            data-testid="AmountLabel__wrapper"
           >
             <div
               class="flex space-x-1 items-stretch"
@@ -383,6 +389,7 @@ exports[`TransactionAmount > should render label for multiple recipients 1`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"
@@ -452,6 +459,7 @@ exports[`TransactionAmount > should render label for multiple recipients 2`] = `
         <div
           class="rounded px-1.5 css-givenh"
           color="success-bg"
+          data-testid="AmountLabel__wrapper"
         >
           <div
             class="flex space-x-1 items-stretch"

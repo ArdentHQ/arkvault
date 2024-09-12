@@ -977,6 +977,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -1420,6 +1421,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
+                                      data-testid="AmountLabel__wrapper"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
@@ -7221,6 +7223,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -8385,6 +8388,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -8828,6 +8832,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
+                                      data-testid="AmountLabel__wrapper"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
@@ -8943,6 +8948,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                     <div
                                       class="rounded px-1.5 css-xqt0aw"
                                       color="danger-bg"
+                                      data-testid="AmountLabel__wrapper"
                                     >
                                       <div
                                         class="flex space-x-1 items-center"
@@ -10101,6 +10107,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -11265,6 +11272,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -12429,6 +12437,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"

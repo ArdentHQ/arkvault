@@ -135,7 +135,7 @@ export const SignedTransactionRow = ({
 							text={transaction.id()}
 							maxChars={14}
 							onClick={() => onRowClick?.(transaction)}
-							data-testId="TransactionRow__transaction-id"
+							data-testid="TransactionRow__transaction-id"
 						/>
 					</span>
 					<span className="text-xs text-theme-secondary-700 xl:hidden">
@@ -157,7 +157,7 @@ export const SignedTransactionRow = ({
 					size="xs"
 					noBorder
 					className="rounded p-1"
-					data-testId="TransactionRowRecipientLabel"
+					data-testid="TransactionRowRecipientLabel"
 				>
 					{getLabel(transaction.type())}
 				</Label>
@@ -169,7 +169,7 @@ export const SignedTransactionRow = ({
 					size="xs"
 					noBorder
 					className="rounded px-[11px] py-1"
-					data-testId="TransactionRowToLabel"
+					data-testid="TransactionRowToLabel"
 				>
 					{t("COMMON.TO")}
 				</Label>
@@ -178,7 +178,7 @@ export const SignedTransactionRow = ({
 						className="cursor-pointer font-semibold text-theme-primary-600"
 						text={recipient || ""}
 						maxChars={14}
-						data-testId="TransactionRowRecipientLabel"
+						data-testid="TransactionRowRecipientLabel"
 					/>
 				</span>
 			</TableCell>

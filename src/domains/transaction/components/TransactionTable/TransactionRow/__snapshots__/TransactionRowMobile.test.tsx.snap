@@ -159,6 +159,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"
@@ -358,6 +359,7 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"
@@ -575,6 +577,7 @@ exports[`TransactionRowMobile > should render 1`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -791,6 +794,7 @@ exports[`TransactionRowMobile > should render 2`] = `
             <div
               class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
+              data-testid="AmountLabel__wrapper"
             >
               <div
                 class="flex space-x-1 items-stretch"
@@ -1849,6 +1853,7 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"
@@ -2053,6 +2058,7 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
               <div
                 class="rounded px-1.5 css-1pbju28"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-stretch"

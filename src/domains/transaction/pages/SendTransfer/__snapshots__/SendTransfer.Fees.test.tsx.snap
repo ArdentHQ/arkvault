@@ -1100,6 +1100,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"
@@ -2387,6 +2388,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 <div
                                   class="rounded px-1.5 css-1pbju28"
                                   color="danger-bg"
+                                  data-testid="AmountLabel__wrapper"
                                 >
                                   <div
                                     class="flex space-x-1 items-stretch"

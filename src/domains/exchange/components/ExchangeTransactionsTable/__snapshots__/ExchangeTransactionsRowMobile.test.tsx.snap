@@ -180,6 +180,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -208,6 +209,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   <div
                     class="rounded px-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -402,6 +404,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -430,6 +433,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   <div
                     class="rounded px-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -624,6 +628,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -652,6 +657,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   <div
                     class="rounded px-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -847,6 +853,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -875,6 +882,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   <div
                     class="rounded pr-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -1108,6 +1116,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -1136,6 +1145,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   <div
                     class="rounded px-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -1335,6 +1345,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   <div
                     class="rounded px-1.5 css-is8euj"
                     color="danger-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -1363,6 +1374,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   <div
                     class="rounded px-1.5 css-1xi6cb5"
                     color="success-bg"
+                    data-testid="AmountLabel__wrapper"
                   >
                     <div
                       class="flex space-x-1 items-center"
@@ -1554,6 +1566,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               <div
                 class="rounded px-1.5 css-is8euj"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-center"
@@ -1582,6 +1595,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               <div
                 class="rounded px-1.5 css-1xi6cb5"
                 color="success-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-center"
@@ -1774,6 +1788,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               <div
                 class="rounded px-1.5 css-is8euj"
                 color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-center"
@@ -1802,6 +1817,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               <div
                 class="rounded px-1.5 css-1xi6cb5"
                 color="success-bg"
+                data-testid="AmountLabel__wrapper"
               >
                 <div
                   class="flex space-x-1 items-center"
