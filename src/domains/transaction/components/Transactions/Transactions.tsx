@@ -53,7 +53,7 @@ export const Transactions = memo(function Transactions({
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
-	} = useProfileTransactions({ limit: 10, profile, wallets });
+	} = useProfileTransactions({ limit: 30, profile, wallets });
 
 	useEffect(() => {
 		if (isLoading) {
