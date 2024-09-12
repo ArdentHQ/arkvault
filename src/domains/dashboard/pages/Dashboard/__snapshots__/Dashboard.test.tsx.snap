@@ -1622,10 +1622,12 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <div
                           class="flex flex-row gap-2"
+                          data-testid="TransactionRowAddressing__container"
                         >
                           <div
                             class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                             color="success-bg"
+                            data-testid="TransactionRowAddressing__label"
                           >
                             From
                           </div>
@@ -1788,10 +1790,12 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <div
                           class="flex flex-row gap-2"
+                          data-testid="TransactionRowAddressing__container"
                         >
                           <div
                             class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                             color="success-bg"
+                            data-testid="TransactionRowAddressing__label"
                           >
                             From
                           </div>
@@ -1954,10 +1958,12 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <div
                           class="flex flex-row gap-2"
+                          data-testid="TransactionRowAddressing__container"
                         >
                           <div
                             class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                             color="success-bg"
+                            data-testid="TransactionRowAddressing__label"
                           >
                             From
                           </div>
@@ -2120,10 +2126,12 @@ exports[`Dashboard > should render 1`] = `
                       >
                         <div
                           class="flex flex-row gap-2"
+                          data-testid="TransactionRowAddressing__container"
                         >
                           <div
                             class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                             color="success-bg"
+                            data-testid="TransactionRowAddressing__label"
                           >
                             From
                           </div>

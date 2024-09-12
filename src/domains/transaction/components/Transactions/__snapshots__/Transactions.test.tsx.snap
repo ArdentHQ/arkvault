@@ -505,10 +505,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -655,10 +657,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -805,10 +809,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -955,10 +961,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -1105,10 +1113,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -1255,10 +1265,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -1405,10 +1417,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -1555,10 +1569,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -1705,10 +1721,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -1882,10 +1900,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -2059,10 +2079,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -2236,10 +2258,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -2413,10 +2437,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -2579,10 +2605,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -2745,10 +2773,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -2911,10 +2941,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3077,10 +3109,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3243,10 +3277,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3409,10 +3445,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3575,10 +3613,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3741,10 +3781,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -3907,10 +3949,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4073,10 +4117,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4239,10 +4285,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4405,10 +4453,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4571,10 +4621,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4737,10 +4789,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -4903,10 +4957,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5069,10 +5125,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5235,10 +5293,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5401,10 +5461,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5567,10 +5629,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5733,10 +5797,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -5899,10 +5965,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6065,10 +6133,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6231,10 +6301,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6397,10 +6469,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6563,10 +6637,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6729,10 +6805,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -6895,10 +6973,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7061,10 +7141,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7227,10 +7309,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7393,10 +7477,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7559,10 +7645,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7725,10 +7813,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -7891,10 +7981,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8057,10 +8149,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8223,10 +8317,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8389,10 +8485,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8555,10 +8653,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8721,10 +8821,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -8887,10 +8989,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9053,10 +9157,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9203,10 +9309,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9353,10 +9461,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9503,10 +9613,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9653,10 +9765,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9819,10 +9933,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -9985,10 +10101,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -10151,10 +10269,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -10763,10 +10883,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -10913,10 +11035,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -11063,10 +11187,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -11213,10 +11339,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -11363,10 +11491,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -11540,10 +11670,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -11717,10 +11849,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -11883,10 +12017,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12049,10 +12185,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12215,10 +12353,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12381,10 +12521,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12547,10 +12689,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12713,10 +12857,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -12879,10 +13025,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13045,10 +13193,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13211,10 +13361,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13377,10 +13529,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13543,10 +13697,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13709,10 +13865,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -13875,10 +14033,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14041,10 +14201,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14207,10 +14369,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14373,10 +14537,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14539,10 +14705,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14705,10 +14873,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -14871,10 +15041,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -15037,10 +15209,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -15187,10 +15361,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -15337,10 +15513,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -15503,10 +15681,12 @@ exports[`Transactions > should hide view more button when there are no next page
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -16115,10 +16295,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -16265,10 +16447,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -16415,10 +16599,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -16565,10 +16751,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__vote"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -16715,10 +16903,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       To
                     </div>
@@ -16892,10 +17082,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17069,10 +17261,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17235,10 +17429,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17401,10 +17597,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17567,10 +17765,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17733,10 +17933,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -17899,10 +18101,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18065,10 +18269,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18231,10 +18437,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18397,10 +18605,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18563,10 +18773,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18729,10 +18941,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -18895,10 +19109,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19061,10 +19277,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19227,10 +19445,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19393,10 +19613,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19559,10 +19781,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19725,10 +19949,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -19891,10 +20117,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20057,10 +20285,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20223,10 +20453,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20389,10 +20621,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20539,10 +20773,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20689,10 +20925,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
@@ -20855,10 +21093,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 >
                   <div
                     class="flex flex-row gap-2"
+                    data-testid="TransactionRowAddressing__container"
                   >
                     <div
                       class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
+                      data-testid="TransactionRowAddressing__label"
                     >
                       From
                     </div>
