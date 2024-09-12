@@ -758,42 +758,21 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               width="16"
                             >
                               <svg
-                                fill="none"
-                                viewBox="0 0 16 16"
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
                                 xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <g
-                                  id="Frame 1497"
-                                >
-                                  <g
-                                    id="Group"
-                                  >
-                                    <path
-                                      d="M15.2033 5.14566V0.801758H10.8594"
-                                      id="Vector"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                    <path
-                                      d="M15.1977 0.801758L5.625 10.3744"
-                                      id="Vector_2"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                    <path
-                                      d="M7.80432 3.19727H1.80463C1.30466 3.19727 0.804688 3.69724 0.804688 4.19721V14.1967C0.804688 14.6966 1.30466 15.1966 1.80463 15.1966H11.8041C12.3041 15.1966 12.804 14.6967 12.804 14.1967V8.197"
-                                      id="Vector_3"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                  </g>
-                                </g>
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -832,7 +811,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Addressing
@@ -845,7 +824,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               class="flex w-full"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 From
@@ -920,7 +899,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               class="mt-3 flex w-full md:mt-0"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 To
@@ -1018,7 +997,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Type
@@ -1031,7 +1010,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Category
@@ -1076,7 +1055,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Transaction Summary
@@ -1092,7 +1071,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Amount
@@ -1126,7 +1105,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Fee
@@ -1150,7 +1129,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Value
@@ -1192,7 +1171,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Confirmations
@@ -2046,42 +2025,21 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               width="16"
                             >
                               <svg
-                                fill="none"
-                                viewBox="0 0 16 16"
+                                id="arrow-external"
+                                viewBox="0 0 20 20"
+                                x="0"
+                                xml:space="preserve"
                                 xmlns="http://www.w3.org/2000/svg"
+                                y="0"
                               >
-                                <g
-                                  id="Frame 1497"
-                                >
-                                  <g
-                                    id="Group"
-                                  >
-                                    <path
-                                      d="M15.2033 5.14566V0.801758H10.8594"
-                                      id="Vector"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                    <path
-                                      d="M15.1977 0.801758L5.625 10.3744"
-                                      id="Vector_2"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                    <path
-                                      d="M7.80432 3.19727H1.80463C1.30466 3.19727 0.804688 3.69724 0.804688 4.19721V14.1967C0.804688 14.6966 1.30466 15.1966 1.80463 15.1966H11.8041C12.3041 15.1966 12.804 14.6967 12.804 14.1967V8.197"
-                                      id="Vector_3"
-                                      stroke="currentColor"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="1.6"
-                                    />
-                                  </g>
-                                </g>
+                                <path
+                                  d="M18.999 6.43V1h-5.43m5.43 0L7.033 12.966M9.749 4h-7.5c-.625 0-1.25.625-1.25 1.25v12.5c0 .625.625 1.25 1.25 1.25h12.5c.625 0 1.25-.625 1.25-1.25v-7.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                />
                               </svg>
                             </div>
                           </div>
@@ -2120,7 +2078,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Addressing
@@ -2133,7 +2091,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               class="flex w-full"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 From
@@ -2208,7 +2166,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               class="mt-3 flex w-full md:mt-0"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 To
@@ -2306,7 +2264,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               data-testid="DetailLabel"
                             >
                               <div
-                                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                 data-testid="DetailLabelText"
                               >
                                 Transaction Type
@@ -2319,7 +2277,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Category
@@ -2364,7 +2322,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                             data-testid="DetailLabel"
                           >
                             <div
-                              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                               data-testid="DetailLabelText"
                             >
                               Transaction Summary
@@ -2380,7 +2338,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Amount
@@ -2414,7 +2372,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Fee
@@ -2438,7 +2396,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 class="flex w-full justify-between sm:justify-start"
                               >
                                 <div
-                                  class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                                  class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                                   data-testid="DetailLabelText"
                                 >
                                   Value
@@ -2480,7 +2438,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                           data-testid="DetailLabel"
                         >
                           <div
-                            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                             data-testid="DetailLabelText"
                           >
                             Confirmations

@@ -19,7 +19,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 		<div data-testid="TransactionType">
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText minWidth="md">{t("COMMON.CATEGORY")}</DetailLabelText>
+					<DetailLabelText>{t("COMMON.CATEGORY")}</DetailLabelText>
 					<Label color="neutral" size="xs">
 						{getLabel(transaction.type())}
 					</Label>
@@ -32,7 +32,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 						</div>
 
 						<div className="flex w-full justify-between sm:justify-start">
-							<DetailLabelText minWidth="md">{t("COMMON.DELEGATE")}</DetailLabelText>
+							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
 							<div> {transaction.username()} </div>
 						</div>
 					</>
@@ -45,7 +45,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 						</div>
 
 						<div className="flex w-full justify-between sm:justify-start">
-							<DetailLabelText minWidth="md">{t("COMMON.DELEGATE")}</DetailLabelText>
+							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
 							<div> {transaction.wallet().username()} </div>
 						</div>
 					</>
@@ -58,7 +58,7 @@ export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSign
 						</div>
 
 						<div className="flex w-full justify-between sm:justify-start">
-							<DetailLabelText minWidth="md">{t("COMMON.HASH")}</DetailLabelText>
+							<DetailLabelText>{t("COMMON.HASH")}</DetailLabelText>
 							<div ref={ref} className="flex w-full">
 								<TruncateMiddleDynamic
 									availableWidth={width}

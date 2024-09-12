@@ -474,7 +474,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
             data-testid="DetailLabel"
           >
             <div
-              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Transaction Type
@@ -487,7 +487,7 @@ exports[`Multisignature Detail Sent Step > should render sent step %s 1`] = `
               class="flex w-full justify-between sm:justify-start"
             >
               <div
-                class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
                 data-testid="DetailLabelText"
               >
                 Category

@@ -13,7 +13,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -26,7 +26,7 @@ exports[`TransferLedgerReview > should render 1`] = `
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             From
@@ -99,7 +99,7 @@ exports[`TransferLedgerReview > should render 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           <div
@@ -260,7 +260,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -273,7 +273,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             From
@@ -346,7 +346,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           <div
@@ -524,7 +524,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Addressing
@@ -537,7 +537,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
           class="flex w-full"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             From
@@ -610,7 +610,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Memo (SmartBridge)
@@ -634,7 +634,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           <div

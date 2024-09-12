@@ -13,7 +13,7 @@ exports[`TransactionType > should render delegate registration 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -26,7 +26,7 @@ exports[`TransactionType > should render delegate registration 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -50,7 +50,7 @@ exports[`TransactionType > should render delegate registration 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Delegate
@@ -80,7 +80,7 @@ exports[`TransactionType > should render delegate resignation 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -93,7 +93,7 @@ exports[`TransactionType > should render delegate resignation 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -117,7 +117,7 @@ exports[`TransactionType > should render delegate resignation 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Delegate
@@ -147,7 +147,7 @@ exports[`TransactionType > should render in lg 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -160,7 +160,7 @@ exports[`TransactionType > should render in lg 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -191,7 +191,7 @@ exports[`TransactionType > should render in md 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -204,7 +204,7 @@ exports[`TransactionType > should render in md 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -235,7 +235,7 @@ exports[`TransactionType > should render in sm 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -248,7 +248,7 @@ exports[`TransactionType > should render in sm 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -279,7 +279,7 @@ exports[`TransactionType > should render in xl 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -292,7 +292,7 @@ exports[`TransactionType > should render in xl 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -323,7 +323,7 @@ exports[`TransactionType > should render in xs 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -336,7 +336,7 @@ exports[`TransactionType > should render in xs 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -367,7 +367,7 @@ exports[`TransactionType > should render ipfs 1`] = `
         data-testid="DetailLabel"
       >
         <div
-          class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+          class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
           data-testid="DetailLabelText"
         >
           Transaction Type
@@ -380,7 +380,7 @@ exports[`TransactionType > should render ipfs 1`] = `
           class="flex w-full justify-between sm:justify-start"
         >
           <div
-            class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+            class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
             data-testid="DetailLabelText"
           >
             Category
@@ -405,7 +405,7 @@ exports[`TransactionType > should render ipfs 1`] = `
             class="flex w-full justify-between sm:justify-start"
           >
             <div
-              class="no-ligatures text-md font-semibold text-theme-secondary-700 dark:text-theme-secondary-500 min-w-24"
+              class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
               data-testid="DetailLabelText"
             >
               Hash

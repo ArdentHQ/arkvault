@@ -17,7 +17,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 		<DetailWrapper label={t("TRANSACTION.SUMMARY")}>
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText minWidth="md">{t("COMMON.AMOUNT")}</DetailLabelText>
+					<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
 					<AmountLabel
 						isNegative={transaction.isSent()}
 						value={transaction.amount()}
@@ -30,7 +30,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 				</div>
 
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText minWidth="md">{t("COMMON.FEE")}</DetailLabelText>
+					<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
 				</div>
 
@@ -39,7 +39,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 				</div>
 
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText minWidth="md">{t("COMMON.VALUE")}</DetailLabelText>
+					<DetailLabelText>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
 				</div>
 			</div>

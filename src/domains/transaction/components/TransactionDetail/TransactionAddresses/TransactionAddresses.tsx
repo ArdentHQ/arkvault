@@ -26,7 +26,7 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 			<div className="flex w-full">
-				<DetailLabelText minWidth="md">{t("COMMON.FROM")}</DetailLabelText>
+				<DetailLabelText>{t("COMMON.FROM")}</DetailLabelText>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
@@ -44,7 +44,7 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 
 			{recipients.map((recipient, index) => (
 				<div className="mt-3 flex w-full md:mt-0" key={index}>
-					<DetailLabelText minWidth="md">{t("COMMON.TO")}</DetailLabelText>
+					<DetailLabelText>{t("COMMON.TO")}</DetailLabelText>
 					<Address
 						key={index}
 						address={recipient.address}
