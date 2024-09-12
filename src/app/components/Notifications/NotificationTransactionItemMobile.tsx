@@ -27,7 +27,6 @@ export const NotificationTransactionItemMobile = ({
 							<TransactionRowSender
 								transaction={transaction}
 								profile={profile}
-								isCompact={true}
 								labelClass="pr-2"
 								showTransactionMode={false}
 							/>

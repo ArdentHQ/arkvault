@@ -255,7 +255,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <div
                       class="flex shrink-0 items-center justify-center"
@@ -457,7 +457,6 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                     </button>
                   </div>
                   <div
-                    class=""
                     data-testid="WalletListItem__more-button"
                   >
                     <div
@@ -530,7 +529,7 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <div
                       class="flex shrink-0 items-center justify-center"
@@ -696,7 +695,6 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                     </button>
                   </div>
                   <div
-                    class=""
                     data-testid="WalletListItem__more-button"
                   >
                     <div
@@ -1024,7 +1022,7 @@ exports[`WalletsList > should render 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <div
                       class="flex shrink-0 items-center justify-center"
@@ -1175,7 +1173,6 @@ exports[`WalletsList > should render 1`] = `
                     </button>
                   </div>
                   <div
-                    class=""
                     data-testid="WalletListItem__more-button"
                   >
                     <div
@@ -1248,7 +1245,7 @@ exports[`WalletsList > should render 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <div
                       class="flex shrink-0 items-center justify-center"
@@ -1399,7 +1396,6 @@ exports[`WalletsList > should render 1`] = `
                     </button>
                   </div>
                   <div
-                    class=""
                     data-testid="WalletListItem__more-button"
                   >
                     <div
@@ -1725,7 +1721,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <span
                       aria-busy="true"
@@ -1755,6 +1751,20 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     <span
                       class="react-loading-skeleton"
                       style="width: 20px; height: 20px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                   : 
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
                     >
                       ‌
                     </span>
@@ -1823,7 +1833,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -1839,7 +1849,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -1899,7 +1909,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <span
                       aria-busy="true"
@@ -1929,6 +1939,20 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     <span
                       class="react-loading-skeleton"
                       style="width: 20px; height: 20px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                   : 
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
                     >
                       ‌
                     </span>
@@ -1997,7 +2021,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -2013,7 +2037,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -2073,7 +2097,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l flex shrink-0"
                 >
                   <div
-                    class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+                    class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
                   >
                     <span
                       aria-busy="true"
@@ -2103,6 +2127,20 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     <span
                       class="react-loading-skeleton"
                       style="width: 20px; height: 20px; border-radius: 50%;"
+                    >
+                      ‌
+                    </span>
+                    <br />
+                  </span>
+                   : 
+                  <span
+                    aria-busy="true"
+                    aria-live="polite"
+                    class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                  >
+                    <span
+                      class="react-loading-skeleton"
+                      style="width: 44px; height: 44px; border-radius: 50%;"
                     >
                       ‌
                     </span>
@@ -2171,7 +2209,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                   class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 ml-3 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-3 text-theme-primary-600 hover:text-theme-primary-700"
                     data-testid="WalletHeader__send-button"
                     disabled=""
                     type="button"
@@ -2187,7 +2225,7 @@ exports[`WalletsList > should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >

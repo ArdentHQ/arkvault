@@ -14,7 +14,6 @@ interface DelegateVoteAmountProperties {
 	rowColor?: string;
 	isSelectedVote: boolean;
 	isSelectedUnvote: boolean;
-	isCompact?: boolean;
 	selectedWallet: Contracts.IReadWriteWallet;
 	selectedVotes: VoteDelegateProperties[];
 	selectedUnvotes: VoteDelegateProperties[];
@@ -32,7 +31,6 @@ export const DelegateVoteAmount = ({
 	selectedWallet,
 	isSelectedVote,
 	isSelectedUnvote,
-	isCompact,
 	selectedVotes,
 	selectedUnvotes,
 	delegateAddress,
@@ -269,7 +267,6 @@ export const DelegateVoteAmount = ({
 			className="w-68"
 			innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor)}
 			data-testid="DelegateVoteAmount"
-			isCompact={isCompact}
 		>
 			<div className="relative flex-1 px-3">
 				<InputCurrency
@@ -288,7 +285,7 @@ export const DelegateVoteAmount = ({
 					onChange={(amount) => onInputChange(+amount)}
 					ignoreContext
 					noShadow
-					isCompact={isCompact}
+					isCompact={true}
 					onFocus={() => setIsFocused(true)}
 					onBlur={() => setIsFocused(false)}
 				/>

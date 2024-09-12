@@ -18,6 +18,5 @@ export interface LedgerTabsProperties {
 
 export interface LedgerTableProperties extends ReturnType<typeof useLedgerScanner> {
 	network: Networks.Network;
-	isCompact: boolean;
 	scanMore: () => void;
 }

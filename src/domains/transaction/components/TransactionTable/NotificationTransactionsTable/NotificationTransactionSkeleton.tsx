@@ -5,10 +5,7 @@ import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSke
 import { NotificationTransactionsSkeletonProperties } from "./NotificationTransactionsTable.contracts";
 import { Table } from "@/app/components/Table";
 
-export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkeletonProperties> = ({
-	limit = 10,
-	isCompact,
-}) => {
+export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkeletonProperties> = ({ limit = 10 }) => {
 	const { t } = useTranslation();
 
 	const skeletonRows: any[] = Array.from({ length: limit }).fill({});
@@ -21,7 +18,7 @@ export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkele
 				</div>
 
 				<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={skeletonRows}>
-					{() => <NotificationTransactionSkeletonRow isCompact={isCompact} />}
+					{() => <NotificationTransactionSkeletonRow />}
 				</Table>
 			</div>
 		</div>

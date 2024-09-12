@@ -308,55 +308,6 @@ exports[`AppearanceForm > should render 1`] = `
           </div>
         </div>
       </li>
-      <li
-        class="flex w-full flex-col pt-6 sm:pb-6"
-        data-testid="list-divided-item__wrapper"
-      >
-        <div
-          class="flex justify-between items-center"
-          data-testid="list-divided-item__inner-wrapper"
-        >
-          <div
-            class="flex w-full flex-col space-y-2"
-          >
-            <div
-              class="flex items-center justify-between space-x-5"
-            >
-              <span
-                class="font-semibold text-theme-secondary-700 dark:text-theme-secondary-200"
-                data-testid="list-divided-item__label"
-              >
-                Expanded Tables
-              </span>
-              <span>
-                <label
-                  class="css-xklln0"
-                >
-                  <input
-                    class="css-1r71f0z toggle-input"
-                    data-testid="AppearanceToggle__toggle-useExpandedTables"
-                    name="useExpandedTables"
-                    type="checkbox"
-                  />
-                  <div
-                    class="css-d8rk4r toggle-handle"
-                  >
-                    <span
-                      class="css-st84t0"
-                    />
-                  </div>
-                </label>
-              </span>
-            </div>
-            <span
-              class="text-sm font-medium text-theme-secondary-500 dark:text-theme-secondary-700"
-              data-testid="list-divided-item__label--description"
-            >
-              Increases spacing of table items.
-            </span>
-          </div>
-        </div>
-      </li>
     </ul>
     <div
       class="css-145pihz"

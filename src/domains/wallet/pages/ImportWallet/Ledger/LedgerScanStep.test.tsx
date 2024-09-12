@@ -336,15 +336,11 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should render compact table", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		render(<Component />);
+		renderResponsive(<Component />, "md");
 
 		expect(screen.getAllByRole("row")).toHaveLength(6);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
 	it("should update the toast messages if already added", async () => {

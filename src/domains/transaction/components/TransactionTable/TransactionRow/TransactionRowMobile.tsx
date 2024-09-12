@@ -62,7 +62,6 @@ export const TransactionRowMobile = memo(
 							<TransactionRowSender
 								transaction={transaction}
 								profile={profile}
-								isCompact={true}
 								showTransactionMode={false}
 							/>
 
@@ -73,7 +72,7 @@ export const TransactionRowMobile = memo(
 					<RowWrapper>
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 						<ResponsiveAddressWrapper innerClassName="flex-row-reverse gap-2">
-							<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
+							<TransactionRowRecipient transaction={transaction} profile={profile} />
 						</ResponsiveAddressWrapper>
 					</RowWrapper>
 

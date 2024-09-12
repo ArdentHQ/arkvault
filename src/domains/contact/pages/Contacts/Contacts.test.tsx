@@ -111,22 +111,6 @@ describe("Contacts", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render compact on md screen if uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = renderResponsiveComponent("md");
-
-		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
-		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
-		await expect(screen.findByTestId("ContactList")).resolves.toBeInTheDocument();
-
-		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
 	it("should render responsive with contacts", async () => {
 		const { asFragment } = renderResponsiveComponent("xs");
 

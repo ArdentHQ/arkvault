@@ -159,7 +159,6 @@ export const ExchangeTransactionsRowMobile: React.VFC<ExchangeTransactionsRowMob
 							<Divider type="vertical" />
 							<TableRemoveButton
 								className="cursor-pointer !p-0"
-								isCompact={true}
 								onClick={handleRemove}
 								data-testid="TableRow__mobile-remove-button"
 							/>

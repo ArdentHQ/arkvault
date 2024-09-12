@@ -79,7 +79,6 @@ export const SignedTransactionRowMobile = ({
 								className="m-0 border-transparent sm:border-theme-secondary-300 sm:dark:border-theme-secondary-800"
 							/>
 							<SignButton
-								isCompact={true}
 								canBeSigned={canBeSigned}
 								isAwaitingFinalSignature={isAwaitingFinalSignature}
 								isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}
@@ -99,7 +98,6 @@ export const SignedTransactionRowMobile = ({
 							>
 								<div>
 									<TableRemoveButton
-										isCompact={true}
 										isDisabled={!canBeDeleted}
 										onClick={handleRemove}
 										className="m-0 p-0"

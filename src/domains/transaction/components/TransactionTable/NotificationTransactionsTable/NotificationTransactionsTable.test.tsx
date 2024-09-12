@@ -54,21 +54,7 @@ describe("NotificationsTransactionTable", () => {
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 	});
 
-	it("should render compact skeleton", () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = render(
-			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading />,
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
 	it("should render skeleton for small screens", () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
 		const { asFragment } = renderResponsive(
 			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading />,
 			"xs",
@@ -77,8 +63,6 @@ describe("NotificationsTransactionTable", () => {
 		expect(screen.getAllByTestId("TransactionRow__skeleton__mobile")).toHaveLength(10);
 
 		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
 	it("should render loading state", () => {

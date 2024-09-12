@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TransactionRowAmount } from "./TransactionRowAmount";
@@ -23,14 +23,9 @@ export const TransactionRow = memo(
 		profile,
 		...properties
 	}: TransactionRowProperties) => {
-		const { isXs, isSm, isMd } = useBreakpoint();
+		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 		const timeFormat = useTimeFormat();
-
-		const isCompact = useMemo(
-			() => !profile.appearance().get("useExpandedTables") || isSm || isXs || isMd,
-			[profile, isMd, isSm, isXs],
-		);
 
 		if (isXs || isSm) {
 			return (
@@ -45,12 +40,12 @@ export const TransactionRow = memo(
 		}
 
 		if (isLoading) {
-			return <TransactionRowSkeleton isCompact={isCompact} />;
+			return <TransactionRowSkeleton />;
 		}
 
 		return (
 			<TableRow onClick={onClick} className={className} {...properties}>
-				<TableCell variant="start" isCompact={isCompact}>
+				<TableCell variant="start">
 					<Link
 						to={transaction.explorerLink()}
 						tooltip={transaction.id()}
@@ -61,34 +56,29 @@ export const TransactionRow = memo(
 					</Link>
 				</TableCell>
 
-				<TableCell
-					innerClassName="text-theme-secondary-text"
-					isCompact={isCompact}
-					className="table-cell md:hidden lg:table-cell"
-				>
+				<TableCell innerClassName="text-theme-secondary-text" className="table-cell md:hidden lg:table-cell">
 					<span data-testid="TransactionRow__timestamp" className="whitespace-nowrap">
 						{transaction.timestamp()!.format(timeFormat)}
 					</span>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowSender transaction={transaction} profile={profile} isCompact={isCompact} />
+				<TableCell innerClassName="space-x-4">
+					<TransactionRowSender transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-					<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+				<TableCell innerClassName="space-x-4">
+					<TransactionRowRecipient transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell innerClassName="justify-end" isCompact={isCompact}>
+				<TableCell innerClassName="justify-end">
 					<TransactionRowAmount
 						transaction={transaction}
 						exchangeCurrency={exchangeCurrency}
 						exchangeTooltip
-						isCompact={isCompact}
 					/>
 				</TableCell>
 
-				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end" isCompact={isCompact}>
+				<TableCell variant="end" className="hidden xl:block" innerClassName="justify-end">
 					{!exchangeCurrency || transaction.wallet().network().isTest() ? (
 						<span
 							data-testid="TransactionRow__currency"

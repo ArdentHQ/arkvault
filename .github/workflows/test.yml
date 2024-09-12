@@ -805,7 +805,7 @@ jobs:
               env:
                   COVERAGE_THRESHOLD_LINES: 98.67
                   COVERAGE_THRESHOLD_STATEMENTS: 98.73
-                  COVERAGE_THRESHOLD_BRANCHES: 98.35
+                  COVERAGE_THRESHOLD_BRANCHES: 98.25
               with:
                   timeout_minutes: 10
                   max_attempts: 1

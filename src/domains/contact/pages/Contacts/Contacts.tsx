@@ -22,7 +22,7 @@ export const Contacts: FC = () => {
 
 	const history = useHistory();
 
-	const { isMdAndAbove, isLgAndAbove } = useBreakpoint();
+	const { isMdAndAbove } = useBreakpoint();
 
 	const activeProfile = useActiveProfile();
 
@@ -123,11 +123,6 @@ export const Contacts: FC = () => {
 		[t],
 	);
 
-	const useCompactTables = useMemo(
-		() => !activeProfile.appearance().get("useExpandedTables") || !isLgAndAbove,
-		[activeProfile, isLgAndAbove],
-	);
-
 	const renderTableRow = useCallback(
 		(contact: Contracts.IContact) => (
 			<ContactListItem
@@ -137,10 +132,9 @@ export const Contacts: FC = () => {
 				availableNetworks={availableNetworks}
 				onSend={handleSend}
 				onAction={(action) => handleContactAction(action, contact)}
-				isCompact={useCompactTables}
 			/>
 		),
-		[menuOptions, availableNetworks, handleSend, useCompactTables, handleContactAction],
+		[menuOptions, availableNetworks, handleSend, handleContactAction],
 	);
 
 	const renderContacts = () => {
