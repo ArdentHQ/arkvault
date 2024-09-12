@@ -38,7 +38,6 @@ import ExtensionWweDark from "./extension-wwe-dark.svg?react";
 import ExtensionWweLight from "./extension-wwe-light.svg?react";
 import ExtensionJson from "./extension-json.svg?react";
 import ExtensionCsv from "./extension-csv.svg?react";
-import External from "./external.svg?react";
 import Eye from "./eye.svg?react";
 import EyeSlash from "./eye-slash.svg?react";
 import File from "./file.svg?react";
@@ -144,7 +143,6 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	ExtensionJson,
 	ExtensionWweDark,
 	ExtensionWweLight,
-	External,
 	Eye,
 	EyeSlash,
 	FTX,
