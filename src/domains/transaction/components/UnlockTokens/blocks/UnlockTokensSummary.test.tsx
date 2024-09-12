@@ -3,12 +3,13 @@ import { Route } from "react-router-dom";
 
 import { UnlockTokensSummary } from "./UnlockTokensSummary";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { getDefaultProfileId, render } from "@/utils/testing-library";
+import { getDefaultProfileId, render, env } from "@/utils/testing-library";
 
 const fixtureProfileId = getDefaultProfileId();
 
 describe("UnlockTokensSummary", () => {
-	it("should render", () => {
+	it("should render", async () => {
+		const profile = await env.profiles().create("empty");
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<UnlockTokensSummary
@@ -26,6 +27,7 @@ describe("UnlockTokensSummary", () => {
 								isTest: () => true,
 								ticker: () => "DARK",
 							}),
+							profile: () => profile,
 						}),
 					}}
 				/>

@@ -961,7 +961,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <span>
                           52
@@ -991,7 +991,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent h-11 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <div>
                           <div
@@ -1029,7 +1029,7 @@ exports[`Votes > should filter current delegates 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 bg-theme-primary-50 dark:bg-theme-background dark:border-theme-primary-600"
                       >
                         <a
                           class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
@@ -2243,7 +2243,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <span>
                           2
@@ -2273,7 +2273,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div>
                           <div
@@ -2315,7 +2315,7 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
@@ -7523,7 +7523,7 @@ exports[`Votes > should select a delegate 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <span>
                           2
@@ -7553,7 +7553,7 @@ exports[`Votes > should select a delegate 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div>
                           <div
@@ -7595,7 +7595,7 @@ exports[`Votes > should select a delegate 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"
@@ -13515,7 +13515,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   >
                     <td>
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 rounded-l ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <span>
                           2
@@ -13545,7 +13545,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <div>
                           <div
@@ -13587,7 +13587,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                       class="hidden sm:table-cell"
                     >
                       <div
-                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400 h-11"
+                        class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 bg-theme-danger-50 dark:bg-theme-background dark:border-theme-danger-400"
                       >
                         <a
                           class="ring-focus group inline-block w-24 truncate md:w-auto [&_svg]:text-theme-secondary-500 dark:[&_svg]:text-theme-secondary-700 css-7nwwrh"

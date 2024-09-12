@@ -193,14 +193,14 @@ exports[`Notifications > should render in xs 3`] = `
             class="w-3/5"
           >
             <div
-              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
             >
               <div
-                class="flex items-center -space-x-1"
+                class="flex items-center space-x-2"
                 data-testid="TransactionRowMode"
               >
-                <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
+                <span
+                  class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -228,9 +228,9 @@ exports[`Notifications > should render in xs 3`] = `
                       </g>
                     </svg>
                   </div>
-                </div>
+                </span>
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -277,15 +277,15 @@ exports[`Notifications > should render in xs 3`] = `
           </td>
           <td>
             <div
-              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
             >
               <div
-                class="rounded px-1.5 css-givenh"
+                class="rounded px-1.5 css-1jspzfx"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -317,14 +317,14 @@ exports[`Notifications > should render in xs 4`] = `
             class="w-3/5"
           >
             <div
-              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
             >
               <div
-                class="flex items-center -space-x-1"
+                class="flex items-center space-x-2"
                 data-testid="TransactionRowMode"
               >
-                <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
+                <span
+                  class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -352,9 +352,9 @@ exports[`Notifications > should render in xs 4`] = `
                       </g>
                     </svg>
                   </div>
-                </div>
+                </span>
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -401,15 +401,15 @@ exports[`Notifications > should render in xs 4`] = `
           </td>
           <td>
             <div
-              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
             >
               <div
-                class="rounded px-1.5 css-givenh"
+                class="rounded px-1.5 css-1jspzfx"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -441,14 +441,14 @@ exports[`Notifications > should render in xs 5`] = `
             class="w-3/5"
           >
             <div
-              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
             >
               <div
-                class="flex items-center -space-x-1"
+                class="flex items-center space-x-2"
                 data-testid="TransactionRowMode"
               >
-                <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
+                <span
+                  class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -476,9 +476,9 @@ exports[`Notifications > should render in xs 5`] = `
                       </g>
                     </svg>
                   </div>
-                </div>
+                </span>
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -525,15 +525,15 @@ exports[`Notifications > should render in xs 5`] = `
           </td>
           <td>
             <div
-              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
             >
               <div
-                class="rounded px-1.5 css-givenh"
+                class="rounded px-1.5 css-1jspzfx"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap text-sm"
@@ -565,14 +565,14 @@ exports[`Notifications > should render notification item 1`] = `
             class="w-3/5"
           >
             <div
-              class="items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-6 rounded-l flex space-x-3"
+              class="items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l flex space-x-3"
             >
               <div
-                class="flex items-center -space-x-1"
+                class="flex items-center space-x-2"
                 data-testid="TransactionRowMode"
               >
-                <div
-                  class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-success-200 text-theme-success-600 dark:border-theme-success-600 ring-theme-background duration-100 css-1nqcsx"
+                <span
+                  class="flex h-5 w-5 items-center border-0 border-theme-success-200 text-theme-success-600 dark:border-theme-success-600"
                 >
                   <div
                     class="css-1i4b0eq"
@@ -600,9 +600,9 @@ exports[`Notifications > should render notification item 1`] = `
                       </g>
                     </svg>
                   </div>
-                </div>
+                </span>
                 <div
-                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+                  class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
                   data-testid="Avatar"
                 >
                   <div
@@ -649,15 +649,15 @@ exports[`Notifications > should render notification item 1`] = `
           </td>
           <td>
             <div
-              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-6 rounded-r justify-end"
+              class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
             >
               <div
-                class="rounded px-1.5 css-givenh"
+                class="rounded px-1.5 css-1jspzfx"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
                 <div
-                  class="flex space-x-1 items-stretch"
+                  class="flex space-x-1 items-center"
                 >
                   <span
                     class="whitespace-nowrap text-sm"

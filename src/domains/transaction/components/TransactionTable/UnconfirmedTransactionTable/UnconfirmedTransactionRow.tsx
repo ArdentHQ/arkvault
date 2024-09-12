@@ -17,7 +17,6 @@ type Properties = {
 export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties }: Properties) => {
 	const { t } = useTranslation();
 	const { isXs, isSm } = useBreakpoint();
-	const isCompact = !profile.appearance().get("useExpandedTables");
 
 	if (isXs || isSm) {
 		return (
@@ -27,7 +26,7 @@ export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties 
 						<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
 
 						<div className="flex w-0 flex-1 flex-row-reverse items-center justify-end space-x-4 overflow-hidden">
-							<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={true} />
+							<TransactionRowRecipient transaction={transaction} profile={profile} />
 						</div>
 					</RowWrapper>
 
@@ -50,20 +49,16 @@ export const UnconfirmedTransactionRow = ({ transaction, profile, ...properties 
 
 	return (
 		<TableRow {...properties}>
-			<TableCell
-				variant="start"
-				innerClassName="space-x-3 text-theme-secondary-500 whitespace-nowrap"
-				isCompact={isCompact}
-			>
+			<TableCell variant="start" innerClassName="space-x-3 text-theme-secondary-500 whitespace-nowrap">
 				<TimeAgo date={transaction.timestamp()?.toString() as string} />
 			</TableCell>
 
-			<TableCell innerClassName="space-x-4" isCompact={isCompact}>
-				<TransactionRowRecipient transaction={transaction} profile={profile} isCompact={isCompact} />
+			<TableCell innerClassName="space-x-4">
+				<TransactionRowRecipient transaction={transaction} profile={profile} />
 			</TableCell>
 
-			<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
-				<TransactionRowAmount transaction={transaction} isCompact={isCompact} />
+			<TableCell variant="end" innerClassName="justify-end">
+				<TransactionRowAmount transaction={transaction} />
 			</TableCell>
 		</TableRow>
 	);

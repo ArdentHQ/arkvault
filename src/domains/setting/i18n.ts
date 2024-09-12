@@ -10,10 +10,6 @@ export const translations = {
 				DESCRIPTION: "Choose a color for buttons and other wallet features.",
 				TITLE: "Accent Color",
 			},
-			EXPANDED_TABLES: {
-				DESCRIPTION: "Increases spacing of table items.",
-				TITLE: "Expanded Tables",
-			},
 			LATEST_TRANSACTIONS: {
 				DESCRIPTION: "Enables latest transactions on Portfolio page.",
 				TITLE: "Portfolio Latest Transactions",

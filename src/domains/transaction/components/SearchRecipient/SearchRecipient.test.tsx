@@ -108,32 +108,6 @@ describe("SearchRecipient", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render with selected address when no compact", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const onAction = vi.fn();
-
-		const { asFragment } = render(
-			<SearchRecipient
-				profile={profile}
-				isOpen={true}
-				recipients={recipients}
-				selectedAddress="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-				onAction={onAction}
-			/>,
-		);
-
-		expect(firstAddress()).toBeInTheDocument();
-
-		await userEvent.click(firstAddress());
-
-		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
 	it("should render with no alias if the recipient address is undefined", () => {
 		const onAction = vi.fn();
 

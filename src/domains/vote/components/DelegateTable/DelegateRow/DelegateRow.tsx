@@ -21,7 +21,6 @@ export interface DelegateRowProperties {
 	voted?: Contracts.VoteRegistryItem;
 	isVoteDisabled?: boolean;
 	isLoading?: boolean;
-	isCompact?: boolean;
 	selectedWallet: Contracts.IReadWriteWallet;
 	availableBalance: number;
 	setAvailableBalance: (balance: number) => void;
@@ -38,7 +37,6 @@ export const useDelegateRow = ({
 	selectedUnvotes,
 	selectedVotes,
 	isVoteDisabled = false,
-	isCompact,
 	selectedWallet,
 	toggleUnvotesSelected,
 	toggleVotesSelected,
@@ -105,7 +103,6 @@ export const useDelegateRow = ({
 					index={index}
 					variant="warning"
 					compactClassName="text-theme-warning-700 hover:text-theme-warning-800"
-					isCompact={isCompact}
 					onClick={() => {
 						if (delegateExistsInVotes(selectedVotes, delegate?.address?.())) {
 							toggleVotesSelected?.(delegate.address());
@@ -131,7 +128,6 @@ export const useDelegateRow = ({
 							text-theme-danger-400 hover:text-theme-danger-500
 							dark:text-white dark:sm:text-theme-danger-400 dark:sm:hover:text-theme-danger-500
 					`}
-						isCompact={isCompact}
 						onClick={() => toggleUnvotesSelected?.(delegate.address())}
 					>
 						{t("COMMON.UNSELECTED")}
@@ -149,7 +145,6 @@ export const useDelegateRow = ({
 						text-theme-primary-600 hover:text-theme-primary-700
 						dark:text-white dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 					`}
-					isCompact={isCompact}
 					onClick={() => toggleUnvotesSelected?.(delegate.address())}
 				>
 					{t("COMMON.CURRENT")}
@@ -168,7 +163,6 @@ export const useDelegateRow = ({
 						text-black
 						dark:text-theme-secondary-800 dark:sm:text-theme-black
 					`}
-					isCompact={isCompact}
 				>
 					{t("COMMON.SELECT")}
 				</DelegateVoteButton>
@@ -186,7 +180,6 @@ export const useDelegateRow = ({
 						text-theme-primary-reverse-600 hover:text-theme-primary-reverse-700
 						dark:text-white dark:sm:text-theme-primary-reverse-600 dark:sm:hover:text-theme-primary-reverse-700
 					`}
-					isCompact={isCompact}
 					onClick={() => toggleVotesSelected?.(delegate.address())}
 				>
 					{t("COMMON.SELECTED")}
@@ -204,7 +197,6 @@ export const useDelegateRow = ({
 					text-theme-primary-600 hover:text-theme-primary-700
 					dark:text-theme-secondary-200 dark:sm:text-theme-primary-600 dark:sm:hover:text-theme-primary-700
 				`}
-				isCompact={isCompact}
 				onClick={() => toggleVotesSelected?.(delegate.address())}
 			>
 				{t("COMMON.SELECT")}
@@ -231,7 +223,6 @@ export const DelegateRow = ({
 	selectedVotes,
 	isVoteDisabled = false,
 	isLoading = false,
-	isCompact,
 	selectedWallet,
 	availableBalance,
 	setAvailableBalance,
@@ -243,7 +234,6 @@ export const DelegateRow = ({
 	const { requiresStakeAmount, renderButton, isSelectedUnvote, rowColor, isSelectedVote, isActive } = useDelegateRow({
 		delegate,
 		index,
-		isCompact,
 		isVoteDisabled,
 		selectedUnvotes,
 		selectedVotes,
@@ -254,7 +244,7 @@ export const DelegateRow = ({
 	});
 
 	if (isLoading) {
-		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} isCompact={isCompact} />;
+		return <DelegateRowSkeleton requiresStakeAmount={requiresStakeAmount} />;
 	}
 
 	return (
@@ -264,11 +254,9 @@ export const DelegateRow = ({
 		>
 			<TableCell
 				variant="start"
-				isCompact={isCompact}
 				innerClassName={cn(
-					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent",
+					"ml-3 pl-3 text-sm leading-[17px] font-semibold border-2 border-r-0 border-transparent h-11",
 					rowColor,
-					{ "h-11": isCompact },
 				)}
 			>
 				<span>{delegate.rank()}</span>
@@ -276,12 +264,9 @@ export const DelegateRow = ({
 
 			<TableCell
 				innerClassName={cn(
-					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
-					{ "h-11 space-x-3": isCompact },
-					{ "space-x-4": !isCompact },
+					"font-semibold border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11 space-x-3",
 					rowColor,
 				)}
-				isCompact={isCompact}
 			>
 				<div className="relative h-[17px] grow">
 					<div className="absolute flex w-full items-center">
@@ -292,10 +277,7 @@ export const DelegateRow = ({
 
 			<TableCell
 				className="hidden sm:table-cell"
-				isCompact={isCompact}
-				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent", rowColor, {
-					"h-11": isCompact,
-				})}
+				innerClassName={cn("justify-center border-t-2 border-b-2 border-transparent h-11", rowColor)}
 			>
 				{isActive ? (
 					<Tooltip content={t("VOTE.DELEGATE_TABLE.TOOLTIP.DELEGATE_IN_FORGING_POSITION")}>
@@ -315,13 +297,9 @@ export const DelegateRow = ({
 			<TableCell
 				className="hidden sm:table-cell"
 				innerClassName={cn(
-					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px]",
+					"justify-center border-t-2 border-b-2 border-transparent text-sm leading-[17px] h-11",
 					rowColor,
-					{
-						"h-11": isCompact,
-					},
 				)}
-				isCompact={isCompact}
 			>
 				<Link
 					to={delegate.explorerLink()}
@@ -346,7 +324,6 @@ export const DelegateRow = ({
 					setAvailableBalance={setAvailableBalance}
 					toggleUnvotesSelected={toggleUnvotesSelected}
 					toggleVotesSelected={toggleVotesSelected}
-					isCompact={isCompact}
 					rowColor={rowColor}
 				/>
 			)}
@@ -355,7 +332,6 @@ export const DelegateRow = ({
 				variant="end"
 				className="w-30 min-w-32"
 				innerClassName={cn("justify-end pr-3 mr-3 border-2 border-l-0 border-transparent", rowColor)}
-				isCompact={isCompact}
 			>
 				<div className="-mr-0.5 leading-[17px]">{renderButton()}</div>
 			</TableCell>

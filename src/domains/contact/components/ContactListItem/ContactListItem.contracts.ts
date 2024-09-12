@@ -12,7 +12,6 @@ export interface ContactListItemProperties {
 	options: ContactListItemOption[];
 	onAction: (action: ContactListItemOption) => void;
 	onSend: (address: Contracts.IContactAddress) => void;
-	isCompact?: boolean;
 	availableNetworks: AvailableNetwork[];
 }
 

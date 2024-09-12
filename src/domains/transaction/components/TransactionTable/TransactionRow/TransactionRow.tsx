@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TransactionRowSkeleton } from "./TransactionRowSkeleton";
@@ -28,15 +28,10 @@ export const TransactionRow = memo(
 		convertedBalance,
 		...properties
 	}: TransactionRowProperties) => {
-		const { isXs, isSm, isMd } = useBreakpoint();
 		const { getLabel } = useTransactionTypes();
+		const { isXs, isSm } = useBreakpoint();
 		const { t } = useTranslation();
 		const timeStamp = transaction?.timestamp ? transaction.timestamp() : undefined;
-
-		const isCompact = useMemo(
-			() => !profile.appearance().get("useExpandedTables") || isSm || isXs || isMd,
-			[profile, isMd, isSm, isXs],
-		);
 
 		if (isXs || isSm) {
 			return (
@@ -53,12 +48,12 @@ export const TransactionRow = memo(
 		}
 
 		if (isLoading) {
-			return <TransactionRowSkeleton isCompact={isCompact} />;
+			return <TransactionRowSkeleton />;
 		}
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				<TableCell variant="start" isCompact={isCompact} innerClassName="items-start my-0 py-3 xl:min-h-0">
+				<TableCell variant="start"  innerClassName="items-start my-0 py-3 xl:min-h-0">
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link
 							to={transaction.explorerLink()}
@@ -88,7 +83,7 @@ export const TransactionRow = memo(
 				<TableCell
 					className="hidden lg:table-cell"
 					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
-					isCompact={isCompact}
+					
 					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
@@ -98,17 +93,17 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0 my-0 py-3">
+				<TableCell  innerClassName="items-start xl:min-h-0 my-0 py-3">
 					<Label color="secondary" size="xs" noBorder className="rounded p-1" data-testid="TransactionRow__type">
 						{getLabel(transaction.type())}
 					</Label>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" isCompact={isCompact}>
+				<TableCell innerClassName="space-x-4" >
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell isCompact={isCompact} innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
+				<TableCell  innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
 						<AmountLabel
 							value={transaction.amount() + transaction.fee()}
@@ -123,7 +118,7 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell
-					isCompact={isCompact}
+					
 					className="hidden lg:table-cell"
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
 				>

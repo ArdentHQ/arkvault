@@ -16,10 +16,10 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -56,13 +56,13 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -109,7 +109,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -132,7 +132,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -147,7 +147,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -158,11 +158,11 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 disabled=""
                 type="button"
@@ -175,7 +175,6 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -185,7 +184,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -561,10 +560,10 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -601,13 +600,13 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -654,7 +653,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -677,7 +676,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -692,7 +691,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -703,11 +702,11 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
@@ -719,7 +718,6 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -729,7 +727,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -942,7 +940,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-5"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -1097,7 +1095,6 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               </button>
             </div>
             <div
-              class=""
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -1729,10 +1726,10 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -1769,13 +1766,13 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -1822,7 +1819,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -1845,7 +1842,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -1860,7 +1857,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -1871,11 +1868,11 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
@@ -1887,7 +1884,6 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -1897,7 +1893,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -2107,10 +2103,10 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2147,13 +2143,13 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -2200,7 +2196,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2262,7 +2258,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               aria-busy="true"
@@ -2284,7 +2280,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2295,11 +2291,11 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 disabled=""
                 type="button"
@@ -2312,7 +2308,6 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -2322,7 +2317,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:bg-theme-secondary-200 disabled:text-theme-secondary-400 dark:disabled:bg-theme-secondary-800 dark:disabled:text-theme-secondary-700 flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded disabled:text-theme-secondary-400 dark:disabled:text-theme-secondary-700 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     disabled=""
                     type="button"
                   >
@@ -2533,10 +2528,10 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2573,13 +2568,13 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -2626,7 +2621,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -2649,7 +2644,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -2664,7 +2659,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -2675,11 +2670,11 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
@@ -2691,7 +2686,6 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -2701,7 +2695,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div
@@ -2911,10 +2905,10 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Starred"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pl-2 -ml-2 rounded-l space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-2 -ml-2 rounded-l space-x-3"
           >
             <div
-              class="flex items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800 h-11"
+              class="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800"
             >
               <div
                 class="flex shrink-0 items-center justify-center"
@@ -2951,13 +2945,13 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="TableCell_Wallet"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 -ml-3 space-x-4"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 -ml-3 space-x-3"
           >
             <div
               class="flex shrink-0 items-center"
             >
               <div
-                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-19i3ei6"
+                class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1ixj94m"
                 data-testid="Avatar"
               >
                 <div
@@ -3004,7 +2998,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-center text-sm font-bold text-center align-middle"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-center text-sm font-bold text-center align-middle"
           >
             <div
               class="inline-flex items-center space-x-1"
@@ -3027,7 +3021,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 font-semibold justify-end"
           >
             <span
               class="whitespace-nowrap"
@@ -3042,7 +3036,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
           data-testid="CurrencyCell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 justify-end"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
           >
             <span
               class="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700"
@@ -3053,11 +3047,11 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-17.5 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
+            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-2 -mr-2 rounded-r justify-end text-theme-secondary-text"
           >
             <div>
               <button
-                class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white my-auto"
+                class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none text-theme-primary-600 hover:text-theme-primary-700"
                 data-testid="WalletListItem__send-button"
                 type="button"
               >
@@ -3069,7 +3063,6 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               </button>
             </div>
             <div
-              class="ml-3"
               data-testid="WalletListItem__more-button"
             >
               <div
@@ -3079,7 +3072,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
                   data-testid="dropdown__toggle"
                 >
                   <button
-                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 hover:text-white flex-1 bg-theme-primary-600 text-white hover:bg-theme-primary-700"
+                    class="p-3 relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded border-none -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                     type="button"
                   >
                     <div

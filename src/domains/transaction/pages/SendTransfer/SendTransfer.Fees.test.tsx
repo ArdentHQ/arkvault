@@ -30,11 +30,18 @@ import transactionFeesFixture from "@/tests/fixtures/coins/ark/mainnet/transacti
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	vi.spyOn(wallet.transaction(), "transaction").mockReturnValue({
 		amount: () => +transactionFixture.data.amount / 1e8,
+		convertedAmount: () => +transactionFixture.data.amount / 1e8,
 		data: () => ({ data: () => transactionFixture.data }),
 		explorerLink: () => `https://test.arkscan.io/transaction/${transactionFixture.data.id}`,
 		fee: () => +transactionFixture.data.fee / 1e8,
 		id: () => transactionFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => false,
+		isSent: () => true,
+		isVote: () => false,
 		recipient: () => transactionFixture.data.recipient,
 		recipients: () => [
 			{

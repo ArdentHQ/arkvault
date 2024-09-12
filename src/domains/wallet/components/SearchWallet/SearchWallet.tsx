@@ -1,4 +1,3 @@
-import cn from "classnames";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
@@ -30,7 +29,6 @@ const SearchWalletListItem = ({
 	showConvertedValue,
 	onAction,
 	selectedAddress,
-	isCompact,
 }: SearchWalletListItemProperties) => {
 	const { t } = useTranslation();
 
@@ -39,10 +37,10 @@ const SearchWalletListItem = ({
 			return (
 				<Button
 					data-testid={`SearchWalletListItem__selected-${index}`}
-					size={isCompact ? "icon" : undefined}
-					variant={isCompact ? "transparent" : "reverse"}
+					size="icon"
+					variant="transparent"
 					onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
-					className={cn("text-theme-primary-reverse-600", { "-mr-3": isCompact })}
+					className="-mr-3 text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -55,9 +53,9 @@ const SearchWalletListItem = ({
 					<Button
 						data-testid={`SearchWalletListItem__select-${index}`}
 						disabled={disabled || !isLedgerWalletCompatible(wallet)}
-						size={isCompact ? "icon" : undefined}
-						variant={isCompact ? "transparent" : "secondary"}
-						className={cn("text-theme-primary-600", { "-mr-3": isCompact })}
+						size="icon"
+						variant="transparent"
+						className="-mr-3 text-theme-primary-600"
 						onClick={() => onAction({ address: wallet.address(), name: alias, network: wallet.network() })}
 					>
 						{t("COMMON.SELECT")}
@@ -69,25 +67,21 @@ const SearchWalletListItem = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4" className="w-full">
+			<TableCell variant="start" innerClassName="space-x-4" className="w-full">
 				<Address walletName={alias} address={wallet.address()} truncateOnTable />
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="font-semibold justify-end">
+			<TableCell innerClassName="font-semibold justify-end">
 				<Amount value={wallet.balance()} ticker={wallet.currency()} />
 			</TableCell>
 
 			{showConvertedValue && (
-				<TableCell
-					isCompact={isCompact}
-					innerClassName="text-theme-secondary-text justify-end"
-					className="hidden xl:table-cell"
-				>
+				<TableCell innerClassName="text-theme-secondary-text justify-end" className="hidden xl:table-cell">
 					<Amount value={wallet.convertedBalance()} ticker={exchangeCurrency} />
 				</TableCell>
 			)}
 
-			<TableCell isCompact={isCompact} variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				{renderButton()}
 			</TableCell>
 		</TableRow>
@@ -113,7 +107,6 @@ const SearchSenderWalletItemResponsive = ({ alias, wallet, onAction, selectedAdd
 						<Balance
 							className="text-sm text-white"
 							wallet={wallet}
-							isCompact={false}
 							isSynced={isSynced}
 							isLargeScreen={false}
 						/>
@@ -153,12 +146,8 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 
 	const { t } = useTranslation();
 
-	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
+	const { isXs, isSm } = useBreakpoint();
 
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
 	const columns = useMemo<Column<Contracts.IReadWriteWallet>[]>(() => {
@@ -271,21 +260,11 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 					showNetwork={showNetwork}
 					onAction={onSelectWallet}
 					selectedAddress={selectedAddress}
-					isCompact={isCompact}
 					profile={profile}
 				/>
 			);
 		},
-		[
-			profile,
-			disableAction,
-			showConvertedValue,
-			showNetwork,
-			onSelectWallet,
-			selectedAddress,
-			isCompact,
-			useResponsive,
-		],
+		[profile, disableAction, showConvertedValue, showNetwork, onSelectWallet, selectedAddress, useResponsive],
 	);
 
 	return (

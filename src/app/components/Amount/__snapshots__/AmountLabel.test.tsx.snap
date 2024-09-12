@@ -178,7 +178,7 @@ exports[`AmountLabel > should render with hint 1`] = `
 exports[`AmountLabel > should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="rounded px-1.5 css-6qumvg"
+    class="rounded px-1.5 css-vy12ck"
     color="neutral"
     data-testid="AmountLabel__wrapper"
   >

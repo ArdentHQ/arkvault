@@ -201,51 +201,6 @@ describe("WalletDetails", () => {
 		vi.restoreAllMocks();
 	});
 
-	it("should render as not compact if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		mockPendingTransfers(wallet);
-
-		await renderPage();
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
-
-		await expect(screen.findByTestId("TableRemoveButton")).resolves.toBeVisible();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-
-		vi.restoreAllMocks();
-	});
-
-	it("should render as compact on md screen even if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		mockPendingTransfers(wallet);
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/wallets/:walletId">
-				<WalletDetails />,
-			</Route>,
-			"md",
-			{
-				history,
-				route: walletUrl,
-			},
-		);
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
-
-		await expect(screen.findByTestId("TableRemoveButton--compact")).resolves.toBeVisible();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-
-		vi.restoreAllMocks();
-	});
-
 	it("should not render wallet vote when the network does not support votes", async () => {
 		const networkFeatureSpy = vi.spyOn(wallet.network(), "allowsVoting").mockReturnValue(false);
 

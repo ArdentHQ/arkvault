@@ -43,7 +43,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 	it("should render", async () => {
 		const networkMocksRestore = mockProfileWithPublicAndTestNetworks(profile);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -55,6 +55,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
@@ -87,7 +88,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		profile.wallets().push(wallet);
 
-		const { asFragment } = render(
+		const { asFragment } = renderResponsiveWithRoute(
 			<Route path="/profiles/:profileId/dashboard">
 				<SearchWallet
 					profile={profile}
@@ -99,6 +100,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					onSelectWallet={() => void 0}
 				/>
 			</Route>,
+			"md",
 			{
 				history,
 				route: dashboardURL,
@@ -141,35 +143,6 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should render expanded on > md screen according to user settings", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/dashboard">
-				<SearchWallet
-					profile={profile}
-					showConvertedValue={showConvertedValue}
-					isOpen={true}
-					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
-					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
-					wallets={wallets}
-					onSelectWallet={() => void 0}
-				/>
-			</Route>,
-			"lg",
-			{
-				history,
-				route: dashboardURL,
-			},
-		);
-
-		expect(screen.queryAllByTestId("SearchWalletAvatar--compact")).toHaveLength(0);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
 	});
 
 	it.each(["xs", "sm"])("has a search input on responsive screen", async (breakpoint) => {

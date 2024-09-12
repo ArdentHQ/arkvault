@@ -3,11 +3,11 @@
 exports[`TransactionRowSender > should render 1`] = `
 <DocumentFragment>
   <div
-    class="flex items-center -space-x-1"
+    class="flex items-center space-x-2"
     data-testid="TransactionRowMode"
   >
-    <div
-      class="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400 ring-theme-background duration-100 css-1nqcsx"
+    <span
+      class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
     >
       <div
         class="css-1i4b0eq"
@@ -32,9 +32,9 @@ exports[`TransactionRowSender > should render 1`] = `
           />
         </svg>
       </div>
-    </div>
+    </span>
     <div
-      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1n9jllj"
+      class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
       data-testid="Avatar"
     >
       <div

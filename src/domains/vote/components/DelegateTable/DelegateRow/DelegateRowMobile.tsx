@@ -9,7 +9,7 @@ export const DelegateRowMobile = (properties: DelegateRowProperties) => {
 
 	const { isLoading, delegate } = properties;
 
-	const { renderButton } = useDelegateRow({ ...properties, isCompact: true });
+	const { renderButton } = useDelegateRow({ ...properties });
 
 	if (isLoading) {
 		return <DelegateRowMobileSkeleton />;

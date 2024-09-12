@@ -8,6 +8,8 @@ import Categories from "./categories.svg?react";
 import Calendar from "./calendar.svg?react";
 import ChartActiveDot from "./chart-active-dot.svg?react";
 import Checkmark from "./check-mark.svg?react";
+import CheckmarkDouble from "./double-checkmark.svg?react";
+import CheckmarkDoubleCircle from "./double-checkmark-circle.svg?react";
 import CheckmarkSmall from "./check-mark-small.svg?react";
 import CircleCheckMark from "./circle-check-mark.svg?react";
 import CircleCheckMarkPencil from "./circle-check-mark-pencil.svg?react";
@@ -108,6 +110,8 @@ export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	Categories,
 	ChartActiveDot,
 	Checkmark,
+	CheckmarkDouble,
+	CheckmarkDoubleCircle,
 	CheckmarkSmall,
 	CircleCheckMark,
 	CircleCheckMarkPencil,

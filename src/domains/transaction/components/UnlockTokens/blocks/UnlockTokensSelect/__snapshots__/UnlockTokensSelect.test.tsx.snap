@@ -513,7 +513,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Total Amount
         </p>
         <div
-          class="rounded px-1.5 css-6qumvg"
+          class="rounded px-1.5 css-vy12ck"
           color="neutral"
           data-testid="AmountLabel__wrapper"
         >
@@ -539,7 +539,7 @@ exports[`UnlockTokensSelect > should render 1`] = `
           Transaction Fee
         </p>
         <div
-          class="rounded px-1.5 css-6qumvg"
+          class="rounded px-1.5 css-vy12ck"
           color="neutral"
           data-testid="AmountLabel__wrapper"
         >

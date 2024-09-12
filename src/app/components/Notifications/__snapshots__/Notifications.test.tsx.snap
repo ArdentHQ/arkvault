@@ -220,12 +220,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-1pbju28"
+                          class="rounded px-1.5 css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -335,12 +335,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -450,12 +450,12 @@ exports[`Notifications > should emit transactionClick event 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -787,12 +787,12 @@ exports[`Notifications > should render with plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-1pbju28"
+                          class="rounded px-1.5 css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -902,12 +902,12 @@ exports[`Notifications > should render with plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1017,12 +1017,12 @@ exports[`Notifications > should render with plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1266,12 +1266,12 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-1pbju28"
+                          class="rounded px-1.5 css-xqt0aw"
                           color="danger-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1381,12 +1381,12 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"
@@ -1496,12 +1496,12 @@ exports[`Notifications > should render with transactions and plugins 1`] = `
                         class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
                       >
                         <div
-                          class="rounded px-1.5 css-givenh"
+                          class="rounded px-1.5 css-1jspzfx"
                           color="success-bg"
                           data-testid="AmountLabel__wrapper"
                         >
                           <div
-                            class="flex space-x-1 items-stretch"
+                            class="flex space-x-1 items-center"
                           >
                             <span
                               class="whitespace-nowrap text-sm"

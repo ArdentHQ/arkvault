@@ -13,7 +13,6 @@ import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> = ({
 	exchangeTransactions,
-	isCompact,
 	onClick,
 	onRemove,
 }) => {
@@ -103,13 +102,12 @@ export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> 
 			return (
 				<ExchangeTransactionsRow
 					exchangeTransaction={exchangeTransaction}
-					isCompact={isCompact}
 					onClick={onClick}
 					onRemove={onRemove}
 				/>
 			);
 		},
-		[isCompact, onClick, onRemove, useResponsive],
+		[onClick, onRemove, useResponsive],
 	);
 
 	if (tableData.length === 0) {

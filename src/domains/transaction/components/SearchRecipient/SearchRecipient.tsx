@@ -1,4 +1,3 @@
-import cn from "classnames";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
@@ -27,7 +26,6 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	recipient,
 	onAction,
 	selectedAddress,
-	isCompact,
 }) => {
 	const { t } = useTranslation();
 
@@ -36,10 +34,10 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 			return (
 				<Button
 					data-testid={`RecipientListItem__selected-button-${index}`}
-					size={isCompact ? "icon" : undefined}
-					variant={isCompact ? "transparent" : "reverse"}
+					size="icon"
+					variant="transparent"
 					onClick={() => onAction(recipient.address)}
-					className={cn("text-sm font-semibold text-theme-primary-reverse-600", { "-mr-3": isCompact })}
+					className="-mr-3 text-sm font-semibold text-theme-primary-reverse-600"
 				>
 					{t("COMMON.SELECTED")}
 				</Button>
@@ -49,10 +47,10 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 		return (
 			<Button
 				data-testid={`RecipientListItem__select-button-${index}`}
-				size={isCompact ? "icon" : undefined}
-				variant={isCompact ? "transparent" : "secondary"}
+				size="icon"
+				variant="transparent"
 				onClick={() => onAction(recipient.address)}
-				className={cn("text-sm font-semibold text-theme-primary-600", { "-mr-3": isCompact })}
+				className="-mr-3 text-sm font-semibold text-theme-primary-600"
 			>
 				{t("COMMON.SELECT")}
 			</Button>
@@ -61,7 +59,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 
 	return (
 		<TableRow key={recipient.id} border className="relative">
-			<TableCell isCompact={isCompact} variant="start" innerClassName="space-x-4 pl-6">
+			<TableCell variant="start" innerClassName="space-x-4 pl-6">
 				<Address
 					walletName={recipient.alias}
 					address={recipient.address}
@@ -71,7 +69,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				/>
 			</TableCell>
 
-			<TableCell isCompact={isCompact}>
+			<TableCell>
 				<span
 					data-testid="RecipientListItem__type"
 					className="whitespace-nowrap text-sm font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
@@ -80,7 +78,7 @@ const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 				</span>
 			</TableCell>
 
-			<TableCell isCompact={isCompact} variant="end" innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				{renderButton()}
 			</TableCell>
 		</TableRow>
@@ -129,7 +127,6 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	onAction,
 	recipients,
 	selectedAddress,
-	profile,
 }) => {
 	const {
 		setSearchKeyword,
@@ -142,10 +139,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 	const { t } = useTranslation();
 
 	const { isXs, isSm, isLgAndAbove } = useBreakpoint();
-	const isCompact = useMemo<boolean>(
-		() => !isLgAndAbove || !profile.appearance().get("useExpandedTables"),
-		[isLgAndAbove, profile],
-	);
+
 	const useResponsive = useMemo<boolean>(() => isXs || isSm, [isXs, isSm]);
 
 	const columns = useMemo<Column<RecipientProperties>[]>(
@@ -201,11 +195,10 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 					selectedAddress={selectedAddress}
 					recipient={recipient}
 					onAction={onAction}
-					isCompact={isCompact}
 				/>
 			);
 		},
-		[selectedAddress, onAction, isCompact, useResponsive],
+		[selectedAddress, onAction, useResponsive],
 	);
 
 	return (

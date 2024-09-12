@@ -10,15 +10,15 @@ export const UnlockTokensRowSkeleton: React.FC = () => {
 
 	return (
 		<TableRow>
-			<TableCell variant="start" isCompact>
+			<TableCell variant="start">
 				<Skeleton width={amountWidth} height={16} />
 			</TableCell>
 
-			<TableCell isCompact>
+			<TableCell>
 				<Skeleton width={timeWidth} height={16} />
 			</TableCell>
 
-			<TableCell variant="end" isCompact innerClassName="justify-end">
+			<TableCell variant="end" innerClassName="justify-end">
 				<div className="flex items-center">
 					<Skeleton width={80} height={16} />
 					<Skeleton width={20} height={20} className="ml-2 mr-3" />
