@@ -1,10 +1,10 @@
 import { Contracts } from "@ardenthq/sdk-profiles";
-import cn from "classnames";
-import React, { memo, useMemo, useState } from "react";
+import React, { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { CollapseToggleButton } from "@/app/components/Collapse";
+
 import { Dropdown, DropdownOption, DropdownOptionGroup } from "@/app/components/Dropdown";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
+import { Button } from "@/app/components/Button";
 
 interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 	className?: string;
@@ -49,12 +49,7 @@ export const FilterTransactions = memo(
 			return options;
 		}, [getLabel, types, t, canViewMagistrate]);
 
-		const [selectedOption, setSelectedOption] = useState<DropdownOption>(
-			defaultSelected || allOptions[0].options[0],
-		);
-
 		const handleSelect = (selectedOption: DropdownOption) => {
-			setSelectedOption(selectedOption);
 			onSelect?.(selectedOption, selectedOption.value);
 		};
 
@@ -64,31 +59,19 @@ export const FilterTransactions = memo(
 					dropdownClass="md:w-80 md:max-h-128 md:overflow-y-auto md:w-auto mx-4 sm:w-full sm:mx-0"
 					options={allOptions}
 					disableToggle={isDisabled}
-					toggleContent={(isOpen: boolean) => (
-						<CollapseToggleButton
+					toggleContent={
+						<Button
+							variant="secondary"
+							size="sm"
+							icon="Funnel"
+							iconSize="md"
+							className="px-4 py-1.5"
 							disabled={isDisabled}
-							isOpen={isOpen}
-							className={cn(
-								"w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:px-0 md:py-2",
-								{
-									"cursor-not-allowed text-theme-secondary-400 dark:text-theme-secondary-800":
-										isDisabled,
-								},
-							)}
-							label={
-								<>
-									<span
-										className={cn("leading-tight", {
-											"text-theme-secondary-500 dark:text-theme-secondary-600": !isDisabled,
-										})}
-									>
-										{t("COMMON.TYPE")}:
-									</span>{" "}
-									<span className="whitespace-nowrap leading-tight">{selectedOption.label}</span>
-								</>
-							}
-						/>
-					)}
+							data-testid="CollapseToggleButton"
+						>
+							<span>{t("COMMON.TYPE")}</span>
+						</Button>
+					}
 					onSelect={handleSelect}
 				/>
 			</div>

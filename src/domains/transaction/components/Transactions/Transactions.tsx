@@ -156,15 +156,6 @@ export const Transactions = memo(function Transactions({
 									{option.label}
 								</Tab>
 							))}
-
-							{/* <div className="flex flex-1" />
-
-							<FilterTransactions
-								className="my-auto mr-6"
-								wallets={wallets}
-								onSelect={filterChangeHandler}
-								isDisabled={wallets.length === 0 || isLoadingTransactions}
-							/> */}
 						</TabList>
 					</Tabs>
 
@@ -222,9 +213,12 @@ export const Transactions = memo(function Transactions({
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
 						</span>
-						<Button variant="secondary" size="sm" icon="Funnel" iconSize="md" className="px-4 py-1.5">
-							<span>{t("COMMON.TYPE")}</span>
-						</Button>
+						<FilterTransactions
+							className="my-auto mr-6"
+							wallets={wallets}
+							onSelect={filterChangeHandler}
+							isDisabled={wallets.length === 0 || isLoadingTransactions}
+						/>
 					</div>
 					<TransactionTable
 						transactions={transactions}
