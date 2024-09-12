@@ -96,12 +96,15 @@ export const TransactionRowAddressing = ({
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<RowLabel isNegative={isNegative} />
-			<div className="w-50">
+			<div className={cn({
+				"w-50": alias,
+				"w-30": !alias
+			})} data-testid="TransactionRowAddressing__address-container">
 				<Address
 					walletName={alias}
 					address={transaction.sender()}
 					truncateOnTable
-					addressWrapperClass="w-20"
+					addressWrapperClass="w-full"
 					addressClass={cn("pt-0.5", {
 						"text-theme-primary-600": !alias,
 						"text-theme-secondary-700 dark:text-theme-secondary-200": alias,
