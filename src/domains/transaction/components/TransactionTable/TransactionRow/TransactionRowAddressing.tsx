@@ -96,10 +96,13 @@ export const TransactionRowAddressing = ({
 	return (
 		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<RowLabel isNegative={isNegative} />
-			<div className={cn({
-				"w-50": alias,
-				"w-30": !alias
-			})} data-testid="TransactionRowAddressing__address-container">
+			<div
+				className={cn({
+					"w-30": !alias,
+					"w-50": alias,
+				})}
+				data-testid="TransactionRowAddressing__address-container"
+			>
 				<Address
 					walletName={alias}
 					address={transaction.sender()}

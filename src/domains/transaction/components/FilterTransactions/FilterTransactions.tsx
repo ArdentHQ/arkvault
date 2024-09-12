@@ -15,7 +15,7 @@ interface FilterTransactionsProperties extends JSX.IntrinsicAttributes {
 }
 
 export const FilterTransactions = memo(
-	({ className, onSelect, defaultSelected, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
+	({ className, onSelect, wallets, isDisabled, ...properties }: FilterTransactionsProperties) => {
 		const { t } = useTranslation();
 		const { types, getLabel, canViewMagistrate } = useTransactionTypes({ wallets });
 
@@ -67,7 +67,7 @@ export const FilterTransactions = memo(
 							iconSize="md"
 							className="px-4 py-1.5"
 							disabled={isDisabled}
-							data-testid="CollapseToggleButton"
+							data-testid="CollapseToggleButtonq"
 						>
 							<span>{t("COMMON.TYPE")}</span>
 						</Button>
