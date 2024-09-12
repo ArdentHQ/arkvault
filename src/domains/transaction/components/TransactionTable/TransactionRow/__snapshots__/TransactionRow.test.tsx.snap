@@ -68,7 +68,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-sycbru"
+              class="rounded p-1 css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -84,7 +84,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="flex flex-row gap-2"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-tubsez"
+                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
               >
                 To
@@ -137,7 +137,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 21 DARK
+                    - 21 BTC
                   </span>
                 </div>
               </div>
@@ -149,7 +149,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  10 BTC
+                  0 BTC
                 </span>
               </span>
             </div>
@@ -165,7 +165,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              10 BTC
+              0 BTC
             </span>
           </div>
         </td>
@@ -243,7 +243,7 @@ exports[`TransactionRow > should render 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-sycbru"
+              class="rounded p-1 css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -259,7 +259,7 @@ exports[`TransactionRow > should render 1`] = `
               class="flex flex-row gap-2"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-tubsez"
+                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
               >
                 To
@@ -335,7 +335,7 @@ exports[`TransactionRow > should render 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  $10.00
+                  $0.00
                 </span>
               </span>
             </div>
@@ -351,7 +351,7 @@ exports[`TransactionRow > should render 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              $10.00
+              $0.00
             </span>
           </div>
         </td>
@@ -1102,7 +1102,7 @@ exports[`TransactionRow > should render with currency 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="rounded p-1 css-sycbru"
+              class="rounded p-1 css-1dx994f"
               color="secondary"
               data-testid="TransactionRow__type"
             >
@@ -1118,7 +1118,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="flex flex-row gap-2"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-tubsez"
+                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
               >
                 To
@@ -1171,7 +1171,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 21 DARK
+                    - 21 BTC
                   </span>
                 </div>
               </div>
@@ -1183,7 +1183,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                   class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  10 BTC
+                  0 BTC
                 </span>
               </span>
             </div>
@@ -1199,7 +1199,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               class="whitespace-nowrap"
               data-testid="Amount"
             >
-              10 BTC
+              0 BTC
             </span>
           </div>
         </td>
