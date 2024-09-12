@@ -8,7 +8,6 @@ import { TransactionFixture } from "@/tests/fixtures/transactions";
 import {
 	env,
 	getDefaultProfileId,
-	queryElementForSvg,
 	render,
 	screen,
 	renderResponsive,
