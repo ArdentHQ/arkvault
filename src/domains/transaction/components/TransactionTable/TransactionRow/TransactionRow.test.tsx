@@ -23,7 +23,7 @@ describe("TransactionRow", () => {
 		}),
 	};
 
-	beforeAll(async () => {
+	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
@@ -37,7 +37,7 @@ describe("TransactionRow", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency={"USD"} onClick={() => {}} currency="DARK" convertedBalance={10} />
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency={"USD"} onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
@@ -55,7 +55,7 @@ describe("TransactionRow", () => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -83,7 +83,6 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render with currency", () => {
-		console.log(fixture)
 		const { asFragment } = render(
 			<table>
 				<tbody>
@@ -91,9 +90,7 @@ describe("TransactionRow", () => {
 						transaction={
 							{
 								...fixture,
-								amount: () => {
-									return 0;
-								},
+								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
 									currency: () => "BTC",
@@ -105,8 +102,7 @@ describe("TransactionRow", () => {
 						exchangeCurrency="BTC"
 						profile={profile} 
 						onClick={() => {}} 
-						currency="DARK" 
-						convertedBalance={10}
+						
 					/>
 				</tbody>
 			</table>,
@@ -125,9 +121,7 @@ describe("TransactionRow", () => {
 						transaction={
 							{
 								...fixture,
-								amount: () => {
-									return 0;
-								},
+								amount: () => 0,
 								wallet: () => ({
 									...fixture.wallet(),
 									currency: () => "BTC",
@@ -139,8 +133,6 @@ describe("TransactionRow", () => {
 						exchangeCurrency="BTC"
 						profile={profile}
 						onClick={() => {}} 
-						currency="DARK" 
-						convertedBalance={10}
 					/>
 				</tbody>
 			</table>,
@@ -155,7 +147,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}}  />
 				</tbody>
 			</table>,
 		);
@@ -168,7 +160,7 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
+					<TransactionRow transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
@@ -181,11 +173,11 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} onClick={() => {}} currency="DARK" convertedBalance={10} />
+					<TransactionRow transaction={fixture as any} profile={profile} onClick={() => {}} />
 				</tbody>
 			</table>,
 		);
 
-		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("10");
+		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("0");
 	});
 });
