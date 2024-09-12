@@ -24,8 +24,6 @@ export const TransactionRow = memo(
 		onClick,
 		isLoading = false,
 		profile,
-		currency,
-		convertedBalance,
 		...properties
 	}: TransactionRowProperties) => {
 		const { getLabel } = useTransactionTypes();
@@ -41,8 +39,6 @@ export const TransactionRow = memo(
 					transaction={transaction}
 					exchangeCurrency={exchangeCurrency}
 					profile={profile}
-					currency={currency}
-					convertedBalance={convertedBalance}
 				/>
 			);
 		}
@@ -108,11 +104,11 @@ export const TransactionRow = memo(
 						<AmountLabel
 							value={transaction.amount() + transaction.fee()}
 							isNegative={true}
-							ticker={currency}
+							ticker={transaction.wallet().currency()}
 							isCompact
 						/>
 						<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden" data-testid="TransactionRow__exchange-currency">
-							<Amount value={convertedBalance} ticker={exchangeCurrency || ""} />
+							<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 						</span>
 					</div>
 				</TableCell>
@@ -122,7 +118,7 @@ export const TransactionRow = memo(
 					className="hidden lg:table-cell"
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
 				>
-					<Amount value={convertedBalance} ticker={exchangeCurrency || ""} />
+					<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 				</TableCell>
 			</TableRow>
 		);
