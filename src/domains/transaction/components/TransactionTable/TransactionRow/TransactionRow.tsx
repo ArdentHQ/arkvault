@@ -31,7 +31,7 @@ export const TransactionRow = memo(
 		const { isXs, isSm, isMd } = useBreakpoint();
 		const { getLabel } = useTransactionTypes();
 		const { t } = useTranslation();
-		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
+		const timeStamp = transaction?.timestamp ? transaction.timestamp() : undefined;
 
 		const isCompact = useMemo(
 			() => !profile.appearance().get("useExpandedTables") || isSm || isXs || isMd,
@@ -71,6 +71,7 @@ export const TransactionRow = memo(
 									className="cursor-pointer text-theme-primary-600"
 									text={transaction.id()}
 									maxChars={14}
+									data-testid="TransactionRow__id"
 								/>
 							</span>
 						</Link>
@@ -88,6 +89,7 @@ export const TransactionRow = memo(
 					className="hidden lg:table-cell"
 					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
 					isCompact={isCompact}
+					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
 						<TimeAgo date={DateTime.fromUnix(timeStamp.toUNIX()).toISOString()} />
@@ -97,7 +99,7 @@ export const TransactionRow = memo(
 				</TableCell>
 
 				<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0 my-0 py-3">
-					<Label color="secondary" size="xs" noBorder className="rounded p-1">
+					<Label color="secondary" size="xs" noBorder className="rounded p-1" data-testid="TransactionRow__type">
 						{getLabel(transaction.type())}
 					</Label>
 				</TableCell>
@@ -114,7 +116,7 @@ export const TransactionRow = memo(
 							ticker={currency}
 							isCompact
 						/>
-						<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden">
+						<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden" data-testid="TransactionRow__exchange-currency">
 							<Amount value={convertedBalance} ticker={exchangeCurrency || ""} />
 						</span>
 					</div>
