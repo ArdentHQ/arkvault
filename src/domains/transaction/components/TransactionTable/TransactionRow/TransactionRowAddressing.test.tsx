@@ -50,4 +50,18 @@ describe("TransactionRowAddressing", () => {
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("From");
 	});
+
+    it("should expand width of address container if the wallet has alias", () => {
+        const aliasFixture = { ...fixture, sender: () => "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" };
+
+        render(<TransactionRowAddressing transaction={aliasFixture as any} profile={profile} />);
+
+        expect(screen.getByTestId("TransactionRowAddressing__address-container")).toHaveClass("w-50");
+    })
+
+    it("should not expand width of address container if the wallet has no alias", () => {
+        render(<TransactionRowAddressing transaction={fixture as any} profile={profile} />);
+
+        expect(screen.getByTestId("TransactionRowAddressing__address-container")).not.toHaveClass("w-30");
+    });
 });

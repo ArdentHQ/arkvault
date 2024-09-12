@@ -12,53 +12,53 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         data-testid="dropdown__toggle"
       >
         <button
-          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:px-0 md:py-2"
+          class="space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5"
           data-testid="CollapseToggleButton"
           type="button"
         >
-          <span
-            class="flex items-center space-x-1"
-          >
-            <span
-              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Type
-              :
-            </span>
-             
-            <span
-              class="whitespace-nowrap leading-tight"
-            >
-              All
-            </span>
-          </span>
-          <span
-            class="css-13hf1vs"
+          <div
+            class="flex items-center space-x-2"
           >
             <div
-              class="p-1 css-15txs7d"
-              height="10"
-              width="10"
+              class="css-v0ob3f"
+              height="16"
+              width="16"
             >
               <svg
-                id="chevron-down-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
                 xmlns="http://www.w3.org/2000/svg"
-                y="0"
               >
-                <path
-                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
+                <g
+                  clip-path="url(#clip0_13768_41214)"
+                >
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
               </svg>
             </div>
-          </span>
+            <span>
+              Type
+            </span>
+          </div>
         </button>
       </span>
       <div
@@ -229,53 +229,53 @@ exports[`FilterTransactions > should render 1`] = `
         data-testid="dropdown__toggle"
       >
         <button
-          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:px-0 md:py-2"
+          class="space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5"
           data-testid="CollapseToggleButton"
           type="button"
         >
-          <span
-            class="flex items-center space-x-1"
-          >
-            <span
-              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Type
-              :
-            </span>
-             
-            <span
-              class="whitespace-nowrap leading-tight"
-            >
-              All
-            </span>
-          </span>
-          <span
-            class="css-1uvxu7z"
+          <div
+            class="flex items-center space-x-2"
           >
             <div
-              class="p-1 css-15txs7d"
-              height="10"
-              width="10"
+              class="css-v0ob3f"
+              height="16"
+              width="16"
             >
               <svg
-                id="chevron-down-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
                 xmlns="http://www.w3.org/2000/svg"
-                y="0"
               >
-                <path
-                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
+                <g
+                  clip-path="url(#clip0_13768_41214)"
+                >
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
               </svg>
             </div>
-          </span>
+            <span>
+              Type
+            </span>
+          </div>
         </button>
       </span>
     </div>
@@ -295,53 +295,53 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
         data-testid="dropdown__toggle"
       >
         <button
-          class="flex items-center space-x-2 font-semibold focus:outline-none w-full cursor-pointer justify-between space-x-4 overflow-hidden rounded-xl border border-theme-success-100 p-3 dark:border-theme-secondary-800 sm:p-6 md:w-auto md:space-x-2 md:rounded md:border-0 md:border-none md:px-0 md:py-2"
+          class="space-x-2 text-sm relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5"
           data-testid="CollapseToggleButton"
           type="button"
         >
-          <span
-            class="flex items-center space-x-1"
-          >
-            <span
-              class="leading-tight text-theme-secondary-500 dark:text-theme-secondary-600"
-            >
-              Type
-              :
-            </span>
-             
-            <span
-              class="whitespace-nowrap leading-tight"
-            >
-              All
-            </span>
-          </span>
-          <span
-            class="css-1uvxu7z"
+          <div
+            class="flex items-center space-x-2"
           >
             <div
-              class="p-1 css-15txs7d"
-              height="10"
-              width="10"
+              class="css-v0ob3f"
+              height="16"
+              width="16"
             >
               <svg
-                id="chevron-down-small"
-                viewBox="0 0 10 10"
-                x="0"
-                xml:space="preserve"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
                 xmlns="http://www.w3.org/2000/svg"
-                y="0"
               >
-                <path
-                  d="M9 3.1L5.2 6.9c-.1.1-.3.1-.4 0L1 3.1"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
+                <g
+                  clip-path="url(#clip0_13768_41214)"
+                >
+                  <path
+                    d="M9.75946 11.5209V8.00094L14.6395 3.12094C14.9595 2.80094 15.1195 2.24094 14.8795 1.76094C14.7195 1.28094 14.2395 0.960938 13.7595 0.960938H2.23946C1.75946 0.960938 1.27946 1.28094 1.11946 1.76094C0.879462 2.24094 1.03946 2.72094 1.35946 3.12094L6.23946 8.00094V15.0409L9.75946 11.5209Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_13768_41214"
+                  >
+                    <rect
+                      fill="white"
+                      height="16"
+                      width="16"
+                    />
+                  </clippath>
+                </defs>
               </svg>
             </div>
-          </span>
+            <span>
+              Type
+            </span>
+          </div>
         </button>
       </span>
     </div>
