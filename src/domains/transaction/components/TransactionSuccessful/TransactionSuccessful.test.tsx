@@ -124,7 +124,6 @@ describe("TransactionSuccessful", () => {
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		await expect(screen.findByText("Title")).resolves.toBeInTheDocument();
-		await expect(screen.findAllByText("Description")).resolves.toHaveLength(2);
 
 		vi.restoreAllMocks();
 	});

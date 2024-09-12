@@ -13,7 +13,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients, profile }: Properties): ReactElement => {
+export const TransactionAddresses = ({ senderWallet, recipients = [], profile }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -26,28 +26,32 @@ export const TransactionAddresses = ({ senderWallet, recipients, profile }: Prop
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 			<div className="flex w-full">
-				<DetailLabelText minWidth="sm">{t("COMMON.FROM")}</DetailLabelText>
+				<DetailLabelText>{t("COMMON.FROM")}</DetailLabelText>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
 					walletNameClass="text-theme-text"
 					showCopyButton
+					wrapperClass="sm:w-3/4"
 				/>
 			</div>
 
-			<div className="hidden h-8 w-full items-center sm:flex">
-				<Divider dashed />
-			</div>
+			{recipients.length > 0 && (
+				<div className="hidden h-8 w-full items-center sm:flex">
+					<Divider dashed />
+				</div>
+			)}
 
 			{recipients.map((recipient, index) => (
-				<div className="mt-3 flex w-full sm:mt-0" key={index}>
-					<DetailLabelText minWidth="sm">{t("COMMON.TO")}</DetailLabelText>
+				<div className="mt-3 flex w-full md:mt-0" key={index}>
+					<DetailLabelText>{t("COMMON.TO")}</DetailLabelText>
 					<Address
 						key={index}
 						address={recipient.address}
 						walletName={recipient.alias}
 						walletNameClass="text-theme-text"
 						showCopyButton
+						wrapperClass="sm:w-3/4"
 					/>
 				</div>
 			))}
