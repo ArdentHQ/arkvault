@@ -88,7 +88,12 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 			}
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => false,
 		isMultiSignatureRegistration: () => true,
+		isVote: () => false,
 		recipient: () => MultisignatureRegistrationFixture.data.recipient,
 		sender: () => MultisignatureRegistrationFixture.data.sender,
 		type: () => "multiSignature",

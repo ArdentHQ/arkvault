@@ -7,15 +7,17 @@ export const useConfirmedTransaction = ({
 }: {
 	wallet: Contracts.IReadWriteWallet;
 	transactionId: string;
-}): boolean => {
+}): { isConfirmed: boolean; confirmations: number } => {
 	const [isConfirmed, setIsConfirmed] = useState(false);
+	const [confirmations, setConfirmations] = useState(0);
 
 	useEffect(() => {
 		const checkConfirmed = (): void => {
 			const id = setInterval(async () => {
 				try {
-					await wallet.coin().client().transaction(transactionId);
+					const transaction = await wallet.coin().client().transaction(transactionId);
 					setIsConfirmed(true);
+					setConfirmations(transaction.confirmations().toNumber());
 					clearInterval(id);
 				} catch {
 					// transaction is not forged yet, ignore the error
@@ -26,5 +28,5 @@ export const useConfirmedTransaction = ({
 		void checkConfirmed();
 	}, [wallet.id(), transactionId]);
 
-	return isConfirmed;
+	return { confirmations, isConfirmed };
 };

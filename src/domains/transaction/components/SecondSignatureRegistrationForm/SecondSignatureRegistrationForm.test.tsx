@@ -57,8 +57,14 @@ describe("SecondSignatureRegistrationForm", () => {
 			explorerLink: () => `https://test.arkscan.io/transaction/${secondSignatureFixture.data.id}`,
 			fee: () => secondSignatureFixture.data.fee / 1e8,
 			id: () => secondSignatureFixture.data.id,
+			isConfirmed: () => true,
+			isDelegateRegistration: () => false,
+			isDelegateResignation: () => false,
+			isIpfs: () => false,
+			isVote: () => false,
 			recipient: () => secondSignatureFixture.data.recipient,
 			sender: () => secondSignatureFixture.data.sender,
+			usesMultiSignature: () => false,
 		});
 
 	it("should render generation step", async () => {

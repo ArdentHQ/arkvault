@@ -87,6 +87,8 @@ export const SendTransfer = () => {
 		formState: { isDirty, isValid, isSubmitting },
 	} = useSendTransferForm(wallet);
 
+	const { recipients } = getValues();
+
 	useKeyup("Enter", () => {
 		const isButton = (document.activeElement as any)?.type === "button";
 
@@ -359,7 +361,7 @@ export const SendTransfer = () => {
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.SummaryStep}>
-				<SummaryStep transaction={transaction!} senderWallet={wallet!} profile={activeProfile} />
+				<SummaryStep transaction={transaction!} senderWallet={wallet!} recipients={recipients} />
 			</TabPanel>
 
 			<TabPanel tabId={SendTransferStep.ErrorStep}>

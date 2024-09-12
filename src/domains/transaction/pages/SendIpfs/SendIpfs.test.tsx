@@ -8,7 +8,6 @@ import { Route, Router } from "react-router-dom";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { SendIpfs } from "./SendIpfs";
-import { SummaryStep } from "./SummaryStep";
 import { minVersionList, StepsProvider } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import {
@@ -28,6 +27,7 @@ import {
 	MNEMONICS,
 } from "@/utils/testing-library";
 import { server, requestMock } from "@/tests/mocks/server";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 import transactionsFixture from "@/tests/fixtures/coins/ark/devnet/transactions.json";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
@@ -44,7 +44,12 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 		fee: () => +ipfsFixture.data.fee / 1e8,
 		hash: () => ipfsFixture.data.asset.ipfs,
 		id: () => ipfsFixture.data.id,
+		isConfirmed: () => true,
+		isDelegateRegistration: () => false,
+		isDelegateResignation: () => false,
+		isIpfs: () => true,
 		isMultiSignatureRegistration: () => false,
+		isVote: () => false,
 		recipient: () => ipfsFixture.data.recipient,
 		sender: () => ipfsFixture.data.sender,
 		type: () => "ipfs",
@@ -203,7 +208,7 @@ describe("SendIpfs", () => {
 			<Router history={history}>
 				<Route path="/profiles/:profileId/wallets/:walletId/send-ipfs">
 					<StepsProvider activeStep={1} steps={4}>
-						<SummaryStep senderWallet={wallet} transaction={transaction} />
+						<TransactionSuccessful senderWallet={wallet} transaction={transaction} />
 					</StepsProvider>
 					,
 				</Route>
