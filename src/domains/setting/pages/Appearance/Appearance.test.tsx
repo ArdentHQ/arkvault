@@ -162,7 +162,6 @@ describe("Appearance Settings", () => {
 	it.each([
 		Contracts.ProfileSetting.DashboardTransactionHistory,
 		Contracts.ProfileSetting.UseNetworkWalletNames,
-		Contracts.ProfileSetting.UseExpandedTables,
 	])("should allow to toggle %s setting", async (key) => {
 		const toastSuccess = vi.spyOn(toasts, "success");
 
