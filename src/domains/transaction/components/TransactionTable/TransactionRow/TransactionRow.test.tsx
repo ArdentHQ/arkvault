@@ -5,13 +5,7 @@ import { TransactionRow } from "./TransactionRow";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	renderResponsive,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, renderResponsive } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 describe("TransactionRow", () => {
@@ -37,7 +31,12 @@ describe("TransactionRow", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency={"USD"} onClick={() => {}} />
+					<TransactionRow
+						transaction={fixture as any}
+						profile={profile}
+						exchangeCurrency={"USD"}
+						onClick={() => {}}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -55,7 +54,12 @@ describe("TransactionRow", () => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
+					<TransactionRow
+						transaction={fixture as any}
+						profile={profile}
+						exchangeCurrency="USD"
+						onClick={() => {}}
+					/>
 				</tbody>
 			</table>,
 			breakpoint,
@@ -100,9 +104,8 @@ describe("TransactionRow", () => {
 							} as any
 						}
 						exchangeCurrency="BTC"
-						profile={profile} 
-						onClick={() => {}} 
-						
+						profile={profile}
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
@@ -132,7 +135,7 @@ describe("TransactionRow", () => {
 						}
 						exchangeCurrency="BTC"
 						profile={profile}
-						onClick={() => {}} 
+						onClick={() => {}}
 					/>
 				</tbody>
 			</table>,
@@ -147,7 +150,12 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}}  />
+					<TransactionRow
+						transaction={fixture as any}
+						profile={profile}
+						exchangeCurrency="USD"
+						onClick={() => {}}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -160,7 +168,12 @@ describe("TransactionRow", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} />
+					<TransactionRow
+						transaction={{ ...fixture, timestamp: undefined } as any}
+						profile={profile}
+						exchangeCurrency="USD"
+						onClick={() => {}}
+					/>
 				</tbody>
 			</table>,
 		);

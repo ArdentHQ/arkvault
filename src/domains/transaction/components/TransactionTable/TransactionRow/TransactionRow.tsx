@@ -49,7 +49,7 @@ export const TransactionRow = memo(
 
 		return (
 			<TableRow onClick={onClick} className={twMerge("relative", className)} {...properties}>
-				<TableCell variant="start"  innerClassName="items-start my-0 py-3 xl:min-h-0">
+				<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
 					<div className="flex flex-col gap-1 font-semibold">
 						<Link
 							to={transaction.explorerLink()}
@@ -79,7 +79,6 @@ export const TransactionRow = memo(
 				<TableCell
 					className="hidden lg:table-cell"
 					innerClassName="text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
-					
 					data-testid="TransactionRow__timestamp"
 				>
 					{timeStamp ? (
@@ -89,17 +88,23 @@ export const TransactionRow = memo(
 					)}
 				</TableCell>
 
-				<TableCell  innerClassName="items-start xl:min-h-0 my-0 py-3">
-					<Label color="secondary" size="xs" noBorder className="rounded p-1" data-testid="TransactionRow__type">
+				<TableCell innerClassName="items-start xl:min-h-0 my-0 py-3">
+					<Label
+						color="secondary"
+						size="xs"
+						noBorder
+						className="rounded p-1"
+						data-testid="TransactionRow__type"
+					>
 						{getLabel(transaction.type())}
 					</Label>
 				</TableCell>
 
-				<TableCell innerClassName="space-x-4" >
+				<TableCell innerClassName="space-x-4">
 					<TransactionRowAddressing transaction={transaction} profile={profile} />
 				</TableCell>
 
-				<TableCell  innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
+				<TableCell innerClassName="justify-end items-start xl:min-h-0 my-0 py-3">
 					<div className="flex flex-col items-end gap-1">
 						<AmountLabel
 							value={transaction.amount() + transaction.fee()}
@@ -107,14 +112,16 @@ export const TransactionRow = memo(
 							ticker={transaction.wallet().currency()}
 							isCompact
 						/>
-						<span className="text-xs font-semibold text-theme-secondary-700 lg:hidden" data-testid="TransactionRow__exchange-currency">
+						<span
+							className="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+							data-testid="TransactionRow__exchange-currency"
+						>
 							<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
 						</span>
 					</div>
 				</TableCell>
 
 				<TableCell
-					
 					className="hidden lg:table-cell"
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
 				>
