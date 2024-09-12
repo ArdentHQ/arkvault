@@ -67,7 +67,7 @@ export const FilterTransactions = memo(
 							iconSize="md"
 							className="px-4 py-1.5"
 							disabled={isDisabled}
-							data-testid="CollapseToggleButtonq"
+							data-testid="CollapseToggleButton"
 						>
 							<span>{t("COMMON.TYPE")}</span>
 						</Button>
