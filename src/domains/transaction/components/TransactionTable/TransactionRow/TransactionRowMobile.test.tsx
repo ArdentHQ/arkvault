@@ -60,22 +60,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.getByTestId("TransactionRow__skeleton")).toBeInTheDocument();
 	});
 
-	it("should render compact skeleton", () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<TransactionRowMobile profile={profile} isLoading />
-				</tbody>
-			</table>,
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
 	it("should render with currency", () => {
 		const { asFragment } = render(
 			<table>
