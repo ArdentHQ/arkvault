@@ -6,7 +6,7 @@ import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { TransactionTableProperties } from "./TransactionTable.contracts";
 import { Table } from "@/app/components/Table";
 import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-import { useActiveWallet, useBreakpoint } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,
@@ -18,8 +18,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	profile,
 }) => {
 	const { isXs, isSm } = useBreakpoint();
-	const activeWallet = useActiveWallet();
-	const columns = useTransactionTableColumns({ coin: activeWallet.network().coinName() });
+	const coinName = transactions[0]?.coin().network().coinName();
+	const columns = useTransactionTableColumns({ coin: coinName });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({
 			sortBy: [
@@ -50,8 +50,6 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				transaction={row}
 				exchangeCurrency={exchangeCurrency}
 				profile={profile}
-				currency={activeWallet.network().coin()}
-				convertedBalance={activeWallet.convertedBalance()}
 			/>
 		),
 		[showSkeleton, onRowClick, exchangeCurrency, profile],
