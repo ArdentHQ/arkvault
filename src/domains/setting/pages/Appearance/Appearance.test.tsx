@@ -159,39 +159,39 @@ describe("Appearance Settings", () => {
 		});
 	});
 
-	it.each([
-		Contracts.ProfileSetting.DashboardTransactionHistory,
-		Contracts.ProfileSetting.UseNetworkWalletNames,
-	])("should allow to toggle %s setting", async (key) => {
-		const toastSuccess = vi.spyOn(toasts, "success");
+	it.each([Contracts.ProfileSetting.DashboardTransactionHistory, Contracts.ProfileSetting.UseNetworkWalletNames])(
+		"should allow to toggle %s setting",
+		async (key) => {
+			const toastSuccess = vi.spyOn(toasts, "success");
 
-		profile.settings().set(key, true);
+			profile.settings().set(key, true);
 
-		renderPage();
+			renderPage();
 
-		const toggleTestId = `AppearanceToggle__toggle-${camelCase(key)}`;
+			const toggleTestId = `AppearanceToggle__toggle-${camelCase(key)}`;
 
-		expect(screen.getByTestId(toggleTestId)).toBeChecked();
-		expect(profile.settings().get(key)).toBe(true);
+			expect(screen.getByTestId(toggleTestId)).toBeChecked();
+			expect(profile.settings().get(key)).toBe(true);
 
-		userEvent.click(screen.getByTestId(toggleTestId));
+			userEvent.click(screen.getByTestId(toggleTestId));
 
-		await waitFor(() => {
-			expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
-		});
+			await waitFor(() => {
+				expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
+			});
 
-		expect(profile.settings().get(key)).toBe(true);
+			expect(profile.settings().get(key)).toBe(true);
 
-		expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
+			expect(screen.getByTestId("AppearanceFooterButtons__save")).toBeEnabled();
 
-		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+			userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
 
-		await waitFor(() => {
-			expect(profile.settings().get(key)).toBe(false);
-		});
+			await waitFor(() => {
+				expect(profile.settings().get(key)).toBe(false);
+			});
 
-		await waitFor(() => {
-			expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
-		});
-	});
+			await waitFor(() => {
+				expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
+			});
+		},
+	);
 });
