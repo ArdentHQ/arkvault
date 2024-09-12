@@ -24,7 +24,7 @@ describe("TransactionRow", () => {
 		}),
 	};
 
-	beforeAll(() => {
+	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		vi.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
@@ -38,25 +38,25 @@ describe("TransactionRow", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} />
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency={"USD"} onClick={() => {}} currency="DARK" convertedBalance={10} />
 				</tbody>
 			</table>,
 		);
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getAllByRole("cell")).toHaveLength(6);
-		expect(queryElementForSvg(screen.getByRole("row"), "magnifying-glass-id")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRow__id")).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getByTestId("TransactionRowMode")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
-		expect(screen.getByTestId("Amount")).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRow__type")).toBeInTheDocument();
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 	});
 
 	it.each(["xs", "sm"])("should render responsive", (breakpoint) => {
 		const { asFragment } = renderResponsive(
 			<table>
 				<tbody>
-					<TransactionRow transaction={fixture as any} profile={profile} />
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
 				</tbody>
 			</table>,
 			breakpoint,
@@ -100,6 +100,7 @@ describe("TransactionRow", () => {
 	});
 
 	it("should render with currency", () => {
+		console.log(fixture)
 		const { asFragment } = render(
 			<table>
 				<tbody>
@@ -107,6 +108,9 @@ describe("TransactionRow", () => {
 						transaction={
 							{
 								...fixture,
+								amount: () => {
+									return 0;
+								},
 								wallet: () => ({
 									...fixture.wallet(),
 									currency: () => "BTC",
@@ -116,14 +120,17 @@ describe("TransactionRow", () => {
 							} as any
 						}
 						exchangeCurrency="BTC"
-						profile={profile}
+						profile={profile} 
+						onClick={() => {}} 
+						currency="DARK" 
+						convertedBalance={10}
 					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
 		expect(screen.queryByText(commonTranslations.NOT_AVAILABLE)).not.toBeInTheDocument();
 	});
 
@@ -135,6 +142,9 @@ describe("TransactionRow", () => {
 						transaction={
 							{
 								...fixture,
+								amount: () => {
+									return 0;
+								},
 								wallet: () => ({
 									...fixture.wallet(),
 									currency: () => "BTC",
@@ -145,13 +155,54 @@ describe("TransactionRow", () => {
 						}
 						exchangeCurrency="BTC"
 						profile={profile}
+						onClick={() => {}} 
+						currency="DARK" 
+						convertedBalance={10}
 					/>
 				</tbody>
 			</table>,
 		);
 
 		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByTestId("Amount")).toHaveLength(1);
-		expect(screen.getByText(commonTranslations.NOT_AVAILABLE)).toBeInTheDocument();
+		expect(screen.getAllByTestId("Amount")).toHaveLength(3);
+		expect(screen.queryByText(commonTranslations.NOT_AVAILABLE)).not.toBeInTheDocument();
+	});
+
+	it("should render timestamp formatted with TimeAgo", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRow transaction={fixture as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
+		expect(screen.getAllByText("A few seconds ago")).toHaveLength(2);
+	});
+
+	it("should render N/A if timestamp is not available", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRow transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} exchangeCurrency="USD" onClick={() => {}} currency="DARK" convertedBalance={10} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__timestamp")).toHaveTextContent(commonTranslations.NOT_AVAILABLE);
+		expect(screen.getAllByText(commonTranslations.NOT_AVAILABLE)).toHaveLength(2);
+	});
+
+	it("should send default exchange currency if not provided", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRow transaction={fixture as any} profile={profile} onClick={() => {}} currency="DARK" convertedBalance={10} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__exchange-currency")).toHaveTextContent("10");
 	});
 });
