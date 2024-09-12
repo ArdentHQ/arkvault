@@ -6,7 +6,7 @@ import { Table } from "@/app/components/Table";
 import { WalletListItem, WalletListItemProperties } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 import { useConfiguration } from "@/app/contexts";
-import { useActiveProfile, useBreakpoint } from "@/app/hooks";
+import { useBreakpoint } from "@/app/hooks";
 import { WalletsListProperties } from "@/domains/wallet/components/WalletsList/WalletsList.contracts";
 import { Pagination } from "@/app/components/Pagination";
 import { Tooltip } from "@/app/components/Tooltip";
@@ -43,10 +43,9 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	className,
 }) => {
 	const { isMdAndAbove } = useBreakpoint();
-	const profile = useActiveProfile();
 	const { t } = useTranslation();
 	const { profileIsSyncing } = useConfiguration();
-	const isCompact = !profile.appearance().get("useExpandedTables");
+
 	const showSkeletons = profileIsSyncing && wallets.length === 0;
 
 	const [currentPage, setCurrentPage] = useState(1);
@@ -144,12 +143,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 
 	const renderTableRow = useCallback(
 		(wallet: Contracts.IReadWriteWallet) =>
-			showSkeletons ? (
-				<WalletListItemSkeleton isCompact={isCompact} />
-			) : (
-				<WalletListItem wallet={wallet} isCompact={isCompact} />
-			),
-		[showSkeletons, isCompact],
+			showSkeletons ? <WalletListItemSkeleton /> : <WalletListItem wallet={wallet} />,
+		[showSkeletons],
 	);
 
 	return (
@@ -172,12 +167,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 						{!isMdAndAbove && (
 							<div className="space-y-3">
 								{wallets.slice(0, itemsPerPage).map((wallet) => (
-									<WalletListItem
-										key={wallet.id()}
-										wallet={wallet}
-										isCompact={isCompact}
-										isLargeScreen={false}
-									/>
+									<WalletListItem key={wallet.id()} wallet={wallet} isLargeScreen={false} />
 								))}
 							</div>
 						)}

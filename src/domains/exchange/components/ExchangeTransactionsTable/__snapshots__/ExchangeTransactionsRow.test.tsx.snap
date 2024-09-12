@@ -10,7 +10,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -49,7 +49,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -60,14 +60,14 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -107,7 +107,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -131,7 +131,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-givenh"
@@ -153,7 +153,7 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -202,11 +202,11 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -258,7 +258,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -297,7 +297,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -308,14 +308,14 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -355,7 +355,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -379,7 +379,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-givenh"
@@ -401,7 +401,7 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -441,11 +441,11 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -497,7 +497,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -536,7 +536,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -547,14 +547,14 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -594,7 +594,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -618,7 +618,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-givenh"
@@ -640,7 +640,7 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -680,11 +680,11 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -736,7 +736,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -775,7 +775,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -786,14 +786,14 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -867,7 +867,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -891,7 +891,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded pr-1.5 css-givenh"
@@ -947,7 +947,7 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -988,11 +988,11 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -1044,7 +1044,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -1083,7 +1083,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -1094,14 +1094,14 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -1141,7 +1141,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -1165,7 +1165,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-givenh"
@@ -1187,7 +1187,7 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -1232,11 +1232,11 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -1288,7 +1288,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
       >
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:py-4 xl:min-h-0 flex-col gap-1"
           >
             <button
               class="h-5 w-20 cursor-pointer truncate"
@@ -1327,7 +1327,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden text-sm xl:table-cell"
         >
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 items-start xl:items-center font-semibold"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 items-start xl:items-center font-semibold"
           >
             <span
               data-testid="TimeAgo"
@@ -1338,14 +1338,14 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 my-1 transition-colors duration-100 min-h-17.5 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
+            class="flex px-3 my-1 transition-colors duration-100 min-h-11 font-semibold text-sm items-start xl:items-center mt-2 xl:mt-1"
           />
         </td>
         <td
           class="lg:hidden"
         >
           <div
-            class="px-3 transition-colors duration-100 min-h-17.5 items-end flex flex-col gap-1.5 my-3 xl:my-0"
+            class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -1385,7 +1385,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-1pbju28"
@@ -1409,7 +1409,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
               class="rounded px-1.5 css-givenh"
@@ -1431,7 +1431,7 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 justify-center items-start xl:items-center my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-center items-start xl:items-center my-3 xl:my-0"
           >
             <span>
               <div
@@ -1476,11 +1476,11 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
         </td>
         <td>
           <div
-            class="flex px-3 transition-colors duration-100 min-h-17.5 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r items-start xl:items-center justify-end text-theme-secondary-text my-3 xl:my-0"
           >
             <button
-              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 disabled:cursor-not-allowed rounded bg-theme-danger-100 text-theme-danger-400 dark:bg-theme-danger-400 dark:text-white hover:bg-theme-danger-400 hover:text-white dark:hover:bg-theme-danger-500 focus:ring-theme-danger-300 css-1sy20y6"
-              data-testid="TableRemoveButton"
+              class="px-5 py-3 space-x-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded text-theme-secondary-700 bg-transparent dark:text-theme-secondary-600 dark:bg-transparent css-1sy20y6"
+              data-testid="TableRemoveButton--compact"
               type="button"
             >
               <div
@@ -1592,12 +1592,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-xqt0aw"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-center"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1608,12 +1608,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-1jspzfx"
+              class="rounded px-1.5 css-givenh"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-center"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1632,12 +1632,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-xqt0aw"
+              class="rounded px-1.5 css-1pbju28"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-center"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1656,12 +1656,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1jspzfx"
+              class="rounded px-1.5 css-givenh"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-center"
+                class="flex space-x-1 items-stretch"
               >
                 <span
                   class="whitespace-nowrap text-sm"

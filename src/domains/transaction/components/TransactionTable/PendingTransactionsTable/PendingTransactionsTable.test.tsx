@@ -818,7 +818,7 @@ describe("Signed Transaction Table", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowRecipientLabel")).toHaveLength(2));
 
-		await userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRemoveButton--compact")[0]);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(submitButton()).toBeInTheDocument();
@@ -905,7 +905,7 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		await userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		await userEvent.click(screen.getAllByTestId("TableRemoveButton--compact")[0]);
 
 		expect(screen.getByTestId("Modal__inner")).toBeInTheDocument();
 		expect(cancelButton()).toBeInTheDocument();

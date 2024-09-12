@@ -22,11 +22,9 @@ interface SignedTransactionRowProperties {
 	onRowClick?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	onRemovePendingTransaction?: (transaction: DTO.ExtendedSignedTransactionData) => void;
 	wallet: Contracts.IReadWriteWallet;
-	isCompact: boolean;
 }
 
 interface SignButtonProperties {
-	isCompact: boolean;
 	isAwaitingFinalSignature: boolean;
 	isAwaitingOurFinalSignature: boolean;
 	canBeSigned: boolean;
@@ -36,7 +34,6 @@ interface SignButtonProperties {
 
 export const SignButton = ({
 	className,
-	isCompact,
 	isAwaitingFinalSignature,
 	isAwaitingOurFinalSignature,
 	canBeSigned,
@@ -68,26 +65,13 @@ export const SignButton = ({
 		);
 	};
 
-	if (isCompact) {
-		return (
-			<Button
-				size="sm"
-				data-testid="TransactionRow__sign"
-				variant="transparent"
-				className={`p-0 text-theme-primary-600 hover:text-theme-primary-700 ${className}`}
-				onClick={onClick}
-			>
-				<ButtonContent />
-			</Button>
-		);
-	}
-
 	return (
 		<Button
+			size="sm"
 			data-testid="TransactionRow__sign"
-			variant={isAwaitingFinalSignature ? "primary" : "secondary"}
+			variant="transparent"
+			className={`p-0 text-theme-primary-600 hover:text-theme-primary-700 ${className}`}
 			onClick={onClick}
-			className={className}
 		>
 			<ButtonContent />
 		</Button>
@@ -98,7 +82,6 @@ export const SignedTransactionRow = ({
 	transaction,
 	onRowClick,
 	wallet,
-	isCompact,
 	onRemovePendingTransaction,
 }: SignedTransactionRowProperties) => {
 	const { t } = useTranslation();
@@ -127,7 +110,7 @@ export const SignedTransactionRow = ({
 
 	return (
 		<TableRow className="relative">
-			<TableCell variant="start" isCompact={isCompact} innerClassName="items-start my-0 py-3 xl:min-h-0">
+			<TableCell variant="start" innerClassName="items-start my-0 py-3 xl:min-h-0">
 				<div className="flex flex-col gap-1 font-semibold">
 					<span className="text-sm">
 						<TruncateMiddle
@@ -151,7 +134,7 @@ export const SignedTransactionRow = ({
 				<TimeAgo date={DateTime.fromUnix(transaction.timestamp().toUNIX()).toISOString()} />
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0">
+			<TableCell innerClassName="items-start xl:min-h-0">
 				<Label
 					color="secondary"
 					size="xs"
@@ -163,7 +146,7 @@ export const SignedTransactionRow = ({
 				</Label>
 			</TableCell>
 
-			<TableCell innerClassName="space-x-2 items-start xl:min-h-0" isCompact={isCompact}>
+			<TableCell innerClassName="space-x-2 items-start xl:min-h-0">
 				<Label
 					color="danger-bg"
 					size="xs"
@@ -186,7 +169,6 @@ export const SignedTransactionRow = ({
 			<TableCell
 				className="hidden w-16 lg:table-cell"
 				innerClassName="items-start justify-center truncate hidden lg:flex xl:min-h-0"
-				isCompact={isCompact}
 			>
 				<Tooltip content={status.label}>
 					<span className="text-theme-secondary-700">
@@ -195,7 +177,7 @@ export const SignedTransactionRow = ({
 				</Tooltip>
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="justify-end items-start xl:min-h-0">
+			<TableCell innerClassName="justify-end items-start xl:min-h-0">
 				<div className="flex flex-col items-end gap-1">
 					<AmountLabel
 						value={transaction.amount() + transaction.fee()}
@@ -210,17 +192,15 @@ export const SignedTransactionRow = ({
 			</TableCell>
 
 			<TableCell
-				isCompact={isCompact}
 				className="hidden lg:table-cell"
 				innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0"
 			>
 				<Amount value={wallet.convertedBalance()} ticker={wallet.exchangeCurrency()} />
 			</TableCell>
 
-			<TableCell isCompact={isCompact} innerClassName="items-start xl:min-h-0" variant="end">
+			<TableCell innerClassName="items-start xl:min-h-0" variant="end">
 				<div className="flex flex-row items-center">
 					<SignButton
-						isCompact={isCompact}
 						canBeSigned={canBeSigned}
 						isAwaitingFinalSignature={isAwaitingFinalSignature}
 						isAwaitingOurFinalSignature={isAwaitingOurFinalSignature}
@@ -238,12 +218,7 @@ export const SignedTransactionRow = ({
 						}
 					>
 						<div>
-							<TableRemoveButton
-								isCompact={isCompact}
-								isDisabled={!canBeDeleted}
-								onClick={handleRemove}
-								className="m-0 p-0"
-							/>
+							<TableRemoveButton isDisabled={!canBeDeleted} onClick={handleRemove} className="m-0 p-0" />
 						</div>
 					</Tooltip>
 				</div>

@@ -83,22 +83,6 @@ describe("TransactionRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render compact skeleton", () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<TransactionRow profile={profile} isLoading />
-				</tbody>
-			</table>,
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
 	it("should render with currency", () => {
 		const { asFragment } = render(
 			<table>

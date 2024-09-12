@@ -20,7 +20,6 @@ export const PendingTransactions = ({
 	onRemove,
 	onPendingTransactionClick,
 	pendingTransactions,
-	isCompact,
 }: Properties) => {
 	const { t } = useTranslation();
 	const [pendingRemovalTransaction, setPendingRemovalTransaction] = useState<DTO.ExtendedSignedTransactionData>();
@@ -47,7 +46,6 @@ export const PendingTransactions = ({
 
 				return (
 					<PendingTransferRow
-						isCompact={isCompact}
 						wallet={wallet}
 						transaction={transaction.transaction as DTO.ExtendedConfirmedTransactionData}
 						onRowClick={onPendingTransactionClick}
@@ -68,7 +66,6 @@ export const PendingTransactions = ({
 
 			return (
 				<SignedTransactionRow
-					isCompact={isCompact}
 					transaction={transaction.transaction as DTO.ExtendedSignedTransactionData}
 					wallet={wallet}
 					onRowClick={onClick}
@@ -76,7 +73,7 @@ export const PendingTransactions = ({
 				/>
 			);
 		},
-		[isCompact, wallet, onClick, setPendingRemovalTransaction, onPendingTransactionClick, useResponsive],
+		[wallet, onClick, setPendingRemovalTransaction, onPendingTransactionClick, useResponsive],
 	);
 
 	const handleRemove = async (transaction: DTO.ExtendedSignedTransactionData) => {

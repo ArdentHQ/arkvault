@@ -9,15 +9,7 @@ import { Exchange } from "./Exchange";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { translations } from "@/domains/exchange/i18n";
-import {
-	env,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-	within,
-	renderResponsiveWithRoute,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
 let history: HashHistory;
@@ -248,71 +240,6 @@ describe("Exchange", () => {
 		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable__empty-message")).toBeInTheDocument();
-	});
-
-	it("should show exchange transaction history as not compact if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		profile.exchangeTransactions().create(stubData);
-
-		render(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRemoveButton")).toHaveLength(profile.exchangeTransactions().count());
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
-	});
-
-	it("should show exchange transaction history as compact on md screen even if user uses expanded tables", async () => {
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
-
-		profile.exchangeTransactions().create(stubData);
-
-		renderResponsiveWithRoute(
-			<Route path="/profiles/:profileId/exchange">
-				<ExchangeProvider>
-					<Wrapper>
-						<Exchange />
-					</Wrapper>
-				</ExchangeProvider>
-			</Route>,
-			"md",
-			{
-				history,
-				route: exchangeURL,
-			},
-		);
-
-		await waitFor(() => {
-			expect(screen.getByTestId("header__title")).toHaveTextContent(translations.PAGE_EXCHANGES.TITLE);
-		});
-
-		await userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
-
-		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
-		expect(screen.getAllByTestId("TableRemoveButton--compact")).toHaveLength(
-			profile.exchangeTransactions().count(),
-		);
-
-		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
 	it("should navigate to exchange transaction", async () => {
