@@ -6094,7 +6094,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -7065,7 +7065,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"

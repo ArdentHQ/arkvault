@@ -32,12 +32,12 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 					walletName={alias}
 					walletNameClass="text-theme-text"
 					showCopyButton
-					wrapperClass="md:w-3/4"
+					wrapperClass="sm:w-3/4"
 				/>
 			</div>
 
 			{recipients.length > 0 && (
-				<div className="hidden h-8 w-full items-center md:flex">
+				<div className="hidden h-8 w-full items-center sm:flex">
 					<Divider dashed />
 				</div>
 			)}

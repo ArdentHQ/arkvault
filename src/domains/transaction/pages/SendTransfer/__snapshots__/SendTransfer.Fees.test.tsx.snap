@@ -851,7 +851,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -909,7 +909,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a high f
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -2138,7 +2138,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -2196,7 +2196,7 @@ exports[`SendTransfer Fee Handling > should send a single transfer with a low fe
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"

@@ -32,7 +32,7 @@ exports[`TransferLedgerReview > should render 1`] = `
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"
@@ -279,7 +279,7 @@ exports[`TransferLedgerReview > should render skeleton while loading expiration 
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"
@@ -543,7 +543,7 @@ exports[`TransferLedgerReview > should render with memo 1`] = `
             From
           </div>
           <div
-            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+            class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
           >
             <span
               class="font-semibold text-base text-theme-text"

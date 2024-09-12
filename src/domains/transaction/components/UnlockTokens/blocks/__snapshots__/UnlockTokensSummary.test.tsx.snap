@@ -198,7 +198,7 @@ exports[`UnlockTokensSummary > should render 1`] = `
                   From
                 </div>
                 <div
-                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                 >
                   <span
                     class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"

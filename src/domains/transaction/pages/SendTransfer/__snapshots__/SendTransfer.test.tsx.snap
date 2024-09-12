@@ -728,7 +728,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -786,7 +786,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -4929,7 +4929,7 @@ exports[`SendTransfer > should render review step 1`] = `
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -4987,7 +4987,7 @@ exports[`SendTransfer > should render review step 1`] = `
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center md:flex"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -5357,7 +5357,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -5415,7 +5415,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center md:flex"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -5830,7 +5830,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
             >
               <span
                 class="font-semibold text-base text-theme-text"
@@ -5888,7 +5888,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
             </div>
           </div>
           <div
-            class="hidden h-8 w-full items-center md:flex"
+            class="hidden h-8 w-full items-center sm:flex"
           >
             <div
               class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -6972,7 +6972,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -7030,7 +7030,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -8136,7 +8136,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -8194,7 +8194,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -9852,7 +9852,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -9910,7 +9910,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -11016,7 +11016,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -11074,7 +11074,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"
@@ -12180,7 +12180,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -12238,7 +12238,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                               </div>
                             </div>
                             <div
-                              class="hidden h-8 w-full items-center md:flex"
+                              class="hidden h-8 w-full items-center sm:flex"
                             >
                               <div
                                 class="border-theme-secondary-300 dark:border-theme-secondary-800 css-ppmbkz"

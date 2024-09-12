@@ -3078,7 +3078,7 @@ exports[`SendIpfs > should send a ipfs transfer with a ledger wallet 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -4199,7 +4199,7 @@ exports[`SendIpfs > should send an IPFS transaction and go back to wallet page 1
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -5322,7 +5322,7 @@ exports[`SendIpfs > should send an ipfs transaction with a multisig wallet 1`] =
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full md:w-3/4"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text"
@@ -6459,16 +6459,12 @@ exports[`SendIpfs > should show an error if an invalid IPFS hash is entered 1`] 
 exports[`SendIpfs > should show error step and go back 1`] = `
 <DocumentFragment>
   <div
-    class="css-w3nefz"
+    class="css-kmmje1"
   >
     <div
-      class="css-sdeely"
+      class="css-wwznix"
       data-testid="NavigationBarMobile"
     >
-      <div
-        class="border-t border-theme-secondary-300 dark:border-theme-secondary-900"
-        data-testid="NavigationBar__buttons-separator"
-      />
       <div
         class="flex h-14 items-center justify-center space-x-4"
       >
