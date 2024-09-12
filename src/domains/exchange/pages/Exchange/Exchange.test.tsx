@@ -16,7 +16,6 @@ import {
 	screen,
 	waitFor,
 	within,
-	renderResponsiveWithRoute,
 } from "@/utils/testing-library";
 import { requestMock, server } from "@/tests/mocks/server";
 
