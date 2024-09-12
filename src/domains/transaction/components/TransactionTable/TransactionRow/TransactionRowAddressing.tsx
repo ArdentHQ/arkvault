@@ -7,7 +7,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import cn from "classnames";
 
-const RowLabel = ({ isNegative = false }: { isNegative: boolean }) => {
+const RowLabel = ({ isNegative }: { isNegative: boolean }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -16,6 +16,7 @@ const RowLabel = ({ isNegative = false }: { isNegative: boolean }) => {
 			size="xs"
 			noBorder
 			className="!flex w-10 items-center justify-center rounded py-[3px]"
+			data-testid="TransactionRowAddressing__label"
 		>
 			{isNegative ? t("COMMON.TO") : t("COMMON.FROM")}
 		</Label>
@@ -62,7 +63,7 @@ export const TransactionRowAddressing = ({
 
 	if (transaction?.isMultiPayment()) {
 		return (
-			<div className="flex flex-row gap-2">
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__multipayment">
 				<RowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.MULTIPLE")}{" "}
@@ -76,7 +77,7 @@ export const TransactionRowAddressing = ({
 
 	if (transaction?.isVoteCombination() || transaction?.isVote() || transaction?.isUnvote()) {
 		return (
-			<div className="flex flex-row gap-2">
+			<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__vote">
 				<RowLabel isNegative={isNegative} />
 				<span className="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200">
 					{t("COMMON.CONTRACT")}{" "}
@@ -93,7 +94,7 @@ export const TransactionRowAddressing = ({
 	}
 
 	return (
-		<div className="flex flex-row gap-2">
+		<div className="flex flex-row gap-2" data-testid="TransactionRowAddressing__container">
 			<RowLabel isNegative={isNegative} />
 			<div className="w-50">
 				<Address
