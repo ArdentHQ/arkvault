@@ -11,10 +11,15 @@ interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
 	recipients: RecipientItem[];
 	profile: Contracts.IProfile;
-	labelClassName?: string
+	labelClassName?: string;
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients = [], profile, labelClassName }: Properties): ReactElement => {
+export const TransactionAddresses = ({
+	senderWallet,
+	recipients = [],
+	profile,
+	labelClassName,
+}: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -45,7 +50,10 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile, l
 			)}
 
 			{recipients.map((recipient, index) => (
-				<div className="mt-3 sm:mt-0 flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0" key={index}>
+				<div
+					className="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+					key={index}
+				>
 					<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 					<Address
 						key={index}

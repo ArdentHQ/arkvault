@@ -10,7 +10,13 @@ import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 
-export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet; profile: Contracts.IProfile }) => {
+export const ReviewStep = ({
+	wallet,
+	profile,
+}: {
+	wallet: Contracts.IReadWriteWallet;
+	profile: Contracts.IProfile;
+}) => {
 	const { t } = useTranslation();
 
 	const { getValues, unregister, watch } = useFormContext();
@@ -33,7 +39,12 @@ export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWa
 				}
 			/>
 
-			<TransactionAddresses labelClassName="w-auto sm:min-w-28" senderWallet={wallet} recipients={[]} profile={profile}/>
+			<TransactionAddresses
+				labelClassName="w-auto sm:min-w-28"
+				senderWallet={wallet}
+				recipients={[]}
+				profile={profile}
+			/>
 
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="space-y-3 sm:space-y-0">
