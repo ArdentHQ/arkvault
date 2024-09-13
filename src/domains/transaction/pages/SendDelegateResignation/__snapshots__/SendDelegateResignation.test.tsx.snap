@@ -6280,7 +6280,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                               class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
                             >
                               <span>
-                                0 Confirmations
+                                0 Confirmations 
                               </span>
                             </p>
                           </div>
@@ -7229,7 +7229,7 @@ exports[`SendDelegateResignation > Delegate Resignation > should successfully si
                               class="font-semibold text-theme-secondary-700 dark:text-theme-success-600"
                             >
                               <span>
-                                0 Confirmations
+                                0 Confirmations 
                               </span>
                             </p>
                           </div>
