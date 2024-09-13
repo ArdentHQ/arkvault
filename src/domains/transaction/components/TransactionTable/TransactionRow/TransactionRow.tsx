@@ -123,6 +123,7 @@ export const TransactionRow = memo(
 
 				<TableCell
 					className="hidden lg:table-cell"
+					variant="end"
 					innerClassName="justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
 				>
 					<Amount value={transaction.convertedTotal()} ticker={exchangeCurrency || ""} />
