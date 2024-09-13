@@ -11,9 +11,10 @@ interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
 	recipients: RecipientItem[];
 	profile: Contracts.IProfile;
+	labelClassName?: string
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients = [], profile }: Properties): ReactElement => {
+export const TransactionAddresses = ({ senderWallet, recipients = [], profile, labelClassName }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -25,14 +26,15 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-			<div className="flex w-full">
-				<DetailLabelText>{t("COMMON.FROM")}</DetailLabelText>
+			<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+				<DetailLabelText className={labelClassName}>{t("COMMON.FROM")}</DetailLabelText>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
-					walletNameClass="text-theme-text"
 					showCopyButton
-					wrapperClass="sm:w-3/4"
+					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+					wrapperClass="justify-end sm:justify-start"
 				/>
 			</div>
 
@@ -43,15 +45,16 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 			)}
 
 			{recipients.map((recipient, index) => (
-				<div className="mt-3 flex w-full md:mt-0" key={index}>
-					<DetailLabelText>{t("COMMON.TO")}</DetailLabelText>
+				<div className="mt-3 sm:mt-0 flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0" key={index}>
+					<DetailLabelText className={labelClassName}>{t("COMMON.TO")}</DetailLabelText>
 					<Address
 						key={index}
 						address={recipient.address}
 						walletName={recipient.alias}
-						walletNameClass="text-theme-text"
 						showCopyButton
-						wrapperClass="sm:w-3/4"
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+						wrapperClass="justify-end sm:justify-start"
 					/>
 				</div>
 			))}

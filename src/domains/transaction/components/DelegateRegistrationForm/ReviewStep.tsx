@@ -9,8 +9,9 @@ import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/Detail
 import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
+import {TransactionAddresses} from "@/domains/transaction/components/TransactionDetail";
 
-export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
+export const ReviewStep = ({ wallet, profile }: { wallet: Contracts.IReadWriteWallet; profile: Contracts.IProfile }) => {
 	const { t } = useTranslation();
 
 	const { getValues, unregister, watch } = useFormContext();
@@ -33,19 +34,7 @@ export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) =
 				}
 			/>
 
-			<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-				<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-					<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.FROM")}</DetailTitle>
-					<Address
-						address={wallet.address()}
-						walletName={wallet.alias()}
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-						wrapperClass="justify-end sm:justify-start"
-						showCopyButton
-					/>
-				</div>
-			</DetailWrapper>
+			<TransactionAddresses labelClassName="w-auto sm:min-w-28" senderWallet={wallet} recipients={[]} profile={profile}/>
 
 			<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 				<div className="space-y-3 sm:space-y-0">
