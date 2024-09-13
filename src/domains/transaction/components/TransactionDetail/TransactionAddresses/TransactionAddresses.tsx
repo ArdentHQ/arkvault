@@ -5,7 +5,7 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
@@ -27,7 +27,7 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile, l
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
 			<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
-				<DetailLabelText className={labelClassName}>{t("COMMON.FROM")}</DetailLabelText>
+				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
@@ -46,7 +46,7 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile, l
 
 			{recipients.map((recipient, index) => (
 				<div className="mt-3 sm:mt-0 flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0" key={index}>
-					<DetailLabelText className={labelClassName}>{t("COMMON.TO")}</DetailLabelText>
+					<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 					<Address
 						key={index}
 						address={recipient.address}
