@@ -143,13 +143,13 @@ export const Transactions = memo(function Transactions({
 		<>
 			{title && (
 				<div className="relative hidden justify-between md:flex">
-					<h2 className="mb-6 text-2xl font-bold">{title}</h2>
+					<h2 className="mb-3 text-2xl font-bold">{title}</h2>
 				</div>
 			)}
 
 			{showTabs && (
 				<>
-					<Tabs className="mb-8 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
+					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
 						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
 								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
@@ -214,7 +214,7 @@ export const Transactions = memo(function Transactions({
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
 						</span>
 						<FilterTransactions
-							className="my-auto mr-6"
+							className="my-auto"
 							wallets={wallets}
 							onSelect={filterChangeHandler}
 							isDisabled={wallets.length === 0 || isLoadingTransactions}
