@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { StepHeader } from "@/app/components/StepHeader";
 import { DetailLabel, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Address } from "@/app/components/Address";
 import { Divider } from "@/app/components/Divider";
 import { ThemeIcon } from "@/app/components/Icon";
 import {TransactionAddresses} from "@/domains/transaction/components/TransactionDetail";
