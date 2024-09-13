@@ -15,7 +15,7 @@ const RowLabel = ({ isNegative }: { isNegative: boolean }) => {
 			color={isNegative ? "danger-bg" : "success-bg"}
 			size="xs"
 			noBorder
-			className="!flex w-10 items-center justify-center rounded py-[3px]"
+			className="!flex h-[21px] w-10 items-center justify-center rounded py-[3px]"
 			data-testid="TransactionRowAddressing__label"
 		>
 			{isNegative ? t("COMMON.TO") : t("COMMON.FROM")}
