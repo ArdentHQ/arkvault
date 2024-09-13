@@ -85,7 +85,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -263,7 +263,7 @@ exports[`TransactionRow > should render 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >
@@ -1125,7 +1125,7 @@ exports[`TransactionRow > should render with currency 1`] = `
               data-testid="TransactionRowAddressing__container"
             >
               <div
-                class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                 color="danger-bg"
                 data-testid="TransactionRowAddressing__label"
               >

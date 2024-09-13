@@ -3998,7 +3998,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4167,7 +4167,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4347,7 +4347,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4516,7 +4516,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4685,7 +4685,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -4854,7 +4854,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5023,7 +5023,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5192,7 +5192,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5361,7 +5361,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -5530,7 +5530,7 @@ exports[`TransactionTable > should render compact 1`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10074,7 +10074,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10243,7 +10243,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10423,7 +10423,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10592,7 +10592,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10761,7 +10761,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -10930,7 +10930,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11099,7 +11099,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11268,7 +11268,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11437,7 +11437,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -11606,7 +11606,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12002,7 +12002,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12171,7 +12171,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12351,7 +12351,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12520,7 +12520,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12689,7 +12689,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -12858,7 +12858,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13027,7 +13027,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13196,7 +13196,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13365,7 +13365,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13534,7 +13534,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -13930,7 +13930,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14099,7 +14099,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14279,7 +14279,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14448,7 +14448,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14617,7 +14617,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14786,7 +14786,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -14955,7 +14955,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -15124,7 +15124,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -15293,7 +15293,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                     color="success-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
@@ -15462,7 +15462,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                   data-testid="TransactionRowAddressing__container"
                 >
                   <div
-                    class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                    class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                     color="danger-bg"
                     data-testid="TransactionRowAddressing__label"
                   >
