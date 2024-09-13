@@ -3,7 +3,7 @@
 exports[`Transactions > should fetch more transactions 1`] = `
 <DocumentFragment>
   <div
-    class="mb-8 hidden md:block"
+    class="mb-3 hidden md:block"
   >
     <div
       class="h-14 px-6 py-4 css-rw43kq"
@@ -173,7 +173,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
         Showing 60 results
       </span>
       <div
-        class="my-auto mr-6"
+        class="my-auto"
         data-testid="FilterTransactions"
       >
         <div
@@ -523,7 +523,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -583,7 +583,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -675,7 +675,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -735,7 +735,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -827,7 +827,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -887,7 +887,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -979,7 +979,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1039,7 +1039,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1131,7 +1131,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1191,7 +1191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1283,7 +1283,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1343,7 +1343,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1435,7 +1435,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1495,7 +1495,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1587,7 +1587,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1647,7 +1647,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1739,7 +1739,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -1827,7 +1827,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -1919,7 +1919,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2007,7 +2007,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2099,7 +2099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2187,7 +2187,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2279,7 +2279,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2367,7 +2367,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2459,7 +2459,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2536,7 +2536,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2628,7 +2628,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2705,7 +2705,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2797,7 +2797,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -2874,7 +2874,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -2966,7 +2966,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3043,7 +3043,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3135,7 +3135,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3212,7 +3212,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3304,7 +3304,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3381,7 +3381,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3473,7 +3473,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3550,7 +3550,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3642,7 +3642,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3719,7 +3719,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3811,7 +3811,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -3888,7 +3888,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -3980,7 +3980,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4057,7 +4057,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4149,7 +4149,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4226,7 +4226,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4318,7 +4318,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4395,7 +4395,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4487,7 +4487,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4564,7 +4564,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4656,7 +4656,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4733,7 +4733,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4825,7 +4825,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -4902,7 +4902,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -4994,7 +4994,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5071,7 +5071,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5163,7 +5163,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5240,7 +5240,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5332,7 +5332,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5409,7 +5409,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5501,7 +5501,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5578,7 +5578,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5670,7 +5670,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5747,7 +5747,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -5839,7 +5839,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -5916,7 +5916,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6008,7 +6008,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6085,7 +6085,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6177,7 +6177,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6254,7 +6254,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6346,7 +6346,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6423,7 +6423,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6515,7 +6515,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6592,7 +6592,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6684,7 +6684,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6761,7 +6761,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -6853,7 +6853,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -6930,7 +6930,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7022,7 +7022,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7099,7 +7099,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7191,7 +7191,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7268,7 +7268,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7360,7 +7360,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7437,7 +7437,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7529,7 +7529,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7606,7 +7606,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7698,7 +7698,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7775,7 +7775,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -7867,7 +7867,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -7944,7 +7944,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8036,7 +8036,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8113,7 +8113,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8205,7 +8205,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8282,7 +8282,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8374,7 +8374,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8451,7 +8451,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8543,7 +8543,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8620,7 +8620,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8712,7 +8712,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8789,7 +8789,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -8881,7 +8881,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -8958,7 +8958,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9050,7 +9050,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9127,7 +9127,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9219,7 +9219,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9279,7 +9279,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9371,7 +9371,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9431,7 +9431,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9523,7 +9523,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9583,7 +9583,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9675,7 +9675,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9735,7 +9735,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9827,7 +9827,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -9904,7 +9904,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -9996,7 +9996,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -10073,7 +10073,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -10165,7 +10165,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -10242,7 +10242,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -10334,7 +10334,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -10411,7 +10411,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -10444,7 +10444,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
 exports[`Transactions > should hide view more button when there are no next pages 1`] = `
 <DocumentFragment>
   <div
-    class="mb-8 hidden md:block"
+    class="mb-3 hidden md:block"
   >
     <div
       class="h-14 px-6 py-4 css-rw43kq"
@@ -10614,7 +10614,7 @@ exports[`Transactions > should hide view more button when there are no next page
         Showing 30 results
       </span>
       <div
-        class="my-auto mr-6"
+        class="my-auto"
         data-testid="FilterTransactions"
       >
         <div
@@ -10964,7 +10964,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11024,7 +11024,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11116,7 +11116,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11176,7 +11176,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11268,7 +11268,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11328,7 +11328,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11420,7 +11420,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11480,7 +11480,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11572,7 +11572,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11660,7 +11660,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11752,7 +11752,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -11840,7 +11840,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -11932,7 +11932,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12009,7 +12009,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12101,7 +12101,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12178,7 +12178,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12270,7 +12270,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12347,7 +12347,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12439,7 +12439,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12516,7 +12516,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12608,7 +12608,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12685,7 +12685,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12777,7 +12777,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -12854,7 +12854,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -12946,7 +12946,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13023,7 +13023,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13115,7 +13115,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13192,7 +13192,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13284,7 +13284,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13361,7 +13361,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13453,7 +13453,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13530,7 +13530,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13622,7 +13622,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13699,7 +13699,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13791,7 +13791,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -13868,7 +13868,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -13960,7 +13960,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14037,7 +14037,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14129,7 +14129,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14206,7 +14206,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14298,7 +14298,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14375,7 +14375,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14467,7 +14467,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14544,7 +14544,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14636,7 +14636,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14713,7 +14713,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14805,7 +14805,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -14882,7 +14882,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -14974,7 +14974,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15051,7 +15051,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15143,7 +15143,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15220,7 +15220,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15312,7 +15312,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15372,7 +15372,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15464,7 +15464,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15524,7 +15524,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15616,7 +15616,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15693,7 +15693,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15785,7 +15785,7 @@ exports[`Transactions > should hide view more button when there are no next page
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -15862,7 +15862,7 @@ exports[`Transactions > should hide view more button when there are no next page
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -15895,7 +15895,7 @@ exports[`Transactions > should hide view more button when there are no next page
 exports[`Transactions > should open detail modal on transaction row click 1`] = `
 <DocumentFragment>
   <div
-    class="mb-8 hidden md:block"
+    class="mb-3 hidden md:block"
   >
     <div
       class="h-14 px-6 py-4 css-rw43kq"
@@ -16065,7 +16065,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
         Showing 30 results
       </span>
       <div
-        class="my-auto mr-6"
+        class="my-auto"
         data-testid="FilterTransactions"
       >
         <div
@@ -16415,7 +16415,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -16475,7 +16475,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -16567,7 +16567,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -16627,7 +16627,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -16719,7 +16719,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -16779,7 +16779,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -16871,7 +16871,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__vote"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -16931,7 +16931,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17023,7 +17023,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
                       color="danger-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17111,7 +17111,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17203,7 +17203,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17291,7 +17291,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17383,7 +17383,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17460,7 +17460,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17552,7 +17552,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17629,7 +17629,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17721,7 +17721,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17798,7 +17798,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -17890,7 +17890,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -17967,7 +17967,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18059,7 +18059,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18136,7 +18136,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18228,7 +18228,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18305,7 +18305,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18397,7 +18397,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18474,7 +18474,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18566,7 +18566,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18643,7 +18643,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18735,7 +18735,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18812,7 +18812,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -18904,7 +18904,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -18981,7 +18981,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19073,7 +19073,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19150,7 +19150,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19242,7 +19242,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19319,7 +19319,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19411,7 +19411,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19488,7 +19488,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19580,7 +19580,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19657,7 +19657,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19749,7 +19749,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19826,7 +19826,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -19918,7 +19918,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -19995,7 +19995,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20087,7 +20087,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20164,7 +20164,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20256,7 +20256,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20333,7 +20333,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20425,7 +20425,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20502,7 +20502,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20594,7 +20594,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20671,7 +20671,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20763,7 +20763,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20823,7 +20823,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -20915,7 +20915,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__multipayment"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -20975,7 +20975,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -21067,7 +21067,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -21144,7 +21144,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"
@@ -21236,7 +21236,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     data-testid="TransactionRowAddressing__container"
                   >
                     <div
-                      class="!flex w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
+                      class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-mnu3gn"
                       color="success-bg"
                       data-testid="TransactionRowAddressing__label"
                     >
@@ -21313,7 +21313,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                 class="hidden lg:table-cell"
               >
                 <div
-                  class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                  class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
                 >
                   <span
                     class="whitespace-nowrap"

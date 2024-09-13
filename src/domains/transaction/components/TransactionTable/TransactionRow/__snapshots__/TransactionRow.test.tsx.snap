@@ -162,7 +162,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"
@@ -351,7 +351,7 @@ exports[`TransactionRow > should render 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"
@@ -1202,7 +1202,7 @@ exports[`TransactionRow > should render with currency 1`] = `
           class="hidden lg:table-cell"
         >
           <div
-            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"

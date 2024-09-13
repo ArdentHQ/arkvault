@@ -4075,7 +4075,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4255,7 +4255,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4424,7 +4424,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4593,7 +4593,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4762,7 +4762,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -4931,7 +4931,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5100,7 +5100,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5269,7 +5269,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5438,7 +5438,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -5618,7 +5618,7 @@ exports[`TransactionTable > should render compact 1`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10151,7 +10151,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10331,7 +10331,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10500,7 +10500,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10669,7 +10669,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -10838,7 +10838,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11007,7 +11007,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11176,7 +11176,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11345,7 +11345,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11514,7 +11514,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -11694,7 +11694,7 @@ exports[`TransactionTable > should render responsive 3`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12079,7 +12079,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12259,7 +12259,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12428,7 +12428,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12597,7 +12597,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12766,7 +12766,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -12935,7 +12935,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13104,7 +13104,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13273,7 +13273,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13442,7 +13442,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -13622,7 +13622,7 @@ exports[`TransactionTable > should render responsive 4`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14007,7 +14007,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14187,7 +14187,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14356,7 +14356,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14525,7 +14525,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14694,7 +14694,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -14863,7 +14863,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15032,7 +15032,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15201,7 +15201,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15370,7 +15370,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
@@ -15550,7 +15550,7 @@ exports[`TransactionTable > should render responsive 5`] = `
               class="hidden lg:table-cell"
             >
               <div
-                class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
+                class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
               >
                 <span
                   class="whitespace-nowrap"
