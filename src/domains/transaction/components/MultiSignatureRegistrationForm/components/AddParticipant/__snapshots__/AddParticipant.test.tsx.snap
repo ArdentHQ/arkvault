@@ -305,16 +305,12 @@ exports[`Add Participant > should fail if cannot find the address remotely 1`] =
                   ARK Wallet 1
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -697,16 +693,12 @@ exports[`Add Participant > should fail to find 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -1099,16 +1091,12 @@ exports[`Add Participant > should fail with a duplicate address 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -1491,16 +1479,12 @@ exports[`Add Participant > should fail with cold wallet 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -1883,16 +1867,12 @@ exports[`Add Participant > should handle exception on find and show address not 
                   ARK Wallet 1
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -2165,16 +2145,12 @@ exports[`Add Participant > should render custom participants 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                </span>
-              </div>
+                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+              </span>
             </div>
           </div>
           <div
@@ -2457,16 +2433,12 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                   ARK Wallet 1
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
           <div
@@ -2590,16 +2562,12 @@ exports[`Add Participant > should work with an imported wallet 1`] = `
                   ARK Wallet 2
                 </span>
               </span>
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                </span>
-              </div>
+                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+              </span>
             </div>
           </div>
           <div

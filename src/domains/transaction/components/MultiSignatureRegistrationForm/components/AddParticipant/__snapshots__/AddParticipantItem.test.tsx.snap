@@ -52,16 +52,12 @@ exports[`Add Participant item > should render 1`] = `
                 ARK Wallet 2
               </span>
             </span>
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
-              >
-                D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-              </span>
-            </div>
+              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+            </span>
           </div>
         </div>
         <div
