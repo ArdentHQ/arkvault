@@ -877,21 +877,17 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1079,21 +1075,17 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1269,21 +1261,17 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1455,21 +1443,17 @@ exports[`Contacts > should render compact on md screen 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3406,21 +3390,17 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3608,21 +3588,17 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3798,21 +3774,17 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -3984,21 +3956,17 @@ exports[`Contacts > should render with contacts 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                           >
                             <div
-                              data-testid="Address__address-container"
+                              class="relative grow text-left"
                             >
-                              <div
-                                class="relative grow text-left"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                                  data-testid="Address__address"
-                                >
-                                  DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                                </span>
-                                <span>
-                                   
-                                </span>
-                              </div>
+                                DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                              </span>
+                              <span>
+                                 
+                              </span>
                             </div>
                           </div>
                         </div>

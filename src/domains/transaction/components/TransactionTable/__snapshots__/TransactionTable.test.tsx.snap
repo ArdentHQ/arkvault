@@ -126,7 +126,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 <div
                   class=""
                 >
-                  Value (undefined)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -1362,7 +1362,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
                 <div
                   class=""
                 >
-                  Value (undefined)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -2598,7 +2598,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 <div
                   class=""
                 >
-                  Value (undefined)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -3834,7 +3834,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 <div
                   class=""
                 >
-                  Value (ARK)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -4012,22 +4012,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -4192,22 +4187,17 @@ exports[`TransactionTable > should render compact 1`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -4361,22 +4351,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -4530,22 +4515,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -4699,22 +4679,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -4868,22 +4843,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5037,22 +5007,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5206,22 +5171,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5375,22 +5335,17 @@ exports[`TransactionTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5555,22 +5510,17 @@ exports[`TransactionTable > should render compact 1`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5723,16 +5673,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
                       </div>
                     </div>
                     <div
@@ -5797,16 +5743,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -5939,16 +5881,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                     <div
@@ -6002,16 +5940,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
-                          </span>
-                        </div>
+                          DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -6133,16 +6067,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -6207,16 +6137,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -6338,16 +6264,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -6412,16 +6334,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -6543,16 +6461,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -6617,16 +6531,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -6748,16 +6658,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -6822,16 +6728,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -6953,16 +6855,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -7027,16 +6925,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -7158,16 +7052,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -7232,16 +7122,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -7363,16 +7249,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -7437,16 +7319,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -7579,16 +7457,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                     <div
@@ -7642,16 +7516,12 @@ exports[`TransactionTable > should render responsive 1`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -7797,16 +7667,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
                       </div>
                     </div>
                     <div
@@ -7871,16 +7737,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -8013,16 +7875,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                     <div
@@ -8076,16 +7934,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
-                          </span>
-                        </div>
+                          DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -8207,16 +8061,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -8281,16 +8131,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -8412,16 +8258,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -8486,16 +8328,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -8617,16 +8455,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -8691,16 +8525,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -8822,16 +8652,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -8896,16 +8722,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -9027,16 +8849,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -9101,16 +8919,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -9232,16 +9046,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -9306,16 +9116,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -9437,16 +9243,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                     <div
@@ -9511,16 +9313,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -9653,16 +9451,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                             ARK Wallet 1
                           </span>
                         </span>
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
                       </div>
                     </div>
                     <div
@@ -9716,16 +9510,12 @@ exports[`TransactionTable > should render responsive 2`] = `
                       <div
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                       >
-                        <div
-                          data-testid="Address__address-container"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -9910,7 +9700,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class=""
                 >
-                  Value (ARK)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -10088,22 +9878,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -10268,22 +10053,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -10437,22 +10217,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -10606,22 +10381,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -10775,22 +10545,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -10944,22 +10709,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -11113,22 +10873,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -11282,22 +11037,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -11451,22 +11201,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -11631,22 +11376,17 @@ exports[`TransactionTable > should render responsive 3`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -11838,7 +11578,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class=""
                 >
-                  Value (ARK)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -12016,22 +11756,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -12196,22 +11931,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -12365,22 +12095,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -12534,22 +12259,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -12703,22 +12423,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -12872,22 +12587,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -13041,22 +12751,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -13210,22 +12915,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -13379,22 +13079,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -13559,22 +13254,17 @@ exports[`TransactionTable > should render responsive 4`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -13766,7 +13456,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class=""
                 >
-                  Value (ARK)
+                  Value (DARK)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -13944,22 +13634,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14124,22 +13809,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14293,22 +13973,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14462,22 +14137,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14631,22 +14301,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14800,22 +14465,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -14969,22 +14629,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -15138,22 +14793,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -15307,22 +14957,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -15487,22 +15132,17 @@ exports[`TransactionTable > should render responsive 5`] = `
                         </span>
                       </span>
                       <div
-                        class="w-full"
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </div>
