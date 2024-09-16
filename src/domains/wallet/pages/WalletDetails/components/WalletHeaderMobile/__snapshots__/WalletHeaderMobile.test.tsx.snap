@@ -94,16 +94,12 @@ exports[`WalletHeaderMobile > should render 1`] = `
               ARK Wallet 1
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-sm max-w-32 text-theme-secondary-600 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-sm max-w-32 text-theme-secondary-600 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-            </span>
-          </div>
+            D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+          </span>
         </div>
       </div>
       <div
