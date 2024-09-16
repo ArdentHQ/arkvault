@@ -16,10 +16,9 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	skeletonRowsLimit = 8,
 	onRowClick,
 	profile,
-	wallet,
+	coinName,
 }) => {
 	const { isXs, isSm } = useBreakpoint();
-	const coinName = wallet.currency();
 	const columns = useTransactionTableColumns({ coin: coinName });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({

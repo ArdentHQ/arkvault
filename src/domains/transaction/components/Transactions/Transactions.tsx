@@ -37,7 +37,6 @@ export const Transactions = memo(function Transactions({
 	onLoading,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
-	const wallet = useActiveWallet();
 
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
 		undefined,
@@ -230,7 +229,7 @@ export const Transactions = memo(function Transactions({
 						skeletonRowsLimit={8}
 						onRowClick={setTransactionModalItem}
 						profile={profile}
-						wallet={wallet}
+						coinName={wallets.at(0)?.currency()}
 					/>
 
 					{transactionModalItem && (

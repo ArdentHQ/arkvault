@@ -8,7 +8,7 @@ export interface TransactionTableProperties {
 	isLoading?: boolean;
 	skeletonRowsLimit?: number;
 	profile: Contracts.IProfile;
-	wallet: Contracts.IReadWriteWallet;
+	coinName?: string
 }
 
 export interface Transaction {
