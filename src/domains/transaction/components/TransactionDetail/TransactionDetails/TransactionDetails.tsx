@@ -17,7 +17,6 @@ export const TransactionDetails = ({ transaction }: Properties): ReactElement =>
 	const format = useTimeFormat();
 	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const timestamp = transaction.timestamp() as DateTime
-	console.log({ transaction })
 
 	return (
 		<DetailWrapper label={t("COMMON.DETAILS")}>
