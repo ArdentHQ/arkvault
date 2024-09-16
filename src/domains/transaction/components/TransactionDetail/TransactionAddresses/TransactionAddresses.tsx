@@ -2,24 +2,26 @@ import React, { ReactElement } from "react";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import { useTranslation } from "react-i18next";
 import { Contracts } from "@ardenthq/sdk-profiles";
+import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface Properties {
-	senderWallet: Contracts.IReadWriteWallet;
+	senderAddress: string;
 	recipients: RecipientItem[];
 	profile: Contracts.IProfile;
+	network: Networks.Network
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients = [], profile }: Properties): ReactElement => {
+export const TransactionAddresses = ({ recipients = [], profile, senderAddress, network }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
 	const { alias } = getWalletAlias({
-		address: senderWallet.address(),
-		network: senderWallet.network(),
+		address: senderAddress,
+		network: network,
 		profile,
 	});
 
@@ -28,7 +30,7 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 			<div className="flex w-full">
 				<DetailLabelText>{t("COMMON.FROM")}</DetailLabelText>
 				<Address
-					address={senderWallet.address()}
+					address={senderAddress}
 					walletName={alias}
 					walletNameClass="text-theme-text"
 					showCopyButton

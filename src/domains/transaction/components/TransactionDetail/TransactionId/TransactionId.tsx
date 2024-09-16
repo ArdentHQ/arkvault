@@ -59,7 +59,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					icon="ArrowExternal"
 					variant="secondary"
 					size="icon"
-					disabled={transaction.isConfirmed()}
+					disabled={!transaction.isConfirmed()}
 					onClick={() => {
 						openExternal(transaction.explorerLink());
 					}}

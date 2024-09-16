@@ -1,69 +1,64 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import {
 	TransactionAddresses,
-	TransactionAmount,
-	TransactionExplorerLink,
-	TransactionFee,
-	TransactionMemo,
-	TransactionRecipients,
-	TransactionSender,
-	TransactionStatus,
-	TransactionTimestamp,
+	TransactionType,
+	TransactionSummary,
+	TransactionDetails,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { TransactionId } from "../TransactionDetail/TransactionId";
+import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
-export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransactionDetailProperties) => {
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { DetailWrapper } from "@/app/components/DetailWrapper";
+import { TransactionDetailPadded } from "../TransactionSuccessful";
+
+export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
-	const wallet = useMemo(() => transaction.wallet(), [transaction]);
-	console.log({ aliases })
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
-			<TransactionId transaction={transaction} />
+			<div className="mt-4">
+				<TransactionId transaction={transaction} />
+			</div>
 
-			<TransactionAddresses senderWallet={transaction.wallet()}
-				recipients={[
-					{
-						address: transaction.recipient(),
-						alias: aliases?.recipients[0].alias,
-						isDelegate: aliases?.recipients[0].isDelegate,
-					},
-				]}
-			/>
+			<div className="mt-6 space-y-8">
+				<TransactionDetailPadded>
 
-			<TransactionRecipients
-				label={t("TRANSACTION.RECIPIENTS_COUNT", { count: 1 })}
-				currency={wallet.currency()}
-				recipients={[
-					{
-						address: transaction.recipient(),
-						alias: aliases?.recipients[0].alias,
-						isDelegate: aliases?.recipients[0].isDelegate,
-					},
-				]}
-			/>
+					<TransactionAddresses
+						profile={profile}
+						senderAddress={transaction.sender()}
+						network={transaction.wallet().network()}
+						recipients={[
+							{
+								address: transaction.recipient(),
+								alias: aliases?.recipients[0].alias,
+								isDelegate: aliases?.recipients[0].isDelegate,
+							},
+						]}
+					/>
+				</TransactionDetailPadded>
 
-			<TransactionAmount
-				amount={transaction.amount()}
-				convertedAmount={transaction.convertedAmount()}
-				currency={wallet.currency()}
-				exchangeCurrency={wallet.exchangeCurrency()}
-				isSent={transaction.isSent()}
-			/>
 
-			<TransactionFee currency={wallet.currency()} value={transaction.fee()} />
+				<TransactionDetailPadded>
+					<TransactionType transaction={transaction} />
+				</TransactionDetailPadded>
 
-			{transaction.memo() && <TransactionMemo memo={transaction.memo()} />}
+				<TransactionDetailPadded>
+					<TransactionSummary transaction={transaction} senderWallet={transaction.wallet()} />
+				</TransactionDetailPadded>
 
-			<TransactionTimestamp timestamp={transaction.timestamp()} />
+				<TransactionDetailPadded>
+					<TransactionDetails transaction={transaction} />
+				</TransactionDetailPadded>
 
-			<TransactionStatus transaction={transaction} />
-
-			<TransactionExplorerLink transaction={transaction} />
+				<TransactionDetailPadded>
+					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
+						<p>{transaction.memo() ?? t('COMMON.NOT_AVAILABLE')}</p>
+					</DetailWrapper>
+				</TransactionDetailPadded>
+			</div>
 		</Modal>
 	);
 };

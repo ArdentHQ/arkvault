@@ -87,7 +87,8 @@ export const TransactionSuccessful = ({
 			<div className="mt-6 space-y-8">
 				<TransactionDetailPadded>
 					<TransactionAddresses
-						senderWallet={senderWallet}
+						network={senderWallet.network()}
+						senderAddress={senderWallet.address()}
 						recipients={recipients}
 						profile={senderWallet.profile()}
 					/>

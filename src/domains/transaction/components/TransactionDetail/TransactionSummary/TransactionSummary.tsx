@@ -6,7 +6,7 @@ import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 
 interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 }
 

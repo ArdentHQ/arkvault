@@ -9,7 +9,7 @@ import { Divider } from "@/app/components/Divider";
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
-export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSignedTransactionData }) => {
+export const TransactionType = ({ transaction }: { transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData }) => {
 	const { t } = useTranslation();
 	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 
