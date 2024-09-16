@@ -825,18 +825,19 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                             class="w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 mt-0 sm:mt-2"
                           >
                             <div
-                              class="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0"
+                              class="flex w-full"
                             >
                               <div
-                                class="no-ligatures w-20 flex-shrink-0 text-sm font-semibold leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500 sm:text-base sm:leading-5"
+                                class="no-ligatures text-md min-w-24 font-semibold text-theme-secondary-700 dark:text-theme-secondary-500"
+                                data-testid="DetailLabelText"
                               >
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full sm:w-3/4"
                               >
                                 <span
-                                  class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+                                  class="font-semibold text-base text-theme-text"
                                   data-testid="Address__alias"
                                 >
                                   <span
@@ -846,48 +847,52 @@ exports[`SendVote > should send a unvote transaction 1`] = `
                                     ARK Wallet 1
                                   </span>
                                 </span>
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
-                                  data-testid="Address__address"
+                                <div
+                                  data-testid="Address__address-container"
                                 >
-                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                </span>
-                                <button
-                                  class="ring-focus relative focus:outline-none"
-                                  data-ring-focus-margin="-m-1"
-                                  data-testid="clipboard-icon__wrapper"
-                                  type="button"
-                                >
-                                  <div
-                                    class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
-                                    height="16"
-                                    width="16"
+                                  <span
+                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    data-testid="Address__address"
                                   >
-                                    <svg
-                                      id="copy"
-                                      viewBox="0 0 20 20"
-                                      x="0"
-                                      xml:space="preserve"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      y="0"
+                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                  </span>
+                                  <button
+                                    class="ring-focus relative focus:outline-none"
+                                    data-ring-focus-margin="-m-1"
+                                    data-testid="clipboard-icon__wrapper"
+                                    type="button"
+                                  >
+                                    <div
+                                      class="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500 css-v0ob3f"
+                                      height="16"
+                                      width="16"
                                     >
-                                      <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                      <svg
+                                        id="copy"
+                                        viewBox="0 0 20 20"
+                                        x="0"
+                                        xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        y="0"
                                       >
-                                        <path
-                                          d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
-                                        />
-                                        <path
-                                          d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
-                                        />
-                                      </g>
-                                    </svg>
-                                  </div>
-                                </button>
+                                        <g
+                                          fill="none"
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M7 17.765C7 18.485 7.496 19 8.09 19h-.099 8.82c.694 0 1.189-.618 1.189-1.235V6.235C18 5.515 17.405 5 16.81 5h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C7 8.09 7 8.397 7 8.706v9.059z"
+                                          />
+                                          <path
+                                            d="M13 5V2.235C13 1.515 12.405 1 11.81 1h0-6.242c-.298 0-.595.103-.892.309l-2.379 2.47C2 4.09 2 4.397 2 4.706v9.059C2 14.485 2.496 15 3.09 15h-.099H7"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </div>
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>

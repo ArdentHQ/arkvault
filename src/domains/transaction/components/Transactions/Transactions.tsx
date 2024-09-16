@@ -12,6 +12,7 @@ import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-
 import { Dropdown } from "@/app/components/Dropdown";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Icon } from "@/app/components/Icon";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -52,7 +53,7 @@ export const Transactions = memo(function Transactions({
 		fetchMore,
 		hasEmptyResults,
 		hasMore,
-	} = useProfileTransactions({ profile, wallets });
+	} = useProfileTransactions({ limit: 30, profile, wallets });
 
 	useEffect(() => {
 		if (isLoading) {
@@ -78,7 +79,7 @@ export const Transactions = memo(function Transactions({
 	const filterOptions = [
 		{
 			active: activeMode === "all",
-			label: t("TRANSACTION.ALL"),
+			label: t("TRANSACTION.ALL_HISTORY"),
 			value: "all",
 		},
 		{
@@ -142,28 +143,19 @@ export const Transactions = memo(function Transactions({
 		<>
 			{title && (
 				<div className="relative hidden justify-between md:flex">
-					<h2 className="mb-6 text-2xl font-bold">{title}</h2>
+					<h2 className="mb-3 text-2xl font-bold">{title}</h2>
 				</div>
 			)}
 
 			{showTabs && (
 				<>
-					<Tabs className="mb-8 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
-						<TabList className="h-15 w-full">
+					<Tabs className="mb-3 hidden md:block" activeId={activeMode} onChange={activeModeChangeHandler}>
+						<TabList className="h-14 px-6 py-4">
 							{filterOptions.map((option) => (
-								<Tab tabId={option.value} key={option.value}>
+								<Tab tabId={option.value} key={option.value} className="pb-9 before:!top-1/3">
 									{option.label}
 								</Tab>
 							))}
-
-							<div className="flex flex-1" />
-
-							<FilterTransactions
-								className="my-auto mr-6"
-								wallets={wallets}
-								onSelect={filterChangeHandler}
-								isDisabled={wallets.length === 0 || isLoadingTransactions}
-							/>
 						</TabList>
 					</Tabs>
 
@@ -216,7 +208,18 @@ export const Transactions = memo(function Transactions({
 					)}
 				</>
 			) : (
-				<>
+				<TableWrapper className="border-none">
+					<div className="flex w-full items-center justify-between border-b border-b-theme-secondary-300 px-6 py-4 dark:border-b-theme-secondary-800">
+						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
+							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
+						</span>
+						<FilterTransactions
+							className="my-auto"
+							wallets={wallets}
+							onSelect={filterChangeHandler}
+							isDisabled={wallets.length === 0 || isLoadingTransactions}
+						/>
+					</div>
 					<TransactionTable
 						transactions={transactions}
 						exchangeCurrency={profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency)}
@@ -235,7 +238,7 @@ export const Transactions = memo(function Transactions({
 							onClose={() => setTransactionModalItem(undefined)}
 						/>
 					)}
-				</>
+				</TableWrapper>
 			)}
 
 			{hasMore && (

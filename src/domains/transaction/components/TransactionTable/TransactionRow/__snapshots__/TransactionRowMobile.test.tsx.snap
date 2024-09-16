@@ -74,12 +74,16 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -133,12 +137,16 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -274,12 +282,16 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -333,12 +345,16 @@ exports[`TransactionRowMobile > should omit the currency for transactions from t
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -485,12 +501,16 @@ exports[`TransactionRowMobile > should render 1`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -555,12 +575,16 @@ exports[`TransactionRowMobile > should render 1`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -702,12 +726,16 @@ exports[`TransactionRowMobile > should render 2`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -772,12 +800,16 @@ exports[`TransactionRowMobile > should render 2`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1338,12 +1370,16 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1397,12 +1433,16 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1543,12 +1583,16 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -1602,12 +1646,16 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

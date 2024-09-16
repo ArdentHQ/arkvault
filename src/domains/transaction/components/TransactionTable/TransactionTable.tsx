@@ -18,7 +18,8 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 	profile,
 }) => {
 	const { isXs, isSm } = useBreakpoint();
-	const columns = useTransactionTableColumns(exchangeCurrency);
+	const coinName = transactions[0]?.coin().network().coinName();
+	const columns = useTransactionTableColumns({ coin: coinName });
 	const initialState = useMemo<Partial<TableState<DTO.ExtendedConfirmedTransactionData>>>(
 		() => ({
 			sortBy: [
@@ -56,7 +57,13 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 
 	return (
 		<div data-testid="TransactionTable" className="relative">
-			<Table hideHeader={isSm || isXs || hideHeader} columns={columns} data={data} initialState={initialState}>
+			<Table
+				hideHeader={isSm || isXs || hideHeader}
+				columns={columns}
+				data={data}
+				initialState={initialState}
+				className="with-x-padding"
+			>
 				{renderTableRow}
 			</Table>
 		</div>
