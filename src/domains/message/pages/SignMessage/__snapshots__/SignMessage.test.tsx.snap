@@ -660,12 +660,16 @@ exports[`SignMessage > Sign with Wallet > should render (lg) 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
+                          <div
+                            data-testid="Address__address-container"
                           >
-                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-                          </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                            </span>
+                          </div>
                         </div>
                       </span>
                       <div
@@ -1443,12 +1447,16 @@ exports[`SignMessage > Sign with Wallet > should render (xs) 1`] = `
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
+                          <div
+                            data-testid="Address__address-container"
                           >
-                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-                          </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                            </span>
+                          </div>
                         </div>
                       </span>
                       <div
@@ -2226,12 +2234,16 @@ exports[`SignMessage > Sign with Wallet > should render for ledger wallets 1`] =
                         <div
                           class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                            data-testid="Address__address"
+                          <div
+                            data-testid="Address__address-container"
                           >
-                            DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
-                          </span>
+                            <span
+                              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                              data-testid="Address__address"
+                            >
+                              DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
+                            </span>
+                          </div>
                         </div>
                       </span>
                       <div

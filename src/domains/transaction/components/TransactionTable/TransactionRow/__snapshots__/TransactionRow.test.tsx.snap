@@ -5,191 +5,128 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
           >
-            <a
-              class="ring-focus group inline-block css-7nwwrh"
-              data-ring-focus-margin="-m-1"
-              data-testid="Link"
-              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-              rel="noopener noreferrer"
+            <div
+              class="flex flex-col gap-1 font-semibold"
             >
-              <span
-                class="css-170792"
+              <a
+                class="ring-focus group inline-block css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="css-170792"
                 >
-                  <svg
-                    id="magnifying-glass-id"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="text-sm"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <span
+                      class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                      data-testid="TransactionRow__id"
                     >
-                      <path
-                        d="M19 17l-3.172-3.172"
-                      />
-                      <circle
-                        cx="13"
-                        cy="11"
-                        r="4"
-                      />
-                    </g>
-                    <path
-                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
+                      ea63b…5c79b
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <span
+                class="text-xs text-theme-secondary-700 xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
               </span>
-            </a>
+            </div>
           </div>
         </td>
         <td
-          class="table-cell md:hidden lg:table-cell"
+          class="hidden lg:table-cell"
+          data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
+            class="flex px-3 transition-colors duration-100 min-h-11 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
-              class="whitespace-nowrap"
-              data-testid="TransactionRow__timestamp"
+              data-testid="TimeAgo"
             >
-              31.07.2020 4:34 PM
+              A few seconds ago
             </span>
           </div>
         </td>
         <td>
           <div
+            class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
+          >
+            <div
+              class="rounded p-1 css-1dx994f"
+              color="secondary"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
             <div
-              class="flex items-center space-x-2"
-              data-testid="TransactionRowMode"
+              class="flex flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              <div
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                color="danger-bg"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="w-30"
+                data-testid="TransactionRowAddressing__address-container"
               >
                 <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="w-full"
+                    data-testid="Address__address-container"
                   >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <div
+                      class="relative grow text-left"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </span>
-              <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
               </div>
             </div>
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
-          >
-            <div
-              class="flex items-center"
-              data-testid="TransactionAmount__tooltip"
+              class="flex flex-col items-end gap-1"
             >
               <div
                 class="rounded px-1.5 css-xqt0aw"
@@ -203,24 +140,35 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 121 BTC
+                    - 21 BTC
                   </span>
                 </div>
               </div>
+              <span
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </span>
             </div>
           </div>
         </td>
         <td
-          class="hidden xl:block"
+          class="hidden lg:table-cell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
-              class="whitespace-nowrap text-theme-secondary-text"
-              data-testid="TransactionRow__currency"
+              class="whitespace-nowrap"
+              data-testid="Amount"
             >
-              N/A
+              0 BTC
             </span>
           </div>
         </td>
@@ -235,239 +183,181 @@ exports[`TransactionRow > should render 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
           >
-            <a
-              class="ring-focus group inline-block css-7nwwrh"
-              data-ring-focus-margin="-m-1"
-              data-testid="Link"
-              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-              rel="noopener noreferrer"
+            <div
+              class="flex flex-col gap-1 font-semibold"
             >
-              <span
-                class="css-170792"
+              <a
+                class="ring-focus group inline-block css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="css-170792"
                 >
-                  <svg
-                    id="magnifying-glass-id"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="text-sm"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <span
+                      class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                      data-testid="TransactionRow__id"
                     >
-                      <path
-                        d="M19 17l-3.172-3.172"
-                      />
-                      <circle
-                        cx="13"
-                        cy="11"
-                        r="4"
-                      />
-                    </g>
-                    <path
-                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
+                      ea63b…5c79b
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <span
+                class="text-xs text-theme-secondary-700 xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
               </span>
-            </a>
+            </div>
           </div>
         </td>
         <td
-          class="table-cell md:hidden lg:table-cell"
+          class="hidden lg:table-cell"
+          data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
+            class="flex px-3 transition-colors duration-100 min-h-11 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
-              class="whitespace-nowrap"
-              data-testid="TransactionRow__timestamp"
+              data-testid="TimeAgo"
             >
-              31.07.2020 4:34 PM
+              A few seconds ago
             </span>
           </div>
         </td>
         <td>
           <div
+            class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
+          >
+            <div
+              class="rounded p-1 css-1dx994f"
+              color="secondary"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
             <div
-              class="flex items-center space-x-2"
-              data-testid="TransactionRowMode"
+              class="flex flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
             >
+              <div
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                color="danger-bg"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="w-50"
+                data-testid="TransactionRowAddressing__address-container"
+              >
+                <div
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                >
+                  <span
+                    class="font-semibold text-sm text-theme-text"
+                    data-testid="Address__alias"
+                  >
+                    <span
+                      class="no-ligatures css-9nx3be"
+                      data-testid="TruncateEnd"
+                    >
+                      ARK Wallet 1
+                    </span>
+                  </span>
+                  <div
+                    class="w-full"
+                    data-testid="Address__address-container"
+                  >
+                    <div
+                      class="relative grow text-left"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start xl:min-h-0 my-0 py-3"
+          >
+            <div
+              class="flex flex-col items-end gap-1"
+            >
+              <div
+                class="rounded px-1.5 css-xqt0aw"
+                color="danger-bg"
+                data-testid="AmountLabel__wrapper"
+              >
+                <div
+                  class="flex space-x-1 items-center"
+                >
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    - 121 DARK
+                  </span>
+                </div>
+              </div>
               <span
-                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
-              >
-                <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
-                >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
-                  >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </span>
-              <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
               >
                 <span
-                  class="font-semibold text-base text-theme-text"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
-          >
-            <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="font-semibold text-base text-theme-text"
-                  data-testid="Address__alias"
-                >
-                  <span
-                    class="no-ligatures css-9nx3be"
-                    data-testid="TruncateEnd"
-                  >
-                    ARK Wallet 1
-                  </span>
-                </span>
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
-          >
-            <div
-              class="rounded px-1.5 css-xqt0aw"
-              color="danger-bg"
-              data-testid="AmountLabel__wrapper"
-            >
-              <div
-                class="flex space-x-1 items-center"
-              >
-                <span
-                  class="whitespace-nowrap text-sm"
+                  class="whitespace-nowrap"
                   data-testid="Amount"
                 >
-                  - 121 DARK
+                  $0.00
                 </span>
-              </div>
+              </span>
             </div>
           </div>
         </td>
         <td
-          class="hidden xl:block"
+          class="hidden lg:table-cell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
-              class="whitespace-nowrap text-theme-secondary-text"
-              data-testid="TransactionRow__currency"
+              class="whitespace-nowrap"
+              data-testid="Amount"
             >
-              N/A
+              $0.00
             </span>
           </div>
         </td>
@@ -482,7 +372,7 @@ exports[`TransactionRow > should render responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="group group css-1kskd5s"
         data-testid="TableRow"
       >
         <td
@@ -562,12 +452,16 @@ exports[`TransactionRow > should render responsive 1`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -632,12 +526,16 @@ exports[`TransactionRow > should render responsive 1`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -652,19 +550,24 @@ exports[`TransactionRow > should render responsive 1`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1pbju28"
-              color="danger-bg"
-              data-testid="AmountLabel__wrapper"
+              class="flex items-center"
+              data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="rounded px-1.5 css-1pbju28"
+                color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
+                <div
+                  class="flex space-x-1 items-stretch"
                 >
-                  - 121 DARK
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    - 121 DARK
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -699,7 +602,7 @@ exports[`TransactionRow > should render responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="group group css-1kskd5s"
         data-testid="TableRow"
       >
         <td
@@ -779,12 +682,16 @@ exports[`TransactionRow > should render responsive 2`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -849,12 +756,16 @@ exports[`TransactionRow > should render responsive 2`] = `
                         ARK Wallet 1
                       </span>
                     </span>
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                      data-testid="Address__address"
+                    <div
+                      data-testid="Address__address-container"
                     >
-                      D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                    </span>
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -869,19 +780,24 @@ exports[`TransactionRow > should render responsive 2`] = `
               Amount
             </div>
             <div
-              class="rounded px-1.5 css-1pbju28"
-              color="danger-bg"
-              data-testid="AmountLabel__wrapper"
+              class="flex items-center"
+              data-testid="TransactionAmount__tooltip"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="rounded px-1.5 css-1pbju28"
+                color="danger-bg"
+                data-testid="AmountLabel__wrapper"
               >
-                <span
-                  class="whitespace-nowrap text-sm"
-                  data-testid="Amount"
+                <div
+                  class="flex space-x-1 items-stretch"
                 >
-                  - 121 DARK
-                </span>
+                  <span
+                    class="whitespace-nowrap text-sm"
+                    data-testid="Amount"
+                  >
+                    - 121 DARK
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -1129,191 +1045,128 @@ exports[`TransactionRow > should render with currency 1`] = `
   <table>
     <tbody>
       <tr
-        class=" css-16ynu5g"
+        class="group relative css-1kskd5s"
         data-testid="TableRow"
       >
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pl-6 rounded-l"
+            class="flex px-3 transition-colors duration-100 min-h-11 pl-6 rounded-l items-start my-0 py-3 xl:min-h-0"
           >
-            <a
-              class="ring-focus group inline-block css-7nwwrh"
-              data-ring-focus-margin="-m-1"
-              data-testid="Link"
-              href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
-              rel="noopener noreferrer"
+            <div
+              class="flex flex-col gap-1 font-semibold"
             >
-              <span
-                class="css-170792"
+              <a
+                class="ring-focus group inline-block css-7nwwrh"
+                data-ring-focus-margin="-m-1"
+                data-testid="Link"
+                href="https://live.arkscan.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+                rel="noopener noreferrer"
               >
-                <div
-                  class="css-v0ob3f"
-                  height="16"
-                  width="16"
+                <span
+                  class="css-170792"
                 >
-                  <svg
-                    id="magnifying-glass-id"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <span
+                    class="text-sm"
                   >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                    <span
+                      class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
+                      data-testid="TransactionRow__id"
                     >
-                      <path
-                        d="M19 17l-3.172-3.172"
-                      />
-                      <circle
-                        cx="13"
-                        cy="11"
-                        r="4"
-                      />
-                    </g>
-                    <path
-                      d="M4.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2zM7.002 8c-.552 0-1.004-.447-1.004-1s.442-1 .994-1h.01a1 1 0 1 1 0 2z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M18 5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h4"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
+                      ea63b…5c79b
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <span
+                class="text-xs text-theme-secondary-700 xl:hidden"
+              >
+                <span
+                  data-testid="TimeAgo"
+                >
+                  A few seconds ago
+                </span>
               </span>
-            </a>
+            </div>
           </div>
         </td>
         <td
-          class="table-cell md:hidden lg:table-cell"
+          class="hidden lg:table-cell"
+          data-testid="TransactionRow__timestamp"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 text-theme-secondary-text"
+            class="flex px-3 transition-colors duration-100 min-h-11 text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold items-start xl:min-h-0 my-0 py-3"
           >
             <span
-              class="whitespace-nowrap"
-              data-testid="TransactionRow__timestamp"
+              data-testid="TimeAgo"
             >
-              31.07.2020 4:34 PM
+              A few seconds ago
             </span>
           </div>
         </td>
         <td>
           <div
+            class="flex px-3 transition-colors duration-100 min-h-11 items-start xl:min-h-0 my-0 py-3"
+          >
+            <div
+              class="rounded p-1 css-1dx994f"
+              color="secondary"
+              data-testid="TransactionRow__type"
+            >
+              Transfer
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
             class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
           >
             <div
-              class="flex items-center space-x-2"
-              data-testid="TransactionRowMode"
+              class="flex flex-row gap-2"
+              data-testid="TransactionRowAddressing__container"
             >
-              <span
-                class="flex h-5 w-5 items-center border-0 border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400"
+              <div
+                class="!flex h-[21px] w-10 items-center justify-center rounded py-[3px] css-r9b6qf"
+                color="danger-bg"
+                data-testid="TransactionRowAddressing__label"
+              >
+                To
+              </div>
+              <div
+                class="w-30"
+                data-testid="TransactionRowAddressing__address-container"
               >
                 <div
-                  class="css-1i4b0eq"
-                  height="20"
-                  width="20"
+                  class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                 >
-                  <svg
-                    id="sent"
-                    viewBox="0 0 20 20"
-                    x="0"
-                    xml:space="preserve"
-                    xmlns="http://www.w3.org/2000/svg"
-                    y="0"
+                  <div
+                    class="w-full"
+                    data-testid="Address__address-container"
                   >
-                    <path
-                      d="M8 19v-4m0-4V9H4.596a.303.303 0 0 1-.244-.481l5.41-7.398a.296.296 0 0 1 .476 0l5.41 7.398c.146.2.004.481-.244.481H12v10"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </svg>
+                    <div
+                      class="relative grow text-left"
+                    >
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                        data-testid="Address__address"
+                      >
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </span>
-              <div
-                class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-                data-testid="Avatar"
-              >
-                <div
-                  class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-                >
-                  <img
-                    alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                    src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                    title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
               </div>
             </div>
           </div>
         </td>
         <td>
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 space-x-4"
+            class="flex px-3 transition-colors duration-100 min-h-11 justify-end items-start xl:min-h-0 my-0 py-3"
           >
             <div
-              class="ring-theme-background bg-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black shrink-0 css-1i0wxh3"
-              data-testid="Avatar"
-            >
-              <div
-                class="inline-flex h-full w-full items-center justify-center overflow-hidden align-middle rounded-full"
-              >
-                <img
-                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                  src="data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="picasso" width="100" height="100" viewBox="0 0 100 100"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill="rgb(0, 150, 136)" width="100" height="100"/><circle r="50" cx="80" cy="50" fill="rgb(76, 175, 80)"/><circle r="35" cx="100" cy="40" fill="rgb(156, 39, 176)"/><circle r="40" cx="90" cy="70" fill="rgb(3, 169, 244)"/></svg>"
-                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
-                />
-              </div>
-            </div>
-            <div
-              class="w-0 flex-1"
-            >
-              <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
-              >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td>
-          <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 justify-end"
-          >
-            <div
-              class="flex items-center"
-              data-testid="TransactionAmount__tooltip"
+              class="flex flex-col items-end gap-1"
             >
               <div
                 class="rounded px-1.5 css-xqt0aw"
@@ -1327,29 +1180,35 @@ exports[`TransactionRow > should render with currency 1`] = `
                     class="whitespace-nowrap text-sm"
                     data-testid="Amount"
                   >
-                    - 121 BTC
+                    - 21 BTC
                   </span>
                 </div>
               </div>
+              <span
+                class="text-xs font-semibold text-theme-secondary-700 lg:hidden"
+                data-testid="TransactionRow__exchange-currency"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </span>
             </div>
           </div>
         </td>
         <td
-          class="hidden xl:block"
+          class="hidden lg:table-cell"
         >
           <div
-            class="flex items-center px-3 my-1 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end"
+            class="flex px-3 transition-colors duration-100 min-h-11 pr-6 rounded-r justify-end items-start text-sm text-theme-secondary-900 dark:text-theme-secondary-200 font-semibold xl:min-h-0 my-0 py-3"
           >
             <span
               class="whitespace-nowrap"
-              data-testid="TransactionRow__currency"
+              data-testid="Amount"
             >
-              <span
-                class="whitespace-nowrap text-theme-secondary-text"
-                data-testid="Amount"
-              >
-                0 BTC
-              </span>
+              0 BTC
             </span>
           </div>
         </td>

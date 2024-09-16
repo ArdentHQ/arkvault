@@ -109,12 +109,16 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -160,12 +164,16 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -694,12 +702,16 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -745,12 +757,16 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1279,12 +1295,16 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1330,12 +1350,16 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1838,12 +1862,16 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1889,12 +1917,16 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2397,12 +2429,16 @@ exports[`MultiSignatureDetail > should render summary step for ipfs 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2910,12 +2946,16 @@ exports[`MultiSignatureDetail > should render summary step for multi signature 1
                                   ARK Wallet 1
                                 </span>
                               </span>
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3356,12 +3396,16 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3407,12 +3451,16 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3915,12 +3963,16 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -3997,12 +4049,16 @@ exports[`MultiSignatureDetail > should render summary step for unvote 1`] = `
                                       arkx
                                     </span>
                                   </span>
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                                    data-testid="Address__address"
+                                  <div
+                                    data-testid="Address__address-container"
                                   >
-                                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                  </span>
+                                    <span
+                                      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                      data-testid="Address__address"
+                                    >
+                                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -4749,12 +4805,16 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -4800,12 +4860,16 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <span
-                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                data-testid="Address__address"
+                              <div
+                                data-testid="Address__address-container"
                               >
-                                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                              </span>
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
+                                >
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>

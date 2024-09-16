@@ -62,9 +62,10 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 
 	const renderColumn = (column: HeaderGroup<RowDataType>, thIndex: number) => {
 		const thElementClassName = cn(
-			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl",
+			"group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 ",
 			column.headerClassName,
 			{ "w-1": column.minimumWidth },
+			{ "first:rounded-tl-xl last:rounded-tr-xl": !column.noRoundedBorders },
 			{
 				[`${column.cellWidth} min-${column.cellWidth}`]: !column.minimumWidth && column.cellWidth,
 			},
