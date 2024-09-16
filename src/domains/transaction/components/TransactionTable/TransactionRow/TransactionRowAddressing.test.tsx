@@ -24,10 +24,12 @@ describe("TransactionRowAddressing", () => {
 		const voteFixture = { ...fixture, isVote: () => true };
 		render(<TransactionRowAddressing transaction={voteFixture as any} profile={profile} />);
 
-		expect(screen.getByTestId("TransactionRowAddressing__vote")).toBeTruthy();
+		expect(screen.queryAllByTestId("TransactionRowAddressing__vote")).toHaveLength(1);
 
 		const unvoteFixture = { ...fixture, isUnvote: () => true, isVote: () => false };
 		render(<TransactionRowAddressing transaction={unvoteFixture as any} profile={profile} />);
+
+		expect(screen.queryAllByTestId("TransactionRowAddressing__vote")).toHaveLength(2);
 	});
 
 	it("should render multipayment variant", () => {
@@ -37,14 +39,14 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeTruthy();
 	});
 
-	it("should render the danger label if transaction is sent", () => {
+	it("should render label with the 'to' prefix if transaction is outgoing", () => {
 		const sentFixture = { ...fixture, isSent: () => true };
 		render(<TransactionRowAddressing transaction={sentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
 	});
 
-	it("should render the success label if transaction is not sent", () => {
+	it("should render label with the 'from' prefix if transaction is not outgoing", () => {
 		const notSentFixture = { ...fixture, isSent: () => false };
 		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
 

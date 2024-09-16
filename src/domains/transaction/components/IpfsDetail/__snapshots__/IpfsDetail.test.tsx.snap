@@ -100,16 +100,12 @@ exports[`IpfsDetail > should render a modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -180,16 +176,12 @@ exports[`IpfsDetail > should render a modal 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
-                        </span>
-                      </div>
+                        QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
+                      </span>
                     </div>
                   </div>
                   <div
@@ -532,16 +524,12 @@ exports[`IpfsDetail > should render a modal without a wallet alias 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -612,16 +600,12 @@ exports[`IpfsDetail > should render a modal without a wallet alias 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
-                        </span>
-                      </div>
+                        QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
+                      </span>
                     </div>
                   </div>
                   <div

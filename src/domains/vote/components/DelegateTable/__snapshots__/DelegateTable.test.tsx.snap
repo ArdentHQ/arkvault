@@ -5627,16 +5627,12 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -11379,16 +11375,12 @@ exports[`DelegateTable > loading state for base > should render when isCompact =
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -18254,16 +18246,12 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -25149,16 +25137,12 @@ exports[`DelegateTable > loading state for requiresAmount > should render when i
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -25938,16 +25922,12 @@ exports[`DelegateTable > should add resigned delegate to the unvote list 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -26705,16 +26685,12 @@ exports[`DelegateTable > should emit action on continue button to unvote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -27472,16 +27448,12 @@ exports[`DelegateTable > should emit action on continue button to vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -28239,16 +28211,12 @@ exports[`DelegateTable > should render 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -29201,16 +29169,12 @@ exports[`DelegateTable > should render vote amount column 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -29990,16 +29954,12 @@ exports[`DelegateTable > should render with a delegate to unvote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -30762,16 +30722,12 @@ exports[`DelegateTable > should render with a delegate to unvote/vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -31528,16 +31484,12 @@ exports[`DelegateTable > should render with a delegate to vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -32796,16 +32748,12 @@ exports[`DelegateTable > should render with subtitle 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -33756,16 +33704,12 @@ exports[`DelegateTable > should select a changed delegate to unvote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -34545,16 +34489,12 @@ exports[`DelegateTable > should select a delegate to unvote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -35319,16 +35259,12 @@ exports[`DelegateTable > should select a delegate to unvote/vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -36085,16 +36021,12 @@ exports[`DelegateTable > should select a delegate to vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -37045,16 +36977,12 @@ exports[`DelegateTable > should select a delegate with vote amount and make it u
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -37834,16 +37762,12 @@ exports[`DelegateTable > should select multiple delegates to unvote/vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -38600,16 +38524,12 @@ exports[`DelegateTable > should unselect a delegate to unvote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -39369,16 +39289,12 @@ exports[`DelegateTable > should unselect a delegate to vote 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs leading-[17px] sm:text-base sm:leading-5 text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>

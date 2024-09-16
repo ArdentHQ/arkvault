@@ -23,16 +23,12 @@ exports[`WalletDetailAddress > should render 1`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-              </span>
-            </div>
+              D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+            </span>
           </div>
         </div>
       </div>
@@ -48,16 +44,12 @@ exports[`WalletDetailAddress > should render 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
             >
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                </span>
-              </div>
+                D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+              </span>
             </div>
           </div>
         </div>
