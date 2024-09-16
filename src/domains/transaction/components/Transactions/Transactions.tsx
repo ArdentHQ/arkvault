@@ -13,6 +13,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Icon } from "@/app/components/Icon";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { useActiveWallet } from "@/app/hooks";
 
 interface TransactionsProperties {
 	emptyText?: string;
@@ -36,6 +37,7 @@ export const Transactions = memo(function Transactions({
 	onLoading,
 }: TransactionsProperties) {
 	const { t } = useTranslation();
+	const wallet = useActiveWallet();
 
 	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
 		undefined,
@@ -228,6 +230,7 @@ export const Transactions = memo(function Transactions({
 						skeletonRowsLimit={8}
 						onRowClick={setTransactionModalItem}
 						profile={profile}
+						wallet={wallet}
 					/>
 
 					{transactionModalItem && (

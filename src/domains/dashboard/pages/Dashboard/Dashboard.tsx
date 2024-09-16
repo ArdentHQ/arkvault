@@ -12,12 +12,13 @@ import { TransactionTable } from "@/domains/transaction/components/TransactionTa
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useActiveProfile } from "@/app/hooks";
+import { useActiveProfile, useActiveWallet } from "@/app/hooks";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 
 export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
+	const wallet = activeProfile.wallets().first();
 	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
 	const { profileIsSyncing, profileIsSyncingExchangeRates } = useConfiguration();
@@ -75,6 +76,7 @@ export const Dashboard: React.VFC = () => {
 							skeletonRowsLimit={8}
 							onRowClick={setTransactionModalItem}
 							profile={activeProfile}
+							wallet={wallet}
 						/>
 
 						{latestTransactions.length === 0 && !isLoadingTransactions && (
