@@ -160,6 +160,7 @@ describe("TransactionTable", () => {
 				isCompact
 				profile={profile}
 				wallet={wallet}
+				coinName={wallet.currency()}
 			/>,
 		);
 

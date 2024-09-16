@@ -126,7 +126,7 @@ exports[`TransactionTable > loading state > should render 1`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -1362,7 +1362,7 @@ exports[`TransactionTable > loading state > should render compact 1`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -2598,7 +2598,7 @@ exports[`TransactionTable > loading state > should render with currency column 1
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -3834,7 +3834,7 @@ exports[`TransactionTable > should render compact 1`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -9700,7 +9700,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -11578,7 +11578,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -13456,7 +13456,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                 <div
                   class=""
                 >
-                  Value (DARK)
+                  Value (undefined)
                 </div>
                 <div
                   class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
