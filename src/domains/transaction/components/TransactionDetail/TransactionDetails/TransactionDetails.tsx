@@ -4,7 +4,6 @@ import { DTO } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { DateTime, Numeral } from "@ardenthq/sdk-intl";
 import { Link } from "@/app/components/Link";
 import { HttpClient } from "@/app/services/HttpClient";
@@ -17,31 +16,32 @@ export const TransactionDetails = ({ transaction }: Properties): ReactElement =>
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
-	const timestamp = transaction.timestamp() as DateTime
-	const data = transaction.data().data as Record<string, string>
+	const timestamp = transaction.timestamp() as DateTime;
+	const data = transaction.data().data as Record<string, string>;
+	console.log({ transaction });
 
 	const client = new HttpClient(0);
-	const [blockHeight, setBlockHeight] = useState<string>()
-	console.log({ blockHeight })
+	const [blockHeight, setBlockHeight] = useState<string>();
 
 	useEffect(() => {
 		// @TODO: Fetch block info/height from sdk (not yet supported).
 		const fetchBlockHeight = async () => {
-			const { hosts: [api] } = transaction.wallet().coin().network().toObject()
+			const {
+				hosts: [api],
+			} = transaction.wallet().coin().network().toObject();
 
 			try {
-				const response = await client.get(`${api.host}/blocks/${transaction.blockId()}`)
-				const { data } = response.json()
+				const response = await client.get(`${api.host}/blocks/${transaction.blockId()}`);
+				const { data } = response.json();
 
-				setBlockHeight(Numeral.make("en").format(data.height))
-
+				setBlockHeight(Numeral.make("en").format(data.height));
 			} catch {
 				// @TODO: Handle error
 			}
-		}
+		};
 
-		fetchBlockHeight()
-	}, [])
+		fetchBlockHeight();
+	}, []);
 
 	return (
 		<DetailWrapper label={t("COMMON.DETAILS")}>
@@ -70,8 +70,7 @@ export const TransactionDetails = ({ transaction }: Properties): ReactElement =>
 					<DetailLabelText>{t("COMMON.NONCE")}</DetailLabelText>
 					<div>{data.nonce}</div>
 				</div>
-
 			</div>
-		</DetailWrapper >
+		</DetailWrapper>
 	);
 };

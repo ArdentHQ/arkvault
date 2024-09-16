@@ -46,7 +46,12 @@ export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
 			/>
 			<div className="mt-4 space-y-3 sm:space-y-4">
-				<TransactionAddresses senderAddress={wallet.address()} recipients={recipients} profile={profile} network={wallet.network()}/>
+				<TransactionAddresses
+					senderAddress={wallet.address()}
+					recipients={recipients}
+					profile={profile}
+					network={wallet.network()}
+				/>
 
 				{memo && (
 					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>

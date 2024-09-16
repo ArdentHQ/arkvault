@@ -12,10 +12,15 @@ interface Properties {
 	senderAddress: string;
 	recipients: RecipientItem[];
 	profile: Contracts.IProfile;
-	network: Networks.Network
+	network: Networks.Network;
 }
 
-export const TransactionAddresses = ({ recipients = [], profile, senderAddress, network }: Properties): ReactElement => {
+export const TransactionAddresses = ({
+	recipients = [],
+	profile,
+	senderAddress,
+	network,
+}: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 

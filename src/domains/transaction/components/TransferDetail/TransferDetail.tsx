@@ -12,7 +12,7 @@ import { TransactionId } from "@/domains/transaction/components/TransactionDetai
 
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { DetailWrapper } from "@/app/components/DetailWrapper";
-import { TransactionDetailPadded } from "../TransactionSuccessful";
+import { TransactionDetailPadded } from "@/domains/transaction/components/TransactionSuccessful";
 
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
@@ -25,7 +25,6 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 
 			<div className="mt-6 space-y-8">
 				<TransactionDetailPadded>
-
 					<TransactionAddresses
 						profile={profile}
 						senderAddress={transaction.sender()}
@@ -39,7 +38,6 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 						]}
 					/>
 				</TransactionDetailPadded>
-
 
 				<TransactionDetailPadded>
 					<TransactionType transaction={transaction} />
@@ -55,7 +53,7 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 
 				<TransactionDetailPadded>
 					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-						<p>{transaction.memo() ?? t('COMMON.NOT_AVAILABLE')}</p>
+						<p>{transaction.memo() ?? t("COMMON.NOT_AVAILABLE")}</p>
 					</DetailWrapper>
 				</TransactionDetailPadded>
 			</div>

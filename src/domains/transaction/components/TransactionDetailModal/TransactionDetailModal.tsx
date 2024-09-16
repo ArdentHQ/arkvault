@@ -73,7 +73,6 @@ export const TransactionDetailModal = ({
 
 	const transactionType = transactionItem.type();
 
-
 	const TransactionModal = (
 		transactionsDetail[transactionType as keyof typeof transactionsDetail] || transactionsDetail.default
 	)();
@@ -82,5 +81,13 @@ export const TransactionDetailModal = ({
 		throw new Error(`Transaction type [${transactionType}] is not supported.`);
 	}
 
-	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} profile={profile} />;
+	return (
+		<TransactionModal
+			isOpen={isOpen}
+			transaction={transactionItem}
+			aliases={aliases}
+			onClose={onClose}
+			profile={profile}
+		/>
+	);
 };
