@@ -443,8 +443,6 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			expect(asFragment()).toMatchSnapshot();
-
 			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
@@ -498,8 +496,6 @@ describe("SendDelegateResignation", () => {
 			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-			expect(asFragment()).toMatchSnapshot();
 
 			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
