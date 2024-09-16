@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import {
+	TransactionAddresses,
 	TransactionAmount,
 	TransactionExplorerLink,
 	TransactionFee,
@@ -13,14 +14,26 @@ import {
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
+import { TransactionId } from "../TransactionDetail/TransactionId";
 
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
 	const wallet = useMemo(() => transaction.wallet(), [transaction]);
+	console.log({ aliases })
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
-			<TransactionSender address={transaction.sender()} network={transaction.wallet().network()} border={false} />
+			<TransactionId transaction={transaction} />
+
+			<TransactionAddresses senderWallet={transaction.wallet()}
+				recipients={[
+					{
+						address: transaction.recipient(),
+						alias: aliases?.recipients[0].alias,
+						isDelegate: aliases?.recipients[0].isDelegate,
+					},
+				]}
+			/>
 
 			<TransactionRecipients
 				label={t("TRANSACTION.RECIPIENTS_COUNT", { count: 1 })}

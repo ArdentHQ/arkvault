@@ -73,7 +73,7 @@ export const TransactionDetailModal = ({
 
 	const transactionType = transactionItem.type();
 
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+
 	const TransactionModal = (
 		transactionsDetail[transactionType as keyof typeof transactionsDetail] || transactionsDetail.default
 	)();
@@ -82,5 +82,5 @@ export const TransactionDetailModal = ({
 		throw new Error(`Transaction type [${transactionType}] is not supported.`);
 	}
 
-	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} />;
+	return <TransactionModal isOpen={isOpen} transaction={transactionItem} aliases={aliases} onClose={onClose} profile={profile} />;
 };
