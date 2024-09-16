@@ -46,7 +46,7 @@ describe("TransactionTable", () => {
 	it("should render with currency", () => {
 		render(<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} />);
 
-		expect(screen.getAllByTestId("TransactionRow__currency")).toHaveLength(transactions.length);
+		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);
 	});
 
 	it("should render compact", () => {

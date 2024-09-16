@@ -89,4 +89,17 @@ describe("Formatted Address", () => {
 
 		expect(screen.getByTestId("Address__address")).toHaveClass("text-theme-primary-600");
 	});
+
+	it("should render with custom class for address wrapper", () => {
+		render(
+			<Address
+				addressWrapperClass="text-theme-primary-600"
+				address={sampleAddress}
+				walletName="Sample Wallet"
+				size="lg"
+			/>,
+		);
+
+		expect(screen.getByTestId("Address__address-container")).toHaveClass("text-theme-primary-600");
+	});
 });

@@ -23,6 +23,7 @@ interface Properties {
 	truncateOnTable?: boolean;
 	orientation?: "horizontal" | "vertical";
 	showCopyButton?: boolean;
+	addressWrapperClass?: string;
 }
 
 const AddressWrapper = ({
@@ -63,6 +64,7 @@ const getFontWeight = (fontWeight = "semibold") => `font-${fontWeight}`;
 export const Address = ({
 	address,
 	addressClass,
+	addressWrapperClass,
 	alignment,
 	walletNameClass,
 	fontWeight,
@@ -127,7 +129,7 @@ export const Address = ({
 				</span>
 			)}
 			{address && (
-				<>
+				<div className={addressWrapperClass} data-testid="Address__address-container">
 					<AddressWrapper alignment={alignment} truncateOnTable={truncateOnTable}>
 						<TruncateMiddleDynamic
 							data-testid="Address__address"
@@ -157,7 +159,7 @@ export const Address = ({
 							/>
 						</Clipboard>
 					)}
-				</>
+				</div>
 			)}
 		</div>
 	);
