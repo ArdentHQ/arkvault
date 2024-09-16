@@ -1116,7 +1116,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
@@ -7375,7 +7375,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
@@ -8525,7 +8525,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
@@ -10233,7 +10233,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
@@ -11383,7 +11383,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
@@ -12533,7 +12533,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                             >
                               <span>
                                 10 Confirmations
-
+                                 
                               </span>
                             </p>
                           </div>
