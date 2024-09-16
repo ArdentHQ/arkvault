@@ -116,16 +116,12 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                     Recipient 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -224,16 +220,12 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                     Recipient 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -331,16 +323,12 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
                     Recipient 3
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -427,16 +415,12 @@ exports[`RecipientList > should conditionally disable remove button 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -607,16 +591,12 @@ exports[`RecipientList > should render condensed variant 1`] = `
                     Recipient 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -683,16 +663,12 @@ exports[`RecipientList > should render condensed variant 1`] = `
                     Recipient 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -759,16 +735,12 @@ exports[`RecipientList > should render condensed variant 1`] = `
                     Recipient 3
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -824,16 +796,12 @@ exports[`RecipientList > should render condensed variant 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -981,16 +949,12 @@ exports[`RecipientList > should render editable 1`] = `
                     Recipient 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1088,16 +1052,12 @@ exports[`RecipientList > should render editable 1`] = `
                     Recipient 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1195,16 +1155,12 @@ exports[`RecipientList > should render editable 1`] = `
                     Recipient 3
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1291,16 +1247,12 @@ exports[`RecipientList > should render editable 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1459,16 +1411,12 @@ exports[`RecipientList > should render non-editable 1`] = `
                     Recipient 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
           </tr>
@@ -1518,16 +1466,12 @@ exports[`RecipientList > should render non-editable 1`] = `
                     Recipient 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
           </tr>
@@ -1577,16 +1521,12 @@ exports[`RecipientList > should render non-editable 1`] = `
                     Recipient 3
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
           </tr>
@@ -1625,16 +1565,12 @@ exports[`RecipientList > should render non-editable 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
           </tr>
@@ -1761,16 +1697,12 @@ exports[`RecipientList > should render without amount column 1`] = `
                     Recipient 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FJKDSALJFKASLJFKSDAJD333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1841,16 +1773,12 @@ exports[`RecipientList > should render without amount column 1`] = `
                     Recipient 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  AhFJKDSALJFKASLJFKSDEAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1921,16 +1849,12 @@ exports[`RecipientList > should render without amount column 1`] = `
                     Recipient 3
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td
@@ -1990,16 +1914,12 @@ exports[`RecipientList > should render without amount column 1`] = `
               <div
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
-                  </span>
-                </div>
+                  FAhFJKDSALJFKASLJFKSFDAJ333FKFKDSAJFKSAJFKLASJKDFJ
+                </span>
               </div>
             </td>
             <td

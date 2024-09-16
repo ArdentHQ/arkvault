@@ -320,21 +320,17 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            3
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          3
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -623,21 +619,17 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -926,21 +918,17 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            1
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          1
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -1541,21 +1529,17 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            3
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          3
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -1844,21 +1828,17 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -2147,21 +2127,17 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            1
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          1
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -2762,21 +2738,17 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            3
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          3
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -3065,21 +3037,17 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -3368,21 +3336,17 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            1
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          1
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -3983,21 +3947,17 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            3
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          3
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -4286,21 +4246,17 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -4589,21 +4545,17 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            1
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          1
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -5204,21 +5156,17 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            3
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          3
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -5507,21 +5455,17 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            2
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          2
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>
@@ -5810,21 +5754,17 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
                       <div
-                        data-testid="Address__address-container"
+                        class="relative grow text-left"
                       >
-                        <div
-                          class="relative grow text-left"
+                        <span
+                          class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
+                          data-testid="Address__address"
                         >
-                          <span
-                            class="no-ligatures min-w-0 overflow-hidden text-theme-primary-600 text-sm font-semibold text-base absolute w-full"
-                            data-testid="Address__address"
-                          >
-                            1
-                          </span>
-                          <span>
-                             
-                          </span>
-                        </div>
+                          1
+                        </span>
+                        <span>
+                           
+                        </span>
                       </div>
                     </div>
                   </button>

@@ -1645,16 +1645,12 @@ exports[`CreateWallet > should create a wallet 2`] = `
                             <div
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
-                              <div
-                                data-testid="Address__address-container"
+                              <span
+                                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                data-testid="Address__address"
                               >
-                                <span
-                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                  data-testid="Address__address"
-                                >
-                                  DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
-                                </span>
-                              </div>
+                                DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -1670,16 +1666,12 @@ exports[`CreateWallet > should create a wallet 2`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
-                                  </span>
-                                </div>
+                                  DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
+                                </span>
                               </div>
                             </div>
                           </div>
