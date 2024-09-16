@@ -39,14 +39,14 @@ describe("TransactionRowAddressing", () => {
 		expect(screen.getByTestId("TransactionRowAddressing__multipayment")).toBeTruthy();
 	});
 
-	it("should render label with the `to` prefix if transaction is outgoing", () => {
+	it("should render label with the 'to' prefix if transaction is outgoing", () => {
 		const sentFixture = { ...fixture, isSent: () => true };
 		render(<TransactionRowAddressing transaction={sentFixture as any} profile={profile} />);
 
 		expect(screen.getByTestId("TransactionRowAddressing__label")).toHaveTextContent("To");
 	});
 
-	it("should render label with the `to` prefix if transaction is not outgoing", () => {
+	it("should render label with the 'from' prefix if transaction is not outgoing", () => {
 		const notSentFixture = { ...fixture, isSent: () => false };
 		render(<TransactionRowAddressing transaction={notSentFixture as any} profile={profile} />);
 
