@@ -38,7 +38,7 @@ export const translations = {
 	BALANCE: "Balance",
 	BEST: "Best",
 	BIP39_LANGUAGE: "Passphrase Language (BIP39)",
-	BLOCK_ID: "Block ID",
+	BLOCK: "Block",
 	BRIDGECHAIN: "Bridgechain",
 	BUSINESS: "Business",
 	CANCEL: "Cancel",

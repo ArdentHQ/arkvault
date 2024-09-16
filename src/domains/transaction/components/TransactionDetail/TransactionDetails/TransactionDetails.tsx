@@ -1,12 +1,13 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { useResizeDetector } from "react-resize-detector";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { DateTime } from "@ardenthq/sdk-intl";
+import { DateTime, Numeral } from "@ardenthq/sdk-intl";
+import { Link } from "@/app/components/Link";
+import { HttpClient } from "@/app/services/HttpClient";
 
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
@@ -15,8 +16,32 @@ interface Properties {
 export const TransactionDetails = ({ transaction }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const format = useTimeFormat();
-	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
+
 	const timestamp = transaction.timestamp() as DateTime
+	const data = transaction.data().data as Record<string, string>
+
+	const client = new HttpClient(0);
+	const [blockHeight, setBlockHeight] = useState<string>()
+	console.log({ blockHeight })
+
+	useEffect(() => {
+		// @TODO: Fetch block info/height from sdk (not yet supported).
+		const fetchBlockHeight = async () => {
+			const { hosts: [api] } = transaction.wallet().coin().network().toObject()
+
+			try {
+				const response = await client.get(`${api.host}/blocks/${transaction.blockId()}`)
+				const { data } = response.json()
+
+				setBlockHeight(Numeral.make("en").format(data.height))
+
+			} catch {
+				// @TODO: Handle error
+			}
+		}
+
+		fetchBlockHeight()
+	}, [])
 
 	return (
 		<DetailWrapper label={t("COMMON.DETAILS")}>
@@ -31,10 +56,10 @@ export const TransactionDetails = ({ transaction }: Properties): ReactElement =>
 				</div>
 
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText>{t("COMMON.BLOCK_ID")}</DetailLabelText>
-					<div ref={ref} className="w-full">
-						<TruncateMiddleDynamic value={transaction.wallet().transaction()} availableWidth={width} />
-					</div>
+					<DetailLabelText>{t("COMMON.BLOCK")}</DetailLabelText>
+					<Link isExternal to={transaction.explorerLinkForBlock() as string}>
+						{blockHeight}
+					</Link>
 				</div>
 
 				<div className="hidden h-8 w-full items-center sm:flex">
@@ -43,7 +68,7 @@ export const TransactionDetails = ({ transaction }: Properties): ReactElement =>
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.NONCE")}</DetailLabelText>
-					<div>10</div>
+					<div>{data.nonce}</div>
 				</div>
 
 			</div>
