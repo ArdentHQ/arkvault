@@ -407,7 +407,7 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -464,7 +464,7 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
