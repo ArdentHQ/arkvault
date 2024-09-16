@@ -13,7 +13,6 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { TabId } from "@/app/components/Tabs/useTab";
 import { Icon } from "@/app/components/Icon";
 import { TableWrapper } from "@/app/components/Table/TableWrapper";
-import { useActiveWallet } from "@/app/hooks";
 
 interface TransactionsProperties {
 	emptyText?: string;
