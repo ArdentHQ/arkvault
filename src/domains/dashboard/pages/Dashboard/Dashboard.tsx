@@ -76,7 +76,7 @@ export const Dashboard: React.VFC = () => {
 							skeletonRowsLimit={8}
 							onRowClick={setTransactionModalItem}
 							profile={activeProfile}
-							wallet={wallet}
+							coinName={wallet.currency()}
 						/>
 
 						{latestTransactions.length === 0 && !isLoadingTransactions && (
