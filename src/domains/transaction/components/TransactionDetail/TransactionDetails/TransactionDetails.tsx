@@ -1,47 +1,23 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
-import { DTO } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk";
 import { Divider } from "@/app/components/Divider";
 import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
-import { DateTime, Numeral } from "@ardenthq/sdk-intl";
 import { Link } from "@/app/components/Link";
-import { HttpClient } from "@/app/services/HttpClient";
+import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
 
-interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
-}
-
-export const TransactionDetails = ({ transaction }: Properties): ReactElement => {
+export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransactionData }): ReactElement => {
 	const { t } = useTranslation();
 	const format = useTimeFormat();
 
-	const timestamp = transaction.timestamp() as DateTime;
-	const data = transaction.data().data as Record<string, string>;
-	console.log({ transaction });
+	const timestamp = transaction.timestamp();
+	const data = transaction.data().data;
 
-	const client = new HttpClient(0);
-	const [blockHeight, setBlockHeight] = useState<string>();
-
-	useEffect(() => {
-		// @TODO: Fetch block info/height from sdk (not yet supported).
-		const fetchBlockHeight = async () => {
-			const {
-				hosts: [api],
-			} = transaction.wallet().coin().network().toObject();
-
-			try {
-				const response = await client.get(`${api.host}/blocks/${transaction.blockId()}`);
-				const { data } = response.json();
-
-				setBlockHeight(Numeral.make("en").format(data.height));
-			} catch {
-				// @TODO: Handle error
-			}
-		};
-
-		fetchBlockHeight();
-	}, []);
+	const { blockHeight } = useBlockHeight({
+		blockId: transaction.blockId(),
+		network: transaction.wallet().network(),
+	});
 
 	return (
 		<DetailWrapper label={t("COMMON.DETAILS")}>

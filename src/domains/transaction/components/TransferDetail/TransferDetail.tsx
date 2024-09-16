@@ -7,11 +7,12 @@ import {
 	TransactionType,
 	TransactionSummary,
 	TransactionDetails,
+	TransactionConfirmations,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-import { DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionDetailPadded } from "@/domains/transaction/components/TransactionSuccessful";
 
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile }: TransactionDetailProperties) => {
@@ -53,8 +54,19 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 
 				<TransactionDetailPadded>
 					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-						<p>{transaction.memo() ?? t("COMMON.NOT_AVAILABLE")}</p>
+						{transaction.memo() && <p>{transaction.memo()}</p>}
+						{!transaction.memo() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
 					</DetailWrapper>
+				</TransactionDetailPadded>
+
+				<TransactionDetailPadded>
+					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
+					<div className="mt-2">
+						<TransactionConfirmations
+							isConfirmed={transaction.isConfirmed()}
+							confirmations={transaction.confirmations().toNumber()}
+						/>
+					</div>
 				</TransactionDetailPadded>
 			</div>
 		</Modal>
