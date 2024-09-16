@@ -44,13 +44,17 @@ describe("TransactionTable", () => {
 	});
 
 	it("should render with currency", () => {
-		render(<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} wallet={wallet} />);
+		render(
+			<TransactionTable transactions={transactions} exchangeCurrency="BTC" profile={profile} wallet={wallet} />,
+		);
 
 		expect(screen.getAllByTestId("TransactionRow__exchange-currency")).toHaveLength(transactions.length);
 	});
 
 	it("should render compact", () => {
-		const { asFragment } = render(<TransactionTable transactions={transactions} profile={profile} isCompact wallet={wallet} />);
+		const { asFragment } = render(
+			<TransactionTable transactions={transactions} profile={profile} isCompact wallet={wallet} />,
+		);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
 		expect(asFragment()).toMatchSnapshot();
@@ -69,7 +73,13 @@ describe("TransactionTable", () => {
 
 		it("should render", () => {
 			const { asFragment } = render(
-				<TransactionTable transactions={[]} isLoading skeletonRowsLimit={5} profile={profile} wallet={wallet} />,
+				<TransactionTable
+					transactions={[]}
+					isLoading
+					skeletonRowsLimit={5}
+					profile={profile}
+					wallet={wallet}
+				/>,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -94,7 +104,14 @@ describe("TransactionTable", () => {
 
 		it("should render compact", () => {
 			const { asFragment } = render(
-				<TransactionTable transactions={[]} isLoading isCompact skeletonRowsLimit={5} profile={profile} wallet={wallet} />,
+				<TransactionTable
+					transactions={[]}
+					isLoading
+					isCompact
+					skeletonRowsLimit={5}
+					profile={profile}
+					wallet={wallet}
+				/>,
 			);
 
 			expect(screen.getAllByTestId("TableRow")).toHaveLength(5);
@@ -106,7 +123,9 @@ describe("TransactionTable", () => {
 		const onClick = vi.fn();
 		const sortedByDateDesc = sortByDesc(transactions, (transaction) => transaction.timestamp());
 
-		render(<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} wallet={wallet} />);
+		render(
+			<TransactionTable transactions={sortedByDateDesc} onRowClick={onClick} profile={profile} wallet={wallet} />,
+		);
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
@@ -116,7 +135,15 @@ describe("TransactionTable", () => {
 	it("should emit action on the compact row click", async () => {
 		const onClick = vi.fn();
 
-		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} wallet={wallet} />);
+		render(
+			<TransactionTable
+				transactions={transactions}
+				onRowClick={onClick}
+				isCompact
+				profile={profile}
+				wallet={wallet}
+			/>,
+		);
 
 		await userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
@@ -126,10 +153,16 @@ describe("TransactionTable", () => {
 	it("should render active wallet's coin name", () => {
 		const onClick = vi.fn();
 
-		render(<TransactionTable transactions={transactions} onRowClick={onClick} isCompact profile={profile} wallet={wallet} />);
+		render(
+			<TransactionTable
+				transactions={transactions}
+				onRowClick={onClick}
+				isCompact
+				profile={profile}
+				wallet={wallet}
+			/>,
+		);
 
-		expect(screen.getByText((`Value (${wallet.currency()})`))).toBeInTheDocument();
-
-
-	})
+		expect(screen.getByText(`Value (${wallet.currency()})`)).toBeInTheDocument();
+	});
 });
