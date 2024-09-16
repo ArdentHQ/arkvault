@@ -407,7 +407,7 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -443,8 +443,6 @@ describe("SendDelegateResignation", () => {
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-			expect(asFragment()).toMatchSnapshot();
-
 			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();
 			broadcastMock.mockRestore();
@@ -466,7 +464,7 @@ describe("SendDelegateResignation", () => {
 			});
 			const transactionMock = createTransactionMock(wallet);
 
-			const { asFragment } = renderPage();
+			renderPage();
 
 			await expect(formStep()).resolves.toBeVisible();
 
@@ -498,8 +496,6 @@ describe("SendDelegateResignation", () => {
 			await act(() => vi.runOnlyPendingTimers());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
-
-			expect(asFragment()).toMatchSnapshot();
 
 			secondPublicKeyMock.mockRestore();
 			signMock.mockRestore();

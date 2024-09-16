@@ -5,15 +5,21 @@ import { Contracts } from "@ardenthq/sdk-profiles";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { Divider } from "@/app/components/Divider";
-import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 
 interface Properties {
 	senderWallet: Contracts.IReadWriteWallet;
 	recipients: RecipientItem[];
 	profile: Contracts.IProfile;
+	labelClassName?: string;
 }
 
-export const TransactionAddresses = ({ senderWallet, recipients = [], profile }: Properties): ReactElement => {
+export const TransactionAddresses = ({
+	senderWallet,
+	recipients = [],
+	profile,
+	labelClassName,
+}: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
 
@@ -25,14 +31,15 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-			<div className="flex w-full">
-				<DetailLabelText>{t("COMMON.FROM")}</DetailLabelText>
+			<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
 				<Address
 					address={senderWallet.address()}
 					walletName={alias}
-					walletNameClass="text-theme-text"
 					showCopyButton
-					wrapperClass="sm:w-3/4"
+					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+					wrapperClass="justify-end sm:justify-start"
 				/>
 			</div>
 
@@ -43,15 +50,19 @@ export const TransactionAddresses = ({ senderWallet, recipients = [], profile }:
 			)}
 
 			{recipients.map((recipient, index) => (
-				<div className="mt-3 flex w-full md:mt-0" key={index}>
-					<DetailLabelText>{t("COMMON.TO")}</DetailLabelText>
+				<div
+					className="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0"
+					key={index}
+				>
+					<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 					<Address
 						key={index}
 						address={recipient.address}
 						walletName={recipient.alias}
-						walletNameClass="text-theme-text"
 						showCopyButton
-						wrapperClass="sm:w-3/4"
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+						wrapperClass="justify-end sm:justify-start"
 					/>
 				</div>
 			))}
