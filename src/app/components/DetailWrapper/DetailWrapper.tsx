@@ -37,7 +37,7 @@ export const DetailWrapper = ({
 		{label && <DetailLabel>{label}</DetailLabel>}
 		<div
 			className={cn(
-				"w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5",
+				"w-full break-words rounded-lg border-theme-secondary-300 p-3 dark:border-theme-secondary-800 sm:border sm:px-6 sm:py-5 [.condensed_&]:sm:py-4",
 				{
 					"mt-0 sm:mt-2": !!label,
 				},
@@ -70,7 +70,7 @@ export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNo
 )
 
 export const DetailDivider = (): ReactNode => (
-	<div className="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-4">
+	<div className="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3">
 		<div className="w-full [.condensed_&]:hidden"><Divider dashed /></div>
 	</div>
 );
