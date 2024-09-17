@@ -15,6 +15,7 @@ interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
 	isDelegate: boolean;
+	address: string;
 }
 
 interface HookResult {
