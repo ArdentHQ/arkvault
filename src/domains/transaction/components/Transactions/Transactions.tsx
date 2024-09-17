@@ -168,16 +168,15 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:p-6">
-										<Icon size="lg" name={isOpen ? "MenuOpen" : "Menu"} />
-
-										<span className="font-semibold leading-tight">{selectedFilterLabel}</span>
+									<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3 justify-between w-full h-11">
+										<span className="font-semibold leading-tight text-base">{selectedFilterLabel}</span>
+										<Icon size="xs" name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"} />
 									</div>
 								)}
 							/>
 						</div>
 
-						<div className="flex-1">
+						<div className="flex-1 hidden">
 							<FilterTransactions
 								data-testid="FilterTransactions--Mobile"
 								wallets={wallets}
@@ -209,12 +208,12 @@ export const Transactions = memo(function Transactions({
 				</>
 			) : (
 				<TableWrapper className="border-none">
-					<div className="flex w-full items-center justify-between border-b border-b-theme-secondary-300 px-6 py-4 dark:border-b-theme-secondary-800">
+					<div className="flex w-full md:items-center justify-between md:border-b border-b-theme-secondary-300 md:px-6 md:py-4 pt-3 pb-4 dark:border-b-theme-secondary-800 flex-col sm:flex-row gap-3 items-start border-b-0">
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
 						</span>
 						<FilterTransactions
-							className="my-auto"
+							className="md:my-auto w-full sm:w-fit"
 							wallets={wallets}
 							onSelect={filterChangeHandler}
 							isDisabled={wallets.length === 0 || isLoadingTransactions}
