@@ -3269,7 +3269,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -4592,7 +4592,7 @@ exports[`TransactionTable > should render compact 1`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -4925,7 +4925,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-50"
+                          class="w-40 md:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -6128,7 +6128,7 @@ exports[`TransactionTable > should render responsive 1`] = `
                           To
                         </div>
                         <div
-                          class="w-50"
+                          class="w-40 md:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -6461,7 +6461,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-50"
+                          class="w-40 md:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -7664,7 +7664,7 @@ exports[`TransactionTable > should render responsive 2`] = `
                           To
                         </div>
                         <div
-                          class="w-50"
+                          class="w-40 md:w-50"
                           data-testid="TransactionRowAddressing__address-container"
                         >
                           <div
@@ -8219,7 +8219,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -9542,7 +9542,7 @@ exports[`TransactionTable > should render responsive 3`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -10097,7 +10097,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -11420,7 +11420,7 @@ exports[`TransactionTable > should render responsive 4`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -11975,7 +11975,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
@@ -13298,7 +13298,7 @@ exports[`TransactionTable > should render responsive 5`] = `
                     To
                   </div>
                   <div
-                    class="w-50"
+                    class="w-40 md:w-50"
                     data-testid="TransactionRowAddressing__address-container"
                   >
                     <div
