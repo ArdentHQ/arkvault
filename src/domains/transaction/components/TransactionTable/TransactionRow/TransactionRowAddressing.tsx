@@ -98,8 +98,8 @@ export const TransactionRowAddressing = ({
 			<RowLabel isNegative={isNegative} />
 			<div
 				className={cn({
+					"w-40 md:w-50": alias,
 					"w-30": !alias,
-					"w-50": alias,
 				})}
 				data-testid="TransactionRowAddressing__address-container"
 			>
