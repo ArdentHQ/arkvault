@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 
 import { WalletAliasResult } from "@/app/hooks";
+import { Environment } from "vitest";
 
 export interface TransactionAliases {
 	sender: WalletAliasResult;
@@ -8,6 +9,7 @@ export interface TransactionAliases {
 }
 
 export interface TransactionDetailModalProperties {
+	env: Environment;
 	isOpen: boolean;
 	transactionItem: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;

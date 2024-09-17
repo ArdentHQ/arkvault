@@ -202,6 +202,9 @@ export const translations = {
 	MODAL_SECOND_SIGNATURE_DETAIL: {
 		TITLE: "Second Signature",
 	},
+	MODAL_TRANSACTION_DETAILS: {
+		TITLE: "Transaction Details",
+	},
 	MODAL_TRANSFER_DETAIL: {
 		TITLE: "Transfer",
 	},

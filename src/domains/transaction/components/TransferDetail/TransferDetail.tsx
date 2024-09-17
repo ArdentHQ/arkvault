@@ -19,7 +19,7 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 	const { t } = useTranslation();
 
 	return (
-		<Modal title={t("TRANSACTION.MODAL_TRANSFER_DETAIL.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
+		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
 			<div className="mt-4">
 				<TransactionId transaction={transaction} />
 			</div>

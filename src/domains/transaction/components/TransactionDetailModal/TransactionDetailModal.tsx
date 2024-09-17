@@ -12,6 +12,7 @@ export const TransactionDetailModal = ({
 	transactionItem,
 	profile,
 	onClose,
+	env
 }: TransactionDetailModalProperties) => {
 	const { getWalletAlias } = useWalletAlias();
 
@@ -60,10 +61,11 @@ export const TransactionDetailModal = ({
 		secondSignature: () => TransferDetail,
 		transfer: () => TransferDetail,
 		unlockToken: () => TransferDetail,
-		unvote: () => VoteDetail,
-		vote: () => VoteDetail,
-		voteCombination: () => VoteDetail,
+		unvote: () => TransferDetail,
+		vote: () => TransferDetail,
+		voteCombination: () => TransferDetail,
 	};
+
 
 	const transactionType = transactionItem.type();
 
