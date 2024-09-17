@@ -65,7 +65,7 @@ export const FilterTransactions = memo(
 							size="sm"
 							icon="Funnel"
 							iconSize="md"
-							className="px-4 py-1.5"
+							className="px-4 py-1.5 text-base w-full sm:w-fit"
 							disabled={isDisabled}
 							data-testid="CollapseToggleButton"
 						>
