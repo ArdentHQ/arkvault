@@ -15,7 +15,7 @@ interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
 	isDelegate: boolean;
-	address: string;
+	address?: string;
 }
 
 interface HookResult {
@@ -72,6 +72,7 @@ const useWalletAlias = (): HookResult => {
 
 				if (contact) {
 					return {
+						address,
 						alias: contact.name(),
 						isContact: true,
 						isDelegate: !!getDelegateUsername(network),
@@ -82,6 +83,7 @@ const useWalletAlias = (): HookResult => {
 					const alias = getDelegateUsername(network);
 
 					return {
+						address,
 						alias,
 						isContact: false,
 						isDelegate: alias !== undefined,
@@ -92,6 +94,7 @@ const useWalletAlias = (): HookResult => {
 			}
 
 			return {
+				address,
 				alias: undefined,
 				isContact: false,
 				isDelegate: false,
