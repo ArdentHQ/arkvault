@@ -20,7 +20,7 @@ export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransa
 	});
 
 	return (
-		<DetailWrapper label={t("COMMON.DETAILS")}>
+		<DetailWrapper label={t("TRANSACTION.TRANSACTION_DETAILS")}>
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.TIMESTAMP")}</DetailLabelText>

@@ -39,6 +39,10 @@ export const TransactionRecipient = ({ recipient = [], showLabel, labelClassName
 export const TransactionRecipients = ({ recipients, explorerLink, labelClassName }: { recipients: RecipientItem[], explorerLink: string, labelClassName?: string }) => {
 	const { t } = useTranslation();
 
+	if (recipients.length === 0) {
+		return <></>
+	}
+
 	if (recipients.length === 1) {
 		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />
 	}

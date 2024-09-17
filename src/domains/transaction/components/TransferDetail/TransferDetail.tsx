@@ -47,12 +47,14 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 					<TransactionDetails transaction={transaction} />
 				</TransactionDetailPadded>
 
-				<TransactionDetailPadded>
-					<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
-						{transaction.memo() && <p>{transaction.memo()}</p>}
-						{!transaction.memo() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
-					</DetailWrapper>
-				</TransactionDetailPadded>
+				{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
+					<TransactionDetailPadded>
+						<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
+							{transaction.memo() && <p>{transaction.memo()}</p>}
+							{!transaction.memo() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
+						</DetailWrapper>
+					</TransactionDetailPadded>
+				)}
 
 				<TransactionDetailPadded>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
