@@ -15,3 +15,4 @@ export * from "./TransactionAddresses";
 export * from "./TransactionDetails";
 export * from "./TransactionSummary";
 export * from "./TransactionConfirmations";
+export * from "./TransactionMusigParticipants";
