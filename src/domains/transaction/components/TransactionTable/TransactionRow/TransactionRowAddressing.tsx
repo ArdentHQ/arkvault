@@ -107,7 +107,7 @@ export const TransactionRowAddressing = ({
 					walletName={alias}
 					address={transaction.sender()}
 					truncateOnTable
-					addressClass={cn("pt-0.5", {
+					addressClass={cn("md:pt-0.5", {
 						"text-theme-primary-600": !alias,
 						"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 					})}
