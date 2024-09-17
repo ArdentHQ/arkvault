@@ -168,15 +168,17 @@ export const Transactions = memo(function Transactions({
 								options={filterOptions}
 								onSelect={({ value }) => activeModeChangeHandler(value)}
 								toggleContent={(isOpen) => (
-									<div className="flex cursor-pointer items-center space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3 justify-between w-full h-11">
-										<span className="font-semibold leading-tight text-base">{selectedFilterLabel}</span>
+									<div className="flex h-11 w-full cursor-pointer items-center justify-between space-x-4 overflow-hidden rounded-xl border border-theme-primary-100 p-3 dark:border-theme-secondary-800 sm:px-4 sm:py-3">
+										<span className="text-base font-semibold leading-tight">
+											{selectedFilterLabel}
+										</span>
 										<Icon size="xs" name={isOpen ? "ChevronUpSmall" : "ChevronDownSmall"} />
 									</div>
 								)}
 							/>
 						</div>
 
-						<div className="flex-1 hidden">
+						<div className="hidden flex-1">
 							<FilterTransactions
 								data-testid="FilterTransactions--Mobile"
 								wallets={wallets}
@@ -208,12 +210,12 @@ export const Transactions = memo(function Transactions({
 				</>
 			) : (
 				<TableWrapper className="border-none">
-					<div className="flex w-full md:items-center justify-between md:border-b border-b-theme-secondary-300 md:px-6 md:py-4 pt-3 pb-4 dark:border-b-theme-secondary-800 flex-col sm:flex-row gap-3 items-start border-b-0">
+					<div className="flex w-full flex-col items-start justify-between gap-3 border-b-0 border-b-theme-secondary-300 pb-4 pt-3 dark:border-b-theme-secondary-800 sm:flex-row md:items-center md:border-b md:px-6 md:py-4">
 						<span className="text-base font-semibold leading-5 text-theme-secondary-700 dark:text-theme-secondary-500">
 							{t("COMMON.SHOWING_RESULTS", { count: transactions.length })}
 						</span>
 						<FilterTransactions
-							className="md:my-auto w-full sm:w-fit"
+							className="w-full sm:w-fit md:my-auto"
 							wallets={wallets}
 							onSelect={filterChangeHandler}
 							isDisabled={wallets.length === 0 || isLoadingTransactions}

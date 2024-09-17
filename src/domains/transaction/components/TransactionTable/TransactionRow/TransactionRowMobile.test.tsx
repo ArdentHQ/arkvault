@@ -51,7 +51,8 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRowMobile transaction={
+					<TransactionRowMobile
+						transaction={
 							{
 								...fixture,
 								wallet: () => ({
@@ -61,7 +62,10 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 									network: () => ({ isTest: () => false }),
 								}),
 							} as any
-						} profile={profile} isLoading />
+						}
+						profile={profile}
+						isLoading
+					/>
 				</tbody>
 			</table>,
 		);
@@ -111,44 +115,45 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		);
 
 		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Multipayment");
-	})
+	});
 
 	it("should render 'vote' label if transaction is vote", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={{ ...fixture, isVote: () => true } as any}
-						profile={profile}
-					/>
+					<TransactionRowMobile transaction={{ ...fixture, isVote: () => true } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
 
 		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Vote");
-	})
+	});
 
 	it("should render 'unvote' label if transaction is unvote", () => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={{ ...fixture, isUnvote: () => true } as any}
-						profile={profile}
-					/>
+					<TransactionRowMobile transaction={{ ...fixture, isUnvote: () => true } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
 
 		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Unvote");
-	})
+	});
 
 	it("should render 'transfer' label by default", () => {
 		render(
 			<table>
 				<tbody>
 					<TransactionRowMobile
-						transaction={{ ...fixture, isMultiPayment: () => false, isVote: () => false, isUnvote: () => false } as any}
+						transaction={
+							{
+								...fixture,
+								isMultiPayment: () => false,
+								isUnvote: () => false,
+								isVote: () => false,
+							} as any
+						}
 						profile={profile}
 					/>
 				</tbody>
@@ -162,10 +167,7 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={{ ...fixture, timestamp: undefined } as any}
-						profile={profile}
-					/>
+					<TransactionRowMobile transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
