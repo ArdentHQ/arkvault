@@ -37,23 +37,18 @@ describe("TransactionRowSender", () => {
 		expect(screen.getByTestId("Address__alias")).toHaveTextContent(wallet.alias());
 		expect(screen.getByTestId("Address__address")).toHaveTextContent(wallet.address());
 	});
-	
-	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
-		renderResponsive(
-			<TransactionRowSender transaction={TransactionFixture} profile={profile} />,
-			breakpoint
-		);
 
-		expect(screen.getByTestId("Address__alias").parentElement).toHaveClass("justify-end");	
+	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
+		renderResponsive(<TransactionRowSender transaction={TransactionFixture} profile={profile} />, breakpoint);
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("Address__alias").parentElement).toHaveClass("justify-end");
 	});
 
 	it.each(["md", "lg", "xl"])("should render with left alignment on desktop view", (breakpoint) => {
-		renderResponsive(
-			<TransactionRowSender transaction={TransactionFixture} profile={profile} />,
-			breakpoint
-		);
+		renderResponsive(<TransactionRowSender transaction={TransactionFixture} profile={profile} />, breakpoint);
 
-		expect(screen.getByTestId("Address__alias").parentElement).not.toHaveClass("justify-end");	
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("Address__alias").parentElement).not.toHaveClass("justify-end");
 	});
-
 });

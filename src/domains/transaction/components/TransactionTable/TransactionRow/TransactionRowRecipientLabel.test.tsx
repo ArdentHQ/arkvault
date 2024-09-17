@@ -58,6 +58,7 @@ describe("TransactionRowRecipientLabel", () => {
 			breakpoint,
 		);
 
+		// eslint-disable-next-line testing-library/no-node-access
 		expect(screen.getByTestId("Address__address").parentElement).toHaveClass("justify-end");
 	});
 
