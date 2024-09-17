@@ -14,7 +14,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 	labelClassName?: string;
 	network: Networks.Network;
-	explorerLink?: string
+	explorerLink?: string;
 }
 
 export const TransactionAddresses = ({
@@ -50,12 +50,23 @@ export const TransactionAddresses = ({
 				</div>
 			</div>
 
-			{explorerLink && <TransactionRecipients labelClassName={labelClassName} recipients={recipients} explorerLink={explorerLink} />}
+			{explorerLink && (
+				<TransactionRecipients
+					labelClassName={labelClassName}
+					recipients={recipients}
+					explorerLink={explorerLink}
+				/>
+			)}
 
-			{!explorerLink && recipients.map((recipient, index) => (
-				<TransactionRecipient recipient={recipient} labelClassName={labelClassName} key={index} showLabel={index === 0} />
-			))}
-
+			{!explorerLink &&
+				recipients.map((recipient, index) => (
+					<TransactionRecipient
+						recipient={recipient}
+						labelClassName={labelClassName}
+						key={index}
+						showLabel={index === 0}
+					/>
+				))}
 		</DetailWrapper>
 	);
 };
