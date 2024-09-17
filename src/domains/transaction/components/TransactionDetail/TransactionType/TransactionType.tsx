@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
 import { DTO } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
@@ -31,9 +31,7 @@ export const TransactionType = ({
 
 				{transaction.isDelegateRegistration() && (
 					<>
-						<div className="hidden h-8 w-full items-center md:flex">
-							<Divider dashed />
-						</div>
+						<DetailDivider />
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
@@ -44,9 +42,7 @@ export const TransactionType = ({
 
 				{transaction.isDelegateResignation() && (
 					<>
-						<div className="hidden h-8 w-full items-center md:flex">
-							<Divider dashed />
-						</div>
+						<DetailDivider />
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
@@ -57,9 +53,7 @@ export const TransactionType = ({
 
 				{transaction.isIpfs() && (
 					<div>
-						<div className="hidden h-8 w-full items-center md:flex">
-							<Divider dashed />
-						</div>
+						<DetailDivider />
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText>{t("COMMON.HASH")}</DetailLabelText>

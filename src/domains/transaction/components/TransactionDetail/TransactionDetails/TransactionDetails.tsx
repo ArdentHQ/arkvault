@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
 import { Divider } from "@/app/components/Divider";
-import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";
 import { useBlockHeight } from "@/domains/transaction/hooks/use-block-height";
@@ -27,9 +27,7 @@ export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransa
 					<div>{timestamp.format(format)}</div>
 				</div>
 
-				<div className="hidden h-8 w-full items-center sm:flex">
-					<Divider dashed />
-				</div>
+				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.BLOCK")}</DetailLabelText>
@@ -38,9 +36,7 @@ export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransa
 					</Link>
 				</div>
 
-				<div className="hidden h-8 w-full items-center sm:flex">
-					<Divider dashed />
-				</div>
+				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.NONCE")}</DetailLabelText>

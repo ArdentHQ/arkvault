@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
 import { Divider } from "@/app/components/Divider";
-import { DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
+import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { BigNumber } from "@ardenthq/sdk-helpers";
 
@@ -10,7 +10,6 @@ interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
 }
-
 export const TransactionSummary = ({ transaction, senderWallet }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
@@ -28,9 +27,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 							/>
 						</div>
 
-						<div className="hidden h-8 w-full items-center sm:flex">
-							<Divider dashed />
-						</div>
+						<DetailDivider />
 					</>
 				)
 				}
@@ -40,9 +37,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 					<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
 				</div>
 
-				<div className="hidden h-8 w-full items-center sm:flex">
-					<Divider dashed />
-				</div>
+				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.VALUE")}</DetailLabelText>
