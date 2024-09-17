@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 
 interface Properties {
 	network: Networks.Network;
-	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData
+	transaction: DTO.ExtendedConfirmedTransactionData
 	profile: Contracts.IProfile
 }
 
 export const useTransactionVotingWallets = ({ transaction, network, profile }: Properties) => {
 	const [isLoading, setIsLoading] = useState(false)
-	const [votes, setVotes] = useState<{ wallet: Contracts.IReadWriteWallet }[]>([])
-	const [unvotes, setUnvotes] = useState<{ wallet: Contracts.IReadWriteWallet }[]>([])
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([])
+	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([])
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
@@ -26,24 +26,30 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			}
 
 			try {
-				const unvotesList = transaction.unvotes().map((publicKey) => ({
+
+				const votesList = transaction.votes().map((publicKey: string) => ({
+					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey)
 				}));
 
-				const votes = transaction.votes().map((publicKey) => ({
+				const unvotesList = transaction.unvotes().map((publicKey: string) => ({
+					amount: transaction.amount(),
 					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey)
 				}));
+
+
+				setVotes(votesList)
+				setUnvotes(unvotesList)
+
 			} catch {
 				//
 			}
 
-			setVotes(votes)
-			setUnvotes(unvotes)
 			setIsLoading(false)
 		};
 
 		updateDelegates()
-	}, [])
+	}, [transaction, profile, network])
 
 	return {
 		isLoading,

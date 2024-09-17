@@ -14,9 +14,14 @@ import { TransactionId } from "@/domains/transaction/components/TransactionDetai
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 import { DetailLabel, DetailWrapper } from "@/app/components/DetailWrapper";
 import { TransactionDetailPadded } from "@/domains/transaction/components/TransactionSuccessful";
+import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
+import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 
 export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile }: TransactionDetailProperties) => {
 	const { t } = useTranslation();
+
+	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(Boolean)
+	const { votes, unvotes } = useTransactionVotingWallets({ network: transaction.wallet().network(), profile, transaction })
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
@@ -36,7 +41,8 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 				</TransactionDetailPadded>
 
 				<TransactionDetailPadded>
-					<TransactionType transaction={transaction} />
+					{!isVoteTransaction && <TransactionType transaction={transaction} />}
+					{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
 				</TransactionDetailPadded>
 
 				<TransactionDetailPadded>

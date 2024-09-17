@@ -4,15 +4,12 @@ import { TransactionAliases, TransactionDetailModalProperties } from "./Transact
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { MultiSignatureRegistrationDetail } from "@/domains/transaction/components/MultiSignatureDetail";
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
-import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
-import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
 
 export const TransactionDetailModal = ({
 	isOpen,
 	transactionItem,
 	profile,
 	onClose,
-	env
 }: TransactionDetailModalProperties) => {
 	const { getWalletAlias } = useWalletAlias();
 
