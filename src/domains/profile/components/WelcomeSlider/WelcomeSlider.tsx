@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect, useRef, useState} from "react";
 import { Image } from "@/app/components/Image";
 import Slider, { Settings } from "react-slick";
 
@@ -9,8 +9,21 @@ interface SlideProperties {
 	imageNameSm: string;
 }
 
-const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => (
-	<div className="flex w-full flex-row md:w-auto lg:flex-col">
+const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => {
+	const [height, setHeight] = useState<number|undefined>();
+	const containerRef = useRef<HTMLDivElement>()
+
+	useLayoutEffect(() => {
+		const w = containerRef.current?.offsetWidth ?? 0
+		const originalHeight = 938
+		const originalWidth = 1029
+
+		const newHeight = (originalHeight / originalWidth) * w
+		console.log(newHeight)
+		setHeight(newHeight)
+	}, []);
+
+	return (<div className="flex w-full flex-row md:w-auto lg:flex-col">
 		<div className="w-full p-4 sm:flex-shrink-0 sm:p-6 md:w-[360px] md:pb-0 md:pr-0 lg:w-[430px]">
 			<h3 className="mb-2 mt-7 text-base leading-7 xs:leading-5 md:font-bold lg:text-2xl lg:leading-[29px]">
 				{title}
@@ -19,7 +32,7 @@ const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => 
 				{subtitle}
 			</p>
 		</div>
-		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex">
+		<div className="hidden flex-1 justify-end overflow-hidden rounded-ee-xl md:flex" ref={containerRef} style={{minHeight: height}}>
 			<Image name={imageName} alt={title} domain="profile" className="!hidden lg:!block" />
 			<Image
 				name={imageNameSm}
@@ -28,8 +41,8 @@ const Slide = ({ title, subtitle, imageName, imageNameSm }: SlideProperties) => 
 				className="mt-3 !hidden h-[180px] md:!block lg:!hidden"
 			/>
 		</div>
-	</div>
-);
+	</div>)
+};
 
 export const WelcomeSlider = (): JSX.Element => {
 	const settings: Settings = {
@@ -39,7 +52,7 @@ export const WelcomeSlider = (): JSX.Element => {
 			</div>
 		),
 		arrows: false,
-		autoplay: true,
+		autoplay: false,
 		customPaging: () => (
 			<button className="h-3 w-3 rounded-full border-2 border-theme-navy-200 hover:border-transparent hover:bg-theme-navy-700 dark:border-theme-secondary-600 dark:hover:border-transparent dark:hover:bg-theme-secondary-600" />
 		),
