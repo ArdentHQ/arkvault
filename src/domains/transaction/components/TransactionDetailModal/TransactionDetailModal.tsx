@@ -1,5 +1,4 @@
-import React, { useMemo } from "react";
-
+import React from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { useTranslation } from "react-i18next";
@@ -19,6 +18,7 @@ import { TransactionDetailPadded } from "@/domains/transaction/components/Transa
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
+import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
 
 export const TransactionDetailModal = ({
 	isOpen,
@@ -27,39 +27,10 @@ export const TransactionDetailModal = ({
 	onClose,
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
-	const { getWalletAlias } = useWalletAlias();
 
 	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(Boolean)
 	const { votes, unvotes } = useTransactionVotingWallets({ network: transaction.wallet().network(), profile, transaction })
-
-
-	const recipients: WalletAliasResult[] = useMemo(() => {
-		const recipients: WalletAliasResult[] = [];
-
-		if (transaction.isTransfer()) {
-			recipients.push(
-				getWalletAlias({
-					address: transaction.recipient(),
-					network: transaction.wallet().network(),
-					profile,
-				}),
-			);
-		}
-
-		if (transaction.isMultiPayment()) {
-			for (const recipient of transaction.recipients()) {
-				recipients.push(
-					getWalletAlias({
-						address: recipient.address,
-						network: transaction.wallet().network(),
-						profile,
-					}),
-				);
-			}
-		}
-
-		return recipients;
-	}, [getWalletAlias, profile, transaction]);
+	const { recipients } = useTransactionRecipients({ profile, transaction })
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
@@ -111,12 +82,14 @@ export const TransactionDetailModal = ({
 						</div>
 					</TransactionDetailPadded>
 
-					<TransactionDetailPadded>
-						<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
-						<div className="mt-2">
-							<TransactionMusigParticipants transaction={transaction} profile={profile} />
-						</div>
-					</TransactionDetailPadded>
+					{transaction.isMultiSignatureRegistration() && (
+						<TransactionDetailPadded>
+							<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
+							<div className="mt-2">
+								<TransactionMusigParticipants transaction={transaction} profile={profile} />
+							</div>
+						</TransactionDetailPadded>
+					)}
 
 				</div>
 			</DetailsCondensed>
