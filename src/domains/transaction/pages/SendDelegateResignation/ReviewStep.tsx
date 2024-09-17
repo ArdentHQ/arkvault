@@ -6,12 +6,15 @@ import { useTranslation } from "react-i18next";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import { TransactionAddresses } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import {ThemeIcon} from "@/app/components/Icon";
-import {DetailTitle, DetailWrapper} from "@/app/components/DetailWrapper";
-import {Divider} from "@/app/components/Divider";
+import { ThemeIcon } from "@/app/components/Icon";
+import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
+import { Divider } from "@/app/components/Divider";
 
-export const ReviewStep = ({ senderWallet, profile }: {
-	senderWallet: Contracts.IReadWriteWallet,
+export const ReviewStep = ({
+	senderWallet,
+	profile,
+}: {
+	senderWallet: Contracts.IReadWriteWallet;
 	profile: Contracts.IProfile;
 }) => {
 	const { t } = useTranslation();
@@ -23,7 +26,7 @@ export const ReviewStep = ({ senderWallet, profile }: {
 	}, [unregister]);
 
 	return (
-		<section data-testid="SendDelegateResignation__review-step"  className="space-y-3 sm:space-y-4">
+		<section data-testid="SendDelegateResignation__review-step" className="space-y-3 sm:space-y-4">
 			<StepHeader
 				title={t("TRANSACTION.REVIEW_STEP.TITLE")}
 				subtitle={t("TRANSACTION.REVIEW_STEP.DESCRIPTION")}
