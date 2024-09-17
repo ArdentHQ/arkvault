@@ -52,21 +52,17 @@ exports[`ContactListItem > should render 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -263,21 +259,17 @@ exports[`ContactListItem > should render as delegate 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -474,21 +466,17 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -664,21 +652,17 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -850,21 +834,17 @@ exports[`ContactListItem > should render options 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -1057,21 +1037,17 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -1247,21 +1223,17 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>
@@ -1433,21 +1405,17 @@ exports[`ContactListItem > should render with multiple addresses 1`] = `
                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
               >
                 <div
-                  data-testid="Address__address-container"
+                  class="relative grow text-left"
                 >
-                  <div
-                    class="relative grow text-left"
+                  <span
+                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
+                    data-testid="Address__address"
                   >
-                    <span
-                      class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] font-semibold text-base absolute w-full"
-                      data-testid="Address__address"
-                    >
-                      DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
-                    </span>
-                    <span>
-                       
-                    </span>
-                  </div>
+                    DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                  </span>
+                  <span>
+                     
+                  </span>
                 </div>
               </div>
             </div>

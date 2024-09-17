@@ -1461,7 +1461,7 @@ exports[`Dashboard > should render 1`] = `
                         <div
                           class=""
                         >
-                          Value (ARK)
+                          Value (DARK)
                         </div>
                         <div
                           class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -1639,22 +1639,17 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="w-full"
-                                data-testid="Address__address-container"
+                                class="relative grow text-left"
                               >
-                                <div
-                                  class="relative grow text-left"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
-                                </div>
+                                  D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -1808,22 +1803,17 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="w-full"
-                                data-testid="Address__address-container"
+                                class="relative grow text-left"
                               >
-                                <div
-                                  class="relative grow text-left"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
-                                </div>
+                                  D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -1977,22 +1967,17 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="w-full"
-                                data-testid="Address__address-container"
+                                class="relative grow text-left"
                               >
-                                <div
-                                  class="relative grow text-left"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
-                                </div>
+                                  D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -2146,22 +2131,17 @@ exports[`Dashboard > should render 1`] = `
                               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                             >
                               <div
-                                class="w-full"
-                                data-testid="Address__address-container"
+                                class="relative grow text-left"
                               >
-                                <div
-                                  class="relative grow text-left"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                                    data-testid="Address__address"
-                                  >
-                                    D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                                  </span>
-                                  <span>
-                                     
-                                  </span>
-                                </div>
+                                  D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                                </span>
+                                <span>
+                                   
+                                </span>
                               </div>
                             </div>
                           </div>

@@ -13,16 +13,12 @@ exports[`Formatted Address > should render address only 1`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -32,16 +28,12 @@ exports[`Formatted Address > should render with center alignment 1`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 min-w-0"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -51,16 +43,12 @@ exports[`Formatted Address > should render with horizontal orientation 1`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -70,16 +58,12 @@ exports[`Formatted Address > should render with horizontal orientation 2`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -100,16 +84,12 @@ exports[`Formatted Address > should render with normal font 1`] = `
         Sample Wallet
       </span>
     </span>
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-normal text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-normal text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -119,16 +99,12 @@ exports[`Formatted Address > should render with right alignment 1`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -138,16 +114,12 @@ exports[`Formatted Address > should render with truncate on table = false 1`] = 
   <div
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -158,21 +130,17 @@ exports[`Formatted Address > should render with truncate on table = true 1`] = `
     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
   >
     <div
-      data-testid="Address__address-container"
+      class="relative grow text-left"
     >
-      <div
-        class="relative grow text-left"
+      <span
+        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
+        data-testid="Address__address"
       >
-        <span
-          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base absolute w-full"
-          data-testid="Address__address"
-        >
-          ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-        </span>
-        <span>
-           
-        </span>
-      </div>
+        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+      </span>
+      <span>
+         
+      </span>
     </div>
   </div>
 </div>
@@ -183,16 +151,12 @@ exports[`Formatted Address > should render with vertical orientation 1`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -202,16 +166,12 @@ exports[`Formatted Address > should render with vertical orientation 2`] = `
   <div
     class="flex overflow-hidden whitespace-nowrap flex-col items-start w-full"
   >
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
@@ -232,16 +192,12 @@ exports[`Formatted Address > should render with wallet name 1`] = `
         Sample Wallet
       </span>
     </span>
-    <div
-      data-testid="Address__address-container"
+    <span
+      class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+      data-testid="Address__address"
     >
-      <span
-        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-        data-testid="Address__address"
-      >
-        ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
-      </span>
-    </div>
+      ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT
+    </span>
   </div>
 </div>
 `;
