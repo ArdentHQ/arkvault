@@ -209,6 +209,7 @@ export const translations = {
 		TITLE: "Delegate Vote",
 	},
 	MULTIPLE: "Multiple",
+	MULTIPLE_COUNT: "Multiple ({{count}})",
 	MULTISIGNATURE: {
 		ADD_PARTICIPANT: "Add Participant",
 		AWAITING_BY: "by",

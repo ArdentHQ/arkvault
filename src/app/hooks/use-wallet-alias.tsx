@@ -60,9 +60,10 @@ const useWalletAlias = (): HookResult => {
 					}
 
 					return {
+						address,
 						alias,
 						isContact: false,
-						isDelegate: !!delegateUsername,
+						isDelegate: !!delegateUsername
 					};
 				}
 

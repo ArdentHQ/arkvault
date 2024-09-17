@@ -6,7 +6,7 @@ import { Networks } from "@ardenthq/sdk";
 import { Address } from "@/app/components/Address";
 import { useWalletAlias } from "@/app/hooks";
 import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { TransactionRecipient } from "./TransactionRecipient";
+import { TransactionRecipients, TransactionRecipient } from "./TransactionRecipient";
 
 interface Properties {
 	senderAddress: string;
@@ -14,6 +14,7 @@ interface Properties {
 	profile: Contracts.IProfile;
 	labelClassName?: string;
 	network: Networks.Network;
+	explorerLink?: string
 }
 
 export const TransactionAddresses = ({
@@ -22,6 +23,7 @@ export const TransactionAddresses = ({
 	senderAddress,
 	network,
 	labelClassName,
+	explorerLink,
 }: Properties): ReactElement => {
 	const { t } = useTranslation();
 	const { getWalletAlias } = useWalletAlias();
@@ -34,21 +36,26 @@ export const TransactionAddresses = ({
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-			<div className="flex w-full items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
-				<Address
-					address={senderAddress}
-					walletName={alias}
-					showCopyButton
-					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-					wrapperClass="justify-end sm:justify-start"
-				/>
+				<div className="w-3/4">
+					<Address
+						address={senderAddress}
+						walletName={alias}
+						showCopyButton
+						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+						wrapperClass="justify-end sm:justify-start"
+					/>
+				</div>
 			</div>
 
-			{recipients.map((recipient, index) => (
+			{explorerLink && <TransactionRecipients labelClassName={labelClassName} recipients={recipients} explorerLink={explorerLink} />}
+
+			{!explorerLink && recipients.map((recipient, index) => (
 				<TransactionRecipient recipient={recipient} labelClassName={labelClassName} key={index} showLabel={index === 0} />
 			))}
+
 		</DetailWrapper>
 	);
 };

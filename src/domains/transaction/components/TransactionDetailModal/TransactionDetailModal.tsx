@@ -6,7 +6,6 @@ import { DelegateRegistrationDetail } from "@/domains/transaction/components/Del
 import { DelegateResignationDetail } from "@/domains/transaction/components/DelegateResignationDetail";
 import { IpfsDetail } from "@/domains/transaction/components/IpfsDetail";
 import { LegacyMagistrateDetail } from "@/domains/transaction/components/LegacyMagistrateDetail";
-import { MultiPaymentDetail } from "@/domains/transaction/components/MultiPaymentDetail";
 import { MultiSignatureRegistrationDetail } from "@/domains/transaction/components/MultiSignatureDetail";
 import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSignatureDetail";
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
@@ -61,7 +60,7 @@ export const TransactionDetailModal = ({
 		delegateResignation: () => DelegateResignationDetail,
 		ipfs: () => IpfsDetail,
 		magistrate: () => LegacyMagistrateDetail,
-		multiPayment: () => MultiPaymentDetail,
+		multiPayment: () => TransferDetail,
 		multiSignature: () => MultiSignatureRegistrationDetail,
 		secondSignature: () => SecondSignatureDetail,
 		transfer: () => TransferDetail,

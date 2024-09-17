@@ -27,16 +27,11 @@ export const TransferDetail = ({ isOpen, aliases, transaction, onClose, profile 
 			<div className="mt-6 space-y-8">
 				<TransactionDetailPadded>
 					<TransactionAddresses
+						explorerLink={transaction.explorerLink()}
 						profile={profile}
 						senderAddress={transaction.sender()}
 						network={transaction.wallet().network()}
-						recipients={[
-							{
-								address: transaction.recipient(),
-								alias: aliases?.recipients[0].alias,
-								isDelegate: aliases?.recipients[0].isDelegate,
-							},
-						]}
+						recipients={aliases?.recipients}
 					/>
 				</TransactionDetailPadded>
 
