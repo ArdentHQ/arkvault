@@ -2,12 +2,7 @@ import React, { useMemo } from "react";
 
 import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
-import { DelegateRegistrationDetail } from "@/domains/transaction/components/DelegateRegistrationDetail";
-import { DelegateResignationDetail } from "@/domains/transaction/components/DelegateResignationDetail";
-import { IpfsDetail } from "@/domains/transaction/components/IpfsDetail";
-import { LegacyMagistrateDetail } from "@/domains/transaction/components/LegacyMagistrateDetail";
 import { MultiSignatureRegistrationDetail } from "@/domains/transaction/components/MultiSignatureDetail";
-import { SecondSignatureDetail } from "@/domains/transaction/components/SecondSignatureDetail";
 import { TransferDetail } from "@/domains/transaction/components/TransferDetail";
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
@@ -59,10 +54,10 @@ export const TransactionDetailModal = ({
 		delegateRegistration: () => TransferDetail,
 		delegateResignation: () => TransferDetail,
 		ipfs: () => TransferDetail,
-		magistrate: () => LegacyMagistrateDetail,
+		magistrate: () => TransferDetail,
 		multiPayment: () => TransferDetail,
 		multiSignature: () => MultiSignatureRegistrationDetail,
-		secondSignature: () => SecondSignatureDetail,
+		secondSignature: () => TransferDetail,
 		transfer: () => TransferDetail,
 		unlockToken: () => TransferDetail,
 		unvote: () => VoteDetail,
