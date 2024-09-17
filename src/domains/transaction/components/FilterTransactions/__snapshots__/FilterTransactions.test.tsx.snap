@@ -12,7 +12,7 @@ exports[`FilterTransactions > should open dropdown list with all transaction typ
         data-testid="dropdown__toggle"
       >
         <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5 text-base w-full sm:w-fit"
+          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white w-full px-4 py-1.5 text-base sm:w-fit"
           data-testid="CollapseToggleButton"
           type="button"
         >
@@ -229,7 +229,7 @@ exports[`FilterTransactions > should render 1`] = `
         data-testid="dropdown__toggle"
       >
         <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5 text-base w-full sm:w-fit"
+          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white w-full px-4 py-1.5 text-base sm:w-fit"
           data-testid="CollapseToggleButton"
           type="button"
         >
@@ -296,7 +296,7 @@ exports[`FilterTransactions > should render with default selected option 1`] = `
         data-testid="dropdown__toggle"
       >
         <button
-          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white px-4 py-1.5 text-base w-full sm:w-fit"
+          class="space-x-2 relative items-center inline-flex justify-center font-semibold text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white w-full px-4 py-1.5 text-base sm:w-fit"
           data-testid="CollapseToggleButton"
           type="button"
         >
