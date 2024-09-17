@@ -100,16 +100,12 @@ exports[`MultiPaymentDetail > should render a modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -694,16 +690,12 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -800,16 +792,12 @@ exports[`MultiPaymentDetail > should render hint icon with tooltip when it's a r
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                   <a
@@ -1339,16 +1327,12 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1445,16 +1429,12 @@ exports[`MultiPaymentDetail > should render with recipients 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          adsad12312xsd1w312e1s13203e12
-                        </span>
-                      </div>
+                        adsad12312xsd1w312e1s13203e12
+                      </span>
                     </div>
                   </div>
                   <a

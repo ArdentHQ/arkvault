@@ -3202,16 +3202,12 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                               New Name
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
-                            </span>
-                          </div>
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                          </span>
                         </div>
                       </div>
                     </div>

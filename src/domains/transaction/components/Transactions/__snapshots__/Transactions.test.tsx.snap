@@ -359,7 +359,7 @@ exports[`Transactions > should fetch more transactions 1`] = `
                   <div
                     class=""
                   >
-                    Value (ARK)
+                    Value (DARK)
                   </div>
                   <div
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -1764,22 +1764,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1944,22 +1939,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2124,22 +2114,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2304,22 +2289,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2473,22 +2453,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2642,22 +2617,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2811,22 +2781,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -2980,22 +2945,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3149,22 +3109,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3318,22 +3273,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3487,22 +3437,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3656,22 +3601,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3825,22 +3765,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3994,22 +3929,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4163,22 +4093,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4332,22 +4257,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4501,22 +4421,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4670,22 +4585,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4839,22 +4749,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5008,22 +4913,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5177,22 +5077,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5346,22 +5241,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5515,22 +5405,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5684,22 +5569,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5853,22 +5733,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6022,22 +5897,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6191,22 +6061,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6360,22 +6225,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6529,22 +6389,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6698,22 +6553,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -6867,22 +6717,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7036,22 +6881,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7205,22 +7045,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7374,22 +7209,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7543,22 +7373,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7712,22 +7537,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -7881,22 +7701,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8050,22 +7865,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8219,22 +8029,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8388,22 +8193,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8557,22 +8357,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8726,22 +8521,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -8895,22 +8685,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -9064,22 +8849,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -9841,22 +9621,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -10010,22 +9785,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -10179,22 +9949,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -10348,22 +10113,17 @@ exports[`Transactions > should fetch more transactions 1`] = `
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -10800,7 +10560,7 @@ exports[`Transactions > should hide view more button when there are no next page
                   <div
                     class=""
                   >
-                    Value (ARK)
+                    Value (DARK)
                   </div>
                   <div
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -11597,22 +11357,17 @@ exports[`Transactions > should hide view more button when there are no next page
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -11777,22 +11532,17 @@ exports[`Transactions > should hide view more button when there are no next page
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -11946,22 +11696,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12115,22 +11860,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12284,22 +12024,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12453,22 +12188,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12622,22 +12352,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12791,22 +12516,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -12960,22 +12680,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13129,22 +12844,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13298,22 +13008,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13467,22 +13172,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13636,22 +13336,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13805,22 +13500,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -13974,22 +13664,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14143,22 +13828,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14312,22 +13992,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14481,22 +14156,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14650,22 +14320,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14819,22 +14484,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -14988,22 +14648,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -15157,22 +14812,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -15630,22 +15280,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -15799,22 +15444,17 @@ exports[`Transactions > should hide view more button when there are no next page
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -16251,7 +15891,7 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                   <div
                     class=""
                   >
-                    Value (ARK)
+                    Value (DARK)
                   </div>
                   <div
                     class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
@@ -17048,22 +16688,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -17228,22 +16863,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                           </span>
                         </span>
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-500 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-secondary-700 dark:text-theme-secondary-200 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -17397,22 +17027,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -17566,22 +17191,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -17735,22 +17355,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -17904,22 +17519,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18073,22 +17683,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18242,22 +17847,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18411,22 +18011,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18580,22 +18175,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18749,22 +18339,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -18918,22 +18503,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19087,22 +18667,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19256,22 +18831,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19425,22 +18995,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19594,22 +19159,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19763,22 +19323,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -19932,22 +19487,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -20101,22 +19651,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -20270,22 +19815,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -20439,22 +19979,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -20608,22 +20143,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -21081,22 +20611,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -21250,22 +20775,17 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                         class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                       >
                         <div
-                          class="w-full"
-                          data-testid="Address__address-container"
+                          class="relative grow text-left"
                         >
-                          <div
-                            class="relative grow text-left"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden pt-0.5 text-theme-primary-600 font-semibold text-sm absolute w-full"
-                              data-testid="Address__address"
-                            >
-                              D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
-                            </span>
-                            <span>
-                               
-                            </span>
-                          </div>
+                            D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
+                          </span>
+                          <span>
+                             
+                          </span>
                         </div>
                       </div>
                     </div>

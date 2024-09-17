@@ -108,16 +108,12 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -155,16 +151,12 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -225,16 +217,12 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -272,16 +260,12 @@ exports[`TransactionVotes > should render with multiple votes and unvotes 1`] = 
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -347,16 +331,12 @@ exports[`TransactionVotes > should render with unvotes 1`] = `
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -422,16 +402,12 @@ exports[`TransactionVotes > should render with votes 1`] = `
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -497,16 +473,12 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>
@@ -567,16 +539,12 @@ exports[`TransactionVotes > should render with votes and unvotes 1`] = `
                     test-username
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    test-address
-                  </span>
-                </div>
+                  test-address
+                </span>
               </div>
             </div>
           </div>

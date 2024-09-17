@@ -100,16 +100,12 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -505,16 +501,12 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -913,16 +905,12 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -993,16 +981,12 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden font-normal font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
-                        </span>
-                      </div>
+                        QmPRqPTEEwx95WNcSsk6YQk7aGW9hoZbTF9zE92dBj9H68
+                      </span>
                     </div>
                   </div>
                   <div
@@ -1345,16 +1329,12 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1697,16 +1677,12 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1803,16 +1779,12 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                   <a
@@ -2308,16 +2280,12 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2544,16 +2512,12 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                                  </span>
-                                </div>
+                                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                                </span>
                               </div>
                             </td>
                             <td
@@ -2609,16 +2573,12 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                                  </span>
-                                </div>
+                                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                                </span>
                               </div>
                             </td>
                             <td
@@ -2692,16 +2652,12 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
-                        </span>
-                      </div>
+                        DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2936,16 +2892,12 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3288,16 +3240,12 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3343,16 +3291,12 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3811,16 +3755,12 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3897,16 +3837,12 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -3967,16 +3903,12 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4303,16 +4235,12 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -4389,16 +4317,12 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4459,16 +4383,12 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4795,16 +4715,12 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -4881,16 +4797,12 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -4951,16 +4863,12 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                               delegate-0
                             </span>
                           </span>
-                          <div
-                            data-testid="Address__address-container"
+                          <span
+                            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            data-testid="Address__address"
                           >
-                            <span
-                              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                              data-testid="Address__address"
-                            >
-                              034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
-                            </span>
-                          </div>
+                            034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -5287,16 +5195,12 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
