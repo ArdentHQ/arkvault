@@ -329,16 +329,12 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           ARK Wallet 2
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
-                      </div>
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -607,16 +603,12 @@ exports[`WalletsList > should group starred wallets at the top 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1104,16 +1096,12 @@ exports[`WalletsList > should render 1`] = `
                           ARK Wallet 1
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                        </span>
-                      </div>
+                        D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1331,16 +1319,12 @@ exports[`WalletsList > should render 1`] = `
                           ARK Wallet 2
                         </span>
                       </span>
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                        </span>
-                      </div>
+                        D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -2358,16 +2342,12 @@ exports[`WalletsList > should render responsive 1`] = `
                     ARK Wallet 1
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
-                  </span>
-                </div>
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
               </div>
             </div>
             <div
@@ -2516,16 +2496,12 @@ exports[`WalletsList > should render responsive 1`] = `
                     ARK Wallet 2
                   </span>
                 </span>
-                <div
-                  data-testid="Address__address-container"
+                <span
+                  class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
                 >
-                  <span
-                    class="no-ligatures min-w-0 overflow-hidden text-xs text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                    data-testid="Address__address"
-                  >
-                    D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
-                  </span>
-                </div>
+                  D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
+                </span>
               </div>
             </div>
             <div

@@ -39,16 +39,12 @@ exports[`VoteList > should render in lg 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
     </div>
@@ -86,16 +82,12 @@ exports[`VoteList > should render in lg 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
     </div>
@@ -133,16 +125,12 @@ exports[`VoteList > should render in lg 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
     </div>
@@ -189,16 +177,12 @@ exports[`VoteList > should render in md 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
     </div>
@@ -236,16 +220,12 @@ exports[`VoteList > should render in md 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
     </div>
@@ -283,16 +263,12 @@ exports[`VoteList > should render in md 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
     </div>
@@ -325,16 +301,12 @@ exports[`VoteList > should render in sm 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -372,16 +344,12 @@ exports[`VoteList > should render in sm 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -419,16 +387,12 @@ exports[`VoteList > should render in sm 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -489,16 +453,12 @@ exports[`VoteList > should render in xl 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
     </div>
@@ -536,16 +496,12 @@ exports[`VoteList > should render in xl 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
     </div>
@@ -583,16 +539,12 @@ exports[`VoteList > should render in xl 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
     </div>
@@ -625,16 +577,12 @@ exports[`VoteList > should render in xs 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -672,16 +620,12 @@ exports[`VoteList > should render in xs 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -719,16 +663,12 @@ exports[`VoteList > should render in xs 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -789,16 +729,12 @@ exports[`VoteList > should render with amount in lg 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -846,16 +782,12 @@ exports[`VoteList > should render with amount in lg 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -903,16 +835,12 @@ exports[`VoteList > should render with amount in lg 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -969,16 +897,12 @@ exports[`VoteList > should render with amount in md 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -1026,16 +950,12 @@ exports[`VoteList > should render with amount in md 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -1083,16 +1003,12 @@ exports[`VoteList > should render with amount in md 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -1145,16 +1061,12 @@ exports[`VoteList > should render with amount in sm 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -1202,16 +1114,12 @@ exports[`VoteList > should render with amount in sm 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -1259,16 +1167,12 @@ exports[`VoteList > should render with amount in sm 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -1329,16 +1233,12 @@ exports[`VoteList > should render with amount in xl 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -1386,16 +1286,12 @@ exports[`VoteList > should render with amount in xl 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -1443,16 +1339,12 @@ exports[`VoteList > should render with amount in xl 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div
@@ -1505,16 +1397,12 @@ exports[`VoteList > should render with amount in xs 1`] = `
               arkx
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-            </span>
-          </div>
+            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+          </span>
         </div>
       </div>
       <div
@@ -1562,16 +1450,12 @@ exports[`VoteList > should render with amount in xs 1`] = `
               genesis_42
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
-            </span>
-          </div>
+            D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
+          </span>
         </div>
       </div>
       <div
@@ -1619,16 +1503,12 @@ exports[`VoteList > should render with amount in xs 1`] = `
               genesis_17
             </span>
           </span>
-          <div
-            data-testid="Address__address-container"
+          <span
+            class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            data-testid="Address__address"
           >
-            <span
-              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-              data-testid="Address__address"
-            >
-              DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
-            </span>
-          </div>
+            DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
+          </span>
         </div>
       </div>
       <div

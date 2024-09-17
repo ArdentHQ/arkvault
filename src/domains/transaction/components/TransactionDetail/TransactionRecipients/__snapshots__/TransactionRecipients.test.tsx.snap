@@ -26,16 +26,12 @@ exports[`TransactionRecipients > should render a single recipient 1`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -86,16 +82,12 @@ exports[`TransactionRecipients > should render a single recipient that is delega
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -190,16 +182,12 @@ exports[`TransactionRecipients > should render a single recipient with alias 1`]
                 test-alias
               </span>
             </span>
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -250,16 +238,12 @@ exports[`TransactionRecipients > should render in lg 1`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -310,16 +294,12 @@ exports[`TransactionRecipients > should render in md 1`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -373,16 +353,12 @@ exports[`TransactionRecipients > should render in sm 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
             >
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  test-address
-                </span>
-              </div>
+                test-address
+              </span>
             </div>
           </div>
         </div>
@@ -450,16 +426,12 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -540,16 +512,12 @@ exports[`TransactionRecipients > should render in sm when showAmount is set and 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -619,16 +587,12 @@ exports[`TransactionRecipients > should render in xl 1`] = `
           <div
             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
           >
-            <div
-              data-testid="Address__address-container"
+            <span
+              class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+              data-testid="Address__address"
             >
-              <span
-                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                data-testid="Address__address"
-              >
-                test-address
-              </span>
-            </div>
+              test-address
+            </span>
           </div>
         </div>
       </div>
@@ -682,16 +646,12 @@ exports[`TransactionRecipients > should render in xs 1`] = `
             <div
               class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
             >
-              <div
-                data-testid="Address__address-container"
+              <span
+                class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                data-testid="Address__address"
               >
-                <span
-                  class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                  data-testid="Address__address"
-                >
-                  test-address
-                </span>
-              </div>
+                test-address
+              </span>
             </div>
           </div>
         </div>
@@ -759,16 +719,12 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -849,16 +805,12 @@ exports[`TransactionRecipients > should render in xs when showAmount is set and 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -1027,16 +979,12 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1114,16 +1062,12 @@ exports[`TransactionRecipients > should render multiple recipients in lg 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1292,16 +1236,12 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1379,16 +1319,12 @@ exports[`TransactionRecipients > should render multiple recipients in md 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1474,16 +1410,12 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -1545,16 +1477,12 @@ exports[`TransactionRecipients > should render multiple recipients in sm 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -1704,16 +1632,12 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1791,16 +1715,12 @@ exports[`TransactionRecipients > should render multiple recipients in xl 1`] = `
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -1886,16 +1806,12 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -1957,16 +1873,12 @@ exports[`TransactionRecipients > should render multiple recipients in xs 1`] = `
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -2116,16 +2028,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -2203,16 +2111,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -2381,16 +2285,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -2468,16 +2368,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -2563,16 +2459,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <span
@@ -2667,16 +2559,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div
@@ -2826,16 +2714,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -2913,16 +2797,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                     <div
                       class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                     >
-                      <div
-                        data-testid="Address__address-container"
+                      <span
+                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                        data-testid="Address__address"
                       >
-                        <span
-                          class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                          data-testid="Address__address"
-                        >
-                          test-address
-                        </span>
-                      </div>
+                        test-address
+                      </span>
                     </div>
                   </td>
                   <td
@@ -3008,16 +2888,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <span
@@ -3112,16 +2988,12 @@ exports[`TransactionRecipients > should render recipients with delegate icon in 
                   <div
                     class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end"
                   >
-                    <div
-                      data-testid="Address__address-container"
+                    <span
+                      class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
+                      data-testid="Address__address"
                     >
-                      <span
-                        class="no-ligatures min-w-0 overflow-hidden text-theme-text font-semibold text-base"
-                        data-testid="Address__address"
-                      >
-                        test-address
-                      </span>
-                    </div>
+                      test-address
+                    </span>
                   </div>
                 </div>
                 <div

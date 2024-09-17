@@ -335,16 +335,12 @@ exports[`UpdateContact > should render responsive 1`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                  </span>
-                                </div>
+                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                </span>
                               </div>
                             </span>
                           </div>
@@ -764,16 +760,12 @@ exports[`UpdateContact > should render responsive 2`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                  </span>
-                                </div>
+                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                </span>
                               </div>
                             </span>
                           </div>
@@ -1237,16 +1229,12 @@ exports[`UpdateContact > should render responsive 3`] = `
                               <div
                                 class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
                               >
-                                <div
-                                  data-testid="Address__address-container"
+                                <span
+                                  class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
+                                  data-testid="Address__address"
                                 >
-                                  <span
-                                    class="no-ligatures min-w-0 overflow-hidden text-sm leading-[17px] sm:text-base sm:leading-[20px] font-semibold text-base"
-                                    data-testid="Address__address"
-                                  >
-                                    D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
-                                  </span>
-                                </div>
+                                  D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                                </span>
                               </div>
                             </span>
                           </div>

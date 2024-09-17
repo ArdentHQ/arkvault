@@ -228,6 +228,7 @@ export const Transactions = memo(function Transactions({
 						skeletonRowsLimit={8}
 						onRowClick={setTransactionModalItem}
 						profile={profile}
+						coinName={wallets.at(0)?.currency()}
 					/>
 
 					{transactionModalItem && (
