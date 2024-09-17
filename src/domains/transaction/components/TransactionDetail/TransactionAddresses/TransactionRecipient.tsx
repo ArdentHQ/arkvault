@@ -7,7 +7,15 @@ import { Divider } from "@/app/components/Divider";
 import { Link } from "@/app/components/Link";
 import cn from "classnames";
 
-export const TransactionRecipient = ({ recipient = [], showLabel, labelClassName }: { labelClassName?: string; showLabel: boolean; recipient?: RecipientItem }) => {
+export const TransactionRecipient = ({
+	recipient = [],
+	showLabel,
+	labelClassName,
+}: {
+	labelClassName?: string;
+	showLabel: boolean;
+	recipient?: RecipientItem;
+}) => {
 	const { t } = useTranslation();
 
 	return (
@@ -17,9 +25,13 @@ export const TransactionRecipient = ({ recipient = [], showLabel, labelClassName
 			</div>
 
 			<div className="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
-				<DetailTitle className={cn(labelClassName, {
-					invisible: !showLabel
-				})}>{t("COMMON.TO")}</DetailTitle>
+				<DetailTitle
+					className={cn(labelClassName, {
+						invisible: !showLabel,
+					})}
+				>
+					{t("COMMON.TO")}
+				</DetailTitle>
 
 				<div className="w-3/4">
 					<Address
@@ -33,10 +45,18 @@ export const TransactionRecipient = ({ recipient = [], showLabel, labelClassName
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export const TransactionRecipients = ({ recipients, explorerLink, labelClassName }: { recipients: RecipientItem[], explorerLink: string, labelClassName?: string }) => {
+export const TransactionRecipients = ({
+	recipients,
+	explorerLink,
+	labelClassName,
+}: {
+	recipients: RecipientItem[];
+	explorerLink: string;
+	labelClassName?: string;
+}) => {
 	const { t } = useTranslation();
 
 	if (recipients.length === 0) {
@@ -44,7 +64,7 @@ export const TransactionRecipients = ({ recipients, explorerLink, labelClassName
 	}
 
 	if (recipients.length === 1) {
-		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />
+		return <TransactionRecipient recipient={recipients.at(0)} labelClassName={labelClassName} showLabel />;
 	}
 
 	return (
@@ -67,7 +87,6 @@ export const TransactionRecipients = ({ recipients, explorerLink, labelClassName
 					</Link>
 				</div>
 			</div>
-
 		</>
-	)
-}
+	);
+};
