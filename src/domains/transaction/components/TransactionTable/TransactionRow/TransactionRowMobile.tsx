@@ -12,27 +12,13 @@ import { TimeAgo } from "@/app/components/TimeAgo";
 import { MobileSection } from "@/app/components/Table/Mobile/MobileSection";
 import { TransactionRowAddressing } from "./TransactionRowAddressing";
 import { Amount, AmountLabel } from "@/app/components/Amount";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 export const TransactionRowMobile = memo(
 	({ className, transaction, onClick, isLoading = false, profile, ...properties }: TransactionRowProperties) => {
 		const { t } = useTranslation();
+		const { getLabel } = useTransactionTypes();
 		const timeStamp = transaction.timestamp ? transaction.timestamp() : undefined;
-
-		const getTransactionLabel = () => {
-			if (transaction.isMultiPayment()) {
-				return t("TRANSACTION.TRANSACTION_TYPES.MULTI_PAYMENT");
-			}
-
-			if (transaction.isVote()) {
-				return t("TRANSACTION.TRANSACTION_TYPES.VOTE");
-			}
-
-			if (transaction.isUnvote()) {
-				return t("TRANSACTION.TRANSACTION_TYPES.UNVOTE");
-			}
-
-			return t("COMMON.TRANSFER");
-		};
 
 		if (isLoading) {
 			return <TransactionRowMobileSkeleton />;
@@ -74,7 +60,7 @@ export const TransactionRowMobile = memo(
 
 						<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2">
 							<MobileSection
-								title={getTransactionLabel()}
+								title={getLabel(transaction.type())}
 								className="w-full"
 								data-testid="TransactionRowMobile__label"
 							>
