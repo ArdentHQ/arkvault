@@ -58,7 +58,7 @@ export const TransactionRecipients = ({
 	const { t } = useTranslation();
 
 	if (recipients.length === 0) {
-		return <></>
+		return <></>;
 	}
 
 	if (recipients.length === 1) {

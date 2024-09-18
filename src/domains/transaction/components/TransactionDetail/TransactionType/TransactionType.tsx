@@ -5,7 +5,6 @@ import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Label } from "@/app/components/Label";
 import { DTO } from "@ardenthq/sdk-profiles";
-import { Divider } from "@/app/components/Divider";
 import { useResizeDetector } from "react-resize-detector";
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import { Clipboard } from "@/app/components/Clipboard";
@@ -76,7 +75,8 @@ export const TransactionType = ({
 									tooltip={t("COMMON.COPY_IPFS")}
 									tooltipDarkTheme={isDarkMode}
 								>
-									<Icon name="Copy"
+									<Icon
+										name="Copy"
 										className="text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
 									/>
 								</Clipboard>

@@ -117,7 +117,7 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 		const onChangeAddress = useCallback(
 			(addressValue: string | undefined, emitOnChange = true) => {
 				if (!addressValue) {
-					return
+					return;
 				}
 
 				if (addressValue === selectedAddress) {
@@ -204,32 +204,32 @@ export const SelectRecipient = React.forwardRef<HTMLInputElement, SelectRecipien
 						addons={{
 							end: showOptions
 								? {
-									content: (
-										<div
-											data-testid="SelectRecipient__select-recipient"
-											className={cn("flex items-center", { "cursor-pointer": !disabled })}
-											onClick={openRecipients}
-										>
-											<Icon name="User" size="lg" />
-										</div>
-									),
-								}
+										content: (
+											<div
+												data-testid="SelectRecipient__select-recipient"
+												className={cn("flex items-center", { "cursor-pointer": !disabled })}
+												onClick={openRecipients}
+											>
+												<Icon name="User" size="lg" />
+											</div>
+										),
+									}
 								: undefined,
 							start: showWalletAvatar
 								? {
-									content: (
-										<div className="flex items-center">
-											<ProfileAvatar address={selectedAddress} />
-											{!!selectedAddressAlias?.alias && (
-												<TruncateEnd
-													className="ml-2 font-semibold"
-													text={selectedAddressAlias.alias}
-													showTooltip
-												/>
-											)}
-										</div>
-									),
-								}
+										content: (
+											<div className="flex items-center">
+												<ProfileAvatar address={selectedAddress} />
+												{!!selectedAddressAlias?.alias && (
+													<TruncateEnd
+														className="ml-2 font-semibold"
+														text={selectedAddressAlias.alias}
+														showTooltip
+													/>
+												)}
+											</div>
+										),
+									}
 								: undefined,
 						}}
 						renderLabel={(option) => <OptionLabel option={option} network={network} profile={profile} />}

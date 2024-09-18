@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { DTO } from "@ardenthq/sdk";
-import { Divider } from "@/app/components/Divider";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTimeFormat } from "@/app/hooks/use-time-format";
 import { Link } from "@/app/components/Link";

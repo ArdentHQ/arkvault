@@ -1,1 +1,1 @@
-export * from "./TransactionMusigParticipants"
+export * from "./TransactionMusigParticipants";

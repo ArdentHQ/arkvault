@@ -1,7 +1,7 @@
 import cn from "classnames";
 import React, { ReactElement, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-import { Divider } from "../Divider";
+import { Divider } from "@/app/components/Divider";
 
 export const DetailLabelText = ({ children, className }: { children: ReactNode; className?: string }) => (
 	<div
@@ -67,10 +67,12 @@ export const DetailTitle = ({ children, className }: { children: ReactNode; clas
  */
 export const DetailsCondensed = ({ children }: { children: ReactNode }): ReactNode => (
 	<div className="condensed">{children}</div>
-)
+);
 
 export const DetailDivider = (): ReactNode => (
 	<div className="hidden h-8 w-full items-center sm:flex [.condensed_&]:h-3">
-		<div className="w-full [.condensed_&]:hidden"><Divider dashed /></div>
+		<div className="w-full [.condensed_&]:hidden">
+			<Divider dashed />
+		</div>
 	</div>
 );

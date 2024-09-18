@@ -9,7 +9,7 @@ export const useTransactionRecipients = ({
 	transaction: DTO.ExtendedConfirmedTransactionData;
 	profile: Contracts.IProfile;
 }): { recipients: WalletAliasResult[] } => {
-	const { getWalletAlias } = useWalletAlias()
+	const { getWalletAlias } = useWalletAlias();
 
 	const recipients: WalletAliasResult[] = useMemo(() => {
 		const recipients: WalletAliasResult[] = [];
@@ -40,6 +40,6 @@ export const useTransactionRecipients = ({
 	}, [getWalletAlias, profile, transaction]);
 
 	return {
-		recipients
-	}
-}
+		recipients,
+	};
+};

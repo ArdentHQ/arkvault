@@ -5,19 +5,19 @@ import { useEffect, useState } from "react";
 
 interface Properties {
 	network: Networks.Network;
-	transaction: DTO.ExtendedConfirmedTransactionData
-	profile: Contracts.IProfile
+	transaction: DTO.ExtendedConfirmedTransactionData;
+	profile: Contracts.IProfile;
 }
 
 export const useTransactionVotingWallets = ({ transaction, network, profile }: Properties) => {
-	const [isLoading, setIsLoading] = useState(false)
-	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([])
-	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([])
+	const [isLoading, setIsLoading] = useState(false);
+	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
+	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const { env } = useEnvironmentContext();
 
 	useEffect(() => {
 		const updateDelegates = async () => {
-			setIsLoading(true)
+			setIsLoading(true);
 
 			try {
 				env.delegates().all(network.coin(), network.id());
@@ -26,34 +26,31 @@ export const useTransactionVotingWallets = ({ transaction, network, profile }: P
 			}
 
 			try {
-
 				const votesList = transaction.votes().map((publicKey: string) => ({
 					amount: transaction.amount(),
-					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey)
+					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
 
 				const unvotesList = transaction.unvotes().map((publicKey: string) => ({
 					amount: transaction.amount(),
-					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey)
+					wallet: env.delegates().findByPublicKey(network.coin(), network.id(), publicKey),
 				}));
 
-
-				setVotes(votesList)
-				setUnvotes(unvotesList)
-
+				setVotes(votesList);
+				setUnvotes(unvotesList);
 			} catch {
 				//
 			}
 
-			setIsLoading(false)
+			setIsLoading(false);
 		};
 
-		updateDelegates()
-	}, [transaction, profile, network])
+		updateDelegates();
+	}, [transaction, profile, network]);
 
 	return {
 		isLoading,
 		unvotes,
 		votes,
-	}
-}
+	};
+};

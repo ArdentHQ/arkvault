@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Contracts, DTO } from "@ardenthq/sdk-profiles";
-import { Divider } from "@/app/components/Divider";
 import { DetailDivider, DetailLabelText, DetailWrapper } from "@/app/components/DetailWrapper";
 import { Amount, AmountLabel } from "@/app/components/Amount";
 import { BigNumber } from "@ardenthq/sdk-helpers";
@@ -29,8 +28,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 
 						<DetailDivider />
 					</>
-				)
-				}
+				)}
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
@@ -41,7 +39,11 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.VALUE")}</DetailLabelText>
-					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} className="font-semibold" />
+					<Amount
+						ticker={senderWallet.exchangeCurrency()}
+						value={transaction.convertedAmount()}
+						className="font-semibold"
+					/>
 				</div>
 			</div>
 		</DetailWrapper>

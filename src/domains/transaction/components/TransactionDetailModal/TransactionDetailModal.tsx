@@ -1,6 +1,5 @@
 import React from "react";
 import { TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
-import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
@@ -28,9 +27,15 @@ export const TransactionDetailModal = ({
 }: TransactionDetailModalProperties) => {
 	const { t } = useTranslation();
 
-	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(Boolean)
-	const { votes, unvotes } = useTransactionVotingWallets({ network: transaction.wallet().network(), profile, transaction })
-	const { recipients } = useTransactionRecipients({ profile, transaction })
+	const isVoteTransaction = [transaction.isVote(), transaction.isVoteCombination(), transaction.isUnvote()].some(
+		Boolean,
+	);
+	const { votes, unvotes } = useTransactionVotingWallets({
+		network: transaction.wallet().network(),
+		profile,
+		transaction,
+	});
+	const { recipients } = useTransactionRecipients({ profile, transaction });
 
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
@@ -71,7 +76,9 @@ export const TransactionDetailModal = ({
 						<TransactionDetailPadded>
 							<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
 								{transaction.memo() && <p>{transaction.memo()}</p>}
-								{!transaction.memo() && <p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>}
+								{!transaction.memo() && (
+									<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
+								)}
 							</DetailWrapper>
 						</TransactionDetailPadded>
 					)}
@@ -94,7 +101,6 @@ export const TransactionDetailModal = ({
 							</div>
 						</TransactionDetailPadded>
 					)}
-
 				</div>
 			</DetailsCondensed>
 		</Modal>

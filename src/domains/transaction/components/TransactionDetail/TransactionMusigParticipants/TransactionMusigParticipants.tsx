@@ -1,26 +1,31 @@
-import React, { useEffect, useState } from "react"
-import { Table, TableCell, TableRow } from "@/app/components/Table"
-import { TableWrapper } from "@/app/components/Table/TableWrapper"
-import { Contracts } from "@ardenthq/sdk-profiles"
-import { DTO } from "@ardenthq/sdk"
+import React, { useEffect, useState } from "react";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { TableWrapper } from "@/app/components/Table/TableWrapper";
+import { Contracts } from "@ardenthq/sdk-profiles";
+import { DTO } from "@ardenthq/sdk";
 import { useTranslation } from "react-i18next";
-import { Link } from "@/app/components/Link"
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic"
-import { useResizeDetector } from "react-resize-detector"
+import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { useResizeDetector } from "react-resize-detector";
 import { useTheme } from "@/app/hooks/use-theme";
-import { Clipboard } from "@/app/components/Clipboard"
-import { Icon } from "@/app/components/Icon"
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
 
-
-export const TransactionMusigParticipants = ({ transaction, profile }: { profile: Contracts.IProfile; transaction: DTO.RawTransactionData }) => {
+export const TransactionMusigParticipants = ({
+	transaction,
+	profile,
+}: {
+	profile: Contracts.IProfile;
+	transaction: DTO.RawTransactionData;
+}) => {
 	const { t } = useTranslation();
-	const [participantWallets, setParticipantWallets] = useState<Contracts.IReadWriteWallet[]>([])
-	const { ref, width } = useResizeDetector<HTMLElement>({ handleHeight: false });
+	const [participantWallets, setParticipantWallets] = useState<Contracts.IReadWriteWallet[]>([]);
+	const { width } = useResizeDetector<HTMLElement>({ handleHeight: false });
 	const { isDarkMode } = useTheme();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const wallets: Contracts.IReadWriteWallet[] = []
+			const wallets: Contracts.IReadWriteWallet[] = [];
 
 			for (const publicKey of transaction.publicKeys()) {
 				const network = transaction.wallet().network();
@@ -28,23 +33,24 @@ export const TransactionMusigParticipants = ({ transaction, profile }: { profile
 					coin: network.coin(),
 					network: network.id(),
 					publicKey,
-				})
+				});
 
-				wallets.push(wallet)
+				wallets.push(wallet);
 			}
 
-			setParticipantWallets(wallets)
+			setParticipantWallets(wallets);
 		};
 
-		fetchData()
+		fetchData();
 	}, [transaction]);
 
-
 	const renderRow = (wallet: Contracts.IReadWriteWallet) => (
-		<TableRow className="relative group" key={wallet.address()}>
+		<TableRow className="group relative" key={wallet.address()}>
 			<TableCell variant="start" key={wallet.address()}>
-				<div className="flex items-center space-x-2 group" key={wallet.address()}>
-					<Link to={wallet.explorerLink()} showExternalIcon={false} isExternal key={wallet.address()}><TruncateMiddleDynamic value={wallet.address()} availableWidth={width} /></Link>
+				<div className="group flex items-center space-x-2" key={wallet.address()}>
+					<Link to={wallet.explorerLink()} showExternalIcon={false} isExternal key={wallet.address()}>
+						<TruncateMiddleDynamic value={wallet.address()} availableWidth={width} />
+					</Link>
 					<Clipboard
 						variant="icon"
 						data={wallet.address()}
@@ -56,7 +62,7 @@ export const TransactionMusigParticipants = ({ transaction, profile }: { profile
 				</div>
 			</TableCell>
 		</TableRow>
-	)
+	);
 
 	return (
 		<TableWrapper>
@@ -71,7 +77,6 @@ export const TransactionMusigParticipants = ({ transaction, profile }: { profile
 			>
 				{renderRow}
 			</Table>
-
 		</TableWrapper>
-	)
-}
+	);
+};
