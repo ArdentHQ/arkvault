@@ -46,7 +46,7 @@ export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children
 			ref={columnReference}
 			style={width ? { width: `${width}px` } : undefined}
 		>
-			<span className="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+			<span className="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-700">
 				{label}
 			</span>
 
