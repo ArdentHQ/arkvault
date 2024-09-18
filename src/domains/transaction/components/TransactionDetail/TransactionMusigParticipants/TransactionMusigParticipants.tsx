@@ -4,7 +4,6 @@ import { TableWrapper } from "@/app/components/Table/TableWrapper"
 import { Contracts } from "@ardenthq/sdk-profiles"
 import { DTO } from "@ardenthq/sdk"
 import { useTranslation } from "react-i18next";
-import { Address } from "@/app/components/Address";
 import { Link } from "@/app/components/Link"
 import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic"
 import { useResizeDetector } from "react-resize-detector"
@@ -43,9 +42,9 @@ export const TransactionMusigParticipants = ({ transaction, profile }: { profile
 
 	const renderRow = (wallet: Contracts.IReadWriteWallet) => (
 		<TableRow className="relative group" key={wallet.address()}>
-			<TableCell variant="start">
-				<div className="flex items-center space-x-2">
-					<Link to={wallet.explorerLink()} showExternalIcon={false} isExternal><TruncateMiddleDynamic value={wallet.address()} availableWidth={width} /></Link>
+			<TableCell variant="start" key={wallet.address()}>
+				<div className="flex items-center space-x-2 group" key={wallet.address()}>
+					<Link to={wallet.explorerLink()} showExternalIcon={false} isExternal key={wallet.address()}><TruncateMiddleDynamic value={wallet.address()} availableWidth={width} /></Link>
 					<Clipboard
 						variant="icon"
 						data={wallet.address()}
@@ -62,7 +61,12 @@ export const TransactionMusigParticipants = ({ transaction, profile }: { profile
 	return (
 		<TableWrapper>
 			<Table
-				columns={[{ Header: t("COMMON.ADDRESS") }]}
+				columns={[
+					{
+						Header: t("COMMON.ADDRESS"),
+						headerClassName: "hidden sm:block",
+					},
+				]}
 				data={participantWallets}
 			>
 				{renderRow}
