@@ -92,7 +92,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 
 	return (
 		<TableCell size="sm" innerClassName="-ml-3 space-x-3" data-testid="TableCell_Wallet">
-			<div className="xl:max-w-full lg:max-w-48 max-w-64 w-full flex-1 overflow-hidden">
+			<div className="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
 					addressClass="text-xs text-theme-secondary-700 dark:text-theme-secondary-700 lg:!ml-0"
@@ -151,7 +151,13 @@ export const Info = ({ wallet, isLargeScreen = true, className }: InfoProperties
 export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLargeScreen = true, className }) => {
 	const renderAmount = () => {
 		if (isSynced) {
-			return <Amount value={wallet.balance()} ticker={wallet.network().ticker()} className={cn("text-theme-secondary-700", className)} />;
+			return (
+				<Amount
+					value={wallet.balance()}
+					ticker={wallet.network().ticker()}
+					className={cn("text-theme-secondary-700", className)}
+				/>
+			);
 		}
 
 		return <Skeleton height={16} width={100} />;
@@ -183,7 +189,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 
 		return (
 			<Amount
-				className="text-xs text-theme-navy-200 md:text-theme-secondary-700 md:text-base font-semibold"
+				className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-700"
 				ticker={wallet.exchangeCurrency()}
 				value={wallet.convertedBalance()}
 			/>
@@ -282,7 +288,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			onClick={onClick}
 		>
 			<div className="flex items-center space-x-4 p-2 pl-4">
-				<div className="flex flex-1 flex-col flex-shrink min-w-0">{details}</div>
+				<div className="flex min-w-0 flex-1 flex-shrink flex-col">{details}</div>
 
 				{extraDetails && <div className="flex items-center space-x-2 self-start">{extraDetails}</div>}
 			</div>
@@ -454,7 +460,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="-mr-1.5 text-theme-gray-700 hover:text-theme-primary-600"
+							className="text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
 						>
 							<Icon name="EllipsisVerticalFilled" size="lg" />
 						</Button>
