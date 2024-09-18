@@ -1664,7 +1664,7 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="rounded px-1.5 css-xqt0aw"
+                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -1828,7 +1828,7 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="rounded px-1.5 css-xqt0aw"
+                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -1992,7 +1992,7 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="rounded px-1.5 css-xqt0aw"
+                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
@@ -2156,7 +2156,7 @@ exports[`Dashboard > should render 1`] = `
                           class="flex flex-col items-end gap-1"
                         >
                           <div
-                            class="rounded px-1.5 css-xqt0aw"
+                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >

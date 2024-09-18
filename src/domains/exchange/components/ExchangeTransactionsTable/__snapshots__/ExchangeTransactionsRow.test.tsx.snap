@@ -70,12 +70,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -86,12 +86,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -110,12 +110,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -134,12 +134,12 @@ exports[`ExchangeTransactionsRow > should render (Expired) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -318,12 +318,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -334,12 +334,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -358,12 +358,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -382,12 +382,12 @@ exports[`ExchangeTransactionsRow > should render (Failed) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -557,12 +557,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -573,12 +573,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -597,12 +597,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -621,12 +621,12 @@ exports[`ExchangeTransactionsRow > should render (Finished) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -796,12 +796,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -812,12 +812,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
               </div>
             </div>
             <div
-              class="rounded pr-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full pr-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <div
                   class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -870,12 +870,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -894,12 +894,12 @@ exports[`ExchangeTransactionsRow > should render (New) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded pr-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full pr-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <div
                   class="flex items-center justify-center bg-theme-success-200 dark:bg-theme-success-700 text-theme-success-700 dark:text-white/70 dark:bg-theme-success-700 -ml-1.5 px-2"
@@ -1104,12 +1104,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1120,12 +1120,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1144,12 +1144,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1168,12 +1168,12 @@ exports[`ExchangeTransactionsRow > should render (Refunded) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1348,12 +1348,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1364,12 +1364,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1388,12 +1388,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1412,12 +1412,12 @@ exports[`ExchangeTransactionsRow > should render (Verifying) 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1592,12 +1592,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="px-3 transition-colors duration-100 min-h-11 items-end flex flex-col gap-1.5 my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1608,12 +1608,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
               </div>
             </div>
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1632,12 +1632,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-1pbju28"
+              class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
               color="danger-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"
@@ -1656,12 +1656,12 @@ exports[`ExchangeTransactionsRow > should render compact 1`] = `
             class="flex px-3 transition-colors duration-100 min-h-11 gap-3 justify-end items-start xl:items-center my-3 xl:my-0"
           >
             <div
-              class="rounded px-1.5 css-givenh"
+              class="rounded flex items-center justify-center h-full px-1.5 css-1jspzfx"
               color="success-bg"
               data-testid="AmountLabel__wrapper"
             >
               <div
-                class="flex space-x-1 items-stretch"
+                class="flex space-x-1 items-center"
               >
                 <span
                   class="whitespace-nowrap text-sm"

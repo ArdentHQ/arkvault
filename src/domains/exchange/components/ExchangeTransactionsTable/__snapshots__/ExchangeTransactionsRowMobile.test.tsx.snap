@@ -178,7 +178,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -207,7 +207,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Expired) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -402,7 +402,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -431,7 +431,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Failed) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -626,7 +626,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -655,7 +655,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Finished) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -851,7 +851,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -880,7 +880,7 @@ exports[`ExchangeTransactionsRowMobile > should render (New) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded pr-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full pr-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -1114,7 +1114,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -1143,7 +1143,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Refunded) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -1343,7 +1343,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-is8euj"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -1372,7 +1372,7 @@ exports[`ExchangeTransactionsRowMobile > should render (Verifying) 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-1xi6cb5"
+                    class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                     color="success-bg"
                     data-testid="AmountLabel__wrapper"
                   >
@@ -1564,7 +1564,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-is8euj"
+                class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                 color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
@@ -1593,7 +1593,7 @@ exports[`ExchangeTransactionsRowMobile > should render N/A if no orderId 1`] = `
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-1xi6cb5"
+                class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
@@ -1786,7 +1786,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-is8euj"
+                class="rounded flex items-center justify-center h-full px-1.5 css-is8euj"
                 color="danger-bg"
                 data-testid="AmountLabel__wrapper"
               >
@@ -1815,7 +1815,7 @@ exports[`ExchangeTransactionsRowMobile > should render transaction provider 1`] 
               class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
             >
               <div
-                class="rounded px-1.5 css-1xi6cb5"
+                class="rounded flex items-center justify-center h-full px-1.5 css-1xi6cb5"
                 color="success-bg"
                 data-testid="AmountLabel__wrapper"
               >
