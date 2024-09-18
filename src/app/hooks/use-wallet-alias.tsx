@@ -6,7 +6,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { assertProfile, assertString } from "@/utils/assertions";
 
 interface Properties {
-	address?: string;
+	address: string;
 	network?: Networks.Network;
 	profile?: Contracts.IProfile;
 }
@@ -15,7 +15,7 @@ interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
 	isDelegate: boolean;
-	address?: string;
+	address: string;
 }
 
 interface HookResult {

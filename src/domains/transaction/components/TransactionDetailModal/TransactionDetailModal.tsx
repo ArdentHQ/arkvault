@@ -46,7 +46,11 @@ export const TransactionDetailModal = ({
 							profile={profile}
 							senderAddress={transaction.sender()}
 							network={transaction.wallet().network()}
-							recipients={recipients}
+							recipients={recipients.map(({ address, alias, isDelegate }) => ({
+								address,
+								alias,
+								isDelegate,
+							}))}
 						/>
 					</TransactionDetailPadded>
 
