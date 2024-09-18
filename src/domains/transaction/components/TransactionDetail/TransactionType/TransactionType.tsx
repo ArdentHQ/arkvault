@@ -55,7 +55,7 @@ export const TransactionType = ({
 				)}
 
 				{transaction.isIpfs() && (
-					<div>
+					<div data-testid="DetailIpfs">
 						<DetailDivider />
 
 						<div className="flex w-full justify-between sm:justify-start">

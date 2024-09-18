@@ -20,6 +20,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 	const { isDarkMode } = useTheme();
 	const { isSmAndAbove } = useBreakpoint();
 	const { openExternal } = useLink();
+	console.log({ isConfirmed: transaction.isConfirmed() })
 
 	return (
 		<div
@@ -61,6 +62,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 					size="icon"
 					disabled={!transaction.isConfirmed()}
 					onClick={() => {
+						console.log("on click")
 						openExternal(transaction.explorerLink());
 					}}
 				/>

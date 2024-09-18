@@ -31,7 +31,7 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
-			<div className="space-y-3 sm:space-y-0">
+			<div className="space-y-3 sm:space-y-0" data-testid="VoteDetail">
 				<div className="flex w-full items-center justify-between sm:justify-start">
 					<DetailTitle
 						className={cn("w-auto", {
