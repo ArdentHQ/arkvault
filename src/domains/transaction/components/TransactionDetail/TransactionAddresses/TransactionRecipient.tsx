@@ -72,7 +72,10 @@ export const TransactionRecipients = ({
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
 				<div className="flex items-center">
-					<span>{t("TRANSACTION.MULTIPLE_COUNT", { count: recipients.length })}</span>
+					<span className="font-semibold">
+						<span>{t("COMMON.MULTIPLE")} </span>
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">({recipients.length}) </span>
+					</span>
 					<div className="hidden sm:inline-block">
 						<Divider type="vertical" size="md" />
 					</div>
