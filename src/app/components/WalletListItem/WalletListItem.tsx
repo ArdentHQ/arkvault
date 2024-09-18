@@ -7,8 +7,6 @@ import {
 	WalletCell,
 	Starred,
 	WalletListItemMobile,
-	WalletItemAvatar,
-	WalletItemDetails,
 	WalletItemExtraDetails,
 	WalletItemBalance,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
