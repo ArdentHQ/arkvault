@@ -91,7 +91,7 @@ exports[`Link > should render 1`] = `
     href="#/test"
   >
     <span
-      class="css-170792"
+      class="css-1dlnsgk"
     >
       Test
     </span>
@@ -148,7 +148,7 @@ exports[`Link > should render with tooltip 1`] = `
     href="#/test"
   >
     <span
-      class="css-170792"
+      class="css-1dlnsgk"
     >
       Test
     </span>
