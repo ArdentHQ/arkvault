@@ -74,7 +74,9 @@ export const TransactionRecipients = ({
 				<div className="flex items-center">
 					<span className="font-semibold">
 						<span>{t("COMMON.MULTIPLE")} </span>
-						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">({recipients.length}) </span>
+						<span className="text-theme-secondary-700 dark:text-theme-secondary-500">
+							({recipients.length}){" "}
+						</span>
 					</span>
 					<div className="hidden sm:inline-block">
 						<Divider type="vertical" size="md" />
