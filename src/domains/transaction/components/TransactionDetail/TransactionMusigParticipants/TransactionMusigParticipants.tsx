@@ -47,7 +47,7 @@ export const TransactionMusigParticipants = ({
 	const renderRow = (wallet: Contracts.IReadWriteWallet) => (
 		<TableRow className="group relative" key={wallet.address()}>
 			<TableCell variant="start" key={wallet.address()}>
-				<div className="group flex items-center space-x-2" key={wallet.address()}>
+				<div className="group flex items-center space-x-2 text-sm" key={wallet.address()}>
 					<Link to={wallet.explorerLink()} showExternalIcon={false} isExternal key={wallet.address()}>
 						<TruncateMiddleDynamic value={wallet.address()} availableWidth={width} />
 					</Link>

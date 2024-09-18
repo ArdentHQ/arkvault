@@ -45,6 +45,9 @@ const getVariant = (variant?: ButtonVariant, theme?: Theme, disabled?: boolean, 
 			ring-1
 			ring-inset
 			ring-theme-secondary-300
+			hover:bg-theme-primary-700
+			hover:ring-0
+			hover:text-white
 		`,
 		danger: () => `
 			bg-theme-danger-100 text-theme-danger-400
