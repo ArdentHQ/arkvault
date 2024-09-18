@@ -136,7 +136,7 @@ export const SendDelegateResignation = () => {
 							</TabPanel>
 
 							<TabPanel tabId={Step.ReviewStep}>
-								<ReviewStep senderWallet={activeWallet} />
+								<ReviewStep senderWallet={activeWallet} profile={activeProfile} />
 							</TabPanel>
 
 							<TabPanel tabId={Step.AuthenticationStep}>
