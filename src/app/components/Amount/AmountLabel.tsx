@@ -63,7 +63,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 			color={labelColor as any}
 			noBorder
 			className={twMerge(
-				cn("rounded flex items-center justify-center h-full", {
+				cn("flex h-full items-center justify-center rounded", {
 					"pr-1.5": hint,
 					"px-1.5": !hint,
 				}),
@@ -72,7 +72,7 @@ export const AmountLabel: React.VFC<AmountLabelProperties> = ({
 			size={size}
 			data-testid="AmountLabel__wrapper"
 		>
-			<div className={cn("flex space-x-1 items-center")}>
+			<div className={cn("flex items-center space-x-1")}>
 				{hint && <AmountLabelHint tooltipContent={hint} className={hintClassName} isCompact={isCompact} />}
 				<Amount
 					showSign={value !== 0}
