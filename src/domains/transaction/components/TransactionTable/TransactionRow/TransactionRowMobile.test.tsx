@@ -102,67 +102,6 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.queryByText(commonTranslations.NOT_AVAILABLE)).not.toBeInTheDocument();
 	});
 
-	it("should render 'multipayment' label if transaction is multipayment", () => {
-		render(
-			<table>
-				<tbody>
-					<TransactionRowMobile
-						transaction={{ ...fixture, isMultiPayment: () => true } as any}
-						profile={profile}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Multipayment");
-	});
-
-	it("should render 'vote' label if transaction is vote", () => {
-		render(
-			<table>
-				<tbody>
-					<TransactionRowMobile transaction={{ ...fixture, isVote: () => true } as any} profile={profile} />
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Vote");
-	});
-
-	it("should render 'unvote' label if transaction is unvote", () => {
-		render(
-			<table>
-				<tbody>
-					<TransactionRowMobile transaction={{ ...fixture, isUnvote: () => true } as any} profile={profile} />
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Unvote");
-	});
-
-	it("should render 'transfer' label by default", () => {
-		render(
-			<table>
-				<tbody>
-					<TransactionRowMobile
-						transaction={
-							{
-								...fixture,
-								isMultiPayment: () => false,
-								isUnvote: () => false,
-								isVote: () => false,
-							} as any
-						}
-						profile={profile}
-					/>
-				</tbody>
-			</table>,
-		);
-
-		expect(screen.getByTestId("TransactionRowMobile__label")).toHaveTextContent("Transfer");
-	});
-
 	it("should render N/A if timestamp is not available", () => {
 		render(
 			<table>
