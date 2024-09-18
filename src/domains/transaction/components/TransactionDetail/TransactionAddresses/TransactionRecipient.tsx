@@ -22,7 +22,7 @@ export const TransactionRecipient = ({
 		<>
 			<DetailDivider />
 
-			<div className="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
 				<DetailTitle
 					className={cn(labelClassName, {
 						invisible: !showLabel,
@@ -31,16 +31,15 @@ export const TransactionRecipient = ({
 					{t("COMMON.TO")}
 				</DetailTitle>
 
-				<div className="w-3/4">
-					<Address
-						address={recipient?.address}
-						walletName={recipient?.alias}
-						showCopyButton
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-						wrapperClass="justify-end sm:justify-start"
-					/>
-				</div>
+				<Address
+					truncateOnTable
+					address={recipient?.address}
+					walletName={recipient?.alias}
+					showCopyButton
+					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
+					wrapperClass="justify-end sm:justify-start"
+				/>
 			</div>
 		</>
 	);
@@ -69,10 +68,10 @@ export const TransactionRecipients = ({
 		<>
 			<DetailDivider />
 
-			<div className="mt-3 flex w-full items-center justify-between gap-4 space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
+			<div className="mt-3 flex w-full items-center justify-between space-x-2 sm:mt-0 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.TO")}</DetailTitle>
 
-				<div className="flex items-center space-x-4">
+				<div className="flex items-center">
 					<span>{t("TRANSACTION.MULTIPLE_COUNT", { count: recipients.length })}</span>
 					<div className="hidden sm:inline-block">
 						<Divider type="vertical" size="md" />

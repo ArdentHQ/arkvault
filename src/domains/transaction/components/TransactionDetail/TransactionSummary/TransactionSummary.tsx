@@ -8,8 +8,9 @@ import { BigNumber } from "@ardenthq/sdk-helpers";
 interface Properties {
 	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 	senderWallet: Contracts.IReadWriteWallet;
+	labelClassName?: string;
 }
-export const TransactionSummary = ({ transaction, senderWallet }: Properties): ReactElement => {
+export const TransactionSummary = ({ transaction, senderWallet, labelClassName }: Properties): ReactElement => {
 	const { t } = useTranslation();
 
 	return (
@@ -18,7 +19,7 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 				{!BigNumber.make(transaction.amount()).isZero() && (
 					<>
 						<div className="flex w-full justify-between sm:justify-start">
-							<DetailLabelText>{t("COMMON.AMOUNT")}</DetailLabelText>
+							<DetailLabelText className={labelClassName}>{t("COMMON.AMOUNT")}</DetailLabelText>
 							<AmountLabel
 								isNegative={transaction.isSent()}
 								value={transaction.amount()}
@@ -31,14 +32,14 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 				)}
 
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
+					<DetailLabelText className={labelClassName}>{t("COMMON.FEE")}</DetailLabelText>
 					<Amount ticker={senderWallet.currency()} value={transaction.fee()} className="font-semibold" />
 				</div>
 
 				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
-					<DetailLabelText>{t("COMMON.VALUE")}</DetailLabelText>
+					<DetailLabelText className={labelClassName}>{t("COMMON.VALUE")}</DetailLabelText>
 					<Amount
 						ticker={senderWallet.exchangeCurrency()}
 						value={transaction.convertedAmount()}

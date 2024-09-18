@@ -57,7 +57,7 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				<Button
 					data-testid="explorer-link"
 					icon="ArrowExternal"
-					variant="secondary"
+					variant="border"
 					size="icon"
 					disabled={!transaction.isConfirmed()}
 					onClick={() => {

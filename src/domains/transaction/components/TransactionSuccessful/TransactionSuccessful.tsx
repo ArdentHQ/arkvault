@@ -13,7 +13,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
 import { Icon } from "@/app/components/Icon";
-import { DetailLabel } from "@/app/components/DetailWrapper";
+import { DetailLabel, DetailPadded } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
@@ -25,18 +25,6 @@ interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 	recipients?: RecipientItem[];
 }
-
-export const TransactionDetailPadded = ({ children }: { children: React.ReactNode }) => (
-	<div className="group flex">
-		<div className="hidden sm:ml-3 sm:flex">
-			<div className="min-w-9 flex-row pr-3">
-				<div className="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800" />
-				<div className="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800" />
-			</div>
-		</div>
-		<div className="w-full sm:flex-row">{children}</div>
-	</div>
-);
 
 export const TransactionSuccessful = ({
 	transaction,
@@ -84,29 +72,29 @@ export const TransactionSuccessful = ({
 			</div>
 
 			<div className="mt-6 space-y-8">
-				<TransactionDetailPadded>
+				<DetailPadded>
 					<TransactionAddresses
 						network={senderWallet.network()}
 						senderAddress={senderWallet.address()}
 						recipients={recipients}
 						profile={senderWallet.profile()}
 					/>
-				</TransactionDetailPadded>
+				</DetailPadded>
 
 				{!transaction.isVote() && (
-					<TransactionDetailPadded>
+					<DetailPadded>
 						<TransactionType transaction={transaction} />
-					</TransactionDetailPadded>
+					</DetailPadded>
 				)}
 
 				{children}
 
-				<TransactionDetailPadded>
+				<DetailPadded>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2">
 						<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
 					</div>
-				</TransactionDetailPadded>
+				</DetailPadded>
 			</div>
 		</section>
 	);

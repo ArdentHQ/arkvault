@@ -57,7 +57,10 @@ export const TransactionMusigParticipants = ({
 						tooltip={t("COMMON.COPY_ID")}
 						tooltipDarkTheme={isDarkMode}
 					>
-						<Icon name="Copy" />
+						<Icon
+							name="Copy"
+							className="emotion-cache-v0ob3f text-theme-primary-400 dark:text-theme-secondary-700 dark:hover:text-theme-secondary-500"
+						/>
 					</Clipboard>
 				</div>
 			</TableCell>

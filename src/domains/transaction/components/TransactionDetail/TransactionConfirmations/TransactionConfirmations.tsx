@@ -34,9 +34,9 @@ export const TransactionConfirmations = ({
 					data-testid="TransactionSuccessAlert"
 					className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
 				>
-					<div className="flex items-center space-x-2 text-theme-success-600">
-						<Icon name="CheckmarkDouble" />
-						<p>{t("COMMON.ALERT.SUCCESS")}</p>
+					<div className="flex items-center space-x-2 text-theme-success-700">
+						<Icon name="CheckmarkDouble" size="lg" />
+						<p className="font-semibold">{t("COMMON.ALERT.SUCCESS")}</p>
 					</div>
 
 					<Divider type="vertical" className="text-theme-success-200 dark:text-theme-secondary-800" />

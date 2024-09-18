@@ -12,12 +12,12 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 
-import { DetailLabel, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
-import { TransactionDetailPadded } from "@/domains/transaction/components/TransactionSuccessful";
+import { DetailLabel, DetailPadded, DetailsCondensed, DetailWrapper } from "@/app/components/DetailWrapper";
 import { useTransactionVotingWallets } from "@/domains/transaction/hooks/use-transaction-voting-wallets";
 import { VoteTransactionType } from "@/domains/transaction/components/VoteTransactionType";
 import { TransactionMusigParticipants } from "@/domains/transaction/components/TransactionDetail/TransactionMusigParticipants";
 import { useTransactionRecipients } from "@/domains/transaction/hooks/use-transaction-recipients";
+import cn from "classnames";
 
 export const TransactionDetailModal = ({
 	isOpen,
@@ -37,6 +37,11 @@ export const TransactionDetailModal = ({
 	});
 	const { recipients } = useTransactionRecipients({ profile, transaction });
 
+	const labelClassName = cn({
+		"min-w-24": !transaction.isVoteCombination(),
+		"min-w-32": transaction.isVoteCombination(),
+	});
+
 	return (
 		<Modal title={t("TRANSACTION.MODAL_TRANSACTION_DETAILS.TITLE")} isOpen={isOpen} onClose={onClose} noButtons>
 			<DetailsCondensed>
@@ -44,8 +49,8 @@ export const TransactionDetailModal = ({
 					<TransactionId transaction={transaction} />
 				</div>
 
-				<div className="mt-6 space-y-8">
-					<TransactionDetailPadded>
+				<div className="mt-6 space-y-4">
+					<DetailPadded>
 						<TransactionAddresses
 							explorerLink={transaction.explorerLink()}
 							profile={profile}
@@ -56,34 +61,39 @@ export const TransactionDetailModal = ({
 								alias,
 								isDelegate,
 							}))}
+							labelClassName={labelClassName}
 						/>
-					</TransactionDetailPadded>
+					</DetailPadded>
 
-					<TransactionDetailPadded>
+					<DetailPadded>
 						{!isVoteTransaction && <TransactionType transaction={transaction} />}
 						{isVoteTransaction && <VoteTransactionType votes={votes} unvotes={unvotes} />}
-					</TransactionDetailPadded>
+					</DetailPadded>
 
-					<TransactionDetailPadded>
-						<TransactionSummary transaction={transaction} senderWallet={transaction.wallet()} />
-					</TransactionDetailPadded>
+					<DetailPadded>
+						<TransactionSummary
+							labelClassName={labelClassName}
+							transaction={transaction}
+							senderWallet={transaction.wallet()}
+						/>
+					</DetailPadded>
 
-					<TransactionDetailPadded>
-						<TransactionDetails transaction={transaction} />
-					</TransactionDetailPadded>
+					<DetailPadded>
+						<TransactionDetails transaction={transaction} labelClassName={labelClassName} />
+					</DetailPadded>
 
 					{[!!transaction.memo(), transaction.isMultiPayment(), transaction.isTransfer()].some(Boolean) && (
-						<TransactionDetailPadded>
+						<DetailPadded>
 							<DetailWrapper label={t("COMMON.MEMO_SMARTBRIDGE")}>
 								{transaction.memo() && <p>{transaction.memo()}</p>}
 								{!transaction.memo() && (
 									<p className="text-theme-secondary-500">{t("COMMON.NOT_AVAILABLE")}</p>
 								)}
 							</DetailWrapper>
-						</TransactionDetailPadded>
+						</DetailPadded>
 					)}
 
-					<TransactionDetailPadded>
+					<DetailPadded>
 						<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 						<div className="mt-2">
 							<TransactionConfirmations
@@ -91,15 +101,15 @@ export const TransactionDetailModal = ({
 								confirmations={transaction.confirmations().toNumber()}
 							/>
 						</div>
-					</TransactionDetailPadded>
+					</DetailPadded>
 
 					{transaction.isMultiSignatureRegistration() && (
-						<TransactionDetailPadded>
+						<DetailPadded>
 							<DetailLabel>{t("TRANSACTION.PARTICIPANTS")}</DetailLabel>
 							<div className="mt-2">
 								<TransactionMusigParticipants transaction={transaction} profile={profile} />
 							</div>
-						</TransactionDetailPadded>
+						</DetailPadded>
 					)}
 				</div>
 			</DetailsCondensed>

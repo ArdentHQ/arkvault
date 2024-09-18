@@ -38,7 +38,7 @@ export const TransactionType = ({
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
-							<div> {transaction.username()} </div>
+							<div className="font-semibold">{transaction.username()}</div>
 						</div>
 					</>
 				)}
@@ -49,7 +49,7 @@ export const TransactionType = ({
 
 						<div className="flex w-full justify-between sm:justify-start">
 							<DetailLabelText>{t("COMMON.DELEGATE")}</DetailLabelText>
-							<div> {transaction.wallet().username()} </div>
+							<div className="font-semibold"> {transaction.wallet().username()} </div>
 						</div>
 					</>
 				)}

@@ -36,18 +36,17 @@ export const TransactionAddresses = ({
 
 	return (
 		<DetailWrapper label={t("TRANSACTION.ADDRESSING")}>
-			<div className="flex items-center justify-between gap-4 space-x-2 sm:justify-start sm:space-x-0">
+			<div className="flex items-center justify-between space-x-2 sm:justify-start sm:space-x-0">
 				<DetailTitle className={labelClassName}>{t("COMMON.FROM")}</DetailTitle>
-				<div className="w-3/4">
-					<Address
-						address={senderAddress}
-						walletName={alias}
-						showCopyButton
-						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
-						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
-						wrapperClass="justify-end sm:justify-start"
-					/>
-				</div>
+				<Address
+					truncateOnTable
+					address={senderAddress}
+					walletName={alias}
+					showCopyButton
+					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
+					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4"
+					wrapperClass="justify-end sm:justify-start"
+				/>
 			</div>
 
 			{explorerLink && (

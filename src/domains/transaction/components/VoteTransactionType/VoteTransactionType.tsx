@@ -1,8 +1,8 @@
-import { DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
+import { DetailDivider, DetailTitle, DetailWrapper } from "@/app/components/DetailWrapper";
 import React from "react";
 import { Contracts } from "@ardenthq/sdk-profiles";
 import { useTranslation } from "react-i18next";
+import cn from "classnames";
 
 type VoteRegistryItem = Contracts.VoteRegistryItem;
 
@@ -32,8 +32,15 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 	return (
 		<DetailWrapper label={t("TRANSACTION.TRANSACTION_TYPE")}>
 			<div className="space-y-3 sm:space-y-0">
-				<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-					<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.CATEGORY")}</DetailTitle>
+				<div className="flex w-full items-center justify-between sm:justify-start">
+					<DetailTitle
+						className={cn("w-auto", {
+							"sm:min-w-24": voteCategory !== "swap",
+							"sm:min-w-32": voteCategory === "swap",
+						})}
+					>
+						{t("COMMON.CATEGORY")}
+					</DetailTitle>
 					<div className="flex items-center rounded bg-theme-secondary-200 px-1 py-[3px] dark:border dark:border-theme-secondary-800 dark:bg-transparent">
 						<span className="text-[12px] font-semibold leading-[15px] text-theme-secondary-700 dark:text-theme-secondary-500">
 							{categoryLabels[voteCategory]}
@@ -41,25 +48,21 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 					</div>
 				</div>
 
-				<div className="hidden sm:block">
-					<Divider dashed />
-				</div>
+				<DetailDivider />
 
 				{voteCategory === "swap" && (
 					<>
-						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.OLD_DELEGATE")}</DetailTitle>
+						<div className="flex w-full items-center justify-between sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.OLD_DELEGATE")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{unvotes[0].wallet?.username()}
 							</div>
 						</div>
 
-						<div className="hidden sm:block">
-							<Divider dashed />
-						</div>
+						<DetailDivider />
 
-						<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-							<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.NEW_DELEGATE")}</DetailTitle>
+						<div className="flex w-full items-center justify-between sm:justify-start">
+							<DetailTitle className="w-auto sm:min-w-32">{t("COMMON.NEW_DELEGATE")}</DetailTitle>
 							<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 								{votes[0].wallet?.username()}
 							</div>
@@ -68,8 +71,8 @@ export const VoteTransactionType = ({ unvotes, votes }: { unvotes: VoteRegistryI
 				)}
 
 				{voteCategory !== "swap" && (
-					<div className="flex w-full items-center justify-between gap-4 sm:justify-start">
-						<DetailTitle className="w-auto sm:min-w-28">{t("COMMON.DELEGATE")}</DetailTitle>
+					<div className="flex w-full items-center justify-between sm:justify-start">
+						<DetailTitle className="w-auto sm:min-w-24">{t("COMMON.DELEGATE")}</DetailTitle>
 						<div className="no-ligatures truncate text-sm font-semibold leading-[17px] text-theme-secondary-900 dark:text-theme-secondary-200 sm:text-base sm:leading-5">
 							{voteCategory === "vote" ? votes[0]?.wallet?.username() : unvotes[0]?.wallet?.username()}
 						</div>
