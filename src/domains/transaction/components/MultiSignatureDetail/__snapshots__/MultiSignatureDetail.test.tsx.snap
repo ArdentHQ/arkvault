@@ -206,12 +206,12 @@ exports[`MultiSignatureDetail > should fail to broadcast transaction and show er
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -791,12 +791,12 @@ exports[`MultiSignatureDetail > should not broadcast if wallet is not ready to d
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -1376,12 +1376,12 @@ exports[`MultiSignatureDetail > should not show send button when waiting for con
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -1935,12 +1935,12 @@ exports[`MultiSignatureDetail > should render summary step and handle exception 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -3453,12 +3453,12 @@ exports[`MultiSignatureDetail > should render summary step for transfer 1`] = `
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
@@ -4846,12 +4846,12 @@ exports[`MultiSignatureDetail > should show sign button when able to sign 1`] = 
                           class="flex items-center font-semibold"
                         >
                           <div
-                            class="rounded flex items-center justify-center h-full px-1.5 css-xqt0aw"
+                            class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                             color="danger-bg"
                             data-testid="AmountLabel__wrapper"
                           >
                             <div
-                              class="flex space-x-1 items-center"
+                              class="flex items-center space-x-1"
                             >
                               <span
                                 class="whitespace-nowrap text-sm"
