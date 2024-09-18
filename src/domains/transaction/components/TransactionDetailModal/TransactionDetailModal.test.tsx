@@ -39,7 +39,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "transfer",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -62,7 +62,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "transfer",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -151,7 +151,7 @@ describe("TransactionDetailModal", () => {
 							},
 						}),
 						type: () => "ipfs",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -205,8 +205,8 @@ describe("TransactionDetailModal", () => {
 		const labels = {
 			unvote: "Unvote",
 			vote: "Vote",
-			voteCombination: "Vote Swap"
-		}
+			voteCombination: "Vote Swap",
+		};
 
 		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(labels[transactionType]);
 		expect(asFragment()).toMatchSnapshot();
@@ -222,7 +222,7 @@ describe("TransactionDetailModal", () => {
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "delegateRegistration",
 						username: () => "ARK Wallet",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -276,7 +276,7 @@ describe("TransactionDetailModal", () => {
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 						type: () => "secondSignature",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -301,7 +301,7 @@ describe("TransactionDetailModal", () => {
 						isMagistrate: () => true,
 						isTransfer: () => false,
 						type: () => "magistrate",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -324,7 +324,7 @@ describe("TransactionDetailModal", () => {
 						isTransfer: () => false,
 						isUnlockToken: () => true,
 						type: () => "unlockToken",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
