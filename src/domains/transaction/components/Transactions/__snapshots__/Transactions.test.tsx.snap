@@ -550,12 +550,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -702,12 +702,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -854,12 +854,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1006,12 +1006,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1158,12 +1158,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1310,12 +1310,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1462,12 +1462,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1614,12 +1614,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1789,12 +1789,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -1964,12 +1964,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2139,12 +2139,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2314,12 +2314,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2478,12 +2478,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2642,12 +2642,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2806,12 +2806,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -2970,12 +2970,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3134,12 +3134,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3298,12 +3298,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3462,12 +3462,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3626,12 +3626,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3790,12 +3790,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -3954,12 +3954,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4118,12 +4118,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4282,12 +4282,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4446,12 +4446,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4610,12 +4610,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4774,12 +4774,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -4938,12 +4938,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5102,12 +5102,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5266,12 +5266,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5430,12 +5430,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5594,12 +5594,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5758,12 +5758,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -5922,12 +5922,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6086,12 +6086,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6250,12 +6250,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6414,12 +6414,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6578,12 +6578,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6742,12 +6742,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -6906,12 +6906,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7070,12 +7070,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7234,12 +7234,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7398,12 +7398,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7562,12 +7562,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7726,12 +7726,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -7890,12 +7890,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8054,12 +8054,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8218,12 +8218,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8382,12 +8382,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8546,12 +8546,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8710,12 +8710,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -8874,12 +8874,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9026,12 +9026,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9178,12 +9178,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9330,12 +9330,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9482,12 +9482,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9646,12 +9646,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9810,12 +9810,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -9974,12 +9974,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -10138,12 +10138,12 @@ exports[`Transactions > should fetch more transactions 1`] = `
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -10751,12 +10751,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -10903,12 +10903,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11055,12 +11055,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11207,12 +11207,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11382,12 +11382,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11557,12 +11557,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11721,12 +11721,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -11885,12 +11885,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12049,12 +12049,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12213,12 +12213,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12377,12 +12377,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12541,12 +12541,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12705,12 +12705,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -12869,12 +12869,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13033,12 +13033,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13197,12 +13197,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13361,12 +13361,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13525,12 +13525,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13689,12 +13689,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -13853,12 +13853,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14017,12 +14017,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14181,12 +14181,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14345,12 +14345,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14509,12 +14509,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14673,12 +14673,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14837,12 +14837,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -14989,12 +14989,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -15141,12 +15141,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -15305,12 +15305,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -15469,12 +15469,12 @@ exports[`Transactions > should hide view more button when there are no next page
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16082,12 +16082,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16234,12 +16234,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16386,12 +16386,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16538,12 +16538,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16713,12 +16713,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -16888,12 +16888,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17052,12 +17052,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17216,12 +17216,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17380,12 +17380,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17544,12 +17544,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17708,12 +17708,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -17872,12 +17872,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18036,12 +18036,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18200,12 +18200,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18364,12 +18364,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18528,12 +18528,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18692,12 +18692,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -18856,12 +18856,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19020,12 +19020,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19184,12 +19184,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19348,12 +19348,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19512,12 +19512,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19676,12 +19676,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -19840,12 +19840,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20004,12 +20004,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20168,12 +20168,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20320,12 +20320,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20472,12 +20472,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20636,12 +20636,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
@@ -20800,12 +20800,12 @@ exports[`Transactions > should open detail modal on transaction row click 1`] = 
                     class="flex flex-col items-end gap-1"
                   >
                     <div
-                      class="rounded px-1.5 css-xqt0aw"
+                      class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                       color="danger-bg"
                       data-testid="AmountLabel__wrapper"
                     >
                       <div
-                        class="flex space-x-1 items-center"
+                        class="flex items-center space-x-1"
                       >
                         <span
                           class="whitespace-nowrap text-sm"
