@@ -69,6 +69,7 @@ export const translations = {
 	COPY_ADDRESS: "Copy Address",
 	COPY_ERROR: "Copy Error",
 	COPY_ID: "Copy Transaction ID",
+	COPY_IPFS: "Copy IPFS Hash",
 	CREATE: "Create",
 	CRYPTOASSET: "Cryptoasset",
 	CRYPTOCURRENCY: "Cryptocurrency",

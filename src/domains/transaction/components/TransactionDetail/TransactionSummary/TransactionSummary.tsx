@@ -34,14 +34,14 @@ export const TransactionSummary = ({ transaction, senderWallet }: Properties): R
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.FEE")}</DetailLabelText>
-					<Amount ticker={senderWallet.currency()} value={transaction.fee()} />
+					<Amount ticker={senderWallet.currency()} value={transaction.fee()} className="font-semibold" />
 				</div>
 
 				<DetailDivider />
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.VALUE")}</DetailLabelText>
-					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} />
+					<Amount ticker={senderWallet.exchangeCurrency()} value={transaction.convertedAmount()} className="font-semibold" />
 				</div>
 			</div>
 		</DetailWrapper>

@@ -24,7 +24,7 @@ export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransa
 			<div className="space-y-3 sm:space-y-0">
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.TIMESTAMP")}</DetailLabelText>
-					<div>{timestamp.format(format)}</div>
+					<div className="font-semibold">{timestamp.format(format)}</div>
 				</div>
 
 				<DetailDivider />
@@ -40,7 +40,7 @@ export const TransactionDetails = ({ transaction }: { transaction: DTO.RawTransa
 
 				<div className="flex w-full justify-between sm:justify-start">
 					<DetailLabelText>{t("COMMON.NONCE")}</DetailLabelText>
-					<div>{data.nonce}</div>
+					<div className="font-semibold">{data.nonce}</div>
 				</div>
 			</div>
 		</DetailWrapper>
