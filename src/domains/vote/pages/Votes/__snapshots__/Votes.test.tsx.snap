@@ -1273,6 +1273,7 @@ exports[`Votes > should filter current delegates 1`] = `
 </DocumentFragment>
 `;
 
+<<<<<<< HEAD
 exports[`Votes > should hide testnet wallet if disabled from profile setting 1`] = `
 <DocumentFragment>
   <div
@@ -2848,6 +2849,8 @@ exports[`Votes > should hide testnet wallet if disabled from profile setting 1`]
 </DocumentFragment>
 `;
 
+=======
+>>>>>>> develop
 exports[`Votes > should navigate to create create page 1`] = `<DocumentFragment />`;
 
 exports[`Votes > should navigate to import wallet page 1`] = `<DocumentFragment />`;

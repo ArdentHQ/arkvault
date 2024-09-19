@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -44,29 +43,18 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes", hasHistory = false) => {
-	let routeOptions: any = {
-		route: route,
-	};
-
-	if (hasHistory) {
-		history.push(route);
-
-		routeOptions = {
-			...routeOptions,
-			history,
-		};
-	}
-
-	return render(
+const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") =>
+	render(
 		<Route path={routePath}>
 			<Wrapper>
 				<Votes />
 			</Wrapper>
 		</Route>,
-		routeOptions,
+		{
+			history,
+			route: route,
+		},
 	);
-};
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
@@ -306,7 +294,7 @@ describe("Votes", () => {
 
 	it("should navigate to create create page", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -318,7 +306,7 @@ describe("Votes", () => {
 
 	it("should navigate to import wallet page", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -573,33 +561,6 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should hide testnet wallet if disabled from profile setting", async () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		profile.wallets().push(mainnetWallet);
-
-		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container } = renderPage(route);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		resetProfileNetworksMock();
-
-		// cleanup
-		profile.wallets().forget(mainnetWallet.id());
-	});
-
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
@@ -731,5 +692,28 @@ describe("Votes", () => {
 		await userEvent.type(searchInput, "itsanametoo");
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+	});
+
+	it("should hide testnet wallets if disabled from profile setting", async () => {
+		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const mainnetWallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		profile.wallets().push(mainnetWallet);
+
+		const route = `/profiles/${profile.id()}/votes`;
+		renderPage(route, routePath);
+
+		// Show the only mainnet wallet.
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		await expect(screen.findByText(mainnetWallet.address())).resolves.toBeVisible();
+
+		profile.wallets().forget(mainnetWallet.id());
+
+		resetProfileNetworksMock();
 	});
 });

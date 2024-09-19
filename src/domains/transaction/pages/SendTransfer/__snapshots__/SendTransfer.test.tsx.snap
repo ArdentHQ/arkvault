@@ -706,7 +706,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -780,7 +780,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -4907,7 +4907,7 @@ exports[`SendTransfer > should render review step 1`] = `
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -4981,7 +4981,7 @@ exports[`SendTransfer > should render review step 1`] = `
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -5333,7 +5333,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -5407,7 +5407,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
@@ -5462,7 +5462,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
@@ -5803,7 +5803,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               From
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -5877,7 +5877,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
@@ -5932,7 +5932,7 @@ exports[`SendTransfer > should render review step with multiple recipients (with
               To
             </div>
             <div
-              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+              class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
             >
               <span
                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base"
@@ -6921,7 +6921,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -6995,7 +6995,7 @@ exports[`SendTransfer > should send a single transfer and handle undefined expir
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -8063,7 +8063,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -8137,7 +8137,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -9759,7 +9759,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -9833,7 +9833,7 @@ exports[`SendTransfer > should send a single transfer using wallet with encrypti
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -10901,7 +10901,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -10975,7 +10975,7 @@ exports[`SendTransfer > should send a single transfer with keyboard 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -12043,7 +12043,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
@@ -12117,7 +12117,7 @@ exports[`SendTransfer > should send a single transfer without keyboard 1`] = `
                                 To
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
