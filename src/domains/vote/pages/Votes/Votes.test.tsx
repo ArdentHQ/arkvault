@@ -1,4 +1,3 @@
-
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -20,7 +19,6 @@ import {
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
-import { resetClipboardStubOnView } from "@testing-library/user-event/dist/types/utils";
 
 const history = createHashHistory();
 
@@ -45,17 +43,18 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") => render(
-	<Route path={routePath}>
-		<Wrapper>
-			<Votes />
-		</Wrapper>
-	</Route>,
-	{
-		history,
-		route: route,
-	},
-);
+const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") =>
+	render(
+		<Route path={routePath}>
+			<Wrapper>
+				<Votes />
+			</Wrapper>
+		</Route>,
+		{
+			history,
+			route: route,
+		},
+	);
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
@@ -717,5 +716,4 @@ describe("Votes", () => {
 
 		resetProfileNetworksMock();
 	});
-
 });
