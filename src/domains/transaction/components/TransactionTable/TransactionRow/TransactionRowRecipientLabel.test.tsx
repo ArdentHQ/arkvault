@@ -4,7 +4,7 @@ import React from "react";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, render, screen } from "@/utils/testing-library";
+import { env, render, screen, renderResponsive } from "@/utils/testing-library";
 
 describe("TransactionRowRecipientLabel", () => {
 	it("should show address", () => {
@@ -45,6 +45,21 @@ describe("TransactionRowRecipientLabel", () => {
 		);
 
 		expect(screen.getByText(translations.TRANSACTION_TYPES.MAGISTRATE)).toBeInTheDocument();
+	});
+
+	it.each(["xs", "sm"])("should render with right alignment on mobile view", (breakpoint) => {
+		renderResponsive(
+			<TransactionRowRecipientLabel
+				transaction={{
+					...TransactionFixture,
+					isTransfer: () => true,
+				}}
+			/>,
+			breakpoint,
+		);
+
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getByTestId("Address__address").parentElement).toHaveClass("justify-end");
 	});
 
 	describe("Votes", () => {

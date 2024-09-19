@@ -68,10 +68,10 @@ describe("TransactionRow", () => {
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
-		expect(screen.getByRole("link", { name: "ea63bf…b5c79b" })).toBeInTheDocument();
+		expect(screen.getByRole("link", { name: "ea63b…5c79b" })).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
-		expect(screen.getByTestId("Amount")).toBeInTheDocument();
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 
 	it("should render skeleton", () => {
