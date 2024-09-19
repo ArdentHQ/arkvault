@@ -124,12 +124,12 @@ exports[`TransactionRowMobile > should render 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-xqt0aw"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-center"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -293,12 +293,12 @@ exports[`TransactionRowMobile > should render 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-xqt0aw"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-center"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -343,67 +343,17 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4"
           data-testid="TransactionRow__skeleton"
         >
           <div
-            class="flex items-center justify-between space-x-4"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
           >
             <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              ID
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 120px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Date
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 160px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Sender
-            </div>
-            <div
-              class="mr-4 flex items-center space-x-2"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <span
                 aria-busy="true"
@@ -412,7 +362,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  style="width: 70px; height: 17px;"
                 >
                   ‌
                 </span>
@@ -425,126 +375,107 @@ exports[`TransactionRowMobile > should render skeleton responsive 1`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
+                  style="width: 70px; height: 17px;"
                 >
                   ‌
                 </span>
                 <br />
               </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Recipient
             </div>
             <div
-              class="mr-4 flex items-center space-x-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
             >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Amount
-            </div>
-            <div
-              class="flex h-7 items-center space-x-1"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 35px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 0px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
+              </div>
             </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Currency
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 0px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
           </div>
         </td>
       </tr>
@@ -558,67 +489,17 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
   <table>
     <tbody>
       <tr
-        class="group css-16ynu5g"
+        class="group !border-b-0 css-16ynu5g"
         data-testid="TableRow"
       >
         <td
-          class="flex-col space-y-4 py-4"
           data-testid="TransactionRow__skeleton"
         >
           <div
-            class="flex items-center justify-between space-x-4"
+            class="w-full cursor-pointer overflow-hidden rounded border border-theme-secondary-300 bg-white dark:border-theme-secondary-800 dark:bg-theme-secondary-900 mb-3"
           >
             <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              ID
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 120px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Date
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 160px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Sender
-            </div>
-            <div
-              class="mr-4 flex items-center space-x-2"
+              class="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black"
             >
               <span
                 aria-busy="true"
@@ -627,7 +508,7 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  style="width: 70px; height: 17px;"
                 >
                   ‌
                 </span>
@@ -640,126 +521,107 @@ exports[`TransactionRowMobile > should render skeleton responsive 2`] = `
               >
                 <span
                   class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
+                  style="width: 70px; height: 17px;"
                 >
                   ‌
                 </span>
                 <br />
               </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
-                <span
-                  class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
-                >
-                  ‌
-                </span>
-                <br />
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Recipient
             </div>
             <div
-              class="mr-4 flex items-center space-x-2"
+              class="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2"
             >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 20px; height: 20px; border-radius: 50%;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Amount
-            </div>
-            <div
-              class="flex h-7 items-center space-x-1"
-            >
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                <span
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 1px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div
+                class="flex flex-col gap-2"
               >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 1px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 70px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
-              <span
-                aria-busy="true"
-                aria-live="polite"
-                class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-              >
                 <span
-                  class="react-loading-skeleton"
-                  style="width: 35px; height: 16px;"
+                  aria-busy="true"
+                  aria-live="polite"
+                  class="flex w-auto max-w-full items-center overflow-hidden leading-none"
                 >
-                  ‌
+                  <span
+                    class="react-loading-skeleton"
+                    style="width: 0px; height: 17px;"
+                  >
+                    ‌
+                  </span>
+                  <br />
                 </span>
-                <br />
-              </span>
+              </div>
             </div>
-          </div>
-          <div
-            class="flex items-center justify-between space-x-4"
-          >
-            <div
-              class="text-md group relative m-0 select-none border-theme-secondary-300 text-left font-semibold text-theme-secondary-700 first:pl-0 last:pr-0 dark:border-theme-secondary-800 dark:text-theme-secondary-500"
-            >
-              Currency
-            </div>
-            <span
-              aria-busy="true"
-              aria-live="polite"
-              class="flex w-auto max-w-full items-center overflow-hidden leading-none"
-            >
-              <span
-                class="react-loading-skeleton"
-                style="width: 0px; height: 16px;"
-              >
-                ‌
-              </span>
-              <br />
-            </span>
           </div>
         </td>
       </tr>
@@ -881,12 +743,12 @@ exports[`TransactionRowMobile > should render with currency 1`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-xqt0aw"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-center"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
@@ -1039,12 +901,12 @@ exports[`TransactionRowMobile > should render with currency 2`] = `
                   class="text-sm font-semibold text-theme-secondary-900 dark:text-theme-secondary-200"
                 >
                   <div
-                    class="rounded px-1.5 css-xqt0aw"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-center"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"

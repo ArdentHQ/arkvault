@@ -1,60 +1,39 @@
 import React from "react";
 
-import { useTranslation } from "react-i18next";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
-import { RowWrapper, RowLabel } from "@/app/components/Table/Mobile/Row";
+import { MobileCard } from "@/app/components/Table/Mobile/MobileCard";
 
 export const TransactionRowMobileSkeleton = () => {
-	const senderWidth = useRandomNumber(150, 150);
-	const recipientWidth = useRandomNumber(130, 150);
 	const amountWidth = useRandomNumber(100, 130);
+	const recipientWidth = useRandomNumber(130, 150);
 	const currencyWidth = Math.floor(amountWidth * 0.75);
-	const { t } = useTranslation();
 
 	return (
-		<TableRow className="group">
-			<td data-testid="TransactionRow__skeleton" className="flex-col space-y-4 py-4">
-				<RowWrapper>
-					<RowLabel>{t("COMMON.ID")}</RowLabel>
-					<Skeleton height={16} width={120} />
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.DATE")}</RowLabel>
-					<Skeleton height={16} width={160} />
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.SENDER")}</RowLabel>
-					<div className="mr-4 flex items-center space-x-2">
-						<Skeleton height={16} width={senderWidth} />
-						<Skeleton circle height={20} width={20} />
-						<Skeleton circle height={20} width={20} />
+		<TableRow className="group !border-b-0">
+			<td data-testid="TransactionRow__skeleton">
+				<MobileCard className="mb-3">
+					<div className="flex h-10 w-full items-center justify-between bg-theme-secondary-100 px-4 dark:bg-black">
+						<Skeleton height={17} width={70} />
+						<Skeleton height={17} width={70} />
 					</div>
-				</RowWrapper>
 
-				<RowWrapper>
-					<RowLabel>{t("COMMON.RECIPIENT")}</RowLabel>
-					<div className="mr-4 flex items-center space-x-2">
-						<Skeleton height={16} width={recipientWidth} />
-						<Skeleton circle height={20} width={20} />
+					<div className="flex w-full flex-col gap-4 px-4 pb-4 pt-3 sm:grid sm:grid-cols-[200px_auto_130px] sm:pb-2">
+						<div className="flex flex-col gap-2">
+							<Skeleton height={17} width={70} />
+							<Skeleton height={17} width={recipientWidth} />
+						</div>
+						<div className="flex flex-col gap-2">
+							<Skeleton height={17} width={70} />
+							<Skeleton height={17} width={amountWidth} />
+						</div>
+						<div className="flex flex-col gap-2">
+							<Skeleton height={17} width={70} />
+							<Skeleton height={17} width={currencyWidth} />
+						</div>
 					</div>
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.AMOUNT")}</RowLabel>
-					<div className="flex h-7 items-center space-x-1">
-						<Skeleton height={16} width={amountWidth} />
-						<Skeleton height={16} width={35} />
-					</div>
-				</RowWrapper>
-
-				<RowWrapper>
-					<RowLabel>{t("COMMON.CURRENCY")}</RowLabel>
-					<Skeleton height={16} width={currencyWidth} />
-				</RowWrapper>
+				</MobileCard>
 			</td>
 		</TableRow>
 	);
