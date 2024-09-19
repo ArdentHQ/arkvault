@@ -159,6 +159,7 @@ describe("SelectRecipient", () => {
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(address);
 
 		expect(onChange).toHaveBeenCalledWith(address, {
+			address,
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
