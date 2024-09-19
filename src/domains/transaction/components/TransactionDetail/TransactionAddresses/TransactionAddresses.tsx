@@ -39,7 +39,7 @@ export const TransactionAddresses = ({
 					showCopyButton
 					walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 					addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-					wrapperClass="justify-end sm:justify-start"
+					wrapperClass="justify-end sm:justify-start sm:max-w-[350px]"
 				/>
 			</div>
 
@@ -62,7 +62,7 @@ export const TransactionAddresses = ({
 						showCopyButton
 						walletNameClass="text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
 						addressClass="text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base"
-						wrapperClass="justify-end sm:justify-start"
+						wrapperClass="justify-end sm:justify-start sm:max-w-[350px]"
 					/>
 				</div>
 			))}
