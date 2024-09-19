@@ -2664,7 +2664,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -2680,7 +2680,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -2696,7 +2696,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -2712,7 +2712,7 @@ exports[`Servers Settings > with servers > should ping the servers in an interva
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -4902,7 +4902,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -4918,7 +4918,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -4934,7 +4934,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -4950,7 +4950,7 @@ exports[`Servers Settings > with servers > should render custom servers 1`] = `
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -8856,7 +8856,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -8872,7 +8872,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -8888,7 +8888,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -8904,7 +8904,7 @@ exports[`Servers Settings > with servers > should show status ok after ping the 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
@@ -15163,7 +15163,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden md:table-cell w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--1"
                                     role="columnheader"
@@ -15179,7 +15179,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--2"
                                     role="columnheader"
@@ -15195,7 +15195,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--3"
                                     role="columnheader"
@@ -15211,7 +15211,7 @@ exports[`Servers Settings > with unreachable servers > should show status error 
                                     </div>
                                   </th>
                                   <th
-                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
+                                    class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 no-border w-1 first:rounded-tl-xl last:rounded-tr-xl"
                                     colspan="1"
                                     data-testid="table__th--4"
                                     role="columnheader"
