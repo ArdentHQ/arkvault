@@ -150,12 +150,12 @@ exports[`UnlockTokenDetail > should render a modal 1`] = `
                   class="flex items-center font-semibold"
                 >
                   <div
-                    class="rounded px-1.5 css-1pbju28"
+                    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                     color="danger-bg"
                     data-testid="AmountLabel__wrapper"
                   >
                     <div
-                      class="flex space-x-1 items-stretch"
+                      class="flex items-center space-x-1"
                     >
                       <span
                         class="whitespace-nowrap text-sm"
