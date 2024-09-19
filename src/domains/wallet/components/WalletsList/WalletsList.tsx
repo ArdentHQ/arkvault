@@ -163,7 +163,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	);
 
 	return (
-		<AccordionContent data-testid="WalletsList" className={twMerge(className, "pb-4 px-6 md:p-0")}>
+		<AccordionContent data-testid="WalletsList" className={twMerge(className, "px-6 pb-4 md:p-0")}>
 			{(wallets.length > 0 || showSkeletons) && (
 				<>
 					<div data-testid="WalletTable">

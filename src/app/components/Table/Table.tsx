@@ -7,7 +7,7 @@ import { styled } from "twin.macro";
 import { TableProperties } from "./Table.contracts";
 import { defaultTableStyle } from "./Table.styles";
 import { Icon } from "@/app/components/Icon";
-import {twMerge} from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 
 const TableWrapper = styled.div`
 	${defaultTableStyle}

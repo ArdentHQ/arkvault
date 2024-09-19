@@ -8,7 +8,8 @@ import {
 	Starred,
 	WalletListItemMobile,
 	WalletItemExtraDetails,
-	WalletItemBalance, WalletItemDetails,
+	WalletItemBalance,
+	WalletItemDetails,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { WalletListItemProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
@@ -41,11 +42,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 			<>
 				<TableRow onClick={isSynced ? handleOpen : undefined} className="relative">
 					<Starred onToggleStar={handleToggleStar} wallet={wallet} />
-					<TableCell
-						size="sm"
-						innerClassName="-ml-3 space-x-3"
-						className="hidden lg:table-cell"
-					>
+					<TableCell size="sm" innerClassName="-ml-3 space-x-3" className="hidden lg:table-cell">
 						<div className="w-24 flex-1 overflow-hidden">
 							<Address walletName={alias} walletNameClass="text-sm leading-[17px]" />
 						</div>
@@ -76,9 +73,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 			isButtonDisabled={isButtonDisabled}
 			onClick={isSynced ? handleOpen : undefined}
 			onButtonClick={handleSend}
-			details={
-				<WalletItemDetails wallet={wallet}/>
-			}
+			details={<WalletItemDetails wallet={wallet} />}
 			extraDetails={<WalletItemExtraDetails wallet={wallet} />}
 			balance={<WalletItemBalance wallet={wallet} isSynced={isSynced} />}
 		/>
