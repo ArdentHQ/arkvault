@@ -3,22 +3,21 @@ import React, { useState } from "react";
 import { styled } from "twin.macro";
 import { useTranslation } from "react-i18next";
 
-import { getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
-import { Color } from "@/types";
-
+import { AlertColor, getBodyStyles, getChevronProperties, getHeaderStyles } from "./Alert.styles";
 import { Icon } from "@/app/components/Icon";
 
 interface AlertProperties extends React.HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 	className?: string;
 	title?: string;
-	variant?: Color;
+	variant?: AlertColor;
 	collapsible?: boolean;
 }
 
-const TypeIcon = ({ variant }: { variant: Color }) => {
-	const iconVariant: Record<Color, string> = {
+const TypeIcon = ({ variant }: { variant: AlertColor }) => {
+	const iconVariant: Record<AlertColor, string> = {
 		danger: "CircleCross",
+		"danger-dark": "CircleCross",
 		hint: "CircleQuestionMark",
 		info: "CircleInfo",
 		success: "CircleCheckMark",
