@@ -94,7 +94,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 			<div className="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
-					addressClass="text-xs text-theme-secondary-700 dark:text-theme-secondary-700 lg:!ml-0"
+					addressClass="text-xs text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
 					walletName={alias}
 					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
 					showCopyButton
@@ -154,7 +154,7 @@ export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLarg
 				<Amount
 					value={wallet.balance()}
 					ticker={wallet.network().ticker()}
-					className={cn("text-theme-secondary-700", className)}
+					className={cn("text-theme-secondary-700 dark:md:text-theme-secondary-500 dark:text-theme-white", className)}
 				/>
 			);
 		}
@@ -188,7 +188,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 
 		return (
 			<Amount
-				className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-700"
+				className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500 dark:text-white"
 				ticker={wallet.exchangeCurrency()}
 				value={wallet.convertedBalance()}
 			/>
@@ -222,7 +222,7 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 			walletName={alias}
 			walletNameClass="text-sm text-theme-text leading-[17px]"
 			address={wallet.address()}
-			addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-700"
+			addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
 			showCopyButton
 			/>
 	);
