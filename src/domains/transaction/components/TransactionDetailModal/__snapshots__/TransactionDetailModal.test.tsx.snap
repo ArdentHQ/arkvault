@@ -466,12 +466,12 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -1263,12 +1263,12 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -2060,12 +2060,12 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -2783,12 +2783,12 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -3588,12 +3588,12 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -4385,12 +4385,12 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -5182,12 +5182,12 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -5979,12 +5979,12 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -6776,12 +6776,12 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -7573,12 +7573,12 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -8370,12 +8370,12 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
@@ -9093,12 +9093,12 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                               Amount
                             </div>
                             <div
-                              class="rounded px-1.5 css-1pbju28"
+                              class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
                               color="danger-bg"
                               data-testid="AmountLabel__wrapper"
                             >
                               <div
-                                class="flex space-x-1 items-stretch"
+                                class="flex items-center space-x-1"
                               >
                                 <span
                                   class="whitespace-nowrap text-sm"
