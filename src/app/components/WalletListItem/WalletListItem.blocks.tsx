@@ -94,7 +94,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 			<div className="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
-					addressClass="text-xs text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
+					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
 					walletName={alias}
 					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
 					showCopyButton

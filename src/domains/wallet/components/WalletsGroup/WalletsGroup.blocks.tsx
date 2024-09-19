@@ -181,7 +181,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 				<span className="text-sm text-theme-secondary-900 dark:text-theme-secondary-200">
 					{renderBalance()}
 				</span>
-				<span className="text-xs text-theme-secondary-500 dark:text-theme-secondary-700">
+				<span className="text-xs text-theme-secondary-500">
 					{renderCurrency()}
 				</span>
 			</div>
