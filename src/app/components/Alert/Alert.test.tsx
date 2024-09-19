@@ -30,7 +30,7 @@ describe("Alert", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["info", "success", "warning", "danger", "hint"])("should render as %s alert", (variant) => {
+	it.each(["info", "success", "warning", "danger", "hint", "warning-dark"])("should render as %s alert", (variant) => {
 		const { container, asFragment } = render(
 			<Alert variant={variant as Color}>
 				<span>Hello World!</span>
