@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+
 import { Contracts, ReadOnlyWallet } from "@ardenthq/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createHashHistory } from "history";
@@ -44,27 +44,17 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes", hasHistory = false) => {
-	let routeOptions: any = {
-		route: route,
-	};
-
-	if (hasHistory) {
-		history.push(route);
-
-		routeOptions = {
-			...routeOptions,
-			history,
-		};
-	}
-
+const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") => {
 	return render(
 		<Route path={routePath}>
 			<Wrapper>
 				<Votes />
 			</Wrapper>
 		</Route>,
-		routeOptions,
+		{
+			history,
+			route: route,
+		},
 	);
 };
 
