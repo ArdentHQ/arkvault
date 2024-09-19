@@ -91,7 +91,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.isStarred?.(),
 				cellWidth: "w-1",
 				disableSortBy: true,
-				headerClassName: "no-border",
+				headerClassName: "no-border first:pl-4 md:first:pl-6",
 				hideSortArrow: true,
 				id: "starred",
 				noRoundedBorders: true,
@@ -163,7 +163,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	);
 
 	return (
-		<AccordionContent data-testid="WalletsList" className={twMerge(className, "md:p-0")}>
+		<AccordionContent data-testid="WalletsList" className={twMerge(className, "pb-4 px-6 md:p-0")}>
 			{(wallets.length > 0 || showSkeletons) && (
 				<>
 					<div data-testid="WalletTable">

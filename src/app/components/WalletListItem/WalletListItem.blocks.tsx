@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
@@ -177,7 +176,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	const renderCurrency = () => {
 		if (wallet.network().isTest()) {
 			return (
-				<span className="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700">
+				<span className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700">
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
 			);
@@ -207,10 +206,6 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	);
 };
 
-export const WalletItemAvatar = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => (
-	<Avatar size={"lg"} address={wallet.address()} shadowClassName="ring-theme-primary-100 dark:ring-transparent" />
-);
-
 export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { getWalletAlias } = useWalletAlias();
 
@@ -224,14 +219,12 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 
 	return (
 		<Address
-			address={wallet.address()}
-			addressClass="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
 			walletName={alias}
-			walletNameClass="text-sm text-theme-text"
-			wrapperClass="space-y-1"
-			maxNameChars={0}
-			orientation="vertical"
-		/>
+			walletNameClass="text-sm text-theme-text leading-[17px]"
+			address={wallet.address()}
+			addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-700"
+			showCopyButton
+			/>
 	);
 };
 
@@ -456,14 +449,16 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					toggleContent={
-						<Button
-							variant="transparent"
-							size="icon"
-							disabled={isRestoring}
-							className="text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
-						>
-							<Icon name="EllipsisVerticalFilled" size="lg" />
-						</Button>
+						<div className="border-l border-theme-secondary-300 flex dark:border-theme-secondary-800">
+							<Button
+								variant="transparent"
+								size="icon"
+								disabled={isRestoring}
+								className="text-theme-gray-700 py-0 -mr-1.5 hover:text-theme-primary-600"
+							>
+								<Icon name="EllipsisVerticalFilled" size="lg" />
+							</Button>
+						</div>
 					}
 					onSelect={onSelectOption}
 					options={[primaryOptions, secondaryOptions]}

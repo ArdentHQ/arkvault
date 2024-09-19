@@ -8,7 +8,7 @@ import {
 	Starred,
 	WalletListItemMobile,
 	WalletItemExtraDetails,
-	WalletItemBalance,
+	WalletItemBalance, WalletItemDetails,
 } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { WalletListItemProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
 import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
@@ -45,7 +45,6 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 						size="sm"
 						innerClassName="-ml-3 space-x-3"
 						className="hidden lg:table-cell"
-						data-testid="TableCell_Wallet"
 					>
 						<div className="w-24 flex-1 overflow-hidden">
 							<Address walletName={alias} walletNameClass="text-sm leading-[17px]" />
@@ -78,13 +77,7 @@ export const WalletListItem: React.VFC<WalletListItemProperties> = ({ wallet, is
 			onClick={isSynced ? handleOpen : undefined}
 			onButtonClick={handleSend}
 			details={
-				<Address
-					walletName={alias}
-					walletNameClass="text-sm text-theme-text leading-[17px]"
-					address={wallet.address()}
-					showCopyButton
-					addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-700"
-				/>
+				<WalletItemDetails wallet={wallet}/>
 			}
 			extraDetails={<WalletItemExtraDetails wallet={wallet} />}
 			balance={<WalletItemBalance wallet={wallet} isSynced={isSynced} />}
