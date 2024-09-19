@@ -99,7 +99,7 @@ export const TransactionRowAddressing = ({
 			<div
 				className={cn({
 					"w-30": !alias,
-					"w-50": alias,
+					"w-40 md:w-50": alias,
 				})}
 				data-testid="TransactionRowAddressing__address-container"
 			>
@@ -107,7 +107,7 @@ export const TransactionRowAddressing = ({
 					walletName={alias}
 					address={transaction.sender()}
 					truncateOnTable
-					addressClass={cn("pt-0.5", {
+					addressClass={cn("md:pt-0.5", {
 						"text-theme-primary-600": !alias,
 						"text-theme-secondary-700 dark:text-theme-secondary-500": alias,
 					})}

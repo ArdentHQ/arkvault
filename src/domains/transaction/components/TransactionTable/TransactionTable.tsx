@@ -62,7 +62,7 @@ export const TransactionTable: FC<TransactionTableProperties> = ({
 				columns={columns}
 				data={data}
 				initialState={initialState}
-				className="with-x-padding"
+				className="md:with-x-padding"
 			>
 				{renderTableRow}
 			</Table>

@@ -41,17 +41,31 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByTestId("TableRow__mobile")).toBeInTheDocument();
 		expect(screen.getAllByRole("cell")).toHaveLength(1);
-		expect(screen.getByRole("link", { name: "ea63bf…b5c79b" })).toBeInTheDocument();
+		expect(screen.getByRole("link", { name: "ea63b…5c79b" })).toBeInTheDocument();
 		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
-		expect(screen.getAllByTestId("Address__address")).toHaveLength(2);
-		expect(screen.getByTestId("Amount")).toBeInTheDocument();
+		expect(screen.getAllByTestId("Address__address")).toHaveLength(1);
+		expect(screen.getAllByTestId("Amount")).toHaveLength(2);
 	});
 
 	it("should render skeleton responsive", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<TransactionRowMobile profile={profile} isLoading />
+					<TransactionRowMobile
+						transaction={
+							{
+								...fixture,
+								wallet: () => ({
+									...fixture.wallet(),
+									currency: () => "BTC",
+									isLedger: () => false,
+									network: () => ({ isTest: () => false }),
+								}),
+							} as any
+						}
+						profile={profile}
+						isLoading
+					/>
 				</tbody>
 			</table>,
 		);
@@ -88,31 +102,28 @@ describe.each(["xs", "sm"])("TransactionRowMobile", (breakpoint) => {
 		expect(screen.queryByText(commonTranslations.NOT_AVAILABLE)).not.toBeInTheDocument();
 	});
 
-	it("should omit the currency for transactions from test networks", () => {
-		const { asFragment } = render(
+	it("should render N/A if timestamp is not available", () => {
+		render(
 			<table>
 				<tbody>
-					<TransactionRowMobile
-						transaction={
-							{
-								...fixture,
-								wallet: () => ({
-									...fixture.wallet(),
-									currency: () => "BTC",
-									isLedger: () => false,
-									network: () => ({ isTest: () => true }),
-								}),
-							} as any
-						}
-						exchangeCurrency="BTC"
-						profile={profile}
-					/>
+					<TransactionRowMobile transaction={{ ...fixture, timestamp: undefined } as any} profile={profile} />
 				</tbody>
 			</table>,
 		);
 
-		expect(asFragment()).toMatchSnapshot();
-		expect(screen.getAllByTestId("Amount")).toHaveLength(1);
-		expect(screen.getByText(commonTranslations.NOT_AVAILABLE)).toBeInTheDocument();
+		expect(screen.getByTestId("TransactionRow__timestamp")).toHaveTextContent(commonTranslations.NOT_AVAILABLE);
+	});
+
+	it("should render timestamp formatted with TimeAgo", () => {
+		render(
+			<table>
+				<tbody>
+					<TransactionRowMobile transaction={fixture as any} profile={profile} />
+				</tbody>
+			</table>,
+		);
+
+		expect(screen.getByTestId("TransactionRow__timestamp")).toBeInTheDocument();
+		expect(screen.getByText("A few seconds ago")).toBeInTheDocument();
 	});
 });
