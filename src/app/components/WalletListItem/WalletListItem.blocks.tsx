@@ -224,7 +224,7 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 			address={wallet.address()}
 			addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
 			showCopyButton
-			/>
+		/>
 	);
 };
 
@@ -449,12 +449,12 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					toggleContent={
-						<div className="border-l border-theme-secondary-300 flex dark:border-theme-secondary-800">
+						<div className="flex border-l border-theme-secondary-300 dark:border-theme-secondary-800">
 							<Button
 								variant="transparent"
 								size="icon"
 								disabled={isRestoring}
-								className="text-theme-gray-700 py-0 -mr-1.5 hover:text-theme-primary-600"
+								className="text-theme-gray-700 -mr-1.5 py-0 hover:text-theme-primary-600"
 							>
 								<Icon name="EllipsisVerticalFilled" size="lg" />
 							</Button>

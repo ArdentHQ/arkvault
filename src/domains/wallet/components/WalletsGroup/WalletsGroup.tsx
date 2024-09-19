@@ -21,14 +21,14 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 	}, [history, network, profile]);
 
 	return (
-		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className="md:!mb-3 overflow-hidden">
+		<AccordionWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className="overflow-hidden md:!mb-3">
 			<WalletsGroupHeader
 				network={network}
 				wallets={wallets}
 				onClick={handleHeaderClick}
 				isExpanded={isExpanded}
 				maxWidthReferences={maxWidthReferences}
-				className="py-4 px-6"
+				className="px-6 py-4"
 			/>
 
 			{isExpanded && (
