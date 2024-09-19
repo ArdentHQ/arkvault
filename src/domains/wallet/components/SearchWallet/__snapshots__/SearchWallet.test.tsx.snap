@@ -1520,7 +1520,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -1572,7 +1572,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 1`
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -1835,7 +1835,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -1887,7 +1887,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive item 2`
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -2150,7 +2150,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -2202,7 +2202,7 @@ exports[`SearchWallet uses fiat value = false > should render responsive with se
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -3615,7 +3615,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -3661,7 +3661,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4118,7 +4118,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4164,7 +4164,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -4621,7 +4621,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -4667,7 +4667,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -5175,7 +5175,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -5227,7 +5227,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 1`]
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -5490,7 +5490,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -5542,7 +5542,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive item 2`]
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -5805,7 +5805,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   33.75089801 DARK
@@ -5857,7 +5857,7 @@ exports[`SearchWallet uses fiat value = true > should render responsive with sel
                                 class="pl-2"
                               >
                                 <span
-                                  class="whitespace-nowrap text-sm text-white"
+                                  class="whitespace-nowrap dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500 text-sm text-white"
                                   data-testid="Amount"
                                 >
                                   57.68 DARK
@@ -6067,7 +6067,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6113,7 +6113,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6474,7 +6474,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -6520,7 +6520,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"
@@ -6975,7 +6975,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 hidden xl:table-cell first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--2"
                           role="columnheader"
@@ -7021,7 +7021,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                           </div>
                         </th>
                         <th
-                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800  first:rounded-tl-xl last:rounded-tr-xl"
+                          class="group relative text-sm text-left select-none text-theme-secondary-700 border-theme-secondary-300 dark:text-theme-secondary-500 dark:border-theme-secondary-800 m-0 p-3 first:pl-6 last:pr-6 font-semibold bg-theme-secondary-100 dark:bg-theme-secondary-800 first:rounded-tl-xl last:rounded-tr-xl"
                           colspan="1"
                           data-testid="table__th--3"
                           role="columnheader"

@@ -260,22 +260,22 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="overflow-hidden md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -338,7 +338,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -369,7 +369,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -399,7 +399,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -429,7 +429,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -492,22 +492,22 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="overflow-hidden md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -634,7 +634,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -653,7 +653,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -683,7 +683,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -713,7 +713,7 @@ exports[`Portfolio grouped networks > should apply ledger import 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -1027,22 +1027,22 @@ exports[`Portfolio grouped networks > should render list 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="overflow-hidden md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1105,7 +1105,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -1136,7 +1136,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -1166,7 +1166,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -1196,7 +1196,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -1259,22 +1259,22 @@ exports[`Portfolio grouped networks > should render list 1`] = `
       </div>
     </div>
     <div
-      class="css-13o3tsw"
+      class="overflow-hidden md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK Devnet"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.devnet"
             >
               <div
@@ -1401,7 +1401,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <span
                 class="text-theme-secondary-500 dark:text-theme-secondary-700"
@@ -1420,7 +1420,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -1450,7 +1450,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -1480,7 +1480,7 @@ exports[`Portfolio grouped networks > should render list 1`] = `
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
@@ -1794,22 +1794,22 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="css-13o3tsw"
+      class="overflow-hidden md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
-        class="select-none cursor-pointer group md:h-20 py-6 px-8 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800"
+        class="select-none cursor-pointer group md:h-20 md:p-4 flex flex-row items-center border-theme-secondary-300 dark:border-theme-secondary-800 px-6 py-4"
         data-testid="WalletsGroupHeader"
       >
         <div
           class="flex flex-grow flex-row items-center"
         >
           <div
-            class="css-18ateh5"
+            class="css-7dz1f2"
           >
             <div
               aria-label="ARK"
-              class="inline-flex h-5 w-5 items-center justify-center text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600"
+              class="inline-flex h-5 w-5 items-center justify-center text-theme-navy-600"
               data-testid="NetworkIcon-ARK-ark.mainnet"
             >
               <div
@@ -1872,7 +1872,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
               </div>
             </span>
             <span
-              class="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="text-xs text-theme-secondary-500"
             >
               <div
                 class="flex items-center justify-end sm:h-6 h-4"
@@ -1903,7 +1903,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Wallets
               </span>
@@ -1933,7 +1933,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Balance
               </span>
@@ -1963,7 +1963,7 @@ exports[`Portfolio grouped networks > should render without testnet wallets 1`] 
               class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
             >
               <span
-                class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
               >
                 Total Currency
               </span>
