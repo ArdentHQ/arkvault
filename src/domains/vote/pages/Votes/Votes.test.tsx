@@ -20,6 +20,7 @@ import {
 } from "@/utils/testing-library";
 import { useConfiguration } from "@/app/contexts";
 import { server, requestMock } from "@/tests/mocks/server";
+import { resetClipboardStubOnView } from "@testing-library/user-event/dist/types/utils";
 
 const history = createHashHistory();
 
@@ -294,7 +295,7 @@ describe("Votes", () => {
 
 	it("should navigate to create create page", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -306,7 +307,7 @@ describe("Votes", () => {
 
 	it("should navigate to import wallet page", async () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath, true);
+		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
@@ -706,12 +707,15 @@ describe("Votes", () => {
 		profile.wallets().push(mainnetWallet);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const { asFragment } = renderPage(route, routePath);
+		renderPage(route, routePath);
 
 		// Show the only mainnet wallet.
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 		await expect(screen.findByText(mainnetWallet.address())).resolves.toBeVisible();
+
 		profile.wallets().forget(mainnetWallet.id());
+
+		resetProfileNetworksMock();
 	});
 
 });
