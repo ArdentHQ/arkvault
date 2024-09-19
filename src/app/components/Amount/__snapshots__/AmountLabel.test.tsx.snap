@@ -3,12 +3,12 @@
 exports[`AmountLabel > should render 1`] = `
 <DocumentFragment>
   <div
-    class="rounded px-1.5 css-givenh"
+    class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
     color="success-bg"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-stretch"
+      class="flex items-center space-x-1"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -24,12 +24,12 @@ exports[`AmountLabel > should render 1`] = `
 exports[`AmountLabel > should render compact 1`] = `
 <DocumentFragment>
   <div
-    class="rounded px-1.5 css-1jspzfx"
+    class="flex h-full items-center justify-center rounded px-1.5 css-1jspzfx"
     color="success-bg"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-center"
+      class="flex items-center space-x-1"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -45,12 +45,12 @@ exports[`AmountLabel > should render compact 1`] = `
 exports[`AmountLabel > should render compact with hint 1`] = `
 <DocumentFragment>
   <div
-    class="rounded pr-1.5 css-1jspzfx"
+    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
     color="success-bg"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-center"
+      class="flex items-center space-x-1"
     >
       <div
         aria-describedby="tippy-2"
@@ -101,12 +101,12 @@ exports[`AmountLabel > should render compact with hint 1`] = `
 exports[`AmountLabel > should render negative 1`] = `
 <DocumentFragment>
   <div
-    class="rounded px-1.5 css-1pbju28"
+    class="flex h-full items-center justify-center rounded px-1.5 css-xqt0aw"
     color="danger-bg"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-stretch"
+      class="flex items-center space-x-1"
     >
       <span
         class="whitespace-nowrap text-sm"
@@ -122,12 +122,12 @@ exports[`AmountLabel > should render negative 1`] = `
 exports[`AmountLabel > should render with hint 1`] = `
 <DocumentFragment>
   <div
-    class="rounded pr-1.5 css-givenh"
+    class="flex h-full items-center justify-center rounded pr-1.5 css-1jspzfx"
     color="success-bg"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-stretch"
+      class="flex items-center space-x-1"
     >
       <div
         aria-describedby="tippy-1"
@@ -178,12 +178,12 @@ exports[`AmountLabel > should render with hint 1`] = `
 exports[`AmountLabel > should render zero 1`] = `
 <DocumentFragment>
   <div
-    class="rounded px-1.5 css-vy12ck"
+    class="flex h-full items-center justify-center rounded px-1.5 css-1vn5kd9"
     color="neutral"
     data-testid="AmountLabel__wrapper"
   >
     <div
-      class="flex space-x-1 items-stretch"
+      class="flex items-center space-x-1"
     >
       <span
         class="whitespace-nowrap text-sm"
