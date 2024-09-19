@@ -828,7 +828,7 @@ exports[`SendIpfs > should send an IPFS transaction using encryption password 1`
                                 From
                               </div>
                               <div
-                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
+                                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start sm:max-w-[350px]"
                               >
                                 <span
                                   class="font-semibold text-base text-theme-text text-sm leading-[17px] sm:leading-5 sm:text-base"
