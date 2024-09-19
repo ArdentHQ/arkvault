@@ -68,7 +68,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1)
+		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1);
 
 		if (!isLargeScreen) {
 			await userEvent.click(screen.getByTestId("WalletListItemMobile"));
@@ -96,7 +96,7 @@ describe("WalletListItem", () => {
 				},
 			);
 
-			expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1)
+			expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1);
 
 			if (!isLargeScreen) {
 				await userEvent.click(screen.getByTestId("WalletListItemMobile"));
@@ -123,7 +123,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1)
+		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1);
 		expect(container).toMatchSnapshot();
 	});
 
@@ -191,7 +191,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1)
+		expect(screen.getAllByText(wallet.alias()!).length).toBeGreaterThanOrEqual(1);
 
 		expect(container).toMatchSnapshot();
 
