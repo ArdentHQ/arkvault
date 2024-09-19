@@ -30,16 +30,19 @@ describe("Alert", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["info", "success", "warning", "danger", "hint", "warning-dark"])("should render as %s alert", (variant) => {
-		const { container, asFragment } = render(
-			<Alert variant={variant as Color}>
-				<span>Hello World!</span>
-			</Alert>,
-		);
+	it.each(["info", "success", "warning", "danger", "hint", "warning-dark"])(
+		"should render as %s alert",
+		(variant) => {
+			const { container, asFragment } = render(
+				<Alert variant={variant as Color}>
+					<span>Hello World!</span>
+				</Alert>,
+			);
 
-		expect(container).toBeInTheDocument();
+			expect(container).toBeInTheDocument();
 
-		expect(screen.getByText("Hello World!")).toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
+			expect(screen.getByText("Hello World!")).toBeInTheDocument();
+			expect(asFragment()).toMatchSnapshot();
+		},
+	);
 });

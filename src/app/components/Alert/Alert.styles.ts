@@ -9,8 +9,8 @@ const bodyBaseStyle = tw`w-full p-4 text-sm leading-relaxed break-words text-lef
 
 const getHeaderVariant = (variant?: AlertColor) => {
 	const variants = {
-		"danger-dark": () => tw`text-white bg-theme-danger-500`,
 		danger: () => tw`text-theme-danger-700 bg-theme-danger-100 dark:bg-theme-danger-500`,
+		"danger-dark": () => tw`text-white bg-theme-danger-500`,
 		hint: () => tw`text-theme-hint-700 bg-theme-hint-100 dark:bg-theme-hint-700`,
 		info: () => tw`text-theme-info-700 bg-theme-info-100 dark:bg-theme-info-700`,
 		success: () => tw`text-theme-success-700 bg-theme-success-100 dark:bg-theme-success-700`,
@@ -23,8 +23,8 @@ const getHeaderVariant = (variant?: AlertColor) => {
 
 const getBodyVariant = (variant?: AlertColor) => {
 	const variants = {
-		"danger-dark": () => tw`bg-theme-secondary-800 text-theme-secondary-200`,
 		danger: () => tw`bg-theme-danger-50`,
+		"danger-dark": () => tw`bg-theme-secondary-800 text-theme-secondary-200`,
 		hint: () => tw`bg-theme-hint-50`,
 		info: () => tw`bg-theme-info-50`,
 		success: () => tw`bg-theme-success-50`,
@@ -36,8 +36,8 @@ const getBodyVariant = (variant?: AlertColor) => {
 };
 const getChevronVariant = (variant?: AlertColor) => {
 	const variants = {
-		"danger-dark": () => tw`text-white`,
 		danger: () => tw`text-theme-danger-700 dark:text-white`,
+		"danger-dark": () => tw`text-white`,
 		hint: () => tw`text-theme-hint-700 dark:text-white`,
 		info: () => tw`text-theme-info-700 dark:text-white`,
 		success: () => tw`text-theme-success-700 dark:text-white`,
