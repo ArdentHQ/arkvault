@@ -154,7 +154,10 @@ export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLarg
 				<Amount
 					value={wallet.balance()}
 					ticker={wallet.network().ticker()}
-					className={cn("text-theme-secondary-700 dark:md:text-theme-secondary-500 dark:text-theme-white", className)}
+					className={cn(
+						"dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500",
+						className,
+					)}
 				/>
 			);
 		}
@@ -188,7 +191,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 
 		return (
 			<Amount
-				className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500 dark:text-white"
+				className="text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
 				ticker={wallet.exchangeCurrency()}
 				value={wallet.convertedBalance()}
 			/>
