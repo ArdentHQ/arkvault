@@ -112,6 +112,7 @@ export const Votes: FC = () => {
 	const handleSelectAddress = useCallback(
 		async (address: string, network: string) => {
 			const wallet = activeProfile.wallets().findByAddressWithNetwork(address, network);
+			console.log('handle select address', wallet?.address())
 
 			assertWallet(wallet);
 

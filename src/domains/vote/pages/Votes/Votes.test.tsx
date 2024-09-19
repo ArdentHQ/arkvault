@@ -44,19 +44,17 @@ const Wrapper = ({ children }) => {
 	return children;
 };
 
-const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") => {
-	return render(
-		<Route path={routePath}>
-			<Wrapper>
-				<Votes />
-			</Wrapper>
-		</Route>,
-		{
-			history,
-			route: route,
-		},
-	);
-};
+const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes") => render(
+	<Route path={routePath}>
+		<Wrapper>
+			<Votes />
+		</Wrapper>
+	</Route>,
+	{
+		history,
+		route: route,
+	},
+);
 
 const firstVoteButtonID = "DelegateRow__toggle-0";
 
@@ -563,33 +561,6 @@ describe("Votes", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should hide testnet wallet if disabled from profile setting", async () => {
-		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
-
-		const mainnetWallet = await profile.walletFactory().fromAddress({
-			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-			coin: "ARK",
-			network: "ark.mainnet",
-		});
-
-		profile.wallets().push(mainnetWallet);
-
-		const route = `/profiles/${profile.id()}/wallets/${wallet.id()}/votes`;
-		const { asFragment, container } = renderPage(route);
-
-		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
-
-		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
-
-		expect(asFragment()).toMatchSnapshot();
-
-		resetProfileNetworksMock();
-
-		// cleanup
-		profile.wallets().forget(mainnetWallet.id());
-	});
-
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
 		renderPage(route, routePath);
@@ -722,4 +693,25 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
+
+	it("should hide testnet wallets if disabled from profile setting", async () => {
+		const resetProfileNetworksMock = mockProfileWithOnlyPublicNetworks(profile);
+
+		const mainnetWallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+
+		profile.wallets().push(mainnetWallet);
+
+		const route = `/profiles/${profile.id()}/votes`;
+		const { asFragment } = renderPage(route, routePath);
+
+		// Show the only mainnet wallet.
+		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
+		await expect(screen.findByText(mainnetWallet.address())).resolves.toBeVisible();
+		profile.wallets().forget(mainnetWallet.id());
+	});
+
 });
