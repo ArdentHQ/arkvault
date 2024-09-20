@@ -46,7 +46,7 @@ export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children
 			ref={columnReference}
 			style={width ? { width: `${width}px` } : undefined}
 		>
-			<span className="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700">
+			<span className="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500">
 				{label}
 			</span>
 
@@ -65,7 +65,7 @@ const GroupNetworkIconWrapper = styled.div<{ isDarkMode: boolean; isExpanded: bo
 	${({ isDarkMode }) =>
 		isDarkMode
 			? tw`bg-theme-background text-theme-secondary-700 ring-2 ring-theme-secondary-800`
-			: tw`bg-theme-secondary-100 text-theme-secondary-100`}
+			: tw`bg-theme-navy-100 text-theme-navy-600`}
 
 	${({ isExpanded }) => !isExpanded && tw`transition-all duration-100`}
 
@@ -88,6 +88,7 @@ export const GroupNetworkIcon: React.VFC<WalletsGroupNetworkIconProperties> = ({
 			<NetworkIcon
 				isCompact
 				network={network}
+				className="text-theme-navy-600"
 				shadowClassName={
 					"rounded-lg w-46 h-46 group-hover:bg-theme-secondary-100 dark:(bg-theme-background group-hover:ring-black group-hover:bg-black)"
 				}
@@ -180,9 +181,7 @@ export const GroupNetworkTotal: React.VFC<WalletsGroupNetworkTotalProperties> = 
 				<span className="text-sm text-theme-secondary-900 dark:text-theme-secondary-200">
 					{renderBalance()}
 				</span>
-				<span className="text-xs text-theme-secondary-500 dark:text-theme-secondary-700">
-					{renderCurrency()}
-				</span>
+				<span className="text-xs text-theme-secondary-500">{renderCurrency()}</span>
 			</div>
 
 			<div

@@ -195,7 +195,7 @@ describe("WalletsGroup", () => {
 		await userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => {
-			expect(within(walletRow).getByText(name)).toBeInTheDocument();
+			expect(within(walletRow).getAllByText(name).length).toBe(2);
 		});
 
 		await waitFor(() => expect(profile.wallets().findById(mainnetWallet.id()).alias()).toBe(name));
