@@ -10,6 +10,8 @@ import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { StepHeader } from "@/app/components/StepHeader";
+import {ThemeIcon} from "@/app/components/Icon";
+import {TransactionAddresses} from "@/domains/transaction/components/TransactionDetail";
 
 const MINIMUM_PARTICIPANTS = 2;
 
@@ -56,15 +58,24 @@ export const FormStep = ({ profile, wallet }: FormStepProperties) => {
 			<StepHeader
 				title={t("TRANSACTION.PAGE_MULTISIGNATURE.FORM_STEP.TITLE")}
 				subtitle={t("TRANSACTION.PAGE_MULTISIGNATURE.FORM_STEP.DESCRIPTION")}
+				titleIcon={
+					<ThemeIcon dimensions={[24, 24]} lightIcon="SendTransactionLight" darkIcon="SendTransactionDark" />
+				}
 			/>
 
-			<div className="space-y-6 pt-6">
-				<AddParticipant
-					profile={profile}
-					wallet={wallet}
-					onChange={handleParticipants}
-					defaultParticipants={participants}
-				/>
+			<div className="space-y-4 pt-5">
+				<FormField name="senderAddress">
+					<TransactionAddresses senderWallet={wallet} recipients={[]} profile={profile} />
+				</FormField>
+
+				<div>
+					<AddParticipant
+						profile={profile}
+						wallet={wallet}
+						onChange={handleParticipants}
+						defaultParticipants={participants}
+					/>
+				</div>
 
 				<FormField name="minParticipants">
 					<FormLabel>{t("TRANSACTION.MULTISIGNATURE.MIN_SIGNATURES")}</FormLabel>

@@ -68,7 +68,6 @@ const OptionLabel = ({
 
 	return (
 		<div className="flex items-center space-x-2 whitespace-nowrap">
-			<Avatar size="sm" address={address} className="shrink-0" noShadow />
 			<Address
 				address={address}
 				walletName={alias}
