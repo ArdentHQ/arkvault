@@ -818,7 +818,7 @@ exports[`WalletGroupPage > should render empty list if no wallets 1`] = `
               data-testid="WalletTable"
             >
               <div
-                class="with-x-padding after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800 css-1m6rt2i"
+                class="with-x-padding css-1m6rt2i"
                 role="table"
               >
                 <table
