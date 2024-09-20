@@ -175,11 +175,10 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								rowsPerPage={itemsPerPage}
 								currentPage={currentPage}
 								initialState={initialState}
-								className={
-									cn("with-x-padding", {
-										"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800": wallets.length <= itemsPerPage
-									})
-								}
+								className={cn("with-x-padding", {
+									"after:mx-[0.15rem] after:block after:h-[5px] after:rounded-b-lg after:bg-theme-primary-100 after:content-[''] after:dark:bg-theme-secondary-800":
+										wallets.length <= itemsPerPage,
+								})}
 							>
 								{renderTableRow}
 							</Table>
