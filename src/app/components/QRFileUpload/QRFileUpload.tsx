@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useFiles } from "@/app/hooks/use-files";
-import { useBreakpoint } from "@/app/hooks";
 
 interface QRFileUploadProperties {
 	onError: (error: Error) => void;
@@ -15,7 +14,6 @@ interface QRFileUploadProperties {
 export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 	const { t } = useTranslation();
 	const { showOpenDialog } = useFiles();
-	const { isSmAndAbove } = useBreakpoint();
 
 	const handeQRFileScan = async () => {
 		try {
@@ -40,8 +38,7 @@ export const QRFileUpload = ({ onError, onRead }: QRFileUploadProperties) => {
 	return (
 		<Button
 			variant="secondary"
-			theme={isSmAndAbove ? "dark" : "light"}
-			className="z-20 space-x-2"
+			className="z-20 space-x-2 sm:bg-theme-secondary-800 sm:text-theme-secondary-200"
 			onClick={handeQRFileScan}
 			data-testid="QRFileUpload__upload"
 		>

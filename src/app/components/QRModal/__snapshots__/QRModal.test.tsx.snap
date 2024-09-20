@@ -104,7 +104,7 @@ exports[`QRModal > should render 1`] = `
                     class="css-j6ajdm"
                   >
                     <button
-                      class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white z-20 space-x-2"
+                      class="px-5 py-3 text-base relative items-center inline-flex justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear outline-none focus:outline-none focus:ring-2 focus:ring-theme-primary-400 disabled:cursor-not-allowed rounded dark:bg-theme-secondary-800 dark:text-theme-secondary-200 bg-theme-primary-100 text-theme-primary-600 hover:bg-theme-primary-700 hover:text-white z-20 space-x-2 sm:bg-theme-secondary-800 sm:text-theme-secondary-200"
                       data-testid="QRFileUpload__upload"
                       type="button"
                     >
