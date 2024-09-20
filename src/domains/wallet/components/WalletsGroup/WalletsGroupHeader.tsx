@@ -52,7 +52,7 @@ export const WalletsGroupHeaderSkeleton: React.VFC<WalletsGroupHeaderSkeletonPro
 			</div>
 			<div className="grow justify-between space-x-3 px-3 py-3">
 				<h1
-					className="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+					className="mb-0 text-lg text-theme-secondary-700 dark:text-theme-secondary-700"
 					data-testid="header__title"
 				>
 					{isPlaceholder ? (

@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { WalletListItemMobileProperties } from "@/app/components/WalletListItem";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
@@ -54,8 +53,8 @@ export const Starred: React.VFC<StarredProperties> = ({ wallet, onToggleStar, is
 	}
 
 	return (
-		<TableCell variant="start" size="sm" innerClassName="space-x-3" data-testid="TableCell_Starred">
-			<div className="flex h-5 items-center border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
+		<TableCell variant="start" size="sm" innerClassName="space-x-3 pl-6 ml-0" data-testid="TableCell_Starred">
+			<div className="flex h-5 items-center pr-3 dark:border-theme-secondary-800">
 				<Tooltip
 					content={
 						wallet.isStarred()
@@ -92,22 +91,13 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet }) => {
 
 	return (
 		<TableCell size="sm" innerClassName="-ml-3 space-x-3" data-testid="TableCell_Wallet">
-			<div className="flex shrink-0 items-center">
-				<Avatar
-					size="xs"
-					address={wallet.address()}
-					shadowClassName="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black"
-				/>
-			</div>
-
-			<div className="w-20 flex-1 overflow-hidden">
+			<div className="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full">
 				<Address
 					address={wallet.address()}
-					addressClass="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
+					addressClass="text-sm text-theme-secondary-700 dark:text-theme-secondary-500 lg:!ml-0"
 					walletName={alias}
-					walletNameClass="text-sm text-theme-text group-hover:text-theme-primary-700"
-					orientation="vertical"
-					maxNameChars={0}
+					walletNameClass="lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
+					showCopyButton
 				/>
 			</div>
 		</TableCell>
@@ -160,7 +150,16 @@ export const Info = ({ wallet, isLargeScreen = true, className }: InfoProperties
 export const Balance: React.VFC<BalanceProperties> = ({ wallet, isSynced, isLargeScreen = true, className }) => {
 	const renderAmount = () => {
 		if (isSynced) {
-			return <Amount value={wallet.balance()} ticker={wallet.network().ticker()} className={className} />;
+			return (
+				<Amount
+					value={wallet.balance()}
+					ticker={wallet.network().ticker()}
+					className={cn(
+						"dark:text-theme-white text-theme-secondary-700 dark:md:text-theme-secondary-500",
+						className,
+					)}
+				/>
+			);
 		}
 
 		return <Skeleton height={16} width={100} />;
@@ -180,7 +179,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	const renderCurrency = () => {
 		if (wallet.network().isTest()) {
 			return (
-				<span className="text-xs font-semibold text-theme-secondary-900 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700">
+				<span className="text-xs font-semibold text-theme-navy-200 md:text-base md:text-theme-secondary-500 dark:md:text-theme-secondary-700">
 					{t("COMMON.NOT_AVAILABLE")}
 				</span>
 			);
@@ -192,7 +191,7 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 
 		return (
 			<Amount
-				className="text-xs text-theme-secondary-900 md:text-base md:text-theme-secondary-text"
+				className="text-xs font-semibold text-theme-navy-200 dark:text-white md:text-base md:text-theme-secondary-700 dark:md:text-theme-secondary-500"
 				ticker={wallet.exchangeCurrency()}
 				value={wallet.convertedBalance()}
 			/>
@@ -210,10 +209,6 @@ export const Currency: React.VFC<CurrencyProperties> = ({ wallet, isSynced, isLa
 	);
 };
 
-export const WalletItemAvatar = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => (
-	<Avatar size={"lg"} address={wallet.address()} shadowClassName="ring-theme-primary-100 dark:ring-transparent" />
-);
-
 export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { getWalletAlias } = useWalletAlias();
 
@@ -227,13 +222,11 @@ export const WalletItemDetails = ({ wallet }: { wallet: Contracts.IReadWriteWall
 
 	return (
 		<Address
-			address={wallet.address()}
-			addressClass="text-xs text-theme-secondary-500 dark:text-theme-secondary-700"
 			walletName={alias}
-			walletNameClass="text-sm text-theme-text"
-			wrapperClass="space-y-1"
-			maxNameChars={0}
-			orientation="vertical"
+			walletNameClass="text-sm text-theme-text leading-[17px]"
+			address={wallet.address()}
+			addressClass="text-sm leading-[17px] text-theme-secondary-700 dark:text-theme-secondary-500"
+			showCopyButton
 		/>
 	);
 };
@@ -244,7 +237,7 @@ export const WalletItemExtraDetails = ({ wallet }: { wallet: Contracts.IReadWrit
 	return (
 		<>
 			<Info
-				className="border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
+				className="border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
 				wallet={wallet}
 				isLargeScreen={false}
 			/>
@@ -267,7 +260,6 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 	onButtonClick,
 	buttonLabel,
 	isButtonDisabled,
-	avatar,
 	details,
 	balance,
 	extraDetails,
@@ -292,11 +284,9 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			onClick={onClick}
 		>
 			<div className="flex items-center space-x-4 p-2 pl-4">
-				<div className="flex shrink-0 items-center">{avatar}</div>
+				<div className="flex min-w-0 flex-1 flex-shrink flex-col">{details}</div>
 
-				<div className="flex w-20 flex-1 flex-col font-semibold">{details}</div>
-
-				{extraDetails && <div className="flex items-center space-x-2 self-start">{extraDetails}</div>}
+				{extraDetails && <div className="flex items-center space-x-3 self-start">{extraDetails}</div>}
 			</div>
 
 			{(balance !== undefined || onButtonClick !== undefined) && (
@@ -444,7 +434,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 	}, []);
 
 	return (
-		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text">
+		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text pr-6">
 			<Tooltip content={isLedgerWalletCompatible(wallet) ? "" : t("COMMON.LEDGER_COMPATIBILITY_ERROR")}>
 				<div onClick={handleStopPropagation}>
 					<Button
@@ -452,10 +442,12 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						size="icon"
 						disabled={isButtonDisabled}
 						variant="transparent"
-						className="text-theme-primary-600 hover:text-theme-primary-700"
+						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
 						onClick={onSend}
 					>
-						{t("COMMON.SEND")}
+						<div className="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
+							{t("COMMON.SEND")}
+						</div>
 					</Button>
 				</div>
 			</Tooltip>
@@ -466,9 +458,9 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 							variant="transparent"
 							size="icon"
 							disabled={isRestoring}
-							className="-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
+							className="text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
 						>
-							<Icon name="EllipsisVertical" size="lg" />
+							<Icon name="EllipsisVerticalFilled" size="lg" />
 						</Button>
 					}
 					onSelect={onSelectOption}

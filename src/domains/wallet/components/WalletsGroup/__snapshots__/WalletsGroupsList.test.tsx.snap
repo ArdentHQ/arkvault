@@ -33,7 +33,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
           class="grow justify-between space-x-3 px-3 py-3"
         >
           <h1
-            class="mb-0 text-lg text-theme-secondary-500 dark:text-theme-secondary-700"
+            class="mb-0 text-lg text-theme-secondary-700 dark:text-theme-secondary-700"
             data-testid="header__title"
           >
             <div
@@ -62,7 +62,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Wallets
             </span>
@@ -92,7 +92,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Balance
             </span>
@@ -122,7 +122,7 @@ exports[`WalletsGroupsList > should render WalletsGroupsList 1`] = `
             class="flex flex-col space-y-1 border-r border-theme-secondary-300 pr-4 text-right font-semibold dark:border-theme-secondary-800 hidden lg:flex"
           >
             <span
-              class="whitespace-nowrap text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+              class="whitespace-nowrap text-sm text-theme-secondary-700 dark:text-theme-secondary-500"
             >
               Total Currency
             </span>

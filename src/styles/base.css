@@ -67,3 +67,11 @@ main {
 .with-x-padding > table > tbody > tr:not(:last-child) td:last-child::after {
 	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute right-0
 }
+
+.with-x-padding > table > tbody > tr:not(:last-child):hover td:first-child::after {
+	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute left-0 -bottom-[5px]
+}
+
+.with-x-padding > table > tbody > tr:not(:last-child):hover td:last-child::after {
+	@apply content-[''] w-6 block bg-theme-background h-[5px] absolute right-0 -bottom-[5px]
+}
