@@ -442,10 +442,10 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						size="icon"
 						disabled={isButtonDisabled}
 						variant="transparent"
-						className="text-sm text-theme-primary-600 hover:text-theme-primary-700 pr-0"
+						className="pr-0 text-sm text-theme-primary-600 hover:text-theme-primary-700"
 						onClick={onSend}
 					>
-						<div className="border-r border-theme-secondary-300 dark:border-theme-secondary-800 pr-3">
+						<div className="border-r border-theme-secondary-300 pr-3 dark:border-theme-secondary-800">
 							{t("COMMON.SEND")}
 						</div>
 					</Button>
