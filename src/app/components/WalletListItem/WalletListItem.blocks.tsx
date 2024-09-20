@@ -237,7 +237,7 @@ export const WalletItemExtraDetails = ({ wallet }: { wallet: Contracts.IReadWrit
 	return (
 		<>
 			<Info
-				className="border-r border-theme-secondary-300 pr-1 empty:border-r-0 dark:border-theme-secondary-800"
+				className="border-r border-theme-secondary-300 pr-3 empty:border-r-0 dark:border-theme-secondary-800"
 				wallet={wallet}
 				isLargeScreen={false}
 			/>
@@ -286,7 +286,7 @@ export const WalletListItemMobile: React.VFC<WalletListItemMobileProperties> = (
 			<div className="flex items-center space-x-4 p-2 pl-4">
 				<div className="flex min-w-0 flex-1 flex-shrink flex-col">{details}</div>
 
-				{extraDetails && <div className="flex items-center space-x-2 self-start">{extraDetails}</div>}
+				{extraDetails && <div className="flex items-center space-x-3 self-start">{extraDetails}</div>}
 			</div>
 
 			{(balance !== undefined || onButtonClick !== undefined) && (
