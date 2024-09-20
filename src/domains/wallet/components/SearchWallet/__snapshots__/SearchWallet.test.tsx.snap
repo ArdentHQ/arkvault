@@ -273,7 +273,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -345,7 +345,7 @@ exports[`SearchWallet uses fiat value = false > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -702,7 +702,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -774,7 +774,7 @@ exports[`SearchWallet uses fiat value = false > should render compact on md scre
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -1131,7 +1131,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -1201,7 +1201,7 @@ exports[`SearchWallet uses fiat value = false > should render compact with selec
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -2503,7 +2503,7 @@ exports[`SearchWallet uses fiat value = false > should render with incompatible 
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -2850,7 +2850,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -2920,7 +2920,7 @@ exports[`SearchWallet uses fiat value = false > should render with selected addr
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -3277,7 +3277,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -3349,7 +3349,7 @@ exports[`SearchWallet uses fiat value = false > should render with the default e
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -3752,7 +3752,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -3838,7 +3838,7 @@ exports[`SearchWallet uses fiat value = true > should render 1`] = `
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -4255,7 +4255,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -4341,7 +4341,7 @@ exports[`SearchWallet uses fiat value = true > should render compact on md scree
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -4758,7 +4758,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -4842,7 +4842,7 @@ exports[`SearchWallet uses fiat value = true > should render compact with select
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -6204,7 +6204,7 @@ exports[`SearchWallet uses fiat value = true > should render with incompatible l
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -6611,7 +6611,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -6695,7 +6695,7 @@ exports[`SearchWallet uses fiat value = true > should render with selected addre
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -7112,7 +7112,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                       role="rowgroup"
                     >
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td
@@ -7198,7 +7198,7 @@ exports[`SearchWallet uses fiat value = true > should render with the default ex
                         </td>
                       </tr>
                       <tr
-                        class="relative css-16ynu5g"
+                        class="relative css-1x4z4cy"
                         data-testid="TableRow"
                       >
                         <td

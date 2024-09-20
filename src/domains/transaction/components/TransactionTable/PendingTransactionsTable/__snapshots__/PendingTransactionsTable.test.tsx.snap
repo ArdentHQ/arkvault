@@ -251,7 +251,7 @@ exports[`Signed Transaction Table > should handle the onRowClick function when t
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -516,7 +516,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -964,7 +964,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1233,7 +1233,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -1689,7 +1689,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1954,7 +1954,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -2410,7 +2410,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2686,7 +2686,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -3142,7 +3142,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -3418,7 +3418,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -3824,7 +3824,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -4045,7 +4045,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -4451,7 +4451,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -4672,7 +4672,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -5128,7 +5128,7 @@ exports[`Signed Transaction Table > should render different status > should show
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -5403,7 +5403,7 @@ exports[`Signed Transaction Table > should render pending transfers on mobile 1`
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -5811,7 +5811,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -6258,7 +6258,7 @@ exports[`Signed Transaction Table > should render pending transfers when isCompa
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -6705,7 +6705,7 @@ exports[`Signed Transaction Table > should render ready to broadcast transaction
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -7194,7 +7194,7 @@ exports[`Signed Transaction Table > should render signed transactions and handle
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -7675,7 +7675,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations 1`] = 
             role="rowgroup"
           >
             <tr
-              class="group relative css-1kskd5s"
+              class="group relative css-1d424e8"
               data-testid="TableRow"
             >
               <td>
@@ -7898,7 +7898,7 @@ exports[`Signed Transaction Table > should show as awaiting confirmations on mob
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow__mobile"
             >
               <td>
@@ -8306,7 +8306,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -8795,7 +8795,7 @@ exports[`Signed Transaction Table > should show the sign button with isCompact =
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>

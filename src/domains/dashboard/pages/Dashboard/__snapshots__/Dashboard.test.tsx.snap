@@ -1545,7 +1545,7 @@ exports[`Dashboard > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1709,7 +1709,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -1873,7 +1873,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2037,7 +2037,7 @@ exports[`Dashboard > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="group relative css-1kskd5s"
+                    class="group relative css-1d424e8"
                     data-testid="TableRow"
                   >
                     <td>

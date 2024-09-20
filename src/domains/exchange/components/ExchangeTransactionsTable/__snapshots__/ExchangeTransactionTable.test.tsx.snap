@@ -305,7 +305,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -604,7 +604,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -903,7 +903,7 @@ exports[`ExchangeTransactionsTable > should render 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1514,7 +1514,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -1813,7 +1813,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2112,7 +2112,7 @@ exports[`ExchangeTransactionsTable > should render compact 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -2723,7 +2723,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -3022,7 +3022,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -3321,7 +3321,7 @@ exports[`ExchangeTransactionsTable > should render desktop 1`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -3932,7 +3932,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -4231,7 +4231,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -4530,7 +4530,7 @@ exports[`ExchangeTransactionsTable > should render desktop 2`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -5141,7 +5141,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
             role="rowgroup"
           >
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -5440,7 +5440,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -5739,7 +5739,7 @@ exports[`ExchangeTransactionsTable > should render desktop 3`] = `
               </td>
             </tr>
             <tr
-              class="relative css-16ynu5g"
+              class="relative css-1x4z4cy"
               data-testid="TableRow"
             >
               <td>
@@ -6066,7 +6066,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>
@@ -6316,7 +6316,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>
@@ -6566,7 +6566,7 @@ exports[`ExchangeTransactionsTable > should render mobile 1`] = `
               </td>
             </tr>
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>
@@ -6844,7 +6844,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
             role="rowgroup"
           >
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>
@@ -7094,7 +7094,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>
@@ -7344,7 +7344,7 @@ exports[`ExchangeTransactionsTable > should render mobile 2`] = `
               </td>
             </tr>
             <tr
-              class="group css-9fdtr0"
+              class="group css-pafq7q"
               data-testid="TableRow"
             >
               <td>

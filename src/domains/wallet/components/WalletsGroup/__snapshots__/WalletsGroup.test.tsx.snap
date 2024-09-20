@@ -260,7 +260,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -492,7 +492,7 @@ exports[`WalletsGroup > should handle list wallet click 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -939,7 +939,7 @@ exports[`WalletsGroup > should render GroupNetworkTotal with amounts 1`] = `
 exports[`WalletsGroup > should render group with different widths 1`] = `
 <DocumentFragment>
   <div
-    class="overflow-hidden md:!mb-3 css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -1176,7 +1176,7 @@ exports[`WalletsGroup > should render group with different widths 1`] = `
 exports[`WalletsGroup > should render group with different widths 2`] = `
 <DocumentFragment>
   <div
-    class="overflow-hidden md:!mb-3 css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -1413,7 +1413,7 @@ exports[`WalletsGroup > should render group with different widths 2`] = `
 exports[`WalletsGroup > should render group with different widths 3`] = `
 <DocumentFragment>
   <div
-    class="overflow-hidden md:!mb-3 css-13o3tsw"
+    class="md:!mb-3 css-13o3tsw"
     data-testid="WalletsGroup"
   >
     <div
@@ -1655,7 +1655,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -1887,7 +1887,7 @@ exports[`WalletsGroup > should render with dark mode = false 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -2168,7 +2168,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -2400,7 +2400,7 @@ exports[`WalletsGroup > should render with dark mode = true 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div
@@ -2683,7 +2683,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="overflow-hidden md:!mb-3 css-fvpuky"
+      class="md:!mb-3 css-fvpuky"
       data-testid="WalletsGroup"
     >
       <div
@@ -2883,7 +2883,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
           data-testid="WalletTable"
         >
           <div
-            class="with-x-padding css-1m6rt2i"
+            class="with-x-padding after:block after:h-[5px] after:content-[''] after:bg-theme-primary-100 after:dark:bg-theme-secondary-800 after:rounded-b-lg after:mx-[0.15rem] css-1m6rt2i"
             role="table"
           >
             <table
@@ -3164,7 +3164,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
                 role="rowgroup"
               >
                 <tr
-                  class="group relative css-1kskd5s"
+                  class="group relative css-1d424e8"
                   data-testid="TableRow"
                 >
                   <td
@@ -3468,7 +3468,7 @@ exports[`WalletsGroup > should show skeleton when syncing exchange rates 1`] = `
       </div>
     </div>
     <div
-      class="overflow-hidden md:!mb-3 css-13o3tsw"
+      class="md:!mb-3 css-13o3tsw"
       data-testid="WalletsGroup"
     >
       <div

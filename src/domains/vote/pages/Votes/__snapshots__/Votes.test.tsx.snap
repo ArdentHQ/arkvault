@@ -956,7 +956,7 @@ exports[`Votes > should filter current delegates 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2177,7 +2177,7 @@ exports[`Votes > should render 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2324,7 +2324,7 @@ exports[`Votes > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -2471,7 +2471,7 @@ exports[`Votes > should render 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3692,7 +3692,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3839,7 +3839,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -3986,7 +3986,7 @@ exports[`Votes > should render and handle wallet current voting exception 1`] = 
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -5928,7 +5928,7 @@ exports[`Votes > should select a delegate 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -6075,7 +6075,7 @@ exports[`Votes > should select a delegate 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -6222,7 +6222,7 @@ exports[`Votes > should select a delegate 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -10525,7 +10525,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                     role="rowgroup"
                   >
                     <tr
-                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                       data-testid="TableRow"
                     >
                       <td
@@ -10654,7 +10654,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                       data-testid="TableRow"
                     >
                       <td
@@ -10793,7 +10793,7 @@ exports[`Votes > should toggle network selection from network filters 1`] = `
                       </td>
                     </tr>
                     <tr
-                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                      class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                       data-testid="TableRow"
                     >
                       <td
@@ -11904,7 +11904,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                   role="rowgroup"
                 >
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -12051,7 +12051,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>
@@ -12198,7 +12198,7 @@ exports[`Votes > should trigger network connection warning 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-16ynu5g"
+                    class="relative last:!border-b-4 last:border-solid last:border-theme-secondary-200 last:dark:border-theme-secondary-800 css-1x4z4cy"
                     data-testid="TableRow"
                   >
                     <td>

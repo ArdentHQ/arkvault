@@ -565,7 +565,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
               role="rowgroup"
             >
               <tr
-                class="relative css-16ynu5g"
+                class="relative css-1x4z4cy"
                 data-testid="TableRow"
               >
                 <td>
@@ -691,7 +691,7 @@ exports[`LedgerImportStep > should render with multiple import 2`] = `
                 </td>
               </tr>
               <tr
-                class="relative css-16ynu5g"
+                class="relative css-1x4z4cy"
                 data-testid="TableRow"
               >
                 <td>

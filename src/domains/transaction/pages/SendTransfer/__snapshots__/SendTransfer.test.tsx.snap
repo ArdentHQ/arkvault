@@ -1332,7 +1332,7 @@ exports[`SendTransfer > should display unconfirmed transactions modal when submi
                               role="rowgroup"
                             >
                               <tr
-                                class=" css-16ynu5g"
+                                class=" css-1x4z4cy"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -8689,7 +8689,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                               role="rowgroup"
                             >
                               <tr
-                                class=" css-16ynu5g"
+                                class=" css-1x4z4cy"
                                 data-testid="TableRow"
                               >
                                 <td>
@@ -8772,7 +8772,7 @@ exports[`SendTransfer > should send a single transfer and show unconfirmed trans
                                 </td>
                               </tr>
                               <tr
-                                class=" css-16ynu5g"
+                                class=" css-1x4z4cy"
                                 data-testid="TableRow"
                               >
                                 <td>
