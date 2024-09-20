@@ -12,12 +12,13 @@ import { Pagination } from "@/app/components/Pagination";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Icon } from "@/app/components/Icon";
 import { AccordionContent } from "@/app/components/Accordion";
+import { twMerge } from "tailwind-merge";
 
 const StarredHeader = ({ active, onClick }: { active: boolean; onClick: () => void }) => {
 	const { t } = useTranslation();
 
 	return (
-		<div className="border-r border-theme-secondary-300 py-0.5 pr-3 dark:border-theme-secondary-800">
+		<div className="py-0.5 pr-3">
 			<Tooltip content={t("WALLETS.PAGE_WALLET_DETAILS.STARRED_FIRST")}>
 				<button
 					type="button"
@@ -90,11 +91,22 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.isStarred?.(),
 				cellWidth: "w-1",
 				disableSortBy: true,
+				headerClassName: "no-border first:pl-4 md:first:pl-6",
 				hideSortArrow: true,
 				id: "starred",
+				noRoundedBorders: true,
 			},
 			{
-				Header: t("COMMON.WALLET"),
+				Header: t("COMMON.NAME"),
+				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias?.(),
+				className: "-ml-3",
+				headerClassName: "no-border hidden lg:table-cell",
+				id: "name",
+				sortType: compareWithStar,
+			},
+			{
+				Header: t("COMMON.ADDRESS"),
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.alias?.() || wallet.address?.(),
 				className: "-ml-3",
@@ -106,6 +118,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				Header: t("COMMON.INFO"),
 				cellWidth: "w-36",
 				className: "justify-center",
+				headerClassName: "no-border",
 			},
 			{
 				Header: t("COMMON.BALANCE"),
@@ -113,6 +126,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.balance?.(),
 				cellWidth: "w-40",
 				className: "flex-row-reverse justify-end",
+				headerClassName: "no-border",
 				sortType: compareWithStar,
 			},
 			{
@@ -121,7 +135,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				accessor: (wallet: Contracts.IReadWriteWallet) => wallet.convertedBalance?.(),
 				cellWidth: "w-32",
 				className: "justify-end",
-				headerClassName: "hidden lg:table-cell",
+				headerClassName: "hidden lg:table-cell no-border",
 				sortType: compareWithStar,
 			},
 			{
@@ -129,6 +143,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 				className: "hidden",
 				headerClassName: "no-border",
 				minimumWidth: true,
+				noRoundedBorders: true,
 			},
 		],
 		[t, starredFirst],
@@ -148,7 +163,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 	);
 
 	return (
-		<AccordionContent data-testid="WalletsList" className={className}>
+		<AccordionContent data-testid="WalletsList" className={twMerge(className, "px-6 pb-4 md:p-0")}>
 			{(wallets.length > 0 || showSkeletons) && (
 				<>
 					<div data-testid="WalletTable">
@@ -159,6 +174,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({
 								rowsPerPage={itemsPerPage}
 								currentPage={currentPage}
 								initialState={initialState}
+								className="with-x-padding"
 							>
 								{renderTableRow}
 							</Table>
