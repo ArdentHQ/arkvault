@@ -142,8 +142,8 @@ export const QRModal = ({ isOpen, onCancel, onRead }: QRModalProperties) => {
 					{error && (
 						<Alert
 							title={error.title}
-							variant="danger"
-							className="z-10 mt-6 w-full max-w-[531px]"
+							variant="danger-dark"
+							className="z-10 mt-6 w-full max-w-[300px] sm:max-w-[531px]"
 							collapsible={!isSmAndAbove}
 						>
 							{error.message}
