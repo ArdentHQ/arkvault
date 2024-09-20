@@ -442,26 +442,26 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({ wallet, onSend, 
 						size="icon"
 						disabled={isButtonDisabled}
 						variant="transparent"
-						className="text-sm text-theme-primary-600 hover:text-theme-primary-700"
+						className="text-sm text-theme-primary-600 hover:text-theme-primary-700 pr-0"
 						onClick={onSend}
 					>
-						{t("COMMON.SEND")}
+						<div className="border-r border-theme-secondary-300 dark:border-theme-secondary-800 pr-3">
+							{t("COMMON.SEND")}
+						</div>
 					</Button>
 				</div>
 			</Tooltip>
 			<div data-testid="WalletListItem__more-button">
 				<Dropdown
 					toggleContent={
-						<div className="flex border-l border-theme-secondary-300 dark:border-theme-secondary-800">
-							<Button
-								variant="transparent"
-								size="icon"
-								disabled={isRestoring}
-								className="text-theme-gray-700 -mr-1.5 py-0 hover:text-theme-primary-600"
-							>
-								<Icon name="EllipsisVerticalFilled" size="lg" />
-							</Button>
-						</div>
+						<Button
+							variant="transparent"
+							size="icon"
+							disabled={isRestoring}
+							className="text-theme-gray-700 -mr-1.5 hover:text-theme-primary-600"
+						>
+							<Icon name="EllipsisVerticalFilled" size="lg" />
+						</Button>
 					}
 					onSelect={onSelectOption}
 					options={[primaryOptions, secondaryOptions]}
