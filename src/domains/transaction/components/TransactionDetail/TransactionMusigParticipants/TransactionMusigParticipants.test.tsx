@@ -36,8 +36,11 @@ describe("TransactionMusigParticipants", () => {
 					profile={profile}
 					transaction={{
 						...TransactionFixture,
-						publicKeys: () => ["034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192", "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"],
-						wallet: () => wallet
+						publicKeys: () => [
+							"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							"034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+						],
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -48,7 +51,7 @@ describe("TransactionMusigParticipants", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("TableRow")).toHaveLength(2)
-		})
+			expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
+		});
 	});
 });

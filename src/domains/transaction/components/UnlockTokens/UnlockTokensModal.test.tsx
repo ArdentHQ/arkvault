@@ -207,15 +207,15 @@ describe("UnlockTokensModal", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
-					accepted: [transactionFixture.data.id],
-					errors: {},
-					rejected: [],
-				}
+						accepted: [transactionFixture.data.id],
+						errors: {},
+						rejected: [],
+					}
 				: {
-					accepted: [],
-					errors: { error: "unable to unlock token" },
-					rejected: [transactionFixture.data.id],
-				},
+						accepted: [],
+						errors: { error: "unable to unlock token" },
+						rejected: [transactionFixture.data.id],
+					},
 		);
 
 		await waitFor(() => {

@@ -64,7 +64,7 @@ describe("TransactionDetailModal", () => {
 						isTransfer: () => true,
 						memo: () => {},
 						type: () => "transfer",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -89,7 +89,7 @@ describe("TransactionDetailModal", () => {
 						isTransfer: () => true,
 						memo: () => "memo",
 						type: () => "transfer",
-						wallet: () => wallet
+						wallet: () => wallet,
 					}}
 				/>
 			</Route>,
@@ -227,15 +227,15 @@ describe("TransactionDetailModal", () => {
 						type: () => transactionType,
 						unvotes: () => {
 							if (transactionType !== "vote") {
-								return TransactionFixture.unvotes()
+								return TransactionFixture.unvotes();
 							}
-							return []
+							return [];
 						},
 						votes: () => {
 							if (transactionType !== "unvote") {
-								return TransactionFixture.votes()
+								return TransactionFixture.votes();
 							}
-							return []
+							return [];
 						},
 						wallet: () => wallet,
 					}}
