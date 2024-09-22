@@ -66,6 +66,7 @@ cucumber(
 		mockRequest(
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 			"coins/ark/devnet/transactions/byAddress/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD-1-10",
+			"https://ark-test.arkvault.io/api/blocks/e6d4760c50419d8665731d3391ba209767f3073d4b2b6661078ff220034d197e"
 		),
 		mockRequest(
 			"https://ark-test.arkvault.io/api/transactions?page=1&limit=12&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
