@@ -207,15 +207,15 @@ describe("UnlockTokensModal", () => {
 		const broadcastMock = vi.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(
 			expectedOutcome === "success"
 				? {
-						accepted: [transactionFixture.data.id],
-						errors: {},
-						rejected: [],
-					}
+					accepted: [transactionFixture.data.id],
+					errors: {},
+					rejected: [],
+				}
 				: {
-						accepted: [],
-						errors: { error: "unable to unlock token" },
-						rejected: [transactionFixture.data.id],
-					},
+					accepted: [],
+					errors: { error: "unable to unlock token" },
+					rejected: [transactionFixture.data.id],
+				},
 		);
 
 		await waitFor(() => {
@@ -234,6 +234,10 @@ describe("UnlockTokensModal", () => {
 			await waitFor(() => {
 				expect(screen.getByTestId("ErrorStep__errorMessage")).toBeInTheDocument();
 			});
+
+			await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+			await expect(screen.findByTestId("ErrorStep__errorMessage")).rejects.toThrow();
 		}
 
 		expect(signMock).toHaveBeenCalledWith({

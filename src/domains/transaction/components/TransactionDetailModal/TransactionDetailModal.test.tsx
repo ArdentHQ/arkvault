@@ -61,8 +61,10 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isTransfer: () => true,
+						memo: () => {},
 						type: () => "transfer",
-						wallet: () => wallet,
+						wallet: () => wallet
 					}}
 				/>
 			</Route>,
@@ -76,9 +78,7 @@ describe("TransactionDetailModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render a multi signature modal", async () => {
-		await profile.wallets().restore();
-
+	it("should render a transfer modal with memo", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
 				<TransactionDetailModal
@@ -86,6 +86,36 @@ describe("TransactionDetailModal", () => {
 					transactionItem={{
 						...TransactionFixture,
 						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isTransfer: () => true,
+						memo: () => "memo",
+						type: () => "transfer",
+						wallet: () => wallet
+					}}
+				/>
+			</Route>,
+			{
+				history,
+				route: dashboardURL,
+			},
+		);
+
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(translations.MODAL_TRANSFER_DETAIL.TITLE);
+		expect(screen.getByText("memo")).toBeInTheDocument();
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render a multi signature modal", async () => {
+		await profile.wallets().restore();
+
+		const { asFragment } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<TransactionDetailModal
+					profile={profile}
+					isOpen={true}
+					transactionItem={{
+						...TransactionFixture,
+						blockId: () => "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
+						isMultiSignatureRegistration: () => true,
 						min: () => 2,
 						publicKeys: () => [wallet.publicKey(), profile.wallets().last().publicKey()],
 						type: () => "multiSignature",
@@ -165,7 +195,7 @@ describe("TransactionDetailModal", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it.each(["unvote", "vote", "voteCombination"])("should render a %s modal", (transactionType) => {
+	it.each(["vote", "unvote", "voteCombination"])("should render a %s modal", (transactionType) => {
 		vi.spyOn(env.delegates(), "map").mockImplementation((wallet, votes) =>
 			votes.map(
 				(vote: string, index: number) =>
@@ -191,7 +221,22 @@ describe("TransactionDetailModal", () => {
 								blockId: "as32d1as65d1as3d1as32d1asd51as3d21as3d2as165das",
 							},
 						}),
+						isUnvote: () => transactionType === "unvote",
+						isVote: () => transactionType === "vote",
+						isVoteCombination: () => transactionType === "voteCombination",
 						type: () => transactionType,
+						unvotes: () => {
+							if (transactionType !== "vote") {
+								return TransactionFixture.unvotes()
+							}
+							return []
+						},
+						votes: () => {
+							if (transactionType !== "unvote") {
+								return TransactionFixture.votes()
+							}
+							return []
+						},
 						wallet: () => wallet,
 					}}
 				/>
