@@ -7,14 +7,13 @@ import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { useConfirmedTransaction } from "./hooks/useConfirmedTransaction";
 import {
 	TransactionAddresses,
+	TransactionConfirmations,
 	TransactionFee,
 	TransactionType,
 } from "@/domains/transaction/components/TransactionDetail";
 import { StepHeader } from "@/app/components/StepHeader";
-import { Spinner } from "@/app/components/Spinner";
 import { Icon } from "@/app/components/Icon";
-import { DetailLabel } from "@/app/components/DetailWrapper";
-import { Divider } from "@/app/components/Divider";
+import { DetailLabel, DetailPadded } from "@/app/components/DetailWrapper";
 import { TransactionId } from "@/domains/transaction/components/TransactionDetail/TransactionId";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
@@ -26,18 +25,6 @@ interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;
 	recipients?: RecipientItem[];
 }
-
-export const TransactionDetailPadded = ({ children }: { children: React.ReactNode }) => (
-	<div className="group flex">
-		<div className="hidden sm:ml-3 sm:flex">
-			<div className="min-w-9 flex-row pr-3">
-				<div className="-mt-2 h-6 w-full rounded-bl-xl border-b-2 border-l-2 border-theme-secondary-300 dark:border-theme-secondary-800" />
-				<div className="h-[110%] w-full border-l-2 border-theme-secondary-300 group-last:hidden dark:border-theme-secondary-800" />
-			</div>
-		</div>
-		<div className="w-full sm:flex-row">{children}</div>
-	</div>
-);
 
 export const TransactionSuccessful = ({
 	transaction,
@@ -85,63 +72,29 @@ export const TransactionSuccessful = ({
 			</div>
 
 			<div className="mt-6 space-y-8">
-				<TransactionDetailPadded>
+				<DetailPadded>
 					<TransactionAddresses
-						senderWallet={senderWallet}
+						network={senderWallet.network()}
+						senderAddress={senderWallet.address()}
 						recipients={recipients}
 						profile={senderWallet.profile()}
 					/>
-				</TransactionDetailPadded>
+				</DetailPadded>
 
 				{!transaction.isVote() && (
-					<TransactionDetailPadded>
+					<DetailPadded>
 						<TransactionType transaction={transaction} />
-					</TransactionDetailPadded>
+					</DetailPadded>
 				)}
 
 				{children}
 
-				<TransactionDetailPadded>
+				<DetailPadded>
 					<DetailLabel>{t("TRANSACTION.CONFIRMATIONS")}</DetailLabel>
 					<div className="mt-2">
-						{!isConfirmed && (
-							<div
-								data-testid="PendingConfirmationAlert"
-								className="flex items-center space-x-3 rounded-xl border border-theme-warning-200 bg-theme-warning-50 px-6 py-5 dark:border-theme-warning-600 dark:bg-transparent"
-							>
-								<Spinner color="warning-alt" size="sm" width={3} />
-								<Divider
-									type="vertical"
-									className="text-theme-warning-200 dark:text-theme-secondary-800"
-								/>
-								<p className="font-semibold text-theme-secondary-700 dark:text-theme-warning-600">
-									{t("TRANSACTION.PENDING.STATUS_TEXT")}
-								</p>
-							</div>
-						)}
-
-						{isConfirmed && (
-							<div
-								data-testid="TransactionSuccessAlert"
-								className="flex items-center space-x-3 rounded-xl border border-theme-success-200 bg-theme-success-50 px-6 py-5 dark:border-theme-success-600 dark:bg-transparent"
-							>
-								<div className="flex items-center space-x-2 text-theme-success-600">
-									<Icon name="CheckmarkDouble" />
-									<p>{t("COMMON.ALERT.SUCCESS")}</p>
-								</div>
-
-								<Divider
-									type="vertical"
-									className="text-theme-success-200 dark:text-theme-secondary-800"
-								/>
-
-								<p className="font-semibold text-theme-secondary-700 dark:text-theme-success-600">
-									<span>{t("TRANSACTION.CONFIRMATIONS_COUNT", { count: confirmations })} </span>
-								</p>
-							</div>
-						)}
+						<TransactionConfirmations isConfirmed={isConfirmed} confirmations={confirmations} />
 					</div>
-				</TransactionDetailPadded>
+				</DetailPadded>
 			</div>
 		</section>
 	);

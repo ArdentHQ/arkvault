@@ -33,7 +33,7 @@ describe("TransactionId", () => {
 					{
 						explorerLink: () => "https://test.com",
 						id: () => "id",
-						isConfirmed: () => false,
+						isConfirmed: () => true,
 					} as DTO.ExtendedSignedTransactionData
 				}
 			/>,

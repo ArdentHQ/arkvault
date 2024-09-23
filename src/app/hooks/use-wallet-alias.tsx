@@ -6,7 +6,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { assertProfile, assertString } from "@/utils/assertions";
 
 interface Properties {
-	address?: string;
+	address: string;
 	network?: Networks.Network;
 	profile?: Contracts.IProfile;
 }
@@ -15,6 +15,7 @@ interface WalletAliasResult {
 	alias: string | undefined;
 	isContact: boolean;
 	isDelegate: boolean;
+	address: string;
 }
 
 interface HookResult {
@@ -60,6 +61,7 @@ const useWalletAlias = (): HookResult => {
 					}
 
 					return {
+						address,
 						alias,
 						isContact: false,
 						isDelegate: !!delegateUsername,
@@ -70,6 +72,7 @@ const useWalletAlias = (): HookResult => {
 
 				if (contact) {
 					return {
+						address,
 						alias: contact.name(),
 						isContact: true,
 						isDelegate: !!getDelegateUsername(network),
@@ -80,6 +83,7 @@ const useWalletAlias = (): HookResult => {
 					const alias = getDelegateUsername(network);
 
 					return {
+						address,
 						alias,
 						isContact: false,
 						isDelegate: alias !== undefined,
@@ -90,6 +94,7 @@ const useWalletAlias = (): HookResult => {
 			}
 
 			return {
+				address,
 				alias: undefined,
 				isContact: false,
 				isDelegate: false,

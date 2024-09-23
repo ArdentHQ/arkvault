@@ -23,7 +23,7 @@ exports[`TransactionRow > should omit the currency for transactions from test ne
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-1dlnsgk"
                 >
                   <span
                     class="text-sm"
@@ -196,7 +196,7 @@ exports[`TransactionRow > should render 1`] = `
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-1dlnsgk"
                 >
                   <span
                     class="text-sm"
@@ -382,7 +382,7 @@ exports[`TransactionRow > should render responsive 1`] = `
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-1dlnsgk"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -551,7 +551,7 @@ exports[`TransactionRow > should render responsive 2`] = `
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-1dlnsgk"
                 >
                   <span
                     class="no-ligatures cursor-pointer text-theme-primary-600 css-0"
@@ -871,7 +871,7 @@ exports[`TransactionRow > should render with currency 1`] = `
                 rel="noopener noreferrer"
               >
                 <span
-                  class="css-170792"
+                  class="css-1dlnsgk"
                 >
                   <span
                     class="text-sm"
