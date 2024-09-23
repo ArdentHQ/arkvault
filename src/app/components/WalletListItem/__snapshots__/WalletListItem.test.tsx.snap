@@ -89,7 +89,7 @@ exports[`WalletListItem > should disable the send button when wallet has no bala
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -687,7 +687,7 @@ exports[`WalletListItem > should render when isCompact = false 1`] = `
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -1104,7 +1104,7 @@ exports[`WalletListItem > should render when isCompact = true 1`] = `
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -1961,7 +1961,7 @@ exports[`WalletListItem > should render when isLargeScreen = true 1`] = `
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -2378,7 +2378,7 @@ exports[`WalletListItem > should render when isLargeScreen = true and wallet is 
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -2843,7 +2843,7 @@ exports[`WalletListItem > should render with a N/A for fiat 1`] = `
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
@@ -3260,7 +3260,7 @@ exports[`WalletListItem > should render with default BTC as default exchangeCurr
               class="w-full max-w-64 flex-1 overflow-hidden lg:max-w-48 xl:max-w-full"
             >
               <div
-                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full"
+                class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-between"
               >
                 <span
                   class="font-semibold text-base lg:hidden text-sm text-theme-text group-hover:text-theme-primary-700"
