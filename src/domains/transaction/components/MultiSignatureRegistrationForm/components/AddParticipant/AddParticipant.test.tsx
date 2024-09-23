@@ -357,7 +357,10 @@ describe("Add Participant", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue());
 	});
 
-	it("should remove participant", async () => {
+	it.each([
+		"AddParticipantItem--deleteButton",
+		"AddParticipantItem--mobile-deleteButton"
+	])("should remove participant", async (selector) => {
 		const onChange = vi.fn();
 
 		render(
@@ -385,9 +388,9 @@ describe("Add Participant", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("AddParticipantItem")).toHaveLength(2));
 
-		expect(screen.getAllByTestId("AddParticipantItem--deleteButton")[1]).not.toBeDisabled();
+		expect(screen.getAllByTestId(selector)[1]).not.toBeDisabled();
 
-		await userEvent.click(screen.getAllByTestId("AddParticipantItem--deleteButton")[1]);
+		await userEvent.click(screen.getAllByTestId(selector)[1]);
 
 		expect(onChange).toHaveBeenCalledWith([
 			{
