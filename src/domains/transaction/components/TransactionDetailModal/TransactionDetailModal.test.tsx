@@ -277,9 +277,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_REGISTRATION_DETAIL.TITLE,
-		);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Registration");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -306,9 +304,7 @@ describe("TransactionDetailModal", () => {
 			},
 		);
 
-		expect(screen.getByTestId("Modal__inner")).toHaveTextContent(
-			translations.MODAL_DELEGATE_RESIGNATION_DETAIL.TITLE,
-		);
+		expect(screen.getByTestId("Modal__inner")).toHaveTextContent("Resignation");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -408,7 +408,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                               class="css-1chzvd4"
                               color="neutral"
                             >
-                              Delegate Registration
+                              Registration
                             </div>
                           </div>
                         </div>
@@ -1205,7 +1205,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                               class="css-1chzvd4"
                               color="neutral"
                             >
-                              Delegate Resignation
+                              Resignation
                             </div>
                           </div>
                         </div>
