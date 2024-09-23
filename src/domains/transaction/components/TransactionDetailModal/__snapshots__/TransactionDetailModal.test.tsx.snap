@@ -227,7 +227,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -301,7 +301,7 @@ exports[`TransactionDetailModal > should render a delegate registration modal 1`
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -1024,7 +1024,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -1098,7 +1098,7 @@ exports[`TransactionDetailModal > should render a delegate resignation modal 1`]
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -1821,7 +1821,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -1895,7 +1895,7 @@ exports[`TransactionDetailModal > should render a ipfs modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -2618,7 +2618,7 @@ exports[`TransactionDetailModal > should render a magistrate modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -3341,7 +3341,7 @@ exports[`TransactionDetailModal > should render a multi payment modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -4157,7 +4157,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -4242,7 +4242,7 @@ exports[`TransactionDetailModal > should render a multi signature modal 1`] = `
                               </span>
                             </span>
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -5179,7 +5179,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -5253,7 +5253,7 @@ exports[`TransactionDetailModal > should render a second signature modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -5976,7 +5976,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -6050,7 +6050,7 @@ exports[`TransactionDetailModal > should render a transfer modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -6775,7 +6775,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -6849,7 +6849,7 @@ exports[`TransactionDetailModal > should render a transfer modal with memo 1`] =
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -7572,7 +7572,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -7646,7 +7646,7 @@ exports[`TransactionDetailModal > should render a unvote modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -8398,7 +8398,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -8472,7 +8472,7 @@ exports[`TransactionDetailModal > should render a vote modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -9224,7 +9224,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
@@ -9298,7 +9298,7 @@ exports[`TransactionDetailModal > should render a voteCombination modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base font-semibold text-base absolute w-full"
@@ -10076,7 +10076,7 @@ exports[`TransactionDetailModal > should render an unlock tokens modal 1`] = `
                             class="flex overflow-hidden whitespace-nowrap items-center space-x-2 w-full justify-end sm:justify-start"
                           >
                             <div
-                              class="relative grow text-left"
+                              class="relative grow leading-[17px] sm:leading-5 text-left"
                             >
                               <span
                                 class="no-ligatures min-w-0 overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 text-sm leading-[17px] sm:leading-5 sm:text-base w-full w-3/4 font-semibold text-base absolute w-full"
