@@ -11,7 +11,7 @@ import { Icon } from "@/app/components/Icon";
 import { useLink } from "@/app/hooks/use-link";
 
 interface Properties {
-	transaction: DTO.ExtendedSignedTransactionData;
+	transaction: DTO.ExtendedSignedTransactionData | DTO.ExtendedConfirmedTransactionData;
 }
 
 export const TransactionId = ({ transaction }: Properties): ReactElement => {
@@ -57,9 +57,9 @@ export const TransactionId = ({ transaction }: Properties): ReactElement => {
 				<Button
 					data-testid="explorer-link"
 					icon="ArrowExternal"
-					variant="secondary"
+					variant="border"
 					size="icon"
-					disabled={transaction.isConfirmed()}
+					disabled={!transaction.isConfirmed()}
 					onClick={() => {
 						openExternal(transaction.explorerLink());
 					}}

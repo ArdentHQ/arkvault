@@ -612,6 +612,10 @@ describe("MultiSignatureDetail", () => {
 		await waitFor(() => expect(screen.getByTestId("ErrorStep")));
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
 
+		await userEvent.click(screen.getByTestId("ErrorStep__back-button"));
+
+		await waitFor(() => expect(screen.getByText(translations.TRANSACTION_TYPES.TRANSFER)));
+
 		broadcastMock.mockRestore();
 
 		canBeBroadcastedMock.mockRestore();

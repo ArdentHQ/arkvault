@@ -37,7 +37,8 @@ export const ReviewStep = ({
 
 			<TransactionAddresses
 				labelClassName="w-auto sm:min-w-28"
-				senderWallet={senderWallet}
+				senderAddress={senderWallet.address()}
+				network={senderWallet.network()}
 				recipients={[]}
 				profile={profile}
 			/>
